@@ -40,7 +40,7 @@ dependencies:
   hl7.fhir.cz.core: current
   hl7.fhir.eu.hdr: current
   hl7.fhir.eu.laboratory: current
-  hl7.fhir.eu.base.r4: current
+  hl7.fhir.eu.base: current
   hl7.fhir.extensions.r5: 4.0.1
   ihe.pharm.mpd: current
   hl7.fhir.eu.extensions: current
