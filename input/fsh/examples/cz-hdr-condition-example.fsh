@@ -12,6 +12,8 @@ Description: "Czech HDR - example of a condition (Heart Failure)"
 * subject = Reference(Mracena2)
 * onsetDateTime = "2025-01-01T08:00:00+01:00"
 * note.text = "Patient diagnosed with heart failure during hospital stay."
+* category[1] = $sct#278307001 "On admission"
+* category[2] = $sct#25265005 "Not received therapy or drug for"
 
 
 // Condition note
@@ -31,6 +33,8 @@ Description: "Czech HDR - example of a condition (Cardiac arrhythmia - Brugada S
 * subject = Reference(Mracena2)
 * onsetDateTime = "2013-01-09T00:00:00+01:00"
 * note.text = "Brugada Syndrom diagnostikován v roce 2013."
+* category[1] = $sct#278307001 "On admission"
+* category[2] = $sct#25265005 "Not received therapy or drug for"
 
 Instance: CZ-Condition-HDR-Example-3
 InstanceOf: CZ_ConditionHdr
@@ -45,3 +49,5 @@ Description: "Czech HDR - example of a condition (Postoperative Hypothyroidism)"
 * subject = Reference(Mracena2)
 * onsetDateTime = "1997-10-06T00:00:00+02:00"
 * note.text = "Hypotyreóza po operaci karcinomu štítné žlázy. Zadáno všeobecným lékařem."
+* category[1] = $sct#278307001 "On admission"
+* category[2] = $sct#25265005 "Not received therapy or drug for"
