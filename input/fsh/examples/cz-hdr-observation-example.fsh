@@ -154,5 +154,68 @@ Description: "Czech HDR - example of CRP observation for Novák Petr"
 * referenceRange[0].high.system = $Jednotky
 * referenceRange[0].high.code = #"mg/L"
 * referenceRange[0].text = "Norma: 0–10 mg/L"
-* interpretation[0].coding[0].code  = $observation-interpretation#N "Normal" 
+* interpretation[0].coding[0].system = $observation-interpretation
+* interpretation[0].coding[0].display = "Normal"
+* interpretation[0].coding[0].code  = #N
+
+//-----------------------------------------
+Instance: Observation-TSH-Novak
+InstanceOf: Observation
+Usage: #example
+Title: "TSH - Novák Petr"
+Description: "Czech HDR - example of TSH observation for Novák Petr"
+* id = "Observation-TSH-Novak"
+* status = #final
+* category = $observation-category#Laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
+* code = $loinc#3016-3 "Thyroid stimulating hormone [Units/volume] in Serum or Plasma"
+* subject = Reference(Patient-Novak-Petr)
+* effectiveDateTime = "2025-03-01T10:00:00+01:00"
+* performer = Reference(Practitioner-UZV)
+* valueQuantity.value = 1.8
+* valueQuantity.unit = "mIU/L"
+* valueQuantity.system = $Jednotky
+* valueQuantity.code = #"mIU/L"
+* referenceRange[0].low.value = 0.3
+* referenceRange[0].low.unit = "mIU/L"
+* referenceRange[0].low.system = $Jednotky
+* referenceRange[0].low.code = #"mIU/L"
+* referenceRange[0].high.value = 4.5
+* referenceRange[0].high.unit = "mIU/L"
+* referenceRange[0].high.system = $Jednotky
+* referenceRange[0].high.code = #"mIU/L"
+* referenceRange[0].text = "Norma: 0.4–4.0 mIU/L"
+* interpretation[0].coding[0].system = $observation-interpretation
+* interpretation[0].coding[0].display = "Normal"
+* interpretation[0].coding[0].code  = #N
+//-----------------------------------------
+
+Instance: Observation-Height-Novak
+InstanceOf: CZ_ObservationHeightHdr
+Description: "Czech HDR - example of Height observation for Novák Petr."
+* id = "Observation-Height-Novak"
+* status = #final
+* category = $observation-category#vital-signs  //http://terminology.hl7.org/CodeSystem/observation-category
+* code = $loinc#8302-2 "Body height"
+* subject = Reference(Patient-Novak-Petr)
+* effectiveDateTime = "2025-03-01T10:00:00+01:00"
+* performer = Reference(Practitioner-Admitter)
+* valueQuantity.value = 175
+* valueQuantity.unit = "cm"
+* valueQuantity.system = $Jednotky
+//-----------------------------------------
+
+Instance: Observation-Weight-Novak
+InstanceOf: CZ_ObservationWeightHdr
+Description: "Czech HDR - example of Weight observation for Novák Petr."
+* id = "Observation-Weight-Novak"
+* status = #final
+* category = $observation-category#vital-signs  //http://terminology.hl7.org/CodeSystem/observation-category
+* code = $loinc#29463-7 "Body weight"
+* subject = Reference(Patient-Novak-Petr)
+* effectiveDateTime = "2025-03-01T10:00:00+01:00"
+* performer = Reference(Practitioner-Admitter)
+* valueQuantity.value = 70
+* valueQuantity.unit = "kg"
+* valueQuantity.system = $Jednotky
+
 

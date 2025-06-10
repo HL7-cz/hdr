@@ -465,3 +465,25 @@ Description: "Participant UZV HDR"
 * telecom[+].system = #phone
 * telecom[=].value = "+420 603 853 287"
 * telecom[=].use = #work
+
+//-----------------------------------------------------
+Instance: Vseobecna-Zdravotni-Pojistovna
+InstanceOf: CZ_OrganizationCore
+Usage: #example
+Description: "Example of health insurance company Všeobecná zdravotní pojišťovna"
+* id = "Vseobecna-Zdravotni-Pojistovna"
+* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-organization-core"
+* identifier[KP].system = $cz-OrganizationCore-system-ZP 
+* identifier[KP].value = "111"
+
+//-----------------------------------------------------
+Instance: Pojisteni-Novak-Petr
+InstanceOf: CZ_Coverage
+Usage: #example
+Description: "Example of insurance coverage for patient Petr Novak"
+* id = "Pojisteni-Novak-Petr"
+* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-coverage"
+* status = #active
+* payor[+].reference = "CZ_OrganizationCore/Vseobecna-Zdravotni-Pojistovna"
+* payor[=].display = "Všeobecná zdravotní pojišťovna"
+* beneficiary = Reference(CZ_PatientCore/Patient-Novak-Petr) "Petr Novak"

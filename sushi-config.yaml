@@ -10,10 +10,11 @@ title: HL7 Czech Hospital Discharge Report Implementation Guide
 description: This guide contains implementation specification for the HL7 Czech Hospital Discharge Report
 status: draft # draft | active | retired | unknown
 version: 0.0.1
+language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
@@ -70,14 +71,20 @@ dependencies:
 pages:
   index.md:
     title: Home
-  #  general-guidance.md:
-  #    title: General guidance
-  Implementation.md:
-    Model Maps: model-map.html
-  profiles-and-extensions.md:
-    title: Profiles and extensions
+  general-semantics.md:
+    title: Introduction
+  functional-view.md:
+    title: Functional view
+  general-semantics-cs.md:
+    title: Úvod do problematiky
+  functional-view-cs.md:
+    title: Funkční specifikace
+  artifacts.xml:
+    title: Summary artifacts
+# profiles-and-extensions.md:
+#   title: Profiles and extensions
   downloads.md:
-   title: Download
+    title: Download
 #
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
@@ -115,6 +122,8 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 #  generate-turtle:
 #  html-template:
 #  active-tables: false
+  pin-canonicals: pin-multiples
+# path-expansion-params: '../../expansion-params.json'
   apply-contact: true
   apply-jurisdiction: true
   apply-publisher: true
@@ -148,15 +157,20 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-#  Guidance:
-#    General guidance: general-guidance.html
-#    Identifiers: identifiers.html
-#  Implementation: implementation.html
-  Artifacts: artifacts.html
-    # Czech artifacts:
-    #Profiles and extensions: profiles-and-extensions.html
-#  About:
-  Downloads: downloads.html
+  Introduction:
+    General semantics: general-semantics.html
+    Content: general-semantics.html#content
+    Obecná sémantika: general-semantics-cs.html
+    Obsah: general-semantics-cs.html#obsah
+  Functional view:
+    Actors: functional-view.html
+    Use Cases: functional-view.html#use-cases
+    Aktéři: functional-view-cs.html
+    Případy užití: functional-view-cs.html#případy-užití
+  Artifacts:
+    Profile artifacts: artifacts.html
+  About:
+    Downloads: downloads.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
