@@ -1,0 +1,42 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "PatientHistoryEhn" <<LogicalModel>> [[StructureDefinition-PatientHistoryCz.html]]
+note top #PaleTurquoise [[ConceptMap-hdr2FHIR-cz-hdr.html]]
+Concept Map
+endnote
+class "ImmunizationRecommendation-cz-hdr" <<Profile>> [[StructureDefinition-cz-immunizationRecommendation-hdr.html]]
+"PatientHistoryEhn" <|. "ImmunizationRecommendation-cz-hdr"
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+"PatientHistoryEhn" <|. "composition-cz-hdr"
+"ImmunizationRecommendation-cz-hdr" -d[hidden]-> "composition-cz-hdr"
+class "condition-cz-hdr" <<Profile>> [[StructureDefinition-cz-condition-hdr.html]]
+"PatientHistoryEhn" <|. "condition-cz-hdr"
+"composition-cz-hdr" -d[hidden]-> "condition-cz-hdr"
+class "device-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-medical-device.html]]
+"PatientHistoryEhn" <|. "device-cz-core"
+"condition-cz-hdr" -d[hidden]-> "device-cz-core"
+class "deviceUseStatement-eu-hdr" <<Profile>> [[https://build.fhir.org/ig/hl7-eu/hdr/StructureDefinition-deviceUseStatement-eu-hdr.html]]
+"PatientHistoryEhn" <|. "deviceUseStatement-eu-hdr"
+"device-cz-core" -d[hidden]-> "deviceUseStatement-eu-hdr"
+class "immunization-cz-hdr" <<Profile>> [[StructureDefinition-cz-immunization-hdr.html]]
+"PatientHistoryEhn" <|. "immunization-cz-hdr"
+"deviceUseStatement-eu-hdr" -d[hidden]-> "immunization-cz-hdr"
+class "procedure-cz-hdr" <<Profile>> [[StructureDefinition-cz-procedure-hdr.html]]
+"PatientHistoryEhn" <|. "procedure-cz-hdr"
+"immunization-cz-hdr" -d[hidden]-> "procedure-cz-hdr"
+class "familyMemberHistory-cz-hdr" <<Profile>> [[StructureDefinition-czh-familyMemberHistory-hdr.html]]
+"PatientHistoryEhn" <|. "familyMemberHistory-cz-hdr"
+"procedure-cz-hdr" -d[hidden]-> "familyMemberHistory-cz-hdr"
+@enduml

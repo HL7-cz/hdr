@@ -1,0 +1,30 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "MedicationSummary" <<LogicalModel>> [[StructureDefinition-MedicationSummaryCz.html]]
+note top #PaleTurquoise [[ConceptMap-medicationSummary2FHIR-cz-hdr.html]]
+Concept Map
+endnote
+class "medication-cz-hdr" <<Profile>> [[StructureDefinition-cz-medication-hdr.html]]
+"MedicationSummary" <|. "medication-cz-hdr"
+class "medicationDispense-eu-hdr" <<Profile>> [[https://build.fhir.org/ig/hl7-eu/hdr/StructureDefinition-medicationDispense-eu-hdr.html]]
+"MedicationSummary" <|. "medicationDispense-eu-hdr"
+"medication-cz-hdr" -d[hidden]-> "medicationDispense-eu-hdr"
+class "medicationRequest-cz-hdr" <<Profile>> [[StructureDefinition-cz-medicationRequest-hdr.html]]
+"MedicationSummary" <|. "medicationRequest-cz-hdr"
+"medicationDispense-eu-hdr" -d[hidden]-> "medicationRequest-cz-hdr"
+class "Dosage" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Dosage]]
+"MedicationSummary" <|. "Dosage"
+"medicationRequest-eu-hdr" -d[hidden]-> "Dosage"
+@enduml

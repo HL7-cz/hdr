@@ -1,0 +1,21 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "AdmissionEvaluation" <<LogicalModel>> [[StructureDefinition-AdmissionEvaluationCz.html]]
+note top #PaleTurquoise [[ConceptMap-hdr2FHIR-cz-hdr.html]]
+Concept Map
+endnote
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+"AdmissionEvaluation" <|. "composition-cz-hdr"
+@enduml

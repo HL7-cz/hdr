@@ -9,12 +9,13 @@ name: HL7CzHospitalDischargeIg
 title: HL7 Czech Hospital Discharge Report Implementation Guide
 description: This guide contains implementation specification for the HL7 Czech Hospital Discharge Report
 status: draft # draft | active | retired | unknown
-version: 0.0.1
+
+version: 0.0.2
 language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
@@ -67,25 +68,119 @@ dependencies:
 #     title: Examples Overview
 #     simpleExamples.xml:
 #     complexExamples.xml:
-#
+#---------------------old menu------------------------------------
+#pages:
+#  index.md:
+#    title: Home
+#  index-cs.md:
+#    title: Domovská stránka
+#  general-semantics.md:
+#    title: Introduction
+#  logicalModel.md:
+#    title: Logical Models  
+#  functional-view.md:
+#    title: Functional view
+#  general-semantics-cs.md:
+#    title: Úvod do problematiky
+#  functional-view-cs.md:
+#    title: Funkční specifikace
+#  artifacts.xml:
+#    title: Summary artifacts
+#  model-map.md:
+#    title: Model Maps
+## profiles-and-extensions.md:
+##   title: Profiles and extensions
+#  downloads.md:
+#    title: Download
+#  ehn-guidelines-cs.md:
+#    title: eHN - Guidelines (cs)
+#  ehn-guidelines.md:
+#    title: eHN - Guidelines (en)
+#-----------------------new menu------------------------------------
 pages:
   index.md:
     title: Home
-  general-semantics.md:
-    title: Introduction
-  functional-view.md:
-    title: Functional view
-  general-semantics-cs.md:
-    title: Úvod do problematiky
-  functional-view-cs.md:
-    title: Funkční specifikace
+  index-cs.md:
+    title: Domovská stránka
+  scope-and-content.md:
+    title: Scope and content
+  scope-and-content-cs.md:
+    title: Oblasti a obsah
+  background.md:
+    title: Background
+  background-cs.md:
+    title: Background
+  authors.md:
+    title: Authors
+  authors-cs.md:
+    title: Autoři
+  copyright.md:
+    title: Copyright
+  copyright-cs.md:
+    title: Autorská práva
+  dependencies.md:
+    title: Dependencies
+  dependencies-cs.md:
+    title: Závislosti
+  examples.md:
+    title: Examples
+  examples-cs.md:
+    title: Příklady
+  logical-models.md:
+    title: Logical models
+  logical-models-cs.md:
+    title: Datová sada - logické modely
+  model-map.md:
+    title: Model maps
+  model-map-cs.md:
+    title: Mapování logického modelu
+  obligations.md:
+    title: Obligations
+  obligations-cs.md:
+    title: Obligations
+  #terminology-considerations.md:
+  #  title: Terminology considerations
+  #terminology-considerations-cs.md:
+  #  title: Terminologické aspekty  
+  #  use-cases.md:
+  #    title: Use cases
+  #  use-cases-cs.md:
+  #    title: Příklady užití
+  #  workflow.md:
+  #    title: Workflow
+  #  workflow-cs.md:
+  #    title: Workflow
   artifacts.xml:
-    title: Summary artifacts
-# profiles-and-extensions.md:
-#   title: Profiles and extensions
-  downloads.md:
-    title: Download
-#
+    title: Artifacts
+  # === MAP ====
+  HospitalDischargeReport-map.html:
+    title: HospitalDischargeReport Relationships
+  Header-map.html:
+    title: Header Relationships
+  Subject-map.html:
+    title: Subject Relationships
+  InPatientEncounter-map.html:
+    title: InPatientEncounter Relationships  
+  AdmissionEvaluation-map.html:
+    title: AdmissionEvaluation Relationships
+  ObjectiveFindings-map.html:
+    title: ObjectiveFindings Relationships
+  FunctionalStatus-map.html:
+    title: FunctionalStatus Relationships
+  HospitalStay-map.html:
+    title: HospitalStay Relationships
+  PatientHistory-map.html:
+    title: PatientHistory Relationships
+  Alerts-map.html:
+    title: Alerts Relationships
+  AdvanceDirectives-map.html:
+    title: AdvanceDirectives Relationships
+  PlanOfCare-map.html:
+    title: PlanOfCare Relationships
+  MedicationSummary-map.html:
+    title: MedicationSummary Relationships
+
+    
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating
@@ -122,8 +217,6 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 #  generate-turtle:
 #  html-template:
 #  active-tables: false
-  pin-canonicals: pin-multiples
-# path-expansion-params: '../../expansion-params.json'
   apply-contact: true
   apply-jurisdiction: true
   apply-publisher: true
@@ -155,22 +248,67 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+  
+  #Menu:
+  # Home:
+    # Home (en): index.html
+    # Home (cs): index-cs.html
+  # Introduction:
+    # eHN Guidelines (en): ehn-guidelines.html
+    # Model Maps: model-map.html
+    # Logical Models: logicalModel.html
+    # General semantics: general-semantics.html
+    # Content: general-semantics.html#content
+    # eHN Guidelines (cs): ehn-guidelines-cs.html
+    # Obecná sémantika: general-semantics-cs.html
+    # Obsah: general-semantics-cs.html#obsah
+  # Functional view:
+    # Actors: functional-view.html
+    # Use Cases: functional-view.html#use-cases
+    # Aktéři: functional-view-cs.html
+    # Případy užití: functional-view-cs.html#případy-užití
+  # Artifacts:
+    # Profile artifacts: artifacts.html
+  # About:
+    # Downloads: downloads.html
+  # IG HDR EU: https://build.fhir.org/ig/hl7-eu/hdr/index.html
+   #Functional:
+    #   Use cases (en): use-cases.html
+    #   Use cases (cs): use-cases-cs.html
+    #   Workflow (en): workflow.html
+    #   Workflow (cs): workflow-cs.html
+    #   Logical models (en): logical-models.html
+    #   Logical models (cs): logical-models-cs.html
+    #   Terminology considerations (en): terminology-considerations.html
+    #   Terminology considerations (cs): terminology-considerations-cs.html
 menu:
-  Home: index.html
+  Home:
+    Home (en): index.html
+    Home (cs): index-cs.html
   Introduction:
-    General semantics: general-semantics.html
-    Content: general-semantics.html#content
-    Obecná sémantika: general-semantics-cs.html
-    Obsah: general-semantics-cs.html#obsah
-  Functional view:
-    Actors: functional-view.html
-    Use Cases: functional-view.html#use-cases
-    Aktéři: functional-view-cs.html
-    Případy užití: functional-view-cs.html#případy-užití
-  Artifacts:
-    Profile artifacts: artifacts.html
+    Scope and content (en): scope-and-content.html
+    Scope and content (cs): scope-and-content-cs.html
+    Background (en): background.html
+    Background (cs): background-cs.html
+  Implementation:
+    Mapping to profiles (en): model-map.html
+    Mapping to profiles (cs): model-map-cs.html
+    Examples (en): examples.html
+    Examples (cs): examples-cs.html
+    Obligations (en): obligations.html
+    Obligations (cs): obligations-cs.html
   About:
-    Downloads: downloads.html
+    Authors (en): authors.html
+    Authors (cs): authors-cs.html
+    Downloads (en): downloads.html
+    Downloads (cs): downloads-cs.html
+    Dependencies (en): dependencies.html
+    Dependencies (cs): dependencies-cs.html
+    Copyright (en): copyright.html
+    Copyright (cs): copyright-cs.html
+  Artifacts: artifacts.html
+  IG HDR EU: https://build.fhir.org/ig/hl7-eu/hdr/index.html
+
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

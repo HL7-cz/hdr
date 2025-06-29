@@ -1,0 +1,33 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "InPatientEncounter" <<LogicalModel>> [[StructureDefinition-InPatientEncounterCz.html]]
+note top #PaleTurquoise [[ConceptMap-encounter2FHIR-cz-hdr.html]]
+Concept Map
+endnote
+class "location-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-location-core.html]]
+"InPatientEncounter" <|. "location-cz-core"
+class "organization-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html]]
+"InPatientEncounter" <|. "organization-cz-core"
+"location-cz-core" -d[hidden]-> "organization-cz-core"
+class "practitioner-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitioner-core.html]]
+"InPatientEncounter" <|. "practitioner-cz-core"
+"organization-cz-core" -d[hidden]-> "practitioner-cz-core"
+class "practitionerRole-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html]]
+"InPatientEncounter" <|. "practitionerRole-cz-core"
+"practitioner-cz-core" -d[hidden]-> "practitionerRole-cz-core"
+class "encounter-cz-hdr" <<Profile>> [[StructureDefinition-cz-encounter-hdr.html]]
+"InPatientEncounter" <|. "encounter-cz-hdr"
+"practitionerRole-cz-core" -d[hidden]-> "encounter-cz-hdr"
+@enduml

@@ -7,7 +7,7 @@ Usage: #definition
 * status = #draft
 * experimental = true
 * description = """eHN HDR Subject Model to this guide mapping"""
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Subject"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/SubjectCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core"
 * group[=].element[+].code = #subjectIdentification
 * group[=].element[=].display = "A.1.1 - Identification of the patient/subject"
@@ -114,7 +114,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Patient.contact					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Subject"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/SubjectCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
 * group[=].element[+].code = #subjectContact.preferredHP
 * group[=].element[=].display = "A.1.2.2 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."
@@ -141,7 +141,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Practictioner.telecom
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Subject"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/SubjectCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
 * group[=].element[+].code = #subjectContact.preferredHP
 * group[=].element[=].display = "A.1.2.2 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."

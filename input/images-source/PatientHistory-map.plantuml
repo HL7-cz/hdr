@@ -1,0 +1,54 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "PatientHistory" <<LogicalModel>> [[StructureDefinition-PatientHistoryCz.html]]
+note top #PaleTurquoise [[ConceptMap-hdr2FHIR-cz-hdr.html]]
+Concept Map
+endnote
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+"PatientHistory" <|. "composition-cz-hdr"
+class "condition-cz-hdr" <<Profile>> [[StructureDefinition-cz-condition-hdr.html]]
+"PatientHistory" <|. "condition-cz-hdr"
+"composition-cz-hdr" -d[hidden]-> "condition-cz-hdr"
+class "device-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-medical-device.html]]
+"PatientHistory" <|. "device-cz-core"
+"condition-cz-hdr" -d[hidden]-> "device-cz-core"
+class "deviceUseStatement-eu-hdr" <<Profile>> [[https://build.fhir.org/ig/hl7-eu/hdr/StructureDefinition-deviceUseStatement-eu-hdr.html]]
+"PatientHistory" <|. "deviceUseStatement-eu-hdr"
+"device-cz-core" -d[hidden]-> "deviceUseStatement-eu-hdr"
+class "familyMemberHistory-cz-hdr" <<Profile>> [[StructureDefinition-czh-familyMemberHistory-hdr.html]]
+"PatientHistory" <|. "familyMemberHistory-cz-hdr"
+"deviceUseStatement-eu-hdr" -d[hidden]-> "familyMemberHistory-cz-hdr"
+class "immunization-cz-hdr" <<Profile>> [[StructureDefinition-cz-immunization-hdr.html]]
+"PatientHistory" <|. "immunization-cz-hdr"
+"familyMemberHistory-eu-hdr" -d[hidden]-> "immunization-cz-hdr"
+class "immunizationRecommendation-cz-hdr" <<Profile>> [[StructureDefinition-cz-immunizationRecommendation-hdr.html]]
+"PatientHistory" <|. "immunizationRecommendation-cz-hdr"
+"immunization-cz-hdr" -d[hidden]-> "immunizationRecommendation-cz-hdr"
+class "observation-infectious-contact-cz-hdr" <<Profile>> [[StructureDefinition-cz-observation-infectious-contact-hdr.html]]
+"PatientHistory" <|. "observation-infectious-contact-cz-hdr"
+"immunizationRecommendation-cz-hdr" -d[hidden]-> "observation-infectious-contact-cz-hdr"
+class "observation-sdoh-cz-hdr" <<Profile>> [[StructureDefinition-cz-observation-sdoh-hdr.html]]
+"PatientHistory" <|. "observation-sdoh-cz-hdr"
+"observation-infectious-contact-cz-hdr" -d[hidden]-> "observation-sdoh-cz-hdr"
+class "observation-travel-cz-hdr" <<Profile>> [[StructureDefinition-cz-observation-travel-hdr.html]]
+"PatientHistory" <|. "observation-travel-cz-hdr"
+"observation-sdoh-cz-hdr" -d[hidden]-> "observation-travel-cz-hdr"
+class "procedure-cz-hdr" <<Profile>> [[StructureDefinition-cz-procedure-hdr.html]]
+"PatientHistory" <|. "procedure-cz-hdr"
+"observation-travel-cz-hdr" -d[hidden]-> "procedure-cz-hdr"
+class "Observation" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Observation]]
+"PatientHistory" <|. "Observation"
+"procedure-cz-hdr" -d[hidden]-> "Observation"
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "Alerts" <<LogicalModel>> [[StructureDefinition-AlertsCz.html]]
+note top #PaleTurquoise [[ConceptMap-alerts2FHIR-cz-hdr.html]]
+Concept Map
+endnote
+class "allergyIntolerance-cz-hdr" <<Profile>> [[StructureDefinition-cz-allergyIntolerance-hdr.html]]
+"Alerts" <|. "allergyIntolerance-cz-hdr"
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+"Alerts" <|. "composition-cz-hdr"
+"allergyIntolerance-cz-hdr" -d[hidden]-> "composition-cz-hdr"
+class "flag-cz-hdr" <<Profile>> [[StructureDefinition-cz-flag-hdr.html]]
+"Alerts" <|. "flag-cz-hdr"
+"composition-cz-hdr" -d[hidden]-> "flag-cz-hdr"
+@enduml

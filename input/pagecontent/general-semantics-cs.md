@@ -77,4 +77,3 @@ Obsahuje další informace o dokumentu žádanky jako např.: Správce dokumentu
 Obsahem této sekce je elektronický podpis dokumentu dle zákona `327/2011 §54a`.
 
 #### Tělo dokumentu
-

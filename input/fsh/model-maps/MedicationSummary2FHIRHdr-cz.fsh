@@ -7,8 +7,8 @@ Usage: #definition
 * status = #draft
 * experimental = true
 * description = """eHN HDR Medication Summary Model to this guide Map"""
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/MedicationSummary"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/medication-eu-hdr"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/MedicationSummaryCz"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-medication-hdr"
 * group[=].element[+].code = #MedicationSummary.productCode
 * group[=].element[=].display = "A.2.9.2.3 - Code"
 * group[=].element[=].target.code = #Medication.code
@@ -36,16 +36,16 @@ Usage: #definition
 * group[=].element[=].target.code = #Medication.form
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equal
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/MedicationSummary"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/medicationDispense-eu-hdr"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/MedicationSummaryCz"
+* group[=].target = "http://hl7.org/fhir/StructureDefinition/MedicationDispense"
 * group[=].element[+].code = #MedicationSummary.productCode
 * group[=].element[=].display = "A.2.9.2.3 - Code"
 * group[=].element[=].target.code = #MedicationDispense.medicationCodeableConcept
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "If no details about the medication are provided"
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/MedicationSummary"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-eu-hdr"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/MedicationSummaryCz"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-medicationRequest-hdr"
 * group[=].element[+].code = #MedicationSummary.reason
 * group[=].element[=].display = "A.2.9.2.1 - Medication reason"
 * group[=].element[=].target.code = #MedicationRequest.status
@@ -68,7 +68,7 @@ Usage: #definition
 * group[=].element[=].target.code = #MedicationDispense.daysSupply
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/MedicationSummary"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/MedicationSummaryCz"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/Dosage"
 * group[=].element[+].code = #MedicationSummary.dosageRegimen
 * group[=].element[=].display = "A.2.9.2.8 - Dosage Regimen"

@@ -14,7 +14,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * . ^definition = "Hospital Discharge Report composition. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 
 * extension contains $event-basedOn named basedOn 0..*
-* extension[basedOn].valueReference only Reference ( Resource or ServiceRequest ) /// add profile ///HON 12.6.2025 add general service request should not be LAB
+* extension[basedOn].valueReference only Reference ( Resource or ServiceRequest ) /// add profile
 
 * extension contains $artifact-relatedArtifact named relatedArtifact 0..*
 * extension[relatedArtifact] 
@@ -30,7 +30,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient]
-* extension[information-recipient].valueReference only Reference( CZ_PractitionerRoleCore or CZ_PractitionerCore or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+* extension[information-recipient].valueReference only Reference( CZ_PractitionerRoleCore or CZ_PractitionerCore or CZ_MedicalDevice or CZ_PatientCore or RelatedPerson or CZ_OrganizationCore)
 
 /* GC TO DO
 - check if we need a R5 composition.status
@@ -55,7 +55,8 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * date ^short = "HDR date"
 * author ^short = "Who and/or what authored the Hospital Discharge Report"
 * author ^definition = "Identifies who is responsible for the information in the Hospital Discharge Report, not necessarily who typed it in."
-* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+//* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or Device or CZ_PatientCore or RelatedPerson or CZ_OrganizationCore)
+* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_PatientCore or RelatedPerson or CZ_OrganizationCore)
 
 
 * title ^short = "Hospital Discharge Report"
@@ -164,10 +165,12 @@ Description: "This profile defines how to represent Composition resource in HL7 
       This section documents the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\nIf no information about allergies is available\, or if no allergies are known this should be clearly documented in the section.,
       $loinc#48765-2 )   // CODE
   * entry 1.. 
-  * entry only Reference(CZ_AllergyIntoleranceHdr or DocumentReference)
+  * entry only Reference(CZ_AllergyIntoleranceHdr or DocumentReference or AllergyIntolerance)
   * insert SectionEntrySliceComRules(Relevant allergies or intolerances (conditions\) for that patient.,
     It lists the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available\, or that no allergies are known .)
   // entry slices
+  // HON TODO fix me after the new profile is created
+  //* insert SectionEntrySliceDefRules (allergyIntolerance, 0.. , Allergy entry, Allergy entry, AllergyIntoleranceEpsEu)
   * insert SectionEntrySliceDefRules (allergyIntolerance, 0.. , Allergy entry, Allergy entry, CZ_AllergyIntoleranceHdr)
 
 // -------------------------------------
@@ -223,7 +226,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
     $loinc#46264-8) // History of medical device use
     // $sct#1184586001) //"Medical device document section (record artifact\)
   * entry 1..
-  * entry only Reference(CZ_DeviceUseStatementHdr or CZ_ProcedureHdr ) // DeviceUseStatementEuHdr also ? //ANO HON pro schůzku máme dělat nový profil pro DeviceStatementEuHdr ANO
+  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuHdr ) // DeviceUseStatementEuHdr also ?
   * section ..0
 
 * section contains sectionMedications 0..1
@@ -235,7 +238,7 @@ Medicinal products\, the administration of which was started during hospitalisat
 $loinc#10160-0 ) // 	History of Medication use Narrative
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
   * entry 1..
-  * entry only Reference(CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_MedicationDispenseHdr or MedicationAdministration) //HON TODO add medication Dispense or MedicationAdministration
+  * entry only Reference(MedicationStatement or MedicationRequestEuHdr or MedicationDispense or MedicationAdministration)
 
 
 * section contains sectionSignificantResults 0..1
@@ -246,11 +249,14 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
     $loinc#30954-2 ) // Relevant diagnostic tests/laboratory data Narrative or it is 11493-4 Hospital discharge studies summary Narrative or we need both ?
     // $sct#423100009 ) // "Results section (record artifact\)"
   * entry 0..
-  * entry only Reference(CZ_ObservationResultLaboratory or Observation or DiagnosticReport or DocumentReference) ///HON Dotaz co všechno tam bude: Laboratoře, procedury, 
+  * entry only Reference(Observation or DiagnosticReport or DocumentReference)
 
   * entry insert OpenReferenceSlicePerTypeRules (significant results, significant results)
-  * insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result , Laboratory Result, CZ_ObservationResultLaboratory)
-  * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result ,Radiology Result  ,$Observation-results-radiology-uv-ips) //HON TODO dodat ze zobrazovaček
+  // HON TODO Fix me
+  //* insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result ,Laboratory Result  , $Observation-resultslab-eu-lab)
+  * insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result , Laboratory Result, $Observation-resultslab-eu-lab)
+  * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result ,
+    Radiology Result  ,$Observation-results-radiology-uv-ips)
     
     
   // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)
@@ -261,7 +267,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * insert SectionComRules (
     Synthesis,
     This section provides clinical synthesis (e.g. description of reasons and course of hospital stay\) clustered by managed conditions. Clinical synthesis may include clinical reasoning (differential diagnostics\, explanation of clinical context\) in clinically complex conditions.,
-    $loinc#51848-0 ) // Evaluation note 
+    $loinc#67781-5) // Evaluation note 
  
 
 /*  TO BE REVIEWED
@@ -388,12 +394,13 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
       The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy
       ,$loinc#47519-4 "History of Procedures Document")   // CODE
   * entry 1..
-  * entry only Reference(CZ_ProcedureHdr
+  * entry only Reference(Procedure
                           or DocumentReference  )
   * insert SectionEntrySliceComRules(Patient past procedures pertinent to the scope of this document.,
     It lists the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy. This entry shall be used to document that no information about past procedures is available\, or that no relevant past procedures are known.)
   // entry slices
-  * insert SectionEntrySliceDefRules (procedure, 0.. , Past Procedure entry , Past Procedure entry  , CZ_ProcedureHdr)
+  * insert SectionEntrySliceDefRules (procedure, 0.. , Past Procedure entry ,
+    Past Procedure entry  , $Procedure-uv-ips)
 
 
 // -------------------------------------
@@ -496,7 +503,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 // \’s Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
 
   * entry 0..
-  * entry only Reference(CZ_ObservationSdohHdr or DocumentReference)    // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips)
+  * entry only Reference(Observation or DocumentReference)    // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips)
 
 /* 
 * section[sectionSocialHistory] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -623,7 +630,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
     Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge, 
     $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital discharge medications Narrative" or 	Discharge medications Narrative
   * entry 1..
-  * entry only Reference(CZ_MedicationRequestHdr or CZ_MedicationDispenseHdr)
+  * entry only Reference(CZ_MedicationRequestHdr or MedicationDispense)
 
 // -------------------------------------
 // Discharge Instructions Section 0 … 1
@@ -687,7 +694,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
       $loinc#48768-6  ) // "Payment sources Document"
   * ^short = "Health insurance and payment information."
   * ^definition = "This section includes heath insurance and payment information."
-  * entry only Reference(CZ_Coverage) // ==> Add Profile
+  * entry only Reference(Coverage) // ==> Add Profile
 
 // -------------------------------------
 

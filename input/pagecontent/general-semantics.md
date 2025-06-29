@@ -1,6 +1,3 @@
-
-
-
 ### General Semantics in National Context
 
 #### Entities
@@ -41,4 +38,3 @@ In the context of this document, a component refers to a part of the data struct
 
 
 #### Body of HDR
-

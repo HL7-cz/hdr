@@ -1,0 +1,27 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "Subject" <<LogicalModel>> [[StructureDefinition-SubjectCz.html]]
+note top #PaleTurquoise [[ConceptMap-subject2FHIR-cz-hdr.html]]
+Concept Map
+endnote
+class "patient-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
+"Subject" <|. "patient-cz-core"
+class "practitioner-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitioner-core.html]]
+"Subject" <|. "practitioner-cz-core"
+"patient-cz-core" -d[hidden]-> "practitioner-cz-core"
+class "practitionerRole-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html]]
+"Subject" <|. "practitionerRole-cz-core"
+"practitioner-cz-core" -d[hidden]-> "practitionerRole-cz-core"
+@enduml

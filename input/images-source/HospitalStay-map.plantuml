@@ -1,0 +1,54 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "HospitalStay" <<LogicalModel>> [[StructureDefinition-HospitalStayCz.html]]
+note top #PaleTurquoise [[ConceptMap-patientHistory2FHIR-cz-hdr.html]]
+Concept Map
+endnote
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+"HospitalStay" <|. "composition-cz-hdr"
+class "condition-cz-hdr" <<Profile>> [[StructureDefinition-cz-condition-hdr.html]]
+"HospitalStay" <|. "condition-cz-hdr"
+"composition-cz-hdr" -d[hidden]-> "condition-cz-hdr"
+class "Medical-device-cz" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-medical-device.html]]
+"HospitalStay" <|. "Medical-device-cz"
+"condition-cz-hdr" -d[hidden]-> "Medical-device-cz"
+class "deviceUseStatement-eu-hdr" <<Profile>> [[https://build.fhir.org/ig/hl7-eu/hdr/StructureDefinition-deviceUseStatement-eu-hdr.html]]
+"HospitalStay" <|. "deviceUseStatement-eu-hdr"
+"Medical-device-cz" -d[hidden]-> "deviceUseStatement-eu-hdr"
+class "medication-cz-hdr" <<Profile>> [[StructureDefinition-cz-medication-hdr.html]]
+"HospitalStay" <|. "medication-cz-hdr"
+"deviceUseStatement-eu-hdr" -d[hidden]-> "medication-cz-hdr"
+class "medicationDispense-eu-hdr" <<Profile>> [[https://build.fhir.org/ig/hl7-eu/hdr/StructureDefinition-medicationDispense-eu-hdr.html]]
+"HospitalStay" <|. "medicationDispense-eu-hdr"
+"medication-cz-hdr" -d[hidden]-> "medicationDispense-eu-hdr"
+class "medicationRequest-cz-hdr" <<Profile>> [[StructureDefinition-cz-medicationRequest-hdr.html]]
+"HospitalStay" <|. "medicationRequest-cz-hdr"
+"medicationDispense-eu-hdr" -d[hidden]-> "medicationRequest-cz-hdr"
+class "procedure-cz-hdr" <<Profile>> [[StructureDefinition-cz-procedure-hdr.html]]
+"HospitalStay" <|. "procedure-cz-hdr"
+"medicationRequest-cz-hdr" -d[hidden]-> "procedure-cz-hdr"
+class "Observation-resultslab-cz-lab" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-lab/StructureDefinition-cz-observation-result-laboratory.html]]
+"HospitalStay" <|. "Observation-resultslab-cz-lab"
+"procedure-cz-hdr" -d[hidden]-> "Observation-resultslab-cz-lab"
+class "Dosage" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Dosage]]
+"HospitalStay" <|. "Dosage"
+"Observation-resultslab-cz-lab" -d[hidden]-> "Dosage"
+class "MedicationAdministration" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/MedicationAdministration]]
+"HospitalStay" <|. "MedicationAdministration"
+"Dosage" -d[hidden]-> "MedicationAdministration"
+class "MedicationStatement" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/MedicationStatement]]
+"HospitalStay" <|. "MedicationStatement"
+"MedicationAdministration" -d[hidden]-> "MedicationStatement"
+@enduml

@@ -3,19 +3,19 @@ InstanceOf: ConceptMap
 Usage: #definition
 * url = "http://hl7.cz/fhir/hdr/ConceptMap/patientHistory2FHIR-cz-hdr"
 * name = "PatientHistory2FHIRCzHdr"
-* title = "eHN Hospital Stay Model to this guide Map"
+* title = "CZ Patient History to this guide Map"
 * status = #draft
 * experimental = true
-* description = """eHN HDR Hospital Stay  Model to this guide Map"""
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistoryEhn"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/ImmunizationRecommendation-eu-hdr"
+* description = """CZ HDR Patient History Model to this guide Map"""
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-immunizationRecommendation-hdr"
 * group[=].element[+].code = #PatientHistory.medicalHistory.vaccination.nextVaccinationDate
 * group[=].element[=].display = "A.2.6.1.4.8 - Next vaccination date"
 * group[=].element[=].target.code = #ImmunizationRecommendation.recommendation.dateCriterion[nextDose].value
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistoryEhn"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
 * group[=].element[+].code = #PatientHistory.medicalHistory
 * group[=].element[=].display = "A.2.6.1 - Medical history"
 * group[=].element[=].target.code = #Composiiton.section
@@ -120,8 +120,8 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "To be specified"
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistoryEhn"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/condition-eu-hdr"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfConditions.conditionSpecification
 * group[=].element[=].display = "A.2.6.1.1.1 - Problem description"
 * group[=].element[=].target.code = #Condition.text
@@ -163,16 +163,16 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.stage
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistoryEhn"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/device-eu-hdr"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-medical-device"
 * group[=].element[+].code = #PatientHistory.medicalHistory.medicalDevices.identifier
 * group[=].element[=].display = "A.2.6.1.2.2 - Device ID"
 * group[=].element[=].target.code = #Device.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "if generic identifier"
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistoryEhn"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/deviceUseStatement-eu-hdr"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
+* group[=].target = "http://hl7.org/fhir/StructureDefinition/DeviceUseStatement"
 * group[=].element[+].code = #PatientHistory.medicalHistory.medicalDevices.description
 * group[=].element[=].display = "A.2.6.1.2.1 - Device and implant description"
 * group[=].element[=].target.code = #DeviceUseStatement.text
@@ -207,8 +207,8 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "The same section usd by the hospital stay ?"
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistoryEhn"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/immunization-eu-hdr"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-immunization-hdr"
 * group[=].element[+].code = #PatientHistory.medicalHistory.vaccination.diseaseOrAgent
 * group[=].element[=].display = "A.2.6.1.4.1 - Disease or agent targeted"
 * group[=].element[=].target.code = #Immunization.protocolApplied.targetDisease
@@ -239,8 +239,8 @@ Usage: #definition
 * group[=].element[=].target.code = #Immunization.occurenceDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistoryEhn"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/observation-sdoh-eu-hdr"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-sdoh-hdr"
 * group[=].element[+].code = #PatientHistory.socialDeterminants.participationInSociety
 * group[=].element[=].display = "A.2.6.3.1 - Participation in society"
 * group[=].element[=].target.code = #Observation
@@ -355,8 +355,8 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "category and code to be defined"
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistoryEhn"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/procedure-eu-hdr"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-procedure-hdr"
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.procedureCode
 * group[=].element[=].display = "A.2.6.1.3.1 - Procedure code"
 * group[=].element[=].target.code = #Procedure.code
@@ -392,7 +392,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Procedure.focalDevice	
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistoryEhn"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/Observation"
 * group[=].element[+].code = #PatientHistory.useOfSubstances.alcohol
 * group[=].element[=].display = "A.2.6.4.1 - Alcohol use"
@@ -478,8 +478,8 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "category and code to be defined"
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistoryEhn"
-* group[=].target = "http://hl7.org/fhir/StructureDefinition/familyMemberHistory-eu-hdr"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
+* group[=].target = "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"
 * group[=].element[+].code = #PatientHistory.familyHistory.relationship
 * group[=].element[=].display = "A.2.6.2.1 - Patient relationship"
 * group[=].element[=].target.code = #FamilyMemberHistory.relationship
