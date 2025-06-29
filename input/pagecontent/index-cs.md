@@ -11,7 +11,7 @@ Toto zahrnuje jak národní, tak přeshraniční scénáře.
 ### Information Models
 
 <div>
-  <img src="hdr_block.png" class="figure-img img-responsive img-rounded center-block" width="70%">
+  <img src="hdr_schema_cz.png" class="figure-img img-responsive img-rounded center-block" width="70%">
   <p><strong>Fig. 1: Struktura propouštěcí zprávy</strong></p>
 </div>
 
@@ -31,6 +31,9 @@ Základní sekce propouštěcí zprávy z nemocnice
 | A.2.7 Průběh hospitalizace | 1..1 | Povinné | [Composition.sectionDischargeDetails](http://hl7.cz/fhir/hdr/ConceptMap/hdr2FHIR-cz-hdr#HospitalDischargeReport.body.dischargeDetails) |
 | A.2.8 Stav při propuštění | 1..1 | Povinné | [Composition.sectionDischargeDetails.objectiveFindings](http://hl7.cz/fhir/hdr/ConceptMap/hdr2FHIR-cz-hdr#HospitalDischargeReport.body.dischargeDetails.objectiveFindings) *(+functional status, note…)* |
 | A.2.9 Doporučení | 0..1 | Požadováno | [Composition.sectionPlanOfCare / sectionDischargeMedications / sectionDischargeInstructions](http://hl7.cz/fhir/hdr/ConceptMap/hdr2FHIR-cz-hdr#HospitalDischargeReport.body.recommendations) |
+| A.3 Zobrazitelná forma dokumentu | 1..1 | Povinné | [Link] |
+| A.4 Přílohy | 0..1 | Volitelné | [Link] |
+
 
 
 ### Rozsah

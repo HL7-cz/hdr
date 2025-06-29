@@ -10,10 +10,9 @@ This guide does not describe how to exchange this message.
 ### Information Models
 
 <div>
-  <img src="hdr_schema_EN.png" class="figure-img img-responsive img-rounded center-block" width="70%">
+  <img src="hdr_schema_en.png" class="figure-img img-responsive img-rounded center-block" width="70%">
   <p><strong>Fig. 1: Hospital discharge report structure</strong></p>
 </div>
-
 
 Basic Sections of the Hospital Discharge Report
 
@@ -27,9 +26,11 @@ Basic Sections of the Hospital Discharge Report
 | A.2.4 Reason for Admission | 0..1 | Required | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
 | A.2.5 Condition at Admission (Initial Examination) | 0..1 | Optional | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
 | A.2.6 Medical History | 0..1 | Optional | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.7 Course of Hospitalization| 1..1| Mandatory| [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.8 Condition at Discharge|	1..1| Mandatory | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.9 Recommendations| 0..1 | Required | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
+| A.2.7 Course of Hospitalization | 1..1| Mandatory| [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
+| A.2.8 Condition at Discharge |	1..1| Mandatory | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
+| A.2.9 Recommendations | 0..1 | Required | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
+| A.3 Presentation form | 1..1 | Mandatory | [Link] |
+| A.4 Attachments | 0..1 | Optional | [Link] |
 
 
 ### Scope
