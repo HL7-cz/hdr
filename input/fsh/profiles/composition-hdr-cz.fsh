@@ -56,7 +56,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * author ^short = "Who and/or what authored the Hospital Discharge Report"
 * author ^definition = "Identifies who is responsible for the information in the Hospital Discharge Report, not necessarily who typed it in."
 //* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or Device or CZ_PatientCore or RelatedPerson or CZ_OrganizationCore)
-* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_PatientCore or RelatedPerson or CZ_OrganizationCore)
+* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
 
 * title ^short = "Hospital Discharge Report"
@@ -64,6 +64,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * attester.mode ^short = "The type of attestation"
 * attester.time ^short = "When the composition was attested."
 * attester.party ^short = "Who attested the composition."
+* attester.party only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
 * section 1..
   // add invariant or text or section

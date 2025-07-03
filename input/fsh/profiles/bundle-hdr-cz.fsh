@@ -82,7 +82,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 //* entry[observation].resource only Reference(Observation or CZ_ObservationInfectiousContactHdr or CZ_ObservationSdohHdr or CZ_ObservationTravelHdr)
 * entry[observation].resource only Observation // $Observation-results-uv-ips
 * entry[specimen].resource only $Specimen-uv-ips
-* entry[flag].resource only Flag
+* entry[flag].resource only CZ_FlagHdr
 * entry[familyMemberHistory].resource only FamilyMemberHistory
 * entry[documentReference].resource only DocumentReference
 

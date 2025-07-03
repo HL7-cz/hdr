@@ -48,6 +48,8 @@ dependencies:
   ihe.pharm.mpd: current
   hl7.fhir.eu.extensions: current
   hl7.fhir.cz.lab: current
+  hl7.fhir.cz.img: current
+  
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
