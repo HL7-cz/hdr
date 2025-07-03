@@ -11,7 +11,7 @@ Toto zahrnuje jak národní, tak přeshraniční scénáře.
 ### Information Models
 
 <div>
-  <img src="hdr_schema_cz.png" class="figure-img img-responsive img-rounded center-block" width="70%">
+  <img src="HDR_schema_cz.png" class="figure-img img-responsive img-rounded center-block" width="70%">
   <p><strong>Fig. 1: Struktura propouštěcí zprávy</strong></p>
 </div>
 

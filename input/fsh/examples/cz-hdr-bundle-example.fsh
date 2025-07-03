@@ -1,4 +1,4 @@
-// 1. Bundle: Hospital Discharge Report
+/*// 1. Bundle: Hospital Discharge Report
 Instance: DischargeBundle
 InstanceOf: CZ_BundleHdr
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-bundle-hdr"
@@ -96,7 +96,7 @@ InstanceOf: CZ_BundleHdr
 * entry[42].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000029"
 * entry[42].resource = ExampleSdohAlcohol
 * entry[43].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000002a"
-* entry[43].resource = ExampleSdohSmoking
+* entry[43].resource = ExampleSdohSmoking*/
 
 //----------------------------------------------------------------
 // 2. Bundle: Hospital Discharge Report - Novák Petr

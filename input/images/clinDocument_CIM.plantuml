@@ -1,0 +1,33 @@
+@startmindmap
+skinparam topurl StructureDefinition-
+
+<style>
+mindmapDiagram {
+    .green {
+        BackgroundColor lightgreen
+    }
+    .yellow {
+        BackgroundColor yellow
+    }
+    .red {
+        BackgroundColor LightPink
+    }
+
+}
+</style>
+
+*  **Klinický dokument**
+** Hlavička klinického dokumentu (L1,L2,L3) <<green>>
+** Strukturované tělo dokumentu (L2,L3) <<yellow>>
+*** Sekce 1: Vstupní vyšetření (L2,L3) <<yellow>>
+**** Vstupní vyšetření - text (L2) <<yellow>>
+**** Vstupní vyšetření formalizované - výška, váha (L3) <<red>>
+*** Sekce 2: Důvod hospitalizace (L2,L3) <<yellow>>
+**** Důvod hospitalizace - text (L2) <<yellow>>
+**** Důvod hospitalizace - kódem (L3) <<red>>
+*** Sekce 3: Průběh hospitalizace (L2,L3) <<yellow>>
+**** Průběh hospitalizace - text (L2) <<yellow>>
+**** Průběh hospitalizace - záznamy (L3) <<red>>
+** Prezentovatelná forma dokumentu (L1,L2,L3) <<green>>
+** Přílohy dokumentu (L1,L2,L3) <<green>>
+@endmindmap

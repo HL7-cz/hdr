@@ -146,7 +146,7 @@ Description: "Czech HDR - example of CRP observation for Novák Petr"
 * valueQuantity.system = $Jednotky
 * valueQuantity.code = #"mg/L"
 * referenceRange[0].low.value = 0.0
-* referenceRange[0].low.unit = "mg/L" 
+* referenceRange[0].low.unit = "mg/L"
 * referenceRange[0].low.system = $Jednotky
 * referenceRange[0].low.code = #"mg/L"
 * referenceRange[0].high.value = 10.0
@@ -154,5 +154,5 @@ Description: "Czech HDR - example of CRP observation for Novák Petr"
 * referenceRange[0].high.system = $Jednotky
 * referenceRange[0].high.code = #"mg/L"
 * referenceRange[0].text = "Norma: 0–10 mg/L"
-* interpretation[0].coding[0].code  = $observation-interpretation#N "Normal" 
+* interpretation[+] = $v3-ObservationInterpretation#N "Normal"
 
