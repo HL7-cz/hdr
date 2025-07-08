@@ -66,11 +66,15 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * attester.party ^short = "Who attested the composition."
 * attester.party only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
+
+
 * section 1..
   // add invariant or text or section
 
 * insert SectionSliceComRules (Sections composing the Hospital Discharge Report,
         The root of the sections that make up the Hospital Discharge Report composition.)
+
+* section.author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
 // -------------------------------------
 // Admission Evaluation Section 0 … 1 R
@@ -141,7 +145,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
     The Vital signs section includes blood pressure\, body temperature\, heart rate\, and respiratory rate. It may also include other clinical findings\, such as height\, weight\, body mass index\, head circumference\, and pulse oximetry. In particular\, notable vital signs or physical findings such as the most recent\, maximum and/or minimum\, baseline\, or relevant trends may be included,
     $loinc#8716-3) //  "Vital signs"
   * entry 1..
-  * entry only Reference(Observation or DocumentReference or $vitalsigns)
+  * entry only Reference( DocumentReference or $vitalsigns)
 
 * section contains sectionFunctionalStatus 0..1
 * section[sectionFunctionalStatus]
@@ -227,7 +231,8 @@ Description: "This profile defines how to represent Composition resource in HL7 
     $loinc#46264-8) // History of medical device use
     // $sct#1184586001) //"Medical device document section (record artifact\)
   * entry 1..
-  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuHdr ) // DeviceUseStatementEuHdr also ?
+ // * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuHdr ) // DeviceUseStatementEuHdr also ?
+  * entry only Reference(CZ_MedicalDevice or CZ_ProcedureHdr )
   * section ..0
 
 * section contains sectionMedications 0..1
@@ -239,7 +244,7 @@ Medicinal products\, the administration of which was started during hospitalisat
 $loinc#10160-0) // 	History of Medication use Narrative
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
   * entry 1..
-  * entry only Reference(MedicationStatement or MedicationRequestEuHdr or MedicationDispense or MedicationAdministration)
+  * entry only Reference(CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_MedicationHdr)  //or MedicationDispense or MedicationAdministration)
 
 
 * section contains sectionSignificantResults 0..1
@@ -255,9 +260,9 @@ $loinc#10160-0) // 	History of Medication use Narrative
   * entry insert OpenReferenceSlicePerTypeRules (significant results, significant results)
   // HON TODO Fix me
   //* insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result ,Laboratory Result  , $Observation-resultslab-eu-lab)
-  * insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result , Laboratory Result, $Observation-resultslab-eu-lab)
+  * insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result , Laboratory Result, $Observation-resultslab-cz-lab)
   * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result ,
-    Radiology Result  ,$Observation-results-radiology-uv-ips)
+    Radiology Result  ,$Observation-results-radiology-cz)
 
 
   // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)
@@ -400,8 +405,8 @@ $loinc#10160-0) // 	History of Medication use Narrative
   * insert SectionEntrySliceComRules(Patient past procedures pertinent to the scope of this document.,
     It lists the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy. This entry shall be used to document that no information about past procedures is available\, or that no relevant past procedures are known.)
   // entry slices
-  * insert SectionEntrySliceDefRules (procedure, 0.. , Past Procedure entry ,
-    Past Procedure entry  , $Procedure-uv-ips)
+  //* insert SectionEntrySliceDefRules (procedure, 0.. , Past Procedure entry ,  Past Procedure entry  , $Procedure-uv-ips-cz)
+  * insert SectionEntrySliceDefRules (procedure, 0.. , Past Procedure entry ,  Past Procedure entry  , CZ_ProcedureHdr)
 
 
 // -------------------------------------
@@ -457,7 +462,7 @@ $loinc#10160-0) // 	History of Medication use Narrative
 * section[sectionPastIllnessHx].code = http://loinc.org#11348-0 (exactly)
 * section[sectionPastIllnessHx].text 1..
 * section[sectionPastIllnessHx].entry 1..
-* section[sectionPastIllnessHx].entry only Reference($Condition-uv-ips)
+* section[sectionPastIllnessHx].entry only Reference($Condition-uv-ips-cz)
 * section[sectionPastIllnessHx].entry ^short = "Conditions the patient suffered in the past."
 * section[sectionPastIllnessHx].entry ^definition = "It contains a description of the conditions the patient suffered in the past."
 /* * section[sectionPastIllnessHx].emptyReason ..0
@@ -504,7 +509,7 @@ $loinc#10160-0) // 	History of Medication use Narrative
 // \’s Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
 
   * entry 0..
-  * entry only Reference(Observation or DocumentReference)    // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips)
+  * entry only Reference(CZ_ObservationSdohHdr or DocumentReference)    // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips)
 
 /*
 * section[sectionSocialHistory] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -631,7 +636,7 @@ $loinc#10160-0) // 	History of Medication use Narrative
     Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge,
     $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital discharge medications Narrative" or 	Discharge medications Narrative
   * entry 1..
-  * entry only Reference(CZ_MedicationRequestHdr or MedicationDispense)
+  * entry only Reference  (CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_MedicationHdr) //(CZ_MedicationRequestHdr or MedicationDispense)
 
 // -------------------------------------
 // Discharge Instructions Section 0 … 1
@@ -695,7 +700,7 @@ $loinc#10160-0) // 	History of Medication use Narrative
       $loinc#48768-6  ) // "Payment sources Document"
   * ^short = "Health insurance and payment information."
   * ^definition = "This section includes heath insurance and payment information."
-  * entry only Reference(Coverage) // ==> Add Profile
+  * entry only Reference(CZ_Coverage) // ==> Add Profile
 
 // -------------------------------------
 

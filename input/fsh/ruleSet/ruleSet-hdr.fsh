@@ -12,7 +12,7 @@ RuleSet: AlertSectionRules
   * entry 0..
   * insert SectionEntrySliceComRules(Alerts, Alerts)
   // entry slices
-  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , Flag)
+  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , CZ_FlagHdr)
   * insert SectionEntrySliceDefRules (detectedIssue, 0.. ,  Detected Issue,
     Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction\, Ineffective treatment frequency\, Procedure-condition conflict\, etc. ,
     DetectedIssue)
@@ -90,7 +90,7 @@ RuleSet: EvaluationSubSectionRules
 /*   * code = $sct#1184588000 "Functional status document section (record artifact)" */
   /* * entry only Reference(FunctionalStatusAssessment) */
 
-  * entry only Reference(Condition or ClinicalImpression or Observation or DocumentReference or QuestionnaireResponse)
+  * entry only Reference(CZ_ConditionHdr or ClinicalImpression or Observation or DocumentReference or QuestionnaireResponse)
     * ^short = "Optional entry used to represent disabilities and functional assessments"
     * ^definition = "It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide."
   
