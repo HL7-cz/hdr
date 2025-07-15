@@ -9,7 +9,7 @@ Usage: #example
 * subject = Reference(Patient-Novak-Petr)
 * date = "2022-10-07T08:15:00+02:00"
 * author[0] = Reference(Practitioner-Author)
-* custodian = Reference(CZ_OrganizationCore/Organization-1)
+* custodian = Reference(Organization-1)
 * content[0].attachment.contentType = #application/pdf
 * content[0].attachment.language = #cs
 * content[0].attachment.title = "Propouštěcí zpráva"
@@ -28,7 +28,7 @@ Usage: #example
 * subject = Reference(Patient-Novak-Petr)
 * date = "2022-10-07T08:15:00+02:00"
 * author[0] = Reference(Practitioner-Author)
-* custodian = Reference(CZ_OrganizationCore/Organization-1)
+* custodian = Reference(Organization-1)
 * content[0].attachment.contentType = #text/html
 * content[0].attachment.language = #cs
 * content[0].attachment.title = "Propouštěcí zpráva"
