@@ -8,16 +8,12 @@ Description: "Czech HDR - example of a condition (Heart Failure)"
 * verificationStatus = #confirmed
 * category[0] = $condition-category#encounter-diagnosis "Encounter Diagnosis"
 * category[1] = $sct#278307001 "On admission"
-* category[2] = $sct#25265005 "Not received therapy or drug for"
+* category[2] = $sct#69845001 "Received therapy or drug for"
 * severity = $sct#24484000 "Severe"
 * code = $icd10#I50 "Heart failure"
-* subject = Reference(Mracena2)
+* subject = Reference(Patient-Novak-Petr) 
 * onsetDateTime = "2025-01-01T08:00:00+01:00"
-* note.text = "Patient diagnosed with heart failure during hospital stay."
-
-
-// Condition note
-* note[0].text = "Patient diagnosed with heart failure during hospital stay."
+* note.text = "Pacient byl přijat s diagnózou srdečního selhání. Byla zahájena léčba diuretiky a ACE inhibitory."
 
 Instance: CZ-Condition-HDR-Example-2
 InstanceOf: CZ_ConditionHdr
@@ -29,10 +25,10 @@ Description: "Czech HDR - example of a condition (Cardiac arrhythmia - Brugada S
 * verificationStatus = #confirmed
 * category[0] = $sct#64572001 "Disease"
 * category[1] = $sct#278307001 "On admission"
-* category[2] = $sct#25265005 "Not received therapy or drug for"
+* category[2] = $sct#69845001 "Received therapy or drug for"
 * severity = $sct#6736007 "Moderate"
 * code = urn:oid:1.2.203.24341.11.2.1#I498 "Jiné určené srdeční arytmie"
-* subject = Reference(Mracena2)
+* subject = Reference(Patient-Novak-Petr)
 * onsetDateTime = "2013-01-09T00:00:00+01:00"
 * note.text = "Brugada Syndrom diagnostikován v roce 2013."
 

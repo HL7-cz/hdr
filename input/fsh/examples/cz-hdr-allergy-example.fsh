@@ -204,7 +204,7 @@ Description: "Patient experiences itching and tongue swelling in response to str
 * type.coding[0].display = "Allergy"
 */
 * type = #allergy
-//* type = #allergy
+* category = #food
 /*
 * criticality.coding[0].system = $cz-allergyintolerance-riziko
 * criticality.coding[0].code = #low
@@ -212,25 +212,37 @@ Description: "Patient experiences itching and tongue swelling in response to str
 */
 * criticality = #low
 // Alergen (SNOMED CT)
+* code = $sct#102261002 "Strawberry"
+/*
 * code.coding[0].system = $cz-allergyintolerance-puvodce
 * code.coding[0].code = #91938006
 * code.coding[0].display = "Allergy to strawberry"
+*/
 * onsetDateTime = "2020-01-01"
+* recordedDate = "2023-10-01"
 // Pacient
 * patient = Reference(Patient-Novak-Petr)
 // Reakce
-* reaction[0].manifestation[0].coding[0].system = $cz-allergyintolerance-reakce
+* reaction[+]
+  * manifestation[+] = $sct#81950002 "Edema of the tongue"
+  * manifestation[+] = $sct#4386001	"Bronchospasm"
+  * onset = "2020-01-01T12:00:00Z"
+* reaction[+]
+  * manifestation = $sct#418363000 "Itching of skin"
+  * onset = "2022-10-01T10:00:00Z"
+  * severity = #mild
+/* * reaction[0].manifestation[0].coding[0].system = $cz-allergyintolerance-reakce
 * reaction[0].manifestation[0].coding[0].code = #418363000
 * reaction[0].manifestation[0].coding[0].display = "Itching of skin"
 * reaction[0].manifestation[1].coding[0].system = $cz-allergyintolerance-reakce
 * reaction[0].manifestation[1].coding[0].code = #81950002
 * reaction[0].manifestation[1].coding[0].display = "Edema of the tongue"
 * reaction[0].description = "Svědění, otok jazyka."
-/*
+ *//*
 * reaction[0].severity.coding[0].system = $cz-allergyintolerance-reakce-zavaznost
 * reaction[0].severity.coding[0].code = #mild
 * reaction[0].severity.coding[0].display = "Mírná"
-*/
-* reaction[0].severity = #mild
 
+* reaction[0].severity = #mild
+*/
 

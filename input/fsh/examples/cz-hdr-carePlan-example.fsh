@@ -18,7 +18,7 @@ Description: "Czech HDR - example of a care plan"
 * activity.detail.kind = #Procedure
 * activity.detail.description = "Follow-up appointment with cardiologist"
 * activity.detail.status = #scheduled
-// TBD Udělat po procedůře 
+// TBD Udělat po procedůře
 //* activity.reference = Reference(CZ-Procedure-HDR-Example)
 
 //----------------------------------------
@@ -42,13 +42,13 @@ Description: "Czech HDR - example of a care plan"
 //další podrobnosti plánu, cíle
 * goal = Reference(Goal-hernia-treatment)
 // Activity detail
-* activity[0].detail.kind = #Procedure
-* activity[0].detail.description = "Pooperační sledování, převazy, kontrola rány"
-* activity[0].detail.status = #scheduled
-* activity[1].detail.kind = #CommunicationRequest
-* activity[1].detail.description = "Edukace pacienta o režimu po operaci"
-* activity[1].detail.status = #scheduled
-* activity[0].detail.kind = #Appointment
-* activity[0].detail.description = "Ambulantní kontrola za 14 dní"
-* activity[0].detail.status = #scheduled
+* activity[+].detail.kind = #Procedure
+* activity[=].detail.description = "Pooperační sledování, převazy, kontrola rány"
+* activity[=].detail.status = #scheduled
+* activity[+].detail.kind = #CommunicationRequest
+* activity[=].detail.description = "Edukace pacienta o režimu po operaci"
+* activity[=].detail.status = #scheduled
+* activity[+].detail.kind = #Appointment
+* activity[=].detail.description = "Ambulantní kontrola za 14 dní"
+* activity[=].detail.status = #scheduled
 

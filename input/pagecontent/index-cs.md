@@ -1,5 +1,4 @@
 ### Úvod
-
 Příručka stanovuje sadu pravidel, která budou použita pro HL7 FHIR k definování způsobu reprezentace propouštěcí zprávy z nemocnice v českém národním kontextu, v souladu s evropskými směrnicemi eHN.
 
 Hlavním cílem je definovat obsahové složky a preferovanou strukturu pro sestavení propouštěcí zprávy z nemocnice. Účelem tohoto standardu je definovat reprezentaci propouštěcí zprávy jako součásti zdravotnické dokumentace pacienta za účelem elektronické výměny zdravotních informací mezi jednotlivci, poskytovateli zdravotní péče a infrastrukturou v České republice.
