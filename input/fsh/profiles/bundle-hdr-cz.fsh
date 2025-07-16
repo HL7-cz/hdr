@@ -69,7 +69,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[imagingStudy].resource only $ImagingStudy-uv-ips
 * entry[immunization].resource only $Immunization-uv-ips
 * entry[media].resource only Media // $Media-observation-uv-ips
-* entry[medication].resource only CZ_MedicationHdr
+* entry[medication].resource only CZ_Medication
 * entry[medicationRequest].resource only CZ_MedicationRequestHdr
 * entry[medicationStatement].resource only $MedicationStatement-uv-ips
 * entry[medicationAdministration].resource only MedicationAdministration

@@ -131,3 +131,31 @@ InstanceOf: CZ_ProcedureHdr
 * note[0].text = "Plastika pravostranné tříselné kýly dne 2. 3. 2025."
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Plastika pravostranné tříselné kýly dne 2. 3. 2025.</div>"
 * text.status = #generated
+
+
+Instance: Procedure-Insert-Pacemaker2
+InstanceOf: CZ_ProcedureHdr
+Title: "CZ-Procedure-HDR Example - Pacemaker"
+Usage: #example
+Description: "Czech HDR - example of a Procedure - Pacemaker"
+
+* status = #completed
+* code = $sct#47545007 "Zavedení kardiostimulátoru"
+* subject = Reference(Patient-Novak-Petr)
+* performedDateTime = "2024-03-05"
+* bodySite = $sct#74262004 "Struktura pravé síně"
+* reasonCode[+] = $icd10#I50 "Heart failure"
+* outcome = $sct#385669000 "Úspěšný"
+* focalDevice.manipulated = Reference(Device-Pacemaker)
+* focalDevice.action = $sct#129303008 "Implantované zařízení"
+* text.status = #generated
+* text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <p>Procedure: Zavedení kardiostimulátoru</p>
+  <p>Date: 2024-03-05</p>
+  <p>Patient: Petr Novák</p>
+  <p>Reason: Úplná atrioventrikulární blokáda</p>
+  <p>Outcome: Úspěšný</p>
+  <p>Device: Kardiostimulátor Medtronic W1DR01</p>
+</div>
+"""

@@ -3,7 +3,7 @@
 Instance: Mracena2
 InstanceOf: CZ_PatientCore
 Usage: #example
-Description: "Patient, contact information and practitioner"
+Description: "Patient, contact information including registering practitioner"
 
 * contained[+] = RegisteringProviderExample
 * identifier[+]
@@ -29,7 +29,7 @@ Description: "Patient, contact information and practitioner"
 * name.family = "Mrakomorová"
 * name.given = "Mračena"
 * telecom.system = #phone
-* telecom.value = "+420 603 853 227"
+* telecom.value = "+420603853227"
 * telecom.use = #home
 * gender = #female
 * birthDate = "1971-11-26"
@@ -46,13 +46,15 @@ Description: "Patient, contact information and practitioner"
 
 * contact[+].relationship.coding[+] = $v3-RoleCode#MTH "matka"
 * contact[=].relationship.coding[+] = $v2-0131#N "Příbuzný"
-* contact[=].name.use = #usual
-* contact[=].name.family = "Mrakomorová"
-* contact[=].name.given[+] = "Biologická"
-* contact[=].name.given[+] = "Matka"
-* contact[=].telecom[+].use = #mobile
-* contact[=].telecom[=].system = #phone
-* contact[=].telecom[=].value = "+420 604 123 456"
+* contact[=].name[+]
+  * use = #usual
+  * family = "Mrakomorová"
+  * given[+] = "Biologická"
+  * given[+] = "Matka"
+* contact[=].telecom[+]
+  * use = #mobile
+  * system = #phone
+  * value = "+420604123456"
 
 * contact[+].relationship.coding[+] = $v3-RoleCode#FRND "přítel/přítelkyně"
 * contact[=].relationship.coding[+] = $v2-0131#C "Emergentní kontakt"
@@ -60,7 +62,7 @@ Description: "Patient, contact information and practitioner"
 * contact[=].name.family = "Dlouhá"
 * contact[=].name.given[0] = "Alena"
 * contact[=].telecom.system = #phone
-* contact[=].telecom.value = "+420 601 111 111"
+* contact[=].telecom.value = "+420601111111"
 * contact[=].telecom.use = #home
 * contact[=].address[+].use = #home
 * contact[=].address[=].type = #physical
@@ -95,9 +97,9 @@ Usage: #inline
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"
 * type[+] = $cz-drzar#320 "Samost. ordinace všeob. prakt. lékaře"
-* name = "MUDr. Stanislava Kubšová"
+* name = "MUDr. Jana Krásná"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Samost. ordinace všeob. prakt. lékaře, MUDr. Stanislava Kubšová</div>"
-* text.status = #generated  
+* text.status = #generated
 
 
 Instance: Organization-1
@@ -109,18 +111,20 @@ Description: "An example of the organization of a provider"
 * type[DRZAR] = $cz-drzar#102 "Nemocnice"
 * name = "Nemocnice Chrudim"
 * telecom.system = #phone
-* telecom.value = "+420 603 853 227"
+* telecom.value = "+420603853227"
 * telecom.use = #work
 
-* address[+].use = #work
-* address[=].type = #both
-* address[=].text = "Václavská 570, 537 01, Chrudim"
-* address[=].line[+] = "Václavská 570"
-* address[=].line[=].extension[streetName].valueString = "Václavská"
-* address[=].line[=].extension[houseNumber].valueString = "570"
-* address[=].city = "Chrudim"
-* address[=].postalCode = "53701"
-* address[=].country = "CZ"
+* address[+]
+  * use = #work
+  * type = #both
+  * text = "Václavská 570, 537 01, Chrudim"
+  * line[+] = "Václavská 570"
+  * line[=].extension[streetName].valueString = "Václavská"
+  * line[=].extension[houseNumber].valueString = "570"
+  * city = "Chrudim"
+  * postalCode = "53701"
+  * country = "Česká republika"
+    * extension[countryCode].valueCoding = urn:iso:std:iso:3166:#CZ "Czechia"
 
 
 Instance: Practitioner-2
@@ -133,8 +137,9 @@ Description: "Practitioner id(NRZP)=987654321"
 //* identifier[=].value = "4567891230"
 * name.use = #usual
 * name.prefix = "MUDr."
-* name.family = "Kubšová"
-* name.given = "Stanislava"
+* name.family = "Kašková"
+* name.given = "Šárka"
+* name.suffix = "PhD"
 
 * gender = #female
 * communication[+] = urn:ietf:bcp:47#cs
@@ -169,18 +174,6 @@ Description: "Birth (registration) number"
 * system = "https://ncez.mzcr.cz/fhir/sid/rcis"
 * value = "7161264528"
 * use = #official
-
-//----------------------------------------------------------------------------------------
-Instance: Device-Pacemaker
-InstanceOf: CZ_MedicalDevice
-Usage: #example
-Description: "Heart pacemaker Medtronic W1DR01"
-* id = "Device-Pacemaker"
-* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-medical-device"
-* manufacturer = "Medtronic"
-* modelNumber = "W1DR01"
-* type = $sct#14106009 "Kardiostimulátor"
-* patient = Reference(Patient/Mracena) "Pokusný pacient Mračena"
 
 //-----------------------------------------------------
 Instance: PractitionerRole1
@@ -232,7 +225,7 @@ Usage: #example
 * type[+] = $cz-drzar#323 "Samostatná ordinace PL - gynekologa"
 * name = "MUDr. Jana Kouzelná"
 * telecom.system = #phone
-* telecom.value = "+420 603 853 227"
+* telecom.value = "+420603853227"
 * telecom.use = #work
 * address.line = "Krátká 11, 70500 Ostrava"
 * address.city = "Ostrava"
@@ -248,12 +241,12 @@ Description: "Participant Admitter HDR"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
 * identifier[+].system = $cz-practitioner-NRZP
 * identifier[=].value = "987654321"
-//* identifier[+].system = $cz-practitioner-CLK 
+//* identifier[+].system = $cz-practitioner-CLK
 //* identifier[=].value = "4567891230"
 * name.use = #usual
 * name.text = "MUDr. Karel Volný"
 * telecom[+].system = #phone
-* telecom[=].value = "+420 603 853 227"
+* telecom[=].value = "+420603853227"
 * telecom[=].use = #work
 
 //------------------------------------------------------
@@ -271,7 +264,7 @@ Description: "Participant Referrer HDR"
 * name.use = #usual
 * name.text = "MUDr. Jiří Zdvořilý"
 * telecom[+].system = #phone
-* telecom[=].value = "+420 603 777 227"
+* telecom[=].value = "+420603777227"
 * telecom[=].use = #work
 
 
@@ -287,19 +280,19 @@ Description: "practitioner's detail"
 * code = $cz-nrzp_povolani#L00 "Lékař"
 * specialty = $sct#419192003 "Interní lékařství"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ambulance interního lékařství, MUDr. Jiří Zdvořilý</div>"
-* text.status = #generated  
+* text.status = #generated
 
 //-----------------------------------------------------
 Instance: Patient-Novak-Petr
 InstanceOf: CZ_PatientCore
 Usage: #example
 Description: "Example of patient Petr Novak with identification by czech national identifiers (RID, RCIS), registrating healthcare provider and contact information"
-/** contained[+] = practitionerrole1  
+/** contained[+] = practitionerrole1
 * contained[+] = Practitioner-2
-* contained[+] = Organization-1 
+* contained[+] = Organization-1
 */
 // Patient details identification
-* id = "Novak-Petr"
+* id = "3f85726c-ad2f-441b-89ce-100000000000"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core"
 * identifier[+]
   * system = $cz-patient-rcis
@@ -319,12 +312,12 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * name.prefix = "Ing."
 * name.suffix = "Ph.D."
 * telecom[+].system = #phone
-* telecom[=].value = "+420 777 111 222"
+* telecom[=].value = "+420777111222"
 * telecom[=].use = #home
 * telecom[+].system = #phone
-* telecom[=].value = "+420 333 111 777"
+* telecom[=].value = "+420333111777"
 * telecom[=].use = #mobile
-* telecom[+].system = #email   
+* telecom[+].system = #email
 * telecom[=].value = "novak@example.com"
 * telecom[=].use = #home
 * address[+]
@@ -348,7 +341,7 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * contact[=].name.family = "Nováková"
 * contact[=].name.given[0] = "Alena"
 * contact[=].telecom.system = #phone
-* contact[=].telecom.value = "+420 601 111 111"
+* contact[=].telecom.value = "+420601111111"
 * contact[=].telecom.use = #home
 * contact[=].address[+].use = #home
 * contact[=].address[=].type = #physical
@@ -366,7 +359,7 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * contact[=].name.family = "Dlouhá"
 * contact[=].name.given[0] = "Alena"
 * contact[=].telecom.system = #phone
-* contact[=].telecom.value = "+420 601 333 333"
+* contact[=].telecom.value = "+420601333333"
 * contact[=].telecom.use = #home
 * contact[=].address[+].use = #home
 * contact[=].address[=].type = #physical
@@ -377,7 +370,7 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * contact[=].address[=].city = "Trenčín"
 * contact[=].address[=].postalCode = "12345"
 * contact[=].address[=].country = "SK"
-//Patient communication 
+//Patient communication
 * communication[+].language = urn:ietf:bcp:47#cs
 * communication[=].preferred = true
 * communication[+].language = urn:ietf:bcp:47#en
@@ -402,7 +395,7 @@ Description: "Participant Referrer HDR"
 * name.use = #usual
 * name.text = "MUDr. Ivan Anděl"
 * telecom[+].system = #phone
-* telecom[=].value = "+420 603 777 227"
+* telecom[=].value = "+420603777227"
 * telecom[=].use = #work
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">MUDr. Ivan Anděl, interní lékař, Nemocnice Chrudim, Václavská 570, 537 01 Chrudim, tel: +420 603 777 227</div>"
 * text.status = #generated
@@ -416,7 +409,7 @@ Description: "practitioner's detail"
 * id = "Practitioner-Author-detail"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
 * practitioner = Reference(CZ_PractitionerCore/Practitioner-Author) "MUDr. Ivan Anděl"
-* organization = Reference(CZ_OrganizationCore/Organization-1) "Nemocnice Chrudim"
+* organization = Reference(Organization-1) "Nemocnice Chrudim"
 * code = $cz-nrzp_povolani#L00 "Lékař"
 * specialty = $sct#419192003 "Interní lékařství"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">MUDr. Ivan Anděl, interní lékař, Nemocnice Chrudim, Václavská 570, 537 01 Chrudim, tel: +420 603 777 227</div>"
@@ -431,7 +424,7 @@ Usage: #inline
 
 * id = "Organization-Referrer"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-organization-core"
-* identifier[+].system = $cz-organization-ico 
+* identifier[+].system = $cz-organization-ico
 * identifier[=].value = "456789811"
 * identifier[+].system = $cz-organization-icz
 * identifier[=].value = "12345000"
@@ -440,7 +433,7 @@ Usage: #inline
 * type[+] = $cz-drzar#300 "Sdružení ambulantních zařízení"
 * name = "Ambulance interního lékařství, MUDr. Jiří Zdvořilý"
 * telecom.system = #phone
-* telecom.value = "+420 603 853 888"
+* telecom.value = "+420603853888"
 * telecom.use = #work
 * address.line = "Krátká 29, 70500 Ostrava"
 * address.city = "Ostrava"
@@ -458,10 +451,10 @@ Description: "Participant UZV HDR"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
 * identifier[+].system = $cz-practitioner-NRZP
 * identifier[=].value = "987654322"
-//* identifier[+].system = $cz-practitioner-CLK 
+//* identifier[+].system = $cz-practitioner-CLK
 //* identifier[=].value = "4567891231"
 * name.use = #usual
 * name.text = "MUDr. Karel Janák"
 * telecom[+].system = #phone
-* telecom[=].value = "+420 603 853 287"
+* telecom[=].value = "+420603853287"
 * telecom[=].use = #work

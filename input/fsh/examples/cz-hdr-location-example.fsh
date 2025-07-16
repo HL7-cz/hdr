@@ -120,7 +120,7 @@ Usage: #example
 * status = #active
 * name = "Nemocnice Chrudim - Oddělení CHIR1"
 * description = "Oddělení chirurgie 1 v nemocnici v Chrudimi"
-* managingOrganization = Reference(CZ_OrganizationCore/Organization-1)
+* managingOrganization = Reference(Organization-1)
 //add telephone contact
 * telecom[0].system = #phone
 * telecom[0].value = "+420 123 456 789"
@@ -141,7 +141,7 @@ Usage: #example
 * status = #active
 * name = "Nemocnice Chrudim - Oddělení CHIR-JIP"
 * description = "Oddělení chirurgie JIP v nemocnici v Chrudimi"
-* managingOrganization = Reference(CZ_OrganizationCore/Organization-1)
+* managingOrganization = Reference(Organization-1)
 //add telephone contact
 * telecom[0].system = #phone
 * telecom[0].value = "+420 123 456 888"

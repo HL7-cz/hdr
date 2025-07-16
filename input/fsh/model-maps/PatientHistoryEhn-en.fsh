@@ -1,5 +1,5 @@
-Logical: LogCzPatientHistoryEhnCz
-Id: LogPatientHistoryCz
+Logical: PatientHistoryEhnCz
+Id: PatientHistoryCz
 Title: "A.2.5 - Patient history (eHN)"
 Description: """Hospital Discharge Report - Patient history - A.2.5 eHN"""
 * medicalHistory 1..1 BackboneElement "A.2.6.1 - Medical history" """Medical history"""

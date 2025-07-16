@@ -51,6 +51,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 // * encounter only Reference (Encounter)
 
 * encounter only Reference (CZ_EncounterHdr)
+* encounter 1..1 
 
 * date ^short = "HDR date"
 * author ^short = "Who and/or what authored the Hospital Discharge Report"
@@ -147,7 +148,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * entry 1..
   * entry only Reference( DocumentReference or $vitalsigns)
 
-* section contains sectionFunctionalStatus 0..1
+* section contains sectionFunctionalStatus 1..1
 * section[sectionFunctionalStatus]
   * insert SectionComRules (
     Functional status,
@@ -162,7 +163,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 // -------------------------------------
 // Allergies and Intolerances Section 0 … 1
 // -------------------------------------
-* section contains sectionAllergies ..1
+* section contains sectionAllergies 1..1
 
 * section[sectionAllergies]
   * insert SectionComRules (
@@ -174,8 +175,6 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * insert SectionEntrySliceComRules(Relevant allergies or intolerances (conditions\) for that patient.,
     It lists the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available\, or that no allergies are known .)
   // entry slices
-  // HON TODO fix me after the new profile is created
-  //* insert SectionEntrySliceDefRules (allergyIntolerance, 0.. , Allergy entry, Allergy entry, AllergyIntoleranceEpsEu)
   * insert SectionEntrySliceDefRules (allergyIntolerance, 0.. , Allergy entry, Allergy entry, CZ_AllergyIntoleranceHdr)
 
 // -------------------------------------
@@ -232,7 +231,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
     // $sct#1184586001) //"Medical device document section (record artifact\)
   * entry 1..
  // * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuHdr ) // DeviceUseStatementEuHdr also ?
-  * entry only Reference(CZ_MedicalDevice or CZ_ProcedureHdr )
+  * entry only Reference(CZ_DeviceUseStatementHdr or CZ_ProcedureHdr )
   * section ..0
 
 * section contains sectionMedications 0..1
@@ -244,7 +243,7 @@ Medicinal products\, the administration of which was started during hospitalisat
 $loinc#10160-0) // 	History of Medication use Narrative
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
   * entry 1..
-  * entry only Reference(CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_MedicationHdr)  //or MedicationDispense or MedicationAdministration)
+  * entry only Reference(CZ_MedicationDispenseHdr or CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_Medication)  //or MedicationDispense or MedicationAdministration)
 
 
 * section contains sectionSignificantResults 0..1
@@ -299,7 +298,7 @@ $loinc#10160-0) // 	History of Medication use Narrative
 // -------------------------------------
 // Discharge Details Section 1 … 1 R
 // -------------------------------------
-* section contains sectionDischargeDetails 0..1
+* section contains sectionDischargeDetails 1..1
 * section[sectionDischargeDetails]
   * insert SectionComRules (
       Discharge details,
@@ -311,7 +310,7 @@ $loinc#10160-0) // 	History of Medication use Narrative
 // -------------------------------------
 // Hospital discharge physical findings Section 0 … 1
 // -------------------------------------
-* section contains sectionDischargeFindings 0..1
+* section contains sectionDischargeFindings 1..1
 * section[sectionDischargeFindings]
   * insert SectionComRules (
       Hospital discharge physical findings,
@@ -636,7 +635,7 @@ $loinc#10160-0) // 	History of Medication use Narrative
     Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge,
     $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital discharge medications Narrative" or 	Discharge medications Narrative
   * entry 1..
-  * entry only Reference  (CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_MedicationHdr) //(CZ_MedicationRequestHdr or MedicationDispense)
+  * entry only Reference  (CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_Medication) //(CZ_MedicationRequestHdr or MedicationDispense)
 
 // -------------------------------------
 // Discharge Instructions Section 0 … 1
@@ -680,6 +679,17 @@ $loinc#10160-0) // 	History of Medication use Narrative
     $loinc#42348-3 )  // 	Advance directives
   * entry only Reference(CZ_ConsentHdr or DocumentReference) // ==> Add Profile
 
+* section contains sectionInfectiousContacts ..1
+* section[sectionInfectiousContacts]
+  * insert SectionComRules (
+    Infectious contacts,
+    Infectious contacts of the patient,
+     TemporaryHDRSystem#infection-contact ) // $sct#444071008"Exposure to organism (event\)"
+  * entry 0..*
+  * entry only Reference(CZ_ObservationInfectiousContactHdr)
+    * ^short = "Exposure to an infectious agent."
+    * ^definition = "Information about a suspected infectious agent or agents the person was exposed to."
+  * section ..0
 
 * section contains sectionTravelHx ..1
 * section[sectionTravelHx]
