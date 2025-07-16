@@ -1,5 +1,17 @@
-Logical: DischargeDetailsEhnCz
-Id: DischargeDetailsCz
-Title: "A.2.7 - Discharge details (eHN)"
-Description: """Hospital Discharge Report - Discharge details - A.2.7 eHN"""
+Logical: LogCzDischargeDetailsEhnCz
+Id: LogDischargeDetailsCz
+Title: "A.2.7 - Průběh hospitalizace"
+Description: """Nemocniční propouštěcí zpráva - Průběh hospitalizace"""
+
+* diagnostickySouhrn 1..* base "A.2.7.1 - Diagnostický souhrn" """Všechny problémy/diagnózy, které ovlivňují péči během hospitalizace nebo které je důležité zaznamenat pro zajištění kontinuity péče. V diagnostickém souhrnu se v souladu s mezinárodním doporučením rozlišuje mezi problémy léčenými během hospitalizace a ostatními (neléčenými) problémy. Léčené problémy jsou problémy, které byly během hospitalizace předmětem diagnostiky, terapie, ošetřování nebo (průběžného) sledování. Dále lze problémy rozdělit do tří kategorií: problémy přítomné při přijetí (POA), stavy získané během hospitalizace (HAC) a problémy, které nelze zařadit do žádné z těchto dvou kategorií (N/A). Diagnostický souhrn obsahuje všechny stavy tak, jak byly rozpoznány na konci hospitalizace, po všech vyšetřeních. Tento oddíl obsahuje stručný, dobře specifikovaný, kódovatelný souhrn problémů. Problémy jsou seřazeny podle důležitosti (hlavní problémy na prvním místě) během hospitalizace. Popis problému může být doplněn dalšími podrobnostmi v oddíle anamnézy a/nebo v oddíle Syntéza."""
+* vyznamneVykony 1..* base "A.2.7.2 - Významné výkony" """Operace a ostatní „instrumentální“ intervence (endoskopické, intravaskulární) provedené v průběhu hospitalizace a významné pro kontinuitu péče.Do této sekce nepatří čistě diagnostické výkony (MRI, CT a pod.). Pokud nebyl proveden žádný významný výkon, musí být tento fakt explicitně uveden pomocí kódu IPS Absent and Unknown Data."""
+* zdrPomucky 1..* base "A.2.7.3 - Zdravotní pomůcky a implantáty" """Zavedené implantáty a používané zdravotní pomůcky (zdravotnické prostředky), které ovlivňují nebo mohou ovlivňovat poskytování zdravotních služeb (diagnostiku i léčbu). Dále také zdravotnické prostředky odebrané v průběhu hospitalizace. Pokud je sekce prázdná, musí být explicitně uveden důvod pomocí kódového systému IPS Absent and Unknown Data"""
+* vyznamnaLecba 0..* base "A.2.7.4 - Další významná léčba" """Poskytnutá léčba, kterou nelze jednoznačně označit za významný výkon (ve smyslu předchozí definice), ale je významná – typicky chemoterapie, radioterapie, očišťovací metody (dialýza, hemoperfuze), metody podpory oběhu (kontrapulzace apod.), podání krevních derivátů případně další."""
+* medikace 0..* base "A.2.7.5 - Medikace" """Vybraná medikamentózní léčba v průběhu hospitalizace. Uvedou se ty léčivé přípravky, jejichž podávání bylo během hospitalizace ukončeno nebo pokračuje po propuštění pouze krátkodobě, přitom znalost jejich podání je významné pro další zdravotní péči (antibiotika kromě zcela rutinních, kortikosteroidy ve vysokých dávkách apod.) Léčivé přípravky, jejichž podávání bylo zahájeno během hospitalizace, ale je doporučeno i po propuštění, budou uvedeny v souhrnné tabulce v bloku Doporučení."""
+* vysledky 0..* base "A.2.7.6 - Výsledky vyšetření" """Výsledky významných funkčních, diagnostických a zobrazovacích vyšetření pro zajištění kontinuity péče, provedených v průběhu hospitalizace. Výsledky objednané, ale dosud nedodaných vyšetření (status = registered) by měly být prezentovány odděleně od výsledků již dodaných."""
+* klinickeShrnuti 1..1 base "A.2.7.7 - Klinické shrnutí" """Podrobný popis důvodu a průběhu hospitalizace (za celou hospitalizaci) strukturovaný dle jednotlivých problémů. Klinické shrnutí může být zakončeno klinickou úvahou (dif. diagnostika, vysvětlení souvislostí apod.) u klinicky složitých stavů."""
+* klinickeShrnuti.problem 1..* base "A.2.7.7.1 - Klinický souhrn problému" """Souhrnný popis důvodu a průběhu hospitalizace za konkrétní problém."""
+* klinickeShrnuti.problem.text 1..* string "A.2.7.7.1.1 - Popis problému" """Popis problému textem."""
+* klinickeShrnuti.problem.duvod 1..* base "A.2.7.7.1.2- Důvod a průběh hospitalizace" """Podrobný popis důvodu a průběhu hospitalizace (za celou hospitalizaci)."""
+* klinickeShrnuti.klinickaUvaha 0..1 base "A.2.7.2- Klinická úvaha" """Klinické shrnutí může být zakončeno klinickou úvahou (dif. diagnostika, vysvětlení souvislostí apod.) u klinicky složitých stavů."""
 

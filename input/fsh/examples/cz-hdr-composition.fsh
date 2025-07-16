@@ -275,6 +275,18 @@ InstanceOf: CZ_CompositionHdr
 * section[sectionSocialHistory].entry[0] = Reference(ExampleSdohSmokingEnded)
 * section[sectionSocialHistory].entry[1] = Reference(ExampleSdohAlcoholSporadic)
 
+///Add section for Family History
+* section[sectionFamilyHistory].title = "Rodinná anamnéza"
+* section[sectionFamilyHistory].code.coding[0].system = "http://loinc.org"
+* section[sectionFamilyHistory].code.coding[0].code = #10157-6 // Corrected code assignment
+* section[sectionFamilyHistory].code.coding[0].display = "Family history"
+* section[sectionFamilyHistory].text.div = """
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>Rodinná anamnéza: matka zemřela na infarkt ve věku 75 let, otec žije, má 80 let a trpí hypertenzí. Sourozenci zdraví.</p>
+  </div>"""
+* section[sectionFamilyHistory].text.status = #additional
+
+
 //Add section for imunizations
 * section[sectionImmunizations].title = "Očkování"
 * section[sectionImmunizations].code.coding[0].system = "http://loinc.org"
