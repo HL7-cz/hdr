@@ -1,4 +1,4 @@
-Logical: LogCzAlertsEhnCz
+Logical: LogCzAlertsCz
 Id: LogAlertsCz
 Title: "A.2.2 - Urgentní informace (cz)"
 Description: """Nemocniční propouštěcí zpráva - Urgentní informace - A.2.2"""

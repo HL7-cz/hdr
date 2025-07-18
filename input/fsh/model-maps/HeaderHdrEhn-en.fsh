@@ -2,6 +2,7 @@ Logical: HeaderHdrCz
 Id: Header
 Title: "A.1 - Hospital Discharge Report header data element"
 Description: """Hospital Discharge Report - Hospital Discharge Report header data element - A.1 eHN"""
+//rozdil oproti českému modelu pacient je v hlavičce rovnou rozepsán. 
 * subject 1..1 Subject "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject" """Identification of the patient/subject and Patient/subject related contact information"""
 * payer 0..1 BackboneElement "A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care." """Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care."""
 * payer.insuranceCode 0..1 Identifier "A.1.3.1 - Health insurance code" """Unique health insurance company identification code."""
