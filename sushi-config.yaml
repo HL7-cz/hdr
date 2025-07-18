@@ -131,7 +131,7 @@ pages:
   logical-models.md:
     title: Logical models
   logical-models-cs.md:
-    title: Datová sada - logické modely
+    title: Datová sada - logické modely CZ
   model-map.md:
     title: Model maps
   model-map-cs.md:
@@ -144,6 +144,7 @@ pages:
     title: Downloads
   downloads-cs.md:
     title: Ke stažení
+  
   #terminology-considerations.md:
   #  title: Terminology considerations
   #terminology-considerations-cs.md:
@@ -185,6 +186,7 @@ pages:
     title: PlanOfCare Relationships
   MedicationSummary-map.html:
     title: MedicationSummary Relationships
+ 
 
     
 # The parameters property represents IG.definition.parameter. Rather
@@ -296,6 +298,9 @@ menu:
     Scope and content (cs): scope-and-content-cs.html
     Background (en): background.html
     Background (cs): background-cs.html
+  Functional:
+    Logical models (en): logical-models.html
+    Logical models (cs): logical-models-cs.html
   Implementation:
     Mapping to profiles (en): model-map.html
     Mapping to profiles (cs): model-map-cs.html
@@ -416,6 +421,30 @@ menu:
         #- ConceptMap/planOfCare2FHIR-cz-hdr
         #- ConceptMap/medicationSummary2FHIR-cz-hdr
 #*/
+groups:
+  czech-logical-model:
+    name:  Czech logical model (Informative)
+    description: Logical model in czech language. Informative for this version of the guide.
+    resources:
+      - StructureDefinition/LogAdmissionEvaluationCz
+      - StructureDefinition/LogAdvanceDirectivesCz
+      - StructureDefinition/LogAlertsCz
+      - StructureDefinition/LogAttachmentsCz
+      - StructureDefinition/LogdigitalSignatureCz
+      - StructureDefinition/LogDischargeDetailsCz
+      - StructureDefinition/LogInPatientEncounterCz
+      - StructureDefinition/LogFunctionalStatusCz
+      - StructureDefinition/LogHeaderHdrCz
+      - StructureDefinition/LogHospitalDischargeReportCz
+      - StructureDefinition/LogHospitalStayCz
+      - StructureDefinition/LogMedicationSummaryCz
+      - StructureDefinition/LogCzObjectiveFindingsCz
+      - StructureDefinition/LogPlanOfCareCz
+      - StructureDefinition/LogPatientHistoryCz
+      - StructureDefinition/LogSubjectCz
+      - StructureDefinition/LogPresentedFormCz
+      
+
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
 # should follow the format defined in ImplementationGuide:

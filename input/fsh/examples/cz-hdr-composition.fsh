@@ -135,7 +135,7 @@ InstanceOf: CZ_CompositionHdr
 * date = "2025-03-10T14:30:00+01:00"
 * author[+] = Reference(Practitioner-Author)
 * author[+] = Reference(Practitioner-Author-detail)
-* author[+] = Reference(CZ_OrganizationCore/Organization-1)         // document authored by practitioner role
+* author[+] = Reference(Organization-1)         // document authored by practitioner role
 * subject = Reference(Patient-Novak-Petr)            // document subject is patient
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 
@@ -145,7 +145,7 @@ InstanceOf: CZ_CompositionHdr
 * section[sectionAdmissionEvaluation].code.coding[0].code = #67852-4 // Corrected code assignment
 * section[sectionAdmissionEvaluation].code.coding[0].display = "Admission status"
 * section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient byl přijat na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Při příjmu byl pacient v dobrém stavu, vitální funkce stabilní. Při fyzikálním vyšetření bylo zjištěno bolestivé zduření v oblasti pravého tříselného kanálu, bez známek zánětu nebo infekce. Laboratorní vyšetření ukázalo normální hodnoty krevního obrazu a biochemie, včetně TSH v normálním rozmezí. Pacient byl stabilní, bez známek dehydratace nebo hypovolemie. Byla zahájena předoperační příprava včetně interního vyšetření a laboratorních testů. Pacient byl informován o nutnosti chirurgického zákroku a souhlasil s ním. </div>" // Added required text for cardinality
-* section[sectionAdmissionEvaluation].text.status = #generated
+* section[sectionAdmissionEvaluation].text.status = #additional
 * section[sectionAdmissionEvaluation].entry[0] = Reference(ExampleChestCircumference)
 * section[sectionAdmissionEvaluation].entry[1] = Reference(ExampleHeadCircumference)
 * section[sectionAdmissionEvaluation].entry[2] = Reference(ExampleAbdominalCircumference)
@@ -164,12 +164,12 @@ InstanceOf: CZ_CompositionHdr
   V rámci hospitalizace byla u pacienta sledována substituční léčba hypotyreózy (Euthyrox 75 µg denně), bez nutnosti úpravy dávkování. Hodnota TSH při přijetí v normě.
   Pacient byl v dobrém stavu propuštěn do domácího ošetření dne 10. 3. 2025. Doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.
   </div>""" // Added required text for cardinality
-* section[sectionHospitalCourse].text.status = #generated
+* section[sectionHospitalCourse].text.status = #additional //Additional text status for generated narrative /HONza
 
 // Sekce cestovatelská anamnéza
 * section[sectionTravelHx].title = "Cestovatelská anamnéza"
 * section[sectionTravelHx].code = $loinc#10182-4 "History of travel"
-* section[sectionTravelHx].text.status = #generated
+* section[sectionTravelHx].text.status = #additional
 * section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient nedávno cestoval na Madagaskar.</p></div>"
 * section[sectionTravelHx].entry[0] = Reference(Observation-TravelHistory-Madagaskar)
 * section[sectionTravelHx].author[0] = Reference(Practitioner-Author) // Example reference to a travel history observation
@@ -177,7 +177,7 @@ InstanceOf: CZ_CompositionHdr
 
 * section[sectionInfectiousContacts].title = "Infekční kontakty"
 //* section[sectionInfectiousContacts].code = TemporaryHDRSystem#infection-contact "History of contact with infectious disease"
-* section[sectionInfectiousContacts].text.status = #generated
+* section[sectionInfectiousContacts].text.status = #additional
 * section[sectionInfectiousContacts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient byl v kontaktu s osobou nakaženou COVID-19.</p></div>"
 * section[sectionInfectiousContacts].entry[0] = Reference(Observation-InfectiousContact)
 
@@ -188,7 +188,7 @@ InstanceOf: CZ_CompositionHdr
 * section[sectionAllergies].code.coding[0].code = #48765-2 // Allergies and adverse reactions
 * section[sectionAllergies].code.coding[0].display = "Alergie, intolerance"
 * section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alergie na jahody, od 01.01.2020, reakce: Svědění, otok jazyka</div>" // Corrected to Narrative type
-* section[sectionAllergies].text.status = #generated
+* section[sectionAllergies].text.status = #additional
 * section[sectionAllergies].entry = Reference(Allergy-Strawberry-Novak)
 //Sekce Předem vyslovená přání
 * section[sectionAdvanceDirectives].title = "Dříve vyjádřená přání"
@@ -220,9 +220,9 @@ InstanceOf: CZ_CompositionHdr
 * section[sectionSignificantProcedures].entry[0] = Reference(Procedure-inguinal-hernia)
 //Sekce Souhrn Medikace
 * section[sectionMedications].title = "Medikace"
-* section[sectionMedications].code.coding[0].system = $loinc
-* section[sectionMedications].code.coding[0].code = #10160-0
-* section[sectionMedications].code.coding[0].display = "Discharge medications Narrative"
+* section[sectionMedications].code.coding[+].system = $loinc
+* section[sectionMedications].code.coding[=].code = #10160-0
+* section[sectionMedications].code.coding[=].display = "Discharge medications Narrative"
 * section[sectionMedications].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Medikace při propuštění</p>
@@ -233,13 +233,15 @@ InstanceOf: CZ_CompositionHdr
     </ul>
   </div>
   """
-* section[sectionMedications].text.status = #generated
+* section[sectionMedications].text.status = #additional
 * section[sectionMedications].entry[0] = Reference(MedicationStatement-Euthyrox-Novak)
 * section[sectionMedications].entry[1] = Reference(MedicationStatement-Paracetamol-Novak)
 * section[sectionMedications].entry[2] = Reference(MedicationStatement-Ibalgin400-Novak)
 * section[sectionMedications].entry[3] = Reference(MedicationDispense-Euthyrox)
 * section[sectionMedications].entry[4] = Reference(MedicationDispense-Paracetamol)
 * section[sectionMedications].entry[5] = Reference(MedicationDispense-Ibalgin400)
+
+//Doporučení další medikace jako MedicationRequest
 
 ///sekce Výsledky vyšetření
 * section[sectionSignificantResults].title = "Výsledky vyšetření"
@@ -254,7 +256,7 @@ InstanceOf: CZ_CompositionHdr
       <li>CRP: 6 mg/L (norma: 0–10 mg/L)</li>
     </ul>
   </div>"""
-* section[sectionSignificantResults].text.status = #generated
+* section[sectionSignificantResults].text.status = #additional
 * section[sectionSignificantResults].entry[0] = Reference(Observation-UZV-Novak) // Corrected Reference to include the resource type
 * section[sectionSignificantResults].entry[1] = Reference(Observation-CRP-Novak) // Corrected Reference to include the resource type
 
@@ -263,26 +265,50 @@ InstanceOf: CZ_CompositionHdr
 * section[sectionSocialHistory].code.coding[0].system = "http://loinc.org"
 * section[sectionSocialHistory].code.coding[0].code = #29762-2 // Corrected code assignment
 * section[sectionSocialHistory].code.coding[0].display = "Social history"
-* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Social history at discharge</div>" // Added required text for cardinality
-* section[sectionSocialHistory].text.status = #generated
-* section[sectionSocialHistory].entry[0] = Reference(ExampleSdohSmoking)
-* section[sectionSocialHistory].entry[1] = Reference(ExampleSdohAlcohol)
+* section[sectionSocialHistory].text.div = """
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>Pacient je ženatý, žije s manželkou ve společné domácnosti. Má dvě dospělé děti, které žijí samostatně.</p>
+    <p>Bývalý kuřák, přestal kouřit před 10 lety, předtím cca 20 cigaret denně. Alkohol konzumuje příležitostně, 1–2 piva týdně.</p>
+    <p>Bydlí ve vlastním bytě ve 3. patře bez výtahu, pohybuje se samostatně. Je v důchodu, dříve pracoval jako automechanik. Dále udává dobrou sociální oporu a soběstačnost v denních aktivitách.</p>
+  </div>"""
+* section[sectionSocialHistory].text.status = #additional
+* section[sectionSocialHistory].entry[0] = Reference(ExampleSdohSmokingEnded)
+* section[sectionSocialHistory].entry[1] = Reference(ExampleSdohAlcoholSporadic)
+
+///Add section for Family History
+* section[sectionFamilyHistory].title = "Rodinná anamnéza"
+* section[sectionFamilyHistory].code.coding[0].system = "http://loinc.org"
+* section[sectionFamilyHistory].code.coding[0].code = #10157-6 // Corrected code assignment
+* section[sectionFamilyHistory].code.coding[0].display = "Family history"
+* section[sectionFamilyHistory].text.div = """
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>Rodinná anamnéza: matka zemřela na infarkt ve věku 75 let, otec žije, má 80 let a trpí hypertenzí. Sourozenci zdraví.</p>
+  </div>"""
+* section[sectionFamilyHistory].text.status = #additional
+
 
 //Add section for imunizations
 * section[sectionImmunizations].title = "Očkování"
 * section[sectionImmunizations].code.coding[0].system = "http://loinc.org"
-* section[sectionImmunizations].code.coding[0].code = #11369-6 // Corrected code assignment
+* section[sectionImmunizations].code.coding[0].code = #11369-6
 * section[sectionImmunizations].code.coding[0].display = "Immunizations"
-* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Immunizations at discharge</div>" // Added required text for cardinality
+* section[sectionImmunizations].text.div = """
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>Pacient byl očkován vakcínou proti onemocnění COVID-19 (SNOMED CT: 1119349007) dne 5. 5. 2021. Očkování bylo provedeno a zaznamenáno jako kompletní, bez komplikací.</p>
+  </div>
+  """
 * section[sectionImmunizations].text.status = #generated
 * section[sectionImmunizations].entry[0] = Reference(Immunization)
 
 * section[sectionHospitalCourse].title = "Klinické shrnutí"
 * section[sectionHospitalCourse].code = $loinc#8648-8 "Průběh hospitalizace"
 * section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
-  Pacient byl přijat ...
-  </div>""" // TODO: Needs update !!!
-* section[sectionHospitalCourse].text.status = #generated
+  Pacient byl přijat dne 1. 3. 2025 na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Během hospitalizace byla provedena předoperační příprava včetně laboratorních vyšetření a interního předoperačního vyšetření.
+  Dne 2. 3. 2025 byla v celkové anestezii provedena operace – plastika pravostranné tříselné kýly. Operační výkon proběhl bez komplikací. Pacient byl pooperačně stabilní, bez známek infekce rány.
+  V rámci hospitalizace byla u pacienta sledována substituční léčba hypotyreózy (Euthyrox 75 µg denně), bez nutnosti úpravy dávkování. Hodnota TSH při přijetí v normě.
+  Pacient byl v dobrém stavu propuštěn do domácího ošetření dne 10. 3. 2025. Doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.
+  </div>""" 
+* section[sectionHospitalCourse].text.status = #additional
 
 
 // Sekce Implantáty a zdravotní pomůcky
@@ -315,7 +341,7 @@ InstanceOf: CZ_CompositionHdr
     </ul>
     <p>Pacient je v dobrém stavu, bez známek komplikací po operaci. Byla doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.</p>
   </div>""" // Added required text for cardinality
-* section[sectionDischargeFindings].text.status = #generated
+* section[sectionDischargeFindings].text.status = #additional //additional text status for generated narrative
 * section[sectionDischargeFindings].author[0] = Reference(Practitioner-Author)  // Example reference to a physical exam observation
 * section[sectionDischargeFindings].entry[0] = Reference(ExampleChestCircumference)
 * section[sectionDischargeFindings].entry[1] = Reference(ExampleHeadCircumference)
@@ -325,6 +351,7 @@ InstanceOf: CZ_CompositionHdr
 * section[sectionDischargeFindings].entry[5] = Reference(ExampleBloodPressure)
 
 // Sekce pro discharge detail sectionFunctionalStatus
+// Jak rozdělit funkční stav při propuštění a přijetí?
 * section[sectionFunctionalStatus].title = "Funkční stav při propuštění"
 * section[sectionFunctionalStatus].code.coding[0].system = $loinc
 * section[sectionFunctionalStatus].code.coding[0].code = #47420-5 // Discharge findings
@@ -346,7 +373,7 @@ InstanceOf: CZ_CompositionHdr
     </ul>
     <p>Pacient je v dobrém funkčním stavu, bez omezení v běžných denních aktivitách. Byla doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.</p>
   </div>""" // Added required text for cardinality
-* section[sectionFunctionalStatus].text.status = #generated
+* section[sectionFunctionalStatus].text.status = #additional
 * section[sectionFunctionalStatus].author[0] = Reference(Practitioner-Author)  // Example reference to a functional status observation
 * section[sectionFunctionalStatus].entry[0] = Reference(Observation-DischargeCondition)
 
@@ -366,7 +393,7 @@ InstanceOf: CZ_CompositionHdr
     </ul>
     <p>Pacient byl propuštěn s doporučením k dalšímu sledování a péči. V případě jakýchkoli potíží nebo nejasností je doporučeno kontaktovat lékaře nebo navštívit nejbližší pohotovost.</p>
   </div>""" // Added required text for cardinality
-* section[sectionDischargeDetails].text.status = #generated
+* section[sectionDischargeDetails].text.status = #additional
 * section[sectionDischargeDetails].author[0] = Reference(Practitioner-Author)
 
 //sekce Doporučení - Plán péče
@@ -383,7 +410,7 @@ InstanceOf: CZ_CompositionHdr
       <li>Ambulantní kontrola za 14 dní.</li>
     </ul>
   </div>"""
-* section[sectionPlanOfCare].text.status = #generated
+* section[sectionPlanOfCare].text.status = #additional
 * section[sectionPlanOfCare].entry[0] = Reference(CarePlan-Novak)
 
 * section[sectionAttachments].title = "Přílohy"

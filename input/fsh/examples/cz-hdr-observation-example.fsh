@@ -26,6 +26,19 @@ Description: "Example of Social History Observation - Smoking"
 * valueCodeableConcept.text = "0.5 {pack}/d"
 * note.text = "Entered by Všeobecný lékař"
 
+Instance: ExampleSdohSmokingEnded
+InstanceOf: CZ_ObservationSdohHdr
+Description: "Example of Social History Observation - Smoking history"
+
+* status = #final
+* category[SocialHistory] = $observation-category#social-history
+* code = $sct#229819007 "Tobacco smoking behavior"
+* subject = Reference(Patient-Novak-Petr)
+* effectiveDateTime = "2015-01-01T00:00:00+01:00" // Datum zanechání kouření
+* performer = Reference(Practitioner-2)
+* valueCodeableConcept = $sct#8517006 "Ex-smoker"
+* note.text = "Před zanecháním kouřil cca 20 cigaret denně, přestal v roce 2015. Zadáno praktickým lékařem."
+
 
 Instance: ExampleSdohAlcohol
 InstanceOf: CZ_ObservationSdohHdr
@@ -40,6 +53,20 @@ Description: "Example of Social History Observation - Alcohol Use"
 * performer = Reference(Practitioner-2)
 * valueCodeableConcept.text = "4 {glass}/d"
 * note.text = "Entered by Všeobecný lékař"
+
+Instance: ExampleSdohAlcoholSporadic
+InstanceOf: CZ_ObservationSdohHdr
+Description: "Example of Social History Observation - Alcohol Use"
+
+* status = #final
+* category[SocialHistory] = $observation-category#social-history
+* code = $sct#160573003 "Alcohol consumption"
+* subject = Reference(Patient-Novak-Petr)
+* effectiveDateTime = "2025-03-01T00:00:00+01:00"
+* performer = Reference(Practitioner-2)
+* valueCodeableConcept = $sct#228273003 "Drinks alcohol occasionally"
+* note.text = "Konzumace cca 1–2 piva týdně. Zadáno praktickým lékařem."
+
 
 Instance: ExampleChestCircumference
 InstanceOf: CZ_ObservationChestCircumferenceHdr
