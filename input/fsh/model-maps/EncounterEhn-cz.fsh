@@ -1,7 +1,7 @@
 Logical: LogCzEncounterCz
 Id: LogInPatientEncounterCz
 Title: "A.2.3 - Kontakt se zdravotními službami"
-Description: """Záznam o hospitalizačním kontaktu v rámci propouštěcí zprávy (část A.2.3)"""
+Description: """Nemocniční propouštěcí zpráva - Záznam o hospitalizačním kontaktu v rámci propouštěcí zprávy."""
 
 * typ 1..1 CodeableConcept "A.2.3.1 - Typ kontaktu" """Typ kontaktu (hospitalizace) - jednodenní, standardní. Zadáno při příjmu výběrem ze seznamu"""
 * poznamka 0..1 string "A.2.3.2 - Poznámka k hospitalizaci" """Poznámka k hospitalizaci volným textem. Zadáno při příjmu volným textem"""

@@ -11,7 +11,7 @@ description: This guide contains implementation specification for the HL7 Czech 
 status: draft # draft | active | retired | unknown
 
 version: 0.0.2
-language: cs
+#language: #cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -98,7 +98,7 @@ dependencies:
 #    title: eHN - Guidelines (cs)
 #  ehn-guidelines.md:
 #    title: eHN - Guidelines (en)
-#-----------------------new menu------------------------------------
+
 pages:
   index.md:
     title: Home
@@ -144,7 +144,10 @@ pages:
     title: Downloads
   downloads-cs.md:
     title: Ke stažení
-  
+  implementation-notes.md:
+    title: Implementation notes
+  implementation-notes-cs.md:
+    title: Implementační poznámky
   #terminology-considerations.md:
   #  title: Terminology considerations
   #terminology-considerations-cs.md:
@@ -308,6 +311,8 @@ menu:
     Examples (cs): examples-cs.html
     Obligations (en): obligations.html
     Obligations (cs): obligations-cs.html
+    Implementation notes (en): implementation-notes.html
+    Implementation notes (cs): implementation-notes-cs.html
   About:
     Authors (en): authors.html
     Authors (cs): authors-cs.html
