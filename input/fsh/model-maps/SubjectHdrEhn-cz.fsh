@@ -1,13 +1,13 @@
-Logical: SubjectHdrEhnCz
-Id: SubjectCz
-Title: "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"
-Description: """Hospital Discharge Report - Hospital Discharge Report subject data element - A.1.1 and A.1.2"""
+Logical: LogCzSubjectHdrCz
+Id: LogSubjectCz
+Title: "A.1.1 - Identifikace a A.1.2 - informace o pacientovi"
+Description: """Nemocniční propouštěcí zpráva - Informace o pacientovi- A.1.1 a A.1.2"""
 
 * pacient 1..1 BackboneElement "A.1.1 Identifikace pacienta" """Identifikace pacienta – křestní jméno, příjmení, datum narození, identifikátory, státní občanství, úřední pohlaví, komunikační jazyk."""
   * jmeno 1..* string "A.1.1.1 Křestní jméno" """Křestní jméno pacienta."""
   * prijmeni 1..1 string "A.1.1.2 Příjmení" """Příjmení pacienta."""
   * datumNarozeni 1..1 date "A.1.1.3 Datum narození" """Datum, případně i čas narození pacienta."""
-  * id 1..* Identifier "A.1.1.4 Identifikátor pacienta" """Unikátní identifikátor osoby – RID, DRID, číslo pasu atd."""
+  * identifikator 1..* Identifier "A.1.1.4 Identifikátor pacienta" """Unikátní identifikátor osoby – RID, DRID, číslo pasu atd."""
   * narodnost 0..* CodeableConcept "A.1.1.5 Státní občanství" """Státní občanství podle zákona 186/2013 Sb."""
   * pohlavi 1..1 code "A.1.1.6 Úřední pohlaví" """Administrativní pohlaví podle dokladů."""
   * jazyk 0..* CodeableConcept "A.1.1.7 Komunikační jazyk" """Jazyk nebo jazyky, jimiž pacient komunikuje."""
@@ -26,7 +26,7 @@ Description: """Hospital Discharge Report - Hospital Discharge Report subject da
   * kontaktniOsoba 0..* BackboneElement "A.1.2.4 Zákonný zástupce a kontaktní osoba" """Kontaktní osoba – např. zákonný zástupce nebo jiná blízká osoba."""
     * typ 0..1 CodeableConcept "A.1.2.4.1 Typ kontaktu" """Typ kontaktní osoby – zákonný zástupce, emergentní kontakt apod."""
     * vztah 0..1 CodeableConcept "A.1.2.4.2 Vztah k pacientovi" """Rodinný nebo jiný vztah ke kontaktované osobě."""
-    * id 0..* Identifier "A.1.2.4.3 Id osoby" """Unikátní identifikátor kontaktní osoby."""
+    * idOsoby 0..* Identifier "A.1.2.4.3 Id osoby" """Unikátní identifikátor kontaktní osoby."""
     * jmeno 1..* string "A.1.2.4.4 Křestní jméno" """Křestní jméno kontaktní osoby."""
     * prijmeni 1..* string "A.1.2.4.5 Příjmení" """Příjmení kontaktní osoby."""
     * adresa 0..1 Address "A.1.2.4.6 Adresa kontaktní osoby" """Adresa kontaktní osoby."""
