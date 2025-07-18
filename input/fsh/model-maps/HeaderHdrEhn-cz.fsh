@@ -1,5 +1,5 @@
-Logical: LogCzHeaderHdrCzFromDataset
-Id: LogHeaderHdrCzFromDataset
+Logical: LogCzHeaderCz
+Id: LogHeaderHdrCz
 Title: "A.1 – Hlavička dokumentu "
 Description: "Struktura hlavičky propouštěcí zprávy podle tabulky části A.1 "
 
@@ -7,7 +7,7 @@ Description: "Struktura hlavičky propouštěcí zprávy podle tabulky části A
   * jmeno 1..* string "A.1.1.1 Křestní jméno" """Křestní jméno pacienta."""
   * prijmeni 1..1 string "A.1.1.2 Příjmení" """Příjmení pacienta."""
   * datumNarozeni 1..1 date "A.1.1.3 Datum narození" """Datum, případně i čas narození pacienta."""
-  * id 1..* Identifier "A.1.1.4 Identifikátor pacienta" """Unikátní identifikátor osoby – RID, DRID, číslo pasu atd."""
+  * idPacienta 1..* Identifier "A.1.1.4 Identifikátor pacienta" """Unikátní identifikátor osoby – RID, DRID, číslo pasu atd."""
   * narodnost 0..* CodeableConcept "A.1.1.5 Státní občanství" """Státní občanství podle zákona 186/2013 Sb."""
   * pohlavi 1..1 code "A.1.1.6 Úřední pohlaví" """Administrativní pohlaví podle dokladů."""
   * jazyk 0..* CodeableConcept "A.1.1.7 Komunikační jazyk" """Jazyk nebo jazyky, jimiž pacient komunikuje."""
@@ -25,39 +25,38 @@ Description: "Struktura hlavičky propouštěcí zprávy podle tabulky části A
   * kontaktniOsoba 0..* BackboneElement "A.1.2.4 Zákonný zástupce a kontaktní osoba" """Kontaktní osoba – např. zákonný zástupce nebo jiná blízká osoba."""
     * typ 0..1 CodeableConcept "A.1.2.4.1 Typ kontaktu" """Typ kontaktní osoby – zákonný zástupce, emergentní kontakt apod."""
     * vztah 0..1 CodeableConcept "A.1.2.4.2 Vztah k pacientovi" """Rodinný nebo jiný vztah ke kontaktované osobě."""
-    * id 0..* Identifier "A.1.2.4.3 Id osoby" """Unikátní identifikátor kontaktní osoby."""
+    * idOsoby 0..* Identifier "A.1.2.4.3 Id osoby" """Unikátní identifikátor kontaktní osoby."""
     * jmeno 1..* string "A.1.2.4.4 Křestní jméno" """Křestní jméno kontaktní osoby."""
     * prijmeni 1..* string "A.1.2.4.5 Příjmení" """Příjmení kontaktní osoby."""
     * adresa 0..1 Address "A.1.2.4.6 Adresa kontaktní osoby" """Adresa kontaktní osoby."""
     * kontakt 0..* ContactPoint "A.1.2.4.7 Telekomunikační kontakt" """Telefon, e-mail apod."""
-
 * pojistovna 0..1 BackboneElement "A.1.3 Zdravotní pojištění" """Informace o pojištění pacienta."""
   * kodPojistovny 0..1 Identifier "A.1.3.1 Kód zdravotní pojišťovny" """Kód zdravotní pojišťovny."""
   * nazev 0..1 string "A.1.3.2 Název zdravotní pojišťovny" """Oficiální název pojišťovny."""
   * cisloPojistence 0..1 Identifier "A.1.3.3 Číslo zdravotního pojištění" """Číslo pojištěnce."""
 
 * prijemce 0..* BackboneElement "A.1.4 Příjemce dokumentu" """Zamýšlený příjemce propouštěcí zprávy."""
-  * Id 0..1 Identifier "A.1.4.1 ID příjemce" """Identifikační číslo zdravotnického pracovníka nebo osobní identifikátor pacienta."""
+  * idPrijemce 0..1 Identifier "A.1.4.1 ID příjemce" """Identifikační číslo zdravotnického pracovníka nebo osobní identifikátor pacienta."""
   * jmeno 0..1 HumanName "A.1.4.2 Jméno příjemce" """Jméno a příjmení osoby příjemce."""
   * idOrganizace 0..1 Identifier "A.1.4.3 ID organizace příjemce" """Identifikátor organizace příjemce (např. NRPZS, IČO)."""
   * organizace 0..1 string "A.1.4.4 Organizace příjemce" """Název a identifikační údaje zařízení nebo pracoviště příjemce."""
 
 * autor 1..* BackboneElement "A.1.5 Autor dokumentu" """Osoba nebo systém, který dokument vytvořil."""
-  * id 1..* Identifier "A.1.5.1 Identifikátor autora" """Identifikační číslo autora (zdravotnický pracovník nebo IS)."""
+  * idAutor 1..* Identifier "A.1.5.1 Identifikátor autora" """Identifikační číslo autora (zdravotnický pracovník nebo IS)."""
   * jmeno 1..1 HumanName "A.1.5.2 Jméno autora" """Jméno osoby nebo systému, který dokument sestavil."""
   * idOrganizace 1..1 Identifier "A.1.5.3 ID organizace" """Identifikátor organizace, kterou autor reprezentuje."""
   * organizace 1..1 string "A.1.5.4 Organizace autora" """Název organizace, kterou autor reprezentuje."""
   * datum 1..1 dateTime "A.1.5.5 Datum a čas uložení" """Datum a čas poslední modifikace dokumentu."""
 
 * overil 0..* BackboneElement "A.1.6 Ověřil" """Zdravotnický pracovník, který dokument ověřil."""
-  * Id 1..* Identifier "A.1.6.1 Identifikátor ověřovatele" """Identifikační číslo ověřovatele dokumentu."""
+  * idOveril 1..* Identifier "A.1.6.1 Identifikátor ověřovatele" """Identifikační číslo ověřovatele dokumentu."""
   * jmeno 1..1 HumanName "A.1.6.2 Jméno ověřovatele" """Plné jméno ověřující osoby."""
   * idOrganizace 1..1 Identifier "A.1.6.3 ID organizace" """Identifikátor organizace ověřovatele."""
-  * organizace1..1 string "A.1.6.4 Organizace ověřovatele" """Název organizace, kterou ověřovatel reprezentuje."""
+  * organizace 1..1 string "A.1.6.4 Organizace ověřovatele" """Název organizace, kterou ověřovatel reprezentuje."""
   * datum 1..1 dateTime "A.1.6.5 Datum a čas ověření" """Datum a čas ověření dokumentu."""
 
 * zodpovida 0..1 BackboneElement "A.1.7 Zodpovídá" """Zdravotnický pracovník zodpovědný za obsah dokumentu."""
-  * id 1..* Identifier "A.1.7.1 Zodpovídá - ID" """Identifikátor osoby zodpovědné za dokument."""
+  * idZodpovida 1..* Identifier "A.1.7.1 Zodpovídá - ID" """Identifikátor osoby zodpovědné za dokument."""
   * jmeno 1..1 HumanName "A.1.7.2 Zodpovídá - jméno osoby" """Plné jméno osoby zodpovědné za dokument."""
   * organizace 1..1 string "A.1.7.3 Zodpovídá - organizace" """Organizace reprezentovaná odpovědnou osobou."""
   * datum 1..1 dateTime "A.1.7.4 Datum a čas autorizace" """Datum a čas autorizace dokumentu."""
