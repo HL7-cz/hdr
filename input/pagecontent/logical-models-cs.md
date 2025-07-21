@@ -1,4 +1,4 @@
-{% include variable-definitions.md %}
+
 
 Tato stránka uvádí logické modely HL7 FHIR používané k reprezentaci nemocniční propouštěcí zprávy.
 

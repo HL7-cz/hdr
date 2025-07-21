@@ -1,7 +1,7 @@
 Logical: LogCzHospitalStayCz
 Id: LogHospitalStayCz
 Title: "A.2.7 Průběh hospitalizace"
-Description: "Popis průběhu hospitalizace zahrnující diagnostické souhrny, výkony, léčbu, vyšetření i klinické shrnutí"
+Description: "Nemocniční propouštěcí zpráva - Popis průběhu hospitalizace zahrnující diagnostické souhrny, výkony, léčbu, vyšetření i klinické shrnutí."
 
 * diagnostickySouhrn 1..* string "A.2.7.1 Diagnostický souhrn" """Všechny problémy/diagnózy, které ovlivňují péči během hospitalizace nebo které je důležité zaznamenat pro zajištění kontinuity péče. Rozlišuje se mezi problémy léčenými a neléčenými, dále mezi stavy přítomnými při přijetí, získanými během hospitalizace a neklasifikovatelnými. Popis je strukturovaný, dobře specifikovaný a kódovatelný."""
 * vyznamneVykony 1..* string "A.2.7.2 Významné výkony (procedury)" """Operace a ostatní „instrumentální“ intervence (endoskopické, intravaskulární) provedené v průběhu hospitalizace. Nezahrnuje čistě diagnostické výkony. Pokud nebyl proveden žádný výkon, uvede se IPS Absent/Unknown."""
@@ -9,8 +9,8 @@ Description: "Popis průběhu hospitalizace zahrnující diagnostické souhrny, 
 * dalsiVyznamnaLecba 0..* string "A.2.7.4 Další významná léčba" """Léčby, které nelze jednoznačně označit jako výkony, ale jsou významné (např. chemoterapie, dialýza, hemoperfuze, podpora oběhu, krevní deriváty apod.)."""
 * medikace 0..* string "A.2.7.5 Medikace" """Medikamentózní léčba během hospitalizace, jejíž znalost je významná pro další péči. Patří sem léčiva podaná a ukončená během hospitalizace nebo pokračující krátkodobě. Léčiva doporučená i po propuštění budou uvedena v části Doporučení."""
 * vysledkyVysetreni 0..* string "A.2.7.6 Výsledky vyšetření" """Významné výsledky funkčních, diagnostických a zobrazovacích vyšetření, provedených během hospitalizace. Výsledky s nezpracovaným stavem („registered“) mají být uvedeny odděleně."""
-* klinickeShrnuti 1..1 BackboneElement "A.2.7.7 Klinické shrnutí" """Podrobný popis důvodu a průběhu hospitalizace jako celku. Může být zakončeno klinickou úvahou (dif. dg., vysvětlení souvislostí) v klinicky složitých případech."""
-  * souhrnProblemu 1..* BackboneElement "A.2.7.7.1 Klinický souhrn problému" """Souhrnný popis důvodu a průběhu hospitalizace za konkrétní problém."""
+* klinickeShrnuti 1..1 Base "A.2.7.7 Klinické shrnutí" """Podrobný popis důvodu a průběhu hospitalizace jako celku. Může být zakončeno klinickou úvahou (dif. dg., vysvětlení souvislostí) v klinicky složitých případech."""
+  * souhrnProblemu 1..* Base "A.2.7.7.1 Klinický souhrn problému" """Souhrnný popis důvodu a průběhu hospitalizace za konkrétní problém."""
     * popisProblemu 1..1 string "A.2.7.7.1.1 Popis problému" """Popis problému textem."""
     * duvod 1..1 string "A.2.7.7.1.2 Důvod a průběh hospitalizace" """Podrobný popis důvodu a průběhu hospitalizace za celý pobyt."""
   * klinickaUvaha 0..1 string "A.2.7.7.2 Klinická úvaha" """Zakončení klinického shrnutí klinickou úvahou (diferenciální diagnostika, vysvětlení složitých stavů apod.)."""
