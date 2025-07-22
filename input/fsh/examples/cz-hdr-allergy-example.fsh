@@ -27,7 +27,7 @@ Description: "Patient has no known allergies."
 * identifier[0].value = "NoKnownAllergy-001"
 // Narrativní text
 * text.status = #additional
-* text.div = "<div><p>Pacient nemá žádné známé alergie.</p></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient nemá žádné známé alergie.</div>"
 
 // Klinický a verifikační stav
 * clinicalStatus.coding[0].system = $allergyintolerance-clinical
@@ -98,7 +98,7 @@ Description: "Patient experiences skin rash and lip swelling in response to peni
 * identifier[0].value = "PenicillinAllergy-001"
 // Narrativní text
 * text.status = #additional
-* text.div = "<div><p>Alergie na penicilin – kožní vyrážka, otok rtů.</p></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Alergie na penicilin – kožní vyrážka, otok rtů.</p></div>"
 
 // Stav
 * clinicalStatus.coding[0].system = $allergyintolerance-clinical
@@ -138,12 +138,7 @@ Description: "Patient experiences rash and itching after ingestion of cow's milk
 * identifier[0].value = "MilkAllergy-001"
 
 * text.status = #additional
-* text.div = """
-<div>
-  <p>Intolerance na bílkovinu kravského mléka</p>
-  <p>Počátek období projevu: 15 let</p>
-</div>
-"""
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Intolerance na bílkovinu kravského mléka. Počátek období projevu: 15 let</div>"
 
 * type = #intolerance
 * onsetAge = 15 'a'

@@ -1,7 +1,7 @@
 @startmindmap
-* Hospital Discharge Report
-** [[#header header]]
-** [[#body body]]
+* [[StructureDefinition-HospitalDischargeReportCz.html Hospital Discharge Report]]
+** [[StructureDefinition-Header.html header]]
+** body
 ** Presented form
 ** Hospital Discharge Report attachments
 @endmindmap

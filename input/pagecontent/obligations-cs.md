@@ -19,11 +19,11 @@ Byli specifikováni aktéři ve těchto rolích:
 
 | Role                                                 | Popis                                                                                                                      |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| [Tvůrce](ActorDefinition-actor-creator-img.html)     | Prvním je aktér, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi pro ukládání a sdílení zpráv. |
-| [Konzument](ActorDefinition-actor-consumer-img.html) | Posledním aktérem je systém, který přijatou nebo načtenou zprávu používá.                                                  |
+| [Tvůrce](ActorDefinition-actor-creator-hdr.html)     | Prvním je aktér, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi pro ukládání a sdílení zpráv. |
+| [Konzument](ActorDefinition-actor-consumer-hdr.html) | Posledním aktérem je systém, který přijatou nebo načtenou zprávu používá.                                                  |
 
 <p>{% include hdr-Actors-cs.svg %}</p>
 
 ### Seznam povinností
 
-1. Povinnosti pro objekt pacienta ([CZ_PatientObligationsImg](StructureDefinition-cz-patient-obl-img.html))
+1. Povinnosti pro objekt pacienta ([CZ_PatientObligationsHdr](StructureDefinition-cz-patient-obl-hdr.html))

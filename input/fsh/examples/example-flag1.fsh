@@ -13,11 +13,7 @@ Description: "A flag indicating that the patient has a history of cardiac arrest
 * subject = Reference(Mracena)
 
 * text.status = #generated
-* text.div = """
-<div>
-  <p>Flag indicating a history of cardiac arrest from 2023-10-01.</p>
-</div>
-"""
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Flag indicating a history of cardiac arrest from 2023-10-01.</div>"
 * author = Reference(Sova)
 
 

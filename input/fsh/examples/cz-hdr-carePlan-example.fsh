@@ -15,7 +15,7 @@ Description: "Czech HDR - example of a care plan"
 * subject = Reference(Mracena2)
 
 // Activity details
-* activity.detail.kind = #Procedure
+* activity.detail.kind = #Appointment
 * activity.detail.description = "Follow-up appointment with cardiologist"
 * activity.detail.status = #scheduled
 // TBD Udělat po procedůře
@@ -42,7 +42,7 @@ Description: "Czech HDR - example of a care plan"
 //další podrobnosti plánu, cíle
 * goal = Reference(Goal-hernia-treatment)
 // Activity detail
-* activity[+].detail.kind = #Procedure
+* activity[+].detail.kind = #ServiceRequest
 * activity[=].detail.description = "Pooperační sledování, převazy, kontrola rány"
 * activity[=].detail.status = #scheduled
 * activity[+].detail.kind = #CommunicationRequest
