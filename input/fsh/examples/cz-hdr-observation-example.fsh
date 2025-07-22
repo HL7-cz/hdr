@@ -74,11 +74,14 @@ Description: "Example instance for chest circumference observation using the CZ_
 
 * status = #final
 * code = $loinc#8280-0 "Chest circumference"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
 * subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 85
 * valueQuantity.unit = "cm"
 * valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #cm
 
 Instance: ExampleHeadCircumference
 InstanceOf: CZ_ObservationHeadCircumferenceHdr
@@ -86,11 +89,14 @@ Description: "Example instance for head circumference observation using the CZ_O
 
 * status = #final
 * code = $loinc#8287-5 "Head circumference"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
 * subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 50
 * valueQuantity.unit = "cm"
 * valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #cm
 
 Instance: ExampleBMI
 InstanceOf: CZ_ObservationBMIHdr
@@ -98,11 +104,14 @@ Description: "Example instance for BMI observation using the CZ_ObservationBMIHd
 
 * status = #final
 * code = $loinc#39156-5 "Body mass index (BMI)"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
 * subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 22.5
 * valueQuantity.unit = "kg/m2"
 * valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg/m2
 
 Instance: ExampleAbdominalCircumference
 InstanceOf: CZ_ObservationAbdominalCircumferenceHdr
@@ -110,11 +119,14 @@ Description: "Example instance for abdominal circumference observation using the
 
 * status = #final
 * code = $loinc#56086-2 "Abdominal circumference"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
 * subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 90
 * valueQuantity.unit = "cm"
 * valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #cm
 
 Instance: ExampleHeight
 InstanceOf: CZ_ObservationHeightHdr
@@ -122,11 +134,14 @@ Description: "Example instance for height observation using the CZ_ObservationHe
 
 * status = #final
 * code = $loinc#8302-2 "Body height"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
 * subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 175
 * valueQuantity.unit = "cm"
 * valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #cm
 
 Instance: ExampleWeight
 InstanceOf: CZ_ObservationWeightHdr
@@ -134,11 +149,14 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 
 * status = #final
 * code = $loinc#29463-7 "Body weight"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
 * subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 70
 * valueQuantity.unit = "kg"
 * valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg
 
 //-----------------------------------------
 Instance: Observation-UZV-Novak
