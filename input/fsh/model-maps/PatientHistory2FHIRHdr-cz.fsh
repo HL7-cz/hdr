@@ -28,12 +28,17 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "The same section used by the hospital stay ?"
+* group[=].element[+].code = #PatientHistory.medicalHistory.historyOfConditions.resolution
+* group[=].element[=].display = "A.2.6.1.1.6 - Resolution circumstances"
+* group[=].element[=].target.code = #Composition.section:sectionDiagnosticSummary.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "The resolution circumstances may be described as resource or composiiton.section text ; or indirectly determined by the resource (e.g. Procedure) that has been perfomed in reason of this Condition no more active"
 * group[=].element[+].code = #PatientHistory.medicalHistory.medicalDevices
 * group[=].element[=].display = "A.2.6.1.2 - Devices and Implants"
 * group[=].element[=].target.code = #Composition.section:sectionMedicalDevices
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "The same section usd by the hospital stay ?"
 * group[=].element[+].code = #PatientHistory.medicalHistory.vaccination
 * group[=].element[=].display = "A.2.6.1.4 - Vaccination"
 * group[=].element[=].target.code = #Composition.section:sectionImmunizations
@@ -134,12 +139,24 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-medical-device"
+* group[=].element[+].code = #PatientHistory.medicalHistory.medicalDevices.description
+* group[=].element[=].display = "A.2.6.1.2.1 - Device and implant description"
+* group[=].element[=].target.code = #Device.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "if referring to the description of the device"
 * group[=].element[+].code = #PatientHistory.medicalHistory.medicalDevices.identifier
 * group[=].element[=].display = "A.2.6.1.2.2 - Device ID"
 * group[=].element[=].target.code = #Device.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "if generic identifier"
+* group[=].element[+].code = #PatientHistory.medicalHistory.medicalDevices.identifier
+* group[=].element[=].display = "A.2.6.1.2.2 - Device ID"
+* group[=].element[=].target.code = #Device.udiCarrier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "if it is the udiCarrier"
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/DeviceUseStatement"
 * group[=].element[+].code = #PatientHistory.medicalHistory.medicalDevices.description
@@ -341,6 +358,12 @@ Usage: #definition
 * group[=].element[=].target.code = #Procedure.bodySite
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
+* group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.bodySite
+* group[=].element[=].display = "A.2.6.1.3.3 - Body site"
+* group[=].element[=].target.code = #Procedure.extension:bodySite
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "if details about the body structure have to be provided"
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.date
 * group[=].element[=].display = "A.2.6.1.3.4 - Procedure date"
 * group[=].element[=].target.code = #Procedure.perfomedDateTime	
@@ -348,7 +371,12 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.reason
 * group[=].element[=].display = "A.2.6.1.3.5 - Procedure reason"
-* group[=].element[=].target.code = #Procedure.reasonCode	
+* group[=].element[=].target.code = #Procedure.reasonCode
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.reason
+* group[=].element[=].display = "A.2.6.1.3.5 - Procedure reason"
+* group[=].element[=].target.code = #Procedure.reasonReference	
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.outcome
