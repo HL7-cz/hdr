@@ -188,6 +188,10 @@ Usage: #example
 * entry[37].resource = Observation-Hobby
 * entry[38].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000025"
 * entry[38].resource = Observation-Social-network
+* entry[39].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000026"
+* entry[39].resource = Observation-Education-level
+* entry[40].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000027"
+* entry[40].resource = Observation-Education
 
 
 
