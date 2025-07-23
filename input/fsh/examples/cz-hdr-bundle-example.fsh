@@ -180,6 +180,14 @@ Usage: #example
 * entry[33].resource = Procedure-Insert-Pacemaker2
 * entry[34].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000021"
 * entry[34].resource = Observation-DischargeCondition
+* entry[35].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000022"
+* entry[35].resource = Observation-Participation-in-society
+* entry[36].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000023"
+* entry[36].resource = Observation-Work-situation
+* entry[37].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000024"
+* entry[37].resource = Observation-Hobby
+* entry[38].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000025"
+* entry[38].resource = Observation-Social-network
 
 
 
