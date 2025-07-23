@@ -128,9 +128,9 @@ InstanceOf: CZ_CompositionHdr
 Instance: DischargeComposition-Novak-Petr
 InstanceOf: CZ_CompositionHdr
 Title: "Propouštěcí zpráva - Novák Petr"
-Description: "Example of Hospital Discharge report (Bundle)"
+Description: "Example of Hospital Discharge report (Composition)"
 Usage: #example
-//* id = "discharge-composition"
+* id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eaaf"
 * status = #final
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
