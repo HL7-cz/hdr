@@ -38,7 +38,7 @@ Description: "Czech HDR - example of a care plan"
 //popis doporučení
 * description = "Plán péče zaměřený na chirurgické řešení jednostranné tříselné kýly (K40.9) u stabilního pacienta. Péče zahrnuje pooperační sledování, edukaci o režimu a následnou ambulantní kontrolu."
 * period.start = "2025-03-10T08:00:00+01:00"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 //další podrobnosti plánu, cíle
 * goal = Reference(Goal-hernia-treatment)
 // Activity detail

@@ -92,6 +92,9 @@ Alias: $cz-medicationStatement-route = http://hl7.org/fhir/ValueSet/route-codes
 Alias: $cz-medication-DLP = https://hl7.cz/fhir/core/ValueSet/dlplecivepripravky-cz-vs
 Alias: $cz-medication-DLPForma =  https://hl7.cz/fhir/core/ValueSet/dlpformy-cz-vs
 Alias: $cz-medicationDLPLecive-latky = https://hl7.cz/fhir/core/ValueSet/dlplecivelatky-cz-vs
+Alias: $cz-medication-DLP-cs = https://hl7.cz/fhir/core/CodeSystem/dlplecivepripravky-cz-cs
+Alias: $cz-medication-DLPForma-cs =  https://hl7.cz/fhir/core/CodeSystem/dlpformy-cz-cs
+Alias: $cz-medicationDLPLecive-latky-cs = https://hl7.cz/fhir/core/CodeSystem/dlplecivelatky-cz-cs
 
 //=========================
 //Other

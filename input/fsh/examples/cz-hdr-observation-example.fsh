@@ -19,7 +19,7 @@ Description: "Example of Social History Observation - Smoking"
 * status = #final
 * category[SocialHistory] =  $observation-category#social-history
 * code = $sct#229819007 "Smoking"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectivePeriod.start = "2017-04-15T00:00:00+02:00"
 * effectivePeriod.end = "2020-04-15T00:00:00+02:00"
 * performer = Reference(Practitioner-2)
@@ -33,7 +33,7 @@ Description: "Example of Social History Observation - Smoking history"
 * status = #final
 * category[SocialHistory] = $observation-category#social-history
 * code = $sct#229819007 "Tobacco smoking behavior"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2015-01-01T00:00:00+01:00" // Datum zanechání kouření
 * performer = Reference(Practitioner-2)
 * valueCodeableConcept = $sct#8517006 "Ex-smoker"
@@ -47,7 +47,7 @@ Description: "Example of Social History Observation - Alcohol Use"
 * status = #final
 * category[SocialHistory] =  $observation-category#social-history
 * code = $sct#160573003 "ETOH (Alcohol) Use"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectivePeriod.start = "2016-04-15T00:00:00+02:00"
 * effectivePeriod.end = "2016-04-15T00:00:00+02:00"
 * performer = Reference(Practitioner-2)
@@ -61,7 +61,7 @@ Description: "Example of Social History Observation - Alcohol Use"
 * status = #final
 * category[SocialHistory] = $observation-category#social-history
 * code = $sct#160573003 "Alcohol consumption"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-01T00:00:00+01:00"
 * performer = Reference(Practitioner-2)
 * valueCodeableConcept = $sct#228273003 "Drinks alcohol occasionally"
@@ -76,7 +76,7 @@ Description: "Example instance for chest circumference observation using the CZ_
 * code = $loinc#8280-0 "Chest circumference"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 85
 * valueQuantity.unit = "cm"
@@ -88,10 +88,10 @@ InstanceOf: CZ_ObservationHeadCircumferenceHdr
 Description: "Example instance for head circumference observation using the CZ_ObservationHeadCircumferenceHdr profile."
 
 * status = #final
-* code = $loinc#8287-5 "Head circumference"
+* code = $loinc#9843-4 "Head Occipital-frontal circumference"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 50
 * valueQuantity.unit = "cm"
@@ -106,7 +106,7 @@ Description: "Example instance for BMI observation using the CZ_ObservationBMIHd
 * code = $loinc#39156-5 "Body mass index (BMI)"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 22.5
 * valueQuantity.unit = "kg/m2"
@@ -121,7 +121,7 @@ Description: "Example instance for abdominal circumference observation using the
 * code = $loinc#56086-2 "Abdominal circumference"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 90
 * valueQuantity.unit = "cm"
@@ -136,7 +136,7 @@ Description: "Example instance for height observation using the CZ_ObservationHe
 * code = $loinc#8302-2 "Body height"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 175
 * valueQuantity.unit = "cm"
@@ -151,7 +151,7 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 * code = $loinc#29463-7 "Body weight"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #vital-signs
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 70
 * valueQuantity.unit = "kg"
@@ -168,7 +168,7 @@ Description: "Czech HDR - example of an ultrasound observation for Novák Petr"
 * status = #final
 * category = $observation-category#imaging  //http://terminology.hl7.org/CodeSystem/observation-category
 * code = $loinc#24719-7 "Ultrasound of groin"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-10T10:00:00+01:00"
 * performer = Reference(Practitioner-UZV)
 * valueString = "UZ vyšetření pravého třísla: v oblasti tříselného kanálu patrný hypoechogenní vak komunikující s peritoneální dutinou, obsahující střevní kličku. Obsah je mobilní, bez známek ischemie. Závěr: vpravo tříselná kýla bez známek komplikace."
@@ -183,7 +183,7 @@ Description: "Czech HDR - example of CRP observation for Novák Petr"
 * status = #final
 * category = $observation-category#Laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
 * code = $loinc#1988-5 "C reactive protein"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-01T10:00:00+01:00"
 * performer = Reference(Practitioner-UZV)
 * valueQuantity.value = 6.0
@@ -207,7 +207,7 @@ Description: "Example instance for blood pressure observation (systolic and dias
 * status = #final
 * category[0] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#85354-9 "Blood pressure panel with all children optional"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 
 // Systolický tlak
@@ -233,8 +233,8 @@ Description: "Hodnocení celkového klinického stavu pacienta při propuštěn�
 * status = #final
 * category[0] = $observation-category#clinical "Clinical"
 * code = $loinc#8653-8 "Patient condition at discharge"
-* performer[0] = Reference(Practitioner-Author)
-* subject = Reference(Patient-Novak-Petr)
+* performer[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-29"
 * valueCodeableConcept = $sct#268910001 "Stav stabilizovaný"
 * interpretation = $v3-ObservationInterpretation#N "Normal"
@@ -245,13 +245,13 @@ InstanceOf: Observation
 Usage: #example
 * status = #final
 * code = $loinc#10182-4 "History of travel"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-20"
 * valueCodeableConcept.coding[0].system = $iso3166-1-2
 * valueCodeableConcept.coding[0].code = #MG
 * valueCodeableConcept.coding[0].display = "Madagaskar"
 * valueCodeableConcept.text = "Madagaskar"
-* performer = Reference(Practitioner-Author)
+* performer = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * note[0].text = "Pacient navštívil Madagaskar během posledních 30 dnů."
 
 Instance: Observation-InfectiousContact
@@ -261,8 +261,8 @@ Title: "Infekční kontakt"
 Description: "Pacient byl v kontaktu s osobou nakaženou COVID-19"
 * status = #final
 * code = $loinc#11352-2 "History of contact with infectious disease"
-* subject = Reference(Patient-Novak-Petr)
-* performer = Reference(Practitioner-Author)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
+* performer = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * effectiveDateTime = "2024-03-25"
 * valueCodeableConcept = $sct#840539006 "Contact with confirmed COVID-19 case"
 * note[0].text = "Kontakt proběhl během společné domácnosti 5 dní před příjmem."

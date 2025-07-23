@@ -216,7 +216,7 @@ Description: "Patient experiences itching and tongue swelling in response to str
 * onsetDateTime = "2020-01-01"
 * recordedDate = "2023-10-01"
 // Pacient
-* patient = Reference(Patient-Novak-Petr)
+* patient = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 // Reakce
 * reaction[+]
   * manifestation[+] = $sct#81950002 "Edema of the tongue"

@@ -3,14 +3,14 @@ InstanceOf: CZ_Medication
 * id = "med-euthyrox"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
-* code.coding[0].system = $cz-medication-DLP
+* code.coding[0].system = $cz-medication-DLP-cs
 * code.coding[0].code = #0243131
 * code.coding[0].display = "Euthyrox 75 mcg"
 * code.coding[1].system = $atc
 * code.coding[1].code = #H03AA01
 * code.coding[1].display = "Levothyroxine"
 * code.text = "Euthyrox 75 mcg"
-* form.coding[0].system = $cz-medication-DLPForma
+* form.coding[0].system = $cz-medication-DLPForma-cs
 * form.coding[0].code = #"TBL NOB"
 * form.coding[0].display = "Tableta"
 * form.text = "Tableta"
@@ -18,7 +18,7 @@ InstanceOf: CZ_Medication
 * amount.numerator.unit = "mcg"
 * amount.numerator.system = $Jednotky
 * amount.numerator.code = #/ug
-* ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky
+* ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
 * ingredient[0].itemCodeableConcept.coding[0].code = #828
 * ingredient[0].itemCodeableConcept.coding[0].display = "LEVOTHYROXINE SODIUM"
 * ingredient[0].itemCodeableConcept.text = "Levothyroxin"
@@ -31,7 +31,7 @@ InstanceOf: CZ_Medication
 * ingredient[0].strength.denominator.system = $Jednotky    
 * ingredient[0].strength.denominator.code = #"{tbl}"
 * ingredient[0].strength.denominator.unit = "tableta"
-* identifier[0].system = $cz-medication-DLP
+* identifier[0].system = $cz-medication-DLP-cs
 * identifier[0].value = "0243131"
 
 Instance: MedicationDispense-Euthyrox
@@ -41,7 +41,7 @@ Title: "Dispense – Euthyrox"
 Description: "Výdej léčivého přípravku Euthyrox pacientovi Novákovi"
 * status = #completed
 * medicationReference = Reference(Medication-Euthyrox)
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * quantity.value = 30
 * quantity.unit = "tableta"
 * quantity.system = $Jednotky
@@ -53,14 +53,14 @@ InstanceOf: CZ_Medication
 * id = "med-paracetamol"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
-* code.coding[0].system = $cz-medication-DLP
+* code.coding[0].system = $cz-medication-DLP-cs
 * code.coding[0].code = #0243131
 * code.coding[0].display = "PARACETAMOL ZENTIVA K.S."
 * code.coding[1].system = $atc
 * code.coding[1].code = #N02BE01    
 * code.coding[1].display = "Paracetamol"
 * code.text = "PARACETAMOL ZENTIVA K.S. 500 mg"
-* form.coding[0].system = $cz-medication-DLPForma
+* form.coding[0].system = $cz-medication-DLPForma-cs
 * form.coding[0].code = #"TBL NOB"
 * form.coding[0].display = "Tableta"
 * form.text = "Tableta"
@@ -81,7 +81,7 @@ InstanceOf: CZ_Medication
 * ingredient[0].strength.denominator.system = $Jednotky    
 * ingredient[0].strength.denominator.code = #"{tbl}"
 * ingredient[0].strength.denominator.unit = "tableta"
-* identifier[0].system = $cz-medication-DLP
+* identifier[0].system = $cz-medication-DLP-cs
 * identifier[0].value = "0243131"
 
 Instance: MedicationDispense-Paracetamol
@@ -91,7 +91,7 @@ Title: "Dispense – Paracetamol"
 Description: "Výdej léčivého přípravku Paracetamol pacientovi Novákovi"
 * status = #completed
 * medicationReference = Reference(Medication-Paracetamol)
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * quantity.value = 20
 * quantity.unit = "tableta"
 * quantity.system = $Jednotky
@@ -103,14 +103,14 @@ InstanceOf: CZ_Medication
 * id = "med-Ibalgin400"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
-* code.coding[0].system = $cz-medication-DLP
+* code.coding[0].system = $cz-medication-DLP-cs
 * code.coding[0].code = #0207893
 * code.coding[0].display = "Ibalgin 400 mg"
 * code.coding[1].system = $atc
 * code.coding[1].code = #M01AE01
 * code.coding[1].display = "IBUPROFEN"
 * code.text = "Ibalgin 400 mg"
-* form.coding[0].system = $cz-medication-DLPForma
+* form.coding[0].system = $cz-medication-DLPForma-cs
 * form.coding[0].code = #"TBL NOB"
 * form.coding[0].display = "Tableta"
 * form.text = "Tableta"
@@ -118,7 +118,7 @@ InstanceOf: CZ_Medication
 * amount.numerator.unit = "mg"
 * amount.numerator.system = $Jednotky
 * amount.numerator.code = #/mg
-* ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky
+* ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
 * ingredient[0].itemCodeableConcept.coding[0].code = #81593
 * ingredient[0].itemCodeableConcept.coding[0].display = "IBUPROFEN"
 * ingredient[0].itemCodeableConcept.text = "IBUPROFEN"
@@ -131,7 +131,7 @@ InstanceOf: CZ_Medication
 * ingredient[0].strength.denominator.system = $Jednotky    
 * ingredient[0].strength.denominator.code = #"{tbl}"
 * ingredient[0].strength.denominator.unit = "tableta"
-* identifier[0].system = $cz-medication-DLP
+* identifier[0].system = $cz-medication-DLP-cs
 * identifier[0].value = "0207893"
 
 Instance: MedicationDispense-Ibalgin400
@@ -141,7 +141,7 @@ Title: "Dispense – Ibalgin 400"
 Description: "Výdej léčivého přípravku Ibalgin 400 mg pacientovi Novákovi"
 * status = #completed
 * medicationReference = Reference(Medication-Ibalgin400)
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * quantity.value = 15
 * quantity.unit = "tableta"
 * quantity.system = $Jednotky
