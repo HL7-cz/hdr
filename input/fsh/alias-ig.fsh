@@ -59,7 +59,7 @@ Alias: $Observation-tobaccouse-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefi
 Alias: $Observation-results-radiology-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips
 //Alias: $Specimen-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips
 Alias: $Bundle-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips
-Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
+//Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
 
 Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 Alias: $ext-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason

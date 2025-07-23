@@ -30,7 +30,7 @@ Description: "Profile for Social Determinants of Health (SDOH) observations that
 * subject 1..
 * subject only Reference(Group or CZ_PatientCore)
 * effective[x] ^comment = "At least a date should be present unless this observation is a historical report. For recording imprecise or \"fuzzy\" times (For example, a blood glucose measurement taken \"after breakfast\") use the [Timing] datatype which allow the measurement to be tied to regular life events."
-* performer only Reference(RelatedPerson or CZ_PatientCore or CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam)
+* performer only Reference(CZ_RelatedPersonCore or CZ_PatientCore or CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam)
 * performer.reference 1..
 * performer ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository."
 * value[x] ^short = "SDOH value"

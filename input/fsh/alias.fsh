@@ -104,3 +104,10 @@ Alias: $Jednotky = http://hl7.org/fhir/ValueSet/ucum-units
 Alias: $atc = http://www.whocc.no/atc
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $observation-interpretation = http://hl7.org/fhir/ValueSet/observation-interpretation
+
+//Composition
+Alias: $Observation-resultslab-cz-lab = https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory
+Alias: $Observation-results-radiology-cz = https://hl7.cz/fhir/img/StructureDefinition/cz-observation-result-imaging
+Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
+Alias: $Procedure-uv-ips-cz = http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips
+Alias: $Condition-uv-ips-cz = http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips

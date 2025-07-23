@@ -175,18 +175,6 @@ Description: "Birth (registration) number"
 * value = "7161264528"
 * use = #official
 
-//----------------------------------------------------------------------------------------
-Instance: Device-Pacemaker
-InstanceOf: CZ_MedicalDevice
-Usage: #example
-Description: "Heart pacemaker Medtronic W1DR01"
-* id = "Device-Pacemaker"
-* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-medical-device"
-* manufacturer = "Medtronic"
-* modelNumber = "W1DR01"
-* type = $sct#14106009 "Kardiostimulátor"
-* patient = Reference(Patient/Mracena) "Pokusný pacient Mračena"
-
 //-----------------------------------------------------
 Instance: PractitionerRole1
 InstanceOf: CZ_PractitionerRoleCore
@@ -304,7 +292,7 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * contained[+] = Organization-1
 */
 // Patient details identification
-* id = "10f5c49e-086d-4016-8dd1-b555306bf620"
+* id = "3f85726c-ad2f-441b-89ce-100000000000"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core"
 * identifier[+]
   * system = $cz-patient-rcis
@@ -421,7 +409,7 @@ Description: "practitioner's detail"
 * id = "Practitioner-Author-detail"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
 * practitioner = Reference(CZ_PractitionerCore/Practitioner-Author) "MUDr. Ivan Anděl"
-* organization = Reference(CZ_OrganizationCore/Organization-1) "Nemocnice Chrudim"
+* organization = Reference(Organization-1) "Nemocnice Chrudim"
 * code = $cz-nrzp_povolani#L00 "Lékař"
 * specialty = $sct#419192003 "Interní lékařství"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">MUDr. Ivan Anděl, interní lékař, Nemocnice Chrudim, Václavská 570, 537 01 Chrudim, tel: +420 603 777 227</div>"

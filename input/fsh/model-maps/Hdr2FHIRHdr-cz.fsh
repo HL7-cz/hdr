@@ -7,7 +7,7 @@ Usage: #definition
 * status = #draft
 * experimental = true
 * description = """CZ Hospital Discharge Report Model to this guide mapping"""
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/HospitalDischargeReport"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/HospitalDischargeReportCz"
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-bundle-hdr"
 * group[=].element[+].code = #HospitalDischargeReport.header
 * group[=].element[=].display = "A.1 - Hospital Discharge Report header data element"
@@ -15,7 +15,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "See the header model and map for details"
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/HospitalDischargeReport"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/HospitalDischargeReportCz"
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
 * group[=].element[+].code = #HospitalDischargeReport.body
 * group[=].element[=].display = "A.2 - Hospital Discharge Report body data element"

@@ -6,10 +6,10 @@ Usage: #example
 
 * status = #current
 * type = $loinc#18842-5 "Discharge summary"
-* subject = Reference(Mracena2)
+* subject = Reference(Patient-Novak-Petr)
 * date = "2022-10-07T08:15:00+02:00"
-* author[0] = Reference(Practitioner/Practitioner-2)
-* custodian = Reference(Organization/Organization-1)
+* author[0] = Reference(Practitioner-Author)
+* custodian = Reference(Organization-1)
 * content[0].attachment.contentType = #application/pdf
 * content[0].attachment.language = #cs
 * content[0].attachment.title = "Propouštěcí zpráva"
@@ -25,10 +25,10 @@ Usage: #example
 
 * status = #current
 * type = $loinc#18842-5 "Discharge summary"
-* subject = Reference(Mracena2)
+* subject = Reference(Patient-Novak-Petr)
 * date = "2022-10-07T08:15:00+02:00"
-* author[0] = Reference(Practitioner/Practitioner-2)
-* custodian = Reference(Organization/Organization-1)
+* author[0] = Reference(Practitioner-Author)
+* custodian = Reference(Organization-1)
 * content[0].attachment.contentType = #text/html
 * content[0].attachment.language = #cs
 * content[0].attachment.title = "Propouštěcí zpráva"

@@ -97,7 +97,7 @@ InstanceOf: CZ_EncounterHdr
 * class.code = #IMP 
 * class.system = $cz-encounter-typ-kontaktu
 * class.display = "standardní"
-* subject = Reference(CZ_PatientCore/Patient-Novak-Petr)
+* subject = Reference(Patient-Novak-Petr)
 * period.start = "2025-03-01T10:15:00+01:00"
 * period.end = "2025-03-10T09:30:00+01:00"
 * serviceProvider = Reference(CZ_OrganizationCore/RegisteringProviderExample)

@@ -34,6 +34,20 @@ InstanceOf: CZ_Medication
 * identifier[0].system = $cz-medication-DLP
 * identifier[0].value = "0243131"
 
+Instance: MedicationDispense-Euthyrox
+InstanceOf: MedicationDispense
+Usage: #example
+Title: "Dispense – Euthyrox"
+Description: "Výdej léčivého přípravku Euthyrox pacientovi Novákovi"
+* status = #completed
+* medicationReference = Reference(Medication-Euthyrox)
+* subject = Reference(Patient-Novak-Petr)
+* quantity.value = 30
+* quantity.unit = "tableta"
+* quantity.system = $Jednotky
+* quantity.code = #"{tbl}"
+* whenHandedOver = "2024-03-05"
+
 Instance: Medication-Paracetamol
 InstanceOf: CZ_Medication
 * id = "med-paracetamol"
@@ -69,6 +83,20 @@ InstanceOf: CZ_Medication
 * ingredient[0].strength.denominator.unit = "tableta"
 * identifier[0].system = $cz-medication-DLP
 * identifier[0].value = "0243131"
+
+Instance: MedicationDispense-Paracetamol
+InstanceOf: MedicationDispense
+Usage: #example
+Title: "Dispense – Paracetamol"
+Description: "Výdej léčivého přípravku Paracetamol pacientovi Novákovi"
+* status = #completed
+* medicationReference = Reference(Medication-Paracetamol)
+* subject = Reference(Patient-Novak-Petr)
+* quantity.value = 20
+* quantity.unit = "tableta"
+* quantity.system = $Jednotky
+* quantity.code = #"{tbl}"
+* whenHandedOver = "2024-03-06"
 
 Instance: Medication-Ibalgin400
 InstanceOf: CZ_Medication
@@ -106,6 +134,19 @@ InstanceOf: CZ_Medication
 * identifier[0].system = $cz-medication-DLP
 * identifier[0].value = "0207893"
 
+Instance: MedicationDispense-Ibalgin400
+InstanceOf: MedicationDispense
+Usage: #example
+Title: "Dispense – Ibalgin 400"
+Description: "Výdej léčivého přípravku Ibalgin 400 mg pacientovi Novákovi"
+* status = #completed
+* medicationReference = Reference(Medication-Ibalgin400)
+* subject = Reference(Patient-Novak-Petr)
+* quantity.value = 15
+* quantity.unit = "tableta"
+* quantity.system = $Jednotky
+* quantity.code = #"{tbl}"
+* whenHandedOver = "2024-03-07"
 
 
 

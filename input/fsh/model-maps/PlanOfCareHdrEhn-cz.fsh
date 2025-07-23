@@ -1,13 +1,14 @@
-Logical: PlanOfCareHdrEhnCz
-Id: PlanOfCareCz
-Title: "A.2.8.1 - Care plan"
-Description: """Hospital Discharge Report - Care plan after discharge - A.2.8.1 eHN"""
-* title 0..1 string "A.2.9.1.1 - Title" """Human-friendly name for the care plan (e.g. Hip replacement care plan)"""
-* addresses 0..* CodeableConcept "A.2.9.1.2 - Addresses" """Identifies the conditions/problems/concerns/diagnoses/etc. whose management and/or mitigation are handled by this plan. This element provides a linkage to the conditions recorded in the diagnostic summary section."""
-* description 0..1 string "A.2.9.1.3 - Description" """A description of the scope and nature of the plan."""
-* planPeriod 0..1 Period "A.2.9.1.4 - Plan Period" """Indicates when the plan did (or is intended to) come into effect and end."""
-* details 0..* BackboneElement "A.2.9.1.5 - Other details" """Other structured and coded details, care team, goals to be achieved."""
-* activity 0..* BackboneElement "A.2.9.1.6 - Activity" """Actions to occur as part of the plan."""
-* activity.kind 0..1 CodeableConcept "A.2.9.1.6.1 - Kind" """A description of the type of care plan activity. For example, a MedicationRequest, a ServiceRequest, or a CommunicationRequest."""
-* activity.description 0..1 string "A.2.9.1.6.2 - Activity description" """A detailed description of the activity."""
-* activity.attribute 0..* BackboneElement "A.2.9.1.6.3 - Specific attributes" """Specific structured attributes per each activity type expressed by the Activity kind element, E.g., specific attributes for prescription request, appointment, etc."""
+Logical: PLogCzlanOfCareHdrCz
+Id: LogPlanOfCareCz
+Title: "A.2.9.1 Plán péče"
+Description: """Nemocniční propouštěcí zpráva - Plán péče po propuštění - A.2.8.1"""
+
+* nazev 0..1 string "A.2.9.1.1 Název" """...Název plánu péče, např. 'Plán péče po endoprotéze kyčelního kloubu'..."""
+* resi 0..* CodeableConcept "A.2.9.1.2 Řeší" """...Onemocnění či stavy, na které se plán vztahuje. Vybere lékař ze seznamu zdravotních problémů uvedených v diagnostickém souhrnu..."""
+* popis 0..1 string "A.2.9.1.3 Popis doporučení" """...Popis typu a povahy plánu péče..."""
+* obdobi 0..1 Period "A.2.9.1.4 Období" """...Období, ve kterém by měl být plán péče realizován..."""
+* podrobnosti 0..* string "A.2.9.1.5 Další podrobnosti plánu" """...Další strukturované informace popisující cíle plánu, složení terapeutického týmu apod..."""
+* aktivity 0..* BackboneElement "A.2.9.1.6 Aktivity" """...Jednotlivé aktivity plánu..."""
+  * typ 0..1 CodeableConcept "A.2.9.1.6.1 Typ aktivity" """...Popis aktivity léčebného plánu. Např. doporučená medikace, požadovaná vyšetření, požadavky na komunikaci, dietní doporučení, režimová opatření, plánované kontroly apod..."""
+  * popis 0..1 string "A.2.9.1.6.2 Popis aktivity" """...Detailní popis plánované aktivity volným textem..."""
+  * atributy 0..* BackboneElement "A.2.9.1.6.3 Specifické atributy" """...Specifické atributy pro jednotlivé typy aktivit..."""

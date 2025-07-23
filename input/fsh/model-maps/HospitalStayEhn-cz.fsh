@@ -1,7 +1,20 @@
-Logical: HospitalStayEhnCz
-Id: HospitalStayCz
-Title: "A.2.6 - Hospital stay (eHN)"
-Description: """Hospital Discharge Report - Hospital stay - A.2.6 eHN"""
+Logical: LogCzHospitalStayCz
+Id: LogHospitalStayCz
+Title: "A.2.7 Průběh hospitalizace"
+Description: "Popis průběhu hospitalizace zahrnující diagnostické souhrny, výkony, léčbu, vyšetření i klinické shrnutí"
+
+* diagnostickySouhrn 1..* string "A.2.7.1 Diagnostický souhrn" """Všechny problémy/diagnózy, které ovlivňují péči během hospitalizace nebo které je důležité zaznamenat pro zajištění kontinuity péče. Rozlišuje se mezi problémy léčenými a neléčenými, dále mezi stavy přítomnými při přijetí, získanými během hospitalizace a neklasifikovatelnými. Popis je strukturovaný, dobře specifikovaný a kódovatelný."""
+* vyznamneVykony 1..* string "A.2.7.2 Významné výkony (procedury)" """Operace a ostatní „instrumentální“ intervence (endoskopické, intravaskulární) provedené v průběhu hospitalizace. Nezahrnuje čistě diagnostické výkony. Pokud nebyl proveden žádný výkon, uvede se IPS Absent/Unknown."""
+* zp 1..* string "A.2.7.3 Zdravotní pomůcky a implantáty" """Zavedené a používané zdravotní pomůcky nebo odebrané zdravotnické prostředky ovlivňující diagnostiku nebo léčbu. Pokud nejsou, uvede se důvod podle IPS."""
+* dalsiVyznamnaLecba 0..* string "A.2.7.4 Další významná léčba" """Léčby, které nelze jednoznačně označit jako výkony, ale jsou významné (např. chemoterapie, dialýza, hemoperfuze, podpora oběhu, krevní deriváty apod.)."""
+* medikace 0..* string "A.2.7.5 Medikace" """Medikamentózní léčba během hospitalizace, jejíž znalost je významná pro další péči. Patří sem léčiva podaná a ukončená během hospitalizace nebo pokračující krátkodobě. Léčiva doporučená i po propuštění budou uvedena v části Doporučení."""
+* vysledkyVysetreni 0..* string "A.2.7.6 Výsledky vyšetření" """Významné výsledky funkčních, diagnostických a zobrazovacích vyšetření, provedených během hospitalizace. Výsledky s nezpracovaným stavem („registered“) mají být uvedeny odděleně."""
+* klinickeShrnuti 1..1 BackboneElement "A.2.7.7 Klinické shrnutí" """Podrobný popis důvodu a průběhu hospitalizace jako celku. Může být zakončeno klinickou úvahou (dif. dg., vysvětlení souvislostí) v klinicky složitých případech."""
+  * souhrnProblemu 1..* BackboneElement "A.2.7.7.1 Klinický souhrn problému" """Souhrnný popis důvodu a průběhu hospitalizace za konkrétní problém."""
+    * popisProblemu 1..1 string "A.2.7.7.1.1 Popis problému" """Popis problému textem."""
+    * duvod 1..1 string "A.2.7.7.1.2 Důvod a průběh hospitalizace" """Podrobný popis důvodu a průběhu hospitalizace za celý pobyt."""
+  * klinickaUvaha 0..1 string "A.2.7.7.2 Klinická úvaha" """Zakončení klinického shrnutí klinickou úvahou (diferenciální diagnostika, vysvětlení složitých stavů apod.)."""
+/*Evropský dataset pro HDR - průběh hospitalizace
 * diagnosticSummary 1..* BackboneElement "A.2.7.1 - Diagnostic summary" """All problems/diagnoses that affect care during the inpatient case or are important to be recorded to ensure continuity of care. The diagnostic summary differentiates, in accordance with the international recommendation, between problems treated during hospital stay and other (untreated) problems. Treated problems are problems that were the subject of diagnostics, therapy, nursing, or (continuous) monitoring during the hospitalisation. Furthermore problems could be divided into three categories: problems present on admission (POA), conditions acquired during hospital stay (HAC) and problems that cannot be classified as being of any of the two (N/A). The diagnostic summary contains all conditions as they were recognised at the end of hospitalisation, after all examinations. This section contains concise, well specified, codeable, summary of problems. Problems are ordered by importance (main problems first) during hospital stay. Description of the problem might be completed with additional details in the medical history section and/or in the Synthesis section."""
 * diagnosticSummary.problemDescription 1..1 string "A.2.7.1.1 - Problem description" """Problem specification in narrative form"""
 * diagnosticSummary.problemDetails 0..* BackboneElement "A.2.7.1.2 - Problem details" """Problem details include code that identifies problem, specification of the body structure, laterality, and other aspects of the problem."""
@@ -50,3 +63,4 @@ This section does not include purely diagnostic procedures (MRI, CT, etc.). If n
 * synthesis 1..1 BackboneElement "A.2.7.7 - Synthesis" """This section provides clinical synthesis (e.g. description of reasons and course of hospital stay) clustered by managed conditions, Clinical synthesis may include clinical reasoning (differential diagnostics, explanation of clinical context) in clinically complex conditions."""
 * synthesis.description 1..* string "A.2.7.7.1 - Problem synthesis" """Summary description of the reason and course of hospitalisation for a specific problem."""
 * synthesis.reasoning 0..1 string "A.2.7.7.2 - Clinical reasoning" """The clinical summary can be concluded with a clinical consideration (diff. diagnosis, explanation of context, etc.) for clinically complex conditions."""
+*/

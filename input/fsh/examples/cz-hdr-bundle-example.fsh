@@ -138,8 +138,50 @@ Usage: #example
 * entry[12].resource = Procedure-inguinal-hernia
 * entry[13].fullUrl = "urn:uuid:b3f0f517-9c64-4b8f-99d9-72183cfd9ef0"
 * entry[13].resource = CZ-AdvanceDirectives-HDR-DNR
-* entry[14].fullUrl = "urn:uuid:f0b20060-c4a8-4a74-b12a-499ae3b59015"
-* entry[14].resource = Procedure-inguinal-hernia
+* entry[14].fullUrl = "urn:uuid:f0b20060-c4a8-4a74-b12a-6c8f0b2d4e3a"
+* entry[14].resource = ExampleBMI
+* entry[15].fullUrl = "urn:uuid:6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b"
+* entry[15].resource = ExampleChestCircumference
+* entry[16].fullUrl = "urn:uuid:5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c"
+* entry[16].resource = ExampleHeadCircumference
+* entry[17].fullUrl = "urn:uuid:7cf304de-5ae3-4621-8531-9c8f0b2d4e3a"
+* entry[17].resource = ExampleAbdominalCircumference
+* entry[18].fullUrl = "urn:uuid:5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d"
+* entry[18].resource = ExampleHeight
+* entry[19].fullUrl = "urn:uuid:4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a"
+* entry[19].resource = ExampleWeight
+* entry[20].fullUrl = "urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a"
+* entry[20].resource = ExampleBloodPressure
+* entry[21].fullUrl = "urn:uuid:f95f843e-701f-434a-94c9-3c8f0b2d4e3a"
+* entry[21].resource = Observation-TravelHistory-Madagaskar
+* entry[22].fullUrl = "urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a"
+* entry[22].resource = Practitioner-Author
+* entry[23].fullUrl = "urn:uuid:af4dcfeb-2cb3-4fc8-98e2-5c8f0b2d4e3a"
+* entry[23].resource = Observation-InfectiousContact
+* entry[24].fullUrl = "urn:uuid:133cea11-09c6-4147-80af-6c8f0b2d4e3a"
+* entry[24].resource = MedicationDispense-Euthyrox
+* entry[25].fullUrl = "urn:uuid:65c49e6d-0951-4e83-8e2c-7c8f0b2d4e3a"
+* entry[25].resource = MedicationDispense-Paracetamol
+* entry[26].fullUrl = "urn:uuid:b0001bf8-976a-4d7d-b192-8c8f0b2d4e3a"
+* entry[26].resource = MedicationDispense-Ibalgin400
+* entry[27].fullUrl = "urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a"
+* entry[27].resource = Observation-UZV-Novak
+* entry[28].fullUrl = "urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b"
+* entry[28].resource = Observation-CRP-Novak
+* entry[29].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c"
+* entry[29].resource = ExampleSdohSmoking
+* entry[30].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001d"
+* entry[30].resource = ExampleSdohAlcohol
+* entry[31].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001e"
+* entry[31].resource = Immunization
+* entry[32].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001f"
+* entry[32].resource = DeviceUseStatement-Pacemaker
+* entry[33].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000020"
+* entry[33].resource = Procedure-Insert-Pacemaker2
+* entry[34].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000021"
+* entry[34].resource = Observation-DischargeCondition
+
+
 
 
 
