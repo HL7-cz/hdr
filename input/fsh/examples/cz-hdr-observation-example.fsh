@@ -223,10 +223,10 @@ Description: "Hodnocení celkového klinického stavu pacienta při propuštěn�
 * note[0].text = "Pacient ve stabilizovaném stavu, bez komplikací."
 
 Instance: Observation-TravelHistory-Madagaskar
-InstanceOf: Observation
+InstanceOf: CZ_ObservationTravelHdr
 Usage: #example
 * status = #final
-* code = $loinc#10182-4 "History of travel"
+* code = $loinc#82753-5 "History of travel"
 * subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2024-03-20"
 * valueCodeableConcept.coding[0].system = $iso3166-1-2
@@ -237,14 +237,19 @@ Usage: #example
 * note[0].text = "Pacient navštívil Madagaskar během posledních 30 dnů."
 
 Instance: Observation-InfectiousContact
-InstanceOf: Observation
+InstanceOf: CZ_ObservationInfectiousContactHdr
 Usage: #example
 Title: "Infekční kontakt"
 Description: "Pacient byl v kontaktu s osobou nakaženou COVID-19"
-* status = #final
-* code = $loinc#11352-2 "History of contact with infectious disease"
+* status = #final¨
+* category[exposureClass].coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
+* category[exposureClass].coding[0].code = #AEXPOS
+* category[exposureClass].coding[0].display = "acquisition exposure"
+* code = $v3-ParticipationType#EXPAGNT "exposure agent"
 * subject = Reference(Patient-Novak-Petr)
 * performer = Reference(Practitioner-Author)
 * effectiveDateTime = "2024-03-25"
-* valueCodeableConcept = $sct#840539006 "Contact with confirmed COVID-19 case"
+* valueCodeableConcept.coding[0].system = $icd10
+* valueCodeableConcept.coding[0].code = #U07.1
+* valueCodeableConcept.coding[0].display = "COVID-19, virus identifikován"
 * note[0].text = "Kontakt proběhl během společné domácnosti 5 dní před příjmem."
