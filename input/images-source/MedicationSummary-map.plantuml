@@ -16,7 +16,7 @@ class "MedicationSummary" <<LogicalModel>> [[StructureDefinition-MedicationSumma
 note top #PaleTurquoise [[ConceptMap-medicationSummary2FHIR-cz-hdr.html]]
 Concept Map
 endnote
-class "medication-cz-hdr" <<Profile>> [[StructureDefinition-cz-medication-hdr.html]]
+class "medication-cz-hdr" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-Medication.html]]
 "MedicationSummary" <|. "medication-cz-hdr"
 class "medicationDispense-eu-hdr" <<Profile>> [[https://build.fhir.org/ig/hl7-eu/hdr/StructureDefinition-medicationDispense-eu-hdr.html]]
 "MedicationSummary" <|. "medicationDispense-eu-hdr"

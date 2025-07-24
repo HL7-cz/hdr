@@ -55,4 +55,4 @@ The Hospital Discharge Report Body component includes:
 
 #### eHN Data Set as HL7 FHIR logical models
 
-The HL7 FHIR logical models used to represent the HOSPITAL DISCHARGE REPORT DATASET as defined in section 4 of that eHN guideline are documented in the [HL7 FHIR Models](logicalModel.html) page.
+The HL7 FHIR logical models used to represent the HOSPITAL DISCHARGE REPORT DATASET as defined in section 4 of that eHN guideline are documented in the [HL7 FHIR Models](logical-models.html) page.

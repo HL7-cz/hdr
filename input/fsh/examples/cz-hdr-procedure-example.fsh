@@ -125,7 +125,7 @@ InstanceOf: CZ_ProcedureHdr
 * code.coding[0].code = #80146002
 * code.coding[0].display = "Repair of inguinal hernia"
 * code.text = "Plastika tříselné kýly"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * performedDateTime = "2025-03-02"
 * reasonReference[0] = Reference(IronDeficiencyAnemiaCondition)
 * note[0].text = "Plastika pravostranné tříselné kýly dne 2. 3. 2025."
@@ -141,7 +141,7 @@ Description: "Czech HDR - example of a Procedure - Pacemaker"
 
 * status = #completed
 * code = $sct#47545007 "Zavedení kardiostimulátoru"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * performedDateTime = "2024-03-05"
 * bodySite = $sct#74262004 "Struktura pravé síně"
 * reasonCode[+] = $icd10#I50 "Heart failure"

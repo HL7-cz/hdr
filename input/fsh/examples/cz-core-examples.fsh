@@ -323,7 +323,7 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * address[+]
   * use = #home
   * type = #physical
-  * text = "Pavlovova 1424/11, 568 02 Svitavy - Předměstí "
+  * text = "Pavlovova 1424/11, 568 02 Svitavy - Předměstí"
   * line[+] = "Pavlovova 1424/11"
     * extension[streetName].valueString = "Pavlovova"
     * extension[houseNumber].valueString = "1424/11"
