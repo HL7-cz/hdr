@@ -271,7 +271,6 @@ Description: "Pacient pracuje na plný úvazek jako programátor."
 * code = $sct#408470002 "Employment status" 
 * subject = Reference(Patient-Novak-Petr)
 * valueString = "Pacient pracuje jako programátor na plný úvazek v IT firmě."
-* note[0].text = "Pacient pracuje jako programátor na plný úvazek v IT firmě."
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
     <p>Pacient pracuje jako programátor na plný úvazek v IT firmě.</p>
@@ -285,7 +284,7 @@ Description: "Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o
 * status = #final
 * code = $sct#408471003 "Hobby and interests"
 * subject = Reference(Patient-Novak-Petr)
-* note[0].text = "Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování."
+* valueString = "Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování."
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
     <p>Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování.</p>
@@ -299,7 +298,7 @@ Description: "Pacient má aktivní sociální síť a pravidelně se setkává s
 * status = #final
 * code = $sct#408472005 "Social network"
 * subject = Reference(Patient-Novak-Petr)
-* note[0].text = "Pacient má širokou sociální síť a pravidelně se setkává s přáteli a rodinou."
+* valueString = "Pacient má širokou sociální síť a pravidelně se setkává s přáteli a rodinou."
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
     <p>Pacient má širokou sociální síť a pravidelně se setkává s přáteli a rodinou.</p>
@@ -314,7 +313,6 @@ Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
 * code = $sct#409073007 "Education"
 * subject = Reference(Patient-Novak-Petr)
 * hasMember = Reference(Observation-Education-level)
-* note[0].text = "Pacient má vysokoškolské vzdělání v oboru informatiky."
 
 
 Instance: Observation-Education-level
@@ -328,7 +326,6 @@ Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
 * valueCodeableConcept.coding[0].system = $cz-SocialHistory-education-level
 * valueCodeableConcept.coding[0].code = #BD
 * valueCodeableConcept.coding[0].display = "Vysokoškolské vzdělání"
-* note[0].text = "Pacient má vysokoškolské vzdělání v oboru informatiky."
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
     <p>Pacient má vysokoškolské vzdělání v oboru informatiky.</p>
