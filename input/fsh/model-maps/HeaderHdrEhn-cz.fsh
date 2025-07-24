@@ -1,6 +1,6 @@
 Logical: LogCzHeaderCz
 Id: LogHeaderHdrCz
-Title: "A.1 – Hlavička dokumentu "
+Title: "A.1 – Hlavička dokumentu"
 Description: "Nemocniční propouštěcí zpráva - Struktura hlavičky propouštěcí zprávy podle tabulky části. "
 
 * pacient 1..1 Base "A.1.1 Identifikace pacienta" """Identifikace pacienta – křestní jméno, příjmení, datum narození, identifikátory, státní občanství, úřední pohlaví, komunikační jazyk."""

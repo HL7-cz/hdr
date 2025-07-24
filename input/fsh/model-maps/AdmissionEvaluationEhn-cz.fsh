@@ -2,7 +2,7 @@ Logical: LogCzAdmissionEvaluation
 Id: LogAdmissionEvaluationCz
 Title: "A.2.4 - Stav při přijetí (cz)"
 Description: """Nemocniční propouštěcí zpráva - Stav při přijetí - A.2.4 CZ poznámka: Nepovinná sekce uvádět pouze v případě významu pro zajištění kontinuity péče. """
-* objektivniNalez 0..1 Base "A.2.4.1 - Objektivní nález " """Objektivní nález"""
+* objektivniNalez 0..1 Base "A.2.4.1 - Objektivní nález" """Objektivní nález"""
   * datum 0..1 dateTime "A.2.4.1.1 - Datum a čas" """Datum a čas vyšetření pacienta lékařem v průběhu jeho přijímání k hospitalizaci"""
   * provedl 0..1 Base "A.2.4.1.2 - Provedl" """Identifikuje osobu, která  vyšetření provedla nebo je zdrojem informací o výsledku vyšetření. Tato osoba nemusí být totožná s autorem dokumentu."""
   * anthropometrickeUdaje 0..* Base "A.2.4.1.3 - Anthropometrické údaje" """Výsledky antropometrických měření pacienta: Požadované: výška, hmotnost, BMI (automatický výpočet z uvedených hodnot) Volitelné: obvod hlavy, hrudníku, břicha…"""

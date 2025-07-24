@@ -7,7 +7,7 @@ Description: "This profile sets minimum expectations for the Observation resourc
 * ^experimental = false
 
 // Optional: Head Circumference
-* code = $loinc#8287-5 // "Head circumference"
+* code = $loinc#9843-4 //"Head Occipital-frontal circumference"
 * value[x] only Quantity
 * valueQuantity ^short = "Head circumference in cm"
 * valueQuantity ^definition = "The circumference of the patient's head in centimeters."

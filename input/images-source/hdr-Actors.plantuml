@@ -1,0 +1,14 @@
+@startuml
+"HDR Creator" as creator
+"HDR Consumer" as consumer
+"Create a report" as (create)
+"Use a report" as (use)
+
+"Close/Save a report" as (save)
+"Search/Receive a report" as (receive)
+
+creator --> (create)
+creator --> (save)
+consumer --> (use)
+consumer --> (receive)
+@enduml

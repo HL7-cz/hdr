@@ -1,7 +1,6 @@
 Instance: AttachmentHDR2FHIR-cz
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://hl7.cz/fhir/img/ConceptMap/AttachmentHDR2FHIR-cz"
 * name = "AttachmentHDR2FHIRcz"
 * title = "CZ Attachment Model to this guide Map"
 * status = #draft

@@ -1,6 +1,6 @@
 Logical: LogCzHospitalDischargeReportCz
 Id: LogHospitalDischargeReportCz
-Title: "A - Propouštěcí zpráva "
+Title: "A - Propouštěcí zpráva"
 Description: """Nemocniční propouštěcí zpráva"""
 
 * hlavicka 1..1 LogHeaderHdrCz "A.1 - Hlavička dokumentu" """Hlavička propouštěcí zprávy – podle české specifikace"""

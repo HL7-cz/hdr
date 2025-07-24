@@ -19,7 +19,7 @@ license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
-jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#203 "Czech Republic (CZE)"
+jurisdiction: urn:iso:std:iso:3166#CZ "Czechia"
 publisher:
   name: HL7 Czech Republic
   url: https://www.hl7.cz/
@@ -43,7 +43,7 @@ dependencies:
   hl7.fhir.cz.core: current
   hl7.fhir.eu.hdr: current
   hl7.fhir.eu.laboratory: current
-  hl7.fhir.eu.base: current
+  hl7.fhir.eu.base: 0.1.0-ballot
   hl7.fhir.extensions.r5: 4.0.1
   ihe.pharm.mpd: current
   hl7.fhir.eu.extensions: current
@@ -228,6 +228,7 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 #  generate-turtle:
 #  html-template:
 #  active-tables: false
+  pin-canonicals: pin-multiples
   apply-contact: true
   apply-jurisdiction: true
   apply-publisher: true
@@ -427,6 +428,14 @@ menu:
         #- ConceptMap/medicationSummary2FHIR-cz-hdr
 #*/
 groups:
+  obligations:
+    name:  Actors and Obligations (Informative)
+    description: Actors and Obligations used to describe the HDR functional requirements for the specified data elements. Informative for this version of the guide.
+    resources:
+      - ActorDefinition/actor-consumer-hdr
+      - ActorDefinition/actor-creator-hdr
+      - StructureDefinition/cz-patient-obl-hdr
+
   czech-logical-model:
     name:  Czech logical model (Informative)
     description: Logical model in czech language. Informative for this version of the guide.
@@ -448,6 +457,7 @@ groups:
       - StructureDefinition/LogPatientHistoryCz
       - StructureDefinition/LogSubjectCz
       - StructureDefinition/LogPresentedFormCz
+
       
 
 # The ImplementationGuide resource defines several other properties
