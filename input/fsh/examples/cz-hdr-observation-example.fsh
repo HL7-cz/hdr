@@ -19,7 +19,7 @@ Description: "Example of Social History Observation - Smoking"
 * status = #final
 * category[SocialHistory] =  $observation-category#social-history
 * code = $sct#229819007 "Smoking"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectivePeriod.start = "2017-04-15T00:00:00+02:00"
 * effectivePeriod.end = "2020-04-15T00:00:00+02:00"
 * performer = Reference(Practitioner-2)
@@ -33,7 +33,7 @@ Description: "Example of Social History Observation - Smoking history"
 * status = #final
 * category[SocialHistory] = $observation-category#social-history
 * code = $sct#229819007 "Tobacco smoking behavior"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2015-01-01T00:00:00+01:00" // Datum zanechání kouření
 * performer = Reference(Practitioner-2)
 * valueCodeableConcept = $sct#8517006 "Ex-smoker"
@@ -47,7 +47,7 @@ Description: "Example of Social History Observation - Alcohol Use"
 * status = #final
 * category[SocialHistory] =  $observation-category#social-history
 * code = $sct#160573003 "ETOH (Alcohol) Use"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectivePeriod.start = "2016-04-15T00:00:00+02:00"
 * effectivePeriod.end = "2016-04-15T00:00:00+02:00"
 * performer = Reference(Practitioner-2)
@@ -61,7 +61,7 @@ Description: "Example of Social History Observation - Alcohol Use"
 * status = #final
 * category[SocialHistory] = $observation-category#social-history
 * code = $sct#160573003 "Alcohol consumption"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-01T00:00:00+01:00"
 * performer = Reference(Practitioner-2)
 * valueCodeableConcept = $sct#228273003 "Drinks alcohol occasionally"
@@ -74,23 +74,29 @@ Description: "Example instance for chest circumference observation using the CZ_
 
 * status = #final
 * code = $loinc#8280-0 "Chest circumference"
-* subject = Reference(Patient-Novak-Petr)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 85
 * valueQuantity.unit = "cm"
 * valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #cm
 
 Instance: ExampleHeadCircumference
 InstanceOf: CZ_ObservationHeadCircumferenceHdr
 Description: "Example instance for head circumference observation using the CZ_ObservationHeadCircumferenceHdr profile."
 
 * status = #final
-* code = $loinc#8287-5 "Head circumference"
-* subject = Reference(Patient-Novak-Petr)
+* code = $loinc#9843-4 "Head Occipital-frontal circumference"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 50
 * valueQuantity.unit = "cm"
 * valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #cm
 
 Instance: ExampleBMI
 InstanceOf: CZ_ObservationBMIHdr
@@ -98,11 +104,14 @@ Description: "Example instance for BMI observation using the CZ_ObservationBMIHd
 
 * status = #final
 * code = $loinc#39156-5 "Body mass index (BMI)"
-* subject = Reference(Patient-Novak-Petr)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 22.5
 * valueQuantity.unit = "kg/m2"
 * valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg/m2
 
 Instance: ExampleAbdominalCircumference
 InstanceOf: CZ_ObservationAbdominalCircumferenceHdr
@@ -110,11 +119,14 @@ Description: "Example instance for abdominal circumference observation using the
 
 * status = #final
 * code = $loinc#56086-2 "Abdominal circumference"
-* subject = Reference(Patient-Novak-Petr)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 90
 * valueQuantity.unit = "cm"
 * valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #cm
 
 Instance: ExampleHeight
 InstanceOf: CZ_ObservationHeightHdr
@@ -122,11 +134,14 @@ Description: "Example instance for height observation using the CZ_ObservationHe
 
 * status = #final
 * code = $loinc#8302-2 "Body height"
-* subject = Reference(Patient-Novak-Petr)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 175
 * valueQuantity.unit = "cm"
 * valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #cm
 
 Instance: ExampleWeight
 InstanceOf: CZ_ObservationWeightHdr
@@ -134,11 +149,14 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 
 * status = #final
 * code = $loinc#29463-7 "Body weight"
-* subject = Reference(Patient-Novak-Petr)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #vital-signs
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 70
 * valueQuantity.unit = "kg"
 * valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg
 
 //-----------------------------------------
 Instance: Observation-UZV-Novak
@@ -150,7 +168,7 @@ Description: "Czech HDR - example of an ultrasound observation for Novák Petr"
 * status = #final
 * category = $observation-category#imaging  //http://terminology.hl7.org/CodeSystem/observation-category
 * code = $loinc#24719-7 "Ultrasound of groin"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-10T10:00:00+01:00"
 * performer = Reference(Practitioner-UZV)
 * valueString = "UZ vyšetření pravého třísla: v oblasti tříselného kanálu patrný hypoechogenní vak komunikující s peritoneální dutinou, obsahující střevní kličku. Obsah je mobilní, bez známek ischemie. Závěr: vpravo tříselná kýla bez známek komplikace."
@@ -165,7 +183,7 @@ Description: "Czech HDR - example of CRP observation for Novák Petr"
 * status = #final
 * category = $observation-category#Laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
 * code = $loinc#1988-5 "C reactive protein"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-01T10:00:00+01:00"
 * performer = Reference(Practitioner-UZV)
 * valueQuantity.value = 6.0
@@ -189,7 +207,7 @@ Description: "Example instance for blood pressure observation (systolic and dias
 * status = #final
 * category[0] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#85354-9 "Blood pressure panel with all children optional"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 
 // Systolický tlak
@@ -215,8 +233,8 @@ Description: "Hodnocení celkového klinického stavu pacienta při propuštěn�
 * status = #final
 * category[0] = $observation-category#clinical "Clinical"
 * code = $loinc#8653-8 "Patient condition at discharge"
-* performer[0] = Reference(Practitioner-Author)
-* subject = Reference(Patient-Novak-Petr)
+* performer[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-29"
 * valueCodeableConcept = $sct#268910001 "Stav stabilizovaný"
 * interpretation = $v3-ObservationInterpretation#N "Normal"
@@ -226,14 +244,14 @@ Instance: Observation-TravelHistory-Madagaskar
 InstanceOf: CZ_ObservationTravelHdr
 Usage: #example
 * status = #final
-* code = $loinc#82753-5 "History of travel"
-* subject = Reference(Patient-Novak-Petr)
+* code = $loinc#10182-4 "History of travel"
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-20"
 * valueCodeableConcept.coding[0].system = $iso3166-1-2
 * valueCodeableConcept.coding[0].code = #MG
 * valueCodeableConcept.coding[0].display = "Madagaskar"
 * valueCodeableConcept.text = "Madagaskar"
-* performer = Reference(Practitioner-Author)
+* performer = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * note[0].text = "Pacient navštívil Madagaskar během posledních 30 dnů."
 
 Instance: Observation-InfectiousContact
@@ -241,15 +259,101 @@ InstanceOf: CZ_ObservationInfectiousContactHdr
 Usage: #example
 Title: "Infekční kontakt"
 Description: "Pacient byl v kontaktu s osobou nakaženou COVID-19"
-* status = #final¨
+* status = #final
 * category[exposureClass].coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
 * category[exposureClass].coding[0].code = #AEXPOS
 * category[exposureClass].coding[0].display = "acquisition exposure"
 * code = $v3-ParticipationType#EXPAGNT "exposure agent"
-* subject = Reference(Patient-Novak-Petr)
-* performer = Reference(Practitioner-Author)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
+* performer = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * effectiveDateTime = "2024-03-25"
 * valueCodeableConcept.coding[0].system = $icd10
 * valueCodeableConcept.coding[0].code = #U07.1
 * valueCodeableConcept.coding[0].display = "COVID-19, virus identifikován"
 * note[0].text = "Kontakt proběhl během společné domácnosti 5 dní před příjmem."
+
+
+Instance: Observation-Participation-in-society
+InstanceOf: cz-observation-sdoh-hdr
+Usage: #example
+Title: "Společenské uplatnění"
+Description: "Pacient je aktivní v komunitních aktivitách a dobrovolnictví."
+* status = #final
+* code = $sct#408469001 "Participation in society"
+* subject = Reference(Patient-Novak-Petr)
+* hasMember = Reference(Observation-Work-situation)
+* hasMember = Reference(Observation-Hobby)
+* hasMember = Reference(Observation-Social-network)
+
+
+Instance: Observation-Work-situation
+InstanceOf: cz-observation-sdoh-hdr
+Usage: #example
+Title: "Pracovní zapojení"
+Description: "Pacient pracuje na plný úvazek jako programátor."
+* status = #final
+* code = $sct#408470002 "Employment status" 
+* subject = Reference(Patient-Novak-Petr)
+* valueString = "Pacient pracuje jako programátor na plný úvazek v IT firmě."
+* note[0].text = "Pacient pracuje jako programátor na plný úvazek v IT firmě."
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
+    <p>Pacient pracuje jako programátor na plný úvazek v IT firmě.</p>
+   </div>"   
+
+Instance: Observation-Hobby
+InstanceOf: cz-observation-sdoh-hdr
+Usage: #example
+Title: "Koníčky"
+Description: "Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování."
+* status = #final
+* code = $sct#408471003 "Hobby and interests"
+* subject = Reference(Patient-Novak-Petr)
+* note[0].text = "Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování."
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
+    <p>Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování.</p>
+   </div>"  
+
+Instance: Observation-Social-network
+InstanceOf: cz-observation-sdoh-hdr
+Usage: #example
+Title: "Sociální síť"
+Description: "Pacient má aktivní sociální síť a pravidelně se setkává s přáteli."
+* status = #final
+* code = $sct#408472005 "Social network"
+* subject = Reference(Patient-Novak-Petr)
+* note[0].text = "Pacient má širokou sociální síť a pravidelně se setkává s přáteli a rodinou."
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
+    <p>Pacient má širokou sociální síť a pravidelně se setkává s přáteli a rodinou.</p>
+   </div>"
+
+Instance: Observation-Education
+InstanceOf: cz-observation-sdoh-hdr
+Usage: #example
+Title: "Vzdělání"
+Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
+* status = #final
+* code = $sct#409073007 "Education"
+* subject = Reference(Patient-Novak-Petr)
+* hasMember = Reference(Observation-Education-level)
+* note[0].text = "Pacient má vysokoškolské vzdělání v oboru informatiky."
+
+
+Instance: Observation-Education-level
+InstanceOf: cz-observation-sdoh-hdr
+Usage: #example
+Title: "Dosažený stupeň vzdělání"
+Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
+* status = #final
+* code = $sct#408473006 "Education level"
+* subject = Reference(Patient-Novak-Petr)
+* valueCodeableConcept.coding[0].system = $cz-SocialHistory-education-level
+* valueCodeableConcept.coding[0].code = #BD
+* valueCodeableConcept.coding[0].display = "Vysokoškolské vzdělání"
+* note[0].text = "Pacient má vysokoškolské vzdělání v oboru informatiky."
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
+    <p>Pacient má vysokoškolské vzdělání v oboru informatiky.</p>
+   </div>"

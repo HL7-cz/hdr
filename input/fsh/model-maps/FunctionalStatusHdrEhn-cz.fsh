@@ -1,6 +1,6 @@
 Logical: LogCzFunctionalStatusHdrCz
 Id: LogFunctionalStatusCz
-Title: "A.2.8.2 - Funkční stav při propuštění "
+Title: "A.2.8.2 - Funkční stav při propuštění"
 Description: """Nemocniční propouštěcí zpráva - Hodnocení funkčního stavu pacienta při propuštění."""
 
 

@@ -16,12 +16,7 @@ Description: "Czech hdr - example od advance directive"
 * scope.coding[0].display = "Advance Directive"
 
 * text.status = #generated
-* text.div = """
-<div>
-  <p>Podepsané prohlášení DNR</p>
-  <p>Platné od 1.3.2025</p>
-</div>
-"""
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Podepsané prohlášení DNR Platné od 1.3.2025</div>"
 
 * provision.type = #permit
 

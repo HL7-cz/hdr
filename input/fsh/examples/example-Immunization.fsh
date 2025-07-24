@@ -7,7 +7,7 @@ Description: "Immunization of Covid"
 * status = #completed
 * meta.profile = "http://hl7.eu/fhir/hdr/StructureDefinition/immunization-eu-hdr"
 * vaccineCode = http://snomed.info/sct#1119349007 // Kód vakcíny proti COVID-19
-* patient = Reference(Patient-Novak-Petr)   
+* patient = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)   
 * occurrenceDateTime = "2021-05-05"
 * primarySource = true
 

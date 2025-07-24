@@ -4,7 +4,7 @@ Usage: #example
 Title: "Použití kardiostimulátoru"
 Description: "Záznam o implantaci kardiostimulátoru z důvodu bradykardie"
 * status = #active
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * device = Reference(Device-Pacemaker)
 * timingDateTime = "2023-04-10"
 * reasonCode[0] = $icd10#I50 "Heart failure"
@@ -21,4 +21,4 @@ Description: "Heart pacemaker Medtronic W1DR01"
 * manufacturer = "Medtronic"
 * modelNumber = "W1DR01"
 * type = $sct#14106009 "Kardiostimulátor"
-* patient = Reference(Patient-Novak-Petr) "Pokusný pacient Mračena"
+* patient = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000) "Pokusný pacient Mračena"
