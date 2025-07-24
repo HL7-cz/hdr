@@ -268,19 +268,24 @@ Usage: #example
 * section[sectionSignificantResults].entry[1] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b) // Corrected Reference to include the resource type
 
 //Add section for social history
-* section[sectionSocialHistory].title = "Anamnéza"
+* section[sectionSocialHistory].title = "Sociální anamnéza"
 * section[sectionSocialHistory].code.coding[0].system = "http://loinc.org"
 * section[sectionSocialHistory].code.coding[0].code = #29762-2 // Corrected code assignment
-* section[sectionSocialHistory].code.coding[0].display = "Social history Narrative"
+* section[sectionSocialHistory].code.coding[0].display = "Social history"
 * section[sectionSocialHistory].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
-    <p>Pacient je ženatý, žije s manželkou ve společné domácnosti. Má dvě dospělé děti, které žijí samostatně.</p>
-    <p>Bývalý kuřák, přestal kouřit před 10 lety, předtím cca 20 cigaret denně. Alkohol konzumuje příležitostně, 1–2 piva týdně.</p>
-    <p>Bydlí ve vlastním bytě ve 3. patře bez výtahu, pohybuje se samostatně. Je v důchodu, dříve pracoval jako automechanik. Dále udává dobrou sociální oporu a soběstačnost v denních aktivitách.</p>
+  <p><strong>Společenské uplatnění</strong></p>
+    <p>Pracovní zapojení: Pacient pracuje jako programátor na plný úvazek v IT firmě.</p>
+    <p>Koníčky: Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování.</p>
+    <p>Sociální síť: Pacient má širokou sociální síť, pravidelně se setkává s přáteli a rodinou.</p>
+  <p><strong>Vzdělání</strong></p>  
+    <p>Dosažený stupeň vzdělání: Pacient má vysokoškolské vzdělání v oboru informatiky.</p>
   </div>"""
 * section[sectionSocialHistory].text.status = #additional
-* section[sectionSocialHistory].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c)
-* section[sectionSocialHistory].entry[1] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001d)
+* section[sectionSocialHistory].entry[+] = Reference(Observation-Participation-in-society)
+* section[sectionSocialHistory].entry[+] = Reference(Observation-Education)
+* section[sectionSocialHistory].entry[+] = Reference(ExampleSdohSmokingEnded)
+* section[sectionSocialHistory].entry[+] = Reference(ExampleSdohAlcoholSporadic)
 
 ///Add section for Family History
 * section[sectionFamilyHistory].title = "Rodinná anamnéza"

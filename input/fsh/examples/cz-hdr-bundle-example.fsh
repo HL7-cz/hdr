@@ -179,6 +179,18 @@ Usage: #example
 * entry[procedure][=].resource = Procedure-Insert-Pacemaker2
 * entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000021"
 * entry[observation][=].resource = Observation-DischargeCondition
+* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000022"
+* entry[observation][=].resource = Observation-Participation-in-society
+* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000023"
+* entry[observation][=].resource = Observation-Work-situation
+* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000024"
+* entry[observation][=].resource = Observation-Hobby
+* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000025"
+* entry[observation][=].resource = Observation-Social-network
+* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000026"
+* entry[observation][=].resource = Observation-Education-level
+* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000027"
+* entry[observation][=].resource = Observation-Education
 
 
 

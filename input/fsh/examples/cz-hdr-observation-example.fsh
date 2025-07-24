@@ -266,3 +266,89 @@ Description: "Pacient byl v kontaktu s osobou nakaženou COVID-19"
 * effectiveDateTime = "2024-03-25"
 * valueCodeableConcept = $sct#840539006 "Contact with confirmed COVID-19 case"
 * note[0].text = "Kontakt proběhl během společné domácnosti 5 dní před příjmem."
+
+Instance: Observation-Participation-in-society
+InstanceOf: cz-observation-sdoh-hdr
+Usage: #example
+Title: "Společenské uplatnění"
+Description: "Pacient je aktivní v komunitních aktivitách a dobrovolnictví."
+* status = #final
+* code = $sct#408469001 "Participation in society"
+* subject = Reference(Patient-Novak-Petr)
+* hasMember = Reference(Observation-Work-situation)
+* hasMember = Reference(Observation-Hobby)
+* hasMember = Reference(Observation-Social-network)
+
+
+Instance: Observation-Work-situation
+InstanceOf: cz-observation-sdoh-hdr
+Usage: #example
+Title: "Pracovní zapojení"
+Description: "Pacient pracuje na plný úvazek jako programátor."
+* status = #final
+* code = $sct#408470002 "Employment status" 
+* subject = Reference(Patient-Novak-Petr)
+* valueString = "Pacient pracuje jako programátor na plný úvazek v IT firmě."
+* note[0].text = "Pacient pracuje jako programátor na plný úvazek v IT firmě."
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
+    <p>Pacient pracuje jako programátor na plný úvazek v IT firmě.</p>
+   </div>"   
+
+Instance: Observation-Hobby
+InstanceOf: cz-observation-sdoh-hdr
+Usage: #example
+Title: "Koníčky"
+Description: "Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování."
+* status = #final
+* code = $sct#408471003 "Hobby and interests"
+* subject = Reference(Patient-Novak-Petr)
+* note[0].text = "Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování."
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
+    <p>Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování.</p>
+   </div>"  
+
+Instance: Observation-Social-network
+InstanceOf: cz-observation-sdoh-hdr
+Usage: #example
+Title: "Sociální síť"
+Description: "Pacient má aktivní sociální síť a pravidelně se setkává s přáteli."
+* status = #final
+* code = $sct#408472005 "Social network"
+* subject = Reference(Patient-Novak-Petr)
+* note[0].text = "Pacient má širokou sociální síť a pravidelně se setkává s přáteli a rodinou."
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
+    <p>Pacient má širokou sociální síť a pravidelně se setkává s přáteli a rodinou.</p>
+   </div>"
+
+Instance: Observation-Education
+InstanceOf: cz-observation-sdoh-hdr
+Usage: #example
+Title: "Vzdělání"
+Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
+* status = #final
+* code = $sct#409073007 "Education"
+* subject = Reference(Patient-Novak-Petr)
+* hasMember = Reference(Observation-Education-level)
+* note[0].text = "Pacient má vysokoškolské vzdělání v oboru informatiky."
+
+
+Instance: Observation-Education-level
+InstanceOf: cz-observation-sdoh-hdr
+Usage: #example
+Title: "Dosažený stupeň vzdělání"
+Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
+* status = #final
+* code = $sct#408473006 "Education level"
+* subject = Reference(Patient-Novak-Petr)
+* valueCodeableConcept.coding[0].system = $cz-SocialHistory-education-level
+* valueCodeableConcept.coding[0].code = #BD
+* valueCodeableConcept.coding[0].display = "Vysokoškolské vzdělání"
+* note[0].text = "Pacient má vysokoškolské vzdělání v oboru informatiky."
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
+    <p>Pacient má vysokoškolské vzdělání v oboru informatiky.</p>
+   </div>"
+
