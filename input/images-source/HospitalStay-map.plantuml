@@ -27,7 +27,7 @@ class "Medical-device-cz" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core
 class "deviceUseStatement-eu-hdr" <<Profile>> [[https://build.fhir.org/ig/hl7-eu/hdr/StructureDefinition-deviceUseStatement-eu-hdr.html]]
 "HospitalStay" <|. "deviceUseStatement-eu-hdr"
 "Medical-device-cz" -d[hidden]-> "deviceUseStatement-eu-hdr"
-class "medication-cz-hdr" <<Profile>> [[StructureDefinition-cz-medication-hdr.html]]
+class "medication-cz-hdr" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-Medication.html]]
 "HospitalStay" <|. "medication-cz-hdr"
 "deviceUseStatement-eu-hdr" -d[hidden]-> "medication-cz-hdr"
 class "medicationDispense-eu-hdr" <<Profile>> [[https://build.fhir.org/ig/hl7-eu/hdr/StructureDefinition-medicationDispense-eu-hdr.html]]

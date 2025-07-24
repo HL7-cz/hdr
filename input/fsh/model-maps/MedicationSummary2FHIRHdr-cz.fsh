@@ -8,7 +8,7 @@ Usage: #definition
 * experimental = true
 * description = """eHN HDR Medication Summary Model to this guide Map"""
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/MedicationSummaryCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-medication-hdr"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-Medication"
 * group[=].element[+].code = #MedicationSummary.productCode
 * group[=].element[=].display = "A.2.9.2.3 - Code"
 * group[=].element[=].target.code = #Medication.code
@@ -86,4 +86,4 @@ Usage: #definition
 * group[=].element[=].target.code = #Dosage.timing.repeat.duration
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "CHECK it is used the name period but the imression is that is the duration not the period "
+* group[=].element[=].target.comment = "CHECK it is used the name period but the imression is that is the duration not the period"

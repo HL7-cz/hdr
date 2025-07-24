@@ -1,7 +1,7 @@
 Logical: LogCzFunctionalStatusHdrCz
 Id: LogFunctionalStatusCz
-Title: "A.2.8.2 - Funkční stav při propuštění "
-Description: """Nemocniční propouštěcí zpráva - Hodnocení funkčního stavu pacienta při propuštění - A.2.8.2 """
+Title: "A.2.8.2 - Funkční stav při propuštění"
+Description: """Nemocniční propouštěcí zpráva - Hodnocení funkčního stavu pacienta při propuštění."""
 
 
 * funkcniStav 0..1 Base "A.2.8.2 Funkční stav při propuštění" """Funkční stav lze hodnotit několika různými způsoby, obvykle se zaměřením na schopnosti osoby vykonávat základní aktivity každodenního života (ADL), které zahrnují základní sebeobsluhu, jako je koupání, krmení a toaleta a instrumentální aktivity každodenního života (IADL), které zahrnují činnosti jako vaření, nakupování a řízení vlastních záležitostí."""

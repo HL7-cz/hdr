@@ -161,7 +161,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/HospitalStayCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-medication-hdr"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-Medication"
 * group[=].element[+].code = #HospitalStay.pharmacotherapy.productCode
 * group[=].element[=].display = "A.2.7.5.2 - Code"
 * group[=].element[=].target.code = #Medication.code

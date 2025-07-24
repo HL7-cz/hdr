@@ -93,6 +93,9 @@ Alias: $cz-medication-DLP = https://hl7.cz/fhir/core/ValueSet/dlplecivepripravky
 Alias: $cz-medication-DLPForma =  https://hl7.cz/fhir/core/ValueSet/dlpformy-cz-vs
 Alias: $cz-medicationDLPLecive-latky = https://hl7.cz/fhir/core/ValueSet/dlplecivelatky-cz-vs
 Alias: $cz-SocialHistory-education-level = http://terminology.hl7.org/CodeSystem/v3-EducationLevel
+Alias: $cz-medication-DLP-cs = https://hl7.cz/fhir/core/CodeSystem/dlplecivepripravky-cz-cs
+Alias: $cz-medication-DLPForma-cs =  https://hl7.cz/fhir/core/CodeSystem/dlpformy-cz-cs
+Alias: $cz-medicationDLPLecive-latky-cs = https://hl7.cz/fhir/core/CodeSystem/dlplecivelatky-cz-cs
 
 //=========================
 //Other
