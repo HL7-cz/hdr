@@ -125,7 +125,6 @@ Instance: DischargeComposition-Novak-Petr
 InstanceOf: CZ_CompositionHdr
 Description: "Example Composition for Hospital Discharge Report for patient Novák Petr"
 Usage: #example
-
 * id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eaaf"
 * status = #final
 * type.coding[0].system = $loinc
@@ -319,7 +318,7 @@ Usage: #example
   Dne 2. 3. 2025 byla v celkové anestezii provedena operace – plastika pravostranné tříselné kýly. Operační výkon proběhl bez komplikací. Pacient byl pooperačně stabilní, bez známek infekce rány.
   V rámci hospitalizace byla u pacienta sledována substituční léčba hypotyreózy (Euthyrox 75 µg denně), bez nutnosti úpravy dávkování. Hodnota TSH při přijetí v normě.
   Pacient byl v dobrém stavu propuštěn do domácího ošetření dne 10. 3. 2025. Doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.
-  </div>""" 
+  </div>"""
 * section[sectionHospitalCourse].text.status = #additional
 
 
