@@ -1,14 +1,14 @@
 Instance: planOfCare2FHIR-cz-hdr
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "http://hl7.cz/fhir/hdr/ConceptMap/planOfCare2FHIR-cz-hdr"
+* url = "https://hl7.cz/fhir/hdr/ConceptMap/planOfCare2FHIR-cz-hdr"
 * name = "PlanOfCare2FHIRCzHdr"
 * title = "eHN Plan of Care Model to this guide Map"
 * status = #draft
 * experimental = true
 * description = """eHN HDR Plan of Care Model to this guide Map"""
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PlanOfCareCz"
-* group[=].target = "http://hl7.org/fhir/StructureDefinition/CarePlan"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-carePlan-hdr"
 * group[=].element[+].code = #PlanOfCare.title
 * group[=].element[=].display = "A.2.9.1.1 - Title"
 * group[=].element[=].target.code = #CarePlan.title
