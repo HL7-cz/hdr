@@ -11,7 +11,7 @@ Description: "Czech HDR - example of a condition (Heart Failure)"
 * category[2] = $sct#69845001 "Received therapy or drug for"
 * severity = $sct#24484000 "Severe"
 * code = $icd10#I50 "Heart failure"
-* subject = Reference(Patient-Novak-Petr) 
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000) 
 * onsetDateTime = "2025-01-01T08:00:00+01:00"
 * note.text = "Pacient byl přijat s diagnózou srdečního selhání. Byla zahájena léčba diuretiky a ACE inhibitory."
 
@@ -28,7 +28,7 @@ Description: "Czech HDR - example of a condition (Cardiac arrhythmia - Brugada S
 * category[2] = $sct#69845001 "Received therapy or drug for"
 * severity = $sct#6736007 "Moderate"
 * code = urn:oid:1.2.203.24341.11.2.1#I498 "Jiné určené srdeční arytmie"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * onsetDateTime = "2013-01-09T00:00:00+01:00"
 * note.text = "Brugada Syndrom diagnostikován v roce 2013."
 
@@ -66,7 +66,7 @@ Description: "Example of a condition K409 with details on admission"
 * code.coding[0].code = #K409
 * code.coding[0].display = "Tříselná kýla, neurčená, bez obstrukce a gangrény"
 // Condition subject and onset
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 // Condition text
 * text.status = #generated
 * text.div = """
@@ -269,6 +269,6 @@ Description: "Czech HDR - example of a condition (Postoperative Hypothyroidism)"
 * category[1] = $sct#278307001 "On admission"
 * category[2] = $sct#25265005 "Not received therapy or drug for"
 * code = $icd10#E890 "Hypotyreóza po operačních a jiných výkonech"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * onsetDateTime = "1997-10-06T00:00:00+02:00"
 * note.text = "Hypotyreóza po operaci karcinomu štítné žlázy. Zadáno všeobecným lékařem."

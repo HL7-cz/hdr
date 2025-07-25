@@ -7,7 +7,7 @@ Všechny příklady lze nalézt na stránce [artifacts](artifacts.html).
 
 ### Příklady profilů
 
- - Příklad [Pacient](Patient-Novak-Petr.html)
+ - Příklad [Pacient](Patient-3f85726c-ad2f-441b-89ce-100000000000.html)
  - Příklad [Průběh hospitalizace](Encounter-HospitalEncounter-Novak-Petr.html)
  - Příklad [Plán péče](CarePlan-CarePlan-Novak-Petr.html)
  - Příklad [Medikace: Euthyrox](MedicationStatement-MedicationStatement-Euthyrox-Novak.html)

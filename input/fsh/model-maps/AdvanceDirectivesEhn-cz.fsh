@@ -1,7 +1,7 @@
 Logical: LogCzAdvanceDirectivesEhnCz
 Id: LogAdvanceDirectivesCz
 Title: "A.2.1 - Dříve vyslovená přání (cz)"
-Description: """Propouštěcí zpráva - Dříve vyslovená přání - A.2.1 """
+Description: """Nemocniční propouštěcí zpráva - Dříve vyslovená přání """
 * driveVyslovenaPrani 1..* Base "A.2.1.1 - Dříve vyslovená přání" """Záznam dříve vysloveného přání. Pouze záznamy, které jsou vyjádřeny během aktuálního hospitalizačního pobytu. Může být uvedeno více záznamů dříve vyslovených přání."""
 * driveVyslovenaPrani.datum 1..1 dateTime "A.2.1.1.1 - Datum a čas" """Datum a čas vyjádřeného přání pacienta."""
 * driveVyslovenaPrani.typ 1..1 CodeableConcept "A.2.1.1.2 - Typ přání" """Typ přání kódem nebo textem. Např. Příkaz k resuscitaci, prohlášení o darování orgánů, plná moc apod."""

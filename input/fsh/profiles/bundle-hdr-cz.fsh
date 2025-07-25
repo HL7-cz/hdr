@@ -16,19 +16,22 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * timestamp 1..
   * ^short = "Instance identifier"
 * link ..0
-* entry 1..
 * entry ^slicing.discriminator[0].type = #type
 * entry ^slicing.discriminator[=].path = "resource"
-* entry ^slicing.discriminator[+].type = #profile
-* entry ^slicing.discriminator[=].path = "resource"
+//* entry ^slicing.discriminator[+].type = #profile
+//* entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.rules = #open
+* entry ^slicing.ordered = false
 * entry ^short = "Entry resource in the Hospital Discharge Report bundle"
 * entry ^definition = "An entry resource included in the Hospital Discharge Report document bundle resource."
 * entry ^comment = "Must contain the HDR Composition as the first entry (only a single Composition resource instance may be included). Additional constraints are specified in the HDR Composition profile."
-* entry.fullUrl 1..
-* entry.search ..0
-* entry.request ..0
-* entry.response ..0
+* entry 1..
+  * link ..0
+  * fullUrl 1..1
+  * resource 1..
+  * search ..0
+  * request ..0
+  * response ..0
 
 * entry.resource 1..
 * entry contains
@@ -56,7 +59,10 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     medicationAdministration  0..* and
     familyMemberHistory 0..* and
     documentReference 0..* and
-    flag 0..*
+    flag 0..* and
+    carePlan 0..* and
+    goal 0..* and
+    consent 0..*
 
 * entry[composition].resource only CZ_CompositionHdr
 * entry[patient].resource only CZ_PatientCore
@@ -85,6 +91,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[flag].resource only CZ_FlagHdr
 * entry[familyMemberHistory].resource only FamilyMemberHistory
 * entry[documentReference].resource only DocumentReference
+* entry[carePlan].resource only CZ_CarePlanHdr
+* entry[goal].resource only Goal
+* entry[consent].resource only Consent
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"

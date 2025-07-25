@@ -107,7 +107,7 @@ InstanceOf: CZ_MedicationStatement
 * medicationCodeableConcept.text = "Euthyrox 75MCG TBL NOB 100 II"
 */
 * medicationReference = Reference(Medication-Euthyrox)
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * identifier[0].system = $cz-medication-DLP     //tady má být External identifier
 * identifier[0].value = "0243131"       //tady má být External identifier
 * category[0].coding[0].system = $cz-medicationStatement-category 
@@ -146,7 +146,7 @@ InstanceOf: CZ_MedicationStatement
 //------- chybí 
 // reference a další údaje
 * medicationReference = Reference(Medication-Paracetamol)
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * identifier[0].system = $cz-medication-DLP //tady má být External identifier
 * identifier[0].value = "0243131"   //tady má být External identifier
 * category[0].coding[0].system = $cz-medicationStatement-category 
@@ -185,7 +185,7 @@ InstanceOf: CZ_MedicationStatement
 //------- chybí 
 // reference a další údaje
 * medicationReference = Reference(Medication-Ibalgin400)
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * identifier[0].system = $cz-medication-DLP //tady má být External identifier
 * identifier[0].value = "0207893"   //tady má být External identifier
 * category[0].coding[0].system = $cz-medicationStatement-category 

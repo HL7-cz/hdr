@@ -9,7 +9,7 @@ Tato stránka obsahuje seznam stránek dokumentujících s grafickým znázorně
 | Důvod přijetí          | [AdmissionEvaluation-map.html](AdmissionEvaluation-map.html) |
 | Stav při propuštění    | [ObjectiveFindings-map.html](ObjectiveFindings-map.html) |
 | FunctionalStatus       | [FunctionalStatus-map.html](FunctionalStatus-map.html) |
-| Anamnéza               | [PatientHistoryEhn-map.html](PatientHistoryEhn-map.html) |
+| Anamnéza               | [PatientHistory-map.html](PatientHistory-map.html) |
 | Údaje o hospitalizaci  | [HospitalStay-map.html](HospitalStay-map.html) |
 | Urgentní informace     | [Alerts-map.html](Alerts-map.html)        |
 | Dříve vyjádřená přání  | [AdvanceDirectives-map.html](AdvanceDirectives-map.html) |
