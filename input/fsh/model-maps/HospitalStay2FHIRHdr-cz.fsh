@@ -1,7 +1,7 @@
 Instance: hospitalStay2FHIR-cz-hdr
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "http://hl7.cz/fhir/hdr/ConceptMap/hospitalStay2FHIR-cz-hdr"
+* url = "https://hl7.cz/fhir/hdr/ConceptMap/hospitalStay2FHIR-cz-hdr"
 * name = "HospitalStay2FHIRCzHdr"
 * title = "eHN Hospital Stay Model to this guide Map"
 * status = #draft
@@ -386,7 +386,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/HospitalStayCz"
-* group[=].target = "http://hl7.org/fhir/StructureDefinition/MedicationStatement"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-MedicationStatement"
 * group[=].element[+].code = #HospitalStay.pharmacotherapy.reason
 * group[=].element[=].display = "A.2.7.5.1 - Medication reason"
 * group[=].element[=].target.code = #MedicationStatement.reasonReference

@@ -175,7 +175,7 @@ Usage: #example
 
 // Sekce cestovatelská anamnéza
 * section[sectionTravelHx].title = "Cestovatelská anamnéza"
-* section[sectionTravelHx].code = $loinc#10182-4 "History of Travel Narrative"
+* section[sectionTravelHx].code = $loinc#10182-4 "History of Travel"
 * section[sectionTravelHx].text.status = #additional
 * section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient nedávno cestoval na Madagaskar.</p></div>"
 * section[sectionTravelHx].entry[0] = Reference(urn:uuid:f95f843e-701f-434a-94c9-3c8f0b2d4e3a)
@@ -333,12 +333,12 @@ Usage: #example
 * section[sectionMedicalDevices].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001f) // Example reference to a medical device
 * section[sectionMedicalDevices].entry[1] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000020) // Example reference to another medical device
 
-// Sekce pro stav při propuštění sectionDischargeFindings
-* section[sectionDischargeFindings].title = "Objektivní nález při propuštění"
-* section[sectionDischargeFindings].code.coding[0].system = $loinc
-* section[sectionDischargeFindings].code.coding[0].code = #10184-0 // Discharge findings
-* section[sectionDischargeFindings].code.coding[0].display = "Hospital discharge physical findings Narrative"
-* section[sectionDischargeFindings].text.div = """
+// Sekce pro stav při propuštění sectionPhysicalExamination
+* section[sectionPhysicalExamination].title = "Objektivní nález při propuštění"
+* section[sectionPhysicalExamination].code.coding[0].system = $loinc
+* section[sectionPhysicalExamination].code.coding[0].code = #55286-9 // Discharge findings
+* section[sectionPhysicalExamination].code.coding[0].display = "Physical exam by body areas"
+* section[sectionPhysicalExamination].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Objektivní nález při propuštění z nemocnice:</p>
     <ul>
@@ -353,14 +353,14 @@ Usage: #example
     </ul>
     <p>Pacient je v dobrém stavu, bez známek komplikací po operaci. Byla doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.</p>
   </div>""" // Added required text for cardinality
-* section[sectionDischargeFindings].text.status = #additional //additional text status for generated narrative
-* section[sectionDischargeFindings].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)  // Example reference to a physical exam observation
-* section[sectionDischargeFindings].entry[0] = Reference(urn:uuid:6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b)
-* section[sectionDischargeFindings].entry[1] = Reference(urn:uuid:5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c)
-* section[sectionDischargeFindings].entry[2] = Reference(urn:uuid:7cf304de-5ae3-4621-8531-9c8f0b2d4e3a)
-* section[sectionDischargeFindings].entry[3] = Reference(urn:uuid:5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d)
-* section[sectionDischargeFindings].entry[4] = Reference(urn:uuid:4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a) 
-* section[sectionDischargeFindings].entry[5] = Reference(urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a)
+* section[sectionPhysicalExamination].text.status = #additional //additional text status for generated narrative
+* section[sectionPhysicalExamination].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)  // Example reference to a physical exam observation
+* section[sectionPhysicalExamination].entry[0] = Reference(urn:uuid:6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b)
+* section[sectionPhysicalExamination].entry[1] = Reference(urn:uuid:5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c)
+* section[sectionPhysicalExamination].entry[2] = Reference(urn:uuid:7cf304de-5ae3-4621-8531-9c8f0b2d4e3a)
+* section[sectionPhysicalExamination].entry[3] = Reference(urn:uuid:5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d)
+* section[sectionPhysicalExamination].entry[4] = Reference(urn:uuid:4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a) 
+* section[sectionPhysicalExamination].entry[5] = Reference(urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a)
 
 // Sekce pro discharge detail sectionFunctionalStatus
 // Jak rozdělit funkční stav při propuštění a přijetí?

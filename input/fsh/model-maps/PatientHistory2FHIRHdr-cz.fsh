@@ -1,7 +1,7 @@
 Instance: patientHistory2FHIR-cz-hdr
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "http://hl7.cz/fhir/hdr/ConceptMap/patientHistory2FHIR-cz-hdr"
+* url = "https://hl7.cz/fhir/hdr/ConceptMap/patientHistory2FHIR-cz-hdr"
 * name = "PatientHistory2FHIRCzHdr"
 * title = "CZ Patient History to this guide Map"
 * status = #draft
@@ -504,7 +504,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "If FamilyMemberHistory.condition.contributedToDeath is true"
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
-* group[=].target = "http://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-infectious-contact-hdr"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-infectious-contact-hdr"
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts.period
 * group[=].element[=].display = "A.2.6.1.5.1.1 - Time period"
 * group[=].element[=].target.code = #Observation.effective[x]

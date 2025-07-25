@@ -1,14 +1,14 @@
 Instance: objectiveFindings2FHIR-hdr-cz
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "http://hl7.cz/fhir/hdr/ConceptMap/objectiveFindings2FHIR-hdr-cz"
+* url = "https://hl7.cz/fhir/hdr/ConceptMap/objectiveFindings2FHIR-hdr-cz"
 * name = "ObjectiveFindings2FHIREuHdr"
 * title = "eHN Objective Findings Model to this guide Map"
 * status = #draft
 * experimental = true
 * description = """eHN HDR Objective Findings Model to this guide Map"""
-* group[+].source = "http://hl7.cz/fhir/hdr/StructureDefinition/LogCzObjectiveFindingsCz"
-* group[=].target = "http://hl7.cz/fhir/hdr/StructureDefinition/composition-hdr-cz"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LogCzObjectiveFindingsCz"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
 * group[=].element[+].code = #ObjectiveFindings.anthropometricObservations
 * group[=].element[=].display = "A.2.8.1.3 - Anthropometric observations"
 * group[=].element[=].target.code = #Composition.section
@@ -29,14 +29,14 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:sectionPhysicalExamination.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[+].source = "http://hl7.cz/fhir/hdr/StructureDefinition/LogCzObjectiveFindingsCz"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LogCzObjectiveFindingsCz"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/Observation"
 * group[=].element[+].code = #ObjectiveFindings.date
 * group[=].element[=].display = "A.2.8.1.1 - Date"
 * group[=].element[=].target.code = #Observation.effectiveDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[+].source = "http://hl7.cz/fhir/hdr/StructureDefinition/LogCzObjectiveFindingsCz"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LogCzObjectiveFindingsCz"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
 * group[=].element[+].code = #ObjectiveFindings.anthropometricObservations.description
 * group[=].element[=].display = "A.2.8.1.3.1 - Result description"
