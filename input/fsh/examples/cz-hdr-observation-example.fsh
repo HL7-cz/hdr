@@ -80,7 +80,7 @@ Description: "Example instance for chest circumference observation using the CZ_
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 85
 * valueQuantity.unit = "cm"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #cm
 
 Instance: ExampleHeadCircumference
@@ -95,7 +95,7 @@ Description: "Example instance for head circumference observation using the CZ_O
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 50
 * valueQuantity.unit = "cm"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #cm
 
 Instance: ExampleBMI
@@ -110,7 +110,7 @@ Description: "Example instance for BMI observation using the CZ_ObservationBMIHd
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 22.5
 * valueQuantity.unit = "kg/m2"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #kg/m2
 
 Instance: ExampleAbdominalCircumference
@@ -125,7 +125,7 @@ Description: "Example instance for abdominal circumference observation using the
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 90
 * valueQuantity.unit = "cm"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #cm
 
 Instance: ExampleHeight
@@ -140,7 +140,7 @@ Description: "Example instance for height observation using the CZ_ObservationHe
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 175
 * valueQuantity.unit = "cm"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #cm
 
 Instance: ExampleWeight
@@ -155,7 +155,7 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 * effectiveDateTime = "2024-03-28"
 * valueQuantity.value = 70
 * valueQuantity.unit = "kg"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #kg
 
 //-----------------------------------------
@@ -188,15 +188,15 @@ Description: "Czech HDR - example of CRP observation for Novák Petr"
 * performer = Reference(Practitioner-UZV)
 * valueQuantity.value = 6.0
 * valueQuantity.unit = "mg/L"
-* valueQuantity.system = $Jednotky
+* valueQuantity.system = $ucum
 * valueQuantity.code = #"mg/L"
 * referenceRange[0].low.value = 0.0
 * referenceRange[0].low.unit = "mg/L"
-* referenceRange[0].low.system = $Jednotky
+* referenceRange[0].low.system = $ucum
 * referenceRange[0].low.code = #"mg/L"
 * referenceRange[0].high.value = 10.0
 * referenceRange[0].high.unit = "mg/L"
-* referenceRange[0].high.system = $Jednotky
+* referenceRange[0].high.system = $ucum
 * referenceRange[0].high.code = #"mg/L"
 * referenceRange[0].text = "Norma: 0–10 mg/L"
 * interpretation[+] = $v3-ObservationInterpretation#N "Normal"
@@ -214,14 +214,14 @@ Description: "Example instance for blood pressure observation (systolic and dias
 * component[0].code = $loinc#8480-6 "Systolic blood pressure"
 * component[0].valueQuantity.value = 120
 * component[0].valueQuantity.unit = "mmHg"
-* component[0].valueQuantity.system = "http://unitsofmeasure.org"
+* component[0].valueQuantity.system = $ucum
 * component[0].valueQuantity.code = #mm[Hg]
 
 // Diastolický tlak
 * component[1].code = $loinc#8462-4 "Diastolic blood pressure"
 * component[1].valueQuantity.value = 80
 * component[1].valueQuantity.unit = "mmHg"
-* component[1].valueQuantity.system = "http://unitsofmeasure.org"
+* component[1].valueQuantity.system = $ucum
 * component[1].valueQuantity.code = #mm[Hg]
 
 Instance: Observation-DischargeCondition
@@ -247,7 +247,7 @@ Usage: #example
 * code = $loinc#82753-5 "County of travel [Location]"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-20"
-* valueCodeableConcept.coding[0].system = $iso3166-1-2
+* valueCodeableConcept.coding[0].system = "urn:iso:std:iso:3166"
 * valueCodeableConcept.coding[0].code = #MG
 * valueCodeableConcept.coding[0].display = "Madagaskar"
 * valueCodeableConcept.text = "Madagaskar"

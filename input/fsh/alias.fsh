@@ -17,6 +17,10 @@ Alias: $orpha = https://www.orpha.net
 Alias: $encounter-type = http://terminology.hl7.org/CodeSystem/encounter-type
 Alias: $admit-source = http://terminology.hl7.org/CodeSystem/admit-source
 Alias: $discharge-disposition = http://terminology.hl7.org/CodeSystem/discharge-disposition
+Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+Alias: $admit-source = http://terminology.hl7.org/CodeSystem/admit-source
+Alias: $medication-statement = http://terminology.hl7.org/CodeSystem/medicationrequest-admin-location
+Alias: $absent-or-uknown = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips
 
 // Extensions:
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
@@ -89,13 +93,13 @@ Alias: $cz-allergyintolerance-reakce-zavaznost = http://hl7.org/fhir/ValueSet/re
 Alias: $cz-medicationStatement-reason-status = http://hl7.org/fhir/ValueSet/reason-medication-status-codes
 Alias: $cz-medicationStatement-category = http://hl7.org/fhir/ValueSet/medication-statement-category 
 Alias: $cz-medicationStatement-route = http://hl7.org/fhir/ValueSet/route-codes
-Alias: $cz-medication-DLP = https://hl7.cz/fhir/core/ValueSet/dlplecivepripravky-cz-vs
-Alias: $cz-medication-DLPForma =  https://hl7.cz/fhir/core/ValueSet/dlpformy-cz-vs
-Alias: $cz-medicationDLPLecive-latky = https://hl7.cz/fhir/core/ValueSet/dlplecivelatky-cz-vs
+Alias: $cz-medication-DLP = https://hl7.cz/fhir/core/ValueSet/cz-dlplecivepripravky-vs
+Alias: $cz-medication-DLPForma =  https://hl7.cz/fhir/core/ValueSet/cz-dlpformy-vs
+Alias: $cz-medicationDLPLecive-latky = https://hl7.cz/fhir/core/ValueSet/cz-dlplecivelatky-vs
 Alias: $cz-SocialHistory-education-level = http://terminology.hl7.org/CodeSystem/v3-EducationLevel
-Alias: $cz-medication-DLP-cs = https://hl7.cz/fhir/core/CodeSystem/dlplecivepripravky-cz-cs
-Alias: $cz-medication-DLPForma-cs =  https://hl7.cz/fhir/core/CodeSystem/dlpformy-cz-cs
-Alias: $cz-medicationDLPLecive-latky-cs = https://hl7.cz/fhir/core/CodeSystem/dlplecivelatky-cz-cs
+Alias: $cz-medication-DLP-cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlplecivepripravky-cs
+Alias: $cz-medication-DLPForma-cs =  https://hl7.cz/fhir/core/CodeSystem/cz-dlpformy-cs
+Alias: $cz-medicationDLPLecive-latky-cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlplecivelatky-vs
 
 //=========================
 //Other
@@ -104,7 +108,6 @@ Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/alle
 Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $encounter-participant-type = http://hl7.org/fhir/ValueSet/encounter-participant-type
 Alias: $MKN10 = http://hl7.org/fhir/sid/icd-10
-Alias: $Jednotky = http://hl7.org/fhir/ValueSet/ucum-units
 Alias: $atc = http://www.whocc.no/atc
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $observation-interpretation = http://hl7.org/fhir/ValueSet/observation-interpretation

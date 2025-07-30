@@ -43,7 +43,7 @@ Description: "Příklad pro HDR - Hladina hemoglobinu v krvi"
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
 * valueQuantity.value = 145
 * valueQuantity.unit = "g/L"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #g/L
 * referenceRange.low.value = 135
 * referenceRange.high.value = 170
@@ -65,7 +65,7 @@ Description: "Příklad pro HDR - Hematokrit v krvi"
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
 * valueQuantity.value = 0.43
 * valueQuantity.unit = "1"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #1
 * referenceRange.low.value = 0.40
 * referenceRange.high.value = 0.50
@@ -84,7 +84,7 @@ Description: "Příklad pro HDR - Počet erytrocytů v krvi"
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
 * valueQuantity.value = 5.1
 * valueQuantity.unit = "10^12/L"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #10*12/L
 * referenceRange.low.value = 4.2
 * referenceRange.high.value = 5.8
@@ -103,7 +103,7 @@ Description: "Příklad pro HDR - Počet leukocytů v krvi"
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
 * valueQuantity.value = 6.8
 * valueQuantity.unit = "10^9/L"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #10*9/L
 * referenceRange.low.value = 3.8
 * referenceRange.high.value = 10.0
@@ -122,7 +122,7 @@ Description: "Příklad pro HDR - Počet trombocytů v krvi"
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
 * valueQuantity.value = 250
 * valueQuantity.unit = "10^9/L"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #10*9/L
 * referenceRange.low.value = 150
 * referenceRange.high.value = 400

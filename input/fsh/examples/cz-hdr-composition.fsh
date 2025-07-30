@@ -9,7 +9,7 @@ Usage: #example
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
 * type.coding[0].display = "Hospital Discharge summary"
-* category[0].coding[0].system = $composition-category
+* category[0].coding[0].system = $loinc
 * category[0].coding[0].code = #18842-5
 * category[0].coding[0].display = "Discharge summary"
 * title = "Propouštěcí zpráva"

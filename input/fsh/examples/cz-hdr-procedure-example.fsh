@@ -85,7 +85,7 @@ Title: "CZ-Procedure-HDR Example - No known procedures"
 Description: "Czech HDR - example of a Procedure - No known procedures."
  
 * status = #completed
-* code = $absent-or-unknown-procedures-uv-ips#no-known-procedures "Žádné známé procedury"
+* code = $absent-or-uknown#no-known-procedures "Žádné známé procedury"
 * subject = Reference(Mracena2)
 * performedString = DataAbsentReason#not-performed
 * text.status = #generated

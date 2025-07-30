@@ -103,18 +103,18 @@ InstanceOf: CZ_EncounterHdr
 * serviceProvider = Reference(CZ_OrganizationCore/RegisteringProviderExample)
 // Reason for encounter
 * reasonReference = Reference(CZ_ConditionHdr/Condition-K409)
-* hospitalization.admitSource.coding[0].system = $cz-encounter-zdroj-prijeti
+* hospitalization.admitSource.coding[0].system = $admit-source
 * hospitalization.admitSource.coding[0].code = #outp
 * hospitalization.admitSource.coding[0].display = "Ambulantní péče"
 * priority.coding[0].system = $cz-encounter-urgentnost-prijeti
 * priority.coding[0].code = #EM
 * priority.coding[0].display = "Akutní"
 * participant[0].individual = Reference(CZ_PractitionerCore/Practitioner-Admitter)
-* participant[0].type.coding[0].system = $encounter-participant-type
+* participant[0].type.coding[0].system = $v3-ParticipationType
 * participant[0].type.coding[0].code = #ADM
 * participant[0].type.coding[0].display = "Admitter"
 * participant[1].individual = Reference(CZ_PractitionerRoleCore/Practitioner-Referrer-detail)
-* participant[1].type.coding[0].system = $encounter-participant-type
+* participant[1].type.coding[0].system = $v3-ParticipationType
 * participant[1].type.coding[0].code = #REF
 * participant[1].type.coding[0].display = "Referrer"
 * hospitalization.dischargeDisposition.coding[0].system = $discharge-disposition
