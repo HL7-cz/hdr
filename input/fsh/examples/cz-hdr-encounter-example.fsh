@@ -82,7 +82,7 @@ InstanceOf: CZ_EncounterHdr
 * status = #finished
 * class.code = #IMP // Corrected code assignment
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-* class.display = "inpatient"
+* class.display = "inpatient encounter"
 * subject = Reference(Mracena2)
 * period.start = "2025-03-01T10:15:00+01:00"
 * period.end = "2025-03-10T09:30:00+01:00"
@@ -96,7 +96,7 @@ InstanceOf: CZ_EncounterHdr
 * status = #finished
 * class.code = #IMP 
 * class.system = $cz-encounter-typ-kontaktu
-* class.display = "standardní"
+* class.display = "inpatient encounter"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * period.start = "2025-03-01T10:15:00+01:00"
 * period.end = "2025-03-10T09:30:00+01:00"

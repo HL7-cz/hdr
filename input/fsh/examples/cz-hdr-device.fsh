@@ -9,7 +9,7 @@ Description: "Záznam o implantaci kardiostimulátoru z důvodu bradykardie"
 * timingDateTime = "2023-04-10"
 * reasonCode[0] = $icd10#I50 "Heart failure"
 * reasonReference[0] = Reference(CZ-Condition-HDR-Example) "Bradykardie"
-* bodySite = $sct#51185008 "Struktura pravé podklíčkové oblasti"
+* bodySite = $sct#51185008 "Thorax"
 
 //----------------------------------------------------------------------------------------
 Instance: Device-Pacemaker
@@ -20,5 +20,5 @@ Description: "Heart pacemaker Medtronic W1DR01"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-medical-device"
 * manufacturer = "Medtronic"
 * modelNumber = "W1DR01"
-* type = $sct#14106009 "Kardiostimulátor"
+* type = $sct#14106009 "Cardiac pacemaker"
 * patient = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000) "Pokusný pacient Mračena"

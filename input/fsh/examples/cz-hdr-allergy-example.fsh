@@ -12,7 +12,7 @@ Description: "No information is available regarding the patient’s allergy stat
 // Kód pro “žádné známé alergie” (SNOMED CT)
 * code.coding[0].system = $sct
 * code.coding[0].code = #160244002
-* code.coding[0].display = "No known allergy"
+* code.coding[0].display = "No known allergies"
 // Pacienta
 * patient = Reference(Mracena)
 
@@ -149,7 +149,7 @@ Description: "Patient experiences rash and itching after ingestion of cow's milk
 * reaction[0].description = "Projevy: vyrážka, svědění kůže po požití mléka."
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #418363000
-* reaction[0].manifestation[0].coding[0].display = "Svědění kůže"
+* reaction[0].manifestation[0].coding[0].display = "Itching of skin (finding)"
 
 * criticality = #low
 

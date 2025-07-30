@@ -8,7 +8,7 @@ InstanceOf: CZ_Medication
 * code.coding[0].display = "Euthyrox 75 mcg"
 * code.coding[1].system = $atc
 * code.coding[1].code = #H03AA01
-* code.coding[1].display = "Levothyroxine"
+* code.coding[1].display = "levothyroxine sodium"
 * code.text = "Euthyrox 75 mcg"
 * form.coding[0].system = $cz-medication-DLPForma-cs
 * form.coding[0].code = #"TBL NOB"

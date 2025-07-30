@@ -6,7 +6,7 @@ Description: "Immunization of Covid"
 
 * status = #completed
 * meta.profile = "http://hl7.eu/fhir/hdr/StructureDefinition/immunization-eu-hdr"
-* vaccineCode = http://snomed.info/sct#1119349007 // Kód vakcíny proti COVID-19
+* vaccineCode = http://snomed.info/sct#28531000087107 // Kód vakcíny proti COVID-19
 * patient = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)   
 * occurrenceDateTime = "2021-05-05"
 * primarySource = true
@@ -20,7 +20,7 @@ Description: "Očkování proti COVID-19 u pacienta Novák Petr"
 
 * status = #completed
 * meta.profile = "http://hl7.cz/fhir/hdr/StructureDefinition/cz-immunization-hdr"
-* vaccineCode = http://snomed.info/sct#1119349007 "SARS-CoV-2 vaccine"
+* vaccineCode = http://snomed.info/sct#28531000087107 "SARS-CoV-2 vaccine"
 * patient = Reference(Patient-Novak-Petr)
 * occurrenceDateTime = "2021-05-05"
 * primarySource = true

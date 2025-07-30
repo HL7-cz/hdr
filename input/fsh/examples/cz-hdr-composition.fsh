@@ -53,7 +53,7 @@ Usage: #example
 * section[sectionSignificantProcedures].title = "Významné procedury"
 * section[sectionSignificantProcedures].code.coding[0].system = $loinc
 * section[sectionSignificantProcedures].code.coding[0].code = #10185-7
-* section[sectionSignificantProcedures].code.coding[0].display = "Hospital discharge procedures"
+* section[sectionSignificantProcedures].code.coding[0].display = "Hospital discharge procedures Narrative"
 * section[sectionSignificantProcedures].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Plastika pravostranné tříselné kýly dne 2. 3. 2025.</div>"
 * section[sectionSignificantProcedures].text.status = #generated
 * section[sectionSignificantProcedures].entry[0] = Reference(urn:uuid:ffb1a62f-9050-4e33-af4b-4cdb8203c9e5)
@@ -91,7 +91,7 @@ Usage: #example
 
 //Sekce Průběh hospitalizace - klinické shrnutí
 * section[sectionHospitalCourse].title = "Klinické shrnutí"
-* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course"
+* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course Narrative"
 * section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
   Pacient byl přijat dne 1. 3. 2025 na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Během hospitalizace byla provedena předoperační příprava včetně laboratorních vyšetření a interního předoperačního vyšetření.
   Dne 2. 3. 2025 byla v celkové anestezii provedena operace – plastika pravostranné tříselné kýly. Operační výkon proběhl bez komplikací. Pacient byl pooperačně stabilní, bez známek infekce rány.
@@ -241,7 +241,7 @@ Usage: #example
 
 // Sekce cestovatelská anamnéza
 * section[sectionTravelHx].title = "Cestovatelská anamnéza"
-* section[sectionTravelHx].code = $loinc#10182-4 "History of Travel"
+* section[sectionTravelHx].code = $loinc#10182-4 "History of Travel Narrative"
 * section[sectionTravelHx].text.status = #additional
 * section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient nedávno cestoval na Madagaskar.</p></div>"
 * section[sectionTravelHx].entry[0] = Reference(urn:uuid:f95f843e-701f-434a-94c9-3c8f0b2d4e3a)
@@ -271,7 +271,7 @@ Usage: #example
 * section[sectionSocialHistory].title = "Sociální anamnéza"
 * section[sectionSocialHistory].code.coding[0].system = "http://loinc.org"
 * section[sectionSocialHistory].code.coding[0].code = #29762-2 // Corrected code assignment
-* section[sectionSocialHistory].code.coding[0].display = "Social history"
+* section[sectionSocialHistory].code.coding[0].display = "Social history Narrative"
 * section[sectionSocialHistory].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
   <p><strong>Společenské uplatnění</strong></p>
