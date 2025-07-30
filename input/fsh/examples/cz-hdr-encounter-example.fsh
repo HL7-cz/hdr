@@ -17,9 +17,9 @@ Description: "Czech HDR - example of an inpatient encounter"
 * type[0].coding[0].display = "Discharge"
 * subject = Reference(Mracena2)
 
-// Note for the encounter
-* extension[1].url = "http://hl7.org/fhir/StructureDefinition/encounter-note"
-* extension[1].valueString = "This is a test of the encounter note field."
+// Note for the encounter - nelze pouzit
+//* extension[1].url = "http://hl7.org/fhir/StructureDefinition/encounter-note"
+//* extension[1].valueString = "This is a test of the encounter note field."
 
 // Encounter period
 * period.start = "2025-01-01T08:00:00+01:00"
