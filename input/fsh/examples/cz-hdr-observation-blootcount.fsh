@@ -23,6 +23,7 @@ Description: "Panel obsahující základní hematologické hodnoty"
 * code = https://nclp.uzis.cz#11115 "Krevní obraz"
 * subject = Reference(Mracena2)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
+* performer = Reference(Practitioner-2)
 * issued = "2025-04-01T09:30:00+01:00"
 * hasMember[0] = Reference(hb-result)
 * hasMember[1] = Reference(hct-result)
@@ -63,6 +64,7 @@ Description: "Příklad pro HDR - Hematokrit v krvi"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
+* performer = Reference(Practitioner-2)
 * valueQuantity.value = 0.43
 * valueQuantity.unit = "1"
 * valueQuantity.system = $ucum
@@ -82,6 +84,7 @@ Description: "Příklad pro HDR - Počet erytrocytů v krvi"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
+* performer = Reference(Practitioner-2)
 * valueQuantity.value = 5.1
 * valueQuantity.unit = "10^12/L"
 * valueQuantity.system = $ucum
@@ -101,6 +104,7 @@ Description: "Příklad pro HDR - Počet leukocytů v krvi"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
+* performer = Reference(Practitioner-2)
 * valueQuantity.value = 6.8
 * valueQuantity.unit = "10^9/L"
 * valueQuantity.system = $ucum
@@ -120,6 +124,7 @@ Description: "Příklad pro HDR - Počet trombocytů v krvi"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
+* performer = Reference(Practitioner-2)
 * valueQuantity.value = 250
 * valueQuantity.unit = "10^9/L"
 * valueQuantity.system = $ucum

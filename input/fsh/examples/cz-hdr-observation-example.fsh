@@ -78,6 +78,7 @@ Description: "Example instance for chest circumference observation using the CZ_
 * category.coding.code = #vital-signs
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
+* performer = Reference(Practitioner-2)
 * valueQuantity.value = 85
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $ucum
@@ -93,6 +94,7 @@ Description: "Example instance for head circumference observation using the CZ_O
 * category.coding.code = #vital-signs
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
+* performer = Reference(Practitioner-2)
 * valueQuantity.value = 50
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $ucum
@@ -108,6 +110,7 @@ Description: "Example instance for BMI observation using the CZ_ObservationBMIHd
 * category.coding.code = #vital-signs
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
+* performer = Reference(Practitioner-2)
 * valueQuantity.value = 22.5
 * valueQuantity.unit = "kg/m2"
 * valueQuantity.system = $ucum
@@ -123,6 +126,7 @@ Description: "Example instance for abdominal circumference observation using the
 * category.coding.code = #vital-signs
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
+* performer = Reference(Practitioner-2)
 * valueQuantity.value = 90
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $ucum
@@ -138,6 +142,7 @@ Description: "Example instance for height observation using the CZ_ObservationHe
 * category.coding.code = #vital-signs
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
+* performer = Reference(Practitioner-2)
 * valueQuantity.value = 175
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $ucum
@@ -153,6 +158,7 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 * category.coding.code = #vital-signs
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
+* performer = Reference(Practitioner-2)
 * valueQuantity.value = 70
 * valueQuantity.unit = "kg"
 * valueQuantity.system = $ucum
@@ -209,7 +215,7 @@ Description: "Example instance for blood pressure observation (systolic and dias
 * code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
-
+* performer = Reference(Practitioner-2)
 // Systolický tlak
 * component[0].code = $loinc#8480-6 "Systolic blood pressure"
 * component[0].valueQuantity.value = 120
@@ -280,6 +286,8 @@ Title: "Společenské uplatnění"
 Description: "Pacient je aktivní v komunitních aktivitách a dobrovolnictví."
 * status = #final
 * code = $sct#363910003 "Characteristic of psychosocial functioning"
+* effectiveDateTime = "2024-03-28"
+* performer = Reference(Practitioner-2)
 * subject = Reference(Patient-Novak-Petr)
 * hasMember = Reference(Observation-Work-situation)
 * hasMember = Reference(Observation-Hobby)
@@ -295,6 +303,8 @@ Description: "Pacient pracuje na plný úvazek jako programátor."
 * code = $sct#224362002 "Employment status" 
 * subject = Reference(Patient-Novak-Petr)
 * valueString = "Pacient pracuje jako programátor na plný úvazek v IT firmě."
+* effectiveDateTime = "2024-03-28"
+* performer = Reference(Practitioner-2)
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
     <p>Pacient pracuje jako programátor na plný úvazek v IT firmě.</p>
@@ -308,7 +318,9 @@ Description: "Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o
 * status = #final
 * code = $sct#300755007 "Ability to engage in a hobby"
 * subject = Reference(Patient-Novak-Petr)
+* performer = Reference(Practitioner-2)
 * valueString = "Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování."
+* effectiveDateTime = "2024-03-28"
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
     <p>Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování.</p>
@@ -322,7 +334,9 @@ Description: "Pacient má aktivní sociální síť a pravidelně se setkává s
 * status = #final
 * code = $sct#1179210008 "Ability to build and utilize social network"
 * subject = Reference(Patient-Novak-Petr)
+* performer = Reference(Practitioner-2)
 * valueString = "Pacient má širokou sociální síť a pravidelně se setkává s přáteli a rodinou."
+* effectiveDateTime = "2024-03-28"
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
     <p>Pacient má širokou sociální síť a pravidelně se setkává s přáteli a rodinou.</p>
@@ -336,6 +350,8 @@ Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
 * status = #final
 * code = $sct#276031006 "Education"
 * subject = Reference(Patient-Novak-Petr)
+* performer = Reference(Practitioner-2)
+* effectiveDateTime = "2024-03-28"
 * hasMember = Reference(Observation-Education-level)
 
 
@@ -347,9 +363,11 @@ Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
 * status = #final
 * code = $sct#443722004 "Educational level of parent of subject"
 * subject = Reference(Patient-Novak-Petr)
+* performer = Reference(Practitioner-2)
 * valueCodeableConcept.coding[0].system = $cz-SocialHistory-education-level
 * valueCodeableConcept.coding[0].code = #BD
 * valueCodeableConcept.coding[0].display = "College or baccalaureate degree complete"
+* effectiveDateTime = "2024-03-28"
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
     <p>Pacient má vysokoškolské vzdělání v oboru informatiky.</p>
