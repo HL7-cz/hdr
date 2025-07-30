@@ -78,22 +78,22 @@ Description: "Czech HDR - example of a Procedure - Pacemaker"
 </div>
 """
  
+// HON Kvůli změně balíčku ips na 1.1.0, je potřeba aktualizovat i tuto instanci 
+// Instance: Procedure-No-Procedure
+// InstanceOf: CZ_ProcedureHdr
+// Title: "CZ-Procedure-HDR Example - No known procedures"
+// Description: "Czech HDR - example of a Procedure - No known procedures."
  
-Instance: Procedure-No-Procedure
-InstanceOf: CZ_ProcedureHdr
-Title: "CZ-Procedure-HDR Example - No known procedures"
-Description: "Czech HDR - example of a Procedure - No known procedures."
- 
-* status = #completed
-* code = $absent-or-unknown-procedures-uv-ips#no-known-procedures "Žádné známé procedury"
-* subject = Reference(Mracena2)
-* performedString = DataAbsentReason#not-performed
-* text.status = #generated
-* text.div = """
-<div xmlns="http://www.w3.org/1999/xhtml">
-<p>No known procedures</p>
-</div>
-"""
+// * status = #completed
+// * code = $absent-or-unknown-procedures-uv-ips#no-known-procedures "Žádné známé procedury"
+// * subject = Reference(Mracena2)
+// * performedString = DataAbsentReason#not-performed
+// * text.status = #generated
+// * text.div = """
+// <div xmlns="http://www.w3.org/1999/xhtml">
+// <p>No known procedures</p>
+// </div>
+// """
  
  // 6. Procedure: Colonoscopy of angiodysplasia (CZ_ProcedureHdr)
 Instance: ColonoscopyProcedure
