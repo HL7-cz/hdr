@@ -124,7 +124,7 @@ Description: "An example of the organization of a provider"
   * city = "Chrudim"
   * postalCode = "53701"
   * country = "Česká republika"
-    * extension[countryCode].valueCoding = urn:iso:std:iso:3166:#CZ "Czechia"
+    * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 
 Instance: Practitioner-2

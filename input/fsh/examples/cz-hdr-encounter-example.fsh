@@ -7,7 +7,7 @@ Description: "Czech HDR - example of an inpatient encounter"
 // Encounter status and class
 * status = #finished
 * class = $v3-ActCode#IMP
-* priority.coding[0].system = $v3-AdmissionUrgencyHDR
+* priority.coding[0].system = $actPriority
 * priority.coding[0].code = #EM
 * priority.coding[0].display = "Emergency"
 
@@ -33,7 +33,7 @@ Description: "Czech HDR - example of an inpatient encounter"
 // Legal status of the encounter
 * extension[0].url = "http://example.org/fhir/StructureDefinition/legalStatus"
 * extension[0].valueCodeableConcept.coding[0].system = $sct
-* extension[0].valueCodeableConcept.coding[0].code = #legal
+* extension[0].valueCodeableConcept.coding[0].code = #398165009
 * extension[0].valueCodeableConcept.coding[0].display = "Legal"
 
 // Hospitalization details
@@ -106,7 +106,7 @@ InstanceOf: CZ_EncounterHdr
 * hospitalization.admitSource.coding[0].system = $admit-source
 * hospitalization.admitSource.coding[0].code = #outp
 * hospitalization.admitSource.coding[0].display = "Ambulantní péče"
-* priority.coding[0].system = $cz-encounter-urgentnost-prijeti
+* priority.coding[0].system = $actPriority
 * priority.coding[0].code = #EM
 * priority.coding[0].display = "Akutní"
 * participant[0].individual = Reference(CZ_PractitionerCore/Practitioner-Admitter)

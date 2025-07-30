@@ -80,7 +80,7 @@ InstanceOf: CZ_MedicationStatement
 * statusReason.text = "Pokračuje"
 //indikace
 * reasonCode.coding[0].system = $MKN10
-* reasonCode.coding[0].code = #E039
+* reasonCode.coding[0].code = #E03.9
 * reasonCode.coding[0].display = "Hypotyreóza"
 * reasonCode.text = "Hypotyreóza"
 //dávkování
@@ -127,7 +127,7 @@ InstanceOf: CZ_MedicationStatement
 * statusReason.text = "Pokračuje"
 //indikace
 * reasonCode.coding[0].system = $MKN10
-* reasonCode.coding[0].code = #E039
+* reasonCode.coding[0].code = #E03.9
 * reasonCode.coding[0].display = "Hypotyreóza"
 * reasonCode.text = "Hypotyreóza"
 //dávkování
@@ -166,7 +166,7 @@ InstanceOf: CZ_MedicationStatement
 * statusReason.text = "Pokračuje"
 //indikace
 * reasonCode.coding[0].system = $MKN10
-* reasonCode.coding[0].code = #E039
+* reasonCode.coding[0].code = #E03.9
 * reasonCode.coding[0].display = "Hypotyreóza"
 * reasonCode.text = "Hypotyreóza"
 //dávkování
@@ -186,7 +186,7 @@ InstanceOf: CZ_MedicationStatement
 // reference a další údaje
 * medicationReference = Reference(Medication-Ibalgin400)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
-* identifier[0].system = $cz-medication-DLP //tady má být External identifier
+* identifier[0].system = $cz-medication-DLP-cs //tady má být External identifier
 * identifier[0].value = "0207893"   //tady má být External identifier
 * category[0].coding[0].system = $medication-statement 
 * category[0].coding[0].code = #Inpatient

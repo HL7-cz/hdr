@@ -68,7 +68,7 @@ InstanceOf: CZ_Medication
 * amount.numerator.unit = "mg"
 * amount.numerator.system = $ucum
 * amount.numerator.code = #/mg
-* ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky
+* ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
 * ingredient[0].itemCodeableConcept.coding[0].code = #1064
 * ingredient[0].itemCodeableConcept.coding[0].display = "PARACETAMOL"
 * ingredient[0].itemCodeableConcept.text = "PARACETAMOL"
@@ -154,15 +154,15 @@ InstanceOf: CZ_Medication
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
 
-* code.coding[0].system = $cz-medication-DLP
+* code.coding[0].system = $cz-medication-DLP-cs
 * code.coding[0].code = #0246599
 * code.coding[0].display = "Comirnaty 30mcg/dávka injekční disperze"
 * code.coding[1].system = $atc
-* code.coding[1].code = #J07BX03
-* code.coding[1].display = "COVID-19 vaccines"
+* code.coding[1].code = #J07BN01
+* code.coding[1].display = "covid-19, RNA-based vaccine"
 * code.text = "Comirnaty"
 
-* form.coding[0].system = $cz-medication-DLPForma
+* form.coding[0].system = $cz-medication-DLPForma-cs
 * form.coding[0].code = #"INJ SOL"
 * form.coding[0].display = "Injekční roztok"
 * form.text = "Injekční roztok"
@@ -172,14 +172,14 @@ InstanceOf: CZ_Medication
 * amount.numerator.system = $ucum
 * amount.numerator.code = #/ml
 
-* ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky
+* ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
 * ingredient[0].itemCodeableConcept.coding[0].code = #88213
 * ingredient[0].itemCodeableConcept.coding[0].display = "BNT162b2 mRNA"
 * ingredient[0].itemCodeableConcept.text = "BNT162b2 mRNA"
 * ingredient[0].strength.numerator.value = 30
 * ingredient[0].strength.numerator.unit = "mikrogramů"
 * ingredient[0].strength.numerator.system = $ucum
-* ingredient[0].strength.numerator.code = #μg
+* ingredient[0].strength.numerator.code = #ug
 * ingredient[0].strength.denominator.value = 0.3
 * ingredient[0].strength.denominator.unit = "ml"
 * ingredient[0].strength.denominator.system = $ucum

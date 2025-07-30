@@ -21,6 +21,9 @@ Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-Particip
 Alias: $admit-source = http://terminology.hl7.org/CodeSystem/admit-source
 Alias: $medication-statement = http://terminology.hl7.org/CodeSystem/medicationrequest-admin-location
 Alias: $absent-or-uknown = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips
+Alias: $actPriority = http://terminology.hl7.org/CodeSystem/v3-ActPriority
+Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
+Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
 
 // Extensions:
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
@@ -99,7 +102,7 @@ Alias: $cz-medicationDLPLecive-latky = https://hl7.cz/fhir/core/ValueSet/cz-dlpl
 Alias: $cz-SocialHistory-education-level = http://terminology.hl7.org/CodeSystem/v3-EducationLevel
 Alias: $cz-medication-DLP-cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlplecivepripravky-cs
 Alias: $cz-medication-DLPForma-cs =  https://hl7.cz/fhir/core/CodeSystem/cz-dlpformy-cs
-Alias: $cz-medicationDLPLecive-latky-cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlplecivelatky-vs
+Alias: $cz-medicationDLPLecive-latky-cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlplecivelatky-cs
 
 //=========================
 //Other

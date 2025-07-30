@@ -4,8 +4,8 @@ Usage: #example
 Title: "CZ-Condition-HDR Example"
 Description: "Czech HDR - example of a condition (Heart Failure)"
 
-* clinicalStatus = #active
-* verificationStatus = #confirmed
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
 * category[0] = $condition-category#encounter-diagnosis "Encounter Diagnosis"
 * category[1] = $sct#278307001 "On admission"
 * category[2] = $sct#69845001 "Received therapy or drug for"
@@ -21,13 +21,13 @@ Usage: #example
 Title: "CZ-Condition-HDR Example 2"
 Description: "Czech HDR - example of a condition (Cardiac arrhythmia - Brugada Syndrome)"
 
-* clinicalStatus = #active
-* verificationStatus = #confirmed
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
 * category[0] = $sct#64572001 "Disease"
 * category[1] = $sct#278307001 "On admission"
 * category[2] = $sct#69845001 "Received therapy or drug for"
 * severity = $sct#6736007 "Midgrade"
-* code = urn:oid:1.2.203.24341.11.2.1#I498 "Jiné určené srdeční arytmie"
+* code = $icd10#I49.8 "Jiné určené srdeční arytmie"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * onsetDateTime = "2013-01-09T00:00:00+01:00"
 * note.text = "Brugada Syndrom diagnostikován v roce 2013."
@@ -38,12 +38,12 @@ Usage: #example
 Title: "CZ-Condition-HDR Example 3"
 Description: "Czech HDR - example of a condition (Postoperative Hypothyroidism)"
 
-* clinicalStatus = #active
-* verificationStatus = #confirmed
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
 * category[0] = $sct#64572001 "Disease"
 * category[1] = $sct#278307001 "On admission"
 * category[2] = $sct#25265005 "Did not receive therapy or drug for"
-* code = urn:oid:1.2.203.24341.11.2.1#E890 "Hypotyreóza po operačních a jiných výkonech"
+* code = $icd10#E89.0 "Hypotyreóza po operačních a jiných výkonech"
 * subject = Reference(Mracena2)
 * onsetDateTime = "1997-10-06T00:00:00+02:00"
 * note.text = "Hypotyreóza po operaci karcinomu štítné žlázy. Zadáno všeobecným lékařem."
@@ -56,14 +56,14 @@ Usage: #example
 Title: "CZ-Condition-HDR Example K409"
 Description: "Example of a condition K409 with details on admission"
 // Condition details
-* clinicalStatus = #active
-* verificationStatus = #confirmed
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
 * severity.coding[0].system = $sct
 * severity.coding[0].code = #24484000
 * severity.coding[0].display = "Severe"
 // Condition code
 * code.coding[0].system = $icd10
-* code.coding[0].code = #K409
+* code.coding[0].code = #K40.9
 * code.coding[0].display = "Tříselná kýla, neurčená, bez obstrukce a gangrény"
 // Condition subject and onset
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
@@ -263,12 +263,12 @@ Usage: #example
 Title: "CZ-Condition-HDR Example 3"
 Description: "Czech HDR - example of a condition (Postoperative Hypothyroidism)"
 
-* clinicalStatus = #active
-* verificationStatus = #confirmed
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
 * category[0] = $sct#64572001 "Disease"
 * category[1] = $sct#278307001 "On admission"
 * category[2] = $sct#25265005 "Did not receive therapy or drug for"
-* code = $icd10#E890 "Hypotyreóza po operačních a jiných výkonech"
+* code = $icd10#E89.0 "Hypotyreóza po operačních a jiných výkonech"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * onsetDateTime = "1997-10-06T00:00:00+02:00"
 * note.text = "Hypotyreóza po operaci karcinomu štítné žlázy. Zadáno všeobecným lékařem."

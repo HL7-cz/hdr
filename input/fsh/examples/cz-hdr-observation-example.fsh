@@ -279,7 +279,7 @@ Usage: #example
 Title: "Společenské uplatnění"
 Description: "Pacient je aktivní v komunitních aktivitách a dobrovolnictví."
 * status = #final
-* code = $sct#408469001 "Participation in society"
+* code = $sct#363910003 "Characteristic of psychosocial functioning"
 * subject = Reference(Patient-Novak-Petr)
 * hasMember = Reference(Observation-Work-situation)
 * hasMember = Reference(Observation-Hobby)
@@ -292,7 +292,7 @@ Usage: #example
 Title: "Pracovní zapojení"
 Description: "Pacient pracuje na plný úvazek jako programátor."
 * status = #final
-* code = $sct#408470002 "Employment status" 
+* code = $sct#224362002 "Employment status" 
 * subject = Reference(Patient-Novak-Petr)
 * valueString = "Pacient pracuje jako programátor na plný úvazek v IT firmě."
 * text.status = #generated
@@ -306,7 +306,7 @@ Usage: #example
 Title: "Koníčky"
 Description: "Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování."
 * status = #final
-* code = $sct#408471003 "Hobby and interests"
+* code = $sct#300755007 "Ability to engage in a hobby"
 * subject = Reference(Patient-Novak-Petr)
 * valueString = "Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování."
 * text.status = #generated
@@ -320,7 +320,7 @@ Usage: #example
 Title: "Sociální síť"
 Description: "Pacient má aktivní sociální síť a pravidelně se setkává s přáteli."
 * status = #final
-* code = $sct#408472005 "Social network"
+* code = $sct#1179210008 "Ability to build and utilize social network"
 * subject = Reference(Patient-Novak-Petr)
 * valueString = "Pacient má širokou sociální síť a pravidelně se setkává s přáteli a rodinou."
 * text.status = #generated
@@ -334,7 +334,7 @@ Usage: #example
 Title: "Vzdělání"
 Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
 * status = #final
-* code = $sct#409073007 "Education"
+* code = $sct#276031006 "Education"
 * subject = Reference(Patient-Novak-Petr)
 * hasMember = Reference(Observation-Education-level)
 
@@ -345,7 +345,7 @@ Usage: #example
 Title: "Dosažený stupeň vzdělání"
 Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
 * status = #final
-* code = $sct#408473006 "Education level"
+* code = $sct#443722004 "Educational level of parent of subject"
 * subject = Reference(Patient-Novak-Petr)
 * valueCodeableConcept.coding[0].system = $cz-SocialHistory-education-level
 * valueCodeableConcept.coding[0].code = #BD
