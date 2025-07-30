@@ -28,9 +28,9 @@ InstanceOf: CZ_Medication
 * ingredient[0].strength.numerator.code = #"/ug"
 * ingredient[0].strength.denominator.value = 1    
 * ingredient[0].strength.denominator.unit = "tableta"
-* ingredient[0].strength.denominator.system = $ucum    
-* ingredient[0].strength.denominator.code = #"{tbl}"
-* ingredient[0].strength.denominator.unit = "tableta"
+//* ingredient[0].strength.denominator.system = $ucum    
+//* ingredient[0].strength.denominator.code = #"{tbl}"
+//* ingredient[0].strength.denominator.unit = "tableta"
 * identifier[0].system = $cz-medication-DLP-cs
 * identifier[0].value = "0243131"
 
@@ -44,8 +44,8 @@ Description: "Výdej léčivého přípravku Euthyrox pacientovi Novákovi"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * quantity.value = 30
 * quantity.unit = "tableta"
-* quantity.system = $ucum
-* quantity.code = #"{tbl}"
+//* quantity.system = $ucum
+//* quantity.code = #"{tbl}"
 * whenHandedOver = "2024-03-05"
 
 Instance: Medication-Paracetamol
@@ -78,9 +78,9 @@ InstanceOf: CZ_Medication
 * ingredient[0].strength.numerator.code = #"/mg"
 * ingredient[0].strength.denominator.value = 1    
 * ingredient[0].strength.denominator.unit = "tableta"
-* ingredient[0].strength.denominator.system = $ucum    
-* ingredient[0].strength.denominator.code = #"{tbl}"
-* ingredient[0].strength.denominator.unit = "tableta"
+//* ingredient[0].strength.denominator.system = $ucum    
+//* ingredient[0].strength.denominator.code = #"{tbl}"
+//* ingredient[0].strength.denominator.unit = "tableta"
 * identifier[0].system = $cz-medication-DLP-cs
 * identifier[0].value = "0243131"
 
@@ -94,8 +94,8 @@ Description: "Výdej léčivého přípravku Paracetamol pacientovi Novákovi"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * quantity.value = 20
 * quantity.unit = "tableta"
-* quantity.system = $ucum
-* quantity.code = #"{tbl}"
+//* quantity.system = $ucum
+//* quantity.code = #"{tbl}"
 * whenHandedOver = "2024-03-06"
 
 Instance: Medication-Ibalgin400
@@ -128,9 +128,9 @@ InstanceOf: CZ_Medication
 * ingredient[0].strength.numerator.code = #"/mg"
 * ingredient[0].strength.denominator.value = 1    
 * ingredient[0].strength.denominator.unit = "tableta"
-* ingredient[0].strength.denominator.system = $ucum    
-* ingredient[0].strength.denominator.code = #"{tbl}"
-* ingredient[0].strength.denominator.unit = "tableta"
+//* ingredient[0].strength.denominator.system = $ucum    
+//* ingredient[0].strength.denominator.code = #"{tbl}"
+//* ingredient[0].strength.denominator.unit = "tableta"
 * identifier[0].system = $cz-medication-DLP-cs
 * identifier[0].value = "0207893"
 
@@ -144,8 +144,8 @@ Description: "Výdej léčivého přípravku Ibalgin 400 mg pacientovi Novákovi
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * quantity.value = 15
 * quantity.unit = "tableta"
-* quantity.system = $ucum
-* quantity.code = #"{tbl}"
+//* quantity.system = $ucum
+//* quantity.code = #"{tbl}"
 * whenHandedOver = "2024-03-07"
 
 Instance: Medication-CovidVaccineComirnaty
