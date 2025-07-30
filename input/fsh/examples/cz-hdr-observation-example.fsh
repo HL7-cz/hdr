@@ -235,7 +235,7 @@ InstanceOf: Observation
 Usage: #example
 Title: "Stav při propuštění"
 Description: "Hodnocení celkového klinického stavu pacienta při propuštění"
-
+* id = "3f85726c-ad2f-441b-89ce-100000000022"
 * status = #final
 * category[0] = $observation-category#clinical "Clinical"
 * code = $loinc#66455-7 "Condition status"

@@ -262,7 +262,7 @@ InstanceOf: CZ_ConditionHdr
 Usage: #example
 Title: "CZ-Condition-HDR Example 3"
 Description: "Czech HDR - example of a condition (Postoperative Hypothyroidism)"
-
+* id = "fdf9e92d-ac48-4706-b15b-d2eaca85f45f"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category[0] = $sct#64572001 "Disease"

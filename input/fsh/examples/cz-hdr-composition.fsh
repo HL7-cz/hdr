@@ -15,7 +15,7 @@ Usage: #example
 * title = "Propouštěcí zpráva"
 * date = "2025-03-10T14:30:00+01:00"
 * author[+] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
-* author[+] = Reference(Practitioner-Author-detail)
+* author[+] = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
 * author[+] = Reference(Organization-1)         // document authored by practitioner role
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)            // document subject is patient
 //Důvod přijetí je obsažen v Encouteru ReasonReference
@@ -116,9 +116,9 @@ Usage: #example
   </div>
   """
 * section[sectionMedications].text.status = #additional
-* section[sectionMedications].entry[0] = Reference(MedicationStatement-Euthyrox-Novak)
-* section[sectionMedications].entry[1] = Reference(MedicationStatement-Paracetamol-Novak)
-* section[sectionMedications].entry[2] = Reference(MedicationStatement-Ibalgin400-Novak)
+* section[sectionMedications].entry[0] = Reference(urn:uuid:47472c99-09bf-4007-bfaa-16c9665ae090)
+* section[sectionMedications].entry[1] = Reference(urn:uuid:f34114fc-138f-4bd8-8e1a-804d14ec9986)
+* section[sectionMedications].entry[2] = Reference(urn:uuid:bf08b62b-0abd-4e88-9092-ce0228382e51)
 * section[sectionMedications].entry[3] = Reference(urn:uuid:133cea11-09c6-4147-80af-6c8f0b2d4e3a)
 * section[sectionMedications].entry[4] = Reference(urn:uuid:65c49e6d-0951-4e83-8e2c-7c8f0b2d4e3a)
 * section[sectionMedications].entry[5] = Reference(urn:uuid:b0001bf8-976a-4d7d-b192-8c8f0b2d4e3a)
@@ -149,7 +149,7 @@ Usage: #example
   </div>""" // Added required text for cardinality
 * section[sectionFunctionalStatus].text.status = #additional
 * section[sectionFunctionalStatus].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)  // Example reference to a functional status observation
-* section[sectionFunctionalStatus].entry[0] = Reference(Observation-DischargeCondition)
+* section[sectionFunctionalStatus].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000022)
 
 // Sekce pro stav při propuštění sectionPhysicalExamination
 * section[sectionPhysicalExamination].title = "Objektivní nález při propuštění"

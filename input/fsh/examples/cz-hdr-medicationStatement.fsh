@@ -71,7 +71,7 @@ InstanceOf: MedicationStatement
 //---------------------------------------------------------------------
 Instance: MedicationStatement-Euthyrox-Novak
 InstanceOf: CZ_MedicationStatement
-* id = "MedicationStatement-Euthyrox-Novak"
+* id = "47472c99-09bf-4007-bfaa-16c9665ae090"
 * status = #active   // http://hl7.org/fhir/CodeSystem/medication-statement-status nebo https://hl7.org/fhir/R4/valueset-medication-statement-status.html
 //stav neni adekvatni status ve slovniku, navic treba pouzit kod. system snomed
 //* statusReason.coding[0].system = $cz-medicationStatement-reason-status 
@@ -118,7 +118,7 @@ InstanceOf: CZ_MedicationStatement
 //---------------------------------------------------------------------
 Instance: MedicationStatement-Paracetamol-Novak
 InstanceOf: CZ_MedicationStatement
-* id = "MedicationStatement-Paracetamol-Novak"
+* id = "f34114fc-138f-4bd8-8e1a-804d14ec9986"
 * status = #active   
 //stav neni adekvatni status ve slovniku, navic treba pouzit kod. system snomed
 //* statusReason.coding[0].system = $cz-medicationStatement-reason-status 
@@ -157,7 +157,7 @@ InstanceOf: CZ_MedicationStatement
 //---------------------------------------------------------------------
 Instance: MedicationStatement-Ibalgin400-Novak
 InstanceOf: CZ_MedicationStatement
-* id = "MedicationStatement-Ibalgin400-Novak"
+* id = "bf08b62b-0abd-4e88-9092-ce0228382e51"
 * status = #active   
 //stav neni adekvatni status ve slovniku, navic treba pouzit kod. system snomed
 //* statusReason.coding[0].system = $cz-medicationStatement-reason-status 

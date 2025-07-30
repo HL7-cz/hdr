@@ -406,7 +406,7 @@ InstanceOf: CZ_PractitionerRoleCore
 Usage: #example
 Description: "practitioner's detail"
 
-* id = "Practitioner-Author-detail"
+* id = "2b7e9637-5018-4542-9faf-d5abdee7b849"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
 * practitioner = Reference(CZ_PractitionerCore/Practitioner-Author) "MUDr. Ivan Anděl"
 * organization = Reference(Organization-1) "Nemocnice Chrudim"
