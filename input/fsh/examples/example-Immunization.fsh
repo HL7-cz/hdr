@@ -19,7 +19,7 @@ Title: "Očkování Covid"
 Description: "Očkování proti COVID-19 u pacienta Novák Petr"
 
 * status = #completed
-* meta.profile = "http://hl7.cz/fhir/hdr/StructureDefinition/cz-immunization-hdr"
+//* meta.profile = "http://hl7.cz/fhir/hdr/StructureDefinition/cz-immunization-hdr"
 * vaccineCode = http://snomed.info/sct#28531000087107 "SARS-CoV-2 vaccine"
 * patient = Reference(Patient-Novak-Petr)
 * occurrenceDateTime = "2021-05-05"

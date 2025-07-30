@@ -250,7 +250,7 @@ Instance: Observation-TravelHistory-Madagaskar
 InstanceOf: CZ_ObservationTravelHdr
 Usage: #example
 * status = #final
-* code = $loinc#82753-5 "County of travel [Location]"
+* code = $loinc#94651-7 "Country of travel [Location]"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-20"
 * valueCodeableConcept.coding[0].system = "urn:iso:std:iso:3166"

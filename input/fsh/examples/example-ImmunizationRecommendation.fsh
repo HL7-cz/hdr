@@ -4,8 +4,6 @@ Usage: #example
 Title: "Immunization recommendation example"
 Description: "Immunization recommendation of vaccination"
 
-
-* meta.profile = "http://hl7.eu/fhir/hdr/StructureDefinition/immunizationrecommendation-eu-hdr"
 * patient = Reference(Patient/Mracena)
 * date = "2025-03-07"
 * recommendation.vaccineCode = http://snomed.info/sct#1119349007 // Kód vakcíny proti COVID-19
