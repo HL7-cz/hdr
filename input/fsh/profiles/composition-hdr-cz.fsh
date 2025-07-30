@@ -310,7 +310,7 @@ $loinc#10160-0) // 	History of Medication use Narrative
 // -------------------------------------
 // Hospital discharge physical findings Section 0 … 1
 // -------------------------------------
-* section contains sectionDischargeFindings 1..1
+* section contains sectionDischargeFindings 0..1
 * section[sectionDischargeFindings]
   * insert SectionComRules (
       Hospital discharge physical findings,

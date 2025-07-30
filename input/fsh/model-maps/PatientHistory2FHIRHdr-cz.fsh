@@ -1,7 +1,7 @@
 Instance: patientHistory2FHIR-cz-hdr
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "http://hl7.cz/fhir/hdr/ConceptMap/patientHistory2FHIR-cz-hdr"
+* url = "https://hl7.cz/fhir/hdr/ConceptMap/patientHistory2FHIR-cz-hdr"
 * name = "PatientHistory2FHIRCzHdr"
 * title = "CZ Patient History to this guide Map"
 * status = #draft
@@ -28,12 +28,17 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "The same section used by the hospital stay ?"
+* group[=].element[+].code = #PatientHistory.medicalHistory.historyOfConditions.resolution
+* group[=].element[=].display = "A.2.6.1.1.6 - Resolution circumstances"
+* group[=].element[=].target.code = #Composition.section:sectionDiagnosticSummary.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "The resolution circumstances may be described as resource or composiiton.section text ; or indirectly determined by the resource (e.g. Procedure) that has been perfomed in reason of this Condition no more active"
 * group[=].element[+].code = #PatientHistory.medicalHistory.medicalDevices
 * group[=].element[=].display = "A.2.6.1.2 - Devices and Implants"
 * group[=].element[=].target.code = #Composition.section:sectionMedicalDevices
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "The same section usd by the hospital stay ?"
 * group[=].element[+].code = #PatientHistory.medicalHistory.vaccination
 * group[=].element[=].display = "A.2.6.1.4 - Vaccination"
 * group[=].element[=].target.code = #Composition.section:sectionImmunizations
@@ -43,44 +48,13 @@ Usage: #definition
 * group[=].element[=].display = "A.2.6.1.5 - Epidemiological history"
 * group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "several sections"
+* group[=].element[=].target.equivalence = #unmatched					
+* group[=].element[=].target.comment = "decison not to have as distict section"
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts
 * group[=].element[=].display = "A.2.6.1.5.1 - Infectious contacts"
-* group[=].element[=].target.code = #Composition.section
+* group[=].element[=].target.code = #Composition.section::infectiousContacts
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "To be specified"
-* group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts.period
-* group[=].element[=].display = "A.2.6.1.5.1.1 - Time period"
-* group[=].element[=].target.code = #Composition.section
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "To be specified"
-* group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts.infectiousAgent
-* group[=].element[=].display = "A.2.6.1.5.1.2 - Infectious agent"
-* group[=].element[=].target.code = #Composition.section
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "To be specified"
-* group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts.proximity
-* group[=].element[=].display = "A.2.6.1.5.1.3 - Proximity"
-* group[=].element[=].target.code = #Composition.section
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "To be specified"
-* group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts.country
-* group[=].element[=].display = "A.2.6.1.5.1.4 - Country"
-* group[=].element[=].target.code = #Composition.section
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "To be specified"
-* group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts.note
-* group[=].element[=].display = "A.2.6.1.5.1.5 - Additional information"
-* group[=].element[=].target.code = #Composition.section
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "To be specified"
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.travelHistory
 * group[=].element[=].display = "A.2.6.1.5.2 - Travel history"
 * group[=].element[=].target.code = #Composition.section:sectionTravelHx
@@ -165,12 +139,24 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-medical-device"
+* group[=].element[+].code = #PatientHistory.medicalHistory.medicalDevices.description
+* group[=].element[=].display = "A.2.6.1.2.1 - Device and implant description"
+* group[=].element[=].target.code = #Device.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "if referring to the description of the device"
 * group[=].element[+].code = #PatientHistory.medicalHistory.medicalDevices.identifier
 * group[=].element[=].display = "A.2.6.1.2.2 - Device ID"
 * group[=].element[=].target.code = #Device.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "if generic identifier"
+* group[=].element[+].code = #PatientHistory.medicalHistory.medicalDevices.identifier
+* group[=].element[=].display = "A.2.6.1.2.2 - Device ID"
+* group[=].element[=].target.code = #Device.udiCarrier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "if it is the udiCarrier"
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/DeviceUseStatement"
 * group[=].element[+].code = #PatientHistory.medicalHistory.medicalDevices.description
@@ -372,6 +358,12 @@ Usage: #definition
 * group[=].element[=].target.code = #Procedure.bodySite
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
+* group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.bodySite
+* group[=].element[=].display = "A.2.6.1.3.3 - Body site"
+* group[=].element[=].target.code = #Procedure.extension:bodySite
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "if details about the body structure have to be provided"
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.date
 * group[=].element[=].display = "A.2.6.1.3.4 - Procedure date"
 * group[=].element[=].target.code = #Procedure.perfomedDateTime	
@@ -379,7 +371,12 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.reason
 * group[=].element[=].display = "A.2.6.1.3.5 - Procedure reason"
-* group[=].element[=].target.code = #Procedure.reasonCode	
+* group[=].element[=].target.code = #Procedure.reasonCode
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.reason
+* group[=].element[=].display = "A.2.6.1.3.5 - Procedure reason"
+* group[=].element[=].target.code = #Procedure.reasonReference	
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.outcome
@@ -506,3 +503,33 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "If FamilyMemberHistory.condition.contributedToDeath is true"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-infectious-contact-hdr"
+* group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts.period
+* group[=].element[=].display = "A.2.6.1.5.1.1 - Time period"
+* group[=].element[=].target.code = #Observation.effective[x]
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts.infectiousAgent
+* group[=].element[=].display = "A.2.6.1.5.1.2 - Infectious agent"
+* group[=].element[=].target.code = #Observation.valueCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "In the current value set the disease is indicated"
+* group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts.proximity
+* group[=].element[=].display = "A.2.6.1.5.1.3 - Proximity"
+* group[=].element[=].target.code = #Composition.section:infectiousContacts
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "in this version as textual description"
+* group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts.country
+* group[=].element[=].display = "A.2.6.1.5.1.4 - Country"
+* group[=].element[=].target.code = #Composition.section:infectiousContacts
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "in this version as textual description"
+* group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts.note
+* group[=].element[=].display = "A.2.6.1.5.1.5 - Additional information"
+* group[=].element[=].target.code = #Observation.note
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
