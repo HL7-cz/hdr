@@ -255,7 +255,7 @@ Usage: #example
 * effectiveDateTime = "2024-03-20"
 * valueCodeableConcept.coding[0].system = "urn:iso:std:iso:3166"
 * valueCodeableConcept.coding[0].code = #MG
-* valueCodeableConcept.coding[0].display = "Madagaskar"
+* valueCodeableConcept.coding[0].display = "Madagascar"
 * valueCodeableConcept.text = "Madagaskar"
 * performer = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * note[0].text = "Pacient navštívil Madagaskar během posledních 30 dnů."

@@ -43,7 +43,7 @@ Description: "Czech HDR - example of a condition (Postoperative Hypothyroidism)"
 * category[0] = $sct#64572001 "Disease"
 * category[1] = $sct#278307001 "On admission"
 * category[2] = $sct#25265005 "Did not receive therapy or drug for"
-* code = $icd10#E89.0 "Hypotyreóza po operačních a jiných výkonech"
+* code = $icd10#E89.0 "Postprocedural hypothyroidism"
 * subject = Reference(Mracena2)
 * onsetDateTime = "1997-10-06T00:00:00+02:00"
 * note.text = "Hypotyreóza po operaci karcinomu štítné žlázy. Zadáno všeobecným lékařem."
@@ -64,7 +64,7 @@ Description: "Example of a condition K409 with details on admission"
 // Condition code
 * code.coding[0].system = $icd10
 * code.coding[0].code = #K40.9
-* code.coding[0].display = "Tříselná kýla, neurčená, bez obstrukce a gangrény"
+* code.coding[0].display = "Unilateral or unspecified inguinal hernia, without obstruction or gangrene"
 // Condition subject and onset
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 // Condition text
@@ -268,7 +268,7 @@ Description: "Czech HDR - example of a condition (Postoperative Hypothyroidism)"
 * category[0] = $sct#64572001 "Disease"
 * category[1] = $sct#278307001 "On admission"
 * category[2] = $sct#25265005 "Did not receive therapy or drug for"
-* code = $icd10#E89.0 "Hypotyreóza po operačních a jiných výkonech"
+* code = $icd10#E89.0 "Postprocedural hypothyroidism"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * onsetDateTime = "1997-10-06T00:00:00+02:00"
 * note.text = "Hypotyreóza po operaci karcinomu štítné žlázy. Zadáno všeobecným lékařem."

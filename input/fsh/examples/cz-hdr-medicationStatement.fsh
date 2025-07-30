@@ -81,7 +81,7 @@ InstanceOf: CZ_MedicationStatement
 //indikace
 * reasonCode.coding[0].system = $MKN10
 * reasonCode.coding[0].code = #E03.9
-* reasonCode.coding[0].display = "Hypotyreóza"
+* reasonCode.coding[0].display = "Hypothyroidism, unspecified"
 * reasonCode.text = "Hypotyreóza"
 //dávkování
 * dosage[0].text = "1 tableta denně"
@@ -128,7 +128,7 @@ InstanceOf: CZ_MedicationStatement
 //indikace
 * reasonCode.coding[0].system = $MKN10
 * reasonCode.coding[0].code = #E03.9
-* reasonCode.coding[0].display = "Hypotyreóza"
+* reasonCode.coding[0].display = "Hypothyroidism, unspecified"
 * reasonCode.text = "Hypotyreóza"
 //dávkování
 * dosage[0].text = "Dle potřeby, max 4 tablety denně"
@@ -167,7 +167,7 @@ InstanceOf: CZ_MedicationStatement
 //indikace
 * reasonCode.coding[0].system = $MKN10
 * reasonCode.coding[0].code = #E03.9
-* reasonCode.coding[0].display = "Hypotyreóza"
+* reasonCode.coding[0].display = "Hypothyroidism, unspecified"
 * reasonCode.text = "Hypotyreóza"
 //dávkování
 * dosage[0].text = "Dle potřeby, při bolesti max 3 tablety denně"
