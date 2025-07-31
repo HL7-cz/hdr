@@ -106,6 +106,7 @@ Instance: Organization-1
 InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "An example of the organization of a provider"
+* id = "3f85726c-ad2f-441b-89ce-aceace0000000"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "27520536"
 * type[DRZAR] = $cz-drzar#102 "Nemocnice"
