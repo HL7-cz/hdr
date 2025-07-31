@@ -215,7 +215,7 @@ Usage: #example
     </ul>
   </div>"""
 * section[sectionPlanOfCare].text.status = #additional
-* section[sectionPlanOfCare].entry[0] = Reference(CarePlan-Novak)
+* section[sectionPlanOfCare].entry[0] = Reference(urn:uuid:9c913d06-84fe-4d35-b35b-8b0c7965f535)
 
 
 //Volitelné části

@@ -235,7 +235,7 @@ InstanceOf: Observation
 Usage: #example
 Title: "Stav při propuštění"
 Description: "Hodnocení celkového klinického stavu pacienta při propuštění"
-* id = "3f85726c-ad2f-441b-89ce-100000000022"
+* id = "3f85726c-ad2f-441b-89ce-100000000021"
 * status = #final
 * category[0] = $observation-category#clinical "Clinical"
 * code = $loinc#66455-7 "Condition status"
@@ -284,14 +284,15 @@ InstanceOf: cz-observation-sdoh-hdr
 Usage: #example
 Title: "Společenské uplatnění"
 Description: "Pacient je aktivní v komunitních aktivitách a dobrovolnictví."
+* id = "3f85726c-ad2f-441b-89ce-100000000022"
 * status = #final
 * code = $sct#363910003 "Characteristic of psychosocial functioning"
 * effectiveDateTime = "2024-03-28"
-* performer = Reference(Practitioner-2)
+* performer = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
 * subject = Reference(Patient-Novak-Petr)
-* hasMember = Reference(Observation-Work-situation)
-* hasMember = Reference(Observation-Hobby)
-* hasMember = Reference(Observation-Social-network)
+* hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000023)
+* hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000024)
+* hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000025)
 
 
 Instance: Observation-Work-situation
@@ -299,12 +300,13 @@ InstanceOf: cz-observation-sdoh-hdr
 Usage: #example
 Title: "Pracovní zapojení"
 Description: "Pacient pracuje na plný úvazek jako programátor."
+* id = "3f85726c-ad2f-441b-89ce-100000000023"
 * status = #final
 * code = $sct#224362002 "Employment status" 
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * valueString = "Pacient pracuje jako programátor na plný úvazek v IT firmě."
 * effectiveDateTime = "2024-03-28"
-* performer = Reference(Practitioner-2)
+* performer = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>
     <p>Pacient pracuje jako programátor na plný úvazek v IT firmě.</p>
@@ -315,10 +317,11 @@ InstanceOf: cz-observation-sdoh-hdr
 Usage: #example
 Title: "Koníčky"
 Description: "Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování."
+* id = "3f85726c-ad2f-441b-89ce-100000000024"
 * status = #final
 * code = $sct#300755007 "Ability to engage in a hobby"
-* subject = Reference(Patient-Novak-Petr)
-* performer = Reference(Practitioner-2)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
+* performer = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
 * valueString = "Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování."
 * effectiveDateTime = "2024-03-28"
 * text.status = #generated
@@ -331,10 +334,11 @@ InstanceOf: cz-observation-sdoh-hdr
 Usage: #example
 Title: "Sociální síť"
 Description: "Pacient má aktivní sociální síť a pravidelně se setkává s přáteli."
+* id = "3f85726c-ad2f-441b-89ce-100000000025"
 * status = #final
 * code = $sct#1179210008 "Ability to build and utilize social network"
-* subject = Reference(Patient-Novak-Petr)
-* performer = Reference(Practitioner-2)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
+* performer = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
 * valueString = "Pacient má širokou sociální síť a pravidelně se setkává s přáteli a rodinou."
 * effectiveDateTime = "2024-03-28"
 * text.status = #generated
@@ -347,12 +351,13 @@ InstanceOf: cz-observation-sdoh-hdr
 Usage: #example
 Title: "Vzdělání"
 Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
+* id = "f85726c-ad2f-441b-89ce-100000000027"
 * status = #final
 * code = $sct#276031006 "Education"
-* subject = Reference(Patient-Novak-Petr)
-* performer = Reference(Practitioner-2)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
+* performer = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
 * effectiveDateTime = "2024-03-28"
-* hasMember = Reference(Observation-Education-level)
+* hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000026)
 
 
 Instance: Observation-Education-level
@@ -360,10 +365,11 @@ InstanceOf: cz-observation-sdoh-hdr
 Usage: #example
 Title: "Dosažený stupeň vzdělání"
 Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
+* id = "3f85726c-ad2f-441b-89ce-100000000026"
 * status = #final
 * code = $sct#443722004 "Educational level of parent of subject"
-* subject = Reference(Patient-Novak-Petr)
-* performer = Reference(Practitioner-2)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
+* performer = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
 * valueCodeableConcept.coding[0].system = $cz-SocialHistory-education-level
 * valueCodeableConcept.coding[0].code = #BD
 * valueCodeableConcept.coding[0].display = "College or baccalaureate degree complete"

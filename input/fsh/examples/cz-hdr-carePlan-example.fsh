@@ -27,7 +27,7 @@ InstanceOf: CarePlan
 Usage: #example
 Title: "CarePlan-Novak-Petr"
 Description: "Czech HDR - example of a care plan"
-* id = "CarePlan-Novak-Petr"
+* id = "9c913d06-84fe-4d35-b35b-8b0c7965f535"
 // Care plan details
 * status = #active    //http://hl7.org/fhir/ValueSet/request-status
 * intent = #plan    //http://hl7.org/fhir/ValueSet/care-plan-intent
