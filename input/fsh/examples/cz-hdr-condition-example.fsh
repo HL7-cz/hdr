@@ -27,7 +27,7 @@ Description: "Czech HDR - example of a condition (Cardiac arrhythmia - Brugada S
 * category[1] = $sct#278307001 "On admission"
 * category[2] = $sct#69845001 "Received therapy or drug for"
 * severity = $sct#6736007 "Midgrade"
-* code = $icd10#I49.8 "Jiné určené srdeční arytmie"
+* code = $icd10#I49.8 "Other specified cardiac arrhythmias"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * onsetDateTime = "2013-01-09T00:00:00+01:00"
 * note.text = "Brugada Syndrom diagnostikován v roce 2013."
