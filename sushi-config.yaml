@@ -46,7 +46,7 @@ dependencies:
   hl7.fhir.eu.extensions: 0.1.1-ballot
   hl7.fhir.eu.base: 0.1.0-ballot
   hl7.fhir.extensions.r5: 4.0.1
-  ihe.pharm.mpd:  1.0.0-comment-2
+  ihe.pharm.mpd.r4:  current
   hl7.fhir.cz.lab: current
   hl7.fhir.cz.img: current
   
