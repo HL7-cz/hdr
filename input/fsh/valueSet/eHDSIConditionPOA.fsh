@@ -10,7 +10,7 @@ Description: "The Value Set is used to assert if a condition is Present on Admis
 * insert SNOMEDCopyrightForVS
 * insert SetFmmandStatusRule ( 1, draft )
 
-* ^url = "http://terminology.ehdsi.eu/ValueSet/eHDSIConditionPOA"
+* ^url = "https://hl7.cz/fhir/hdr/ValueSet/eHDSIConditionPOA"
 
 * $sct#278307001 "On admission"
 * $sct#277056009 "Hospital acquired"

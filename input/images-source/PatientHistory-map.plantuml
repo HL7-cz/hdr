@@ -27,7 +27,7 @@ class "device-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/St
 class "deviceUseStatement-eu-hdr" <<Profile>> [[https://build.fhir.org/ig/hl7-eu/hdr/StructureDefinition-deviceUseStatement-eu-hdr.html]]
 "PatientHistory" <|. "deviceUseStatement-eu-hdr"
 "device-cz-core" -d[hidden]-> "deviceUseStatement-eu-hdr"
-class "familyMemberHistory-cz-hdr" <<Profile>> [[StructureDefinition-czh-familyMemberHistory-hdr.html]]
+class "familyMemberHistory-cz-hdr" <<Profile>> [[StructureDefinition-cz-familyMemberHistory-hdr.html]]
 "PatientHistory" <|. "familyMemberHistory-cz-hdr"
 "deviceUseStatement-eu-hdr" -d[hidden]-> "familyMemberHistory-cz-hdr"
 class "immunization-cz-hdr" <<Profile>> [[StructureDefinition-cz-immunization-hdr.html]]
