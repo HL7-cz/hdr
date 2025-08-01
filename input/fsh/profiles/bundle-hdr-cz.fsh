@@ -36,7 +36,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry.resource 1..
 * entry contains
     composition 1..1 and
-    patient 1..1 and
+    patient 1..* and
     allergyIntolerance 0..* and
     condition 0..* and
     device 0..* and
@@ -62,7 +62,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     flag 0..* and
     carePlan 0..* and
     goal 0..* and
-    consent 0..*
+    consent 0..* and
+    provenance 1..* and
+    coverage 0..*
 
 * entry[composition].resource only CZ_CompositionHdr
 * entry[patient].resource only CZ_PatientCore
@@ -94,6 +96,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[carePlan].resource only CZ_CarePlanHdr
 * entry[goal].resource only Goal
 * entry[consent].resource only Consent
+* entry[provenance].resource only CZ_Provenance
+* entry[coverage].resource only CZ_Coverage
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"
@@ -105,3 +109,4 @@ Invariant: bdl-hdr-1
 Description: "An IPS document must have no additional Composition (including Composition subclass) resources besides the first."
 Severity: #error
 Expression: "entry.tail().where(resource is Composition).empty()"
+
