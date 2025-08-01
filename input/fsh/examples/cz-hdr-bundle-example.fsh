@@ -119,7 +119,7 @@ Usage: #example
 * entry[practitionerRole][=].resource = Practitioner-Author-detail
 * entry[condition][+].fullUrl = "urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2"
 * entry[condition][=].resource = Condition-K409
-* entry[condition][+].fullUrl = "urn:uuid:ffb1a62f-9050-4e33-af4b-4cdb8203c9e5"
+* entry[condition][+].fullUrl = "urn:uuid:fdf9e92d-ac48-4706-b15b-d2eaca85f45f"
 * entry[condition][=].resource = Condition-E890-Novak
 * entry[allergyIntolerance][+].fullUrl = "urn:uuid:6cf80cb1-9766-470f-ac36-b1d3d8950f1b"
 * entry[allergyIntolerance][=].resource = Allergy-Strawberry-Novak

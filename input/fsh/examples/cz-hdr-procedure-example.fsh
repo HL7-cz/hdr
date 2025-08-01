@@ -4,13 +4,13 @@ Title: "CZ-Procedure-HDR Example - Appendectomy"
 Description: "Czech HDR - example of a Procedure - Appendectomy"
 
 * status = #completed
-* code = http://snomed.info/sct#80146002 "Apendektomie"
+* code = http://snomed.info/sct#80146002 "Appendectomy"
 * subject = Reference(Mracena2)
 * performedDateTime = "2023-10-01T10:00:00Z"
 * performer.actor = Reference(Practitioner-2)
-* reasonCode = http://snomed.info/sct#233604007 "Akutní apendicitida"
-* outcome = http://snomed.info/sct#385669000 "Úspěšný"
-* bodySite = http://snomed.info/sct#66754008 "Struktura slepého střeva"
+* reasonCode = http://snomed.info/sct#85189001 "Acute appendicitis"
+* outcome = http://snomed.info/sct#385669000 "Successful (qualifier value)"
+* bodySite = http://snomed.info/sct#66754008 "Appendix"
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>This is a test of the procedure text field.</div>"
 * focalDevice.manipulated = Reference(Device-Pacemaker)
@@ -23,15 +23,15 @@ Description: "Czech HDR - example of a Procedure - Acute appendicitis."
 
 * id = "CZ-Procedure-HDR-Example-Acute-appendicitis"
 * status = #completed
-* code = $sct#80146002 "Apendektomie"
+* code = $sct#80146002 "Appendectomy"
 * subject = Reference(Mracena2)
 * performedDateTime = "2023-10-01T10:00:00Z"
 * performer.actor = Reference(Practitioner-2)
-* reasonCode = $icd10#K352 "Akutní apendicitida"
-* outcome = $sct#385670004 "Částečně úspěšný"
-* bodySite = $sct#66754008 "Struktura slepého střeva"
+* reasonCode = $icd10#K35.2 "Acute appendicitis with generalized peritonitis"
+* outcome = $sct#385670004 "Partially successful (qualifier value)"
+* bodySite = $sct#66754008 "Appendix"
 * text.status = #generated
-* complication = $icd10#K650 "Peritonitida"
+* complication = $icd10#K65.0 "Acute peritonitis"
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   <p>Procedure: Apendektomie</p>
@@ -57,15 +57,15 @@ Description: "Czech HDR - example of a Procedure - Pacemaker"
  
 * contained[+] = Device-Pacemaker
 * status = #completed
-* code = $sct#47545007 "Zavedení kardiostimulátoru"
+* code = $sct#70573000 "Insertion of pacemaker pulse generator"
 * subject = Reference(Patient/Mracena)
 * performedDateTime = "2024-03-05"
-* bodySite = $sct#74262004 "Struktura pravé síně"
-* reasonCode[+] = $icd10#I44.2 "Úplná atrioventrikulární blokáda"
-* outcome = $sct#385669000 "Úspěšný"
+* bodySite = $sct#73829009 "Right atrial structure"
+* reasonCode[+] = $icd10#I44.2 "Atrioventricular block, complete"
+* outcome = $sct#385669000 "Successful (qualifier value)"
 // Odkaz na přístroj použitý při zákroku
 * focalDevice.manipulated = Reference(Device-Pacemaker)
-* focalDevice.action = $sct#129303008 "Implantované zařízení"
+* focalDevice.action = $sct#129303008 "Removal - action"
 * text.status = #generated
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -84,16 +84,22 @@ Description: "Czech HDR - example of a Procedure - Pacemaker"
 // Title: "CZ-Procedure-HDR Example - No known procedures"
 // Description: "Czech HDR - example of a Procedure - No known procedures."
  
-// * status = #completed
-// * code = $absent-or-unknown-procedures-uv-ips#no-known-procedures "Žádné známé procedury"
-// * subject = Reference(Mracena2)
-// * performedString = DataAbsentReason#not-performed
-// * text.status = #generated
-// * text.div = """
-// <div xmlns="http://www.w3.org/1999/xhtml">
-// <p>No known procedures</p>
-// </div>
-// """
+
+Instance: Procedure-No-Procedure
+InstanceOf: CZ_ProcedureHdr
+Title: "CZ-Procedure-HDR Example - No known procedures"
+Description: "Czech HDR - example of a Procedure - No known procedures."
+ 
+* status = #completed
+* code = $absent-or-uknown#no-known-procedures "No known procedures"
+* subject = Reference(Mracena2)
+* performedString = DataAbsentReason#not-performed
+* text.status = #generated
+* text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml">
+<p>No known procedures</p>
+</div>
+"""
  
  // 6. Procedure: Colonoscopy of angiodysplasia (CZ_ProcedureHdr)
 Instance: ColonoscopyProcedure
@@ -122,7 +128,7 @@ InstanceOf: CZ_ProcedureHdr
 //* id = "procedure-inguinal-hernia"
 * status = #completed
 * code.coding[0].system = $sct
-* code.coding[0].code = #80146002
+* code.coding[0].code = #44558001
 * code.coding[0].display = "Repair of inguinal hernia"
 * code.text = "Plastika tříselné kýly"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
@@ -140,14 +146,14 @@ Usage: #example
 Description: "Czech HDR - example of a Procedure - Pacemaker"
 
 * status = #completed
-* code = $sct#47545007 "Zavedení kardiostimulátoru"
+* code = $sct#70573000 "Insertion of pacemaker pulse generator"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * performedDateTime = "2024-03-05"
-* bodySite = $sct#74262004 "Struktura pravé síně"
+* bodySite = $sct#73829009 "Right atrial structure"
 * reasonCode[+] = $icd10#I50 "Heart failure"
-* outcome = $sct#385669000 "Úspěšný"
+* outcome = $sct#385669000 "Successful (qualifier value)"
 * focalDevice.manipulated = Reference(Device-Pacemaker)
-* focalDevice.action = $sct#129303008 "Implantované zařízení"
+* focalDevice.action = $sct#129303008 "Removal - action"
 * text.status = #generated
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">

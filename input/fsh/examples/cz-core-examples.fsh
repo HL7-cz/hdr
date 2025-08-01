@@ -84,9 +84,9 @@ Description: "Patient, contact information including registering practitioner"
 * generalPractitioner.display = "MUDr. Josef Švejk"
 
 * extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
-* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#700232004 "Všeobecné lékařské služby"
+* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#700232004 "General medical service"
 * extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
-* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#310060005 "Gynekologické a porodnické služby"
+* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#310060005 "Obstetrics and gynecology service"
 
 Instance: RegisteringProviderExample
 InstanceOf: CZ_OrganizationCore
@@ -125,7 +125,7 @@ Description: "An example of the organization of a provider"
   * city = "Chrudim"
   * postalCode = "53701"
   * country = "Česká republika"
-    * extension[countryCode].valueCoding = urn:iso:std:iso:3166:#CZ "Czechia"
+    * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 
 Instance: Practitioner-2
@@ -194,7 +194,7 @@ Description: "General practitioner's office"
 * practitioner = Reference(Practitioner/Practitioner-2) "MUDr. Stanislava Kubšová"
 * organization = Reference(Organization/Organization-1) "Ordinace praktického lékaře, MUDr. Stanislava Kubšová"
 * code = $nrzp_povolani#L00 "Lékař"
-* specialty = $sct#419772000 "Rodinná praxe"
+* specialty = $sct#419772000 "Family practice (qualifier value)"
 * availableTime[0].daysOfWeek[0] = #mon
 * availableTime[=].daysOfWeek[+] = #wed
 * availableTime[=].availableStartTime = "12:30:00"
@@ -279,7 +279,7 @@ Description: "practitioner's detail"
 * practitioner = Reference(CZ_PractitionerCore/Practitioner-Referrer) "MUDr. Jiří Zdvořilý"
 * organization = Reference(CZ_OrganizationCore/Organization-Referrer) "Ambulance interního lékařství, MUDr. Jiří Zdvořilý"
 * code = $cz-nrzp_povolani#L00 "Lékař"
-* specialty = $sct#419192003 "Interní lékařství"
+* specialty = $sct#419192003 "Internal medicine"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ambulance interního lékařství, MUDr. Jiří Zdvořilý</div>"
 * text.status = #generated
 
@@ -337,7 +337,7 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 //Contact persons and their details
 //guardian -contact person
 * contact[+].relationship.coding[+] = $cz-patient-relationship#MTH "Matka"
-* contact[=].relationship.coding[+] = $v2-0131#N "Kontaktní osoba"
+* contact[=].relationship.coding[+] = $v2-0131#N "příbuzný"
 * contact[=].name.use = #usual
 * contact[=].name.family = "Nováková"
 * contact[=].name.given[0] = "Alena"
@@ -355,7 +355,7 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * contact[=].address[=].country = "CZ"
 //contact person
 * contact[+].relationship.coding[+] = $cz-patient-relationship#FRND "přítel/přítelkyně"
-* contact[=].relationship.coding[+] = $v2-0131#N "Kontaktní osoba"
+* contact[=].relationship.coding[+] = $v2-0131#N "příbuzný"
 * contact[=].name.use = #usual
 * contact[=].name.family = "Dlouhá"
 * contact[=].name.given[0] = "Alena"
@@ -377,7 +377,7 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * communication[+].language = urn:ietf:bcp:47#en
 //Patient general practitioner
 * extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
-* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#700232004 "Všeobecné lékařské služby"
+* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#700232004 "General medical service"
 /** extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample-gynecology)
 * extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#310060005 "Gynekologické a porodnické služby"*/
 
@@ -407,12 +407,12 @@ InstanceOf: CZ_PractitionerRoleCore
 Usage: #example
 Description: "practitioner's detail"
 
-* id = "Practitioner-Author-detail"
+* id = "2b7e9637-5018-4542-9faf-d5abdee7b849"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
 * practitioner = Reference(CZ_PractitionerCore/Practitioner-Author) "MUDr. Ivan Anděl"
 * organization = Reference(Organization-1) "Nemocnice Chrudim"
 * code = $cz-nrzp_povolani#L00 "Lékař"
-* specialty = $sct#419192003 "Interní lékařství"
+* specialty = $sct#419192003 "Internal medicine"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">MUDr. Ivan Anděl, interní lékař, Nemocnice Chrudim, Václavská 570, 537 01 Chrudim, tel: +420 603 777 227</div>"
 * text.status = #generated
 
