@@ -191,6 +191,37 @@ Usage: #example
 * entry[observation][=].resource = Observation-Education-level
 * entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000027"
 * entry[observation][=].resource = Observation-Education
+* entry[organization][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-aceace0000000"
+* entry[organization][=].resource = Organization-1
+* entry[documentReference][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-4c8f0b2d00"
+* entry[documentReference][=].resource = DischargeDocumenPDF
+
+
+// 2. Bundle: Hospital Discharge Report - Novák Petr
+Instance: DischargeBundle-Novak-Petr-L1
+InstanceOf: CZ_BundleHdr
+Description: "Example Bundle for Hospital Discharge Report for patient Novák Petr"
+Usage: #example
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:c859d718-03c2-43ed-a16c-dbe57a6e34b5"    // unique Bundle ID
+* type = #document
+* timestamp = "2025-03-10T15:00:00+01:00"
+// Bundle Entries (ordered by profile slices):
+* entry[composition][0].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaaf"
+* entry[composition][=].resource = DischargeComposition-Novak-Petr
+* entry[patient][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000000"
+* entry[patient][=].resource = Patient-Novak-Petr
+* entry[practitioner][+].fullUrl = "urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a"
+* entry[practitioner][=].resource = Practitioner-Author
+* entry[practitionerRole][+].fullUrl = "urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849"
+* entry[practitionerRole][=].resource = Practitioner-Author-detail
+* entry[organization][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-aceace0000000"
+* entry[organization][=].resource = Organization-1
+* entry[documentReference][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-4c8f0b2d00"
+* entry[documentReference][=].resource = DischargeDocumenPDF
+
+
+
 
 
 
