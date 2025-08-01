@@ -1,6 +1,41 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile: CZ_CompositionHdr
+Profile: CZ_CompositionHdr_L1
 Parent: Composition
+Id: cz-composition-hdr-l1
+//Id: composition-cz-hdr
+Title: "Composition (HDR CZ)"
+Description: "This profile defines how to represent Composition resource in HL7 FHIR for the scope of this guide."
+//-------------------------------------------------------------------------------------------
+
+* encounter 0..1
+
+* section 1..
+  // add invariant or text or section
+
+* insert SectionSliceComRules (Sections composing the Hospital Discharge Report,
+        The root of the sections that make up the Hospital Discharge Report composition.)
+
+// -------------------------------------------------------------
+// Attachmnets section
+// Library of documents and attachments associated to this report
+// -------------------------------------------------------------
+* section contains sectionAttachments 1..1
+* section[sectionAttachments]
+  * insert SectionComRules (
+      Library of attachments.,
+      List documents related and attachments to this report.,
+      $loinc#77599-9 ) // "Additional documentation"
+  * ^short = "Attachments"
+  * ^definition = "This section lists documents and attachments associated to this report"
+  * entry only Reference(DocumentReference or Binary) // Add Bundle ?
+  * entry 1..
+
+// -------------------------------------
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Profile: CZ_CompositionHdr
+Parent: CZ_CompositionHdr_L1
 Id: cz-composition-hdr
 //Id: composition-cz-hdr
 Title: "Composition (HDR CZ)"
@@ -716,21 +751,21 @@ $loinc#10160-0) // 	History of Medication use Narrative
 
 
 
-// -------------------------------------------------------------
-// Attachmnets section
-// Library of documents and attachments associated to this report
-// -------------------------------------------------------------
-* section contains sectionAttachments 0..1
-* section[sectionAttachments]
-  * insert SectionComRules (
-      Library of attachments.,
-      List documents related and attachments to this report.,
-      $loinc#77599-9 ) // "Additional documentation"
-  * ^short = "Attachments"
-  * ^definition = "This section lists documents and attachments associated to this report"
-  * entry only Reference(DocumentReference or Binary) // Add Bundle ?
+// // -------------------------------------------------------------
+// // Attachmnets section
+// // Library of documents and attachments associated to this report
+// // -------------------------------------------------------------
+// * section contains sectionAttachments 0..1
+// * section[sectionAttachments]
+//   * insert SectionComRules (
+//       Library of attachments.,
+//       List documents related and attachments to this report.,
+//       $loinc#77599-9 ) // "Additional documentation"
+//   * ^short = "Attachments"
+//   * ^definition = "This section lists documents and attachments associated to this report"
+//   * entry only Reference(DocumentReference or Binary) // Add Bundle ?
 
-// -------------------------------------
+// // -------------------------------------
 
 
 * section contains sectionEncounters ..1

@@ -340,3 +340,30 @@ Usage: #example
 * section[9].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
 * section[9].text.status = #generated
 */
+
+Instance: DischargeComposition-Novak-Petr_L1
+InstanceOf: CZ_CompositionHdr_L1
+Description: "Example Composition for Hospital Discharge Report for patient Novák Petr"
+Usage: #example
+* id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eaaa"
+* status = #final
+* type.coding[0].system = $loinc
+* type.coding[0].code = #34105-7
+* type.coding[0].display = "Hospital Discharge summary"
+* category[0].coding[0].system = $composition-category
+* category[0].coding[0].code = #18842-5
+* category[0].coding[0].display = "Discharge summary"
+* title = "Propouštěcí zpráva"
+* date = "2025-03-10T14:30:00+01:00"
+* author[+] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
+* author[+] = Reference(Practitioner-Author-detail)
+* author[+] = Reference(Organization-1)         // document authored by practitioner role
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)         
+
+* section[sectionAttachments].title = "Zobrazitelná forma dokumentu"
+* section[sectionAttachments].code.coding[0].system = "http://loinc.org"
+* section[sectionAttachments].code.coding[0].code = #77599-9   
+* section[sectionAttachments].code.coding[0].display = "Additional documentation"
+* section[sectionAttachments].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-4c8f0b2d00)
+* section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
+* section[sectionAttachments].text.status = #generated

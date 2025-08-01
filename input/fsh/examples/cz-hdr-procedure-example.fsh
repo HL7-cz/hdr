@@ -78,7 +78,13 @@ Description: "Czech HDR - example of a Procedure - Pacemaker"
 </div>
 """
  
+// HON Kvůli změně balíčku ips na 1.1.0, je potřeba aktualizovat i tuto instanci 
+// Instance: Procedure-No-Procedure
+// InstanceOf: CZ_ProcedureHdr
+// Title: "CZ-Procedure-HDR Example - No known procedures"
+// Description: "Czech HDR - example of a Procedure - No known procedures."
  
+
 Instance: Procedure-No-Procedure
 InstanceOf: CZ_ProcedureHdr
 Title: "CZ-Procedure-HDR Example - No known procedures"
