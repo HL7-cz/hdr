@@ -92,7 +92,7 @@ InstanceOf: CZ_EncounterHdr
 
 Instance: HospitalEncounter-Novak-Petr
 InstanceOf: CZ_EncounterHdr
-//* id = "hospital-encounter-Novak-Petr"
+* id = "10f5c49e-086d-4016-8dd1-b555306bf620"
 * status = #finished
 * class.code = #IMP 
 * class.system = $cz-encounter-typ-kontaktu
@@ -134,7 +134,7 @@ InstanceOf: CZ_EncounterHdr
 
 Instance: HospitalEncounter-Novak-Petr_L1
 InstanceOf: CZ_EncounterHdr
-* id = "hospital-encounter-Novak-Petr"
+* id = "f08151d0-a7ad-4a7b-b7b9-97eb1d394ffb"
 * status = #finished
 * class.code = #IMP 
 * class.system = $cz-encounter-typ-kontaktu
