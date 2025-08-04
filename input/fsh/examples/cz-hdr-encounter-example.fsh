@@ -100,20 +100,20 @@ InstanceOf: CZ_EncounterHdr
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * period.start = "2025-03-01T10:15:00+01:00"
 * period.end = "2025-03-10T09:30:00+01:00"
-* serviceProvider = Reference(CZ_OrganizationCore/RegisteringProviderExample)
+* serviceProvider = Reference(RegisteringProviderExample)
 // Reason for encounter
-* reasonReference = Reference(CZ_ConditionHdr/Condition-K409)
+* reasonReference = Reference(Condition-K409)
 * hospitalization.admitSource.coding[0].system = $admit-source
 * hospitalization.admitSource.coding[0].code = #outp
 * hospitalization.admitSource.coding[0].display = "Ambulantní péče"
 * priority.coding[0].system = $actPriority
 * priority.coding[0].code = #EM
 * priority.coding[0].display = "Akutní"
-* participant[0].individual = Reference(CZ_PractitionerCore/Practitioner-Admitter)
+* participant[0].individual = Reference(Practitioner-Admitter)
 * participant[0].type.coding[0].system = $v3-ParticipationType
 * participant[0].type.coding[0].code = #ADM
 * participant[0].type.coding[0].display = "Admitter"
-* participant[1].individual = Reference(CZ_PractitionerRoleCore/Practitioner-Referrer-detail)
+* participant[1].individual = Reference(Practitioner-Referrer-detail)
 * participant[1].type.coding[0].system = $v3-ParticipationType
 * participant[1].type.coding[0].code = #REF
 * participant[1].type.coding[0].display = "Referrer"
@@ -130,3 +130,16 @@ InstanceOf: CZ_EncounterHdr
 * location[2].location = Reference(Location-Chrudim-Chir1)
 * location[2].period.start = "2025-03-04T08:00:00+01:00"
 * location[2].period.end = "2025-03-10T08:00:00+01:00"
+
+
+Instance: HospitalEncounter-Novak-Petr_L1
+InstanceOf: CZ_EncounterHdr
+* id = "hospital-encounter-Novak-Petr"
+* status = #finished
+* class.code = #IMP 
+* class.system = $cz-encounter-typ-kontaktu
+* class.display = "inpatient encounter"
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
+* period.start = "2025-03-01T10:15:00+01:00"
+* period.end = "2025-03-10T09:30:00+01:00"
+* serviceProvider = Reference(RegisteringProviderExample)

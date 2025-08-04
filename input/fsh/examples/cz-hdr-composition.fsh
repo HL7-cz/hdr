@@ -317,7 +317,7 @@ Usage: #example
 * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
 * section[sectionAttachments].code.coding[0].code = #77599-9   
 * section[sectionAttachments].code.coding[0].display = "Additional documentation"
-* section[sectionAttachments].entry[0] = Reference(DischargeDocumenPDF)
+* section[sectionAttachments].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-4c8f0b2d00)
 * section[sectionAttachments].entry[1] = Reference(DischargeDocumentHTML)
 * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
 * section[sectionAttachments].text.status = #generated
@@ -342,7 +342,7 @@ Usage: #example
 */
 
 Instance: DischargeComposition-Novak-Petr_L1
-InstanceOf: CZ_CompositionHdr_L1
+InstanceOf: CZ_CompositionHdr
 Description: "Example Composition for Hospital Discharge Report for patient Novák Petr"
 Usage: #example
 * id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eaaa"
@@ -358,7 +358,8 @@ Usage: #example
 * author[+] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * author[+] = Reference(Practitioner-Author-detail)
 * author[+] = Reference(Organization-1)         // document authored by practitioner role
-* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)         
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
+* encounter = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620)
 
 * section[sectionAttachments].title = "Zobrazitelná forma dokumentu"
 * section[sectionAttachments].code.coding[0].system = "http://loinc.org"

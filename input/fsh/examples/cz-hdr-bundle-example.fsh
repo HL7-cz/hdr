@@ -195,6 +195,8 @@ Usage: #example
 * entry[organization][=].resource = Organization-1
 * entry[documentReference][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-4c8f0b2d00"
 * entry[documentReference][=].resource = DischargeDocumenPDF
+* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eabb"
+* entry[provenance][=].resource = signature-L3
 
 
 // 2. Bundle: Hospital Discharge Report - Novák Petr
@@ -219,6 +221,9 @@ Usage: #example
 * entry[organization][=].resource = Organization-1
 * entry[documentReference][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-4c8f0b2d00"
 * entry[documentReference][=].resource = DischargeDocumenPDF
+* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
+* entry[provenance][=].resource = signature-L1
+
 
 
 

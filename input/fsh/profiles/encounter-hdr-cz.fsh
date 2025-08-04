@@ -30,7 +30,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 
   * ^short = "The patient present at the encounter"
 * basedOn ^short = "The request for which this encounter has been made"
-* period
+* period 1..1
   * ^short = "The start and end time of this encounter."
   * ^definition = "The start and end time of this inpatient stay."
 * reasonCode from ConditionHdrVS (preferred)
@@ -82,4 +82,5 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
   * location only Reference ( CZ_LocationCore )
   * period ^short = "Location period"
 
-* serviceProvider only Reference ( CZ_OrganizationCore )
+* serviceProvider 1..1
+* serviceProvider only Reference ( CZ_OrganizationCore ) 
