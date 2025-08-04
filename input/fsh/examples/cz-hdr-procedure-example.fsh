@@ -125,7 +125,7 @@ InstanceOf: CZ_ProcedureHdr
 // Procedure: inguinal-hernia (CZ_ProcedureHdr)
 Instance: Procedure-inguinal-hernia
 InstanceOf: CZ_ProcedureHdr
-//* id = "procedure-inguinal-hernia"
+* id = "ffb1a62f-9050-4e33-af4b-4cdb8203c9e5"
 * status = #completed
 * code.coding[0].system = $sct
 * code.coding[0].code = #44558001

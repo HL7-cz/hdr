@@ -46,7 +46,7 @@ Usage: #example
   """
 * section[sectionDiagnosticSummary].text.status = #generated
 * section[sectionDiagnosticSummary].entry[0] = Reference(urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2)
-* section[sectionDiagnosticSummary].entry[1] = Reference(urn:uuid:ffb1a62f-9050-4e33-af4b-4cdb8203c9e5)
+* section[sectionDiagnosticSummary].entry[1] = Reference(urn:uuid:fdf9e92d-ac48-4706-b15b-d2eaca85f45f)
 
 // Významné výkony
 // Sekce Významné procedury
