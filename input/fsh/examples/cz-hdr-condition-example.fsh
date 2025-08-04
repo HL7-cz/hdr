@@ -190,7 +190,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #I83.9 // Corrected code assignment
 * code.coding[0].display = "Varicose veins of lower extremities without ulcer or inflammation"

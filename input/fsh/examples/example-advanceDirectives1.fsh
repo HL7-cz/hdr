@@ -1,9 +1,12 @@
 Instance: CZ-AdvanceDirectives-HDR-DNR
-InstanceOf: Consent
+InstanceOf: CZ_ConsentHdr
 Usage: #example
 Title: "AdvanceDirectives  DNR"
 Description: "Czech hdr - example od advance directive"
 
+* status = #active
+// this in eu hdr
+//* policyRule = http://hl7europe.org/policy-rules#local "local policy rule"
 
 * dateTime = "2025-01-01T08:00:00+01:00"
 
