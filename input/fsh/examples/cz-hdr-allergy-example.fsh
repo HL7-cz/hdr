@@ -182,6 +182,7 @@ InstanceOf: CZ_AllergyIntoleranceHdr
 Usage: #example
 Title: "AllergyIntolerance - Strawberry"
 Description: "Patient experiences itching and tongue swelling in response to strawberries."
+* id = "6cf80cb1-9766-470f-ac36-b1d3d8950f1b"
 // Povinný identifikátor
 * identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
 * identifier[0].value = "Allergy-Strawberry-Novak-001"

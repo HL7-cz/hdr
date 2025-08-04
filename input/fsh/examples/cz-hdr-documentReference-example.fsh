@@ -9,7 +9,7 @@ Usage: #example
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * date = "2022-10-07T08:15:00+02:00"
 * author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
-* custodian = Reference(Organization-1)
+* custodian = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169)
 * content[0].attachment.contentType = #application/pdf
 * content[0].attachment.language = #cs
 * content[0].attachment.title = "Propouštěcí zpráva"
@@ -28,7 +28,7 @@ Usage: #example
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * date = "2022-10-07T08:15:00+02:00"
 * author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
-* custodian = Reference(Organization-1)
+* custodian = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169)
 * content[0].attachment.contentType = #text/html
 * content[0].attachment.language = #cs
 * content[0].attachment.title = "Propouštěcí zpráva"

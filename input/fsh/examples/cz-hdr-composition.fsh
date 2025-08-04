@@ -16,7 +16,7 @@ Usage: #example
 * date = "2025-03-10T14:30:00+01:00"
 * author[+] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * author[+] = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
-* author[+] = Reference(Organization-1)         // document authored by practitioner role
+* author[+] = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169)         // document authored by practitioner role
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)            // document subject is patient
 //Důvod přijetí je obsažen v Encouteru ReasonReference
 * encounter = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620)
@@ -345,7 +345,7 @@ Instance: DischargeComposition-Novak-Petr_L1
 InstanceOf: CZ_CompositionHdr
 Description: "Example Composition for Hospital Discharge Report for patient Novák Petr"
 Usage: #example
-* id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eaaa"
+* id = "6891fd68-dc3c-4c91-a8d3-cb5ec990c03b"
 * status = #final
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
@@ -356,8 +356,8 @@ Usage: #example
 * title = "Propouštěcí zpráva"
 * date = "2025-03-10T14:30:00+01:00"
 * author[+] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
-* author[+] = Reference(Practitioner-Author-detail)
-* author[+] = Reference(Organization-1)         // document authored by practitioner role
+* author[+] = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
+* author[+] = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169)         // document authored by practitioner role
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * encounter = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620)
 

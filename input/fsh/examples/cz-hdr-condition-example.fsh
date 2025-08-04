@@ -55,6 +55,7 @@ InstanceOf: CZ_ConditionHdr
 Usage: #example
 Title: "CZ-Condition-HDR Example K409"
 Description: "Example of a condition K409 with details on admission"
+* id = "35717696-8a99-4f99-a938-ec0ec88a65a2"
 // Condition details
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
