@@ -36,7 +36,7 @@ class "immunization-cz-hdr" <<Profile>> [[StructureDefinition-cz-immunization-hd
 class "procedure-cz-hdr" <<Profile>> [[StructureDefinition-cz-procedure-hdr.html]]
 "PatientHistoryEhn" <|. "procedure-cz-hdr"
 "immunization-cz-hdr" -d[hidden]-> "procedure-cz-hdr"
-class "familyMemberHistory-cz-hdr" <<Profile>> [[StructureDefinition-czh-familyMemberHistory-hdr.html]]
+class "familyMemberHistory-cz-hdr" <<Profile>> [[StructureDefinition-cz-familyMemberHistory-hdr.html]]
 "PatientHistoryEhn" <|. "familyMemberHistory-cz-hdr"
 "procedure-cz-hdr" -d[hidden]-> "familyMemberHistory-cz-hdr"
 @enduml

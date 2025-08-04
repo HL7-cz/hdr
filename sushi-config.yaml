@@ -11,7 +11,7 @@ description: This guide contains implementation specification for the HL7 Czech 
 status: draft # draft | active | retired | unknown
 
 version: 0.0.2
-language: cs
+#language: #cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -19,7 +19,7 @@ license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
-jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#203 "Czech Republic (CZE)"
+jurisdiction: urn:iso:std:iso:3166#CZ "Czechia"
 publisher:
   name: HL7 Czech Republic
   url: https://www.hl7.cz/
@@ -39,14 +39,14 @@ publisher:
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
 dependencies:
-  hl7.fhir.uv.ips: current
-  hl7.fhir.cz.core: current
-  hl7.fhir.eu.hdr: current
-  hl7.fhir.eu.laboratory: current
-  hl7.fhir.eu.base: current
+  hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.extensions.r5: 4.0.1
-  ihe.pharm.mpd: current
-  hl7.fhir.eu.extensions: current
+  hl7.fhir.eu.extensions.r4: 0.1.1-ballot
+  hl7.fhir.eu.laboratory: 0.1.1
+  hl7.fhir.eu.base: 0.1.0-ballot
+  hl7.fhir.eu.hdr: 0.1.0-ballot
+  ihe.pharm.mpd.r4: 1.0.0-comment-2
+  hl7.fhir.cz.core: current
   hl7.fhir.cz.lab: current
   hl7.fhir.cz.img: current
   
@@ -98,7 +98,7 @@ dependencies:
 #    title: eHN - Guidelines (cs)
 #  ehn-guidelines.md:
 #    title: eHN - Guidelines (en)
-#-----------------------new menu------------------------------------
+
 pages:
   index.md:
     title: Home
@@ -144,7 +144,10 @@ pages:
     title: Downloads
   downloads-cs.md:
     title: Ke stažení
-  
+  implementation-notes.md:
+    title: Implementation notes
+  implementation-notes-cs.md:
+    title: Implementační poznámky
   #terminology-considerations.md:
   #  title: Terminology considerations
   #terminology-considerations-cs.md:
@@ -225,6 +228,8 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 #  generate-turtle:
 #  html-template:
 #  active-tables: false
+  pin-canonicals: pin-multiples
+  path-expansion-params: '../../expansion-params.json'
   apply-contact: true
   apply-jurisdiction: true
   apply-publisher: true
@@ -308,6 +313,8 @@ menu:
     Examples (cs): examples-cs.html
     Obligations (en): obligations.html
     Obligations (cs): obligations-cs.html
+    Implementation notes (en): implementation-notes.html
+    Implementation notes (cs): implementation-notes-cs.html
   About:
     Authors (en): authors.html
     Authors (cs): authors-cs.html
@@ -422,6 +429,14 @@ menu:
         #- ConceptMap/medicationSummary2FHIR-cz-hdr
 #*/
 groups:
+  obligations:
+    name:  Actors and Obligations (Informative)
+    description: Actors and Obligations used to describe the HDR functional requirements for the specified data elements. Informative for this version of the guide.
+    resources:
+      - ActorDefinition/actor-consumer-hdr
+      - ActorDefinition/actor-creator-hdr
+      - StructureDefinition/cz-patient-obl-hdr
+
   czech-logical-model:
     name:  Czech logical model (Informative)
     description: Logical model in czech language. Informative for this version of the guide.
@@ -443,6 +458,7 @@ groups:
       - StructureDefinition/LogPatientHistoryCz
       - StructureDefinition/LogSubjectCz
       - StructureDefinition/LogPresentedFormCz
+
       
 
 # The ImplementationGuide resource defines several other properties

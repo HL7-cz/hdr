@@ -15,7 +15,7 @@ Description: "Czech HDR - example of a care plan"
 * subject = Reference(Mracena2)
 
 // Activity details
-* activity.detail.kind = #Procedure
+* activity.detail.kind = #Appointment
 * activity.detail.description = "Follow-up appointment with cardiologist"
 * activity.detail.status = #scheduled
 // TBD Udělat po procedůře
@@ -27,7 +27,7 @@ InstanceOf: CarePlan
 Usage: #example
 Title: "CarePlan-Novak-Petr"
 Description: "Czech HDR - example of a care plan"
-* id = "CarePlan-Novak-Petr"
+* id = "9c913d06-84fe-4d35-b35b-8b0c7965f535"
 // Care plan details
 * status = #active    //http://hl7.org/fhir/ValueSet/request-status
 * intent = #plan    //http://hl7.org/fhir/ValueSet/care-plan-intent
@@ -38,11 +38,11 @@ Description: "Czech HDR - example of a care plan"
 //popis doporučení
 * description = "Plán péče zaměřený na chirurgické řešení jednostranné tříselné kýly (K40.9) u stabilního pacienta. Péče zahrnuje pooperační sledování, edukaci o režimu a následnou ambulantní kontrolu."
 * period.start = "2025-03-10T08:00:00+01:00"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 //další podrobnosti plánu, cíle
 * goal = Reference(Goal-hernia-treatment)
 // Activity detail
-* activity[+].detail.kind = #Procedure
+* activity[+].detail.kind = #ServiceRequest
 * activity[=].detail.description = "Pooperační sledování, převazy, kontrola rány"
 * activity[=].detail.status = #scheduled
 * activity[+].detail.kind = #CommunicationRequest

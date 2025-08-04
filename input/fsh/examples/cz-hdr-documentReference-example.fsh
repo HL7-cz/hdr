@@ -3,12 +3,12 @@ InstanceOf: DocumentReference
 Title: "Discharge Summary Document - PDF"
 Description: "DocumentReference with Base64 PDF content directly inserted"
 Usage: #example
-
+* id = "3f85726c-ad2f-441b-89ce-4c8f0b2d00"
 * status = #current
 * type = $loinc#18842-5 "Discharge summary"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * date = "2022-10-07T08:15:00+02:00"
-* author[0] = Reference(Practitioner-Author)
+* author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * custodian = Reference(Organization-1)
 * content[0].attachment.contentType = #application/pdf
 * content[0].attachment.language = #cs
@@ -25,9 +25,9 @@ Usage: #example
 
 * status = #current
 * type = $loinc#18842-5 "Discharge summary"
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * date = "2022-10-07T08:15:00+02:00"
-* author[0] = Reference(Practitioner-Author)
+* author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * custodian = Reference(Organization-1)
 * content[0].attachment.contentType = #text/html
 * content[0].attachment.language = #cs

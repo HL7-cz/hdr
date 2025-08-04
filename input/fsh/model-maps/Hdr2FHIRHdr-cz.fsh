@@ -1,7 +1,7 @@
 Instance: hdr2FHIR-cz-hdr
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "http://hl7.cz/fhir/hdr/ConceptMap/hdr2FHIR-cz-hdr"
+* url = "https://hl7.cz/fhir/hdr/ConceptMap/hdr2FHIR-cz-hdr"
 * name = "Hdr2FHIRCzHdr"
 * title = "CZ HDR Model to this guide Map"
 * status = #draft

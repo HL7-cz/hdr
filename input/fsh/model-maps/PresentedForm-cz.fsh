@@ -1,7 +1,7 @@
 Logical: LogCzPresentedFormCz
 Id: LogPresentedFormCz
 Title: "A.3 - Vizuální podoba dokumentu"
-Description: """Zpráva z obrazového vyšetření čitelná lidským okem,  je požadován PDF formát."""
+Description: """Nemocniční propouštěcí zpráva - Zpráva z obrazového vyšetření čitelná lidským okem, je požadován PDF formát."""
 
 * typObsahu 0..1 CodeableConcept "A.3.1 Typ obsahu" """Typ obsahu - je  požadován MIME typ"""
 * jazyk 0..1 CodeableConcept "A.3.2 Jazyk obsahu" """Jazyk obsahu - je požadována hodnata z HL7 valueset Languages"""

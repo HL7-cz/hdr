@@ -55,4 +55,4 @@ Součást těla zprávy o propuštění z nemocnice obsahuje:
 
 #### Datová sada eHN jako logické modely HL7 FHIR.
 
-Logické modely HL7 FHIR používané k reprezentaci datové sady HOSPITAL DISCHARGE REPORT DATASET (Zpráva o propuštění z nemocnice), jak jsou definovány v části 4 uvedeného pokynu eHN, jsou zdokumentovány na stránce [HL7 FHIR Models](logicalModel.html).
+Logické modely HL7 FHIR používané k reprezentaci datové sady HOSPITAL DISCHARGE REPORT DATASET (Zpráva o propuštění z nemocnice), jak jsou definovány v části 4 uvedeného pokynu eHN, jsou zdokumentovány na stránce [HL7 FHIR Models](logical-models.html).

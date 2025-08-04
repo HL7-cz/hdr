@@ -23,6 +23,7 @@ Description: "Panel obsahující základní hematologické hodnoty"
 * code = https://nclp.uzis.cz#11115 "Krevní obraz"
 * subject = Reference(Mracena2)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
+* performer = Reference(Practitioner-2)
 * issued = "2025-04-01T09:30:00+01:00"
 * hasMember[0] = Reference(hb-result)
 * hasMember[1] = Reference(hct-result)
@@ -43,7 +44,7 @@ Description: "Příklad pro HDR - Hladina hemoglobinu v krvi"
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
 * valueQuantity.value = 145
 * valueQuantity.unit = "g/L"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #g/L
 * referenceRange.low.value = 135
 * referenceRange.high.value = 170
@@ -63,9 +64,10 @@ Description: "Příklad pro HDR - Hematokrit v krvi"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
+* performer = Reference(Practitioner-2)
 * valueQuantity.value = 0.43
 * valueQuantity.unit = "1"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #1
 * referenceRange.low.value = 0.40
 * referenceRange.high.value = 0.50
@@ -82,9 +84,10 @@ Description: "Příklad pro HDR - Počet erytrocytů v krvi"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
+* performer = Reference(Practitioner-2)
 * valueQuantity.value = 5.1
 * valueQuantity.unit = "10^12/L"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #10*12/L
 * referenceRange.low.value = 4.2
 * referenceRange.high.value = 5.8
@@ -101,9 +104,10 @@ Description: "Příklad pro HDR - Počet leukocytů v krvi"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
+* performer = Reference(Practitioner-2)
 * valueQuantity.value = 6.8
 * valueQuantity.unit = "10^9/L"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #10*9/L
 * referenceRange.low.value = 3.8
 * referenceRange.high.value = 10.0
@@ -120,9 +124,10 @@ Description: "Příklad pro HDR - Počet trombocytů v krvi"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
+* performer = Reference(Practitioner-2)
 * valueQuantity.value = 250
 * valueQuantity.unit = "10^9/L"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #10*9/L
 * referenceRange.low.value = 150
 * referenceRange.high.value = 400
@@ -158,5 +163,5 @@ Description: "Referenční laboratoř pro klinickou hematologii"
 * address[0].city = "Brno"
 * address[0].postalCode = "60200"
 * address[0].country = "CZ"
-* extension[0].url = "http://hl7.cz/fhir/core/StructureDefinition/cz-organization-specialization"
+//* extension[0].url = "http://hl7.cz/fhir/core/StructureDefinition/cz-organization-specialization" nelze pouzit
 

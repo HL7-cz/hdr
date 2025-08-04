@@ -1,7 +1,7 @@
 @startmindmap
-* Propouštěcí zpráva z nemocnice
-** [[#header Hlavička dokumentu]]
-** [[#body Tělo dokumentu]]
+* [[StructureDefinition-LogHospitalDischargeReportCz.html Propouštěcí zpráva z nemocnice]]
+** [[StructureDefinition-LogHeaderHdrCz.html Hlavička dokumentu]]
+** Tělo dokumentu
 ** Zobrazitelná forma dokumentu
 ** Přílohy
 @endmindmap

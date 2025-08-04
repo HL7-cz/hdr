@@ -1,7 +1,7 @@
 Instance: hospitalStay2FHIR-cz-hdr
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "http://hl7.cz/fhir/hdr/ConceptMap/hospitalStay2FHIR-cz-hdr"
+* url = "https://hl7.cz/fhir/hdr/ConceptMap/hospitalStay2FHIR-cz-hdr"
 * name = "HospitalStay2FHIRCzHdr"
 * title = "eHN Hospital Stay Model to this guide Map"
 * status = #draft
@@ -132,7 +132,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "if it is the udiCarrier"
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/HospitalStayCz"
-* group[=].target = "http://hl7.org/fhir/StructureDefinition/DeviceUseStatement"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-deviceUseStatement-hdr"
 * group[=].element[+].code = #HospitalStay.medicalDevices.description
 * group[=].element[=].display = "A.2.7.3.1 - Device and implant description"
 * group[=].element[=].target.code = #DeviceUseStatement.text
@@ -161,7 +161,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/HospitalStayCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-medication-hdr"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-Medication"
 * group[=].element[+].code = #HospitalStay.pharmacotherapy.productCode
 * group[=].element[=].display = "A.2.7.5.2 - Code"
 * group[=].element[=].target.code = #Medication.code
@@ -193,7 +193,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/HospitalStayCz"
-* group[=].target = "http://hl7.org/fhir/StructureDefinition/MedicationDispense"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-medicationDispense-hdr"
 * group[=].element[+].code = #HospitalStay.pharmacotherapy.reason
 * group[=].element[=].display = "A.2.7.5.1 - Medication reason"
 * group[=].element[=].target.code = #MedicationDispense.reasonCode
@@ -210,7 +210,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/HospitalStayCz"
-* group[=].target = "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-medicationRequest-hdr"
 * group[=].element[+].code = #HospitalStay.pharmacotherapy.reason
 * group[=].element[=].display = "A.2.7.5.1 - Medication reason"
 * group[=].element[=].target.code = #MedicationRequest.reasonCode
@@ -386,7 +386,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/HospitalStayCz"
-* group[=].target = "http://hl7.org/fhir/StructureDefinition/MedicationStatement"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-MedicationStatement"
 * group[=].element[+].code = #HospitalStay.pharmacotherapy.reason
 * group[=].element[=].display = "A.2.7.5.1 - Medication reason"
 * group[=].element[=].target.code = #MedicationStatement.reasonReference
