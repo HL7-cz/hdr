@@ -317,7 +317,7 @@ Usage: #example
 * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
 * section[sectionAttachments].code.coding[0].code = #77599-9   
 * section[sectionAttachments].code.coding[0].display = "Additional documentation"
-* section[sectionAttachments].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-4c8f0b2d00)
+* section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
 * section[sectionAttachments].entry[1] = Reference(DischargeDocumentHTML)
 * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
 * section[sectionAttachments].text.status = #generated
@@ -365,6 +365,6 @@ Usage: #example
 * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
 * section[sectionAttachments].code.coding[0].code = #77599-9   
 * section[sectionAttachments].code.coding[0].display = "Additional documentation"
-* section[sectionAttachments].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-4c8f0b2d00)
+* section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
 * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
 * section[sectionAttachments].text.status = #generated

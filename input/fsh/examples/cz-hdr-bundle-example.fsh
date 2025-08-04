@@ -191,9 +191,9 @@ Usage: #example
 * entry[observation][=].resource = Observation-Education-level
 * entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000027"
 * entry[observation][=].resource = Observation-Education
-* entry[organization][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-aceace0000000"
+* entry[organization][+].fullUrl = "urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
 * entry[organization][=].resource = Organization-1
-* entry[documentReference][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-4c8f0b2d00"
+* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
 * entry[documentReference][=].resource = DischargeDocumenPDF
 * entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eabb"
 * entry[provenance][=].resource = signature-L3
@@ -217,9 +217,9 @@ Usage: #example
 * entry[practitioner][=].resource = Practitioner-Author
 * entry[practitionerRole][+].fullUrl = "urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849"
 * entry[practitionerRole][=].resource = Practitioner-Author-detail
-* entry[organization][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-aceace0000000"
+* entry[organization][+].fullUrl = "urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
 * entry[organization][=].resource = Organization-1
-* entry[documentReference][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-4c8f0b2d00"
+* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
 * entry[documentReference][=].resource = DischargeDocumenPDF
 * entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
 * entry[provenance][=].resource = signature-L1

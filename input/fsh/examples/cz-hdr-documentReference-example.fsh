@@ -3,7 +3,7 @@ InstanceOf: DocumentReference
 Title: "Discharge Summary Document - PDF"
 Description: "DocumentReference with Base64 PDF content directly inserted"
 Usage: #example
-* id = "3f85726c-ad2f-441b-89ce-4c8f0b2d00"
+* id = "66678621-df93-47ca-a36c-2a39a92472e7"
 * status = #current
 * type = $loinc#18842-5 "Discharge summary"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
