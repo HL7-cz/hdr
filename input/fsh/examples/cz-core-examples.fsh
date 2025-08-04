@@ -165,7 +165,7 @@ Usage: #example
   * city = "Praha"
   * postalCode = "120 00"
   * country = "CZ"
-* physicalType = #bu
+* physicalType = $locationType#bu
 
 Instance: rodnecislo_7161264528
 InstanceOf: CZ_Rodcis_Identifier

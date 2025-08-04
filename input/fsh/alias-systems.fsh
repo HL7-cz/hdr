@@ -42,6 +42,7 @@ Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/alle
 Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $consent-category = http://terminology.hl7.org/CodeSystem/consentcategorycodes
 Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope
+Alias: $locationType = http://terminology.hl7.org/CodeSystem/location-physical-type
 
 // --- SID
 Alias: $oid = urn:ietf:rfc:1155

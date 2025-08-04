@@ -1,3 +1,26 @@
+Instance: Location-5
+InstanceOf: CZ_LocationCore
+Title: "Sample Czech Location 1"
+Description: "Example instance of a location conforming to the CZ_LocationCore profile."
+Usage: #example
+//* id = "sample-cz-location-5"
+* status = #active
+* name = "Nemocnice Praha - Klinika Chirurgie"
+* description = "Klinika Chirurgie v hlavní nemocnici v Praze"
+* managingOrganization = Reference(Organization-1)
+* telecom[0].system = #phone
+* telecom[0].value = "+420 123 456 789"
+* telecom[0].use = #work
+* address
+  * use = #work
+  * type = #both
+  * text = "Vinohradská 800/14, 120 00 Praha 2, Česká republika"
+  * line[0] = "Vinohradská 800/14"
+  * city = "Praha"
+  * postalCode = "120 00"
+  * country = "CZ"
+* physicalType = $locationType#bu
+
 Instance: Location-2
 InstanceOf: CZ_LocationCore
 Title: "Sample Czech Location 2"
@@ -22,12 +45,10 @@ Usage: #example
   * city = "Praha"
   * postalCode = "120 00"
   * country = "CZ"
-* physicalType = #bu
+* physicalType = $locationType#bu
 //add partOf to the main hospital
 * partOf = Reference(Location-5)
 * partOf.display = "Klinika Chirurgie"
-* partOf.reference = "Location-5"
-* partOf.type = #location
 
 Instance: Location-3
 InstanceOf: CZ_LocationCore
@@ -51,11 +72,9 @@ Usage: #example
   * city = "Praha"
   * postalCode = "120 00"
   * country = "CZ"
-* physicalType = #bu
+* physicalType = $locationType#bu
 * partOf = Reference(Location-5)
 * partOf.display = "Klinika Chirurgie"
-* partOf.reference = "Location-5"
-* partOf.type = #location
 
 Instance: Location-4
 InstanceOf: CZ_LocationCore
@@ -79,34 +98,9 @@ Usage: #example
   * city = "Praha"
   * postalCode = "120 00"
   * country = "CZ"
-* physicalType = #bu
+* physicalType = $locationType#bu
 * partOf = Reference(Location-5)
 * partOf.display = "Klinika Chirurgie"
-* partOf.reference = "Location-5"
-* partOf.type = #location
-
-Instance: Location-5
-InstanceOf: CZ_LocationCore
-Title: "Sample Czech Location 5"
-Description: "Example instance of a location conforming to the CZ_LocationCore profile."
-Usage: #example
-* id = "sample-cz-location-5"
-* status = #active
-* name = "Nemocnice Praha - Klinika Chirurgie"
-* description = "Klinika Chirurgie v hlavní nemocnici v Praze"
-* managingOrganization = Reference(Organization-1)
-* telecom[0].system = #phone
-* telecom[0].value = "+420 123 456 789"
-* telecom[0].use = #work
-* address
-  * use = #work
-  * type = #both
-  * text = "Vinohradská 800/14, 120 00 Praha 2, Česká republika"
-  * line[0] = "Vinohradská 800/14"
-  * city = "Praha"
-  * postalCode = "120 00"
-  * country = "CZ"
-* physicalType = #bu
 
 //--------------------------------------------
 Instance: Location-Chrudim-Chir1
@@ -125,7 +119,7 @@ Usage: #example
 * telecom[0].system = #phone
 * telecom[0].value = "+420 123 456 789"
 * telecom[0].use = #work
-* physicalType = #bu
+* physicalType = $locationType#bu
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Oddělení CHIR1 nemocnice Chrudim</div>" 
 * text.status = #generated
 //---------------------------------------------------------
@@ -146,7 +140,7 @@ Usage: #example
 * telecom[0].system = #phone
 * telecom[0].value = "+420 123 456 888"
 * telecom[0].use = #work
-* physicalType = #bu
+* physicalType = $locationType#bu
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Oddělení CHIR-JIP nemocnice Chrudim</div>" 
 * text.status = #generated
 
