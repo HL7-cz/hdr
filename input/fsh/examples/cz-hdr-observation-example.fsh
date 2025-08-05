@@ -187,7 +187,7 @@ Title: "CRP - Novák Petr"
 Description: "Czech HDR - example of CRP observation for Novák Petr"
 * id = "Observation-CRP-Novak"
 * status = #final
-* category = $observation-category#Laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
+* category = $observation-category#laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
 * code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-01T10:00:00+01:00"
@@ -237,7 +237,7 @@ Title: "Stav při propuštění"
 Description: "Hodnocení celkového klinického stavu pacienta při propuštění"
 * id = "3f85726c-ad2f-441b-89ce-100000000021"
 * status = #final
-* category[0] = $observation-category#clinical "Clinical"
+* category[0] = $observation-category#survey "Survey"
 * code = $loinc#66455-7 "Condition status"
 * performer[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
