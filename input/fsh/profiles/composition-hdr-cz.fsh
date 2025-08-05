@@ -221,7 +221,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 // -------------------------------------
 // Hospital Course Section 1..1
 // -------------------------------------
-* section contains sectionHospitalCourse 0..1
+* section contains sectionHospitalCourse 1..1
 // TODO přidat obligation L3
 * section[sectionHospitalCourse]
   * insert SectionComRules (
@@ -231,10 +231,10 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * ^short = "Significant information about course of hospital stay"
   * ^definition = "This section includes basic information about hospital staty (encounter), diagnostic summary in narrative form, pharmacotherapy, major procedures, medical devices, significant findings during hospital stay and clinical synthesis."
 
-  // * insert SectionSliceComRules (Hospital Course sub sections,Hospital Course sub sections)
+  //* insert SectionSliceComRules (Hospital Course sub sections,Hospital Course sub sections)
 
-  /* * entry 1..1
-   * entry only Reference(Encounter) // EncounterEuHdr */
+  * entry 1..1
+  * entry only Reference(CZ_EncounterHdr) // EncounterEuHdr */
 
 * section contains sectionDiagnosticSummary 0..1
 * section[sectionDiagnosticSummary]

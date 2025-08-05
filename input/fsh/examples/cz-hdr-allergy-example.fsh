@@ -8,7 +8,7 @@ Description: "No information is available regarding the patient’s allergy stat
 * identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
 * identifier[0].value = "no-known-allergy-001"
 //clinicalStatus
-* clinicalStatus = #active
+* clinicalStatus = $allergyintolerance-clinical#active
 // Kód pro “žádné známé alergie” (SNOMED CT)
 * code.coding[0].system = $sct
 * code.coding[0].code = #160244002

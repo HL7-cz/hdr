@@ -99,6 +99,8 @@ Usage: #example
   Pacient byl v dobrém stavu propuštěn do domácího ošetření dne 10. 3. 2025. Doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.
   </div>""" // Added required text for cardinality
 * section[sectionHospitalCourse].text.status = #additional //Additional text status for generated narrative /HONza
+* section[sectionHospitalCourse].entry[0] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620) // encounter
+
 
 //Sekce Souhrn Medikace
 * section[sectionMedications].title = "Medikace"
@@ -350,7 +352,7 @@ Usage: #example
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
 * type.coding[0].display = "Hospital Discharge summary"
-* category[0].coding[0].system = $composition-category
+* category[0].coding[0].system = $loinc
 * category[0].coding[0].code = #18842-5
 * category[0].coding[0].display = "Discharge summary"
 * title = "Propouštěcí zpráva"
@@ -360,6 +362,17 @@ Usage: #example
 * author[+] = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169)         // document authored by practitioner role
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * encounter = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620)
+
+* section[sectionHospitalCourse].title = "Klinické shrnutí"
+* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course Narrative"
+* section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
+  Pacient byl přijat dne 1. 3. 2025 na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Během hospitalizace byla provedena předoperační příprava včetně laboratorních vyšetření a interního předoperačního vyšetření.
+  Dne 2. 3. 2025 byla v celkové anestezii provedena operace – plastika pravostranné tříselné kýly. Operační výkon proběhl bez komplikací. Pacient byl pooperačně stabilní, bez známek infekce rány.
+  V rámci hospitalizace byla u pacienta sledována substituční léčba hypotyreózy (Euthyrox 75 µg denně), bez nutnosti úpravy dávkování. Hodnota TSH při přijetí v normě.
+  Pacient byl v dobrém stavu propuštěn do domácího ošetření dne 10. 3. 2025. Doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.
+  </div>""" // Added required text for cardinality
+* section[sectionHospitalCourse].text.status = #additional //Additional text status for generated narrative /HONza
+* section[sectionHospitalCourse].entry[0] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620) // encounter
 
 * section[sectionAttachments].title = "Zobrazitelná forma dokumentu"
 * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
