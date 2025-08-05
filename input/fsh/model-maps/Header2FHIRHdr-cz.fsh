@@ -281,7 +281,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "As business version, not as resource version"
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/Header"
-* group[=].target = "https://hl7.cz/fhir/base/StructureDefinition/cz-coverage"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-coverage"
 * group[=].element[+].code = #Header.payer.insuranceCode
 * group[=].element[=].display = "A.1.3.1 - Health insurance code"
 * group[=].element[=].target.code = #Coverage.payor

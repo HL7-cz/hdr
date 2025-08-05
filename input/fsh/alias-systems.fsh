@@ -40,8 +40,9 @@ Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-Particip
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
-Alias: $consent-category = http://hl7.org/fhir/consent-category
+Alias: $consent-category = http://terminology.hl7.org/CodeSystem/consentcategorycodes
 Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope
+Alias: $locationType = http://terminology.hl7.org/CodeSystem/location-physical-type
 
 // --- SID
 Alias: $oid = urn:ietf:rfc:1155
