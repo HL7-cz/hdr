@@ -171,7 +171,7 @@ Description: "Patient, contact information and practitioner"
 * birthDate = "1971-11-26"
 * identifier[+]
   * system = "https://ncez.mzcr.cz/fhir/sid/rid"
-  * value = "456789123"
+  * value = "4567891235"
 * name.use = #usual
 * name.family = "Mrakomorová"
 * name.given = "Mračena"
