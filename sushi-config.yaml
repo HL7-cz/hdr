@@ -46,7 +46,7 @@ dependencies:
   hl7.fhir.eu.laboratory: 0.1.1
   hl7.fhir.eu.base: 0.1.0-ballot
   hl7.fhir.eu.hdr: 0.1.0-ballot
-  ihe.pharm.mpd.r4: 1.0.0-comment-2
+  ihe.pharm.mpd: 1.0.0-comment-2
   hl7.fhir.cz.core: current
   hl7.fhir.cz.lab: current
   hl7.fhir.cz.img: current
