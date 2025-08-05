@@ -18,6 +18,8 @@ InstanceOf: CZ_Medication
 * amount.numerator.unit = "mcg"
 * amount.numerator.system = $ucum
 * amount.numerator.code = #/ug
+* amount.denominator.value = 1
+* amount.denominator.unit = "Tableta"
 * ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
 * ingredient[0].itemCodeableConcept.coding[0].code = #828
 * ingredient[0].itemCodeableConcept.coding[0].display = "LEVOTHYROXINE SODIUM"
@@ -68,6 +70,8 @@ InstanceOf: CZ_Medication
 * amount.numerator.unit = "mg"
 * amount.numerator.system = $ucum
 * amount.numerator.code = #/mg
+* amount.denominator.value = 1
+* amount.denominator.unit = "Tableta"
 * ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
 * ingredient[0].itemCodeableConcept.coding[0].code = #1064
 * ingredient[0].itemCodeableConcept.coding[0].display = "PARACETAMOL"
@@ -118,6 +122,8 @@ InstanceOf: CZ_Medication
 * amount.numerator.unit = "mg"
 * amount.numerator.system = $ucum
 * amount.numerator.code = #/mg
+* amount.denominator.value = 1
+* amount.denominator.unit = "Tableta"
 * ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
 * ingredient[0].itemCodeableConcept.coding[0].code = #81593
 * ingredient[0].itemCodeableConcept.coding[0].display = "IBUPROFEN"
@@ -171,6 +177,8 @@ InstanceOf: CZ_Medication
 * amount.numerator.unit = "ml"
 * amount.numerator.system = $ucum
 * amount.numerator.code = #/ml
+* amount.denominator.value = 0.3
+* amount.denominator.unit = "ml"
 
 * ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
 * ingredient[0].itemCodeableConcept.coding[0].code = #88213
