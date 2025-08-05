@@ -27,7 +27,7 @@ InstanceOf: CarePlan
 Usage: #example
 Title: "CarePlan-Novak-Petr"
 Description: "Czech HDR - example of a care plan"
-* id = "CarePlan-Novak-Petr"
+* id = "9c913d06-84fe-4d35-b35b-8b0c7965f535"
 // Care plan details
 * status = #active    //http://hl7.org/fhir/ValueSet/request-status
 * intent = #plan    //http://hl7.org/fhir/ValueSet/care-plan-intent
@@ -40,7 +40,7 @@ Description: "Czech HDR - example of a care plan"
 * period.start = "2025-03-10T08:00:00+01:00"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 //další podrobnosti plánu, cíle
-* goal = Reference(Goal-hernia-treatment)
+* goal = Reference(urn:uuid:620b1120-cece-44b1-89f5-20413054eb1d)
 // Activity detail
 * activity[+].detail.kind = #ServiceRequest
 * activity[=].detail.description = "Pooperační sledování, převazy, kontrola rány"

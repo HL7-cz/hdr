@@ -7,7 +7,7 @@ Description: "This profile sets minimum expectations for the Observation resourc
 * insert ImposeProfile($ObservationTravelEuHdr, 0)
 
 * ^experimental = false
-* code = $loinc#82753-5  //"Country of Travel"
+* code = $loinc#94651-7  //"Country of Travel"
 * effective[x] ^short = "Date or period of visit in a country"
 * effective[x] ^definition = "The date or period of visit in a country."
 * value[x] ^short = "Country visited"

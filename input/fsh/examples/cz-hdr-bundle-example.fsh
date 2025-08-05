@@ -119,7 +119,7 @@ Usage: #example
 * entry[practitionerRole][=].resource = Practitioner-Author-detail
 * entry[condition][+].fullUrl = "urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2"
 * entry[condition][=].resource = Condition-K409
-* entry[condition][+].fullUrl = "urn:uuid:ffb1a62f-9050-4e33-af4b-4cdb8203c9e5"
+* entry[condition][+].fullUrl = "urn:uuid:fdf9e92d-ac48-4706-b15b-d2eaca85f45f"
 * entry[condition][=].resource = Condition-E890-Novak
 * entry[allergyIntolerance][+].fullUrl = "urn:uuid:6cf80cb1-9766-470f-ac36-b1d3d8950f1b"
 * entry[allergyIntolerance][=].resource = Allergy-Strawberry-Novak
@@ -167,30 +167,68 @@ Usage: #example
 * entry[observation][=].resource = Observation-UZV-Novak
 * entry[observation][+].fullUrl = "urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b"
 * entry[observation][=].resource = Observation-CRP-Novak
-* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c"
-* entry[observation][=].resource = ExampleSdohSmoking
-* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001d"
-* entry[observation][=].resource = ExampleSdohAlcohol
+//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c"
+//* entry[observation][=].resource = ExampleSdohSmoking
+//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001d"
+//* entry[observation][=].resource = ExampleSdohAlcohol
 * entry[immunization][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001e"
 * entry[immunization][=].resource = Immunization
 * entry[deviceUseStatement][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001f"
 * entry[deviceUseStatement][=].resource = DeviceUseStatement-Pacemaker
 * entry[procedure][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000020"
 * entry[procedure][=].resource = Procedure-Insert-Pacemaker2
-* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000021"
-* entry[observation][=].resource = Observation-DischargeCondition
+//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000021"
+//* entry[observation][=].resource = Observation-DischargeCondition
 * entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000022"
 * entry[observation][=].resource = Observation-Participation-in-society
-* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000023"
-* entry[observation][=].resource = Observation-Work-situation
-* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000024"
-* entry[observation][=].resource = Observation-Hobby
+//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000023"
+//* entry[observation][=].resource = Observation-Work-situation
+//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000024"
+//* entry[observation][=].resource = Observation-Hobby
 * entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000025"
 * entry[observation][=].resource = Observation-Social-network
-* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000026"
-* entry[observation][=].resource = Observation-Education-level
-* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000027"
-* entry[observation][=].resource = Observation-Education
+//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000026"
+//* entry[observation][=].resource = Observation-Education-level
+//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000027"
+//* entry[observation][=].resource = Observation-Education
+* entry[organization][+].fullUrl = "urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
+* entry[organization][=].resource = Organization-1
+* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
+* entry[documentReference][=].resource = DischargeDocumenPDF
+* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eabb"
+* entry[provenance][=].resource = signature-L3
+
+
+// 2. Bundle: Hospital Discharge Report - Novák Petr
+Instance: DischargeBundle-Novak-Petr-L1
+InstanceOf: CZ_BundleHdr
+Description: "Example Bundle for Hospital Discharge Report for patient Novák Petr"
+Usage: #example
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:c859d718-03c2-43ed-a16c-dbe57a6e34b5"    // unique Bundle ID
+* type = #document
+* timestamp = "2025-03-10T15:00:00+01:00"
+// Bundle Entries (ordered by profile slices):
+* entry[composition][0].fullUrl = "urn:uuid:6891fd68-dc3c-4c91-a8d3-cb5ec990c03b"
+* entry[composition][=].resource = DischargeComposition-Novak-Petr_L1
+* entry[patient][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000000"
+* entry[patient][=].resource = Patient-Novak-Petr
+* entry[practitioner][+].fullUrl = "urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a"
+* entry[practitioner][=].resource = Practitioner-Author
+* entry[practitionerRole][+].fullUrl = "urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849"
+* entry[practitionerRole][=].resource = Practitioner-Author-detail
+* entry[organization][+].fullUrl = "urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
+* entry[organization][=].resource = Organization-1
+* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
+* entry[documentReference][=].resource = DischargeDocumenPDF
+* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
+* entry[provenance][=].resource = signature-L1
+* entry[encounter][+].fullUrl = "urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620"
+* entry[encounter][=].resource = HospitalEncounter-Novak-Petr
+
+
+
+
 
 
 

@@ -1,9 +1,13 @@
 Instance: CZ-AdvanceDirectives-HDR-DNR
-InstanceOf: Consent
+InstanceOf: CZ_ConsentHdr
 Usage: #example
 Title: "AdvanceDirectives  DNR"
 Description: "Czech hdr - example od advance directive"
 
+* status = #active
+// this in eu hdr
+//* policyRule = http://hl7europe.org/policy-rules#local "local policy rule"
+* policyRule.text = "Act No. 372/2011 Coll. in Section 36"
 
 * dateTime = "2025-01-01T08:00:00+01:00"
 
@@ -13,7 +17,7 @@ Description: "Czech hdr - example od advance directive"
 
 * scope.coding[0].system = $consentscope
 * scope.coding[0].code = #adr
-* scope.coding[0].display = "Advance Directive"
+* scope.coding[0].display = "Advanced Care Directive"
 
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Podepsané prohlášení DNR Platné od 1.3.2025</div>"
@@ -25,7 +29,7 @@ Description: "Czech hdr - example od advance directive"
 * provision.code[0].coding[0].display = "Heart failure"
 
 * provision.code[1].coding[0].system = $orpha
-* provision.code[1].coding[0].code = #ORPHA330
+* provision.code[1].coding[0].code = #330
 * provision.code[1].coding[0].display = "NYHA class IV"
 
 * status = #active

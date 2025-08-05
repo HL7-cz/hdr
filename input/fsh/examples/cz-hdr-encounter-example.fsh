@@ -7,7 +7,7 @@ Description: "Czech HDR - example of an inpatient encounter"
 // Encounter status and class
 * status = #finished
 * class = $v3-ActCode#IMP
-* priority.coding[0].system = $v3-AdmissionUrgencyHDR
+* priority.coding[0].system = $actPriority
 * priority.coding[0].code = #EM
 * priority.coding[0].display = "Emergency"
 
@@ -17,9 +17,9 @@ Description: "Czech HDR - example of an inpatient encounter"
 * type[0].coding[0].display = "Discharge"
 * subject = Reference(Mracena2)
 
-// Note for the encounter
-* extension[1].url = "http://hl7.org/fhir/StructureDefinition/encounter-note"
-* extension[1].valueString = "This is a test of the encounter note field."
+// Note for the encounter - nelze pouzit
+//* extension[1].url = "http://hl7.org/fhir/StructureDefinition/encounter-note"
+//* extension[1].valueString = "This is a test of the encounter note field."
 
 // Encounter period
 * period.start = "2025-01-01T08:00:00+01:00"
@@ -33,13 +33,13 @@ Description: "Czech HDR - example of an inpatient encounter"
 // Legal status of the encounter
 * extension[0].url = "http://example.org/fhir/StructureDefinition/legalStatus"
 * extension[0].valueCodeableConcept.coding[0].system = $sct
-* extension[0].valueCodeableConcept.coding[0].code = #legal
+* extension[0].valueCodeableConcept.coding[0].code = #398165009
 * extension[0].valueCodeableConcept.coding[0].display = "Legal"
 
 // Hospitalization details
 * hospitalization.admitSource.coding[0].system = $admit-source
-* hospitalization.admitSource.coding[0].code = #physician-referral
-* hospitalization.admitSource.coding[0].display = "Physician Referral"
+* hospitalization.admitSource.coding[0].code = #mp
+* hospitalization.admitSource.coding[0].display = "Medical Practitioner/physician referral"
 * hospitalization.dischargeDisposition.coding[0].system = $discharge-disposition
 * hospitalization.dischargeDisposition.coding[0].code = #home
 * hospitalization.dischargeDisposition.coding[0].display = "Home"
@@ -82,7 +82,7 @@ InstanceOf: CZ_EncounterHdr
 * status = #finished
 * class.code = #IMP // Corrected code assignment
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-* class.display = "inpatient"
+* class.display = "inpatient encounter"
 * subject = Reference(Mracena2)
 * period.start = "2025-03-01T10:15:00+01:00"
 * period.end = "2025-03-10T09:30:00+01:00"
@@ -92,29 +92,29 @@ InstanceOf: CZ_EncounterHdr
 
 Instance: HospitalEncounter-Novak-Petr
 InstanceOf: CZ_EncounterHdr
-//* id = "hospital-encounter-Novak-Petr"
+* id = "10f5c49e-086d-4016-8dd1-b555306bf620"
 * status = #finished
 * class.code = #IMP 
 * class.system = $cz-encounter-typ-kontaktu
-* class.display = "standardní"
+* class.display = "inpatient encounter"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * period.start = "2025-03-01T10:15:00+01:00"
 * period.end = "2025-03-10T09:30:00+01:00"
-* serviceProvider = Reference(CZ_OrganizationCore/RegisteringProviderExample)
+* serviceProvider = Reference(RegisteringProviderExample)
 // Reason for encounter
-* reasonReference = Reference(CZ_ConditionHdr/Condition-K409)
-* hospitalization.admitSource.coding[0].system = $cz-encounter-zdroj-prijeti
+* reasonReference = Reference(Condition-K409)
+* hospitalization.admitSource.coding[0].system = $admit-source
 * hospitalization.admitSource.coding[0].code = #outp
-* hospitalization.admitSource.coding[0].display = "Ambulantní péče"
-* priority.coding[0].system = $cz-encounter-urgentnost-prijeti
+* hospitalization.admitSource.coding[0].display = "From outpatient department"
+* priority.coding[0].system = $actPriority
 * priority.coding[0].code = #EM
-* priority.coding[0].display = "Akutní"
-* participant[0].individual = Reference(CZ_PractitionerCore/Practitioner-Admitter)
-* participant[0].type.coding[0].system = $encounter-participant-type
+* priority.coding[0].display = "emergency"
+* participant[0].individual = Reference(Practitioner-Admitter)
+* participant[0].type.coding[0].system = $v3-ParticipationType
 * participant[0].type.coding[0].code = #ADM
 * participant[0].type.coding[0].display = "Admitter"
-* participant[1].individual = Reference(CZ_PractitionerRoleCore/Practitioner-Referrer-detail)
-* participant[1].type.coding[0].system = $encounter-participant-type
+* participant[1].individual = Reference(Practitioner-Referrer-detail)
+* participant[1].type.coding[0].system = $v3-ParticipationType
 * participant[1].type.coding[0].code = #REF
 * participant[1].type.coding[0].display = "Referrer"
 * hospitalization.dischargeDisposition.coding[0].system = $discharge-disposition
@@ -130,3 +130,16 @@ InstanceOf: CZ_EncounterHdr
 * location[2].location = Reference(Location-Chrudim-Chir1)
 * location[2].period.start = "2025-03-04T08:00:00+01:00"
 * location[2].period.end = "2025-03-10T08:00:00+01:00"
+
+
+Instance: HospitalEncounter-Novak-Petr_L1
+InstanceOf: CZ_EncounterHdr
+* id = "f08151d0-a7ad-4a7b-b7b9-97eb1d394ffb"
+* status = #finished
+* class.code = #IMP 
+* class.system = $cz-encounter-typ-kontaktu
+* class.display = "inpatient encounter"
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
+* period.start = "2025-03-01T10:15:00+01:00"
+* period.end = "2025-03-10T09:30:00+01:00"
+* serviceProvider = Reference(RegisteringProviderExample)
