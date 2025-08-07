@@ -14,4 +14,4 @@ Description: "The Value Set is used to assert if a condition is Present on Admis
 
 * $sct#278307001 "On admission"
 * $sct#277056009 "Hospital acquired"
-* $sct#261665006 "Not applicable or unknown"
+* $sct#261665006 "Unknown"

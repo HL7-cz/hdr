@@ -3,7 +3,7 @@ InstanceOf: CZ_ImmunizationHdr
 Usage: #example
 Title: "Immunization example of Covid"
 Description: "Immunization of Covid"
-
+* id = "3f85726c-ad2f-441b-89ce-10000000001e"
 * status = #completed
 * meta.profile = "http://hl7.eu/fhir/hdr/StructureDefinition/immunization-eu-hdr"
 * vaccineCode = http://snomed.info/sct#28531000087107 // Kód vakcíny proti COVID-19

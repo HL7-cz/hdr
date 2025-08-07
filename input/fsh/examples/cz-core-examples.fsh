@@ -12,7 +12,7 @@ Description: "Patient, contact information including registering practitioner"
   * use = #official
 * identifier[+]
   * system = "https://ncez.mzcr.cz/fhir/sid/rid"
-  * value = "456789123"
+  * value = "4567891235"
 * identifier[+]
   * system = "http://hl7.org/fhir/sid/passport-CZE"
   * value = "23476533"
@@ -92,7 +92,7 @@ Instance: RegisteringProviderExample
 InstanceOf: CZ_OrganizationCore
 Title: "Organization: Registering healthcare provider example"
 Description: "Example of registering healthcare provider"
-Usage: #inline
+Usage: #example
 
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"
@@ -106,7 +106,7 @@ Instance: Organization-1
 InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "An example of the organization of a provider"
-* id = "3f85726c-ad2f-441b-89ce-aceace0000000"
+* id = "ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "27520536"
 * type[DRZAR] = $cz-drzar#102 "Nemocnice"
@@ -165,7 +165,7 @@ Usage: #example
   * city = "Praha"
   * postalCode = "120 00"
   * country = "CZ"
-* physicalType = #bu
+* physicalType = $locationType#bu
 
 Instance: rodnecislo_7161264528
 InstanceOf: CZ_Rodcis_Identifier
@@ -276,8 +276,8 @@ Usage: #example
 Description: "practitioner's detail"
 * id = "Practitioner-Referrer-detail"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
-* practitioner = Reference(CZ_PractitionerCore/Practitioner-Referrer) "MUDr. Jiří Zdvořilý"
-* organization = Reference(CZ_OrganizationCore/Organization-Referrer) "Ambulance interního lékařství, MUDr. Jiří Zdvořilý"
+* practitioner = Reference(Practitioner-Referrer) "MUDr. Jiří Zdvořilý"
+* organization = Reference(Organization-Referrer) "Ambulance interního lékařství, MUDr. Jiří Zdvořilý"
 * code = $cz-nrzp_povolani#L00 "Lékař"
 * specialty = $sct#419192003 "Internal medicine"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ambulance interního lékařství, MUDr. Jiří Zdvořilý</div>"
@@ -387,7 +387,7 @@ InstanceOf: CZ_PractitionerCore
 Usage: #example
 Description: "Participant Referrer HDR"
 
-* id = "Practitioner-Author"
+* id = "a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
 * identifier[+].system = $cz-practitioner-NRZP
 * identifier[=].value = "151607357"
@@ -409,8 +409,8 @@ Description: "practitioner's detail"
 
 * id = "2b7e9637-5018-4542-9faf-d5abdee7b849"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
-* practitioner = Reference(CZ_PractitionerCore/Practitioner-Author) "MUDr. Ivan Anděl"
-* organization = Reference(Organization-1) "Nemocnice Chrudim"
+* practitioner = Reference(urn:uid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) "MUDr. Ivan Anděl"
+* organization = Reference(urn:uid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169) "Nemocnice Chrudim"
 * code = $cz-nrzp_povolani#L00 "Lékař"
 * specialty = $sct#419192003 "Internal medicine"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">MUDr. Ivan Anděl, interní lékař, Nemocnice Chrudim, Václavská 570, 537 01 Chrudim, tel: +420 603 777 227</div>"
@@ -421,7 +421,7 @@ Instance: Organization-Referrer
 InstanceOf: CZ_OrganizationCore
 Title: "Ambulance interního lékařství, MUDr. Jiří Zdvořilý"
 Description: "Example of ambulatory physician"
-Usage: #inline
+Usage: #example
 
 * id = "Organization-Referrer"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-organization-core"
@@ -459,3 +459,45 @@ Description: "Participant UZV HDR"
 * telecom[+].system = #phone
 * telecom[=].value = "+420603853287"
 * telecom[=].use = #work
+
+Instance: signature-L1
+InstanceOf: CZ_Provenance
+Title: "Signature of image order"
+Usage: #example
+Description: "Czech national profile on Signature holds an electronic representation of a signature or timestamp and its supporting context in a FHIR accessible form."
+* id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
+* target.identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
+* target.identifier[=].value = "27520536"
+* target.display = "Reference(DischargeBundle-Novak-Petr-L1) Rentgen"
+* recorded = "2023-04-05T17:23:07Z"
+* agent.role = $v3-ParticipationType#AUT
+* agent.who = Reference(Practitioner/Practitioner-2) "MUDr. Hana Doktorová"
+* signature.type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1 "Author's Signature"
+* signature.when = "2023-04-05T17:23:07Z"
+* signature.who.identifier[+].system = "http://example.org/exampleSystem"
+* signature.who.identifier[=].value = "MUDr. Hana Doktorová"
+* signature.who = Reference(Practitioner/Practitioner-2) "MUDr. Hana Doktorová"
+* signature.targetFormat = #application/fhir+xml
+* signature.sigFormat = #application/signature+xml
+* signature.data = "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
+
+Instance: signature-L3
+InstanceOf: CZ_Provenance
+Title: "Signature of image order"
+Usage: #example
+Description: "Czech national profile on Signature holds an electronic representation of a signature or timestamp and its supporting context in a FHIR accessible form."
+* id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eabb"
+* target.identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
+* target.identifier[=].value = "27520536"
+* target.display = "Reference(DischargeBundle-Novak-Petr) Rentgen"
+* recorded = "2023-04-05T17:23:07Z"
+* agent.role = $v3-ParticipationType#AUT
+* agent.who = Reference(Practitioner/Practitioner-2) "MUDr. Hana Doktorová"
+* signature.type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1 "Author's Signature"
+* signature.when = "2023-04-05T17:23:07Z"
+* signature.who.identifier[+].system = "http://example.org/exampleSystem"
+* signature.who.identifier[=].value = "MUDr. Hana Doktorová"
+* signature.who = Reference(Practitioner/Practitioner-2) "MUDr. Hana Doktorová"
+* signature.targetFormat = #application/fhir+xml
+* signature.sigFormat = #application/signature+xml
+* signature.data = "dGhpcyBibG9iIGlzIHNuaXBwZWQ="

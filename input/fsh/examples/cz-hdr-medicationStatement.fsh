@@ -85,7 +85,7 @@ InstanceOf: CZ_MedicationStatement
 * reasonCode.text = "Hypotyreóza"
 //dávkování
 * dosage[0].text = "1 tableta denně"
-* dosage[0].timing.repeat.frequency = 1
+* dosage[0].timing.repeat.frequency = 1 
 * dosage[0].timing.repeat.period = 1 
 * dosage[0].timing.repeat.periodUnit = #d
 * dosage[0].doseAndRate.doseQuantity.value = 1
@@ -111,7 +111,7 @@ InstanceOf: CZ_MedicationStatement
 * identifier[0].system = $cz-medication-DLP     //tady má být External identifier
 * identifier[0].value = "0243131"       //tady má být External identifier
 * category[0].coding[0].system = $medication-statement 
-* category[0].coding[0].code = #Inpatient
+* category[0].coding[0].code = #inpatient
 * category[0].coding[0].display = "Inpatient"
 * category[0].text = "Inpatient"
 
@@ -150,7 +150,7 @@ InstanceOf: CZ_MedicationStatement
 * identifier[0].system = $cz-medication-DLP //tady má být External identifier
 * identifier[0].value = "0243131"   //tady má být External identifier
 * category[0].coding[0].system = $medication-statement 
-* category[0].coding[0].code = #Inpatient
+* category[0].coding[0].code = #inpatient
 * category[0].coding[0].display = "Inpatient"
 * category[0].text = "Inpatient"
 
@@ -189,7 +189,7 @@ InstanceOf: CZ_MedicationStatement
 * identifier[0].system = $cz-medication-DLP-cs //tady má být External identifier
 * identifier[0].value = "0207893"   //tady má být External identifier
 * category[0].coding[0].system = $medication-statement 
-* category[0].coding[0].code = #Inpatient
+* category[0].coding[0].code = #inpatient
 * category[0].coding[0].display = "Inpatient"
 * category[0].text = "Inpatient"
 

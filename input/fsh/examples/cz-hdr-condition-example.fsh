@@ -55,6 +55,7 @@ InstanceOf: CZ_ConditionHdr
 Usage: #example
 Title: "CZ-Condition-HDR Example K409"
 Description: "Example of a condition K409 with details on admission"
+* id = "35717696-8a99-4f99-a938-ec0ec88a65a2"
 // Condition details
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
@@ -95,7 +96,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #K55.2 // Corrected code assignment
 * code.coding[0].display = "Angiodysplasia of colon"
@@ -114,7 +115,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #D50.0 // Corrected code assignment
 * code.coding[0].display = "Iron deficiency anaemia secondary to blood loss (chronic)"
@@ -133,7 +134,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #G45.9 // Corrected code assignment
 * code.coding[0].display = "Transient cerebral ischaemic attack, unspecified"
@@ -152,7 +153,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #I48.1 // Corrected code assignment
 * code.coding[0].display = "Persistent atrial fibrillation"
@@ -171,7 +172,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #E03.2 // Corrected code assignment
 * code.coding[0].display = "Hypothyroidism due to medicaments and other exogenous substances"
@@ -190,7 +191,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #I83.9 // Corrected code assignment
 * code.coding[0].display = "Varicose veins of lower extremities without ulcer or inflammation"
@@ -209,7 +210,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #M81.0 // Corrected code assignment
 * code.coding[0].display = "Postmenopausal osteoporosis"
@@ -228,7 +229,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #E78.0 // Corrected code assignment
 * code.coding[0].display = "Pure hypercholesterolaemia"
@@ -247,7 +248,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #H91.1 // Corrected code assignment
 * code.coding[0].display = "Presbycusis"
