@@ -237,7 +237,7 @@ Title: "Stav při propuštění"
 Description: "Hodnocení celkového klinického stavu pacienta při propuštění"
 * id = "3f85726c-ad2f-441b-89ce-100000000021"
 * status = #final
-* category[0] = $observation-category#survey "Survey"
+* category[0] = $observation-category#exam "Exam"
 * code = $loinc#66455-7 "Condition status"
 * performer[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
