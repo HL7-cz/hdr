@@ -170,7 +170,7 @@ InstanceOf: Observation
 Usage: #example
 Title: "UZV - Novák Petr"
 Description: "Czech HDR - example of an ultrasound observation for Novák Petr"
-* id = "Observation-UZV-Novak"
+* id = "e15aeeaf-e288-404c-9704-9c8f0b2d4e3a"
 * status = #final
 * category = $observation-category#imaging  //http://terminology.hl7.org/CodeSystem/observation-category
 * code = $loinc#24719-7 "US Groin"
@@ -185,7 +185,7 @@ InstanceOf: Observation
 Usage: #example
 Title: "CRP - Novák Petr"
 Description: "Czech HDR - example of CRP observation for Novák Petr"
-* id = "Observation-CRP-Novak"
+* id = "10f5c49e-086d-4016-8dd1-10000000001b"
 * status = #final
 * category = $observation-category#laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
 * code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
