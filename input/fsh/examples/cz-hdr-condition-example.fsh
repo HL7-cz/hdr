@@ -89,6 +89,9 @@ Description: "Example of a condition K409 with details on admission"
 // 5. Condition: Angiodysplasia of colon (CZ_ConditionHdr)
 Instance: AngiodysplasiaCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Angiodysplasia"
+Description: "Example of a condition Angiodysplasia of colon"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-k55-2"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -108,6 +111,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Iron deficiency anemia due to chronic blood loss
 Instance: IronDeficiencyAnemiaCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Iron Deficiency Anemia"
+Description: "Example of a condition Iron deficiency anaemia secondary to blood loss (chronic)"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-d50-0"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -127,6 +133,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Transient ischemic attack (TIA)
 Instance: TIACondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR TIA"
+Description: "Example of a condition Transient cerebral ischaemic attack, unspecified"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-g45-9"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -146,6 +155,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Persistent atrial fibrillation
 Instance: AtrialFibrillationCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Atrial Fibrillation"
+Description: "Example of a condition Persistent atrial fibrillation"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-i48-1"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -165,6 +177,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Hypothyroidism due to therapy
 Instance: HypothyroidismCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Hypothyroidism"
+Description: "Example of a condition Hypothyroidism"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-e03-2"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -184,6 +199,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Varicose veins of lower extremities
 Instance: VaricoseVeinsCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Varicose Veins"
+Description: "Example of a condition Varicose veins of lower extremities without ulcer or inflammation"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-i83-9"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -203,6 +221,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Osteoporosis without pathological fracture
 Instance: OsteoporosisCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Osteoporosis"
+Description: "Example of a condition Postmenopausal osteoporosis"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-m81-0"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -222,6 +243,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Pure hypercholesterolemia
 Instance: HypercholesterolemiaCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Hypercholesterolemia"
+Description: "Example of a condition Pure hypercholesterolaemia"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-e78-0"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -241,6 +265,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Presbycusis (age-related hearing loss)
 Instance: PresbycusisCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Presbycusis"
+Description: "Example of a condition Presbycusis"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-h91-1"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"

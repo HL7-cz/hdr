@@ -1,6 +1,8 @@
 Instance: Medication-Euthyrox
 InstanceOf: CZ_Medication
-* id = "med-euthyrox"
+Usage: #example
+Title: "Dispense – Euthyrox"
+Description: "Euthyrox v tabletách"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
 * code.coding[0].system = $cz-medication-DLP-cs
@@ -52,6 +54,9 @@ Description: "Výdej léčivého přípravku Euthyrox pacientovi Novákovi"
 
 Instance: Medication-Paracetamol
 InstanceOf: CZ_Medication
+Usage: #example
+Title: "Medication – Paracetamol"
+Description: "Lek Paracetamol v tabletách"
 * id = "med-paracetamol"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
@@ -104,6 +109,9 @@ Description: "Výdej léčivého přípravku Paracetamol pacientovi Novákovi"
 
 Instance: Medication-Ibalgin400
 InstanceOf: CZ_Medication
+Usage: #example
+Title: "Medication – Ibalgin 400"
+Description: "Lek Ibalgin 400 v tabletách"
 * id = "med-Ibalgin400"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
@@ -156,6 +164,9 @@ Description: "Výdej léčivého přípravku Ibalgin 400 mg pacientovi Novákovi
 
 Instance: Medication-CovidVaccineComirnaty
 InstanceOf: CZ_Medication
+Usage: #example
+Title: "Medication – Covid vaccine"
+Description: "Lek Covid vakcína"
 * id = "med-CovidVaccineComirnaty"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active

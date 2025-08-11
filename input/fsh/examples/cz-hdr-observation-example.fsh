@@ -249,6 +249,8 @@ Description: "Hodnocení celkového klinického stavu pacienta při propuštěn�
 Instance: Observation-TravelHistory-Madagaskar
 InstanceOf: CZ_ObservationTravelHdr
 Usage: #example
+Title: "Observation - Travel History"
+Description: "Travel history observation"
 * status = #final
 * code = $loinc#94651-7 "Country of travel [Location]"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
