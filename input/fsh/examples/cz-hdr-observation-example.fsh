@@ -359,7 +359,7 @@ Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * performer = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
 * effectiveDateTime = "2024-03-28"
-* hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000026)
+* hasMember = Reference(Observation-Education-level)
 
 
 Instance: Observation-Education-level
@@ -367,7 +367,7 @@ InstanceOf: cz-observation-sdoh-hdr
 Usage: #example
 Title: "Dosažený stupeň vzdělání"
 Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
-* id = "3f85726c-ad2f-441b-89ce-100000000026"
+//* id = "3f85726c-ad2f-441b-89ce-100000000026"
 * status = #final
 * code = $sct#443722004 "Educational level of parent of subject"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
