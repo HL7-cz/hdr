@@ -12,9 +12,9 @@ Description: "Czech HDR - example of an inpatient encounter"
 * priority.coding[0].display = "Emergency"
 
 // Encounter type and subject
-* type[0].coding[0].system = $encounter-type
-* type[0].coding[0].code = #DIS
-* type[0].coding[0].display = "Discharge"
+//* type[0].coding[0].system = $encounter-type TODO: custom valueset and codesystem
+//* type[0].coding[0].code = #DIS 
+//* type[0].coding[0].display = "Discharge"
 * subject = Reference(Mracena2)
 
 // Note for the encounter - nelze pouzit
