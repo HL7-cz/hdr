@@ -1,6 +1,9 @@
 // 8. MedicationStatement: Levothyroxine (thyroid hormone replacement)
 Instance: LevothyroxineMedication
 InstanceOf: MedicationStatement
+Usage: #example
+Title: "CZ-MedicationStatement-HDR Example of Levothyroxine"
+Description: "Czech HDR - example of Levothyroxine sodium"
 //* id = "med-levothyroxine"
 * status = #active
 * statusReason.text = "Continued on discharge"
@@ -14,6 +17,9 @@ InstanceOf: MedicationStatement
 // MedicationStatement: Rivaroxaban (anticoagulation for AF)
 Instance: RivaroxabanMedication
 InstanceOf: MedicationStatement
+Usage: #example
+Title: "CZ-MedicationStatement-HDR Example of Rivaroxaban"
+Description: "Czech HDR - example of Rivaroxaban"
 //* id = "med-rivaroxaban"
 * status = #active
 * medicationCodeableConcept.coding[0].system = "http://www.whocc.no/atc"
@@ -26,6 +32,9 @@ InstanceOf: MedicationStatement
 // MedicationStatement: Bisoprolol (beta-blocker for rate control)
 Instance: BisoprololMedication
 InstanceOf: MedicationStatement
+Usage: #example
+Title: "CZ-MedicationStatement-HDR Example of Bisoprolol"
+Description: "Czech HDR - example of Bisoprolol"
 //* id = "med-bisoprolol"
 * status = #active
 * medicationCodeableConcept.coding[0].system = "http://www.whocc.no/atc"
@@ -38,6 +47,9 @@ InstanceOf: MedicationStatement
 // MedicationStatement: Atorvastatin (lipid-lowering therapy)
 Instance: AtorvastatinMedication
 InstanceOf: MedicationStatement
+Usage: #example
+Title: "CZ-MedicationStatement-HDR Example of Atorvastatin"
+Description: "Czech HDR - example of Atorvastatin"
 //* id = "med-atorvastatin"
 * status = #active
 * medicationCodeableConcept.coding[0].system = "http://www.whocc.no/atc"
@@ -50,6 +62,9 @@ InstanceOf: MedicationStatement
 // MedicationStatement: Calcium + Vitamin D3 supplement (for osteoporosis)
 Instance: CalciumD3Medication
 InstanceOf: MedicationStatement
+Usage: #example
+Title: "CZ-MedicationStatement-HDR Example of Calcium D3"
+Description: "Czech HDR - example of Calcium D3"
 //* id = "med-calcium-d3"
 * status = #active
 * medicationCodeableConcept.text = "V\u00e1pn\u00edk + Vit D3"
@@ -59,6 +74,9 @@ InstanceOf: MedicationStatement
 // MedicationStatement: Iron supplement (for anemia)
 Instance: IronSupplementMedication
 InstanceOf: MedicationStatement
+Usage: #example
+Title: "CZ-MedicationStatement-HDR Example of Iron Supplement"
+Description: "Czech HDR - example of Iron Supplement"
 //* id = "med-iron"
 * status = #active
 * medicationCodeableConcept.coding[0].system = "http://www.whocc.no/atc"
@@ -71,6 +89,9 @@ InstanceOf: MedicationStatement
 //---------------------------------------------------------------------
 Instance: MedicationStatement-Euthyrox-Novak
 InstanceOf: CZ_MedicationStatement
+Usage: #example
+Title: "CZ-MedicationStatement-HDR Example of Euthyrox"
+Description: "Czech HDR - example of Euthyrox"
 * id = "47472c99-09bf-4007-bfaa-16c9665ae090"
 * status = #active   // http://hl7.org/fhir/CodeSystem/medication-statement-status nebo https://hl7.org/fhir/R4/valueset-medication-statement-status.html
 //stav neni adekvatni status ve slovniku, navic treba pouzit kod. system snomed
@@ -118,6 +139,9 @@ InstanceOf: CZ_MedicationStatement
 //---------------------------------------------------------------------
 Instance: MedicationStatement-Paracetamol-Novak
 InstanceOf: CZ_MedicationStatement
+Usage: #example
+Title: "CZ-MedicationStatement-HDR Example of Paracetamol"
+Description: "Czech HDR - example of Paracetamol"
 * id = "f34114fc-138f-4bd8-8e1a-804d14ec9986"
 * status = #active   
 //stav neni adekvatni status ve slovniku, navic treba pouzit kod. system snomed
@@ -157,6 +181,9 @@ InstanceOf: CZ_MedicationStatement
 //---------------------------------------------------------------------
 Instance: MedicationStatement-Ibalgin400-Novak
 InstanceOf: CZ_MedicationStatement
+Usage: #example
+Title: "CZ-MedicationStatement-HDR Example of Ibalgin"
+Description: "Czech HDR - example of Ibalgin 400"
 * id = "bf08b62b-0abd-4e88-9092-ce0228382e51"
 * status = #active   
 //stav neni adekvatni status ve slovniku, navic treba pouzit kod. system snomed

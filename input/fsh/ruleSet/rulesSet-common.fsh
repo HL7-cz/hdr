@@ -41,7 +41,7 @@ RuleSet: SectionSliceComRules (short, def)
 // Slicing rules for section based on code value
 * section ^slicing.discriminator[0].type = #value
 * section ^slicing.discriminator[0].path = "code"
-* section ^slicing.ordered = true
+* section ^slicing.ordered = false
 * section ^slicing.rules = #open
 * section ^short = "{short}"
 * section ^definition = "{def}"
