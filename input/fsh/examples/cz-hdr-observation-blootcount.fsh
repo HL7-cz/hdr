@@ -126,7 +126,7 @@ Usage: #example
 Title: "Trombocyty"
 Description: "Příklad pro HDR - Počet trombocytů v krvi"
 * status = #final
-* code = https://nclp.uzis.cz#11336 "Trombocyty"
+* code = $nclp#11336 //"Trombocyty"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
