@@ -27,10 +27,19 @@ Usage: #example
 * section[sectionAllergies].code.coding[0].system = $loinc
 * section[sectionAllergies].code.coding[0].code = #48765-2 // Allergies and adverse reactions
 * section[sectionAllergies].code.coding[0].display = "Allergies and adverse reactions Document"
-* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alergie na jahody, od 01.01.2020, reakce: Svědění, otok jazyka</div>" // Corrected to Narrative type
-* section[sectionAllergies].text.status = #additional
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alergie na jahody, od 01.01.2020, reakce: Svědění, otok jazyka</div>" 
 * section[sectionAllergies].entry[allergyIntolerance][0] = Reference(urn:uuid:6cf80cb1-9766-470f-ac36-b1d3d8950f1b)
+* section[sectionAllergies].text.status = #generated
+
 ///TODO Doplnit Alerts
+// Sekce Varování
+* section[sectionAlert].title = "Varování"
+* section[sectionAlert].code.coding[0].system = $loinc
+* section[sectionAlert].code.coding[0].code = #75310-3 // Alerts LOINC=104605-1 
+* section[sectionAlert].code.coding[0].display = "Alerts"
+* section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>" 
+* section[sectionAlert].text.status = #generated
+* section[sectionAlert].entry[0] = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e) 
 
 // Diagnostický souhrn:
 // Sekce Diagnostický souhrn
