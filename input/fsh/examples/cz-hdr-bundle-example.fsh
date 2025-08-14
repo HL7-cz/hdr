@@ -197,6 +197,8 @@ Usage: #example
 * entry[documentReference][=].resource = DischargeDocumenPDF
 * entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eabb"
 * entry[provenance][=].resource = signature-L3
+* entry[flag][+].fullUrl = "urn:uuid:5a17a710-193e-4490-a627-7202925aa56e"
+* entry[flag][=].resource = Flag-malnutrition-Novak
 
 
 // 2. Bundle: Hospital Discharge Report - Novák Petr
