@@ -75,7 +75,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
-* type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+* type only $CodeableConcept-uv-ips
 * type ^short = "Kind of composition (\"Hospital Discharge Report\")"
 * type ^definition = "Specifies that this composition refer to a Hospital Discharge Report"
 * type = $loinc#34105-7 "Hospital Discharge summary"
@@ -115,15 +115,43 @@ Description: "This profile defines how to represent Composition resource in HL7 
 // -------------------------------------
 // Admission Evaluation Section 0 … 1 R
 // -------------------------------------
-
 * section contains sectionAdmissionEvaluation ..1
 * section[sectionAdmissionEvaluation]
-  * insert SectionComRules (
-    Hospital Admission evaluation,
-      Hospital Admission evaluation,
-      $loinc#67852-4)   // "Hospital Admission evaluation note"
+  * code 1..
+  * code only $CodeableConcept-uv-ips
+  * code = $loinc#67852-4 (exactly)
   * ^comment = "Admission evaluation should be reported only exceptionally, if it is relevant to ensure continuity of care."
 
+// ---- enable slicing for Admission Evaluation subsections
+* section[sectionAdmissionEvaluation].section ^slicing.discriminator[0].type = #pattern
+* section[sectionAdmissionEvaluation].section ^slicing.discriminator[0].path = "code"
+* section[sectionAdmissionEvaluation].section ^slicing.rules = #open
+
+// ---- Functional status at admission 0..1
+* section[sectionAdmissionEvaluation].section contains sectionAdmissionFunctionalStatus 0..1
+* section[sectionAdmissionEvaluation].section[sectionAdmissionFunctionalStatus]
+  * title = "Functional status at admission"
+  * code 1..
+  * code only $CodeableConcept-uv-ips
+  * code = $loinc#47420-5 (exactly)
+  * text 1..
+  * ^short = "Functional status at admission"
+  * ^definition = "Capability to perform ADL/IADL and relevant disability information assessed at the time of admission."
+  * entry 0..*
+  * entry only Reference(CZ_ConditionHdr or Observation or ClinicalImpression or DocumentReference or QuestionnaireResponse)
+
+// ---- Objective findings at admission 0..1
+* section[sectionAdmissionEvaluation].section contains sectionAdmissionObjectiveFindings 0..1
+* section[sectionAdmissionEvaluation].section[sectionAdmissionObjectiveFindings]
+  * title = "Objective findings at admission"
+  * code 1..
+  * code only $CodeableConcept-uv-ips
+  * code = $loinc#29545-1 (exactly)
+  * text 1..
+  * ^short = "Objective findings at admission"
+  * ^definition = "Objective physical findings documented at admission; may include narrative and references to observations/reports."
+  * entry 0..*
+  * entry only Reference(Observation or DiagnosticReport or DocumentReference)
 
 // -------------------------------------
 // Patient History Section 0 … 1 R
@@ -295,8 +323,7 @@ $loinc#10160-0) // 	History of Medication use Narrative
   * entry insert OpenReferenceSlicePerTypeRules (significant results, significant results)
   //* insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result ,Laboratory Result  , $Observation-resultslab-eu-lab)
   * insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result , Laboratory Result, $Observation-resultslab-cz-lab)
-  * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result ,
-    Radiology Result  ,$Observation-results-radiology-cz)
+  * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result , Radiology Result  ,$Observation-results-radiology-cz)
 
 
   // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)
@@ -493,7 +520,7 @@ $loinc#10160-0) // 	History of Medication use Narrative
 * section[sectionPastIllnessHx] ^definition = "The History of Past Illness section contains a narrative description and coded entries of the conditions the patient suffered in the past"
 * section[sectionPastIllnessHx].title 1..
 * section[sectionPastIllnessHx].code 1..
-* section[sectionPastIllnessHx].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+* section[sectionPastIllnessHx].code only $CodeableConcept-uv-ips
 * section[sectionPastIllnessHx].code = http://loinc.org#11348-0 (exactly)
 * section[sectionPastIllnessHx].text 1..
 * section[sectionPastIllnessHx].entry 1..
