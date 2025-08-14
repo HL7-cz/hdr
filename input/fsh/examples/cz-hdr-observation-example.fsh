@@ -166,7 +166,7 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 
 //-----------------------------------------
 Instance: Observation-UZV-Novak
-InstanceOf: Observation
+InstanceOf: Observation //TODO doplnit RTG CZ_ObservationResultImaging
 Usage: #example
 Title: "UZV - Novák Petr"
 Description: "Czech HDR - example of an ultrasound observation for Novák Petr"
@@ -181,7 +181,7 @@ Description: "Czech HDR - example of an ultrasound observation for Novák Petr"
 
 //-----------------------------------------
 Instance: Observation-CRP-Novak
-InstanceOf: Observation
+InstanceOf: Observation //TODO doplnit LAB CZ_ObservationResultImaging
 Usage: #example
 Title: "CRP - Novák Petr"
 Description: "Czech HDR - example of CRP observation for Novák Petr"
