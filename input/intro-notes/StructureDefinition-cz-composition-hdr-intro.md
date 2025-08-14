@@ -1,12 +1,11 @@
 ### Content (cs)
 
-{% include scope-and-content-structure-cs.md %}
+{% include scope-and-content-structure-composition-cs.md %}
 
 <hr>
 
-### Content (en)
+<!-- ### Content (en)
 
-{% include scope-and-content-structure.md %}
+{% include scope-and-content-structure-composition-en.md %}
 
-<hr>
-
+<hr> -->
