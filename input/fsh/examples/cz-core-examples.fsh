@@ -83,10 +83,10 @@ Description: "Patient, contact information including registering practitioner"
 * generalPractitioner.identifier.value = "123456789"
 * generalPractitioner.display = "MUDr. Josef Švejk"
 
-* extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
-* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#700232004 "General medical service"
-* extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
-* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#310060005 "Obstetrics and gynecology service"
+//* extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
+//* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#700232004 "General medical service"
+//* extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
+//* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#310060005 "Obstetrics and gynecology service"
 
 Instance: RegisteringProviderExample
 InstanceOf: CZ_OrganizationCore
@@ -303,7 +303,7 @@ Description: "Example of patient Petr Novak with identification by czech nationa
   * system = $cz-patient-rid
   * value = "1597778923"
 //Patient citizenship
-* extension[citizenship].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
+//* extension[citizenship].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
 //Patient nationality
 /** extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ*/
 //Patient name, address and contact information
@@ -376,8 +376,8 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * communication[=].preferred = true
 * communication[+].language = urn:ietf:bcp:47#en
 //Patient general practitioner
-* extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
-* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#700232004 "General medical service"
+//* extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
+//* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#700232004 "General medical service"
 /** extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample-gynecology)
 * extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#310060005 "Gynekologické a porodnické služby"*/
 
@@ -389,8 +389,8 @@ Description: "Participant Referrer HDR"
 
 * id = "a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
-* identifier[+].system = $cz-practitioner-NRZP
-* identifier[=].value = "151607357"
+//* identifier[+].system = $cz-practitioner-NRZP
+//* identifier[=].value = "151607357"
 //* identifier[+].system = $cz-practitioner-CLK
 //* identifier[=].value = "4567891777"
 * name.use = #usual
@@ -409,7 +409,7 @@ Description: "practitioner's detail"
 
 * id = "2b7e9637-5018-4542-9faf-d5abdee7b849"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
-* practitioner = Reference(urn:uid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) "MUDr. Ivan Anděl"
+* practitioner = Reference(Practitioner-Author) "MUDr. Ivan Anděl"
 * organization = Reference(urn:uid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169) "Nemocnice Chrudim"
 * code = $cz-nrzp_povolani#L00 "Lékař"
 * specialty = $sct#419192003 "Internal medicine"

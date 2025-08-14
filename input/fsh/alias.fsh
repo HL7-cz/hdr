@@ -28,10 +28,6 @@ Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-v
 // Extensions:
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $patient-birthTime = http://hl7.org/fhir/StructureDefinition/patient-birthTime
-Alias: $iso21090-ADXP-streetName = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName
-Alias: $iso21090-ADXP-houseNumber = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber
-Alias: $iso21090-ADXP-postBox = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox
-Alias: $iso21090-SC-coding = http://hl7.org/fhir/StructureDefinition/iso21090-SC-coding
 Alias: $ext-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
 Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
@@ -99,10 +95,12 @@ Alias: $cz-medicationStatement-route = http://hl7.org/fhir/ValueSet/route-codes
 Alias: $cz-medication-DLP = https://hl7.cz/fhir/core/ValueSet/cz-dlplecivepripravky-vs
 Alias: $cz-medication-DLPForma =  https://hl7.cz/fhir/core/ValueSet/cz-dlpformy-vs
 Alias: $cz-medicationDLPLecive-latky = https://hl7.cz/fhir/core/ValueSet/cz-dlplecivelatky-vs
+Alias: $cz-medication-DLPATC = https://hl7.cz/fhir/core/ValueSet/cz-dlpatc-vs
 Alias: $cz-SocialHistory-education-level = http://terminology.hl7.org/CodeSystem/v3-EducationLevel
 Alias: $cz-medication-DLP-cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlplecivepripravky-cs
 Alias: $cz-medication-DLPForma-cs =  https://hl7.cz/fhir/core/CodeSystem/cz-dlpformy-cs
 Alias: $cz-medicationDLPLecive-latky-cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlplecivelatky-cs
+Alias: $cz-medication-DLPATC-cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlpatc-cs
 
 //=========================
 //Other
@@ -114,6 +112,9 @@ Alias: $MKN10 = http://hl7.org/fhir/sid/icd-10
 Alias: $atc = http://www.whocc.no/atc
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $observation-interpretation = http://hl7.org/fhir/ValueSet/observation-interpretation
+Alias: $flagPriority = http://hl7.org/fhir/ValueSet/flag-priority
+
+
 
 //Composition
 Alias: $Observation-resultslab-cz-lab = https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory
