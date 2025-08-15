@@ -166,11 +166,11 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 
 //-----------------------------------------
 Instance: Observation-UZV-Novak
-InstanceOf: Observation
+InstanceOf: Observation //TODO doplnit RTG CZ_ObservationResultImaging
 Usage: #example
 Title: "UZV - Novák Petr"
 Description: "Czech HDR - example of an ultrasound observation for Novák Petr"
-* id = "Observation-UZV-Novak"
+* id = "e15aeeaf-e288-404c-9704-9c8f0b2d4e3a"
 * status = #final
 * category = $observation-category#imaging  //http://terminology.hl7.org/CodeSystem/observation-category
 * code = $loinc#24719-7 "US Groin"
@@ -181,13 +181,13 @@ Description: "Czech HDR - example of an ultrasound observation for Novák Petr"
 
 //-----------------------------------------
 Instance: Observation-CRP-Novak
-InstanceOf: Observation
+InstanceOf: Observation //TODO doplnit LAB CZ_ObservationResultImaging
 Usage: #example
 Title: "CRP - Novák Petr"
 Description: "Czech HDR - example of CRP observation for Novák Petr"
-* id = "Observation-CRP-Novak"
+* id = "10f5c49e-086d-4016-8dd1-10000000001b"
 * status = #final
-* category = $observation-category#Laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
+* category = $observation-category#laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
 * code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-01T10:00:00+01:00"
@@ -237,7 +237,7 @@ Title: "Stav při propuštění"
 Description: "Hodnocení celkového klinického stavu pacienta při propuštění"
 * id = "3f85726c-ad2f-441b-89ce-100000000021"
 * status = #final
-* category[0] = $observation-category#clinical "Clinical"
+* category[0] = $observation-category#exam "Exam"
 * code = $loinc#66455-7 "Condition status"
 * performer[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
@@ -249,6 +249,8 @@ Description: "Hodnocení celkového klinického stavu pacienta při propuštěn�
 Instance: Observation-TravelHistory-Madagaskar
 InstanceOf: CZ_ObservationTravelHdr
 Usage: #example
+Title: "Observation - Travel History"
+Description: "Travel history observation"
 * status = #final
 * code = $loinc#94651-7 "Country of travel [Location]"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
@@ -357,7 +359,7 @@ Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * performer = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
 * effectiveDateTime = "2024-03-28"
-* hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000026)
+* hasMember = Reference(Observation-Education-level)
 
 
 Instance: Observation-Education-level
@@ -365,7 +367,7 @@ InstanceOf: cz-observation-sdoh-hdr
 Usage: #example
 Title: "Dosažený stupeň vzdělání"
 Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
-* id = "3f85726c-ad2f-441b-89ce-100000000026"
+//* id = "3f85726c-ad2f-441b-89ce-100000000026"
 * status = #final
 * code = $sct#443722004 "Educational level of parent of subject"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)

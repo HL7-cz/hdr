@@ -8,7 +8,7 @@ Description: "No information is available regarding the patient’s allergy stat
 * identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
 * identifier[0].value = "no-known-allergy-001"
 //clinicalStatus
-* clinicalStatus = #active
+* clinicalStatus = $allergyintolerance-clinical#active
 // Kód pro “žádné známé alergie” (SNOMED CT)
 * code.coding[0].system = $sct
 * code.coding[0].code = #160244002
@@ -171,7 +171,7 @@ Description: "Patient, contact information and practitioner"
 * birthDate = "1971-11-26"
 * identifier[+]
   * system = "https://ncez.mzcr.cz/fhir/sid/rid"
-  * value = "456789123"
+  * value = "4567891235"
 * name.use = #usual
 * name.family = "Mrakomorová"
 * name.given = "Mračena"
@@ -182,6 +182,7 @@ InstanceOf: CZ_AllergyIntoleranceHdr
 Usage: #example
 Title: "AllergyIntolerance - Strawberry"
 Description: "Patient experiences itching and tongue swelling in response to strawberries."
+* id = "6cf80cb1-9766-470f-ac36-b1d3d8950f1b"
 // Povinný identifikátor
 * identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
 * identifier[0].value = "Allergy-Strawberry-Novak-001"

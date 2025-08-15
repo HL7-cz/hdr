@@ -1,5 +1,6 @@
 Instance: bloodcount-panel
 InstanceOf: CZ_ObservationResultLaboratory
+Usage: #example
 Title: "Panel krevního obrazu"
 Description: "Panel obsahující základní hematologické hodnoty"
 * text.status = #generated
@@ -35,6 +36,7 @@ Description: "Panel obsahující základní hematologické hodnoty"
 
 Instance: hb-result
 InstanceOf: CZ_ObservationResultLaboratory
+Usage: #example
 Title: "Hemoglobin"
 Description: "Příklad pro HDR - Hladina hemoglobinu v krvi"
 * status = #final
@@ -57,6 +59,7 @@ Description: "Příklad pro HDR - Hladina hemoglobinu v krvi"
 
 Instance: hct-result
 InstanceOf: Observation
+Usage: #example
 Title: "Hematokrit"
 Description: "Příklad pro HDR - Hematokrit v krvi"
 * status = #final
@@ -77,6 +80,7 @@ Description: "Příklad pro HDR - Hematokrit v krvi"
 
 Instance: rbc-result
 InstanceOf: Observation
+Usage: #example
 Title: "Erytrocyty"
 Description: "Příklad pro HDR - Počet erytrocytů v krvi"
 * status = #final
@@ -97,6 +101,7 @@ Description: "Příklad pro HDR - Počet erytrocytů v krvi"
 
 Instance: wbc-result
 InstanceOf: Observation
+Usage: #example
 Title: "Leukocyty"
 Description: "Příklad pro HDR - Počet leukocytů v krvi"
 * status = #final
@@ -117,6 +122,7 @@ Description: "Příklad pro HDR - Počet leukocytů v krvi"
 
 Instance: plt-result
 InstanceOf: Observation
+Usage: #example
 Title: "Trombocyty"
 Description: "Příklad pro HDR - Počet trombocytů v krvi"
 * status = #final
@@ -138,7 +144,9 @@ Description: "Příklad pro HDR - Počet trombocytů v krvi"
 
 Instance: Specimen-EDTA-1
 InstanceOf: Specimen
+Usage: #example
 Title: "Vzorek krve – EDTA"
+Description: "Venous blood specimen"
 * status = #available
 * type = http://snomed.info/sct#122555007 "Venous blood specimen"
 * receivedTime = "2025-04-01T09:30:00+01:00"
@@ -148,6 +156,7 @@ Title: "Vzorek krve – EDTA"
 
 Instance: Lab-HematologieBrno
 InstanceOf: cz-organization-core
+Usage: #example
 Title: "Hematologická laboratoř Brno"
 Description: "Referenční laboratoř pro klinickou hematologii"
 * text.status = #generated

@@ -1,26 +1,30 @@
 Instance: Medication-Euthyrox
 InstanceOf: CZ_Medication
-* id = "med-euthyrox"
+Usage: #example
+Title: "Dispense – Euthyrox"
+Description: "Euthyrox v tabletách"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
 * code.coding[0].system = $cz-medication-DLP-cs
 * code.coding[0].code = #0243131
-* code.coding[0].display = "Euthyrox 75 mcg"
-* code.coding[1].system = $atc
+* code.coding[0].display = "EUTHYROX"
+* code.coding[1].system = $cz-medication-DLPATC-cs
 * code.coding[1].code = #H03AA01
-* code.coding[1].display = "levothyroxine sodium"
+* code.coding[1].display = "LEVOTHYROXINE SODIUM"
 * code.text = "Euthyrox 75 mcg"
 * form.coding[0].system = $cz-medication-DLPForma-cs
-* form.coding[0].code = #"TBL NOB"
-* form.coding[0].display = "Tableta"
+* form.coding[0].code = #TBL_FLM
+* form.coding[0].display = "Potahovaná tableta"
 * form.text = "Tableta"
 * amount.numerator.value = 75
 * amount.numerator.unit = "mcg"
 * amount.numerator.system = $ucum
 * amount.numerator.code = #/ug
+* amount.denominator.value = 1
+* amount.denominator.unit = "Tableta"
 * ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
 * ingredient[0].itemCodeableConcept.coding[0].code = #828
-* ingredient[0].itemCodeableConcept.coding[0].display = "LEVOTHYROXINE SODIUM"
+* ingredient[0].itemCodeableConcept.coding[0].display = "LEVOTHYROXINUM NATRICUM"
 * ingredient[0].itemCodeableConcept.text = "Levothyroxin"
 * ingredient[0].strength.numerator.value = 75
 * ingredient[0].strength.numerator.unit = "mcg"
@@ -50,27 +54,32 @@ Description: "Výdej léčivého přípravku Euthyrox pacientovi Novákovi"
 
 Instance: Medication-Paracetamol
 InstanceOf: CZ_Medication
+Usage: #example
+Title: "Medication – Paracetamol"
+Description: "Lek Paracetamol v tabletách"
 * id = "med-paracetamol"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
 * code.coding[0].system = $cz-medication-DLP-cs
-* code.coding[0].code = #0243131
+* code.coding[0].code = #0253304
 * code.coding[0].display = "PARACETAMOL ZENTIVA K.S."
-* code.coding[1].system = $atc
+* code.coding[1].system = $cz-medication-DLPATC-cs
 * code.coding[1].code = #N02BE01    
 * code.coding[1].display = "Paracetamol"
 * code.text = "PARACETAMOL ZENTIVA K.S. 500 mg"
 * form.coding[0].system = $cz-medication-DLPForma-cs
-* form.coding[0].code = #"TBL NOB"
-* form.coding[0].display = "Tableta"
+* form.coding[0].code = #TBL_FLM
+* form.coding[0].display = "Potahovaná tableta"
 * form.text = "Tableta"
 * amount.numerator.value = 500
 * amount.numerator.unit = "mg"
 * amount.numerator.system = $ucum
 * amount.numerator.code = #/mg
+* amount.denominator.value = 1
+* amount.denominator.unit = "Tableta"
 * ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
 * ingredient[0].itemCodeableConcept.coding[0].code = #1064
-* ingredient[0].itemCodeableConcept.coding[0].display = "PARACETAMOL"
+* ingredient[0].itemCodeableConcept.coding[0].display = "PARACETAMOLUM"
 * ingredient[0].itemCodeableConcept.text = "PARACETAMOL"
 * ingredient[0].strength.numerator.value = 500
 * ingredient[0].strength.numerator.unit = "mg"
@@ -100,27 +109,32 @@ Description: "Výdej léčivého přípravku Paracetamol pacientovi Novákovi"
 
 Instance: Medication-Ibalgin400
 InstanceOf: CZ_Medication
+Usage: #example
+Title: "Medication – Ibalgin 400"
+Description: "Lek Ibalgin 400 v tabletách"
 * id = "med-Ibalgin400"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
 * code.coding[0].system = $cz-medication-DLP-cs
-* code.coding[0].code = #0207893
-* code.coding[0].display = "Ibalgin 400 mg"
-* code.coding[1].system = $atc
+* code.coding[0].code = #0254294
+* code.coding[0].display = "IBALGIN"
+* code.coding[1].system = $cz-medication-DLPATC-cs
 * code.coding[1].code = #M01AE01
 * code.coding[1].display = "IBUPROFEN"
 * code.text = "Ibalgin 400 mg"
 * form.coding[0].system = $cz-medication-DLPForma-cs
-* form.coding[0].code = #"TBL NOB"
-* form.coding[0].display = "Tableta"
+* form.coding[0].code = #TBL_FLM
+* form.coding[0].display = "Potahovaná tableta"
 * form.text = "Tableta"
 * amount.numerator.value = 400
 * amount.numerator.unit = "mg"
 * amount.numerator.system = $ucum
 * amount.numerator.code = #/mg
+* amount.denominator.value = 1
+* amount.denominator.unit = "Tableta"
 * ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
-* ingredient[0].itemCodeableConcept.coding[0].code = #81593
-* ingredient[0].itemCodeableConcept.coding[0].display = "IBUPROFEN"
+* ingredient[0].itemCodeableConcept.coding[0].code = #1593
+* ingredient[0].itemCodeableConcept.coding[0].display = "IBUPROFENUM"
 * ingredient[0].itemCodeableConcept.text = "IBUPROFEN"
 * ingredient[0].strength.numerator.value = 400
 * ingredient[0].strength.numerator.unit = "mg"
@@ -150,20 +164,23 @@ Description: "Výdej léčivého přípravku Ibalgin 400 mg pacientovi Novákovi
 
 Instance: Medication-CovidVaccineComirnaty
 InstanceOf: CZ_Medication
+Usage: #example
+Title: "Medication – Covid vaccine"
+Description: "Lek Covid vakcína"
 * id = "med-CovidVaccineComirnaty"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
 
 * code.coding[0].system = $cz-medication-DLP-cs
-* code.coding[0].code = #0246599
-* code.coding[0].display = "Comirnaty 30mcg/dávka injekční disperze"
-* code.coding[1].system = $atc
+* code.coding[0].code = #0271911
+* code.coding[0].display = "COMIRNATY OMICRON XBB.1.5"
+* code.coding[1].system = $cz-medication-DLPATC-cs
 * code.coding[1].code = #J07BN01
-* code.coding[1].display = "covid-19, RNA-based vaccine"
+* code.coding[1].display = "COVID-19, RNA VAKCÍNA"
 * code.text = "Comirnaty"
 
 * form.coding[0].system = $cz-medication-DLPForma-cs
-* form.coding[0].code = #"INJ SOL"
+* form.coding[0].code = #INJSOL
 * form.coding[0].display = "Injekční roztok"
 * form.text = "Injekční roztok"
 
@@ -171,11 +188,13 @@ InstanceOf: CZ_Medication
 * amount.numerator.unit = "ml"
 * amount.numerator.system = $ucum
 * amount.numerator.code = #/ml
+* amount.denominator.value = 0.3
+* amount.denominator.unit = "ml"
 
 * ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
-* ingredient[0].itemCodeableConcept.coding[0].code = #88213
-* ingredient[0].itemCodeableConcept.coding[0].display = "BNT162b2 mRNA"
-* ingredient[0].itemCodeableConcept.text = "BNT162b2 mRNA"
+* ingredient[0].itemCodeableConcept.coding[0].code = #23463
+* ingredient[0].itemCodeableConcept.coding[0].display = "SARS-COV-2 (OMICRON JN.1) SPIKE PROTEIN"
+* ingredient[0].itemCodeableConcept.text = "SARS-COV-2 (OMICRON JN.1) SPIKE PROTEIN"
 * ingredient[0].strength.numerator.value = 30
 * ingredient[0].strength.numerator.unit = "mikrogramů"
 * ingredient[0].strength.numerator.system = $ucum

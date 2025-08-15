@@ -40,7 +40,7 @@ Description: "Czech HDR - example of a care plan"
 * period.start = "2025-03-10T08:00:00+01:00"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 //další podrobnosti plánu, cíle
-* goal = Reference(Goal-hernia-treatment)
+* goal = Reference(urn:uuid:620b1120-cece-44b1-89f5-20413054eb1d)
 // Activity detail
 * activity[+].detail.kind = #ServiceRequest
 * activity[=].detail.description = "Pooperační sledování, převazy, kontrola rány"

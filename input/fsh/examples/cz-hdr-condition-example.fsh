@@ -55,6 +55,7 @@ InstanceOf: CZ_ConditionHdr
 Usage: #example
 Title: "CZ-Condition-HDR Example K409"
 Description: "Example of a condition K409 with details on admission"
+* id = "35717696-8a99-4f99-a938-ec0ec88a65a2"
 // Condition details
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
@@ -88,6 +89,9 @@ Description: "Example of a condition K409 with details on admission"
 // 5. Condition: Angiodysplasia of colon (CZ_ConditionHdr)
 Instance: AngiodysplasiaCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Angiodysplasia"
+Description: "Example of a condition Angiodysplasia of colon"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-k55-2"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -95,7 +99,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #K55.2 // Corrected code assignment
 * code.coding[0].display = "Angiodysplasia of colon"
@@ -107,6 +111,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Iron deficiency anemia due to chronic blood loss
 Instance: IronDeficiencyAnemiaCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Iron Deficiency Anemia"
+Description: "Example of a condition Iron deficiency anaemia secondary to blood loss (chronic)"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-d50-0"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -114,7 +121,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #D50.0 // Corrected code assignment
 * code.coding[0].display = "Iron deficiency anaemia secondary to blood loss (chronic)"
@@ -126,6 +133,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Transient ischemic attack (TIA)
 Instance: TIACondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR TIA"
+Description: "Example of a condition Transient cerebral ischaemic attack, unspecified"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-g45-9"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -133,7 +143,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #G45.9 // Corrected code assignment
 * code.coding[0].display = "Transient cerebral ischaemic attack, unspecified"
@@ -145,6 +155,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Persistent atrial fibrillation
 Instance: AtrialFibrillationCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Atrial Fibrillation"
+Description: "Example of a condition Persistent atrial fibrillation"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-i48-1"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -152,7 +165,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #I48.1 // Corrected code assignment
 * code.coding[0].display = "Persistent atrial fibrillation"
@@ -164,6 +177,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Hypothyroidism due to therapy
 Instance: HypothyroidismCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Hypothyroidism"
+Description: "Example of a condition Hypothyroidism"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-e03-2"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -171,7 +187,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #E03.2 // Corrected code assignment
 * code.coding[0].display = "Hypothyroidism due to medicaments and other exogenous substances"
@@ -183,6 +199,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Varicose veins of lower extremities
 Instance: VaricoseVeinsCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Varicose Veins"
+Description: "Example of a condition Varicose veins of lower extremities without ulcer or inflammation"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-i83-9"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -190,7 +209,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #I83.9 // Corrected code assignment
 * code.coding[0].display = "Varicose veins of lower extremities without ulcer or inflammation"
@@ -202,6 +221,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Osteoporosis without pathological fracture
 Instance: OsteoporosisCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Osteoporosis"
+Description: "Example of a condition Postmenopausal osteoporosis"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-m81-0"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -209,7 +231,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #M81.0 // Corrected code assignment
 * code.coding[0].display = "Postmenopausal osteoporosis"
@@ -221,6 +243,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Pure hypercholesterolemia
 Instance: HypercholesterolemiaCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Hypercholesterolemia"
+Description: "Example of a condition Pure hypercholesterolaemia"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-e78-0"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -228,7 +253,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #E78.0 // Corrected code assignment
 * code.coding[0].display = "Pure hypercholesterolaemia"
@@ -240,6 +265,9 @@ InstanceOf: CZ_ConditionHdr
 // Condition: Presbycusis (age-related hearing loss)
 Instance: PresbycusisCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Presbycusis"
+Description: "Example of a condition Presbycusis"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-h91-1"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -247,7 +275,7 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #H91.1 // Corrected code assignment
 * code.coding[0].display = "Presbycusis"

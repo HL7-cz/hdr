@@ -104,6 +104,9 @@ Description: "Czech HDR - example of a Procedure - No known procedures."
  // 6. Procedure: Colonoscopy of angiodysplasia (CZ_ProcedureHdr)
 Instance: ColonoscopyProcedure
 InstanceOf: CZ_ProcedureHdr
+Title: "CZ-Procedure-HDR Example - Colonoscopy"
+Usage: #example
+Description: "Czech HDR - example of a Procedure - Colonoscopy"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-procedure-hdr"
 //* id = "procedure-colonoscopy"
 * status = #completed
@@ -125,7 +128,10 @@ InstanceOf: CZ_ProcedureHdr
 // Procedure: inguinal-hernia (CZ_ProcedureHdr)
 Instance: Procedure-inguinal-hernia
 InstanceOf: CZ_ProcedureHdr
-//* id = "procedure-inguinal-hernia"
+Title: "CZ-Procedure-HDR Example - Inguinal hernia"
+Usage: #example
+Description: "Czech HDR - example of a Procedure - Repair of inguinal hernia"
+* id = "ffb1a62f-9050-4e33-af4b-4cdb8203c9e5"
 * status = #completed
 * code.coding[0].system = $sct
 * code.coding[0].code = #44558001

@@ -15,7 +15,7 @@ version: 0.0.2
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
@@ -41,11 +41,15 @@ publisher:
 dependencies:
   hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.eu.extensions.r4: 0.1.1-ballot
+  hl7.fhir.eu.extensions.r4:
+    id: extensions
+    uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
+    version: 0.1.1-ballot
+  hl7.fhir.eu.extensions: 0.1.1-ballot
   hl7.fhir.eu.laboratory: 0.1.1
   hl7.fhir.eu.base: 0.1.0-ballot
   hl7.fhir.eu.hdr: 0.1.0-ballot
-  ihe.pharm.mpd.r4: 1.0.0-comment-2
+  ihe.pharm.mpd: 1.0.0-comment-2
   hl7.fhir.cz.core: current
   hl7.fhir.cz.lab: current
   hl7.fhir.cz.img: current
@@ -496,7 +500,10 @@ groups:
 #
 # The instanceOptions property is used to configure certain aspects of how SUSHI processes instances.
 # See the individual option definitions below for more detail.
-#
+
+instanceOptions:
+  manualSliceOrdering: true
+
 # instanceOptions:
 #   Determines for which types of Instances SUSHI will automatically set meta.profile
 #   if InstanceOf references a profile:

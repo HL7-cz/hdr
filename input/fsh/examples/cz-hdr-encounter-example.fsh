@@ -12,9 +12,9 @@ Description: "Czech HDR - example of an inpatient encounter"
 * priority.coding[0].display = "Emergency"
 
 // Encounter type and subject
-* type[0].coding[0].system = $encounter-type
-* type[0].coding[0].code = #DIS
-* type[0].coding[0].display = "Discharge"
+//* type[0].coding[0].system = $encounter-type TODO: custom valueset and codesystem
+//* type[0].coding[0].code = #DIS 
+//* type[0].coding[0].display = "Discharge"
 * subject = Reference(Mracena2)
 
 // Note for the encounter - nelze pouzit
@@ -38,8 +38,8 @@ Description: "Czech HDR - example of an inpatient encounter"
 
 // Hospitalization details
 * hospitalization.admitSource.coding[0].system = $admit-source
-* hospitalization.admitSource.coding[0].code = #physician-referral
-* hospitalization.admitSource.coding[0].display = "Physician Referral"
+* hospitalization.admitSource.coding[0].code = #mp
+* hospitalization.admitSource.coding[0].display = "Medical Practitioner/physician referral"
 * hospitalization.dischargeDisposition.coding[0].system = $discharge-disposition
 * hospitalization.dischargeDisposition.coding[0].code = #home
 * hospitalization.dischargeDisposition.coding[0].display = "Home"
@@ -77,6 +77,9 @@ Description: "Czech HDR - example of an inpatient encounter"
 // 7. Encounter: Inpatient hospitalization
 Instance: HospitalEncounter
 InstanceOf: CZ_EncounterHdr
+Usage: #example
+Title: "CZ-Encounter-HDR Example of finished hospital encounter"
+Description: "Czech HDR - example of finished hospital encounter"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-encounter-hdr"
 //* id = "hospital-encounter"
 * status = #finished
@@ -92,7 +95,10 @@ InstanceOf: CZ_EncounterHdr
 
 Instance: HospitalEncounter-Novak-Petr
 InstanceOf: CZ_EncounterHdr
-//* id = "hospital-encounter-Novak-Petr"
+Usage: #example
+Title: "CZ-Encounter-HDR Example of encounter with emergency priority"
+Description: "Czech HDR - example of encounter with emergency priority"
+* id = "10f5c49e-086d-4016-8dd1-b555306bf620"
 * status = #finished
 * class.code = #IMP 
 * class.system = $cz-encounter-typ-kontaktu
@@ -105,10 +111,10 @@ InstanceOf: CZ_EncounterHdr
 * reasonReference = Reference(Condition-K409)
 * hospitalization.admitSource.coding[0].system = $admit-source
 * hospitalization.admitSource.coding[0].code = #outp
-* hospitalization.admitSource.coding[0].display = "Ambulantní péče"
+* hospitalization.admitSource.coding[0].display = "From outpatient department"
 * priority.coding[0].system = $actPriority
 * priority.coding[0].code = #EM
-* priority.coding[0].display = "Akutní"
+* priority.coding[0].display = "emergency"
 * participant[0].individual = Reference(Practitioner-Admitter)
 * participant[0].type.coding[0].system = $v3-ParticipationType
 * participant[0].type.coding[0].code = #ADM
@@ -134,7 +140,10 @@ InstanceOf: CZ_EncounterHdr
 
 Instance: HospitalEncounter-Novak-Petr_L1
 InstanceOf: CZ_EncounterHdr
-* id = "hospital-encounter-Novak-Petr"
+Usage: #example
+Title: "CZ-Encounter-HDR Example of encounter for Novak Petr"
+Description: "Czech HDR - example of encounter for Novak Petr"
+* id = "f08151d0-a7ad-4a7b-b7b9-97eb1d394ffb"
 * status = #finished
 * class.code = #IMP 
 * class.system = $cz-encounter-typ-kontaktu
