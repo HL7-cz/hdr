@@ -2,7 +2,7 @@
 
 **Resource Bundle** představuje kompletní balíček všech zdrojů, které dohromady tvoří propouštěcí zprávu. Obsahuje jak hlavní dokumentovou kompozici (Composition), tak všechny související klinické a administrativní zdroje – například údaje o pacientovi, hospitalizační epizody, diagnózy, provedené výkony, výsledky vyšetření, medikaci, alergie, použité zdravotnické prostředky, pojištění a další.
 
-Je určen pro přenos propouštěcí zprávy jako celku mezi systémy a zajišťuje konzistenci a úplnost dat. Struktura je nastavena tak, aby každý záznam v balíčku byl propojen a odpovídal vazbám definovaným ve funkční specifikaci MZ ČR.
+Je určen pro přenos propouštěcí zprávy jako celku mezi systémy a zajišťuje konzistenci a úplnost dat.
 
 - **Composition** – hlavička dokumentu, struktura a obsahové členění PZ.
 - **Patient** – identifikace a základní údaje o pacientovi.
@@ -12,7 +12,7 @@ Je určen pro přenos propouštěcí zprávy jako celku mezi systémy a zajišť
 - **DiagnosticReport, ImagingStudy, Observation, Specimen** – výsledky vyšetření, zobrazování a laboratorní nálezy.
 - **Immunization** – provedená očkování.
 - **Medication, MedicationRequest, MedicationStatement, MedicationDispense, MedicationAdministration** – předepsané, podané a vydané léky.
-- **Encounter** – údaje o hospitalizaci a jejím průběhu.
+- **Encounter** – údaje o kontaktu pacienta se zdravotnickým zařízením.
 - **Practitioner & PractitionerRole** – lékaři a ostatní zdravotničtí pracovníci, jejich role.
 - **Organization** – organizace a zařízení podílející se na péči.
 - **Procedure** – provedené zákroky a výkony.
@@ -59,7 +59,7 @@ Kompletní přehled medikace: léky užívané před přijetím, předepsané p�
 
 #### Encounter
 
-Údaje o hospitalizační epizodě: datum a čas přijetí a propuštění, typ a třída setkání, oddělení, účastníci péče, důvod hospitalizace, cílové umístění po propuštění. Vazba na sekce Průběh hospitalizace a Stav při propuštění.
+Údaje o kontaktu pacienta se zdravotnickým zařízením: datum a čas přijetí a propuštění, typ kontaktu, oddělení, účastníci péče, důvod hospitalizace, cílové umístění po propuštění. Vazba na sekce Průběh hospitalizace a Stav při propuštění.
 
 #### Practitioner & PractitionerRole
 
