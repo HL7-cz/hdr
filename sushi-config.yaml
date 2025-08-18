@@ -53,7 +53,7 @@ dependencies:
   hl7.fhir.cz.core: current
   hl7.fhir.cz.lab: current
   hl7.fhir.cz.img: current
-  
+
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
@@ -83,7 +83,7 @@ dependencies:
 #  general-semantics.md:
 #    title: Introduction
 #  logicalModel.md:
-#    title: Logical Models  
+#    title: Logical Models
 #  functional-view.md:
 #    title: Functional view
 #  general-semantics-cs.md:
@@ -155,7 +155,7 @@ pages:
   #terminology-considerations.md:
   #  title: Terminology considerations
   #terminology-considerations-cs.md:
-  #  title: Terminologické aspekty  
+  #  title: Terminologické aspekty
   #  use-cases.md:
   #    title: Use cases
   #  use-cases-cs.md:
@@ -174,7 +174,7 @@ pages:
   Subject-map.html:
     title: Subject Relationships
   InPatientEncounter-map.html:
-    title: InPatientEncounter Relationships  
+    title: InPatientEncounter Relationships
   AdmissionEvaluation-map.html:
     title: AdmissionEvaluation Relationships
   ObjectiveFindings-map.html:
@@ -193,9 +193,7 @@ pages:
     title: PlanOfCare Relationships
   MedicationSummary-map.html:
     title: MedicationSummary Relationships
- 
 
-    
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating
@@ -203,37 +201,37 @@ pages:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
-parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
-#  special-url:
-#    - https://ncez.mzcr.cz/fhir/ValueSet/cz-administrative-gender-vs
-#    - https://ncez.mzcr.cz/fhir/ValueSet/cz-contact-person-relation-vs
-#    - https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
-#    - https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani
-#    - https://ncez.mzcr.cz/fhir/ValueSet/cz-drzar-vs
-#    - https://ncez.mzcr.cz/fhir/ValueSet/nrzp-povolani-vs
-#    - https://ncez.mzcr.cz/fhir/ValueSet/PassportNS-vs
-#    - https://ncez.mzcr.cz/fhir/CodeSystem/cz-tab-ta
-#    - https://ncez.mzcr.cz/fhir/ValueSet/typ-registrujiciho-lekare-vs
-#    - https://ncez.mzcr.cz/fhir/CodeSystem/role-code-supplement
-#    - https://ncez.mzcr.cz/fhir/CodeSystem/contact-role-supplement
-#    - https://ncez.mzcr.cz/fhir/CodeSystem/snomed-supplement-service-type
-#    - http://ncez.mzcr.cz/fhir/StructureDefinition/address-point-cz
-# path-resource:
-#    - input/resources
-#    - fsh-generated/resources
-#  path-pages:
-#    - input/pagecontentinformation-reci
-#    - input/intro-notes
-#  path-tx-cache:
-#  expansion-parameter:
-#  rule-broken-links:
-#  generate-xml:
-#  generate-json:
-#  generate-turtle:
-#  html-template:
-#  active-tables: false
+parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  #  special-url:
+  #    - https://ncez.mzcr.cz/fhir/ValueSet/cz-administrative-gender-vs
+  #    - https://ncez.mzcr.cz/fhir/ValueSet/cz-contact-person-relation-vs
+  #    - https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
+  #    - https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani
+  #    - https://ncez.mzcr.cz/fhir/ValueSet/cz-drzar-vs
+  #    - https://ncez.mzcr.cz/fhir/ValueSet/nrzp-povolani-vs
+  #    - https://ncez.mzcr.cz/fhir/ValueSet/PassportNS-vs
+  #    - https://ncez.mzcr.cz/fhir/CodeSystem/cz-tab-ta
+  #    - https://ncez.mzcr.cz/fhir/ValueSet/typ-registrujiciho-lekare-vs
+  #    - https://ncez.mzcr.cz/fhir/CodeSystem/role-code-supplement
+  #    - https://ncez.mzcr.cz/fhir/CodeSystem/contact-role-supplement
+  #    - https://ncez.mzcr.cz/fhir/CodeSystem/snomed-supplement-service-type
+  #    - http://ncez.mzcr.cz/fhir/StructureDefinition/address-point-cz
+  # path-resource:
+  #    - input/resources
+  #    - fsh-generated/resources
+  #  path-pages:
+  #    - input/pagecontentinformation-reci
+  #    - input/intro-notes
+  #  path-tx-cache:
+  #  expansion-parameter:
+  #  rule-broken-links:
+  #  generate-xml:
+  #  generate-json:
+  #  generate-turtle:
+  #  html-template:
+  #  active-tables: false
   pin-canonicals: pin-multiples
-  path-expansion-params: '../../expansion-params.json'
+  path-expansion-params: "../../expansion-params.json"
   apply-contact: true
   apply-jurisdiction: true
   apply-publisher: true
@@ -244,15 +242,15 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
   # excludejson: false
   # excludettl: true
   # excludemap: true
- # no-narrative:
- #   - Patient/example-targeted-provenance
- #   - Bundle/docref-example-1
+  # no-narrative:
+  #   - Patient/example-targeted-provenance
+  #   - Bundle/docref-example-1
   # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
- # version-comparison:
- #    - 5.0.1
- #    - 4.0.0
+  # version-comparison:
+  #    - 5.0.1
+  #    - 4.0.0
 
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
@@ -265,39 +263,39 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-  
-  #Menu:
-  # Home:
-    # Home (en): index.html
-    # Home (cs): index-cs.html
-  # Introduction:
-    # eHN Guidelines (en): ehn-guidelines.html
-    # Model Maps: model-map.html
-    # Logical Models: logicalModel.html
-    # General semantics: general-semantics.html
-    # Content: general-semantics.html#content
-    # eHN Guidelines (cs): ehn-guidelines-cs.html
-    # Obecná sémantika: general-semantics-cs.html
-    # Obsah: general-semantics-cs.html#obsah
-  # Functional view:
-    # Actors: functional-view.html
-    # Use Cases: functional-view.html#use-cases
-    # Aktéři: functional-view-cs.html
-    # Případy užití: functional-view-cs.html#případy-užití
-  # Artifacts:
-    # Profile artifacts: artifacts.html
-  # About:
-    # Downloads: downloads.html
-  # IG HDR EU: https://build.fhir.org/ig/hl7-eu/hdr/index.html
-   #Functional:
-    #   Use cases (en): use-cases.html
-    #   Use cases (cs): use-cases-cs.html
-    #   Workflow (en): workflow.html
-    #   Workflow (cs): workflow-cs.html
-    #   Logical models (en): logical-models.html
-    #   Logical models (cs): logical-models-cs.html
-    #   Terminology considerations (en): terminology-considerations.html
-    #   Terminology considerations (cs): terminology-considerations-cs.html
+
+#Menu:
+# Home:
+# Home (en): index.html
+# Home (cs): index-cs.html
+# Introduction:
+# eHN Guidelines (en): ehn-guidelines.html
+# Model Maps: model-map.html
+# Logical Models: logicalModel.html
+# General semantics: general-semantics.html
+# Content: general-semantics.html#content
+# eHN Guidelines (cs): ehn-guidelines-cs.html
+# Obecná sémantika: general-semantics-cs.html
+# Obsah: general-semantics-cs.html#obsah
+# Functional view:
+# Actors: functional-view.html
+# Use Cases: functional-view.html#use-cases
+# Aktéři: functional-view-cs.html
+# Případy užití: functional-view-cs.html#případy-užití
+# Artifacts:
+# Profile artifacts: artifacts.html
+# About:
+# Downloads: downloads.html
+# IG HDR EU: https://build.fhir.org/ig/hl7-eu/hdr/index.html
+#Functional:
+#   Use cases (en): use-cases.html
+#   Use cases (cs): use-cases-cs.html
+#   Workflow (en): workflow.html
+#   Workflow (cs): workflow-cs.html
+#   Logical models (en): logical-models.html
+#   Logical models (cs): logical-models-cs.html
+#   Terminology considerations (en): terminology-considerations.html
+#   Terminology considerations (cs): terminology-considerations-cs.html
 menu:
   Home:
     Home (en): index.html
@@ -330,7 +328,6 @@ menu:
     Copyright (cs): copyright-cs.html
   Artifacts: artifacts.html
   IG HDR EU: https://build.fhir.org/ig/hl7-eu/hdr/index.html
-
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
@@ -400,41 +397,41 @@ menu:
 ## URL when generating the IG JSON.
 #
 #groups:
-   # eHNGuidelines:
-      #name:  eHN Hospital Discharge Report Guidelines (Informative)
-      #description: Logical models representing the eHN Hospital Discharge Report Guidelines. This is informative material.
-     # resources:
-        #- StructureDefinition/HospitalDischargeReportCz
-       # - StructureDefinition/Header
-        #- StructureDefinition/SubjectCz
-        #- StructureDefinition/AdvanceDirectivesCz
-        #- StructureDefinition/AlertsCz
-        #- StructureDefinition/InPatientEncounterCz
-        #- StructureDefinition/AdmissionEvaluationCz
-        #- StructureDefinition/PatientHistoryCz
-        #- StructureDefinition/HospitalStayCz
-        #- StructureDefinition/DischargeDetailsCz
-        #- StructureDefinition/ObjectiveFindingsCz
-        #- StructureDefinition/FunctionalStatusCz
-        #- StructureDefinition/PlanOfCareCz
-        #- StructureDefinition/MedicationSummaryCz
+# eHNGuidelines:
+#name:  eHN Hospital Discharge Report Guidelines (Informative)
+#description: Logical models representing the eHN Hospital Discharge Report Guidelines. This is informative material.
+# resources:
+#- StructureDefinition/HospitalDischargeReportCz
+# - StructureDefinition/Header
+#- StructureDefinition/SubjectCz
+#- StructureDefinition/AdvanceDirectivesCz
+#- StructureDefinition/AlertsCz
+#- StructureDefinition/InPatientEncounterCz
+#- StructureDefinition/AdmissionEvaluationCz
+#- StructureDefinition/PatientHistoryCz
+#- StructureDefinition/HospitalStayCz
+#- StructureDefinition/DischargeDetailsCz
+#- StructureDefinition/ObjectiveFindingsCz
+#- StructureDefinition/FunctionalStatusCz
+#- StructureDefinition/PlanOfCareCz
+#- StructureDefinition/MedicationSummaryCz
 #
-    #logicalModelsMaps:
-      #name:  eHN Logical Model mappings (Informative)
-      #description: Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide.
-      #resources:
-        #- ConceptMap/hdr2FHIR-cz-hdr
-        #- ConceptMap/hdrHeader2FHIR-cz-hdr
-        #- ConceptMap/subject2FHIR-cz-hdr
-        #- ConceptMap/encounter2FHIR-cz-hdr
-        #- ConceptMap/alerts2FHIR-cz-hdr
-        #- ConceptMap/advanceDirectives2FHIR-cz-hdr
-        #- ConceptMap/planOfCare2FHIR-cz-hdr
-        #- ConceptMap/medicationSummary2FHIR-cz-hdr
+#logicalModelsMaps:
+#name:  eHN Logical Model mappings (Informative)
+#description: Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide.
+#resources:
+#- ConceptMap/hdr2FHIR-cz-hdr
+#- ConceptMap/hdrHeader2FHIR-cz-hdr
+#- ConceptMap/subject2FHIR-cz-hdr
+#- ConceptMap/encounter2FHIR-cz-hdr
+#- ConceptMap/alerts2FHIR-cz-hdr
+#- ConceptMap/advanceDirectives2FHIR-cz-hdr
+#- ConceptMap/planOfCare2FHIR-cz-hdr
+#- ConceptMap/medicationSummary2FHIR-cz-hdr
 #*/
 groups:
   obligations:
-    name:  Actors and Obligations (Informative)
+    name: Actors and Obligations (Informative)
     description: Actors and Obligations used to describe the HDR functional requirements for the specified data elements. Informative for this version of the guide.
     resources:
       - ActorDefinition/actor-consumer-hdr
@@ -442,7 +439,7 @@ groups:
       - StructureDefinition/cz-patient-obl-hdr
 
   czech-logical-model:
-    name:  Czech logical model (Informative)
+    name: Czech logical model (Informative)
     description: Logical model in czech language. Informative for this version of the guide.
     resources:
       - StructureDefinition/LogAdmissionEvaluationCz
@@ -462,8 +459,7 @@ groups:
       - StructureDefinition/LogPatientHistoryCz
       - StructureDefinition/LogSubjectCz
       - StructureDefinition/LogPresentedFormCz
-
-      
+      - StructureDefinition/LogHospitalDischargeReportViewCz
 
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
@@ -503,7 +499,6 @@ groups:
 
 instanceOptions:
   manualSliceOrdering: true
-
 # instanceOptions:
 #   Determines for which types of Instances SUSHI will automatically set meta.profile
 #   if InstanceOf references a profile:
