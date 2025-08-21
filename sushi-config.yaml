@@ -459,6 +459,11 @@ groups:
       - StructureDefinition/LogPatientHistoryCz
       - StructureDefinition/LogSubjectCz
       - StructureDefinition/LogPresentedFormCz
+
+  czech-view-model:
+    name: Czech logical view model (Informative)
+    description: Logical view model in czech language.
+    resources:
       - StructureDefinition/LogHospitalDischargeReportViewCz
 
 # The ImplementationGuide resource defines several other properties
