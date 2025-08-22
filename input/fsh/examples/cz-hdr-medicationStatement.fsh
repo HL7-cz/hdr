@@ -106,7 +106,7 @@ Description: "Czech HDR - example of Euthyrox"
 * reasonCode.text = "Hypotyreóza"
 //dávkování
 * dosage[0].text = "1 tableta denně"
-* dosage[0].timing.repeat.frequency = 1
+* dosage[0].timing.repeat.frequency = 1 
 * dosage[0].timing.repeat.period = 1 
 * dosage[0].timing.repeat.periodUnit = #d
 * dosage[0].doseAndRate.doseQuantity.value = 1

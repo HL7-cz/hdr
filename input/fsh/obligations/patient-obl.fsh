@@ -8,9 +8,32 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * insert SetFmmandStatusRule ( 0, informative)
 
 // TEST OBLIGATIONS  ====>
+// Creator Obligations
+* identifier insert OblCreator(#SHALL:able-to-populate)
+* identifier[RID] insert OblCreator(#SHALL:able-to-populate)
+* name.given insert OblCreator(#SHALL:able-to-populate)
+* name.family insert OblCreator(#SHALL:able-to-populate)
+* name.text insert OblCreator(#SHALL:able-to-populate) //can-send
+* telecom insert OblCreator(#SHOULD:able-to-populate) //can-send
+* gender insert OblCreator(#SHALL:able-to-populate)
+* birthDate insert OblCreator(#SHALL:able-to-populate)
+* generalPractitioner insert OblCreator(#SHOULD:able-to-populate) //can-send
+* address insert OblCreator(#SHALL:able-to-populate) //can-send
 
-// Obligations at the element level 
+// consumer obligations
+* identifier insert OblConsumer(#SHALL:display)
+* name.given insert OblConsumer(#SHALL:display)
+* name.family insert OblConsumer(#SHALL:display)
+* name.text insert OblConsumer(#SHOULD:display)
+* telecom insert OblConsumer(#SHALL:display)
+* gender insert OblConsumer(#SHALL:display)
+* birthDate insert OblConsumer(#SHALL:display)
+* generalPractitioner insert OblConsumer(#SHOULD:display)
+* address insert OblConsumer(#SHALL:display)
+
+// Obligations at the element level
 // Server obligations
+/*
 * identifier insert ObligationSet-02_creator-should-able
 * identifier.system insert ObligationSet-01_creator-shall-able
 * identifier.value insert ObligationSet-01_creator-shall-able
@@ -24,6 +47,7 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * address insert ObligationSet-04_creator-should-if-known
 
 * generalPractitioner.identifier insert ObligationSet-02_creator-should-able
+*/
 //* generalPractitioner.name insert ObligationSet-02_creator-should-able
 //* generalPractitioner.qualification insert ObligationSet-04_creator-should-if-known
 //* generalPractitioner.telecom insert ObligationSet-04_creator-should-if-known
