@@ -22,7 +22,7 @@ InstanceOf: DocumentReference
 Title: "Discharge Summary Document - Base64"
 Description: "DocumentReference for discharge summary, base64 encoded HTML"
 Usage: #example
-
+* id = "d9ad8a22-a12b-48db-938c-4066a3a0617a"
 * status = #current
 * type = $loinc#18842-5 "Discharge summary"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)

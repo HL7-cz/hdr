@@ -167,10 +167,10 @@ Usage: #example
 * entry[observation][=].resource = Observation-UZV-Novak
 * entry[observation][+].fullUrl = "urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b"
 * entry[observation][=].resource = Observation-CRP-Novak
-//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c"
-//* entry[observation][=].resource = ExampleSdohSmoking
-//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001d"
-//* entry[observation][=].resource = ExampleSdohAlcohol
+* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c"
+* entry[observation][=].resource = ExampleSdohSmokingEnded
+* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001d"
+* entry[observation][=].resource = ExampleSdohAlcoholSporadic
 * entry[immunization][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001e"
 * entry[immunization][=].resource = Immunization
 * entry[deviceUseStatement][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001f"
@@ -189,12 +189,14 @@ Usage: #example
 * entry[observation][=].resource = Observation-Social-network
 //* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000026"
 //* entry[observation][=].resource = Observation-Education-level
-//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000027"
-//* entry[observation][=].resource = Observation-Education
+* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000027"
+* entry[observation][=].resource = Observation-Education
 * entry[organization][+].fullUrl = "urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
 * entry[organization][=].resource = Organization-1
 * entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
 * entry[documentReference][=].resource = DischargeDocumenPDF
+* entry[documentReference][+].fullUrl = "urn:uuid:d9ad8a22-a12b-48db-938c-4066a3a0617a"
+* entry[documentReference][=].resource = DischargeDocumentHTML
 * entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eabb"
 * entry[provenance][=].resource = signature-L3
 

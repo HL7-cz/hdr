@@ -29,7 +29,7 @@ Description: "Example of Social History Observation - Smoking"
 Instance: ExampleSdohSmokingEnded
 InstanceOf: CZ_ObservationSdohHdr
 Description: "Example of Social History Observation - Smoking history"
-
+* id = "3f85726c-ad2f-441b-89ce-10000000001c"
 * status = #final
 * category[SocialHistory] = $observation-category#social-history
 * code = $sct#229819007 "Tobacco use and exposure"
@@ -43,7 +43,6 @@ Description: "Example of Social History Observation - Smoking history"
 Instance: ExampleSdohAlcohol
 InstanceOf: CZ_ObservationSdohHdr
 Description: "Example of Social History Observation - Alcohol Use"
-
 * status = #final
 * category[SocialHistory] =  $observation-category#social-history
 * code = $sct#160573003 "Alcohol intake"
@@ -57,7 +56,7 @@ Description: "Example of Social History Observation - Alcohol Use"
 Instance: ExampleSdohAlcoholSporadic
 InstanceOf: CZ_ObservationSdohHdr
 Description: "Example of Social History Observation - Alcohol Use"
-
+* id = "3f85726c-ad2f-441b-89ce-10000000001d"
 * status = #final
 * category[SocialHistory] = $observation-category#social-history
 * code = $sct#160573003 "Alcohol consumption"
@@ -166,14 +165,14 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 
 //-----------------------------------------
 Instance: Observation-UZV-Novak
-InstanceOf: Observation
+InstanceOf: CZ_ObservationResultImaging
 Usage: #example
 Title: "UZV - Novák Petr"
 Description: "Czech HDR - example of an ultrasound observation for Novák Petr"
 * id = "e15aeeaf-e288-404c-9704-9c8f0b2d4e3a"
 * status = #final
 * category = $observation-category#imaging  //http://terminology.hl7.org/CodeSystem/observation-category
-* code = $loinc#24719-7 "US Groin"
+* code = $sct#13221000087107 "Ultrasonography of groin and scrotum"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-10T10:00:00+01:00"
 * performer = Reference(Practitioner-UZV)
@@ -181,14 +180,15 @@ Description: "Czech HDR - example of an ultrasound observation for Novák Petr"
 
 //-----------------------------------------
 Instance: Observation-CRP-Novak
-InstanceOf: Observation
+InstanceOf: CZ_ObservationResultLaboratory
 Usage: #example
 Title: "CRP - Novák Petr"
 Description: "Czech HDR - example of CRP observation for Novák Petr"
 * id = "10f5c49e-086d-4016-8dd1-10000000001b"
 * status = #final
-* category = $observation-category#laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
-* code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+* category[laboratory] = $observation-category#laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
+* category[studyType] = $loinc#26436-6 "Laboratory studies (set)" 
+* code = $nclp#07830 "Protein C - kontrola (P; rel. čas [1] *)"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-01T10:00:00+01:00"
 * performer = Reference(Practitioner-UZV)
@@ -291,7 +291,7 @@ Description: "Pacient je aktivní v komunitních aktivitách a dobrovolnictví."
 * code = $sct#363910003 "Characteristic of psychosocial functioning"
 * effectiveDateTime = "2024-03-28"
 * performer = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000023)
 * hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000024)
 * hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000025)
@@ -353,7 +353,7 @@ InstanceOf: cz-observation-sdoh-hdr
 Usage: #example
 Title: "Vzdělání"
 Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
-* id = "f85726c-ad2f-441b-89ce-100000000027"
+* id = "3f85726c-ad2f-441b-89ce-100000000027"
 * status = #final
 * code = $sct#276031006 "Education"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
