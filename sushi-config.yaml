@@ -53,7 +53,7 @@ dependencies:
   hl7.fhir.cz.core: current
   hl7.fhir.cz.lab: current
   hl7.fhir.cz.img: current
-  
+
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
@@ -83,7 +83,7 @@ dependencies:
 #  general-semantics.md:
 #    title: Introduction
 #  logicalModel.md:
-#    title: Logical Models  
+#    title: Logical Models
 #  functional-view.md:
 #    title: Functional view
 #  general-semantics-cs.md:
@@ -155,7 +155,7 @@ pages:
   #terminology-considerations.md:
   #  title: Terminology considerations
   #terminology-considerations-cs.md:
-  #  title: Terminologické aspekty  
+  #  title: Terminologické aspekty
   #  use-cases.md:
   #    title: Use cases
   #  use-cases-cs.md:
@@ -174,7 +174,7 @@ pages:
   Subject-map.html:
     title: Subject Relationships
   InPatientEncounter-map.html:
-    title: InPatientEncounter Relationships  
+    title: InPatientEncounter Relationships
   AdmissionEvaluation-map.html:
     title: AdmissionEvaluation Relationships
   ObjectiveFindings-map.html:
@@ -193,9 +193,9 @@ pages:
     title: PlanOfCare Relationships
   MedicationSummary-map.html:
     title: MedicationSummary Relationships
- 
 
-    
+
+
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating
@@ -265,7 +265,7 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-  
+
   #Menu:
   # Home:
     # Home (en): index.html
@@ -437,8 +437,12 @@ groups:
     name:  Actors and Obligations (Informative)
     description: Actors and Obligations used to describe the HDR functional requirements for the specified data elements. Informative for this version of the guide.
     resources:
-      - ActorDefinition/actor-consumer-hdr
-      - ActorDefinition/actor-creator-hdr
+      - ActorDefinition/actor-consumer-hdr-L1
+      - ActorDefinition/actor-creator-hdr-L1
+      - ActorDefinition/actor-consumer-hdr-L2
+      - ActorDefinition/actor-creator-hdr-L2
+      - ActorDefinition/actor-consumer-hdr-L3
+      - ActorDefinition/actor-creator-hdr-L3
       - StructureDefinition/cz-patient-obl-hdr
 
   czech-logical-model:
@@ -463,7 +467,7 @@ groups:
       - StructureDefinition/LogSubjectCz
       - StructureDefinition/LogPresentedFormCz
 
-      
+
 
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and

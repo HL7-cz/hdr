@@ -8,28 +8,72 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * insert SetFmmandStatusRule ( 0, informative)
 
 // TEST OBLIGATIONS  ====>
-// Creator Obligations
-* identifier insert OblCreator(#SHALL:able-to-populate)
-* identifier[RID] insert OblCreator(#SHALL:able-to-populate)
-* name.given insert OblCreator(#SHALL:able-to-populate)
-* name.family insert OblCreator(#SHALL:able-to-populate)
-* name.text insert OblCreator(#SHALL:able-to-populate) //can-send
-* telecom insert OblCreator(#SHOULD:able-to-populate) //can-send
-* gender insert OblCreator(#SHALL:able-to-populate)
-* birthDate insert OblCreator(#SHALL:able-to-populate)
-* generalPractitioner insert OblCreator(#SHOULD:able-to-populate) //can-send
-* address insert OblCreator(#SHALL:able-to-populate) //can-send
+// Creator Obligations L1 ============>
+* identifier insert OblCreator(#SHALL:able-to-populate,L1)
+* name.given insert OblCreator(#SHALL:able-to-populate,L1)
+* name.family insert OblCreator(#SHALL:able-to-populate,L1)
+* name.text insert OblCreator(#SHALL:able-to-populate,L1) //can-send
+* telecom insert OblCreator(#SHOULD:able-to-populate,L1) //can-send
+* gender insert OblCreator(#SHALL:able-to-populate,L1)
+* birthDate insert OblCreator(#SHALL:able-to-populate,L1)
+* generalPractitioner insert OblCreator(#SHOULD:able-to-populate,L1) //can-send
+* address insert OblCreator(#SHALL:able-to-populate,L1) //can-send
 
-// consumer obligations
-* identifier insert OblConsumer(#SHALL:display)
-* name.given insert OblConsumer(#SHALL:display)
-* name.family insert OblConsumer(#SHALL:display)
-* name.text insert OblConsumer(#SHOULD:display)
-* telecom insert OblConsumer(#SHALL:display)
-* gender insert OblConsumer(#SHALL:display)
-* birthDate insert OblConsumer(#SHALL:display)
-* generalPractitioner insert OblConsumer(#SHOULD:display)
-* address insert OblConsumer(#SHALL:display)
+// Consumer obligations L1
+* identifier insert OblConsumer(#SHALL:display,L1)
+* name.given insert OblConsumer(#SHALL:display,L1)
+* name.family insert OblConsumer(#SHALL:display,L1)
+* name.text insert OblConsumer(#SHOULD:display,L1)
+* telecom insert OblConsumer(#SHALL:display,L1)
+* gender insert OblConsumer(#SHALL:display,L1)
+* birthDate insert OblConsumer(#SHALL:display,L1)
+* generalPractitioner insert OblConsumer(#SHOULD:display,L1)
+* address insert OblConsumer(#SHALL:display,L1)
+
+// Creator Obligations L2 ============>
+* identifier insert OblCreator(#SHALL:able-to-populate,L2)
+* name.given insert OblCreator(#SHALL:able-to-populate,L2)
+* name.family insert OblCreator(#SHALL:able-to-populate,L2)
+* name.text insert OblCreator(#SHALL:able-to-populate,L2) //can-send
+* telecom insert OblCreator(#SHOULD:able-to-populate,L2) //can-send
+* gender insert OblCreator(#SHALL:able-to-populate,L2)
+* birthDate insert OblCreator(#SHALL:able-to-populate,L2)
+* generalPractitioner insert OblCreator(#SHOULD:able-to-populate,L2) //can-send
+* address insert OblCreator(#SHALL:able-to-populate,L2) //can-send
+
+// Consumer obligations L2
+* identifier insert OblConsumer(#SHALL:display,L2)
+* name.given insert OblConsumer(#SHALL:display,L2)
+* name.family insert OblConsumer(#SHALL:display,L2)
+* name.text insert OblConsumer(#SHOULD:display,L2)
+* telecom insert OblConsumer(#SHALL:display,L2)
+* gender insert OblConsumer(#SHALL:display,L2)
+* birthDate insert OblConsumer(#SHALL:display,L2)
+* generalPractitioner insert OblConsumer(#SHOULD:display,L2)
+* address insert OblConsumer(#SHALL:display,L2)
+
+// Creator Obligations L3 ============>
+* identifier insert OblCreator(#SHALL:able-to-populate,L3)
+* name.given insert OblCreator(#SHALL:able-to-populate,L3)
+* name.family insert OblCreator(#SHALL:able-to-populate,L3)
+* name.text insert OblCreator(#SHALL:able-to-populate,L3) //can-send
+* telecom insert OblCreator(#SHOULD:able-to-populate,L3) //can-send
+* gender insert OblCreator(#SHALL:able-to-populate,L3)
+* birthDate insert OblCreator(#SHALL:able-to-populate,L3)
+* generalPractitioner insert OblCreator(#SHOULD:able-to-populate,L3) //can-send
+* address insert OblCreator(#SHALL:able-to-populate,L3) //can-send
+
+// Consumer obligations L3
+* identifier insert OblConsumer(#SHALL:display,L3)
+* name.given insert OblConsumer(#SHALL:display,L3)
+* name.family insert OblConsumer(#SHALL:display,L3)
+* name.text insert OblConsumer(#SHOULD:display,L3)
+* telecom insert OblConsumer(#SHALL:display,L3)
+* gender insert OblConsumer(#SHALL:display,L3)
+* birthDate insert OblConsumer(#SHALL:display,L3)
+* generalPractitioner insert OblConsumer(#SHOULD:display,L3)
+* address insert OblConsumer(#SHALL:display,L3)
+
 
 // Obligations at the element level
 // Server obligations

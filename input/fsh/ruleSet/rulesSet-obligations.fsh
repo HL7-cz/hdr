@@ -1,3 +1,4 @@
+/*
 RuleSet: ObligationSet1
 * insert ObligationActorAndCode($consumer, #SHALL:handle)
 // * insert ObligationActorAndCode($server, #will-send)
@@ -15,6 +16,7 @@ RuleSet: ObligationSet3
 // * insert ObligationActorAndCode($server, #can-send)
 // * insert ObligationActorAndCode($creator, #can-send)
 * insert ObligationActorAndCode($creator, #MAY:able-to-populate)
+*/
 
 // RuleSet: SetFmmandStatusRule ( fmm, status )
 // * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = {fmm}

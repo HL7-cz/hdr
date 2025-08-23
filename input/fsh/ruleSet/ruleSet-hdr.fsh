@@ -64,11 +64,11 @@ RuleSet: EvaluationSubSectionRules
   * insert SectionComRules (
     Vital signs,
     The Vital signs section includes blood pressure\, body temperature\, heart rate\, and respiratory rate. It may also include other clinical findings\, such as height\, weight\, body mass index\, head circumference\, and pulse oximetry. In particular\, notable vital signs or physical findings such as the most recent\, maximum and/or minimum\, baseline\, or relevant trends may be included,
-    $loinc#8716-3) 
+    $loinc#8716-3)
 /*   * title = "Vital signs"
   * code = $sct#1184593002 "Vital sign document section (record artifact)" */
   * entry 1..
-  
+
   /* * entry only Reference(BloodPressureXpandh or HeartRateXpandh or RespiratoryRateXpandh or BodyTemperatureXpandh or OxygenSaturationXpandh )
  */
 
@@ -93,21 +93,5 @@ RuleSet: EvaluationSubSectionRules
   * entry only Reference(CZ_ConditionHdr or ClinicalImpression or Observation or DocumentReference or QuestionnaireResponse)
     * ^short = "Optional entry used to represent disabilities and functional assessments"
     * ^definition = "It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide."
-  
-  // => add slices for diability or functional assessment ?
 
-// RuleSet: SetFmmandStatusRule ( fmm, status )
-// * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = {fmm}
-// * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
-
-// RuleSet: SetFmmandStatusRuleInstance ( fmm, status )
-// * extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = {fmm}
-// * extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
-
-// RuleSet: ExtensionContext(path)
-// * ^context[+].type = #element
-// * ^context[=].expression = "{path}"
-
-// RuleSet: SNOMEDCopyrightForVS
-// * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-// * ^experimental = false
+  // => add slices for disability or functional assessment ?
