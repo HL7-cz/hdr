@@ -86,8 +86,8 @@ Usage: #example
     </ul>
   </div>"""
 * section[sectionSignificantResults].text.status = #additional
-* section[sectionSignificantResults].entry[0] = Reference(urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a) // Corrected Reference to include the resource type
-* section[sectionSignificantResults].entry[1] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b) // Corrected Reference to include the resource type
+* section[sectionSignificantResults].entry[radResult] = Reference(urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a) // Corrected Reference to include the resource type
+* section[sectionSignificantResults].entry[labResult] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b) // Corrected Reference to include the resource type
 
 // Sekce Implantáty a zdravotní pomůcky
 * section[sectionMedicalDevices].title = "Zdravotní pomůcky a implantáty"
@@ -282,10 +282,10 @@ Usage: #example
     <p>Dosažený stupeň vzdělání: Pacient má vysokoškolské vzdělání v oboru informatiky.</p>
   </div>"""
 * section[sectionSocialHistory].text.status = #additional
-* section[sectionSocialHistory].entry[+] = Reference(Observation-Participation-in-society)
-* section[sectionSocialHistory].entry[+] = Reference(Observation-Education)
-* section[sectionSocialHistory].entry[+] = Reference(ExampleSdohSmokingEnded)
-* section[sectionSocialHistory].entry[+] = Reference(ExampleSdohAlcoholSporadic)
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000022)
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000027)
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c)
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001d)
 
 //Add section for imunizations
 * section[sectionImmunizations].title = "Očkování"
@@ -349,7 +349,7 @@ Usage: #example
 * section[sectionAttachments].code.coding[0].code = #77599-9   
 * section[sectionAttachments].code.coding[0].display = "Additional documentation"
 * section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
-* section[sectionAttachments].entry[1] = Reference(DischargeDocumentHTML)
+* section[sectionAttachments].entry[1] = Reference(urn:uuid:d9ad8a22-a12b-48db-938c-4066a3a0617a)
 * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
 * section[sectionAttachments].text.status = #generated
 
