@@ -1,4 +1,4 @@
-Logical: AdmissionEvaluationEhnEn
+Logical: LogEnAdmissionEvaluationEhnEn
 Id: AdmissionEvaluationEhnEn
 Title: "A.2.4 - Admission evaluation (eHN)"
 Description: """Hospital Discharge Report - Admission evaluation - A.2.4 eHN"""

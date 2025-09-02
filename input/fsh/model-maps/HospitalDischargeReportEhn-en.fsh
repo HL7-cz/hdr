@@ -1,4 +1,4 @@
-Logical: HospitalDischargeReportEhnCz
+Logical: LogEnHospitalDischargeReportEhnCz
 Id: HospitalDischargeReportCz
 Title: "A - Hospital Discharge Report (eHN)"
 Description: """Hospital Discharge Report"""

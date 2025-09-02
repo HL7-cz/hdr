@@ -1,4 +1,4 @@
-Logical: MedicationSummaryHdrEhnCz
+Logical: LogEnMedicationSummaryHdrEhnCz
 Id: MedicationSummaryCz
 Title: "A.2.8.2 - Medication summary"
 Description: """Hospital Discharge Report - Medication Summary after discharge - A.2.8.2 eHN"""
