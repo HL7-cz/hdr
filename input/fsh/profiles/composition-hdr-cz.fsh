@@ -722,7 +722,7 @@ $loinc#10160-0) // 	History of Medication use Narrative
 // -------------------------------------------------------------
 * section contains sectionAttachments 0..1
 * section[sectionAttachments]
-  * insert a (
+  * insert SectionComRules (
       Library of attachments.,
       List documents related and attachments to this report.,
       $loinc#77599-9 ) // "Additional documentation"
