@@ -1,4 +1,4 @@
-Logical: HospitalStayEhnCz
+Logical: LogEnHospitalStayEhnCz
 Id: HospitalStayCz
 Title: "A.2.6 - Hospital stay (eHN)"
 Description: """Hospital Discharge Report - Hospital stay - A.2.6 eHN"""

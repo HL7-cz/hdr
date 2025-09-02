@@ -1,4 +1,4 @@
-Logical: HeaderHdrCz
+Logical: LogEnHeaderHdrCz
 Id: Header
 Title: "A.1 - Hospital Discharge Report header data element"
 Description: """Hospital Discharge Report - Hospital Discharge Report header data element - A.1 eHN"""

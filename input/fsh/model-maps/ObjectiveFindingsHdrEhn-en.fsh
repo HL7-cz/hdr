@@ -1,4 +1,4 @@
-Logical: ObjectiveFindingsHdrEhnCz
+Logical: LogEnObjectiveFindingsHdrEhnCz
 Id: ObjectiveFindingsCz
 Title: "A.2.7.1 - Objective findings"
 Description: """Hospital Discharge Report - Objective Findings- A.2.7.1 eHN"""

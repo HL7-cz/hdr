@@ -1,4 +1,4 @@
-Logical: AdvanceDirectivesEhnCz
+Logical: LogEnAdvanceDirectivesEhnCz
 Id: AdvanceDirectivesCz
 Title: "A.2.1 - Advance Directives (eHN)"
 Description: """Hospital Discharge Report - Advance Directives - A.2.1 eHN"""

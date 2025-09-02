@@ -1,4 +1,4 @@
-Logical: PatientHistoryEhnCz
+Logical: LogEnPatientHistoryEhnCz
 Id: PatientHistoryCz
 Title: "A.2.5 - Patient history (eHN)"
 Description: """Hospital Discharge Report - Patient history - A.2.5 eHN"""

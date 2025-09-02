@@ -1,4 +1,4 @@
-Logical: EncounterEhnCz
+Logical: LogEnEncounterEhnCz
 Id: InPatientEncounterCz
 Title: "A.2.3 - Encounter (eHN)"
 Description: """Hospital Discharge Report - Encounter - A.2.3 eHN"""
