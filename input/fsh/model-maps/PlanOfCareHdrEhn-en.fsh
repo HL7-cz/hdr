@@ -1,4 +1,4 @@
-Logical: PlanOfCareHdrEhnCz
+Logical: LogEnPlanOfCareHdrEhnCz
 Id: PlanOfCareCz
 Title: "A.2.8.1 - Care plan"
 Description: """Hospital Discharge Report - Care plan after discharge - A.2.8.1 eHN"""

@@ -1,4 +1,4 @@
-Logical: FunctionalStatusHdrEhnCz
+Logical: LogEnFunctionalStatusHdrEhnCz
 Id: FunctionalStatusCz
 Title: "A.2.8.2 - Functional status"
 Description: """Hospital Discharge Report - Functional status  - A.2.8.2 eHN"""
