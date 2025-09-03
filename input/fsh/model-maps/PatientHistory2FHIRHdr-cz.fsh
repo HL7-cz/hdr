@@ -52,7 +52,7 @@ Usage: #definition
 * group[=].element[=].target.comment = "decison not to have as distict section"
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts
 * group[=].element[=].display = "A.2.6.1.5.1 - Infectious contacts"
-* group[=].element[=].target.code = #Composition.section::infectiousContacts
+* group[=].element[=].target.code = #Composition.section:infectiousContacts
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.travelHistory
@@ -80,7 +80,7 @@ Usage: #definition
 * group[=].element[=].target.comment = "To be specified"
 * group[=].element[+].code = #PatientHistory.familyHistory
 * group[=].element[=].display = "A.2.6.2 - Family history"
-* group[=].element[=].target.code = #Composition.section:sectionFamilyMemberHistory
+* group[=].element[=].target.code = #Composition.section:sectionFamilyHistory
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #PatientHistory.socialDeterminants
