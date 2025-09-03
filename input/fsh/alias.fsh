@@ -17,14 +17,17 @@ Alias: $orpha = https://www.orpha.net
 Alias: $encounter-type = http://terminology.hl7.org/CodeSystem/encounter-type
 Alias: $admit-source = http://terminology.hl7.org/CodeSystem/admit-source
 Alias: $discharge-disposition = http://terminology.hl7.org/CodeSystem/discharge-disposition
+Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+Alias: $admit-source = http://terminology.hl7.org/CodeSystem/admit-source
+Alias: $medication-statement = http://terminology.hl7.org/CodeSystem/medicationrequest-admin-location
+Alias: $absent-or-uknown = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips
+Alias: $actPriority = http://terminology.hl7.org/CodeSystem/v3-ActPriority
+Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
+Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
 
 // Extensions:
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $patient-birthTime = http://hl7.org/fhir/StructureDefinition/patient-birthTime
-Alias: $iso21090-ADXP-streetName = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName
-Alias: $iso21090-ADXP-houseNumber = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber
-Alias: $iso21090-ADXP-postBox = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox
-Alias: $iso21090-SC-coding = http://hl7.org/fhir/StructureDefinition/iso21090-SC-coding
 Alias: $ext-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
 Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
@@ -50,7 +53,7 @@ Alias: $PractitionerRole-eu-core = http://hl7.eu/fhir/base/StructureDefinition/P
 Alias: $Encounter-eu-hdr = http://hl7.eu/fhir/hdr/StructureDefinition/encounter-eu-hdr
 Alias: $Composition-eu-hdr = http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr
 Alias: $EncounterEuHdr = http://hl7.eu/fhir/hdr/StructureDefinition/EncounterEuHdr
-Alias: $CarePlan-eu-hdr = http://hl7.eu/fhir/hdr/StructureDefinition/carePlan-eu-eps
+Alias: $CarePlan-eu-hdr = http://hl7.eu/fhir/hdr/StructureDefinition/carePlan-eu-hdr
 Alias: $Condition-eu-hdr = http://hl7.eu/fhir/hdr/StructureDefinition/condition-eu-hdr
 Alias: $Procedure-eu-hdr = http://hl7.eu/fhir/hdr/StructureDefinition/procedure-eu-hdr
 Alias: $ObservationTravelEuHdr = http://hl7.eu/fhir/hdr/StructureDefinition/observation-travel-eu-hdr
@@ -89,13 +92,15 @@ Alias: $cz-allergyintolerance-reakce-zavaznost = http://hl7.org/fhir/ValueSet/re
 Alias: $cz-medicationStatement-reason-status = http://hl7.org/fhir/ValueSet/reason-medication-status-codes
 Alias: $cz-medicationStatement-category = http://hl7.org/fhir/ValueSet/medication-statement-category 
 Alias: $cz-medicationStatement-route = http://hl7.org/fhir/ValueSet/route-codes
-Alias: $cz-medication-DLP = https://hl7.cz/fhir/core/ValueSet/dlplecivepripravky-cz-vs
-Alias: $cz-medication-DLPForma =  https://hl7.cz/fhir/core/ValueSet/dlpformy-cz-vs
-Alias: $cz-medicationDLPLecive-latky = https://hl7.cz/fhir/core/ValueSet/dlplecivelatky-cz-vs
+Alias: $cz-medication-DLP = https://hl7.cz/fhir/core/ValueSet/cz-dlplecivepripravky-vs
+Alias: $cz-medication-DLPForma =  https://hl7.cz/fhir/core/ValueSet/cz-dlpformy-vs
+Alias: $cz-medicationDLPLecive-latky = https://hl7.cz/fhir/core/ValueSet/cz-dlplecivelatky-vs
+Alias: $cz-medication-DLPATC = https://hl7.cz/fhir/core/ValueSet/cz-dlpatc-vs
 Alias: $cz-SocialHistory-education-level = http://terminology.hl7.org/CodeSystem/v3-EducationLevel
-Alias: $cz-medication-DLP-cs = https://hl7.cz/fhir/core/CodeSystem/dlplecivepripravky-cz-cs
-Alias: $cz-medication-DLPForma-cs =  https://hl7.cz/fhir/core/CodeSystem/dlpformy-cz-cs
-Alias: $cz-medicationDLPLecive-latky-cs = https://hl7.cz/fhir/core/CodeSystem/dlplecivelatky-cz-cs
+Alias: $cz-medication-DLP-cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlplecivepripravky-cs
+Alias: $cz-medication-DLPForma-cs =  https://hl7.cz/fhir/core/CodeSystem/cz-dlpformy-cs
+Alias: $cz-medicationDLPLecive-latky-cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlplecivelatky-cs
+Alias: $cz-medication-DLPATC-cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlpatc-cs
 
 //=========================
 //Other
@@ -104,10 +109,12 @@ Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/alle
 Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $encounter-participant-type = http://hl7.org/fhir/ValueSet/encounter-participant-type
 Alias: $MKN10 = http://hl7.org/fhir/sid/icd-10
-Alias: $Jednotky = http://hl7.org/fhir/ValueSet/ucum-units
 Alias: $atc = http://www.whocc.no/atc
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $observation-interpretation = http://hl7.org/fhir/ValueSet/observation-interpretation
+Alias: $flagPriority = http://hl7.org/fhir/ValueSet/flag-priority
+
+
 
 //Composition
 Alias: $Observation-resultslab-cz-lab = https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory

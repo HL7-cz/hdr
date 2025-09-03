@@ -1,3 +1,38 @@
+// //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Profile: CZ_CompositionHdr_L1
+// Parent: Composition
+// Id: cz-composition-hdr-l1
+// //Id: composition-cz-hdr
+// Title: "Composition (HDR CZ)"
+// Description: "This profile defines how to represent Composition resource in HL7 FHIR for the scope of this guide."
+// //-------------------------------------------------------------------------------------------
+
+// * encounter 1..1
+
+// * section 1..
+//   // add invariant or text or section
+
+// * insert SectionSliceComRules (Sections composing the Hospital Discharge Report,
+//         The root of the sections that make up the Hospital Discharge Report composition.)
+
+// // -------------------------------------------------------------
+// // Attachmnets section
+// // Library of documents and attachments associated to this report
+// // -------------------------------------------------------------
+// * section contains sectionAttachments 1..1
+// * section[sectionAttachments]
+//   * insert SectionComRules (
+//       Library of attachments.,
+//       List documents related and attachments to this report.,
+//       $loinc#77599-9 ) // "Additional documentation"
+//   * ^short = "Attachments"
+//   * ^definition = "This section lists documents and attachments associated to this report"
+//   * entry only Reference(DocumentReference or Binary) // Add Bundle ?
+//   * entry 1..
+
+// // -------------------------------------
+
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile: CZ_CompositionHdr
 Parent: Composition
@@ -40,7 +75,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
-* type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+* type only $CodeableConcept-uv-ips
 * type ^short = "Kind of composition (\"Hospital Discharge Report\")"
 * type ^definition = "Specifies that this composition refer to a Hospital Discharge Report"
 * type = $loinc#34105-7 "Hospital Discharge summary"
@@ -80,15 +115,43 @@ Description: "This profile defines how to represent Composition resource in HL7 
 // -------------------------------------
 // Admission Evaluation Section 0 … 1 R
 // -------------------------------------
-
 * section contains sectionAdmissionEvaluation ..1
 * section[sectionAdmissionEvaluation]
-  * insert SectionComRules (
-    Hospital Admission evaluation,
-      Hospital Admission evaluation,
-      $loinc#67852-4)   // "Hospital Admission evaluation note"
+  * code 1..
+  * code only $CodeableConcept-uv-ips
+  * code = $loinc#67852-4 (exactly)
   * ^comment = "Admission evaluation should be reported only exceptionally, if it is relevant to ensure continuity of care."
 
+// ---- enable slicing for Admission Evaluation subsections
+* section[sectionAdmissionEvaluation].section ^slicing.discriminator[0].type = #pattern
+* section[sectionAdmissionEvaluation].section ^slicing.discriminator[0].path = "code"
+* section[sectionAdmissionEvaluation].section ^slicing.rules = #open
+
+// ---- Functional status at admission 0..1
+* section[sectionAdmissionEvaluation].section contains sectionAdmissionFunctionalStatus 0..1
+* section[sectionAdmissionEvaluation].section[sectionAdmissionFunctionalStatus]
+  * title = "Functional status at admission"
+  * code 1..
+  * code only $CodeableConcept-uv-ips
+  * code = $loinc#47420-5 (exactly)
+  * text 1..
+  * ^short = "Functional status at admission"
+  * ^definition = "Capability to perform ADL/IADL and relevant disability information assessed at the time of admission."
+  * entry 0..*
+  * entry only Reference(CZ_ConditionHdr or Observation or ClinicalImpression or DocumentReference or QuestionnaireResponse)
+
+// ---- Objective findings at admission 0..1
+* section[sectionAdmissionEvaluation].section contains sectionAdmissionObjectiveFindings 0..1
+* section[sectionAdmissionEvaluation].section[sectionAdmissionObjectiveFindings]
+  * title = "Objective findings at admission"
+  * code 1..
+  * code only $CodeableConcept-uv-ips
+  * code = $loinc#29545-1 (exactly)
+  * text 1..
+  * ^short = "Objective findings at admission"
+  * ^definition = "Objective physical findings documented at admission; may include narrative and references to observations/reports."
+  * entry 0..*
+  * entry only Reference(Observation or DiagnosticReport or DocumentReference)
 
 // -------------------------------------
 // Patient History Section 0 … 1 R
@@ -148,7 +211,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * entry 1..
   * entry only Reference( DocumentReference or $vitalsigns)
 
-* section contains sectionFunctionalStatus 1..1
+* section contains sectionFunctionalStatus 0..1
 * section[sectionFunctionalStatus]
   * insert SectionComRules (
     Functional status,
@@ -163,8 +226,8 @@ Description: "This profile defines how to represent Composition resource in HL7 
 // -------------------------------------
 // Allergies and Intolerances Section 0 … 1
 // -------------------------------------
-* section contains sectionAllergies 1..1
-
+* section contains sectionAllergies 0..1
+//TODO přidat obligation L3
 * section[sectionAllergies]
   * insert SectionComRules (
       Allergies and Intolerances Section,
@@ -187,6 +250,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 // Hospital Course Section 1..1
 // -------------------------------------
 * section contains sectionHospitalCourse 1..1
+// TODO přidat obligation L3
 * section[sectionHospitalCourse]
   * insert SectionComRules (
     Hospital course,
@@ -195,10 +259,10 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * ^short = "Significant information about course of hospital stay"
   * ^definition = "This section includes basic information about hospital staty (encounter), diagnostic summary in narrative form, pharmacotherapy, major procedures, medical devices, significant findings during hospital stay and clinical synthesis."
 
-  // * insert SectionSliceComRules (Hospital Course sub sections,Hospital Course sub sections)
+  //* insert SectionSliceComRules (Hospital Course sub sections,Hospital Course sub sections)
 
-  /* * entry 1..1
-   * entry only Reference(Encounter) // EncounterEuHdr */
+  * entry 1..1
+  * entry only Reference(CZ_EncounterHdr) // EncounterEuHdr */
 
 * section contains sectionDiagnosticSummary 0..1
 * section[sectionDiagnosticSummary]
@@ -257,11 +321,9 @@ $loinc#10160-0) // 	History of Medication use Narrative
   * entry only Reference(Observation or DiagnosticReport or DocumentReference)
 
   * entry insert OpenReferenceSlicePerTypeRules (significant results, significant results)
-  // HON TODO Fix me
   //* insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result ,Laboratory Result  , $Observation-resultslab-eu-lab)
   * insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result , Laboratory Result, $Observation-resultslab-cz-lab)
-  * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result ,
-    Radiology Result  ,$Observation-results-radiology-cz)
+  * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result , Radiology Result  ,$Observation-results-radiology-cz)
 
 
   // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)
@@ -298,13 +360,43 @@ $loinc#10160-0) // 	History of Medication use Narrative
 // -------------------------------------
 // Discharge Details Section 1 … 1 R
 // -------------------------------------
-* section contains sectionDischargeDetails 1..1
+* section contains sectionDischargeDetails 0..1
+//TODO přidat obligation L3
 * section[sectionDischargeDetails]
   * insert SectionComRules (
       Discharge details,
       The hospital discharge status or disposition of the patient having a hospitalization.,
       $loinc#8650-4 ) //"Hospital discharge disposition Narrative"
+// ---- enable slicing for Admission Evaluation subsections
+* section[sectionDischargeDetails].section ^slicing.discriminator[0].type = #pattern
+* section[sectionDischargeDetails].section ^slicing.discriminator[0].path = "code"
+* section[sectionDischargeDetails].section ^slicing.rules = #open
 
+// ---- Functional status at admission 0..1
+* section[sectionDischargeDetails].section contains sectionDischargeFunctionalStatus 0..1
+* section[sectionDischargeDetails].section[sectionDischargeFunctionalStatus]
+  * title = "Funkční stav při propuštění"
+  * code 1..
+  * code only $CodeableConcept-uv-ips
+  * code = $loinc#47420-5 (exactly)
+  * text 1..
+  * ^short = "Functional status at discharge"
+  * ^definition = "Capability to perform ADL/IADL and relevant disability information assessed at the time of discharge."
+  * entry 0..*
+  * entry only Reference(CZ_ConditionHdr or Observation or ClinicalImpression or DocumentReference or QuestionnaireResponse)
+
+// ---- Objective findings at admission 0..1
+* section[sectionDischargeDetails].section contains sectionDischargeObjectiveFindings 0..1
+* section[sectionDischargeDetails].section[sectionDischargeObjectiveFindings]
+  * title = "Objektivní nález při propuštění"
+  * code 1..
+  * code only $CodeableConcept-uv-ips
+  * code = $loinc#29545-1 (exactly)
+  * text 1..
+  * ^short = "Objective findings at discharge"
+  * ^definition = "Objective physical findings documented at discharge; may include narrative and references to observations/reports."
+  * entry 0..*
+  * entry only Reference(Observation or DiagnosticReport or DocumentReference)
  // * insert EvaluationSubSectionRules
 
 // -------------------------------------
@@ -457,7 +549,7 @@ $loinc#10160-0) // 	History of Medication use Narrative
 * section[sectionPastIllnessHx] ^definition = "The History of Past Illness section contains a narrative description and coded entries of the conditions the patient suffered in the past"
 * section[sectionPastIllnessHx].title 1..
 * section[sectionPastIllnessHx].code 1..
-* section[sectionPastIllnessHx].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+* section[sectionPastIllnessHx].code only $CodeableConcept-uv-ips
 * section[sectionPastIllnessHx].code = http://loinc.org#11348-0 (exactly)
 * section[sectionPastIllnessHx].text 1..
 * section[sectionPastIllnessHx].entry 1..
@@ -698,6 +790,23 @@ $loinc#10160-0) // 	History of Medication use Narrative
         This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
         $loinc#10182-4 )
 
+// -------------------------------------------------------------
+// Attachmnets section
+// Library of documents and attachments associated to this report
+// -------------------------------------------------------------
+* section contains sectionAttachments 1..1
+* section[sectionAttachments]
+  * insert SectionComRules (
+      Library of attachments.,
+      List documents related and attachments to this report.,
+      $loinc#77599-9 ) // "Additional documentation"
+  * ^short = "Attachments"
+  * ^definition = "This section lists documents and attachments associated to this report"
+  * entry only Reference(DocumentReference or Binary) // Add Bundle ?
+  * entry 1..
+
+// -------------------------------------
+
 // -------------------------------------
 // Health Insurance (Coverage) and payment section
 // Payers for alignment with C-CDA
@@ -716,21 +825,21 @@ $loinc#10160-0) // 	History of Medication use Narrative
 
 
 
-// -------------------------------------------------------------
-// Attachmnets section
-// Library of documents and attachments associated to this report
-// -------------------------------------------------------------
-* section contains sectionAttachments 0..1
-* section[sectionAttachments]
-  * insert SectionComRules (
-      Library of attachments.,
-      List documents related and attachments to this report.,
-      $loinc#77599-9 ) // "Additional documentation"
-  * ^short = "Attachments"
-  * ^definition = "This section lists documents and attachments associated to this report"
-  * entry only Reference(DocumentReference or Binary) // Add Bundle ?
+// // -------------------------------------------------------------
+// // Attachmnets section
+// // Library of documents and attachments associated to this report
+// // -------------------------------------------------------------
+// * section contains sectionAttachments 0..1
+// * section[sectionAttachments]
+//   * insert SectionComRules (
+//       Library of attachments.,
+//       List documents related and attachments to this report.,
+//       $loinc#77599-9 ) // "Additional documentation"
+//   * ^short = "Attachments"
+//   * ^definition = "This section lists documents and attachments associated to this report"
+//   * entry only Reference(DocumentReference or Binary) // Add Bundle ?
 
-// -------------------------------------
+// // -------------------------------------
 
 
 * section contains sectionEncounters ..1

@@ -15,7 +15,7 @@ version: 0.0.2
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
@@ -39,16 +39,21 @@ publisher:
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
 dependencies:
-  hl7.fhir.uv.ips: current
-  hl7.fhir.cz.core: current
-  hl7.fhir.eu.hdr: current
-  hl7.fhir.eu.laboratory: current
-  hl7.fhir.eu.base: 0.1.0-ballot
+  hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.extensions.r5: 4.0.1
-  ihe.pharm.mpd: current
+  hl7.fhir.eu.extensions.r4:
+    id: extensions
+    uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
+    version: 0.1.1-ballot
+  hl7.fhir.eu.extensions: 0.1.1-ballot
+  hl7.fhir.eu.laboratory: 0.1.1
+  hl7.fhir.eu.base: 0.1.0-ballot
+  hl7.fhir.eu.hdr: 0.1.0-ballot
+  ihe.pharm.mpd: 1.0.0-comment-2
+  hl7.fhir.cz.core: current
   hl7.fhir.cz.lab: current
   hl7.fhir.cz.img: current
-  
+
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
@@ -78,7 +83,7 @@ dependencies:
 #  general-semantics.md:
 #    title: Introduction
 #  logicalModel.md:
-#    title: Logical Models  
+#    title: Logical Models
 #  functional-view.md:
 #    title: Functional view
 #  general-semantics-cs.md:
@@ -150,7 +155,7 @@ pages:
   #terminology-considerations.md:
   #  title: Terminology considerations
   #terminology-considerations-cs.md:
-  #  title: Terminologické aspekty  
+  #  title: Terminologické aspekty
   #  use-cases.md:
   #    title: Use cases
   #  use-cases-cs.md:
@@ -169,7 +174,7 @@ pages:
   Subject-map.html:
     title: Subject Relationships
   InPatientEncounter-map.html:
-    title: InPatientEncounter Relationships  
+    title: InPatientEncounter Relationships
   AdmissionEvaluation-map.html:
     title: AdmissionEvaluation Relationships
   ObjectiveFindings-map.html:
@@ -188,9 +193,9 @@ pages:
     title: PlanOfCare Relationships
   MedicationSummary-map.html:
     title: MedicationSummary Relationships
- 
 
-    
+
+
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating
@@ -228,6 +233,7 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 #  html-template:
 #  active-tables: false
   pin-canonicals: pin-multiples
+  path-expansion-params: '../../expansion-params.json'
   apply-contact: true
   apply-jurisdiction: true
   apply-publisher: true
@@ -259,7 +265,7 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-  
+
   #Menu:
   # Home:
     # Home (en): index.html
@@ -431,8 +437,12 @@ groups:
     name:  Actors and Obligations (Informative)
     description: Actors and Obligations used to describe the HDR functional requirements for the specified data elements. Informative for this version of the guide.
     resources:
-      - ActorDefinition/actor-consumer-hdr
-      - ActorDefinition/actor-creator-hdr
+      - ActorDefinition/actor-consumer-hdr-L1
+      - ActorDefinition/actor-creator-hdr-L1
+      - ActorDefinition/actor-consumer-hdr-L2
+      - ActorDefinition/actor-creator-hdr-L2
+      - ActorDefinition/actor-consumer-hdr-L3
+      - ActorDefinition/actor-creator-hdr-L3
       - StructureDefinition/cz-patient-obl-hdr
 
   czech-logical-model:
@@ -457,7 +467,7 @@ groups:
       - StructureDefinition/LogSubjectCz
       - StructureDefinition/LogPresentedFormCz
 
-      
+
 
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
@@ -494,7 +504,10 @@ groups:
 #
 # The instanceOptions property is used to configure certain aspects of how SUSHI processes instances.
 # See the individual option definitions below for more detail.
-#
+
+instanceOptions:
+  manualSliceOrdering: true
+
 # instanceOptions:
 #   Determines for which types of Instances SUSHI will automatically set meta.profile
 #   if InstanceOf references a profile:

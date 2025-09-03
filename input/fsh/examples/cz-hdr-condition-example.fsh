@@ -4,8 +4,8 @@ Usage: #example
 Title: "CZ-Condition-HDR Example"
 Description: "Czech HDR - example of a condition (Heart Failure)"
 
-* clinicalStatus = #active
-* verificationStatus = #confirmed
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
 * category[0] = $condition-category#encounter-diagnosis "Encounter Diagnosis"
 * category[1] = $sct#278307001 "On admission"
 * category[2] = $sct#69845001 "Received therapy or drug for"
@@ -21,13 +21,13 @@ Usage: #example
 Title: "CZ-Condition-HDR Example 2"
 Description: "Czech HDR - example of a condition (Cardiac arrhythmia - Brugada Syndrome)"
 
-* clinicalStatus = #active
-* verificationStatus = #confirmed
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
 * category[0] = $sct#64572001 "Disease"
 * category[1] = $sct#278307001 "On admission"
 * category[2] = $sct#69845001 "Received therapy or drug for"
-* severity = $sct#6736007 "Moderate"
-* code = urn:oid:1.2.203.24341.11.2.1#I498 "Jiné určené srdeční arytmie"
+* severity = $sct#6736007 "Midgrade"
+* code = $icd10#I49.8 "Other specified cardiac arrhythmias"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * onsetDateTime = "2013-01-09T00:00:00+01:00"
 * note.text = "Brugada Syndrom diagnostikován v roce 2013."
@@ -38,12 +38,12 @@ Usage: #example
 Title: "CZ-Condition-HDR Example 3"
 Description: "Czech HDR - example of a condition (Postoperative Hypothyroidism)"
 
-* clinicalStatus = #active
-* verificationStatus = #confirmed
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
 * category[0] = $sct#64572001 "Disease"
 * category[1] = $sct#278307001 "On admission"
-* category[2] = $sct#25265005 "Not received therapy or drug for"
-* code = urn:oid:1.2.203.24341.11.2.1#E890 "Hypotyreóza po operačních a jiných výkonech"
+* category[2] = $sct#25265005 "Did not receive therapy or drug for"
+* code = $icd10#E89.0 "Postprocedural hypothyroidism"
 * subject = Reference(Mracena2)
 * onsetDateTime = "1997-10-06T00:00:00+02:00"
 * note.text = "Hypotyreóza po operaci karcinomu štítné žlázy. Zadáno všeobecným lékařem."
@@ -55,16 +55,17 @@ InstanceOf: CZ_ConditionHdr
 Usage: #example
 Title: "CZ-Condition-HDR Example K409"
 Description: "Example of a condition K409 with details on admission"
+* id = "35717696-8a99-4f99-a938-ec0ec88a65a2"
 // Condition details
-* clinicalStatus = #active
-* verificationStatus = #confirmed
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
 * severity.coding[0].system = $sct
 * severity.coding[0].code = #24484000
-* severity.coding[0].display = "Závažná"
+* severity.coding[0].display = "Severe"
 // Condition code
 * code.coding[0].system = $icd10
-* code.coding[0].code = #K409
-* code.coding[0].display = "Tříselná kýla, neurčená, bez obstrukce a gangrény"
+* code.coding[0].code = #K40.9
+* code.coding[0].display = "Unilateral or unspecified inguinal hernia, without obstruction or gangrene"
 // Condition subject and onset
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 // Condition text
@@ -76,18 +77,21 @@ Description: "Example of a condition K409 with details on admission"
 """
 //Condition category
 * category[0] = $sct#278307001 "On admission"
-* category[1] = $sct#69845001 "Léčeno"
+* category[1] = $sct#69845001 "Received therapy or drug for"
 //condition onset
 * onsetDateTime = "2023-10-01T10:00:00Z"
 //condition stage
 * stage[+].summary.coding[0].system = $sct
 * stage[=].summary.coding[0].code = #255604002
-* stage[=].summary.coding[0].display = "Mírný"
+* stage[=].summary.coding[0].display = "Mild"
 
 //---------------------------------------------
 // 5. Condition: Angiodysplasia of colon (CZ_ConditionHdr)
 Instance: AngiodysplasiaCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Angiodysplasia"
+Description: "Example of a condition Angiodysplasia of colon"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-k55-2"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -95,18 +99,21 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #K55.2 // Corrected code assignment
 * code.coding[0].display = "Angiodysplasia of colon"
 * code.text = "Angiodyspl\u00e1zie tra\u010dn\u00edku"
 * subject = Reference(Mracena2)
 * category[1] = $sct#278307001 "On admission"
-* category[2] = $sct#25265005 "Not received therapy or drug for"
+* category[2] = $sct#25265005 "Did not receive therapy or drug for"
 
 // Condition: Iron deficiency anemia due to chronic blood loss
 Instance: IronDeficiencyAnemiaCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Iron Deficiency Anemia"
+Description: "Example of a condition Iron deficiency anaemia secondary to blood loss (chronic)"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-d50-0"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -114,18 +121,21 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #D50.0 // Corrected code assignment
-* code.coding[0].display = "Iron deficiency anemia secondary to blood loss (chronic)"
+* code.coding[0].display = "Iron deficiency anaemia secondary to blood loss (chronic)"
 * code.text = "An\u00e9mie z nedostatku \u017eeleza p\u0159i chronick\u00e9 krevn\u00ed ztr\u00e1t\u011b"
 * subject = Reference(Mracena2)
 * category[1] = $sct#278307001 "On admission"
-* category[2] = $sct#25265005 "Not received therapy or drug for"
+* category[2] = $sct#25265005 "Did not receive therapy or drug for"
 
 // Condition: Transient ischemic attack (TIA)
 Instance: TIACondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR TIA"
+Description: "Example of a condition Transient cerebral ischaemic attack, unspecified"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-g45-9"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -133,18 +143,21 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #G45.9 // Corrected code assignment
-* code.coding[0].display = "Transient cerebral ischemic attack, unspecified"
+* code.coding[0].display = "Transient cerebral ischaemic attack, unspecified"
 * code.text = "Tranzitorn\u00ed ischemick\u00e1 ataka"
 * subject = Reference(Mracena2)
 * category[1] = $sct#278307001 "On admission"
-* category[2] = $sct#25265005 "Not received therapy or drug for"
+* category[2] = $sct#25265005 "Did not receive therapy or drug for"
 
 // Condition: Persistent atrial fibrillation
 Instance: AtrialFibrillationCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Atrial Fibrillation"
+Description: "Example of a condition Persistent atrial fibrillation"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-i48-1"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -152,18 +165,21 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #I48.1 // Corrected code assignment
 * code.coding[0].display = "Persistent atrial fibrillation"
 * code.text = "Perzistuj\u00edc\u00ed fibrilace s\u00edn\u00ed"
 * subject = Reference(Mracena2)
 * category[1] = $sct#278307001 "On admission"
-* category[2] = $sct#25265005 "Not received therapy or drug for"
+* category[2] = $sct#25265005 "Did not receive therapy or drug for"
 
 // Condition: Hypothyroidism due to therapy
 Instance: HypothyroidismCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Hypothyroidism"
+Description: "Example of a condition Hypothyroidism"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-e03-2"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -171,18 +187,21 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #E03.2 // Corrected code assignment
 * code.coding[0].display = "Hypothyroidism due to medicaments and other exogenous substances"
 * code.text = "Hypotyre\u00f3za v d\u016fsledku l\u00e9\u010dby"
 * subject = Reference(Mracena2)
 * category[1] = $sct#278307001 "On admission"
-* category[2] = $sct#25265005 "Not received therapy or drug for"
+* category[2] = $sct#25265005 "Did not receive therapy or drug for"
 
 // Condition: Varicose veins of lower extremities
 Instance: VaricoseVeinsCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Varicose Veins"
+Description: "Example of a condition Varicose veins of lower extremities without ulcer or inflammation"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-i83-9"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -190,18 +209,21 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #I83.9 // Corrected code assignment
-* code.coding[0].display = "Varicose veins of lower extremities, unspecified"
+* code.coding[0].display = "Varicose veins of lower extremities without ulcer or inflammation"
 * code.text = "K\u0159e\u010dov\u00e9 \u017e\u00edly doln\u00edch kon\u010detin"
 * subject = Reference(Mracena2)
 * category[1] = $sct#278307001 "On admission"
-* category[2] = $sct#25265005 "Not received therapy or drug for"
+* category[2] = $sct#25265005 "Did not receive therapy or drug for"
 
 // Condition: Osteoporosis without pathological fracture
 Instance: OsteoporosisCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Osteoporosis"
+Description: "Example of a condition Postmenopausal osteoporosis"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-m81-0"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -209,18 +231,21 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #M81.0 // Corrected code assignment
-* code.coding[0].display = "Age-related osteoporosis without current pathological fracture"
+* code.coding[0].display = "Postmenopausal osteoporosis"
 * code.text = "Osteopor\u00f3za bez patologick\u00e9 fraktury"
 * subject = Reference(Mracena2)
 * category[1] = $sct#278307001 "On admission"
-* category[2] = $sct#25265005 "Not received therapy or drug for"
+* category[2] = $sct#25265005 "Did not receive therapy or drug for"
 
 // Condition: Pure hypercholesterolemia
 Instance: HypercholesterolemiaCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Hypercholesterolemia"
+Description: "Example of a condition Pure hypercholesterolaemia"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-e78-0"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -228,18 +253,21 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #E78.0 // Corrected code assignment
-* code.coding[0].display = "Pure hypercholesterolemia"
+* code.coding[0].display = "Pure hypercholesterolaemia"
 * code.text = "Hypercholesterol\u00e9mie"
 * subject = Reference(Mracena2)
 * category[1] = $sct#278307001 "On admission"
-* category[2] = $sct#25265005 "Not received therapy or drug for"
+* category[2] = $sct#25265005 "Did not receive therapy or drug for"
 
 // Condition: Presbycusis (age-related hearing loss)
 Instance: PresbycusisCondition
 InstanceOf: CZ_ConditionHdr
+Usage: #example
+Title: "CZ-Condition-HDR Presbycusis"
+Description: "Example of a condition Presbycusis"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 //* id = "condition-h91-1"
 * clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -247,14 +275,14 @@ InstanceOf: CZ_ConditionHdr
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #diagnosis // Corrected code assignment
+* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #H91.1 // Corrected code assignment
 * code.coding[0].display = "Presbycusis"
 * code.text = "Presbyakuze (sta\u0159eck\u00e1 nedosl\u00fdchavost)"
 * subject = Reference(Mracena2)
 * category[1] = $sct#278307001 "On admission"
-* category[2] = $sct#25265005 "Not received therapy or drug for"
+* category[2] = $sct#25265005 "Did not receive therapy or drug for"
 
 //---------------------------------------------
 Instance: Condition-E890-Novak
@@ -262,13 +290,13 @@ InstanceOf: CZ_ConditionHdr
 Usage: #example
 Title: "CZ-Condition-HDR Example 3"
 Description: "Czech HDR - example of a condition (Postoperative Hypothyroidism)"
-
-* clinicalStatus = #active
-* verificationStatus = #confirmed
+* id = "fdf9e92d-ac48-4706-b15b-d2eaca85f45f"
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
 * category[0] = $sct#64572001 "Disease"
 * category[1] = $sct#278307001 "On admission"
-* category[2] = $sct#25265005 "Not received therapy or drug for"
-* code = $icd10#E890 "Hypotyreóza po operačních a jiných výkonech"
+* category[2] = $sct#25265005 "Did not receive therapy or drug for"
+* code = $icd10#E89.0 "Postprocedural hypothyroidism"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * onsetDateTime = "1997-10-06T00:00:00+02:00"
 * note.text = "Hypotyreóza po operaci karcinomu štítné žlázy. Zadáno všeobecným lékařem."

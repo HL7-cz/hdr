@@ -23,11 +23,11 @@ Description: """This profile represents the constraint applied to the Condition 
 /* * category contains hdr-core 1..1
 * category[hdr-core] = $condition-category#encounter-diagnosis
   * ^short = "encounter-diagnosis" */
-* category contains poa 1..1
+* category contains poa 0..1
 * category[poa] from EHDSIConditionPOA
   * ^short = "POA, HAC, NA"
   * ^definition = "Present on admission, Hospital acquired condition, Not applicable or unknown"
-* category contains treated ..1
+* category contains treated 0..1
 * category[treated] from EHDSITreatmentClass
   * ^short = "Treated or untreated"
   * ^definition = """Class of the problem (treated, other) in relation to the hospital encounter. Treated problems were treated or affected provisioning of care (diagnostics, therapy, nursing, monitoring) during the hospital encounter. At least one problem should be marked as Treated. Other problems are recorded only if they are important for continuity of care (after discharge)."""
