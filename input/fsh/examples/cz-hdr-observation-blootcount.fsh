@@ -1,5 +1,6 @@
 Instance: bloodcount-panel
-InstanceOf: CZ_ObservationResultLaboratory
+InstanceOf: Observation
+Usage: #example
 Title: "Panel krevního obrazu"
 Description: "Panel obsahující základní hematologické hodnoty"
 * text.status = #generated
@@ -20,7 +21,7 @@ Description: "Panel obsahující základní hematologické hodnoty"
   <p>Výsledek vydán: 1. 4. 2025 12:00</p>
 </div>"
 * status = #final
-* code = https://nclp.uzis.cz#11115 "Krevní obraz"
+* code = $nclp#11115 //"Krevní obraz"
 * subject = Reference(Mracena2)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
 * performer = Reference(Practitioner-2)
@@ -34,22 +35,18 @@ Description: "Panel obsahující základní hematologické hodnoty"
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 
 Instance: hb-result
-InstanceOf: CZ_ObservationResultLaboratory
+InstanceOf: Observation
+Usage: #example
 Title: "Hemoglobin"
 Description: "Příklad pro HDR - Hladina hemoglobinu v krvi"
 * status = #final
-* code = https://nclp.uzis.cz#11338 "Hemoglobin"
+* code = $nclp#11338 //"Hemoglobin"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
-* valueQuantity.value = 145
-* valueQuantity.unit = "g/L"
-* valueQuantity.system = $ucum
-* valueQuantity.code = #g/L
-* referenceRange.low.value = 135
-* referenceRange.high.value = 170
-* referenceRange.low.unit = "g/L"
-* referenceRange.high.unit = "g/L"
+* valueQuantity = 145 'g/L' "g/L"
+* referenceRange.low = 135 'g/L' "g/L"
+* referenceRange.high = 170 'g/L' "g/L"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
 * note.text = "Hladina hemoglobinu je v normálním rozmezí."
 * specimen = Reference(Specimen-EDTA-1)
@@ -57,10 +54,11 @@ Description: "Příklad pro HDR - Hladina hemoglobinu v krvi"
 
 Instance: hct-result
 InstanceOf: Observation
+Usage: #example
 Title: "Hematokrit"
 Description: "Příklad pro HDR - Hematokrit v krvi"
 * status = #final
-* code = https://nclp.uzis.cz#11339 "Hematokrit"
+* code = $nclp#11339 //"Hematokrit"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
@@ -77,10 +75,11 @@ Description: "Příklad pro HDR - Hematokrit v krvi"
 
 Instance: rbc-result
 InstanceOf: Observation
+Usage: #example
 Title: "Erytrocyty"
 Description: "Příklad pro HDR - Počet erytrocytů v krvi"
 * status = #final
-* code = https://nclp.uzis.cz#11334 "Erytrocyty"
+* code = $nclp#11334 //"Erytrocyty"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
@@ -97,10 +96,11 @@ Description: "Příklad pro HDR - Počet erytrocytů v krvi"
 
 Instance: wbc-result
 InstanceOf: Observation
+Usage: #example
 Title: "Leukocyty"
 Description: "Příklad pro HDR - Počet leukocytů v krvi"
 * status = #final
-* code = https://nclp.uzis.cz#11332 "Leukocyty"
+* code = $nclp#11332 //"Leukocyty"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
@@ -117,10 +117,11 @@ Description: "Příklad pro HDR - Počet leukocytů v krvi"
 
 Instance: plt-result
 InstanceOf: Observation
+Usage: #example
 Title: "Trombocyty"
 Description: "Příklad pro HDR - Počet trombocytů v krvi"
 * status = #final
-* code = https://nclp.uzis.cz#11336 "Trombocyty"
+* code = $nclp#11336 //"Trombocyty"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
@@ -138,7 +139,9 @@ Description: "Příklad pro HDR - Počet trombocytů v krvi"
 
 Instance: Specimen-EDTA-1
 InstanceOf: Specimen
+Usage: #example
 Title: "Vzorek krve – EDTA"
+Description: "Venous blood specimen"
 * status = #available
 * type = http://snomed.info/sct#122555007 "Venous blood specimen"
 * receivedTime = "2025-04-01T09:30:00+01:00"
@@ -148,6 +151,7 @@ Title: "Vzorek krve – EDTA"
 
 Instance: Lab-HematologieBrno
 InstanceOf: cz-organization-core
+Usage: #example
 Title: "Hematologická laboratoř Brno"
 Description: "Referenční laboratoř pro klinickou hematologii"
 * text.status = #generated

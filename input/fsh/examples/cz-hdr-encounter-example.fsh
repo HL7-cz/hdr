@@ -12,9 +12,9 @@ Description: "Czech HDR - example of an inpatient encounter"
 * priority.coding[0].display = "Emergency"
 
 // Encounter type and subject
-* type[0].coding[0].system = $encounter-type
-* type[0].coding[0].code = #DIS
-* type[0].coding[0].display = "Discharge"
+//* type[0].coding[0].system = $encounter-type TODO: custom valueset and codesystem
+//* type[0].coding[0].code = #DIS 
+//* type[0].coding[0].display = "Discharge"
 * subject = Reference(Mracena2)
 
 // Note for the encounter - nelze pouzit
@@ -77,6 +77,9 @@ Description: "Czech HDR - example of an inpatient encounter"
 // 7. Encounter: Inpatient hospitalization
 Instance: HospitalEncounter
 InstanceOf: CZ_EncounterHdr
+Usage: #example
+Title: "CZ-Encounter-HDR Example of finished hospital encounter"
+Description: "Czech HDR - example of finished hospital encounter"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-encounter-hdr"
 //* id = "hospital-encounter"
 * status = #finished
@@ -92,6 +95,9 @@ InstanceOf: CZ_EncounterHdr
 
 Instance: HospitalEncounter-Novak-Petr
 InstanceOf: CZ_EncounterHdr
+Usage: #example
+Title: "CZ-Encounter-HDR Example of encounter with emergency priority"
+Description: "Czech HDR - example of encounter with emergency priority"
 * id = "10f5c49e-086d-4016-8dd1-b555306bf620"
 * status = #finished
 * class.code = #IMP 
@@ -102,7 +108,7 @@ InstanceOf: CZ_EncounterHdr
 * period.end = "2025-03-10T09:30:00+01:00"
 * serviceProvider = Reference(RegisteringProviderExample)
 // Reason for encounter
-* reasonReference = Reference(Condition-K409)
+* reasonReference = Reference(urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2)
 * hospitalization.admitSource.coding[0].system = $admit-source
 * hospitalization.admitSource.coding[0].code = #outp
 * hospitalization.admitSource.coding[0].display = "From outpatient department"
@@ -134,6 +140,9 @@ InstanceOf: CZ_EncounterHdr
 
 Instance: HospitalEncounter-Novak-Petr_L1
 InstanceOf: CZ_EncounterHdr
+Usage: #example
+Title: "CZ-Encounter-HDR Example of encounter for Novak Petr"
+Description: "Czech HDR - example of encounter for Novak Petr"
 * id = "f08151d0-a7ad-4a7b-b7b9-97eb1d394ffb"
 * status = #finished
 * class.code = #IMP 

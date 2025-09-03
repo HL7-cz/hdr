@@ -41,7 +41,7 @@ RuleSet: SectionSliceComRules (short, def)
 // Slicing rules for section based on code value
 * section ^slicing.discriminator[0].type = #value
 * section ^slicing.discriminator[0].path = "code"
-* section ^slicing.ordered = true
+* section ^slicing.ordered = false
 * section ^slicing.rules = #open
 * section ^short = "{short}"
 * section ^definition = "{def}"
@@ -67,7 +67,7 @@ RuleSet: SectionEntrySliceComRules (short, def)
 RuleSet: SectionEntrySliceDefRules (name, card, short, def, profiles)
 // SectionEntrySliceDefRules (flags, 0.., "Care Team", "Care Team", CareTeamEu)
 
-* entry contains {name} 0..1
+* entry contains {name} 0..*
 * entry[{name}] {card}
 * entry[{name}] ^short = "{short}"
 * entry[{name}] ^definition = "{def}"

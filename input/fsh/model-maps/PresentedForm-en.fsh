@@ -1,4 +1,4 @@
-Logical: PresentedFormCz
+Logical: LogEnPresentedFormCz
 Id: PresentedFormCz
 Title: "A.3 - Presented form"
 Description: """Presented form - Entire report as issued. Various formats could be provided, pdf format is recommended."""
