@@ -26,6 +26,7 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * custodian insert OblCreator(#SHOULD:able-to-populate,L1)
 //* section[sectionPayers] insert OblCreator(#SHALL:able-to-populate,L1)
 * extension[compositionVersionR5] insert OblCreator(#SHALL:able-to-populate,L1)
+* extension[relatedArtifact] insert OblCreator(#SHALL:able-to-populate,L1)
 * section[sectionHospitalCourse].text insert OblCreator(#SHALL:able-to-populate,L1)
 
 //L1 Consumer obligations L1
@@ -47,6 +48,7 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * custodian insert OblConsumer(#SHOULD:display,L1)
 //* section[sectionPayers] insert OblConsumer(#SHALL:display,L1)
 * extension[compositionVersionR5] insert OblConsumer(#SHALL:display,L1)
+* extension[relatedArtifact] insert OblConsumer(#SHALL:display,L1)
 * section[sectionHospitalCourse].text insert OblConsumer(#SHALL:display,L1)
 
 //L2 Creator Obligations L2 ============>
@@ -68,6 +70,7 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * custodian insert OblCreator(#SHOULD:able-to-populate,L2)
 * section[sectionPayers] insert OblCreator(#SHALL:able-to-populate,L2)
 * extension[compositionVersionR5] insert OblCreator(#SHALL:able-to-populate,L2)
+* extension[relatedArtifact] insert OblCreator(#SHALL:able-to-populate,L2)
 
 * section[sectionAdvanceDirectives].text insert OblCreator(#SHOULD:able-to-populate,L2)
 * section[sectionAlert].text insert OblCreator(#SHALL:able-to-populate,L2)
@@ -113,6 +116,7 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * custodian insert OblConsumer(#SHOULD:display,L2)
 * section[sectionPayers] insert OblConsumer(#SHALL:display,L2)
 * extension[compositionVersionR5] insert OblConsumer(#SHALL:display,L2)
+* extension[relatedArtifact] insert OblConsumer(#SHALL:display,L2)
 
 * section[sectionAdvanceDirectives].text insert OblConsumer(#SHALL:display,L2)
 * section[sectionAlert].text insert OblConsumer(#SHALL:display,L2)
