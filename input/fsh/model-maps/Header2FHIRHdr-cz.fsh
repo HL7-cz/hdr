@@ -282,29 +282,20 @@ Usage: #definition
 * group[=].element[=].target.comment = "As business version, not as resource version"
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/Header"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-coverage"
-* group[=].element[+].code = #Header.payer.insuranceCode
-* group[=].element[=].display = "A.1.3.1 - Health insurance code"
-* group[=].element[=].target.code = #Coverage.payor
+* group[=].element[+].code = #Header.coverage
+* group[=].element[=].display = "A.1.4 - Information about coverage"
+* group[=].element[=].target.code = #Composition.section:Coverage                  
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Coverage.payor.ofType(Organization).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-organization-core')"
-* group[=].element[+].code = #Header.payer.insuranceName
-* group[=].element[=].display = "A.1.3.2 - Health insurance name"
-* group[=].element[=].target.code = #Coverage.payor
+* group[=].element[=].target.equivalence = #relatedto                  
+* group[=].element[=].target.comment = "Composition.section:Coverage.entry.ofType(CZ_Coverage)"
+* group[=].element[+].code = #Header.coverage.method
+* group[=].element[=].display = "A.1.4.1 - Coverage method"
+* group[=].element[=].target.code = #CZ_Coverage.type                  
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Coverage.payor.ofType(Organization).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-organization-core')"
-* group[=].element[+].code = #Header.payer.insuranceNumber
-* group[=].element[=].display = "A.1.3.3 - Health insurance number"
-* group[=].element[=].target.code = #Coverage.beneficiary
+* group[=].element[=].target.equivalence = #equivalent                  
+* group[=].element[+].code = #Header.coverage.informationPayor
+* group[=].element[=].display = "A.1.4.2 - Information about Payor"
+* group[=].element[=].target.code = #CZ_Coverage.payor                  
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Coverage.beneficiary.ofType(Patient).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-patient')"
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/Header"
-* group[=].target = "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
-* group[=].element[+].code = #Header.payer
-* group[=].element[=].display = "A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care."
-* group[=].element[=].target.code = #ServiceRequest.insurance
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "ServiceRequest.insurance.ofType(Coverage).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-coverage')"
+* group[=].element[=].target.equivalence = #equivalent
+
