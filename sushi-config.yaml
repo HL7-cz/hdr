@@ -444,6 +444,9 @@ groups:
       - ActorDefinition/actor-consumer-hdr-L3
       - ActorDefinition/actor-creator-hdr-L3
       - StructureDefinition/cz-patient-obl-hdr
+      - StructureDefinition/cz-encounter-obl-hdr
+      - StructureDefinition/cz-attachments-obl-hdr
+      - StructureDefinition/cz-procedure-obl-hdr
 
   czech-logical-model:
     name:  Czech logical model (Informative)

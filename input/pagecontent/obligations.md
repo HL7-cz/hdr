@@ -19,8 +19,12 @@ Actors were specified in these roles:
 
 | Role                                                    | Description                                                                                                                          |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| the [Creator](ActorDefinition-actor-creator-hdr.html)   | The first is the actor creating the report. This report can be send to a consumer for report storage and sharing. |
-| the [Consumer](ActorDefinition-actor-consumer-hdr.html) | The last actor is the system using the report received or retrieved.                                                                 |
+| the [Level 1 Creator](ActorDefinition-actor-creator-img-L1.html)   | This is a L1 actor that creates a report. This report can be sent to a consumer or to a repository for storing and sharing report. |
+| the [Level 1 Consumer](ActorDefinition-actor-consumer-img-L1.html) | This L1 actor represents the system that uses the received or retrieved report.                                                                 |
+| the [Level 2 Creator](ActorDefinition-actor-creator-img-L2.html)   | This is a L2 actor that creates a report. This report can be sent to a consumer or to a repository for storing and sharing report. |
+| the [Level 2 Consumer](ActorDefinition-actor-consumer-img-L2.html) | This L2 actor represents the system that uses the received or retrieved report.                                                                 |
+| the [Level 3 Creator](ActorDefinition-actor-creator-img-L3.html)   | This is a L3 actor that creates a report. This report can be sent to a consumer or to a repository for storing and sharing report. |
+| the [Level 3 Consumer](ActorDefinition-actor-consumer-img-L3.html) | This L3 actor represents the system that uses the received or retrieved report.                                                                 |                                                
 
 <p>{% include hdr-Actors.svg %}</p>
 

@@ -20,6 +20,9 @@ Usage: #example
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)            // document subject is patient
 //Důvod přijetí je obsažen v Encouteru ReasonReference
 * encounter = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620)
+* extension[relatedArtifact].valueRelatedArtifact.type  = http://hl7.org/fhir/related-artifact-type#documentation
+* extension[relatedArtifact].valueRelatedArtifact.label = "Presented form"
+* extension[relatedArtifact].valueRelatedArtifact.document = cz-pdfhdr-example
 
 //Urgentní informace
 /// Sekce Alergie
@@ -393,6 +396,9 @@ Usage: #example
 * author[+] = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169)         // document authored by practitioner role
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * encounter = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620)
+* extension[relatedArtifact].valueRelatedArtifact.type  = http://hl7.org/fhir/related-artifact-type#documentation
+* extension[relatedArtifact].valueRelatedArtifact.label = "Presented form"
+* extension[relatedArtifact].valueRelatedArtifact.document = cz-pdfhdr-example
 
 * section[sectionHospitalCourse].title = "Klinické shrnutí"
 * section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course Narrative"
@@ -433,6 +439,9 @@ Usage: #example
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)            // document subject is patient
 //Důvod přijetí je obsažen v Encouteru ReasonReference
 * encounter = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620)
+* extension[relatedArtifact].valueRelatedArtifact.type  = http://hl7.org/fhir/related-artifact-type#documentation
+* extension[relatedArtifact].valueRelatedArtifact.label = "Presented form"
+* extension[relatedArtifact].valueRelatedArtifact.document = cz-pdfhdr-example
 
 //Urgentní informace
 /// Sekce Alergie
