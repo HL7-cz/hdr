@@ -445,7 +445,7 @@ groups:
       - ActorDefinition/actor-creator-hdr-L3
       - StructureDefinition/cz-patient-obl-hdr
       - StructureDefinition/cz-encounter-obl-hdr
-      - StructureDefinition/cz-attachments-obl-hdr
+      - StructureDefinition/cz-attachment-obl-hdr
       - StructureDefinition/cz-procedure-obl-hdr
 
   czech-logical-model:
