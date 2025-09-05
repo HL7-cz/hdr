@@ -20,6 +20,9 @@ Usage: #example
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)            // document subject is patient
 //Důvod přijetí je obsažen v Encouteru ReasonReference
 * encounter = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620)
+* extension[relatedArtifact].valueRelatedArtifact.type  = http://hl7.org/fhir/related-artifact-type#documentation
+* extension[relatedArtifact].valueRelatedArtifact.label = "Presented form"
+* extension[relatedArtifact].valueRelatedArtifact.document = cz-pdfhdr-example
 
 //Urgentní informace
 /// Sekce Alergie
@@ -36,7 +39,7 @@ Usage: #example
 * section[sectionAlert].title = "Varování"
 * section[sectionAlert].code.coding[0].system = $loinc
 * section[sectionAlert].code.coding[0].code = #75310-3 // Alerts LOINC=104605-1 
-* section[sectionAlert].code.coding[0].display = "Alerts"
+* section[sectionAlert].code.coding[0].display = "Health concerns Document"
 * section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>" 
 * section[sectionAlert].text.status = #generated
 * section[sectionAlert].entry[0] = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e) 
@@ -62,7 +65,7 @@ Usage: #example
 * section[sectionSignificantProcedures].title = "Významné procedury"
 * section[sectionSignificantProcedures].code.coding[0].system = $loinc
 * section[sectionSignificantProcedures].code.coding[0].code = #10185-7
-* section[sectionSignificantProcedures].code.coding[0].display = "Hospital discharge procedures Narrative"
+* section[sectionSignificantProcedures].code.coding[0].display = "Hospital discharge procedure note"
 * section[sectionSignificantProcedures].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Plastika pravostranné tříselné kýly dne 2. 3. 2025.</div>"
 * section[sectionSignificantProcedures].text.status = #generated
 * section[sectionSignificantProcedures].entry[0] = Reference(urn:uuid:ffb1a62f-9050-4e33-af4b-4cdb8203c9e5)
@@ -393,6 +396,9 @@ Usage: #example
 * author[+] = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169)         // document authored by practitioner role
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * encounter = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620)
+* extension[relatedArtifact].valueRelatedArtifact.type  = http://hl7.org/fhir/related-artifact-type#documentation
+* extension[relatedArtifact].valueRelatedArtifact.label = "Presented form"
+* extension[relatedArtifact].valueRelatedArtifact.document = cz-pdfhdr-example
 
 * section[sectionHospitalCourse].title = "Klinické shrnutí"
 * section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course Narrative"
@@ -433,6 +439,9 @@ Usage: #example
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)            // document subject is patient
 //Důvod přijetí je obsažen v Encouteru ReasonReference
 * encounter = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620)
+* extension[relatedArtifact].valueRelatedArtifact.type  = http://hl7.org/fhir/related-artifact-type#documentation
+* extension[relatedArtifact].valueRelatedArtifact.label = "Presented form"
+* extension[relatedArtifact].valueRelatedArtifact.document = cz-pdfhdr-example
 
 //Urgentní informace
 /// Sekce Alergie

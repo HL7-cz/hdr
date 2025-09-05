@@ -9,9 +9,9 @@ Description: "Czech profile for attachment. "
 
 * insert SetFmmandStatusRule ( 0, draft )
 
-* content.attachment 
-* content.attachment.contentType MS
-* content.attachment.language MS
-* content.attachment.url MS
-* content.attachment.title MS
-* content.attachment.creation MS
+* content.attachment.contentType 1..1
+* content.attachment.language 0..1
+* content.attachment.data 1..1
+* content.attachment.title 0..1
+* content.attachment.url 0..1
+* content.attachment.creation 1..1
