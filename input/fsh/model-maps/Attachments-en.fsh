@@ -1,4 +1,4 @@
-Logical: AttachmentsCz
+Logical: LogEnAttachmentsCz
 Id: AttachmentsCz
 Title: "A.4 - Additional attachments"
 Description: """Discharge Report - additional attachments - A.4"""

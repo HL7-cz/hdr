@@ -711,6 +711,17 @@ $loinc#10160-0) // 	History of Medication use Narrative
     Hospital Discharge instructions,
     $loinc#8653-8 )   //  Hospital Discharge instructions
 
+// -------------------------------------
+// Coverage Section 0 … 1
+// -------------------------------------
+* section contains coverage 0..*
+* section[coverage]
+  * ^short = "Coverage type"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#87520-3 "Coverage type"
+  * entry 0..
+  * entry only Reference(CZ_Coverage)
 
 // -------------------------------------
 // Hospital Discharge Studies Summary Section

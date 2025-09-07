@@ -13,6 +13,6 @@ Main example [HDR Novák Petr](Bundle-DischargeBundle-Novak-Petr.html)
  - Exampl [MedicationStatement: Euthyrox](MedicationStatement-47472c99-09bf-4007-bfaa-16c9665ae090.html)
  - Exampl [MedicationStatement: Ibalgin400](Medication-med-Ibalgin400.html)
  - Exampl [MedicationStatement: Paracetamol](Medication-med-paracetamol.html)
- - Exampl [CRP](Observation-Observation-CRP-Novak.html)
- - Exampl [UZV](Observation-Observation-UZV-Novak.html)
+ - Exampl [CRP](Observation-10f5c49e-086d-4016-8dd1-10000000001b.html)
+ - Exampl [UZV](Observation-e15aeeaf-e288-404c-9704-9c8f0b2d4e3a.html)
  
