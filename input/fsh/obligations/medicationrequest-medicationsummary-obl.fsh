@@ -20,9 +20,9 @@ Description: "Profile for MedicationRequest with obligations (HDR CZ) - medicati
 // Creator Obligations L3 ============>
 * status insert OblCreator(#SHALL:able-to-populate,L3)
 * statusReason insert OblCreator(#SHALL:populate-if-known,L3)
-* medicationCodeableConcept insert OblCreator(SHALL:populate-if-known,L3)
+* medicationCodeableConcept insert OblCreator(#SHALL:populate-if-known,L3)
 
 // Consumer obligations L3
 * status insert OblConsumer(#SHALL:display,L3)
 * statusReason insert OblConsumer(#SHALL:display,L3)
-* medicationCodeableConcept insert OblConsumer(SHALL:display,L3)
+* medicationCodeableConcept insert OblConsumer(#SHALL:display,L3)

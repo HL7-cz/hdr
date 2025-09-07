@@ -16,9 +16,9 @@ Description: "Profile for MedicationDispense with obligations (HDR CZ). - medica
 //MedicationSummary.doseForm (A.2.9.2.7 - Pharmaceutical dose form)	is equal to	Medication.form	
 
 // Creator Obligations L3 ============>
-medicationCodeableConcept insert OblCreator(#SHALL:populate-if-known,L3)
+* medicationCodeableConcept insert OblCreator(#SHALL:populate-if-known,L3)
 
 
 // Consumer obligations L3
-medicationCodeableConcept insert OblConsumer(#SHALL:display,L3)
+* medicationCodeableConcept insert OblConsumer(#SHALL:display,L3)
 
