@@ -232,12 +232,12 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[+].code = #Header.documentMetadata.identifier
+/** group[=].element[+].code = #Header.documentMetadata.identifier
 * group[=].element[=].display = "A.1.8.1 - Document ID"
 * group[=].element[=].target.code = #Composition.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "If it is the identifer of the document (indipendently by its versions) and not of this particular document instance."
+* group[=].element[=].target.comment = "If it is the identifer of the document (indipendently by its versions) and not of this particular document instance."*/
 * group[=].element[+].code = #Header.documentMetadata.type
 * group[=].element[=].display = "A.1.8.2 - Document type"
 * group[=].element[=].target.code = #Composition.type					

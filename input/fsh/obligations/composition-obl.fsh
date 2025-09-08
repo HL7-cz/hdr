@@ -8,10 +8,10 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * insert SetFmmandStatusRule ( 0, informative)
 
 //L1 Creator Obligations L1 ============>
-* meta insert OblCreator(#SHALL:able-to-populate,L1)
+//* meta insert OblCreator(#SHALL:able-to-populate,L1)
 * language insert OblCreator(#SHALL:able-to-populate,L1)
 * extension[relatedArtifact] insert OblCreator(#SHALL:able-to-populate,L1)
-* identifier insert OblCreator(#SHALL:able-to-populate,L1)
+//* identifier insert OblCreator(#SHALL:able-to-populate,L1)
 //* extension[information-recipient] insert OblCreator(#SHOULD:able-to-populate,L1)
 * status insert OblCreator(#SHALL:able-to-populate,L1)
 * type insert OblCreator(#SHALL:able-to-populate,L1)
@@ -30,10 +30,10 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionHospitalCourse].text insert OblCreator(#SHALL:able-to-populate,L1)
 
 //L1 Consumer obligations L1
-* meta insert OblConsumer(#SHALL:display,L1)
-* language insert OblConsumer(#SHALL:display,L1)
+//* meta insert OblConsumer(#SHALL:display,L1)
+//* language insert OblConsumer(#SHALL:display,L1)
 * extension[relatedArtifact] insert OblConsumer(#SHALL:display,L1)
-* identifier insert OblConsumer(#SHALL:display,L1)
+//* identifier insert OblConsumer(#SHALL:display,L1)
 //* extension[information-recipient] insert OblConsumer(#SHOULD:display,L1)
 * status insert OblConsumer(#SHALL:display,L1)
 * type insert OblConsumer(#SHALL:display,L1)
@@ -52,10 +52,10 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionHospitalCourse].text insert OblConsumer(#SHALL:display,L1)
 
 //L2 Creator Obligations L2 ============>
-* meta insert OblCreator(#SHALL:able-to-populate,L2)
+//* meta insert OblCreator(#SHALL:able-to-populate,L2)
 * language insert OblCreator(#SHALL:able-to-populate,L2)
 * extension[relatedArtifact] insert OblCreator(#SHALL:able-to-populate,L2)
-* identifier insert OblCreator(#SHALL:able-to-populate,L2)
+//* identifier insert OblCreator(#SHALL:able-to-populate,L2)
 * extension[information-recipient] insert OblCreator(#SHOULD:able-to-populate,L2)
 * status insert OblCreator(#SHALL:able-to-populate,L2)
 * type insert OblCreator(#SHALL:able-to-populate,L2)
@@ -98,8 +98,8 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionAttachments] insert OblCreator(#SHOULD:able-to-populate,L2)
 
 //L2 Consumer obligations L2
-* meta insert OblConsumer(#SHALL:display,L2)
-* language insert OblConsumer(#SHALL:display,L2)
+//* meta insert OblConsumer(#SHALL:display,L2)
+//* language insert OblConsumer(#SHALL:display,L2)
 * extension[relatedArtifact] insert OblConsumer(#SHALL:display,L2)
 * identifier insert OblConsumer(#SHALL:display,L2)
 * extension[information-recipient]  
