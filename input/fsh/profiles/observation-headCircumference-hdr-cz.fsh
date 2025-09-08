@@ -1,7 +1,7 @@
 Profile: CZ_ObservationHeadCircumferenceHdr
 Parent: Observation
 Id: cz-observation-headCircumference-hdr
-Title: "Observation: Anthropometric Data (HDR CZ)"
+Title: "Observation: Anthropometric Data (HDR CZ) - Head Circumference"
 Description: "This profile sets minimum expectations for the Observation resource to record, search, and fetch anthropometric measurements such as height, weight, BMI, and optional measurements like head, chest, and abdominal circumference."
 
 * ^experimental = false

@@ -1,7 +1,7 @@
 Profile: CZ_ObservationHeightHdr
 Parent: Observation
 Id: cz-observation-height-hdr
-Title: "Observation: Anthropometric Data (HDR CZ)"
+Title: "Observation: Anthropometric Data (HDR CZ) - Height"
 Description: "This profile sets minimum expectations for the Observation resource to record, search, and fetch anthropometric measurements such as height, weight, BMI, and optional measurements like head, chest, and abdominal circumference."
 
 * ^experimental = false

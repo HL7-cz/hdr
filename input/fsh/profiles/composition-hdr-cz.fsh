@@ -121,37 +121,38 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * code only $CodeableConcept-uv-ips
   * code = $loinc#67852-4 (exactly)
   * ^comment = "Admission evaluation should be reported only exceptionally, if it is relevant to ensure continuity of care."
+  * insert EvaluationSubSectionRules
 
-// ---- enable slicing for Admission Evaluation subsections
-* section[sectionAdmissionEvaluation].section ^slicing.discriminator[0].type = #pattern
-* section[sectionAdmissionEvaluation].section ^slicing.discriminator[0].path = "code"
-* section[sectionAdmissionEvaluation].section ^slicing.rules = #open
+// // ---- enable slicing for Admission Evaluation subsections
+// * section[sectionAdmissionEvaluation].section ^slicing.discriminator[0].type = #pattern
+// * section[sectionAdmissionEvaluation].section ^slicing.discriminator[0].path = "code"
+// * section[sectionAdmissionEvaluation].section ^slicing.rules = #open
 
-// ---- Functional status at admission 0..1
-* section[sectionAdmissionEvaluation].section contains sectionAdmissionFunctionalStatus 0..1
-* section[sectionAdmissionEvaluation].section[sectionAdmissionFunctionalStatus]
-  * title = "Functional status at admission"
-  * code 1..
-  * code only $CodeableConcept-uv-ips
-  * code = $loinc#47420-5 (exactly)
-  * text 1..
-  * ^short = "Functional status at admission"
-  * ^definition = "Capability to perform ADL/IADL and relevant disability information assessed at the time of admission."
-  * entry 0..*
-  * entry only Reference(CZ_ConditionHdr or Observation or ClinicalImpression or DocumentReference or QuestionnaireResponse)
+// // ---- Functional status at admission 0..1
+// * section[sectionAdmissionEvaluation].section contains sectionAdmissionFunctionalStatus 0..1
+// * section[sectionAdmissionEvaluation].section[sectionAdmissionFunctionalStatus]
+//   * title = "Functional status at admission"
+//   * code 1..
+//   * code only $CodeableConcept-uv-ips
+//   * code = $loinc#47420-5 (exactly)
+//   * text 1..
+//   * ^short = "Functional status at admission"
+//   * ^definition = "Capability to perform ADL/IADL and relevant disability information assessed at the time of admission."
+//   * entry 0..*
+//   * entry only Reference(CZ_ConditionHdr or Observation or ClinicalImpression or DocumentReference or QuestionnaireResponse)
 
-// ---- Objective findings at admission 0..1
-* section[sectionAdmissionEvaluation].section contains sectionAdmissionObjectiveFindings 0..1
-* section[sectionAdmissionEvaluation].section[sectionAdmissionObjectiveFindings]
-  * title = "Objective findings at admission"
-  * code 1..
-  * code only $CodeableConcept-uv-ips
-  * code = $loinc#29545-1 (exactly)
-  * text 1..
-  * ^short = "Objective findings at admission"
-  * ^definition = "Objective physical findings documented at admission; may include narrative and references to observations/reports."
-  * entry 0..*
-  * entry only Reference(Observation or DiagnosticReport or DocumentReference)
+// // ---- Objective findings at admission 0..1
+// * section[sectionAdmissionEvaluation].section contains sectionAdmissionObjectiveFindings 0..1
+// * section[sectionAdmissionEvaluation].section[sectionAdmissionObjectiveFindings]
+//   * title = "Objective findings at admission"
+//   * code 1..
+//   * code only $CodeableConcept-uv-ips
+//   * code = $loinc#29545-1 (exactly)
+//   * text 1..
+//   * ^short = "Objective findings at admission"
+//   * ^definition = "Objective physical findings documented at admission; may include narrative and references to observations/reports."
+//   * entry 0..*
+//   * entry only Reference(Observation or DiagnosticReport or DocumentReference)
 
 // -------------------------------------
 // Patient History Section 0 … 1 R
@@ -367,37 +368,38 @@ $loinc#10160-0) // 	History of Medication use Narrative
       Discharge details,
       The hospital discharge status or disposition of the patient having a hospitalization.,
       $loinc#8650-4 ) //"Hospital discharge disposition Narrative"
-// ---- enable slicing for Admission Evaluation subsections
-* section[sectionDischargeDetails].section ^slicing.discriminator[0].type = #pattern
-* section[sectionDischargeDetails].section ^slicing.discriminator[0].path = "code"
-* section[sectionDischargeDetails].section ^slicing.rules = #open
+  * insert EvaluationSubSectionRules
+// // ---- enable slicing for Admission Evaluation subsections
+// * section[sectionDischargeDetails].section ^slicing.discriminator[0].type = #pattern
+// * section[sectionDischargeDetails].section ^slicing.discriminator[0].path = "code"
+// * section[sectionDischargeDetails].section ^slicing.rules = #open
 
-// ---- Functional status at admission 0..1
-* section[sectionDischargeDetails].section contains sectionDischargeFunctionalStatus 0..1
-* section[sectionDischargeDetails].section[sectionDischargeFunctionalStatus]
-  * title = "Funkční stav při propuštění"
-  * code 1..
-  * code only $CodeableConcept-uv-ips
-  * code = $loinc#47420-5 (exactly)
-  * text 1..
-  * ^short = "Functional status at discharge"
-  * ^definition = "Capability to perform ADL/IADL and relevant disability information assessed at the time of discharge."
-  * entry 0..*
-  * entry only Reference(CZ_ConditionHdr or Observation or ClinicalImpression or DocumentReference or QuestionnaireResponse)
+// // ---- Functional status at admission 0..1
+// * section[sectionDischargeDetails].section contains sectionDischargeFunctionalStatus 0..1
+// * section[sectionDischargeDetails].section[sectionDischargeFunctionalStatus]
+//   * title = "Funkční stav při propuštění"
+//   * code 1..
+//   * code only $CodeableConcept-uv-ips
+//   * code = $loinc#47420-5 (exactly)
+//   * text 1..
+//   * ^short = "Functional status at discharge"
+//   * ^definition = "Capability to perform ADL/IADL and relevant disability information assessed at the time of discharge."
+//   * entry 0..*
+//   * entry only Reference(CZ_ConditionHdr or Observation or ClinicalImpression or DocumentReference or QuestionnaireResponse)
 
-// ---- Objective findings at admission 0..1
-* section[sectionDischargeDetails].section contains sectionDischargeObjectiveFindings 0..1
-* section[sectionDischargeDetails].section[sectionDischargeObjectiveFindings]
-  * title = "Objektivní nález při propuštění"
-  * code 1..
-  * code only $CodeableConcept-uv-ips
-  * code = $loinc#29545-1 (exactly)
-  * text 1..
-  * ^short = "Objective findings at discharge"
-  * ^definition = "Objective physical findings documented at discharge; may include narrative and references to observations/reports."
-  * entry 0..*
-  * entry only Reference(Observation or DiagnosticReport or DocumentReference)
- // * insert EvaluationSubSectionRules
+// // ---- Objective findings at admission 0..1
+// * section[sectionDischargeDetails].section contains sectionDischargeObjectiveFindings 0..1
+// * section[sectionDischargeDetails].section[sectionDischargeObjectiveFindings]
+//   * title = "Objektivní nález při propuštění"
+//   * code 1..
+//   * code only $CodeableConcept-uv-ips
+//   * code = $loinc#29545-1 (exactly)
+//   * text 1..
+//   * ^short = "Objective findings at discharge"
+//   * ^definition = "Objective physical findings documented at discharge; may include narrative and references to observations/reports."
+//   * entry 0..*
+//   * entry only Reference(Observation or DiagnosticReport or DocumentReference)
+//  // * insert EvaluationSubSectionRules
 
 // -------------------------------------
 // Hospital discharge physical findings Section 0 … 1
@@ -740,6 +742,17 @@ $loinc#10160-0) // 	History of Medication use Narrative
     Hospital Discharge instructions,
     $loinc#8653-8 )   //  Hospital Discharge instructions
 
+// -------------------------------------
+// Coverage Section 0 … 1
+// -------------------------------------
+* section contains coverage 0..*
+* section[coverage]
+  * ^short = "Coverage type"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#87520-3 "Coverage type"
+  * entry 0..
+  * entry only Reference(CZ_Coverage)
 
 // -------------------------------------
 // Hospital Discharge Studies Summary Section

@@ -1,4 +1,4 @@
-Logical: AlertsEhnCz
+Logical: LogEnAlertsEhnCz
 Id: AlertsCz
 Title: "A.2.2 - Alerts (eHN)"
 Description: """Hospital Discharge Report - Alerts - A.2.2 eHN"""

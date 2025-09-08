@@ -34,7 +34,7 @@ Description: "Czech HDR - example of a care plan"
 //název
 * title = "Plán péče – tříselná kýla"
 //řeší (DG)
-* addresses = Reference(Condition-K409)
+* addresses = Reference(urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2)
 //popis doporučení
 * description = "Plán péče zaměřený na chirurgické řešení jednostranné tříselné kýly (K40.9) u stabilního pacienta. Péče zahrnuje pooperační sledování, edukaci o režimu a následnou ambulantní kontrolu."
 * period.start = "2025-03-10T08:00:00+01:00"

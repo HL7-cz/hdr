@@ -13,6 +13,6 @@ Všechny příklady lze nalézt na stránce [artifacts](artifacts.html).
  - Příklad [Medikace: Euthyrox](MedicationStatement-47472c99-09bf-4007-bfaa-16c9665ae090.html)
  - Příklad [Medikace: Ibalgin400](Medication-med-Ibalgin400.html)
  - Příklad [Medikace: Paracetamol](Medication-med-paracetamol.html)
- - Příklad [CRP](Observation-Observation-CRP-Novak.html)
- - Příklad [UZV](Observation-Observation-UZV-Novak.html)
+ - Příklad [CRP](Observation-10f5c49e-086d-4016-8dd1-10000000001b.html)
+ - Příklad [UZV](Observation-e15aeeaf-e288-404c-9704-9c8f0b2d4e3a.html)
  
