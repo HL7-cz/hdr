@@ -23,6 +23,13 @@ Usage: #example
 * extension[relatedArtifact].valueRelatedArtifact.type  = http://hl7.org/fhir/related-artifact-type#documentation
 * extension[relatedArtifact].valueRelatedArtifact.label = "Presented form"
 * extension[relatedArtifact].valueRelatedArtifact.document = cz-pdfhdr-example
+* confidentiality = #N
+
+//doplnit část pro custodian pod attester
+* custodian = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e) // Example Organization as custodian
+* attester[0].mode = #legal
+* attester[0].time = "2025-03-10T14:30:00+01:00"
+* attester[0].party = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) // Attester is the same as one of the authors
 
 //Urgentní informace
 /// Sekce Alergie
@@ -399,6 +406,13 @@ Usage: #example
 * extension[relatedArtifact].valueRelatedArtifact.type  = http://hl7.org/fhir/related-artifact-type#documentation
 * extension[relatedArtifact].valueRelatedArtifact.label = "Presented form"
 * extension[relatedArtifact].valueRelatedArtifact.document = cz-pdfhdr-example
+* confidentiality = #N
+
+//doplnit část pro custodian pod attester
+* custodian = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e) // Example Organization as custodian
+* attester[0].mode = #legal
+* attester[0].time = "2025-03-10T14:30:00+01:00"
+* attester[0].party = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) // Attester is the same as one of the authors
 
 * section[sectionHospitalCourse].title = "Klinické shrnutí"
 * section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course Narrative"
@@ -442,6 +456,13 @@ Usage: #example
 * extension[relatedArtifact].valueRelatedArtifact.type  = http://hl7.org/fhir/related-artifact-type#documentation
 * extension[relatedArtifact].valueRelatedArtifact.label = "Presented form"
 * extension[relatedArtifact].valueRelatedArtifact.document = cz-pdfhdr-example
+* confidentiality = #N
+
+//doplnit část pro custodian pod attester
+* custodian = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e) // Example Organization as custodian
+* attester[0].mode = #legal
+* attester[0].time = "2025-03-10T14:30:00+01:00"
+* attester[0].party = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) // Attester is the same as one of the authors
 
 //Urgentní informace
 /// Sekce Alergie
