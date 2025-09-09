@@ -18,7 +18,14 @@ Usage: #definition
 * group[=].element[=].display = "A.1.3.2 - Health insurance name"
 * group[=].element[=].target.code = #Organization.name
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.equivalence = #equivalent		
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/Header"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-coverage"
+* group[=].element[+].code = #Header.coverage.insuranceNumber	
+* group[=].element[=].display = "A.1.3.3 - insuranceNumber"
+* group[=].element[=].target.code = #CZ_Coverage.identifer                  
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent                  
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/Header"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core"
 * group[=].element[+].code = #Header.subject
@@ -232,12 +239,6 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-/** group[=].element[+].code = #Header.documentMetadata.identifier
-* group[=].element[=].display = "A.1.8.1 - Document ID"
-* group[=].element[=].target.code = #Composition.identifier					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "If it is the identifer of the document (indipendently by its versions) and not of this particular document instance."*/
 * group[=].element[+].code = #Header.documentMetadata.type
 * group[=].element[=].display = "A.1.8.2 - Document type"
 * group[=].element[=].target.code = #Composition.type					
@@ -280,22 +281,4 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "As business version, not as resource version"
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/Header"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-coverage"
-* group[=].element[+].code = #Header.coverage
-* group[=].element[=].display = "A.1.4 - Information about coverage"
-* group[=].element[=].target.code = #Composition.section:Coverage                  
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto                  
-* group[=].element[=].target.comment = "Composition.section:Coverage.entry.ofType(CZ_Coverage)"
-* group[=].element[+].code = #Header.coverage.method
-* group[=].element[=].display = "A.1.4.1 - Coverage method"
-* group[=].element[=].target.code = #CZ_Coverage.type                  
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent                  
-* group[=].element[+].code = #Header.coverage.informationPayor
-* group[=].element[=].display = "A.1.4.2 - Information about Payor"
-* group[=].element[=].target.code = #CZ_Coverage.payor                  
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
 
