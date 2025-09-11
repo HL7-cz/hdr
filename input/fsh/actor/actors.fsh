@@ -1,6 +1,6 @@
 Instance: actor-creator-hdr-L1
 InstanceOf: ActorDefinition
-Title: "Actor HDR Creator"
+Title: "Actor HDR Creator L1"
 Description: """HDR Creator: a system generating and sending/providing a HDR to a Consumer for report storage and sharing."""
 Usage: #example
 
@@ -13,7 +13,7 @@ Usage: #example
 
 Instance: actor-consumer-hdr-L1
 InstanceOf: ActorDefinition
-Title: "Actor HDR Consumer"
+Title: "Actor HDR Consumer L1"
 Description: """HDR Consumer: a system receiving/querying and using a HDR."""
 Usage: #example
 
@@ -27,7 +27,7 @@ Using includes, but is not limited to, the report display, storage or processing
 
 Instance: actor-creator-hdr-L2
 InstanceOf: ActorDefinition
-Title: "Actor HDR Creator"
+Title: "Actor HDR Creator L2"
 Description: """HDR Creator: a system generating and sending/providing a HDR to a Consumer for report storage and sharing."""
 Usage: #example
 
@@ -40,7 +40,7 @@ Usage: #example
 
 Instance: actor-consumer-hdr-L2
 InstanceOf: ActorDefinition
-Title: "Actor HDR Consumer"
+Title: "Actor HDR Consumer L2"
 Description: """HDR Consumer: a system receiving/querying and using a HDR."""
 Usage: #example
 
@@ -54,7 +54,7 @@ Using includes, but is not limited to, the report display, storage or processing
 
 Instance: actor-creator-hdr-L3
 InstanceOf: ActorDefinition
-Title: "Actor HDR Creator"
+Title: "Actor HDR Creator L3"
 Description: """HDR Creator: a system generating and sending/providing a HDR to a Consumer for report storage and sharing."""
 Usage: #example
 
@@ -67,7 +67,7 @@ Usage: #example
 
 Instance: actor-consumer-hdr-L3
 InstanceOf: ActorDefinition
-Title: "Actor HDR Consumer"
+Title: "Actor HDR Consumer L3"
 Description: """HDR Consumer: a system receiving/querying and using a HDR."""
 Usage: #example
 
