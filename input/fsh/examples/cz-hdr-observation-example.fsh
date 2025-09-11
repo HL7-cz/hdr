@@ -70,7 +70,7 @@ Description: "Example of Social History Observation - Alcohol Use"
 Instance: ExampleChestCircumference
 InstanceOf: CZ_ObservationChestCircumferenceHdr
 Description: "Example instance for chest circumference observation using the CZ_ObservationChestCircumferenceHdr profile."
-
+* id = "4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a"
 * status = #final
 * code = $loinc#8280-0 "Waist Circumference at umbilicus by Tape measure"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -87,6 +87,7 @@ Instance: ExampleHeadCircumference
 InstanceOf: CZ_ObservationHeadCircumferenceHdr
 Description: "Example instance for head circumference observation using the CZ_ObservationHeadCircumferenceHdr profile."
 
+* id = "5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d"
 * status = #final
 * code = $loinc#9843-4 "Head Occipital-frontal circumference"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -102,7 +103,7 @@ Description: "Example instance for head circumference observation using the CZ_O
 Instance: ExampleBMI
 InstanceOf: CZ_ObservationBMIHdr
 Description: "Example instance for BMI observation using the CZ_ObservationBMIHdr profile."
-
+* id = "7cf304de-5ae3-4621-8531-9c8f0b2d4e3a"
 * status = #final
 * code = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -118,7 +119,7 @@ Description: "Example instance for BMI observation using the CZ_ObservationBMIHd
 Instance: ExampleAbdominalCircumference
 InstanceOf: CZ_ObservationAbdominalCircumferenceHdr
 Description: "Example instance for abdominal circumference observation using the CZ_ObservationAbdominalCircumferenceHdr profile."
-
+* id = "6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a"
 * status = #final
 * code = $loinc#56086-2 "Adult Waist Circumference Protocol"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -135,6 +136,7 @@ Instance: ExampleHeight
 InstanceOf: CZ_ObservationHeightHdr
 Description: "Example instance for height observation using the CZ_ObservationHeightHdr profile."
 
+* id = "6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b"
 * status = #final
 * code = $loinc#8302-2 "Body height"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -150,7 +152,7 @@ Description: "Example instance for height observation using the CZ_ObservationHe
 Instance: ExampleWeight
 InstanceOf: CZ_ObservationWeightHdr
 Description: "Example instance for weight observation using the CZ_ObservationWeightHdr profile."
-
+* id = "5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c"
 * status = #final
 * code = $loinc#29463-7 "Body weight"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -210,6 +212,7 @@ Description: "Czech HDR - example of CRP observation for Novák Petr"
 Instance: ExampleBloodPressure
 InstanceOf: Observation
 Description: "Example instance for blood pressure observation (systolic and diastolic)."
+* id = "8d2aea77-f576-4d0f-9508-537359aa44d6"
 * status = #final
 * category[0] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#85354-9 "Blood pressure panel with all children optional"
