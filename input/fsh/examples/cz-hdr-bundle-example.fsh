@@ -304,6 +304,8 @@ Usage: #example
 * entry[provenance][=].resource = signature-L3
 * entry[flag][+].fullUrl = "urn:uuid:5a17a710-193e-4490-a627-7202925aa56e"
 * entry[flag][=].resource = Flag-malnutrition-Novak
+* entry[observation][+].fullUrl = "urn:uuid:8d2aea77-f576-4d0f-9508-537359aa44d6"
+* entry[observation][=].resource = ExampleBloodPressure
 
 
 // 2. Bundle: Hospital Discharge Report - Novák Petr

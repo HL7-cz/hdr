@@ -301,7 +301,7 @@ Usage: #example
 * section[sectionImmunizations].title = "Očkování"
 * section[sectionImmunizations].code.coding[0].system = "http://loinc.org"
 * section[sectionImmunizations].code.coding[0].code = #11369-6
-* section[sectionImmunizations].code.coding[0].display = "History of Immunization Narrative"
+* section[sectionImmunizations].code.coding[0].display = "History of Immunization note"
 * section[sectionImmunizations].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Pacient byl očkován vakcínou proti onemocnění COVID-19 (SNOMED CT: 1119349007) dne 5. 5. 2021. Očkování bylo provedeno a zaznamenáno jako kompletní, bez komplikací.</p>
@@ -479,7 +479,7 @@ Usage: #example
 * section[sectionAlert].title = "Varování"
 * section[sectionAlert].code.coding[0].system = $loinc
 * section[sectionAlert].code.coding[0].code = #75310-3 // Alerts LOINC=104605-1 
-* section[sectionAlert].code.coding[0].display = "Alerts"
+* section[sectionAlert].code.coding[0].display = "Health concerns Document"
 * section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>" 
 * section[sectionAlert].text.status = #generated
 * section[sectionAlert].entry[0] = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e) 
@@ -505,7 +505,7 @@ Usage: #example
 * section[sectionSignificantProcedures].title = "Významné procedury"
 * section[sectionSignificantProcedures].code.coding[0].system = $loinc
 * section[sectionSignificantProcedures].code.coding[0].code = #10185-7
-* section[sectionSignificantProcedures].code.coding[0].display = "Hospital discharge procedures Narrative"
+* section[sectionSignificantProcedures].code.coding[0].display = "Hospital discharge procedure note"
 * section[sectionSignificantProcedures].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Plastika pravostranné tříselné kýly dne 2. 3. 2025.</div>"
 * section[sectionSignificantProcedures].text.status = #generated
 * section[sectionSignificantProcedures].entry[0] = Reference(urn:uuid:ffb1a62f-9050-4e33-af4b-4cdb8203c9e5)
@@ -732,7 +732,7 @@ Usage: #example
 * section[sectionImmunizations].title = "Očkování"
 * section[sectionImmunizations].code.coding[0].system = "http://loinc.org"
 * section[sectionImmunizations].code.coding[0].code = #11369-6
-* section[sectionImmunizations].code.coding[0].display = "History of Immunization Narrative"
+* section[sectionImmunizations].code.coding[0].display = "History of Immunization note"
 * section[sectionImmunizations].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Pacient byl očkován vakcínou proti onemocnění COVID-19 (SNOMED CT: 1119349007) dne 5. 5. 2021. Očkování bylo provedeno a zaznamenáno jako kompletní, bez komplikací.</p>
@@ -773,7 +773,7 @@ Usage: #example
 * section[sectionAdmissionEvaluation].code.coding[0].display = "Hospital Admission evaluation note"
 * section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient byl přijat na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Při příjmu byl pacient v dobrém stavu, vitální funkce stabilní. Při fyzikálním vyšetření bylo zjištěno bolestivé zduření v oblasti pravého tříselného kanálu, bez známek zánětu nebo infekce. Laboratorní vyšetření ukázalo normální hodnoty krevního obrazu a biochemie, včetně TSH v normálním rozmezí. Pacient byl stabilní, bez známek dehydratace nebo hypovolemie. Byla zahájena předoperační příprava včetně interního vyšetření a laboratorních testů. Pacient byl informován o nutnosti chirurgického zákroku a souhlasil s ním. </div>" // Added required text for cardinality
 * section[sectionAdmissionEvaluation].text.status = #additional
-* section[sectionAdmissionEvaluation].section[0].title = "Vital sings"
+/* section[sectionAdmissionEvaluation].section[0].title = "Vital sings"
 * section[sectionAdmissionEvaluation].section[=].code = $loinc#8716-3 "Vital signs note"
 * section[sectionAdmissionEvaluation].section[=].text.status = #generated
 * section[sectionAdmissionEvaluation].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vital signs</div>"
@@ -784,7 +784,7 @@ Usage: #example
 * section[sectionAdmissionEvaluation].section[=].entry[4] = Reference(urn:uuid:4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a) 
 * section[sectionAdmissionEvaluation].section[=].entry[5] = Reference(urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a) // Corrected Reference to include the resource type
 * section[sectionAdmissionEvaluation].section[=].entry[6] = Reference(urn:uuid:f0b20060-c4a8-4a74-b12a-6c8f0b2d4e3a) // Corrected Reference to include the resource type
-
+*/
 // --- Admission Evaluation – Functional status at admission ---
 * section[sectionAdmissionEvaluation].section[sectionFunctionalStatus].title = "Functional status at admission"
 * section[sectionAdmissionEvaluation].section[sectionFunctionalStatus].code.coding[0].system = $loinc
