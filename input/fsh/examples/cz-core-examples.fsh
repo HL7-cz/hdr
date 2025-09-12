@@ -5,7 +5,7 @@ InstanceOf: CZ_PatientCore
 Usage: #example
 Description: "Patient, contact information including registering practitioner"
 
-* contained[+] = RegisteringProviderExample
+//* contained[+] = RegisteringProviderExample
 * identifier[+]
   * system = "https://ncez.mzcr.cz/fhir/sid/rcis"
   * value = "7161264528"
@@ -409,8 +409,8 @@ Description: "practitioner's detail"
 
 * id = "2b7e9637-5018-4542-9faf-d5abdee7b849"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
-* practitioner = Reference(Practitioner-Author) "MUDr. Ivan Anděl"
-* organization = Reference(urn:uid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169) "Nemocnice Chrudim"
+* practitioner = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) "MUDr. Ivan Anděl"
+* organization = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169) "Nemocnice Chrudim"
 * code = $cz-nrzp_povolani#L00 "Lékař"
 * specialty = $sct#419192003 "Internal medicine"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">MUDr. Ivan Anděl, interní lékař, Nemocnice Chrudim, Václavská 570, 537 01 Chrudim, tel: +420 603 777 227</div>"

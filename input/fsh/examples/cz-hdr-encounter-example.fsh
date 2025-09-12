@@ -108,7 +108,7 @@ Description: "Czech HDR - example of encounter with emergency priority"
 * period.end = "2025-03-10T09:30:00+01:00"
 * serviceProvider = Reference(RegisteringProviderExample)
 // Reason for encounter
-* reasonReference = Reference(Condition-K409)
+* reasonReference = Reference(urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2)
 * hospitalization.admitSource.coding[0].system = $admit-source
 * hospitalization.admitSource.coding[0].code = #outp
 * hospitalization.admitSource.coding[0].display = "From outpatient department"

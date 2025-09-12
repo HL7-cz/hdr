@@ -29,7 +29,7 @@ Description: "Example of Social History Observation - Smoking"
 Instance: ExampleSdohSmokingEnded
 InstanceOf: CZ_ObservationSdohHdr
 Description: "Example of Social History Observation - Smoking history"
-
+* id = "3f85726c-ad2f-441b-89ce-10000000001c"
 * status = #final
 * category[SocialHistory] = $observation-category#social-history
 * code = $sct#229819007 "Tobacco use and exposure"
@@ -43,7 +43,6 @@ Description: "Example of Social History Observation - Smoking history"
 Instance: ExampleSdohAlcohol
 InstanceOf: CZ_ObservationSdohHdr
 Description: "Example of Social History Observation - Alcohol Use"
-
 * status = #final
 * category[SocialHistory] =  $observation-category#social-history
 * code = $sct#160573003 "Alcohol intake"
@@ -57,7 +56,7 @@ Description: "Example of Social History Observation - Alcohol Use"
 Instance: ExampleSdohAlcoholSporadic
 InstanceOf: CZ_ObservationSdohHdr
 Description: "Example of Social History Observation - Alcohol Use"
-
+* id = "3f85726c-ad2f-441b-89ce-10000000001d"
 * status = #final
 * category[SocialHistory] = $observation-category#social-history
 * code = $sct#160573003 "Alcohol consumption"
@@ -71,7 +70,7 @@ Description: "Example of Social History Observation - Alcohol Use"
 Instance: ExampleChestCircumference
 InstanceOf: CZ_ObservationChestCircumferenceHdr
 Description: "Example instance for chest circumference observation using the CZ_ObservationChestCircumferenceHdr profile."
-
+* id = "4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a"
 * status = #final
 * code = $loinc#8280-0 "Waist Circumference at umbilicus by Tape measure"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -88,6 +87,7 @@ Instance: ExampleHeadCircumference
 InstanceOf: CZ_ObservationHeadCircumferenceHdr
 Description: "Example instance for head circumference observation using the CZ_ObservationHeadCircumferenceHdr profile."
 
+* id = "5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d"
 * status = #final
 * code = $loinc#9843-4 "Head Occipital-frontal circumference"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -103,7 +103,7 @@ Description: "Example instance for head circumference observation using the CZ_O
 Instance: ExampleBMI
 InstanceOf: CZ_ObservationBMIHdr
 Description: "Example instance for BMI observation using the CZ_ObservationBMIHdr profile."
-
+* id = "7cf304de-5ae3-4621-8531-9c8f0b2d4e3a"
 * status = #final
 * code = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -119,7 +119,7 @@ Description: "Example instance for BMI observation using the CZ_ObservationBMIHd
 Instance: ExampleAbdominalCircumference
 InstanceOf: CZ_ObservationAbdominalCircumferenceHdr
 Description: "Example instance for abdominal circumference observation using the CZ_ObservationAbdominalCircumferenceHdr profile."
-
+* id = "6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a"
 * status = #final
 * code = $loinc#56086-2 "Adult Waist Circumference Protocol"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -136,6 +136,7 @@ Instance: ExampleHeight
 InstanceOf: CZ_ObservationHeightHdr
 Description: "Example instance for height observation using the CZ_ObservationHeightHdr profile."
 
+* id = "6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b"
 * status = #final
 * code = $loinc#8302-2 "Body height"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -151,7 +152,7 @@ Description: "Example instance for height observation using the CZ_ObservationHe
 Instance: ExampleWeight
 InstanceOf: CZ_ObservationWeightHdr
 Description: "Example instance for weight observation using the CZ_ObservationWeightHdr profile."
-
+* id = "5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c"
 * status = #final
 * code = $loinc#29463-7 "Body weight"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -166,14 +167,14 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 
 //-----------------------------------------
 Instance: Observation-UZV-Novak
-InstanceOf: Observation //TODO doplnit RTG CZ_ObservationResultImaging
+InstanceOf: CZ_ObservationResultImaging
 Usage: #example
 Title: "UZV - Novák Petr"
 Description: "Czech HDR - example of an ultrasound observation for Novák Petr"
 * id = "e15aeeaf-e288-404c-9704-9c8f0b2d4e3a"
 * status = #final
 * category = $observation-category#imaging  //http://terminology.hl7.org/CodeSystem/observation-category
-* code = $loinc#24719-7 "US Groin"
+* code = $sct#13221000087107 "Ultrasonography of groin and scrotum"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-10T10:00:00+01:00"
 * performer = Reference(Practitioner-UZV)
@@ -181,14 +182,15 @@ Description: "Czech HDR - example of an ultrasound observation for Novák Petr"
 
 //-----------------------------------------
 Instance: Observation-CRP-Novak
-InstanceOf: Observation //TODO doplnit LAB CZ_ObservationResultImaging
+InstanceOf: CZ_ObservationResultLaboratory
 Usage: #example
 Title: "CRP - Novák Petr"
 Description: "Czech HDR - example of CRP observation for Novák Petr"
 * id = "10f5c49e-086d-4016-8dd1-10000000001b"
 * status = #final
-* category = $observation-category#laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
-* code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+* category[laboratory] = $observation-category#laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
+* category[studyType] = $loinc#26436-6 "Laboratory studies (set)" 
+* code = $nclp#07830 "Protein C - kontrola (P; rel. čas [1] *)"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-01T10:00:00+01:00"
 * performer = Reference(Practitioner-UZV)
@@ -210,6 +212,7 @@ Description: "Czech HDR - example of CRP observation for Novák Petr"
 Instance: ExampleBloodPressure
 InstanceOf: Observation
 Description: "Example instance for blood pressure observation (systolic and diastolic)."
+* id = "8d2aea77-f576-4d0f-9508-537359aa44d6"
 * status = #final
 * category[0] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#85354-9 "Blood pressure panel with all children optional"
@@ -291,7 +294,7 @@ Description: "Pacient je aktivní v komunitních aktivitách a dobrovolnictví."
 * code = $sct#363910003 "Characteristic of psychosocial functioning"
 * effectiveDateTime = "2024-03-28"
 * performer = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
-* subject = Reference(Patient-Novak-Petr)
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000023)
 * hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000024)
 * hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000025)
@@ -353,7 +356,7 @@ InstanceOf: cz-observation-sdoh-hdr
 Usage: #example
 Title: "Vzdělání"
 Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
-* id = "f85726c-ad2f-441b-89ce-100000000027"
+* id = "3f85726c-ad2f-441b-89ce-100000000027"
 * status = #final
 * code = $sct#276031006 "Education"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
