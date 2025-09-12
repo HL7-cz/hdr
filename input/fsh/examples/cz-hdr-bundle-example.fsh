@@ -209,7 +209,8 @@ InstanceOf: CZ_BundleHdr
 Description: "Example Bundle for Hospital Discharge Report for patient Novák Petr"
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:c859d718-03c2-43ed-a16c-dbe57a6e34b5"    // unique Bundle ID
+//* identifier.value = "urn:uuid:c859d718-03c2-43ed-a16c-dbe57a6e34b5"    // unique Bundle ID
+* identifier.value = "urn:uuid:5fa7add2-aa11-4988-9a1a-418fc3038d57"    // unique Bundle ID
 * type = #document
 * timestamp = "2025-03-10T15:00:00+01:00"
 // Bundle Entries (ordered by profile slices):
@@ -311,7 +312,8 @@ InstanceOf: CZ_BundleHdr
 Description: "Example Bundle for Hospital Discharge Report for patient Novák Petr"
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:c859d718-03c2-43ed-a16c-dbe57a6e34b5"    // unique Bundle ID
+//* identifier.value = "urn:uuid:c859d718-03c2-43ed-a16c-dbe57a6e34b5"    // unique Bundle ID
+* identifier.value = "urn:uuid:a90a5972-27bd-4388-a628-2e726a5d7935"    // unique Bundle ID
 * type = #document
 * timestamp = "2025-03-10T15:00:00+01:00"
 // Bundle Entries (ordered by profile slices):

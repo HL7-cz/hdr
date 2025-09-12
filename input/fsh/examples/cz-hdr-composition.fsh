@@ -26,7 +26,7 @@ Usage: #example
 * confidentiality = #N
 
 //doplnit část pro custodian pod attester
-* custodian = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e) // Example Organization as custodian
+* custodian = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169) // Example Organization as custodian
 * attester[0].mode = #legal
 * attester[0].time = "2025-03-10T14:30:00+01:00"
 * attester[0].party = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) // Attester is the same as one of the authors
@@ -86,7 +86,7 @@ Usage: #example
 * section[sectionSignificantResults].title = "Výsledky vyšetření"
 * section[sectionSignificantResults].code.coding[0].system = $loinc
 * section[sectionSignificantResults].code.coding[0].code = #30954-2  //Relevant diagnostic tests/laboratory data
-* section[sectionSignificantResults].code.coding[0].display = "Relevant diagnostic tests/laboratory data Narrative"
+* section[sectionSignificantResults].code.coding[0].display = "Relevant diagnostic tests/laboratory data note"
 * section[sectionSignificantResults].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Významné výsledky vyšetření v průběhu hospitalizace</p>
@@ -111,7 +111,7 @@ Usage: #example
 
 //Sekce Průběh hospitalizace - klinické shrnutí
 * section[sectionHospitalCourse].title = "Klinické shrnutí"
-* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course Narrative"
+* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
 * section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
   Pacient byl přijat dne 1. 3. 2025 na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Během hospitalizace byla provedena předoperační příprava včetně laboratorních vyšetření a interního předoperačního vyšetření.
   Dne 2. 3. 2025 byla v celkové anestezii provedena operace – plastika pravostranné tříselné kýly. Operační výkon proběhl bez komplikací. Pacient byl pooperačně stabilní, bez známek infekce rány.
@@ -202,7 +202,7 @@ Usage: #example
 * section[sectionDischargeDetails].title = "Poznámka k propuštění"
 * section[sectionDischargeDetails].code.coding[0].system = $loinc
 * section[sectionDischargeDetails].code.coding[0].code = #8650-4 // Discharge details
-* section[sectionDischargeDetails].code.coding[0].display = "Hospital discharge disposition Narrative"
+* section[sectionDischargeDetails].code.coding[0].display = "Hospital discharge disposition note"
 * section[sectionDischargeDetails].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Pacient byl propuštěn z nemocnice dne 10. 3. 2025 po úspěšné operaci pravostranné tříselné kýly. Při propuštění byl pacient v dobrém stavu, bez známek komplikací. Byla doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní. Pacient byl informován o nutnosti dodržování pooperačního režimu a o možných komplikacích, které by měly být hlášeny lékaři. Pacient byl propuštěn do domácího ošetření s doporučením k dalšímu sledování a péči.</p>
@@ -269,7 +269,7 @@ Usage: #example
 * section[sectionFamilyHistory].title = "Rodinná anamnéza"
 * section[sectionFamilyHistory].code.coding[0].system = "http://loinc.org"
 * section[sectionFamilyHistory].code.coding[0].code = #10157-6 // Corrected code assignment
-* section[sectionFamilyHistory].code.coding[0].display = "History of family member diseases Narrative"
+* section[sectionFamilyHistory].code.coding[0].display = "History of family member diseases note"
 * section[sectionFamilyHistory].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Rodinná anamnéza: matka zemřela na infarkt ve věku 75 let, otec žije, má 80 let a trpí hypertenzí. Sourozenci zdraví.</p>
@@ -281,7 +281,7 @@ Usage: #example
 * section[sectionSocialHistory].title = "Sociální anamnéza"
 * section[sectionSocialHistory].code.coding[0].system = "http://loinc.org"
 * section[sectionSocialHistory].code.coding[0].code = #29762-2 // Corrected code assignment
-* section[sectionSocialHistory].code.coding[0].display = "Social history Narrative"
+* section[sectionSocialHistory].code.coding[0].display = "Social history note"
 * section[sectionSocialHistory].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
   <p><strong>Společenské uplatnění</strong></p>
@@ -320,7 +320,7 @@ Usage: #example
 
 // Sekce cestovatelská anamnéza
 * section[sectionTravelHx].title = "Cestovatelská anamnéza"
-* section[sectionTravelHx].code = $loinc#10182-4 "History of Travel Narrative"
+* section[sectionTravelHx].code = $loinc#10182-4 "History of Travel note"
 * section[sectionTravelHx].text.status = #additional
 * section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient nedávno cestoval na Madagaskar.</p></div>"
 * section[sectionTravelHx].entry[0] = Reference(urn:uuid:f95f843e-701f-434a-94c9-3c8f0b2d4e3a)
@@ -343,7 +343,7 @@ Usage: #example
 * section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient byl přijat na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Při příjmu byl pacient v dobrém stavu, vitální funkce stabilní. Při fyzikálním vyšetření bylo zjištěno bolestivé zduření v oblasti pravého tříselného kanálu, bez známek zánětu nebo infekce. Laboratorní vyšetření ukázalo normální hodnoty krevního obrazu a biochemie, včetně TSH v normálním rozmezí. Pacient byl stabilní, bez známek dehydratace nebo hypovolemie. Byla zahájena předoperační příprava včetně interního vyšetření a laboratorních testů. Pacient byl informován o nutnosti chirurgického zákroku a souhlasil s ním. </div>" // Added required text for cardinality
 * section[sectionAdmissionEvaluation].text.status = #additional
 * section[sectionAdmissionEvaluation].section[0].title = "Vital sings"
-* section[sectionAdmissionEvaluation].section[=].code = $loinc#8716-3 "Vital signs"
+* section[sectionAdmissionEvaluation].section[=].code = $loinc#8716-3 "Vital signs note"
 * section[sectionAdmissionEvaluation].section[=].text.status = #generated
 * section[sectionAdmissionEvaluation].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vital signs</div>"
 * section[sectionAdmissionEvaluation].section[=].entry[0] = Reference(urn:uuid:6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b)
@@ -409,13 +409,13 @@ Usage: #example
 * confidentiality = #N
 
 //doplnit část pro custodian pod attester
-* custodian = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e) // Example Organization as custodian
+* custodian = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169) // Example Organization as custodian
 * attester[0].mode = #legal
 * attester[0].time = "2025-03-10T14:30:00+01:00"
 * attester[0].party = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) // Attester is the same as one of the authors
 
 * section[sectionHospitalCourse].title = "Klinické shrnutí"
-* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course Narrative"
+* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
 * section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
   Pacient byl přijat dne 1. 3. 2025 na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Během hospitalizace byla provedena předoperační příprava včetně laboratorních vyšetření a interního předoperačního vyšetření.
   Dne 2. 3. 2025 byla v celkové anestezii provedena operace – plastika pravostranné tříselné kýly. Operační výkon proběhl bez komplikací. Pacient byl pooperačně stabilní, bez známek infekce rány.
@@ -459,7 +459,7 @@ Usage: #example
 * confidentiality = #N
 
 //doplnit část pro custodian pod attester
-* custodian = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e) // Example Organization as custodian
+* custodian = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169) // Example Organization as custodian
 * attester[0].mode = #legal
 * attester[0].time = "2025-03-10T14:30:00+01:00"
 * attester[0].party = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) // Attester is the same as one of the authors
@@ -519,7 +519,7 @@ Usage: #example
 * section[sectionSignificantResults].title = "Výsledky vyšetření"
 * section[sectionSignificantResults].code.coding[0].system = $loinc
 * section[sectionSignificantResults].code.coding[0].code = #30954-2  //Relevant diagnostic tests/laboratory data
-* section[sectionSignificantResults].code.coding[0].display = "Relevant diagnostic tests/laboratory data Narrative"
+* section[sectionSignificantResults].code.coding[0].display = "Relevant diagnostic tests/laboratory data note"
 * section[sectionSignificantResults].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Významné výsledky vyšetření v průběhu hospitalizace</p>
@@ -544,7 +544,7 @@ Usage: #example
 
 //Sekce Průběh hospitalizace - klinické shrnutí
 * section[sectionHospitalCourse].title = "Klinické shrnutí"
-* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course Narrative"
+* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
 * section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
   Pacient byl přijat dne 1. 3. 2025 na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Během hospitalizace byla provedena předoperační příprava včetně laboratorních vyšetření a interního předoperačního vyšetření.
   Dne 2. 3. 2025 byla v celkové anestezii provedena operace – plastika pravostranné tříselné kýly. Operační výkon proběhl bez komplikací. Pacient byl pooperačně stabilní, bez známek infekce rány.
@@ -559,7 +559,7 @@ Usage: #example
 * section[sectionDischargeDetails].title = "Poznámka k propuštění"
 * section[sectionDischargeDetails].code.coding[0].system = $loinc
 * section[sectionDischargeDetails].code.coding[0].code = #8650-4 // Discharge details
-* section[sectionDischargeDetails].code.coding[0].display = "Hospital discharge disposition Narrative"
+* section[sectionDischargeDetails].code.coding[0].display = "Hospital discharge disposition note"
 * section[sectionDischargeDetails].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Pacient byl propuštěn z nemocnice dne 10. 3. 2025 po úspěšné operaci pravostranné tříselné kýly. Při propuštění byl pacient v dobrém stavu, bez známek komplikací. Byla doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní. Pacient byl informován o nutnosti dodržování pooperačního režimu a o možných komplikacích, které by měly být hlášeny lékaři. Pacient byl propuštěn do domácího ošetření s doporučením k dalšímu sledování a péči.</p>
@@ -647,7 +647,7 @@ Usage: #example
       <li>Vital signs: TK 120/80 mmHg, P 75/min, T 36,5 °C.</li>
     </ul>
   </div>"""
-* section[sectionDischargeDetails].section[sectionVitalSigns].entry[0] = Reference(urn:uuid8d2aea77-f576-4d0f-9508-537359aa44d6)
+* section[sectionDischargeDetails].section[sectionVitalSigns].entry[0] = Reference(urn:uuid:8d2aea77-f576-4d0f-9508-537359aa44d6)
 
 //Sekce Souhrn Medikace
 * section[sectionMedications].title = "Medikace"
@@ -700,7 +700,7 @@ Usage: #example
 * section[sectionFamilyHistory].title = "Rodinná anamnéza"
 * section[sectionFamilyHistory].code.coding[0].system = "http://loinc.org"
 * section[sectionFamilyHistory].code.coding[0].code = #10157-6 // Corrected code assignment
-* section[sectionFamilyHistory].code.coding[0].display = "History of family member diseases Narrative"
+* section[sectionFamilyHistory].code.coding[0].display = "History of family member diseases note"
 * section[sectionFamilyHistory].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Rodinná anamnéza: matka zemřela na infarkt ve věku 75 let, otec žije, má 80 let a trpí hypertenzí. Sourozenci zdraví.</p>
@@ -712,7 +712,7 @@ Usage: #example
 * section[sectionSocialHistory].title = "Sociální anamnéza"
 * section[sectionSocialHistory].code.coding[0].system = "http://loinc.org"
 * section[sectionSocialHistory].code.coding[0].code = #29762-2 // Corrected code assignment
-* section[sectionSocialHistory].code.coding[0].display = "Social history Narrative"
+* section[sectionSocialHistory].code.coding[0].display = "Social history note"
 * section[sectionSocialHistory].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
   <p><strong>Společenské uplatnění</strong></p>
@@ -751,7 +751,7 @@ Usage: #example
 
 // Sekce cestovatelská anamnéza
 * section[sectionTravelHx].title = "Cestovatelská anamnéza"
-* section[sectionTravelHx].code = $loinc#10182-4 "History of Travel Narrative"
+* section[sectionTravelHx].code = $loinc#10182-4 "History of Travel note"
 * section[sectionTravelHx].text.status = #additional
 * section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient nedávno cestoval na Madagaskar.</p></div>"
 * section[sectionTravelHx].entry[0] = Reference(urn:uuid:f95f843e-701f-434a-94c9-3c8f0b2d4e3a)
@@ -774,7 +774,7 @@ Usage: #example
 * section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient byl přijat na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Při příjmu byl pacient v dobrém stavu, vitální funkce stabilní. Při fyzikálním vyšetření bylo zjištěno bolestivé zduření v oblasti pravého tříselného kanálu, bez známek zánětu nebo infekce. Laboratorní vyšetření ukázalo normální hodnoty krevního obrazu a biochemie, včetně TSH v normálním rozmezí. Pacient byl stabilní, bez známek dehydratace nebo hypovolemie. Byla zahájena předoperační příprava včetně interního vyšetření a laboratorních testů. Pacient byl informován o nutnosti chirurgického zákroku a souhlasil s ním. </div>" // Added required text for cardinality
 * section[sectionAdmissionEvaluation].text.status = #additional
 * section[sectionAdmissionEvaluation].section[0].title = "Vital sings"
-* section[sectionAdmissionEvaluation].section[=].code = $loinc#8716-3 "Vital signs"
+* section[sectionAdmissionEvaluation].section[=].code = $loinc#8716-3 "Vital signs note"
 * section[sectionAdmissionEvaluation].section[=].text.status = #generated
 * section[sectionAdmissionEvaluation].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vital signs</div>"
 * section[sectionAdmissionEvaluation].section[=].entry[0] = Reference(urn:uuid:6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b)
@@ -860,7 +860,7 @@ Usage: #example
       <li>Vital signs: TK 120/80 mmHg, P 75/min, T 36,5 °C.</li>
     </ul>
   </div>"""
-* section[sectionAdmissionEvaluation].section[sectionVitalSigns].entry[0] = Reference(urn:uuid8d2aea77-f576-4d0f-9508-537359aa44d6)
+* section[sectionAdmissionEvaluation].section[sectionVitalSigns].entry[0] = Reference(urn:uuid:8d2aea77-f576-4d0f-9508-537359aa44d6)
 
 
 * section[sectionAttachments].title = "Přílohy"
