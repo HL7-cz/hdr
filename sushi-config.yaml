@@ -430,9 +430,9 @@ menu:
 #- ConceptMap/medicationSummary2FHIR-cz-hdr
 #*/
 groups:
-  obligations:
-    name: Actors and Obligations (Informative)
-    description: Actors and Obligations used to describe the HDR functional requirements for the specified data elements. Informative for this version of the guide.
+  Actors:
+    name:  Actors 
+    description: Actors used to describe the HDR functional requirements for the specified data elements. Informative for this version of the guide.
     resources:
       - ActorDefinition/actor-consumer-hdr-L1
       - ActorDefinition/actor-creator-hdr-L1
@@ -440,6 +440,10 @@ groups:
       - ActorDefinition/actor-creator-hdr-L2
       - ActorDefinition/actor-consumer-hdr-L3
       - ActorDefinition/actor-creator-hdr-L3
+  obligations:
+    name:  Obligations
+    description: Obligations used to describe the HDR functional requirements for the specified data elements. Informative for this version of the guide.
+    resources:
       - StructureDefinition/cz-patient-obl-hdr
       - StructureDefinition/cz-encounter-obl-hdr
       - StructureDefinition/cz-attachment-obl-hdr
@@ -465,7 +469,7 @@ groups:
       - StructureDefinition/cz-organization-obl-hdr
 
   czech-logical-model:
-    name: Czech logical model (Informative)
+    name:  Czech logical model 
     description: Logical model in czech language. Informative for this version of the guide.
     resources:
       - StructureDefinition/LogAdmissionEvaluationCz
