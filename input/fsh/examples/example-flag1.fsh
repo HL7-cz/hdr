@@ -44,7 +44,7 @@ Description: "Střední podvýživa – doporučení nutriční terapie u pacien
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000) //Novak 
 * code.coding[0].system = $icd10    
 * code.coding[0].code = #E44.0
-* code.coding[0].display = "Mírná (střední) protein-energetická podvýživa"
+* code.coding[0].display = "Moderate protein-energy malnutrition"
 * status = #active
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Střední podvýživa – doporučení nutriční terapie u pacienta.</div>"
