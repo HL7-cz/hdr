@@ -45,6 +45,7 @@ Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $locationType = http://terminology.hl7.org/CodeSystem/location-physical-type
 Alias: $nclp = https://nclp.ncez.mzcr.cz/CodeSystem/NCLPPOL
 
+
 // --- SID
 Alias: $oid = urn:ietf:rfc:1155
 Alias: $uri = urn:ietf:rfc:3986

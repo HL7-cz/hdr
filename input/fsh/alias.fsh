@@ -112,7 +112,7 @@ Alias: $MKN10 = http://hl7.org/fhir/sid/icd-10
 Alias: $atc = http://www.whocc.no/atc
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $observation-interpretation = http://hl7.org/fhir/ValueSet/observation-interpretation
-Alias: $flagPriority = http://hl7.org/fhir/ValueSet/flag-priority
+Alias: $flagPriority = http://hl7.org/fhir/flag-priority-code
 
 
 
