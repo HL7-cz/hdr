@@ -433,9 +433,9 @@ menu:
         #- ConceptMap/medicationSummary2FHIR-cz-hdr
 #*/
 groups:
-  obligations:
-    name:  Actors and Obligations (Informative)
-    description: Actors and Obligations used to describe the HDR functional requirements for the specified data elements. Informative for this version of the guide.
+  Actors:
+    name:  Actors 
+    description: Actors used to describe the HDR functional requirements for the specified data elements. Informative for this version of the guide.
     resources:
       - ActorDefinition/actor-consumer-hdr-L1
       - ActorDefinition/actor-creator-hdr-L1
@@ -443,13 +443,36 @@ groups:
       - ActorDefinition/actor-creator-hdr-L2
       - ActorDefinition/actor-consumer-hdr-L3
       - ActorDefinition/actor-creator-hdr-L3
+  obligations:
+    name:  Obligations
+    description: Obligations used to describe the HDR functional requirements for the specified data elements. Informative for this version of the guide.
+    resources:
       - StructureDefinition/cz-patient-obl-hdr
       - StructureDefinition/cz-encounter-obl-hdr
       - StructureDefinition/cz-attachment-obl-hdr
       - StructureDefinition/cz-procedure-obl-hdr
+      - StructureDefinition/cz-allergyintolerance-obl-hdr
+      - StructureDefinition/cz-composition-obl-hdr
+      - StructureDefinition/cz-consent-obl-hdr
+      - StructureDefinition/cz-dosage-hospitalstay-obl-hdr
+      - StructureDefinition/cz-dosage-medicationsummary-obl-hdr
+      - StructureDefinition/cz-flag-obl-hdr
+      - StructureDefinition/cz-immunization-obl-hdr
+      - StructureDefinition/cz-immunizationrecommendation-obl-hdr
+      - StructureDefinition/cz-medication-hospitalstay-obl-hdr
+      - StructureDefinition/cz-medication-medicationsummary-obl-hdr
+      - StructureDefinition/cz-medicationadministration-obl-hdr
+      - StructureDefinition/cz-medicationdispens-hospitalstay-obl-hdr
+      - StructureDefinition/cz-medicationdispens-medicationsummary-obl-hdr
+      - StructureDefinition/cz-medicationrequest-hospitalstay-obl-hdr
+      - StructureDefinition/cz-medicationrequest-medicationsummary-obl-hdr
+      - StructureDefinition/cz-medicationstatement-obl-hdr
+      - StructureDefinition/cz-observation-anthropometricdata-obl-hdr
+      - StructureDefinition/cz-observation-ic-obl-hdr
+      - StructureDefinition/cz-organization-obl-hdr
 
   czech-logical-model:
-    name:  Czech logical model (Informative)
+    name:  Czech logical model 
     description: Logical model in czech language. Informative for this version of the guide.
     resources:
       - StructureDefinition/LogAdmissionEvaluationCz
@@ -469,8 +492,6 @@ groups:
       - StructureDefinition/LogPatientHistoryCz
       - StructureDefinition/LogSubjectCz
       - StructureDefinition/LogPresentedFormCz
-
-
 
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
