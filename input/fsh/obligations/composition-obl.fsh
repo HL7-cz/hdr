@@ -10,7 +10,6 @@ Description: "This profile defines obligations for a composition in FHIR for the
 //L1 Creator Obligations L1 ============>
 //* meta insert OblCreator(#SHALL:able-to-populate,L1)
 * language insert OblCreator(#SHALL:able-to-populate,L1)
-* extension[presentedForm] insert OblCreator(#SHALL:able-to-populate,L1)
 //* identifier insert OblCreator(#SHALL:able-to-populate,L1)
 //* extension[information-recipient] insert OblCreator(#SHOULD:able-to-populate,L1)
 * status insert OblCreator(#SHALL:able-to-populate,L1)
@@ -26,7 +25,7 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * custodian insert OblCreator(#SHOULD:able-to-populate,L1)
 //* section[sectionPayers] insert OblCreator(#SHALL:able-to-populate,L1)
 * extension[compositionVersionR5] insert OblCreator(#SHALL:able-to-populate,L1)
-* extension[presentedForm] insert OblCreator(#SHALL:able-to-populate,L1)
+// * extension[presentedForm] insert OblCreator(#SHALL:able-to-populate,L1)
 * section[sectionHospitalCourse].text insert OblCreator(#SHALL:able-to-populate,L1)
 
 //L1 Consumer obligations L1
@@ -48,13 +47,11 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * custodian insert OblConsumer(#SHOULD:display,L1)
 //* section[sectionPayers] insert OblConsumer(#SHALL:display,L1)
 * extension[compositionVersionR5] insert OblConsumer(#SHALL:display,L1)
-* extension[presentedForm] insert OblConsumer(#SHALL:display,L1)
 * section[sectionHospitalCourse].text insert OblConsumer(#SHALL:display,L1)
 
 //L2 Creator Obligations L2 ============>
 //* meta insert OblCreator(#SHALL:able-to-populate,L2)
 * language insert OblCreator(#SHALL:able-to-populate,L2)
-* extension[presentedForm] insert OblCreator(#SHALL:able-to-populate,L2)
 //* identifier insert OblCreator(#SHALL:able-to-populate,L2)
 * extension[information-recipient] insert OblCreator(#SHOULD:able-to-populate,L2)
 * status insert OblCreator(#SHALL:able-to-populate,L2)
@@ -70,7 +67,7 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * custodian insert OblCreator(#SHOULD:able-to-populate,L2)
 * section[sectionPayers] insert OblCreator(#SHALL:able-to-populate,L2)
 * extension[compositionVersionR5] insert OblCreator(#SHALL:able-to-populate,L2)
-* extension[presentedForm] insert OblCreator(#SHALL:able-to-populate,L2)
+// * extension[presentedForm] insert OblCreator(#SHALL:able-to-populate,L2)
 
 * section[sectionAdvanceDirectives] insert OblCreator(#SHOULD:able-to-populate,L2)
 * section[sectionAlert] insert OblCreator(#SHALL:able-to-populate,L2)
@@ -100,7 +97,6 @@ Description: "This profile defines obligations for a composition in FHIR for the
 //L2 Consumer obligations L2
 //* meta insert OblConsumer(#SHALL:display,L2)
 //* language insert OblConsumer(#SHALL:display,L2)
-* extension[presentedForm] insert OblConsumer(#SHALL:display,L2)
 * identifier insert OblConsumer(#SHALL:display,L2)
 * extension[information-recipient]  
 * status insert OblConsumer(#SHALL:display,L2)
