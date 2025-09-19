@@ -20,9 +20,9 @@ Usage: #example
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)            // document subject is patient
 //Důvod přijetí je obsažen v Encouteru ReasonReference
 * encounter = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620)
-* extension[relatedArtifact].valueRelatedArtifact.type  = http://hl7.org/fhir/related-artifact-type#documentation
-* extension[relatedArtifact].valueRelatedArtifact.label = "Presented form"
-* extension[relatedArtifact].valueRelatedArtifact.document = cz-pdfhdr-example
+// * extension[presentedForm].valueAttachment.type  = http://hl7.org/fhir/related-artifact-type#documentation
+// * extension[presentedForm].valueAttachment.label = "Presented form"
+* extension[presentedForm].valueAttachment = cz-pdfhdr-example
 * confidentiality = #N
 
 //doplnit část pro custodian pod attester
@@ -403,9 +403,9 @@ Usage: #example
 * author[+] = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169)         // document authored by practitioner role
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * encounter = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620)
-* extension[relatedArtifact].valueRelatedArtifact.type  = http://hl7.org/fhir/related-artifact-type#documentation
-* extension[relatedArtifact].valueRelatedArtifact.label = "Presented form"
-* extension[relatedArtifact].valueRelatedArtifact.document = cz-pdfhdr-example
+// * extension[presentedForm].valueAttachment.type  = http://hl7.org/fhir/related-artifact-type#documentation
+// * extension[presentedForm].valueAttachment.label = "Presented form"
+* extension[presentedForm].valueAttachment = cz-pdfhdr-example
 * confidentiality = #N
 
 //doplnit část pro custodian pod attester
@@ -425,7 +425,8 @@ Usage: #example
 * section[sectionHospitalCourse].text.status = #additional //Additional text status for generated narrative /HONza
 * section[sectionHospitalCourse].entry[0] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620) // encounter
 
-* section[sectionAttachments].title = "Zobrazitelná forma dokumentu"
+//TODO popsat že to je něco jiného než presented form
+* section[sectionAttachments].title = "Přílohy"
 * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
 * section[sectionAttachments].code.coding[0].code = #77599-9   
 * section[sectionAttachments].code.coding[0].display = "Additional documentation"
@@ -453,9 +454,9 @@ Usage: #example
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)            // document subject is patient
 //Důvod přijetí je obsažen v Encouteru ReasonReference
 * encounter = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620)
-* extension[relatedArtifact].valueRelatedArtifact.type  = http://hl7.org/fhir/related-artifact-type#documentation
-* extension[relatedArtifact].valueRelatedArtifact.label = "Presented form"
-* extension[relatedArtifact].valueRelatedArtifact.document = cz-pdfhdr-example
+// * extension[presentedForm].valueAttachment.type  = http://hl7.org/fhir/related-artifact-type#documentation
+// * extension[presentedForm].valueAttachment.label = "Presented form"
+* extension[presentedForm].valueAttachment = cz-pdfhdr-example
 * confidentiality = #N
 
 //doplnit část pro custodian pod attester
