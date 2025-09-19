@@ -91,8 +91,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * date ^short = "HDR date"
 * author ^short = "Who and/or what authored the Hospital Discharge Report"
 * author ^definition = "Identifies who is responsible for the information in the Hospital Discharge Report, not necessarily who typed it in."
-//* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or Device or CZ_PatientCore or RelatedPerson or CZ_OrganizationCore)
-* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore 
 
 
 * title ^short = "Hospital Discharge Report"
