@@ -48,5 +48,6 @@ Alias: $nclp = https://nclp.ncez.mzcr.cz/CodeSystem/NCLPPOL
 // --- SID
 Alias: $oid = urn:ietf:rfc:1155
 Alias: $uri = urn:ietf:rfc:3986
+Alias: $mime = urn:ietf:bcp:13
 
 //=========================
