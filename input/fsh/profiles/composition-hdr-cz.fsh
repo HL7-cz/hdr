@@ -51,7 +51,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * extension contains $event-basedOn named basedOn 0..*
 * extension[basedOn].valueReference only Reference ( Resource or ServiceRequest ) /// add profile
 
-* extension contains DocumentPresentedForm named presentedForm 0..*
+* extension contains DocumentPresentedForm named presentedForm 1..*
 * extension[presentedForm] ^short = "Presented form"
 * extension[presentedForm].valueAttachment
   * contentType
