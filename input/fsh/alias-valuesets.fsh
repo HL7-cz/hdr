@@ -15,6 +15,7 @@ Alias: $allergy-intolerance-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/allergy
 Alias: $allergy-reaction-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips
 Alias: $v3-ActClassExposure = http://terminology.hl7.org/ValueSet/v3-ActClassExposure
 
+
 Alias: $v3-ActClassHDR = http://hl7.eu/fhir/hdr/ValueSet/hdr-encounterClass-eu-hdr
 Alias: $v3-AdmissionUrgencyHDR = http://hl7.eu/fhir/hdr/ValueSet/admission-urgency-eu-hdr
 //=========================

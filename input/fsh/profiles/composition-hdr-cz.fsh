@@ -51,14 +51,14 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * extension contains $event-basedOn named basedOn 0..*
 * extension[basedOn].valueReference only Reference ( Resource or ServiceRequest ) /// add profile
 
-* extension contains $artifact-relatedArtifact named relatedArtifact 0..*
-* extension[relatedArtifact]
-  * ^short = "Related artefacts: e.g. presented form"
-* extension[relatedArtifact].valueRelatedArtifact.type
-  * ^example[0].label = "presented form"
-  * ^example[0].valueCodeableConcept  = http://hl7.org/fhir/related-artifact-type#documentation
-  // ItT seems not appropriate as code... to be changed if this solution is used
-* extension[relatedArtifact].valueRelatedArtifact.document
+* extension contains DocumentPresentedForm named presentedForm 1..*
+* extension[presentedForm] ^short = "Presented form"
+* extension[presentedForm].valueAttachment
+  * contentType
+    * ^example[0].label = "pdf"
+    * ^example[0].valueCode  = $mime#application/pdf
+  * data ^short = "B64 in-line data"
+  * url ^short = "URL of the document"
 
 * extension contains $composition.version-r5 named compositionVersionR5 0..
 * extension[compositionVersionR5].valueString ^short = "Business version"
@@ -91,8 +91,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * date ^short = "HDR date"
 * author ^short = "Who and/or what authored the Hospital Discharge Report"
 * author ^definition = "Identifies who is responsible for the information in the Hospital Discharge Report, not necessarily who typed it in."
-//* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or Device or CZ_PatientCore or RelatedPerson or CZ_OrganizationCore)
-* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore 
 
 
 * title ^short = "Hospital Discharge Report"
@@ -251,7 +250,6 @@ Description: "This profile defines how to represent Composition resource in HL7 
 // Hospital Course Section 1..1
 // -------------------------------------
 * section contains sectionHospitalCourse 1..1
-// TODO přidat obligation L3
 * section[sectionHospitalCourse]
   * insert SectionComRules (
     Hospital course,
@@ -259,11 +257,6 @@ Description: "This profile defines how to represent Composition resource in HL7 
     $loinc#8648-8 )   // "Hospital course Narrative"
   * ^short = "Significant information about course of hospital stay"
   * ^definition = "This section includes basic information about hospital staty (encounter), diagnostic summary in narrative form, pharmacotherapy, major procedures, medical devices, significant findings during hospital stay and clinical synthesis."
-
-  //* insert SectionSliceComRules (Hospital Course sub sections,Hospital Course sub sections)
-
-  * entry 1..1
-  * entry only Reference(CZ_EncounterHdr) // EncounterEuHdr */
 
 * section contains sectionDiagnosticSummary 0..1
 * section[sectionDiagnosticSummary]
