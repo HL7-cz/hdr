@@ -99,7 +99,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * attester.mode ^short = "The type of attestation"
 * attester.time ^short = "When the composition was attested."
 * attester.party ^short = "Who attested the composition."
-* attester.party only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+* attester.party only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore
 
 
 
@@ -118,7 +118,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * section[sectionAdmissionEvaluation]
   * code 1..
   * code only $CodeableConcept-uv-ips
-  * code = $loinc#67852-4 (exactly)
+  * code = $loinc#67851-6(exactly)
   * ^comment = "Admission evaluation should be reported only exceptionally, if it is relevant to ensure continuity of care."
   * insert EvaluationSubSectionRules
 
