@@ -394,6 +394,20 @@ Usage: #example
 * entry[encounter][+].fullUrl = "urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620"
 * entry[encounter][=].resource = HospitalEncounter-Novak-Petr
 
+Instance: DischargeBundle-Novak-Petr-L1-Signed
+InstanceOf: CZ_SignedBundle
+Title: "Hospital Discharge Report - Novák Petr (Signed Bundle)"
+Description: "Example Signed Bundle for Hospital Discharge Report for patient Novák Petr"
+Usage: #example
+* identifier[+].system = "http://example.org"
+* identifier[=].value = "CZEXIR0001"
+* type = #collection
+* timestamp = "2025-06-20T12:02:00+01:00"
 
+* entry[bundle].fullUrl = "urn:uuid:a90a5972-27bd-4388-a628-2e726a5d7935"
+* entry[bundle].resource = DischargeBundle-Novak-Petr-L1
+
+* entry[provenance].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
+* entry[provenance].resource = signature-L1
 
 
