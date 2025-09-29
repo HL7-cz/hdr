@@ -99,7 +99,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * attester.mode ^short = "The type of attestation"
 * attester.time ^short = "When the composition was attested."
 * attester.party ^short = "Who attested the composition."
-* attester.party only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+* attester.party only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore
 
 
 
@@ -118,40 +118,9 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * section[sectionAdmissionEvaluation]
   * code 1..
   * code only $CodeableConcept-uv-ips
-  * code = $loinc#67852-4 (exactly)
+  * code = $loinc#67851-6
   * ^comment = "Admission evaluation should be reported only exceptionally, if it is relevant to ensure continuity of care."
   * insert EvaluationSubSectionRules
-
-// // ---- enable slicing for Admission Evaluation subsections
-// * section[sectionAdmissionEvaluation].section ^slicing.discriminator[0].type = #pattern
-// * section[sectionAdmissionEvaluation].section ^slicing.discriminator[0].path = "code"
-// * section[sectionAdmissionEvaluation].section ^slicing.rules = #open
-
-// // ---- Functional status at admission 0..1
-// * section[sectionAdmissionEvaluation].section contains sectionAdmissionFunctionalStatus 0..1
-// * section[sectionAdmissionEvaluation].section[sectionAdmissionFunctionalStatus]
-//   * title = "Functional status at admission"
-//   * code 1..
-//   * code only $CodeableConcept-uv-ips
-//   * code = $loinc#47420-5 (exactly)
-//   * text 1..
-//   * ^short = "Functional status at admission"
-//   * ^definition = "Capability to perform ADL/IADL and relevant disability information assessed at the time of admission."
-//   * entry 0..*
-//   * entry only Reference(CZ_ConditionHdr or Observation or ClinicalImpression or DocumentReference or QuestionnaireResponse)
-
-// // ---- Objective findings at admission 0..1
-// * section[sectionAdmissionEvaluation].section contains sectionAdmissionObjectiveFindings 0..1
-// * section[sectionAdmissionEvaluation].section[sectionAdmissionObjectiveFindings]
-//   * title = "Objective findings at admission"
-//   * code 1..
-//   * code only $CodeableConcept-uv-ips
-//   * code = $loinc#29545-1 (exactly)
-//   * text 1..
-//   * ^short = "Objective findings at admission"
-//   * ^definition = "Objective physical findings documented at admission; may include narrative and references to observations/reports."
-//   * entry 0..*
-//   * entry only Reference(Observation or DiagnosticReport or DocumentReference)
 
 // -------------------------------------
 // Patient History Section 0 … 1 R
@@ -163,20 +132,9 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * insert SectionComRules (
     Patient History Section,
     This Section describes all aspects of the medical history of the patient even if not pertinent to the current procedure\, and may include chief complaint\, past medical history\, social history\, family history\, surgical or procedure history\, medication history\, and other history information. The history may be limited to information pertinent to the current procedure or may be more comprehensive. The history may be reported as a collection of random clinical statements or it may be reported categorically. Categorical report formats may be divided into multiple subsections including Past Medical History\, Social History.,
-    $loinc#11329-0 )
+    $loinc#35090-0 )
 
 
-/*
-// ==> TO BE REVIEWED IF THEY ARE PART OF THE VITAL SIGNS
-* section contains sectionAnthropometry 0..1
-* section[sectionAnthropometry]
-  * insert SectionComRules (
-    Anthropometric observations,
-    Anthropometric Observations sub-section,
-    $sct#248326004) // to be updated
-  * entry 1..
-   * entry only Reference(BodyHeightXpandh or BodyWeightXpandh or BMIProfileXpandh or SkinfoldThicknessXpandh or CircumferenceMeasurementXpandh)
-   */
 
 
 // -------------------------------------
@@ -244,7 +202,23 @@ Description: "This profile defines how to represent Composition resource in HL7 
 // Alert 0 .. 1
 // -------------------------------------
 
-* insert AlertSectionRules
+* section contains sectionAlert ..1
+* section[sectionAlert]
+  * insert SectionComRules (
+    Alert Section, // SHORT
+    A warning\, other than included in allergies.
+    The warning can be entered in code there are codes for frequently used alerts but seeing the dynamic nature of the warnings\, these alerts will often be entered as free text.
+    Any clinical information that is imperative to know so that the life or health of the patient does not come under threat. 
+    Example 1: the patient has a rare disease that requires special treatment 
+    Example 2: Airway Alert / Difficult Intubation
+    Example 3: Diagnoses such as malignant hyperthermia\, porphyria\, and bleeding disorders; special treatments like anticoagulants or immunosuppressants; implanted devices. 
+    Example 4: transplanted organs illustrate other information that has to be taken into account in a healthcare contact. 
+    Example 5: participation in a clinical trial that has to be taken into account in a healthcare contact. , // DESC
+      http://loinc.org#104605-1 )   // CODE
+  * entry 0..
+  * insert SectionEntrySliceComRules(Alerts, Alerts)
+  // entry slices
+  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , Flag)
 
 // -------------------------------------
 // Hospital Course Section 1..1
@@ -263,7 +237,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * insert SectionComRules (
     Problem specification in narrative form,
     All problems/diagnoses that affect care during the inpatient case or are important to be recorded to ensure continuity of care. The diagnostic summary differentiates\, in accordance with the international recommendation\, between problems treated during hospital stay and other (untreated\) problems. Treated problems are problems that were the subject of diagnostics\, therapy\, nursing\, or (continuous\) monitoring during the hospitalisation. Furthermore problems could be divided into three categories: problems present on admission (POA\)\, conditions acquired during hospital stay (HAC\) and problems that cannot be classified as being of any of the two (N/A\). The diagnostic summary contains all conditions as they were recognised at the end of hospitalisation\, after all examinations. This section contains concise\, well specified\, codeable\, summary of problems. Problems are ordered by importance (main problems first\) during hospital stay. Description of the problem might be completed with additional details in the medical history section and/or in the Synthesis section.	,
-    $loinc#11450-4) // Problem list
+    $loinc#11535-2) // Problem list
     // $sct#721981007)
   * entry 0..*
   * entry only Reference( CZ_ConditionHdr ) // check if this is too restrictive
@@ -285,22 +259,36 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * insert SectionComRules (
     Medical devices and implants,
     Implants and used medical devices that affected or may affect the provision of health services (diagnosis and treatment\). Also medical devices explanted\, or its use was stopped during hospitalisation. If the section is blank\, the reason must be explicitly stated using the IPS Absent and Unknown Data coding system. ,
-    $loinc#46264-8) // History of medical device use
+    $loinc#57080-4) // Implanted medical device (to be changed)
+    // $loinc#46264-8) // History of medical device use
     // $sct#1184586001) //"Medical device document section (record artifact\)
-  * entry 1..
+  * entry 0..
  // * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuHdr ) // DeviceUseStatementEuHdr also ?
   * entry only Reference(CZ_DeviceUseStatementHdr or CZ_ProcedureHdr )
   * section ..0
 
-* section contains sectionMedications 0..1
-* section[sectionMedications]
+// -------------------------------------
+* section contains sectionHistoryMedicalDevices 0..1
+* section[sectionHistoryMedicalDevices]
+  * insert SectionComRules (
+    History of Medical devices and implants,
+    The medical devices section contains narrative text and coded entries describing the patient history of medical device use.,
+    $loinc#46264-8) // History of medical device use
+    // $sct#1184586001) //"Medical device document section (record artifact\)
+  * entry 0..
+  * entry only Reference(CZ_DeviceUseStatementHdr or CZ_ProcedureHdr ) // DeviceUseStatementEuHdr also ?
+  * section ..0
+
+
+* section contains sectionPharmacotherapy 0..1
+* section[sectionPharmacotherapy]
   * insert SectionComRules (
     Pharmacotherapy,
     Selected drug treatment during hospitalisation. Medicinal products that were administered during hospitalisation and whose administration has already been discontinued before discharge. Only products which are important for continuity of care (antibiotics other than completely routine\, corticosteroids in high doses\, etc.\) will be listed. Products which administration will continue after discharge will be also recorder in the Medication summary section.
 Medicinal products\, the administration of which was started during hospitalisation but is also recommended after discharge\, will be listed in the summary table in the recommendation section. ,
-$loinc#10160-0) // 	History of Medication use Narrative
+$loinc#87232-5 ) // 	Medication administration.brief
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
-  * entry 1..
+  * entry 0..
   * entry only Reference(CZ_MedicationDispenseHdr or CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_Medication)  //or MedicationDispense or MedicationAdministration)
 
 
@@ -362,47 +350,16 @@ $loinc#10160-0) // 	History of Medication use Narrative
       The hospital discharge status or disposition of the patient having a hospitalization.,
       $loinc#8650-4 ) //"Hospital discharge disposition Narrative"
   * insert EvaluationSubSectionRules
-// // ---- enable slicing for Admission Evaluation subsections
-// * section[sectionDischargeDetails].section ^slicing.discriminator[0].type = #pattern
-// * section[sectionDischargeDetails].section ^slicing.discriminator[0].path = "code"
-// * section[sectionDischargeDetails].section ^slicing.rules = #open
-
-// // ---- Functional status at admission 0..1
-// * section[sectionDischargeDetails].section contains sectionDischargeFunctionalStatus 0..1
-// * section[sectionDischargeDetails].section[sectionDischargeFunctionalStatus]
-//   * title = "Funkční stav při propuštění"
-//   * code 1..
-//   * code only $CodeableConcept-uv-ips
-//   * code = $loinc#47420-5 (exactly)
-//   * text 1..
-//   * ^short = "Functional status at discharge"
-//   * ^definition = "Capability to perform ADL/IADL and relevant disability information assessed at the time of discharge."
-//   * entry 0..*
-//   * entry only Reference(CZ_ConditionHdr or Observation or ClinicalImpression or DocumentReference or QuestionnaireResponse)
-
-// // ---- Objective findings at admission 0..1
-// * section[sectionDischargeDetails].section contains sectionDischargeObjectiveFindings 0..1
-// * section[sectionDischargeDetails].section[sectionDischargeObjectiveFindings]
-//   * title = "Objektivní nález při propuštění"
-//   * code 1..
-//   * code only $CodeableConcept-uv-ips
-//   * code = $loinc#29545-1 (exactly)
-//   * text 1..
-//   * ^short = "Objective findings at discharge"
-//   * ^definition = "Objective physical findings documented at discharge; may include narrative and references to observations/reports."
-//   * entry 0..*
-//   * entry only Reference(Observation or DiagnosticReport or DocumentReference)
-//  // * insert EvaluationSubSectionRules
 
 // -------------------------------------
 // Hospital discharge physical findings Section 0 … 1
 // -------------------------------------
-* section contains sectionDischargeFindings 0..1
-* section[sectionDischargeFindings]
-  * insert SectionComRules (
-      Hospital discharge physical findings,
-      Hospital discharge physical findings.,
-      $loinc#10184-0 ) //"Hospital discharge physical findings Narrative"
+// * section contains sectionDischargeFindings 0..1
+// * section[sectionDischargeFindings]
+//   * insert SectionComRules (
+//       Hospital discharge physical findings,
+//       Hospital discharge physical findings.,
+//       $loinc#10184-0 ) //"Hospital discharge physical findings Narrative"
 
 /*
 // -------------------------------------
@@ -457,23 +414,21 @@ $loinc#10160-0) // 	History of Medication use Narrative
 */
 
 
-/* * section[sectionProblems] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionProblems] ^extension[0].valueString = "Section"
-* section[sectionProblems] ^short = "Problems Section"
-* section[sectionProblems] ^definition = "The problem section lists and describes clinical problems or conditions currently being monitored for the patient."
-* section[sectionProblems].title 1..
-* section[sectionProblems].code 1..
-* section[sectionProblems].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[sectionProblems].code = http://loinc.org#11450-4 (exactly)
-* section[sectionProblems].text 1..
-* section[sectionProblems].text only Narrative
-* section[sectionProblems].entry 1.. */
+// -------------------------------------
+// Problem List Section 0 … 1
+// covers the active part of the History of Past Illness heading
+// -------------------------------------
 
-/* * section[sectionProblems].entry only Reference($Condition-uv-ips)
-* section[sectionProblems].entry ^short = "Clinical problems or conditions currently being monitored for the patient."
-* section[sectionProblems].entry ^definition = "It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available, or that no relevant problems are known."
-* section[sectionProblems].emptyReason ..0
-* section[sectionProblems].emptyReason ^mustSupport = false */
+* section contains sectionProblemList ..1
+* section[sectionProblemList]
+  * insert SectionComRules (
+    Problem List Section,
+    The IPS derived problem section lists and describes clinical problems or conditions currently being monitored for the patient.,
+    $loinc#11450-4 ) // 11450-4 Problem list - Reported
+  * entry 0..
+  * entry only Reference(ConditionEuHdr)  // do we need another profile ?
+    * ^short = "Conditions the patient suffered in the past."
+    * ^definition = "It contains a description of the conditions the patient suffered in the past."
 
 
 // -------------------------------------
@@ -531,6 +486,54 @@ $loinc#10160-0) // 	History of Medication use Narrative
   * entry only Reference(CZ_FamilyMemberHistoryHdr)
   * entry ^short = "Family History"
   * entry ^definition = "Family History"
+
+// -------------------------------------
+// Use of substances Section
+// -------------------------------------
+* section contains sectionSubstanceUse ..1
+* section[sectionSubstanceUse]
+  * insert SectionComRules (
+    Use of Substances Section,
+    The Use of Substances Section contains a description of the use abuse of substances E.g. tobacco; alcohol; drugs,  
+    TemporaryHDRSystem#substance-use  )   // CODE
+  * entry 0..
+  * entry only Reference(Observation) // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips
+
+// -------------------------------------
+// Alcohol use Section
+// -------------------------------------
+* section contains sectionAlcoholUse ..1
+* section[sectionAlcoholUse]
+  * insert SectionComRules (
+    Alcohol use Section,
+    The Alcohol use Section contains a description of the use abuse of alcohol,  
+    $loinc#11331-6  )   // History of Alcohol use
+  * entry 0..
+  * entry only Reference(Observation) 
+
+// -------------------------------------
+// Tobacco use Section
+// -------------------------------------
+* section contains sectionTobaccoUse ..1
+* section[sectionTobaccoUse]
+  * insert SectionComRules (
+    Tobacco use Section,
+    The Tobacco use Section contains a description of the use abuse of tobacco,  
+    $loinc#11367-0  )   // History of Tobacco use
+  * entry 0..
+  * entry only Reference(Observation) 
+
+// -------------------------------------
+// Drug use Section
+// -------------------------------------
+* section contains sectionDrugUse ..1
+* section[sectionDrugUse]
+  * insert SectionComRules (
+    Drug use Section,
+    The Drug use Section contains a description of the use abuse of drugs,  
+    $loinc#11343-1  )   // History of Other nonmedical drug use
+  * entry 0..
+  * entry only Reference(Observation)
 
 
 // -------------------------------------
@@ -615,19 +618,19 @@ $loinc#10160-0) // 	History of Medication use Narrative
 
 // OR THIS ONE ???
 /*
-* section contains sectionMedicationsAdministered ..1
-* section[sectionMedicationsAdministered] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionMedicationsAdministered] ^extension[0].valueString = "Section"
-* section[sectionMedicationsAdministered] ^short = "Admission Medications"
-* section[sectionMedicationsAdministered].title 1..
-* section[sectionMedicationsAdministered].code 1..
-* section[sectionMedicationsAdministered].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[sectionMedicationsAdministered].code = http://loinc.org#29549-3 (exactly)
-* section[sectionMedicationsAdministered].text 1..
-* section[sectionMedicationsAdministered].entry
-* section[sectionMedicationsAdministered].entry only Reference($MedicationStatement-uv-ips or $MedicationRequest-uv-ips or MedicationAdministration or MedicationDispense)
-* section[sectionMedicationsAdministered].emptyReason ..0
-* section[sectionMedicationsAdministered].emptyReason ^mustSupport = false
+* section contains sectionPharmacotherapyAdministered ..1
+* section[sectionPharmacotherapyAdministered] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionPharmacotherapyAdministered] ^extension[0].valueString = "Section"
+* section[sectionPharmacotherapyAdministered] ^short = "Admission Medications"
+* section[sectionPharmacotherapyAdministered].title 1..
+* section[sectionPharmacotherapyAdministered].code 1..
+* section[sectionPharmacotherapyAdministered].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+* section[sectionPharmacotherapyAdministered].code = http://loinc.org#29549-3 (exactly)
+* section[sectionPharmacotherapyAdministered].text 1..
+* section[sectionPharmacotherapyAdministered].entry
+* section[sectionPharmacotherapyAdministered].entry only Reference($MedicationStatement-uv-ips or $MedicationRequest-uv-ips or MedicationAdministration or MedicationDispense)
+* section[sectionPharmacotherapyAdministered].emptyReason ..0
+* section[sectionPharmacotherapyAdministered].emptyReason ^mustSupport = false
 */
 
 
@@ -796,6 +799,8 @@ $loinc#10160-0) // 	History of Medication use Narrative
         This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
         $loinc#10182-4 )
 
+
+
 // -------------------------------------------------------------
 // Attachmnets section
 // Library of documents and attachments associated to this report
@@ -847,28 +852,6 @@ $loinc#10160-0) // 	History of Medication use Narrative
 
 // // -------------------------------------
 
-
-* section contains sectionEncounters ..1
-* section[sectionEncounters]
-  * insert SectionComRules (
-      Encounters sections,
-      This section lists and describes any healthcare encounters pertinent to the patient’s current health status or historical health history.  ,
-      $loinc#46240-8 )
-  * ^short = "Encounters sections"
-  * ^definition = "This section lists documents and attachments associated to this report"
-
-// An encounter is an interaction\, regardless of the setting\, between a patient and a practitioner who is vested with primary responsibility for diagnosing\, evaluating\, or treating the patient\’s condition. It may include visits\, appointments\, or non-face-to-face interactions. It is also a contact between a patient and a practitioner who has primary responsibility - exercising independent judgment - for assessing and treating the patient at a given contact. From C-CDA specifications.,
-
-
-
-
-/* * section[sectionEncounters] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionEncounters] ^extension[0].valueString = "Section"
-* section[sectionEncounters] ^short = "Encounters sections"
-* section[sectionEncounters] ^definition = "This section lists and describes any healthcare encounters pertinent to the patient’s current health status or historical health history. An encounter is an interaction, regardless of the setting, between a patient and a practitioner who is vested with primary responsibility for diagnosing, evaluating, or treating the patient’s condition. It may include visits, appointments, or non-face-to-face interactions. It is also a contact between a patient and a practitioner who has primary responsibility (exercising independent judgment) for assessing and treating the patient at a given contact.“ (from C-CDA specifications)."
-* section[sectionEncounters].title 1..
-* section[sectionEncounters].code 1..
-* section[sectionEncounters].code = http://loinc.org#46240-8 (exactly) */
 
 
 

@@ -29,10 +29,10 @@ Usage: #definition
 * group[=].element[=].target.comment = "Details in the Composition.section:sectionMedicalDevices.entry of type DeviceUseStatement. See dedicated groups"
 * group[=].element[+].code = #HospitalStay.pharmacotherapy
 * group[=].element[=].display = "A.2.7.5 - Pharmacotherapy"
-* group[=].element[=].target.code = #Composition.section:sectionMedications
+* group[=].element[=].target.code = #Composition.section:sectionPharmacotherapy
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Details in the Composition.section:sectionMedications.entry. See dedicated groups"
+* group[=].element[=].target.comment = "Details in the Composition.section:sectionPharmacotherapy.entry. See dedicated groups"
 * group[=].element[+].code = #HospitalStay.significantResults
 * group[=].element[=].display = "A.2.7.6 - Significant Observation Results"
 * group[=].element[=].target.code = #Composition.section:sectionSignificantResults
@@ -169,7 +169,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #HospitalStay.pharmacotherapy.intendedUse
 * group[=].element[=].display = "A.2.7.5.3 - Intended use"
-* group[=].element[=].target.code = #Composition.section:sectionMedications
+* group[=].element[=].target.code = #Composition.section:sectionPharmacotherapy
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #HospitalStay.pharmacotherapy.productName

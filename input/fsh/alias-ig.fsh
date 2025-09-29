@@ -3,12 +3,12 @@
 // Actor Canonical
 
 //Alias: $server = http://hl7.eu/fhir/laboratory/actor-repos-eu-lab
-Alias: $creatorL1 = http://hl7.cz/fhir/hdr/actor-creator-hdr-L1
-Alias: $consumerL1 = http://hl7.cz/fhir/hdr/actor-consumer-hdr-L1
-Alias: $creatorL2 = http://hl7.cz/fhir/hdr/actor-creator-hdr-L2
-Alias: $consumerL2 = http://hl7.cz/fhir/hdr/actor-consumer-hdr-L2
-Alias: $creatorL3 = http://hl7.cz/fhir/hdr/actor-creator-hdr-L3
-Alias: $consumerL3 = http://hl7.cz/fhir/hdr/actor-consumer-hdr-L3
+Alias: $creatorL1 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L1
+Alias: $consumerL1 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L1
+Alias: $creatorL2 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L2
+Alias: $consumerL2 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L2
+Alias: $creatorL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L3
+Alias: $consumerL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L3
 
 // -- EU BASE
 Alias: $Address-eu = http://hl7.eu/fhir/base/StructureDefinition/Address-eu

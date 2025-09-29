@@ -107,9 +107,9 @@ InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "An example of the organization of a provider"
 * id = "ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krpzs"
 * identifier[=].value = "27520536"
-* type[DRZAR] = $cz-drzar#102 "Nemocnice"
+//* type[DRZAR] = $cz-drzar#102 "Nemocnice"
 * name = "Nemocnice Chrudim"
 * telecom.system = #phone
 * telecom.value = "+420603853227"
@@ -127,12 +127,36 @@ Description: "An example of the organization of a provider"
   * country = "Česká republika"
     * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
+Instance: Organization-L1
+InstanceOf: CZ_OrganizationCore
+Usage: #example
+Description: "An example of the organization of a provider"
+* id = "9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krpzs"
+* identifier[=].value = "27520536"
+//* type[DRZAR] = $cz-drzar#102 "Nemocnice"
+* name = "Nemocnice Chrudim"
+* telecom.system = #phone
+* telecom.value = "+420603853227"
+* telecom.use = #work
+
+* address[+]
+  * use = #work
+  //* type = #both
+  //* text = "Václavská 570, 537 01, Chrudim"
+  * line[+] = "Václavská 570"
+  * line[=].extension[streetName].valueString = "Václavská"
+  * line[=].extension[houseNumber].valueString = "570"
+  * city = "Chrudim"
+  * postalCode = "53701"
+  * country = "Česká republika"
+    * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 Instance: Practitioner-2
 InstanceOf: CZ_PractitionerCore
 Usage: #example
-Description: "Practitioner id(NRZP)=987654321"
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/nrzp"
+Description: "Practitioner id(KRZP)=987654321"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "987654321"
 //* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/clk"
 //* identifier[=].value = "4567891230"
@@ -145,6 +169,33 @@ Description: "Practitioner id(NRZP)=987654321"
 * gender = #female
 * communication[+] = urn:ietf:bcp:47#cs
 * communication[+] = urn:ietf:bcp:47#en
+
+Instance: Practitioner-L1
+InstanceOf: CZ_PractitionerCore
+Usage: #example
+Description: "Practitioner id(KRZP)=987645454"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
+* identifier[=].value = "987645454"
+* name.use = #usual
+* name.prefix = "MUDr."
+* name.family = "Kašková"
+* name.given = "Šárka"
+* name.suffix = "PhD"
+
+* telecom.system = #phone
+* telecom.value = "+420604853784"
+* telecom.use = #work
+
+* address[+]
+  * use = #work
+  * line[+] = "Dlouhá 22"
+  * line[=].extension[streetName].valueString = "Dlouhá"
+  * line[=].extension[houseNumber].valueString = "22"
+  * city = "Pardubice"
+  * postalCode = "53701"
+  * country = "Česká republika"
+    * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+
 
 Instance: Location-1
 InstanceOf: CZ_LocationCore
