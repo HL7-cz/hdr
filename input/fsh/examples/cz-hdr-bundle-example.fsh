@@ -392,7 +392,7 @@ Usage: #example
 * entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab" //ok
 * entry[provenance][=].resource = signature-L1
 * entry[encounter][+].fullUrl = "urn:uuid:f08151d0-a7ad-4a7b-b7b9-97eb1d394ffb" // ok
-* entry[encounter][=].resource = HospitalEncounter-Novak-Petr_L1
+* entry[encounter][=].resource = HospitalEncounter-Novak-Petr-L1
 
 
 Instance: DischargeBundle-Novak-Petr-L1-Signed
