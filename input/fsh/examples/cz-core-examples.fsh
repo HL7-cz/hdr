@@ -563,7 +563,7 @@ Description: "Czech national profile on Signature holds an electronic representa
 * id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
 * target.identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * target.identifier[=].value = "27520536"
-* target.display = "Reference(DischargeBundle-Novak-Petr-L1) Rentgen"
+* target.display = "Reference(DischargeBundle-Novak-Petr-L1)"
 * recorded = "2023-04-05T17:23:07Z"
 * agent.role = $v3-ParticipationType#AUT
 * agent.who = Reference(Practitioner/Practitioner-2) "MUDr. Hana Doktorová"
@@ -584,7 +584,7 @@ Description: "Czech national profile on Signature holds an electronic representa
 * id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eabb"
 * target.identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * target.identifier[=].value = "27520536"
-* target.display = "Reference(DischargeBundle-Novak-Petr) Rentgen"
+* target.display = "Reference(DischargeBundle-Novak-Petr)"
 * recorded = "2023-04-05T17:23:07Z"
 * agent.role = $v3-ParticipationType#AUT
 * agent.who = Reference(Practitioner/Practitioner-2) "MUDr. Hana Doktorová"
