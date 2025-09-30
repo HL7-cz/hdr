@@ -438,7 +438,6 @@ Usage: #example
 * section[sectionAttachments].text.status = #generated
 
 
-
 Instance: DischargeComposition-Novak-Petr_L1_core
 InstanceOf: CZ_CompositionHdr
 Description: "Example Composition for Hospital Discharge Report for patient Novák Petr"
@@ -473,6 +472,12 @@ Usage: #example
   Pacient byl v dobrém stavu propuštěn do domácího ošetření dne 10. 3. 2025. Doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.
   </div>""" // Added required text for cardinality
 /*Přidat sekci presetedForm*/
+* extension[presentedForm].url = "http://hl7.eu/fhir/StructureDefinition/presentedForm"
+* extension[presentedForm].valueAttachment.contentType = #application/pdf
+* extension[presentedForm].valueAttachment.title = "Propuštěcí zpráva Jan Novák.pdf"
+* extension[presentedForm].valueAttachment.creation = "2025-09-30T14:10:00+02:00"
+* extension[presentedForm].valueAttachment.data = "" // base64 binary data of the PDF document
+
 //TODO popsat že to je něco jiného než presented form
 * section[sectionAttachments].title = "Přílohy"
 * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
