@@ -138,7 +138,7 @@ Description: "Czech HDR - example of encounter with emergency priority"
 * location[2].period.end = "2025-03-10T08:00:00+01:00"
 
 
-Instance: HospitalEncounter-Novak-Petr_L1
+Instance: HospitalEncounter-Novak-Petr-L1
 InstanceOf: CZ_EncounterHdr
 Usage: #example
 Title: "CZ-Encounter-HDR Example of encounter for Novak Petr"
