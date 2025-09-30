@@ -77,7 +77,6 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionPhysicalExamination] insert OblCreator(#SHALL:able-to-populate,L2)
 * section[sectionFunctionalStatus] insert OblCreator(#SHALL:able-to-populate,L2)
 * section[sectionDischargeDetails] insert OblCreator(#SHALL:able-to-populate,L2)    //A.2.7.1 - Objective findings
-//* section[sectionDischargeFindings] insert OblCreator(#SHALL:able-to-populate,L2)
 * section[sectionPatientHx] insert OblCreator(#SHALL:able-to-populate,L2)
 * section[sectionFamilyHistory] insert OblCreator(#SHALL:able-to-populate,L2)
 * section[sectionSocialHistory] insert OblCreator(#SHALL:able-to-populate,L2)
@@ -129,8 +128,6 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionFunctionalStatus].text insert OblConsumer(#SHALL:display,L2)
 * section[sectionDischargeDetails] insert OblConsumer(#SHALL:display,L2)    //A.2.7.1 - Objective findings
 * section[sectionDischargeDetails].text insert OblConsumer(#SHALL:display,L2)
-// * section[sectionDischargeFindings] insert OblConsumer(#SHALL:display,L2)
-// * section[sectionDischargeFindings].text insert OblConsumer(#SHALL:display,L2)
 * section[sectionPatientHx] insert OblConsumer(#SHALL:display,L2)
 * section[sectionPatientHx].text insert OblConsumer(#SHALL:display,L2)
 * section[sectionFamilyHistory] insert OblConsumer(#SHALL:display,L2)
