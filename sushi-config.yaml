@@ -444,6 +444,7 @@ groups:
     name:  Obligations
     description: Obligations used to describe the HDR functional requirements for the specified data elements. Informative for this version of the guide.
     resources:
+      - StructureDefinition/cz-address-obl-hdr
       - StructureDefinition/cz-patient-obl-hdr
       - StructureDefinition/cz-encounter-obl-hdr
       - StructureDefinition/cz-attachment-obl-hdr

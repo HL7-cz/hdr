@@ -8,7 +8,7 @@ Description: "Profile for Medication Obligations in the Czech Republic Health Da
 
 
 // HospitalStay.pharmacotherapy.productCode (A.2.7.5.2 - Code)	is equivalent to	Medication.code
-// HospitalStay.pharmacotherapy.intendedUse (A.2.7.5.3 - Intended use)	is equivalent to	Composition.section:sectionMedications
+// HospitalStay.pharmacotherapy.intendedUse (A.2.7.5.3 - Intended use)	is equivalent to	Composition.section:sectionPharmacotherapy
 // HospitalStay.pharmacotherapy.productName (A.2.7.5.4 - Brand name)	is equivalent to	Medication.extension:productName
 // HospitalStay.pharmacotherapy.activeIngredient (A.2.7.5.5 - Active ingredient list)	is equivalent to	Medication.ingredient.itemCodeableConcept	
 // HospitalStay.pharmacotherapy.strength (A.2.7.5.6 - Strength)	is equivalent to	Medication.ingredient.strength

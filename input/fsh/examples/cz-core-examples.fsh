@@ -107,9 +107,9 @@ InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "An example of the organization of a provider"
 * id = "ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krpzs"
 * identifier[=].value = "27520536"
-* type[DRZAR] = $cz-drzar#102 "Nemocnice"
+//* type[DRZAR] = $cz-drzar#102 "Nemocnice"
 * name = "Nemocnice Chrudim"
 * telecom.system = #phone
 * telecom.value = "+420603853227"
@@ -127,15 +127,30 @@ Description: "An example of the organization of a provider"
   * country = "Česká republika"
     * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
+Instance: Organization-L1
+InstanceOf: CZ_OrganizationCore
+Usage: #example
+Description: "An example of the organization of a provider"
+* id = "9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krpzs"
+* identifier[=].value = "2752056100000020579"  //Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice
+* name = "Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice"
+* telecom.system = #phone
+* telecom.value = "+420603853227"
+* address[+]
+  * use = #work
+  * line[+] = "Václavská 570"
+  * city = "Chrudim"
+  * postalCode = "53701"
+  * country = "Česká republika"
+    * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 Instance: Practitioner-2
 InstanceOf: CZ_PractitionerCore
 Usage: #example
-Description: "Practitioner id(NRZP)=987654321"
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/nrzp"
+Description: "Practitioner id(KRZP)=987654321"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "987654321"
-//* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/clk"
-//* identifier[=].value = "4567891230"
 * name.use = #usual
 * name.prefix = "MUDr."
 * name.family = "Kašková"
@@ -145,6 +160,33 @@ Description: "Practitioner id(NRZP)=987654321"
 * gender = #female
 * communication[+] = urn:ietf:bcp:47#cs
 * communication[+] = urn:ietf:bcp:47#en
+
+Instance: Practitioner-L1
+InstanceOf: CZ_PractitionerCore
+Usage: #example
+Description: "Practitioner id(KRZP)=987645454"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
+* identifier[=].value = "987645454"
+* name.use = #usual
+* name.prefix = "MUDr."
+* name.family = "Kašková"
+* name.given = "Šárka"
+* name.suffix = "PhD"
+
+* telecom.system = #phone
+* telecom.value = "+420604853784"
+* telecom.use = #work
+
+* address[+]
+  * use = #work
+  * line[+] = "Dlouhá 22"
+  * line[=].extension[streetName].valueString = "Dlouhá"
+  * line[=].extension[houseNumber].valueString = "22"
+  * city = "Pardubice"
+  * postalCode = "53701"
+  * country = "Česká republika"
+    * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+
 
 Instance: Location-1
 InstanceOf: CZ_LocationCore
@@ -282,6 +324,46 @@ Description: "practitioner's detail"
 * specialty = $sct#419192003 "Internal medicine"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ambulance interního lékařství, MUDr. Jiří Zdvořilý</div>"
 * text.status = #generated
+//-----------------------------------------------------
+Instance: cz-practitionerRole-L1
+InstanceOf: CZ_PractitionerRoleCore
+Title: "Practitioner Role for L1 documentr"
+Description: "Author of HDR document (phisician MUDr.Ivan Anděl)"
+Usage: #example
+* id = "69d34ceb-b556-4f75-9e4c-9184fe8a10c5"
+* specialty = $sct#309343006 "Physician"
+* practitioner = Reference(urn:uuid:e234a53a-4e0d-4fb8-9403-e0e324a50f64) // ok
+* organization = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1) // ok
+//-----------------------------------------------------
+Instance: Patient-Novak-Petr-L1
+InstanceOf: CZ_PatientCore
+Usage: #example
+Description: "Example of patient Petr Novak with identification by czech national identifiers (RID, RCIS), registrating healthcare provider and contact information"
+
+* id = "48a9d440-4194-42c1-87ad-b5a39020a4d0"
+//* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core"
+* identifier[+]
+  * system = $cz-patient-rid
+  * value = "1597778923"
+* name.text = "Ing. Petr Novák, Ph.D."
+* name.family = "Novák"
+* name.given = "Petr"
+* telecom[+].system = #phone
+* telecom[=].value = "+420777111222"
+* telecom[+].system = #email
+* telecom[=].value = "novak@example.com"
+* gender = #male
+* birthDate = "1985-06-15"
+* address[+]
+  * use = #home
+  //* type = #physical
+  * text = "Pavlovova 1424/11, 568 02 Svitavy - Předměstí"
+  * line[+] = "Pavlovova 1424/11"
+  * city = "Svitavy - Předměstí"
+  * postalCode = "56802"
+  * country = "Česko"
+    * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+
 
 //-----------------------------------------------------
 Instance: Patient-Novak-Petr
@@ -401,6 +483,19 @@ Description: "Participant Referrer HDR"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">MUDr. Ivan Anděl, interní lékař, Nemocnice Chrudim, Václavská 570, 537 01 Chrudim, tel: +420 603 777 227</div>"
 * text.status = #generated
 
+//------------------------------------------------------
+Instance: Practitioner-Author-L1
+InstanceOf: CZ_PractitionerCore
+Usage: #example
+Description: "Participant Referrer HDR"
+
+* id = "e234a53a-4e0d-4fb8-9403-e0e324a50f64"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
+* identifier[=].value = "123456789"
+* name.text = "MUDr. Ivan Anděl"
+* telecom[+].system = #phone
+* telecom[=].value = "+420603777227"
+
 //-----------------------------------------------------
 Instance: Practitioner-Author-detail
 InstanceOf: CZ_PractitionerRoleCore
@@ -468,7 +563,7 @@ Description: "Czech national profile on Signature holds an electronic representa
 * id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
 * target.identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * target.identifier[=].value = "27520536"
-* target.display = "Reference(DischargeBundle-Novak-Petr-L1) Rentgen"
+* target.display = "Reference(DischargeBundle-Novak-Petr-L1)"
 * recorded = "2023-04-05T17:23:07Z"
 * agent.role = $v3-ParticipationType#AUT
 * agent.who = Reference(Practitioner/Practitioner-2) "MUDr. Hana Doktorová"
@@ -489,7 +584,7 @@ Description: "Czech national profile on Signature holds an electronic representa
 * id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eabb"
 * target.identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * target.identifier[=].value = "27520536"
-* target.display = "Reference(DischargeBundle-Novak-Petr) Rentgen"
+* target.display = "Reference(DischargeBundle-Novak-Petr)"
 * recorded = "2023-04-05T17:23:07Z"
 * agent.role = $v3-ParticipationType#AUT
 * agent.who = Reference(Practitioner/Practitioner-2) "MUDr. Hana Doktorová"

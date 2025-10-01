@@ -3,6 +3,7 @@ Id: LogPresentedFormCz
 Title: "A.3 - Vizuální podoba dokumentu"
 Description: """Nemocniční propouštěcí zpráva - čitelná lidským okem, je požadován PDF formát. Obsahuje informace o průběhu hospitalizace v rozsahu vydané zprávy."""
 
+* zobrazitelnaFormadokumentu 1..* Base "A.3 - Vizuální podoba dokumentu" """Vizuální podoba dokumentu"""
 * typObsahu 0..1 CodeableConcept "A.3.1 Typ obsahu" """Typ obsahu - je  požadován MIME typ"""
 * jazyk 0..1 CodeableConcept "A.3.2 Jazyk obsahu" """Jazyk obsahu - je požadována hodnata z HL7 valueset Languages"""
 * data 1..1 base64Binary "A.3.3 Data obsahu" """Data v base64"""

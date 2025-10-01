@@ -55,6 +55,13 @@ RuleSet: OpenReferenceSlicePerTypeRules (short, def)
 * ^short = "{short}"
 * ^definition = "{def}"
 
+RuleSet: OpenReferenceSlicePerProfileRules (short, def)
+* ^slicing.discriminator[0].type = #profile
+* ^slicing.discriminator[0].path = "resolve()"
+* ^slicing.ordered = false
+* ^slicing.rules = #open
+* ^short = "{short}"
+* ^definition = "{def}"
 
 RuleSet: SectionEntrySliceComRules (short, def)
 * entry ^slicing.discriminator[0].type = #type
