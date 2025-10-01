@@ -133,7 +133,7 @@ Usage: #example
 Description: "An example of the organization of a provider"
 * id = "9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krpzs"
-* identifier[=].value = "2752056100000020579"  //Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice
+* identifier[=].value = "27520561"  //Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice IČ
 * name = "Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice"
 * telecom.system = #phone
 * telecom.value = "+420603853227"
