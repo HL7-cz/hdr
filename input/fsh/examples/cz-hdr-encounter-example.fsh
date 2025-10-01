@@ -141,8 +141,8 @@ Description: "Czech HDR - example of encounter with emergency priority"
 Instance: HospitalEncounter-Novak-Petr-L1
 InstanceOf: CZ_EncounterHdr
 Usage: #example
-Title: "CZ-Encounter-HDR Example of encounter for Novak Petr"
-Description: "Czech HDR - example of encounter for Novak Petr"
+Title: "CZ-Encounter-HDR  L1 Example of encounter for Novak Petr"
+Description: "Czech HDR – a minimalist example of a encounter for Petr Novák for the document L1 HDR"
 * id = "f08151d0-a7ad-4a7b-b7b9-97eb1d394ffb"
 * status = #finished
 * class.code = #IMP 
