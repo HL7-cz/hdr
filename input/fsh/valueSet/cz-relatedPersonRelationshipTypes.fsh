@@ -1,6 +1,6 @@
-ValueSet: relatedPersonRelationshipTypesHDRVS
+ValueSet: RelatedPersonRelationshipTypesHDR
 Id: relatedPersonRelationshipTypes-eu-hdr
-Title: ""
+Title: "Related Person Relationship Types (HDR)"
 Description: """HDR related person relationship types value set."""
 * insert SetFmmandStatusRule (1, draft)
 * ^experimental = false

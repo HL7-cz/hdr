@@ -4,4 +4,4 @@ Id: cz-relatedPerson-hdr
 Title: "Related Person: HDR (CZ)"
 Description: "Czech profile for related person."
 
-* relationship.coding.code from relatedPersonRelationshipTypesHDRVS (preferred) 
+* relationship.coding.code from RelatedPersonRelationshipTypesHDR (preferred) 
