@@ -24,14 +24,14 @@ Byli specifikováni aktéři ve těchto rolích:
 
 | Role                                                 | Popis                                                                                                                      |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| [Tvůrce úrovně L1](ActorDefinition-actor-creator-L1.html)     | Jedná se o aktéra úrovně L1, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
-| [Konzument úrovně L1](ActorDefinition-actor-consumer-L1.html) | Tento aktér představuje systém úrovně L1, který přijatou nebo načtenou zprávu používá.                                                  |
+| [Tvůrce úrovně L1](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-actor-L1.html)     | Jedná se o aktéra úrovně L1, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
+| [Konzument úrovně L1](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-consumer-L1.html) | Tento aktér představuje systém úrovně L1, který přijatou nebo načtenou zprávu používá.                                                  |
  |
-| [Tvůrce úrovně L2](ActorDefinition-actor-creator-L2.html)     | Jedná se o aktéra úrovně L2, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
-| [Konzument úrovně L2](ActorDefinition-actor-consumer-L2.html) | Tento aktér představuje systém úrovně L2, který přijatou nebo načtenou zprávu používá.                                                  |
+| [Tvůrce úrovně L2](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-creator-L2.html)     | Jedná se o aktéra úrovně L2, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
+| [Konzument úrovně L2](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-consumer-L2.html) | Tento aktér představuje systém úrovně L2, který přijatou nebo načtenou zprávu používá.                                                  |
  |
-| [Tvůrce úrovně L3](ActorDefinition-actor-creator-L3.html)     | Jedná se o aktéra úrovně L3, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
-| [Konzument  úrovně L3](ActorDefinition-actor-consumer-L3.html) | Tento aktér představuje systém úrovně L3, který přijatou nebo načtenou zprávu používá.                                                  |
+| [Tvůrce úrovně L3](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-creator-L3.html)     | Jedná se o aktéra úrovně L3, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
+| [Konzument  úrovně L3](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-consumer-L3.html) | Tento aktér představuje systém úrovně L3, který přijatou nebo načtenou zprávu používá.                                                  |
 
 <p>{% include hdr-Actors-cs.svg %}</p>
 
