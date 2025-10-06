@@ -7,5 +7,6 @@ Description: "ValueSet for provision codes in the Czech HDR project, using ICD-1
 * ^version = "1.0.0"
 * ^experimental = false
 * ^publisher = "HL7 Czech Republic"
+* insert SNOMEDCopyrightForVS
 * include codes from system $sct
 * include codes from system $orpha
