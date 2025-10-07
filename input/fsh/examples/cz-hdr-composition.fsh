@@ -47,7 +47,7 @@ Usage: #example
 * section[sectionAlert].code.coding[0].system = $loinc
 
 * section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1 
-* section[sectionAlert].code.coding[0].display = "Alerts"
+* section[sectionAlert].code.coding[0].display = "Alert"
 * section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>" 
 
 * section[sectionAlert].text.status = #generated
@@ -525,7 +525,7 @@ Usage: #example
 * section[sectionAlert].title = "Varování"
 * section[sectionAlert].code.coding[0].system = $loinc
 * section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1 
-* section[sectionAlert].code.coding[0].display = "Alerts"
+* section[sectionAlert].code.coding[0].display = "Alert"
 * section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>" 
 * section[sectionAlert].text.status = #generated
 * section[sectionAlert].entry[0] = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e)
