@@ -16,4 +16,4 @@ Description: """This profile constrains the Consent resource for the purpose of 
   * ^binding.valueSet = "https://hl7.cz/fhir/hdr/ValueSet/cz-provision-code"
   * ^binding.strength = #extensible
 
-
+// TODO: číselníky a význam jednotlivých elementů se budou muset dořešit s kliniky a právníky
