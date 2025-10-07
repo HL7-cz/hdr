@@ -45,9 +45,11 @@ Usage: #example
 // Sekce Varování
 * section[sectionAlert].title = "Varování"
 * section[sectionAlert].code.coding[0].system = $loinc
-* section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1
-* section[sectionAlert].code.coding[0].display = "Health concerns Document"
-* section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>"
+
+* section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1 
+* section[sectionAlert].code.coding[0].display = "Alert"
+* section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>" 
+
 * section[sectionAlert].text.status = #generated
 * section[sectionAlert].entry[0] = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e)
 
@@ -56,7 +58,7 @@ Usage: #example
 * section[sectionDiagnosticSummary].title = "Diagnostický souhrn"
 * section[sectionDiagnosticSummary].code.coding[0].system = $loinc
 * section[sectionDiagnosticSummary].code.coding[0].code = #11535-2 // Problem list
-* section[sectionDiagnosticSummary].code.coding[0].display = "Problem list - Reported"
+* section[sectionDiagnosticSummary].code.coding[0].display = "Hospital discharge diagnosis note"
 * section[sectionDiagnosticSummary].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>K40.9 – Inguinální kýla, nespecifikovaná </p>
@@ -103,7 +105,7 @@ Usage: #example
 * section[sectionMedicalDevices].title = "Zdravotní pomůcky a implantáty"
 * section[sectionMedicalDevices].code.coding[0].system = $loinc
 * section[sectionMedicalDevices].code.coding[0].code = #57080-4 // Historie implantátů
-* section[sectionMedicalDevices].code.coding[0].display = "History of medical device use"
+* section[sectionMedicalDevices].code.coding[0].display = "Implanted medical device Narrative"
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacientovi byl implantován kardiostimulátor Medtronic model W1DR01.</p></div>" // Added required text for cardinality
 * section[sectionMedicalDevices].text.status = #generated
 * section[sectionMedicalDevices].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001f) // Example reference to a medical device
@@ -125,7 +127,7 @@ Usage: #example
 * section[sectionPhysicalFindings].title = "Objektivní nález při propuštění"
 * section[sectionPhysicalFindings].code.coding[0].system = $loinc
 * section[sectionPhysicalFindings].code.coding[0].code = #29545-1 // Discharge findings
-* section[sectionPhysicalFindings].code.coding[0].display = "Physical exam by body areas"
+* section[sectionPhysicalFindings].code.coding[0].display = "Physical findings note"
 * section[sectionPhysicalFindings].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Objektivní nález při přijetí:</p>
@@ -222,7 +224,7 @@ Usage: #example
 * section[sectionPharmacotherapy].title = "Medikace"
 * section[sectionPharmacotherapy].code.coding[+].system = $loinc
 * section[sectionPharmacotherapy].code.coding[=].code = #87232-5
-* section[sectionPharmacotherapy].code.coding[=].display = "History of Medication use Narrative"
+* section[sectionPharmacotherapy].code.coding[=].display = "Medication administration.brief"
 * section[sectionPharmacotherapy].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Medikace při propuštění</p>
@@ -339,7 +341,7 @@ Usage: #example
 * section[sectionAdmissionEvaluation].title = "Stav při přijetí"
 * section[sectionAdmissionEvaluation].code.coding[0].system = $loinc
 * section[sectionAdmissionEvaluation].code.coding[0].code = #67851-6 // Corrected code assignment
-* section[sectionAdmissionEvaluation].code.coding[0].display = "Hospital Admission evaluation note"
+* section[sectionAdmissionEvaluation].code.coding[0].display = "Admission evaluation note"
 * section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient byl přijat na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Při příjmu byl pacient v dobrém stavu, vitální funkce stabilní. Při fyzikálním vyšetření bylo zjištěno bolestivé zduření v oblasti pravého tříselného kanálu, bez známek zánětu nebo infekce. Laboratorní vyšetření ukázalo normální hodnoty krevního obrazu a biochemie, včetně TSH v normálním rozmezí. Pacient byl stabilní, bez známek dehydratace nebo hypovolemie. Byla zahájena předoperační příprava včetně interního vyšetření a laboratorních testů. Pacient byl informován o nutnosti chirurgického zákroku a souhlasil s ním. </div>" // Added required text for cardinality
 * section[sectionAdmissionEvaluation].text.status = #additional
 * section[sectionAdmissionEvaluation].section[0].title = "Vital sings"
@@ -354,14 +356,14 @@ Usage: #example
 * section[sectionAdmissionEvaluation].section[=].entry[5] = Reference(urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a) // Corrected Reference to include the resource type
 * section[sectionAdmissionEvaluation].section[=].entry[6] = Reference(urn:uuid:f0b20060-c4a8-4a74-b12a-6c8f0b2d4e3a) // Corrected Reference to include the resource type
 
-* section[sectionAttachments].title = "Přílohy"
-* section[sectionAttachments].code.coding[0].system = "http://loinc.org"
-* section[sectionAttachments].code.coding[0].code = #77599-9
-* section[sectionAttachments].code.coding[0].display = "Additional documentation"
-* section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
-* section[sectionAttachments].entry[1] = Reference(urn:uuid:d9ad8a22-a12b-48db-938c-4066a3a0617a)
-* section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
-* section[sectionAttachments].text.status = #generated
+// * section[sectionAttachments].title = "Přílohy"
+// * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
+// * section[sectionAttachments].code.coding[0].code = #77599-9   
+// * section[sectionAttachments].code.coding[0].display = "Additional documentation"
+// * section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
+// * section[sectionAttachments].entry[1] = Reference(urn:uuid:d9ad8a22-a12b-48db-938c-4066a3a0617a)
+// * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
+// * section[sectionAttachments].text.status = #generated
 
 
 
@@ -428,14 +430,14 @@ Usage: #example
 * section[sectionHospitalCourse].text.status = #additional //Additional text status for generated narrative /HONza
 * section[sectionHospitalCourse].entry[0] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620) // encounter
 
-//TODO popsat že to je něco jiného než presented form
-* section[sectionAttachments].title = "Přílohy"
-* section[sectionAttachments].code.coding[0].system = "http://loinc.org"
-* section[sectionAttachments].code.coding[0].code = #77599-9
-* section[sectionAttachments].code.coding[0].display = "Additional documentation"
-* section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
-* section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
-* section[sectionAttachments].text.status = #generated
+// //TODO popsat že to je něco jiného než presented form
+// * section[sectionAttachments].title = "Přílohy"
+// * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
+// * section[sectionAttachments].code.coding[0].code = #77599-9   
+// * section[sectionAttachments].code.coding[0].display = "Additional documentation"
+// * section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
+// * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
+// * section[sectionAttachments].text.status = #generated
 
 
 Instance: DischargeComposition-Novak-Petr_L1_core
@@ -468,8 +470,8 @@ Usage: #example
   V rámci hospitalizace byla u pacienta sledována substituční léčba hypotyreózy (Euthyrox 75 µg denně), bez nutnosti úpravy dávkování. Hodnota TSH při přijetí v normě.
   Pacient byl v dobrém stavu propuštěn do domácího ošetření dne 10. 3. 2025. Doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.
   </div>""" // Added required text for cardinality
-* extension[presentedForm].valueAttachment = cz-pdfhdr-example
 /*
+* extension[presentedForm].valueAttachment = cz-pdfhdr-example
 * extension[presentedForm].url = "http://hl7.eu/fhir/StructureDefinition/presentedForm"
 * extension[presentedForm].valueAttachment.contentType = #application/pdf
 * extension[presentedForm].valueAttachment.title = "Propuštěcí zpráva Jan Novák.pdf"
@@ -522,9 +524,9 @@ Usage: #example
 // Sekce Varování
 * section[sectionAlert].title = "Varování"
 * section[sectionAlert].code.coding[0].system = $loinc
-* section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1
-* section[sectionAlert].code.coding[0].display = "Health concerns Document"
-* section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>"
+* section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1 
+* section[sectionAlert].code.coding[0].display = "Alert"
+* section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>" 
 * section[sectionAlert].text.status = #generated
 * section[sectionAlert].entry[0] = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e)
 
@@ -533,7 +535,7 @@ Usage: #example
 * section[sectionDiagnosticSummary].title = "Diagnostický souhrn"
 * section[sectionDiagnosticSummary].code.coding[0].system = $loinc
 * section[sectionDiagnosticSummary].code.coding[0].code = #11535-2 // Problem list
-* section[sectionDiagnosticSummary].code.coding[0].display = "Problem list - Reported"
+* section[sectionDiagnosticSummary].code.coding[0].display = "Hospital discharge diagnosis note"
 * section[sectionDiagnosticSummary].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>K40.9 – Inguinální kýla, nespecifikovaná </p>
@@ -580,7 +582,7 @@ Usage: #example
 * section[sectionMedicalDevices].title = "Zdravotní pomůcky a implantáty"
 * section[sectionMedicalDevices].code.coding[0].system = $loinc
 * section[sectionMedicalDevices].code.coding[0].code = #57080-4 // Historie implantátů
-* section[sectionMedicalDevices].code.coding[0].display = "History of medical device use"
+* section[sectionMedicalDevices].code.coding[0].display = "Implanted medical device Narrative"
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacientovi byl implantován kardiostimulátor Medtronic model W1DR01.</p></div>" // Added required text for cardinality
 * section[sectionMedicalDevices].text.status = #generated
 * section[sectionMedicalDevices].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001f) // Example reference to a medical device
@@ -697,7 +699,7 @@ Usage: #example
 * section[sectionPharmacotherapy].title = "Medikace"
 * section[sectionPharmacotherapy].code.coding[+].system = $loinc
 * section[sectionPharmacotherapy].code.coding[=].code = #87232-5
-* section[sectionPharmacotherapy].code.coding[=].display = "History of Medication use Narrative"
+* section[sectionPharmacotherapy].code.coding[=].display = "Medication administration.brief"
 * section[sectionPharmacotherapy].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Medikace při propuštění</p>
@@ -814,7 +816,7 @@ Usage: #example
 * section[sectionAdmissionEvaluation].title = "Stav při přijetí"
 * section[sectionAdmissionEvaluation].code.coding[0].system = $loinc
 * section[sectionAdmissionEvaluation].code.coding[0].code = #67851-6 // Corrected code assignment
-* section[sectionAdmissionEvaluation].code.coding[0].display = "Hospital Admission evaluation note"
+* section[sectionAdmissionEvaluation].code.coding[0].display = "Admission evaluation note"
 * section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient byl přijat na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Při příjmu byl pacient v dobrém stavu, vitální funkce stabilní. Při fyzikálním vyšetření bylo zjištěno bolestivé zduření v oblasti pravého tříselného kanálu, bez známek zánětu nebo infekce. Laboratorní vyšetření ukázalo normální hodnoty krevního obrazu a biochemie, včetně TSH v normálním rozmezí. Pacient byl stabilní, bez známek dehydratace nebo hypovolemie. Byla zahájena předoperační příprava včetně interního vyšetření a laboratorních testů. Pacient byl informován o nutnosti chirurgického zákroku a souhlasil s ním. </div>" // Added required text for cardinality
 * section[sectionAdmissionEvaluation].text.status = #additional
 /* section[sectionAdmissionEvaluation].section[0].title = "Vital sings"
@@ -907,11 +909,11 @@ Usage: #example
 * section[sectionAdmissionEvaluation].section[sectionVitalSigns].entry[0] = Reference(urn:uuid:8d2aea77-f576-4d0f-9508-537359aa44d6)
 
 
-* section[sectionAttachments].title = "Přílohy"
-* section[sectionAttachments].code.coding[0].system = "http://loinc.org"
-* section[sectionAttachments].code.coding[0].code = #77599-9
-* section[sectionAttachments].code.coding[0].display = "Additional documentation"
-* section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
-* section[sectionAttachments].entry[1] = Reference(DischargeDocumentHTML)
-* section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
-* section[sectionAttachments].text.status = #generated
+// * section[sectionAttachments].title = "Přílohy"
+// * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
+// * section[sectionAttachments].code.coding[0].code = #77599-9   
+// * section[sectionAttachments].code.coding[0].display = "Additional documentation"
+// * section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
+// * section[sectionAttachments].entry[1] = Reference(DischargeDocumentHTML)
+// * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
+// * section[sectionAttachments].text.status = #generated
