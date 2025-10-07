@@ -430,16 +430,6 @@ menu:
 #- ConceptMap/medicationSummary2FHIR-cz-hdr
 #*/
 groups:
-  Actors:
-    name:  Actors 
-    description: Actors used to describe the HDR functional requirements for the specified data elements. Informative for this version of the guide.
-    resources:
-      - ActorDefinition/actor-consumer-hdr-L1
-      - ActorDefinition/actor-creator-hdr-L1
-      - ActorDefinition/actor-consumer-hdr-L2
-      - ActorDefinition/actor-creator-hdr-L2
-      - ActorDefinition/actor-consumer-hdr-L3
-      - ActorDefinition/actor-creator-hdr-L3
   obligations:
     name:  Obligations
     description: Obligations used to describe the HDR functional requirements for the specified data elements. Informative for this version of the guide.
