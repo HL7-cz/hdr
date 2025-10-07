@@ -371,7 +371,7 @@ Usage: #example
 // 2. Bundle: Hospital Discharge Report - Novák Petr - L1
 Instance: DischargeBundle-Novak-Petr-L1-core
 InstanceOf: CZ_BundleHdr
-Description: "Example Bundle L1 core for Hospital Discharge Report for patient Novák Petr"
+Description: "Example of a minimalist L1 package for the discharge report of patient Novák Petr from the hospital"
 Usage: #example
 * id = "1c794aff-876a-41bf-9401-fa8fee3b1e57"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -395,20 +395,6 @@ Usage: #example
 * entry[encounter][=].resource = HospitalEncounter-Novak-Petr-L1
 
 
-Instance: DischargeBundle-Novak-Petr-L1-Signed
-InstanceOf: CZ_SignedBundle
-Title: "Hospital Discharge Report - Novák Petr (Signed Bundle)"
-Description: "Example Signed Bundle for Hospital Discharge Report for patient Novák Petr"
-Usage: #example
-* identifier[+].system = "http://example.org"
-* identifier[=].value = "CZEXIR0001"
-* type = #collection
-* timestamp = "2025-06-20T12:02:00+01:00"
 
-* entry[bundle].fullUrl = "urn:uuid:1c794aff-876a-41bf-9401-fa8fee3b1e57"
-* entry[bundle].resource = DischargeBundle-Novak-Petr-L1
-
-* entry[provenance].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
-* entry[provenance].resource = signature-L1
 
 

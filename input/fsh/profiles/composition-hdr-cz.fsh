@@ -805,7 +805,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // Attachmnets section
 // Library of documents and attachments associated to this report
 // -------------------------------------------------------------
-* section contains sectionAttachments 1..1
+* section contains sectionAttachments 0..1
 * section[sectionAttachments]
   * insert SectionComRules (
       Library of attachments.,
