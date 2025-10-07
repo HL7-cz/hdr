@@ -46,7 +46,7 @@ Usage: #example
 * section[sectionAlert].title = "Varování"
 * section[sectionAlert].code.coding[0].system = $loinc
 * section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1 
-* section[sectionAlert].code.coding[0].display = "Health concerns Document"
+* section[sectionAlert].code.coding[0].display = "Alerts"
 * section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>" 
 * section[sectionAlert].text.status = #generated
 * section[sectionAlert].entry[0] = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e) 
@@ -56,7 +56,7 @@ Usage: #example
 * section[sectionDiagnosticSummary].title = "Diagnostický souhrn"
 * section[sectionDiagnosticSummary].code.coding[0].system = $loinc
 * section[sectionDiagnosticSummary].code.coding[0].code = #11535-2 // Problem list
-* section[sectionDiagnosticSummary].code.coding[0].display = "Problem list - Reported"
+* section[sectionDiagnosticSummary].code.coding[0].display = "Hospital discharge diagnosis note"
 * section[sectionDiagnosticSummary].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>K40.9 – Inguinální kýla, nespecifikovaná </p>
@@ -103,7 +103,7 @@ Usage: #example
 * section[sectionMedicalDevices].title = "Zdravotní pomůcky a implantáty"
 * section[sectionMedicalDevices].code.coding[0].system = $loinc
 * section[sectionMedicalDevices].code.coding[0].code = #57080-4 // Historie implantátů
-* section[sectionMedicalDevices].code.coding[0].display = "History of medical device use"
+* section[sectionMedicalDevices].code.coding[0].display = "Implanted medical device Narrative"
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacientovi byl implantován kardiostimulátor Medtronic model W1DR01.</p></div>" // Added required text for cardinality
 * section[sectionMedicalDevices].text.status = #generated
 * section[sectionMedicalDevices].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001f) // Example reference to a medical device
@@ -125,7 +125,7 @@ Usage: #example
 * section[sectionPhysicalFindings].title = "Objektivní nález při propuštění"
 * section[sectionPhysicalFindings].code.coding[0].system = $loinc
 * section[sectionPhysicalFindings].code.coding[0].code = #29545-1 // Discharge findings
-* section[sectionPhysicalFindings].code.coding[0].display = "Physical exam by body areas"
+* section[sectionPhysicalFindings].code.coding[0].display = "Physical findings note"
 * section[sectionPhysicalFindings].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Objektivní nález při přijetí:</p>
@@ -222,7 +222,7 @@ Usage: #example
 * section[sectionPharmacotherapy].title = "Medikace"
 * section[sectionPharmacotherapy].code.coding[+].system = $loinc
 * section[sectionPharmacotherapy].code.coding[=].code = #87232-5
-* section[sectionPharmacotherapy].code.coding[=].display = "History of Medication use Narrative"
+* section[sectionPharmacotherapy].code.coding[=].display = "Medication administration.brief"
 * section[sectionPharmacotherapy].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Medikace při propuštění</p>
@@ -339,7 +339,7 @@ Usage: #example
 * section[sectionAdmissionEvaluation].title = "Stav při přijetí"
 * section[sectionAdmissionEvaluation].code.coding[0].system = $loinc
 * section[sectionAdmissionEvaluation].code.coding[0].code = #67851-6 // Corrected code assignment
-* section[sectionAdmissionEvaluation].code.coding[0].display = "Hospital Admission evaluation note"
+* section[sectionAdmissionEvaluation].code.coding[0].display = "Admission evaluation note"
 * section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient byl přijat na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Při příjmu byl pacient v dobrém stavu, vitální funkce stabilní. Při fyzikálním vyšetření bylo zjištěno bolestivé zduření v oblasti pravého tříselného kanálu, bez známek zánětu nebo infekce. Laboratorní vyšetření ukázalo normální hodnoty krevního obrazu a biochemie, včetně TSH v normálním rozmezí. Pacient byl stabilní, bez známek dehydratace nebo hypovolemie. Byla zahájena předoperační příprava včetně interního vyšetření a laboratorních testů. Pacient byl informován o nutnosti chirurgického zákroku a souhlasil s ním. </div>" // Added required text for cardinality
 * section[sectionAdmissionEvaluation].text.status = #additional
 * section[sectionAdmissionEvaluation].section[0].title = "Vital sings"
@@ -523,7 +523,7 @@ Usage: #example
 * section[sectionAlert].title = "Varování"
 * section[sectionAlert].code.coding[0].system = $loinc
 * section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1 
-* section[sectionAlert].code.coding[0].display = "Health concerns Document"
+* section[sectionAlert].code.coding[0].display = "Alerts"
 * section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>" 
 * section[sectionAlert].text.status = #generated
 * section[sectionAlert].entry[0] = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e) 
@@ -533,7 +533,7 @@ Usage: #example
 * section[sectionDiagnosticSummary].title = "Diagnostický souhrn"
 * section[sectionDiagnosticSummary].code.coding[0].system = $loinc
 * section[sectionDiagnosticSummary].code.coding[0].code = #11535-2 // Problem list
-* section[sectionDiagnosticSummary].code.coding[0].display = "Problem list - Reported"
+* section[sectionDiagnosticSummary].code.coding[0].display = "Hospital discharge diagnosis note"
 * section[sectionDiagnosticSummary].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>K40.9 – Inguinální kýla, nespecifikovaná </p>
@@ -580,7 +580,7 @@ Usage: #example
 * section[sectionMedicalDevices].title = "Zdravotní pomůcky a implantáty"
 * section[sectionMedicalDevices].code.coding[0].system = $loinc
 * section[sectionMedicalDevices].code.coding[0].code = #57080-4 // Historie implantátů
-* section[sectionMedicalDevices].code.coding[0].display = "History of medical device use"
+* section[sectionMedicalDevices].code.coding[0].display = "Implanted medical device Narrative"
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacientovi byl implantován kardiostimulátor Medtronic model W1DR01.</p></div>" // Added required text for cardinality
 * section[sectionMedicalDevices].text.status = #generated
 * section[sectionMedicalDevices].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001f) // Example reference to a medical device
@@ -697,7 +697,7 @@ Usage: #example
 * section[sectionPharmacotherapy].title = "Medikace"
 * section[sectionPharmacotherapy].code.coding[+].system = $loinc
 * section[sectionPharmacotherapy].code.coding[=].code = #87232-5
-* section[sectionPharmacotherapy].code.coding[=].display = "History of Medication use Narrative"
+* section[sectionPharmacotherapy].code.coding[=].display = "Medication administration.brief"
 * section[sectionPharmacotherapy].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Medikace při propuštění</p>
@@ -814,7 +814,7 @@ Usage: #example
 * section[sectionAdmissionEvaluation].title = "Stav při přijetí"
 * section[sectionAdmissionEvaluation].code.coding[0].system = $loinc
 * section[sectionAdmissionEvaluation].code.coding[0].code = #67851-6 // Corrected code assignment
-* section[sectionAdmissionEvaluation].code.coding[0].display = "Hospital Admission evaluation note"
+* section[sectionAdmissionEvaluation].code.coding[0].display = "Admission evaluation note"
 * section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient byl přijat na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Při příjmu byl pacient v dobrém stavu, vitální funkce stabilní. Při fyzikálním vyšetření bylo zjištěno bolestivé zduření v oblasti pravého tříselného kanálu, bez známek zánětu nebo infekce. Laboratorní vyšetření ukázalo normální hodnoty krevního obrazu a biochemie, včetně TSH v normálním rozmezí. Pacient byl stabilní, bez známek dehydratace nebo hypovolemie. Byla zahájena předoperační příprava včetně interního vyšetření a laboratorních testů. Pacient byl informován o nutnosti chirurgického zákroku a souhlasil s ním. </div>" // Added required text for cardinality
 * section[sectionAdmissionEvaluation].text.status = #additional
 /* section[sectionAdmissionEvaluation].section[0].title = "Vital sings"
