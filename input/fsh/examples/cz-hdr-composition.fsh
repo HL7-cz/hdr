@@ -37,7 +37,7 @@ Usage: #example
 * section[sectionAllergies].code.coding[0].system = $loinc
 * section[sectionAllergies].code.coding[0].code = #48765-2 // Allergies and adverse reactions
 * section[sectionAllergies].code.coding[0].display = "Allergies and adverse reactions Document"
-* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alergie na jahody, od 01.01.2020, reakce: Svědění, otok jazyka</div>" 
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alergie na jahody, od 01.01.2020, reakce: Svědění, otok jazyka</div>"
 * section[sectionAllergies].entry[allergyIntolerance][0] = Reference(urn:uuid:6cf80cb1-9766-470f-ac36-b1d3d8950f1b)
 * section[sectionAllergies].text.status = #generated
 
@@ -45,11 +45,11 @@ Usage: #example
 // Sekce Varování
 * section[sectionAlert].title = "Varování"
 * section[sectionAlert].code.coding[0].system = $loinc
-* section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1 
+* section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1
 * section[sectionAlert].code.coding[0].display = "Health concerns Document"
-* section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>" 
+* section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>"
 * section[sectionAlert].text.status = #generated
-* section[sectionAlert].entry[0] = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e) 
+* section[sectionAlert].entry[0] = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e)
 
 // Diagnostický souhrn:
 // Sekce Diagnostický souhrn
@@ -160,7 +160,7 @@ Usage: #example
 * section[sectionPhysicalFindings].entry[1] = Reference(urn:uuid:5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c)
 * section[sectionPhysicalFindings].entry[2] = Reference(urn:uuid:7cf304de-5ae3-4621-8531-9c8f0b2d4e3a)
 * section[sectionPhysicalFindings].entry[3] = Reference(urn:uuid:5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d)
-* section[sectionPhysicalFindings].entry[4] = Reference(urn:uuid:4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a) 
+* section[sectionPhysicalFindings].entry[4] = Reference(urn:uuid:4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a)
 * section[sectionPhysicalFindings].entry[5] = Reference(urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a)
 
 // Sekce pro stav přo propuštění funkční status sectionFunctionalStatus
@@ -288,7 +288,7 @@ Usage: #example
     <p>Pracovní zapojení: Pacient pracuje jako programátor na plný úvazek v IT firmě.</p>
     <p>Koníčky: Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování.</p>
     <p>Sociální síť: Pacient má širokou sociální síť, pravidelně se setkává s přáteli a rodinou.</p>
-  <p><strong>Vzdělání</strong></p>  
+  <p><strong>Vzdělání</strong></p>
     <p>Dosažený stupeň vzdělání: Pacient má vysokoškolské vzdělání v oboru informatiky.</p>
   </div>"""
 * section[sectionSocialHistory].text.status = #additional
@@ -350,13 +350,13 @@ Usage: #example
 * section[sectionAdmissionEvaluation].section[=].entry[1] = Reference(urn:uuid:5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c)
 * section[sectionAdmissionEvaluation].section[=].entry[2] = Reference(urn:uuid:7cf304de-5ae3-4621-8531-9c8f0b2d4e3a)
 * section[sectionAdmissionEvaluation].section[=].entry[3] = Reference(urn:uuid:5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d)
-* section[sectionAdmissionEvaluation].section[=].entry[4] = Reference(urn:uuid:4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a) 
+* section[sectionAdmissionEvaluation].section[=].entry[4] = Reference(urn:uuid:4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a)
 * section[sectionAdmissionEvaluation].section[=].entry[5] = Reference(urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a) // Corrected Reference to include the resource type
 * section[sectionAdmissionEvaluation].section[=].entry[6] = Reference(urn:uuid:f0b20060-c4a8-4a74-b12a-6c8f0b2d4e3a) // Corrected Reference to include the resource type
 
 * section[sectionAttachments].title = "Přílohy"
 * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
-* section[sectionAttachments].code.coding[0].code = #77599-9   
+* section[sectionAttachments].code.coding[0].code = #77599-9
 * section[sectionAttachments].code.coding[0].display = "Additional documentation"
 * section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
 * section[sectionAttachments].entry[1] = Reference(urn:uuid:d9ad8a22-a12b-48db-938c-4066a3a0617a)
@@ -431,7 +431,7 @@ Usage: #example
 //TODO popsat že to je něco jiného než presented form
 * section[sectionAttachments].title = "Přílohy"
 * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
-* section[sectionAttachments].code.coding[0].code = #77599-9   
+* section[sectionAttachments].code.coding[0].code = #77599-9
 * section[sectionAttachments].code.coding[0].display = "Additional documentation"
 * section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
 * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
@@ -440,9 +440,9 @@ Usage: #example
 
 Instance: DischargeComposition-Novak-Petr_L1_core
 InstanceOf: CZ_CompositionHdr
-Description: "Sample composition of a discharge report for patient Novák Petr for the purposes of an L1 document. This is the minimum possible list of data for compiling an L1 document for a hospital discharge report." 
+Description: "Sample composition of a discharge report for patient Novák Petr for the purposes of an L1 document. This is the minimum possible list of data for compiling an L1 document for a hospital discharge report."
 Usage: #example
-* id = "6891fd68-dc3c-4c91-a8d3-cb5ec990c035" 
+* id = "6891fd68-dc3c-4c91-a8d3-cb5ec990c035"
 * status = #final
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
@@ -514,7 +514,7 @@ Usage: #example
 * section[sectionAllergies].code.coding[0].system = $loinc
 * section[sectionAllergies].code.coding[0].code = #48765-2 // Allergies and adverse reactions
 * section[sectionAllergies].code.coding[0].display = "Allergies and adverse reactions Document"
-* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alergie na jahody, od 01.01.2020, reakce: Svědění, otok jazyka</div>" 
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alergie na jahody, od 01.01.2020, reakce: Svědění, otok jazyka</div>"
 * section[sectionAllergies].entry[allergyIntolerance][0] = Reference(urn:uuid:6cf80cb1-9766-470f-ac36-b1d3d8950f1b)
 * section[sectionAllergies].text.status = #generated
 
@@ -522,11 +522,11 @@ Usage: #example
 // Sekce Varování
 * section[sectionAlert].title = "Varování"
 * section[sectionAlert].code.coding[0].system = $loinc
-* section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1 
+* section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1
 * section[sectionAlert].code.coding[0].display = "Health concerns Document"
-* section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>" 
+* section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>"
 * section[sectionAlert].text.status = #generated
-* section[sectionAlert].entry[0] = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e) 
+* section[sectionAlert].entry[0] = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e)
 
 // Diagnostický souhrn:
 // Sekce Diagnostický souhrn
@@ -674,7 +674,7 @@ Usage: #example
       <li>Obvod pasu: 85 cm</li>
       <li>Obvod boků: 100 cm</li>
     </ul>
-  </div>""" 
+  </div>"""
 * section[sectionDischargeDetails].section[sectionAnthropometry].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * section[sectionDischargeDetails].section[sectionAnthropometry].entry[0] = Reference(urn:uuid:6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b)
 * section[sectionDischargeDetails].section[sectionAnthropometry].entry[1] = Reference(urn:uuid:5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c)
@@ -763,7 +763,7 @@ Usage: #example
     <p>Pracovní zapojení: Pacient pracuje jako programátor na plný úvazek v IT firmě.</p>
     <p>Koníčky: Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování.</p>
     <p>Sociální síť: Pacient má širokou sociální síť, pravidelně se setkává s přáteli a rodinou.</p>
-  <p><strong>Vzdělání</strong></p>  
+  <p><strong>Vzdělání</strong></p>
     <p>Dosažený stupeň vzdělání: Pacient má vysokoškolské vzdělání v oboru informatiky.</p>
   </div>"""
 * section[sectionSocialHistory].text.status = #additional
@@ -825,7 +825,7 @@ Usage: #example
 * section[sectionAdmissionEvaluation].section[=].entry[1] = Reference(urn:uuid:5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c)
 * section[sectionAdmissionEvaluation].section[=].entry[2] = Reference(urn:uuid:7cf304de-5ae3-4621-8531-9c8f0b2d4e3a)
 * section[sectionAdmissionEvaluation].section[=].entry[3] = Reference(urn:uuid:5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d)
-* section[sectionAdmissionEvaluation].section[=].entry[4] = Reference(urn:uuid:4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a) 
+* section[sectionAdmissionEvaluation].section[=].entry[4] = Reference(urn:uuid:4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a)
 * section[sectionAdmissionEvaluation].section[=].entry[5] = Reference(urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a) // Corrected Reference to include the resource type
 * section[sectionAdmissionEvaluation].section[=].entry[6] = Reference(urn:uuid:f0b20060-c4a8-4a74-b12a-6c8f0b2d4e3a) // Corrected Reference to include the resource type
 */
@@ -887,7 +887,7 @@ Usage: #example
       <li>Obvod pasu: 85 cm</li>
       <li>Obvod boků: 100 cm</li>
     </ul>
-  </div>""" 
+  </div>"""
 * section[sectionAdmissionEvaluation].section[sectionAnthropometry].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * section[sectionAdmissionEvaluation].section[sectionAnthropometry].entry[0] = Reference(urn:uuid:6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b)
 * section[sectionAdmissionEvaluation].section[sectionAnthropometry].entry[1] = Reference(urn:uuid:5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c)
@@ -909,7 +909,7 @@ Usage: #example
 
 * section[sectionAttachments].title = "Přílohy"
 * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
-* section[sectionAttachments].code.coding[0].code = #77599-9   
+* section[sectionAttachments].code.coding[0].code = #77599-9
 * section[sectionAttachments].code.coding[0].display = "Additional documentation"
 * section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
 * section[sectionAttachments].entry[1] = Reference(DischargeDocumentHTML)

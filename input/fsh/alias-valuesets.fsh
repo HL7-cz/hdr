@@ -14,6 +14,7 @@ Alias: $v3-ClassNullFlavor = http://terminology.hl7.org/ValueSet/v3-ClassNullFla
 Alias: $allergy-intolerance-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/allergy-intolerance-uv-ips
 Alias: $allergy-reaction-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips
 Alias: $v3-ActClassExposure = http://terminology.hl7.org/ValueSet/v3-ActClassExposure
+Alias: $hl7-consent-category = http://hl7.org/fhir/ValueSet/consentcategorycodes
 
 
 Alias: $v3-ActClassHDR = http://hl7.eu/fhir/hdr/ValueSet/hdr-encounterClass-eu-hdr
