@@ -354,14 +354,14 @@ Usage: #example
 * section[sectionAdmissionEvaluation].section[=].entry[5] = Reference(urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a) // Corrected Reference to include the resource type
 * section[sectionAdmissionEvaluation].section[=].entry[6] = Reference(urn:uuid:f0b20060-c4a8-4a74-b12a-6c8f0b2d4e3a) // Corrected Reference to include the resource type
 
-* section[sectionAttachments].title = "Přílohy"
-* section[sectionAttachments].code.coding[0].system = "http://loinc.org"
-* section[sectionAttachments].code.coding[0].code = #77599-9   
-* section[sectionAttachments].code.coding[0].display = "Additional documentation"
-* section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
-* section[sectionAttachments].entry[1] = Reference(urn:uuid:d9ad8a22-a12b-48db-938c-4066a3a0617a)
-* section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
-* section[sectionAttachments].text.status = #generated
+// * section[sectionAttachments].title = "Přílohy"
+// * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
+// * section[sectionAttachments].code.coding[0].code = #77599-9   
+// * section[sectionAttachments].code.coding[0].display = "Additional documentation"
+// * section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
+// * section[sectionAttachments].entry[1] = Reference(urn:uuid:d9ad8a22-a12b-48db-938c-4066a3a0617a)
+// * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
+// * section[sectionAttachments].text.status = #generated
 
 
 
@@ -428,14 +428,14 @@ Usage: #example
 * section[sectionHospitalCourse].text.status = #additional //Additional text status for generated narrative /HONza
 * section[sectionHospitalCourse].entry[0] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620) // encounter
 
-//TODO popsat že to je něco jiného než presented form
-* section[sectionAttachments].title = "Přílohy"
-* section[sectionAttachments].code.coding[0].system = "http://loinc.org"
-* section[sectionAttachments].code.coding[0].code = #77599-9   
-* section[sectionAttachments].code.coding[0].display = "Additional documentation"
-* section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
-* section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
-* section[sectionAttachments].text.status = #generated
+// //TODO popsat že to je něco jiného než presented form
+// * section[sectionAttachments].title = "Přílohy"
+// * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
+// * section[sectionAttachments].code.coding[0].code = #77599-9   
+// * section[sectionAttachments].code.coding[0].display = "Additional documentation"
+// * section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
+// * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
+// * section[sectionAttachments].text.status = #generated
 
 
 
@@ -473,14 +473,14 @@ Usage: #example
   Pacient byl v dobrém stavu propuštěn do domácího ošetření dne 10. 3. 2025. Doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.
   </div>""" // Added required text for cardinality
 /*Přidat sekci presetedForm*/
-//TODO popsat že to je něco jiného než presented form
-* section[sectionAttachments].title = "Přílohy"
-* section[sectionAttachments].code.coding[0].system = "http://loinc.org"
-* section[sectionAttachments].code.coding[0].code = #77599-9   
-* section[sectionAttachments].code.coding[0].display = "Additional documentation"
-* section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
-* section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
-* section[sectionAttachments].text.status = #generated
+// //TODO popsat že to je něco jiného než presented form
+// * section[sectionAttachments].title = "Přílohy"
+// * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
+// * section[sectionAttachments].code.coding[0].code = #77599-9   
+// * section[sectionAttachments].code.coding[0].display = "Additional documentation"
+// * section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
+// * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
+// * section[sectionAttachments].text.status = #generated
 
 Instance: DischargeComposition-Novak-Petr-Subsections
 InstanceOf: CZ_CompositionHdr
@@ -912,11 +912,11 @@ Usage: #example
 * section[sectionAdmissionEvaluation].section[sectionVitalSigns].entry[0] = Reference(urn:uuid:8d2aea77-f576-4d0f-9508-537359aa44d6)
 
 
-* section[sectionAttachments].title = "Přílohy"
-* section[sectionAttachments].code.coding[0].system = "http://loinc.org"
-* section[sectionAttachments].code.coding[0].code = #77599-9   
-* section[sectionAttachments].code.coding[0].display = "Additional documentation"
-* section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
-* section[sectionAttachments].entry[1] = Reference(DischargeDocumentHTML)
-* section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
-* section[sectionAttachments].text.status = #generated
+// * section[sectionAttachments].title = "Přílohy"
+// * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
+// * section[sectionAttachments].code.coding[0].code = #77599-9   
+// * section[sectionAttachments].code.coding[0].display = "Additional documentation"
+// * section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
+// * section[sectionAttachments].entry[1] = Reference(DischargeDocumentHTML)
+// * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
+// * section[sectionAttachments].text.status = #generated
