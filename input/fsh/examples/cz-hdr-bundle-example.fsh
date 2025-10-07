@@ -382,9 +382,9 @@ Instance: DischargeBundle-Novak-Petr-L1-core
 InstanceOf: CZ_BundleHdr
 Description: "Example of a minimalist L1 package for the discharge report of patient Novák Petr from the hospital"
 Usage: #example
-* id = "1c794aff-876a-41bf-9401-fa8fee3b1e57"
+//* id = "1c794aff-876a-41bf-9401-fa8fee3b1e57"
 * identifier.system = "urn:ietf:rfc:3986"
-//* identifier.value = "1c794aff-876a-41bf-9401-fa8fee3b1e57"    // unique Bundle ID
+* identifier.value = "1c794aff-876a-41bf-9401-fa8fee3b1e57"    // unique Bundle ID
 * type = #document
 * timestamp = "2025-03-10T15:00:00+01:00"
 // Bundle Entries (ordered by profile slices):
