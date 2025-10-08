@@ -138,17 +138,17 @@ Description: "Czech HDR - example of encounter with emergency priority"
 * location[2].period.end = "2025-03-10T08:00:00+01:00"
 
 
-Instance: HospitalEncounter-Novak-Petr_L1
+Instance: HospitalEncounter-Novak-Petr-L1
 InstanceOf: CZ_EncounterHdr
 Usage: #example
-Title: "CZ-Encounter-HDR Example of encounter for Novak Petr"
-Description: "Czech HDR - example of encounter for Novak Petr"
+Title: "CZ-Encounter-HDR  L1 Example of encounter for Novak Petr"
+Description: "Czech HDR – a minimalist example of a encounter for Petr Novák for the document L1 HDR"
 * id = "f08151d0-a7ad-4a7b-b7b9-97eb1d394ffb"
 * status = #finished
 * class.code = #IMP 
 * class.system = $cz-encounter-typ-kontaktu
 * class.display = "inpatient encounter"
-* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
+* subject = Reference(urn:uuid:48a9d440-4194-42c1-87ad-b5a39020a4d0)
 * period.start = "2025-03-01T10:15:00+01:00"
 * period.end = "2025-03-10T09:30:00+01:00"
-* serviceProvider = Reference(RegisteringProviderExample)
+* serviceProvider = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1) // nelze zapsat do bundelu

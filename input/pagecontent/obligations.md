@@ -24,12 +24,12 @@ Actors were specified in these roles:
 
 | Role                                                    | Description                                                                                                                          |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| the [Level 1 Creator](ActorDefinition-actor-creator-hdr-L1.html)   | This is a L1 actor that creates a report. This report can be sent to a consumer or to a repository for storing and sharing report. |
-| the [Level 1 Consumer](ActorDefinition-actor-consumer-hdr-L1.html) | This L1 actor represents the system that uses the received or retrieved report.                                                                 |
-| the [Level 2 Creator](ActorDefinition-actor-creator-hdr-L2.html)   | This is a L2 actor that creates a report. This report can be sent to a consumer or to a repository for storing and sharing report. |
-| the [Level 2 Consumer](ActorDefinition-actor-consumer-hdr-L2.html) | This L2 actor represents the system that uses the received or retrieved report.                                                                 |
-| the [Level 3 Creator](ActorDefinition-actor-creator-hdr-L3.html)   | This is a L3 actor that creates a report. This report can be sent to a consumer or to a repository for storing and sharing report. |
-| the [Level 3 Consumer](ActorDefinition-actor-consumer-hdr-L3.html) | This L3 actor represents the system that uses the received or retrieved report.                                                                 |                                                
+| the [Level 1 Creator](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-creator-L1.html)   | This is a L1 actor that creates a report. This report can be sent to a consumer or to a repository for storing and sharing report. |
+| the [Level 1 Consumer](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-consumer-L1.html) | This L1 actor represents the system that uses the received or retrieved report.                                                                 |
+| the [Level 2 Creator](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-creator-L2.html)   | This is a L2 actor that creates a report. This report can be sent to a consumer or to a repository for storing and sharing report. |
+| the [Level 2 Consumer](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-consumer-L2.html) | This L2 actor represents the system that uses the received or retrieved report.                                                                 |
+| the [Level 3 Creator](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-creator-L3.html)   | This is a L3 actor that creates a report. This report can be sent to a consumer or to a repository for storing and sharing report. |
+| the [Level 3 Consumer](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-consumer-L3.html) | This L3 actor represents the system that uses the received or retrieved report.                                                                 |                                                
 
 <p>{% include hdr-Actors.svg %}</p>
 

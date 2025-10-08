@@ -193,8 +193,11 @@ Usage: #example
 * entry[observation][=].resource = Observation-Education
 * entry[organization][+].fullUrl = "urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
 * entry[organization][=].resource = Organization-1
-* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
-* entry[documentReference][=].resource = DischargeDocumenPDF
+// TODO: Add DocumentReference resources (PDF, HTML) ale nikoliv propouštěcí zprávu, např. záznam konzilia atp.
+// Prezentovatelná forma dokumentu je součástí kompozice, zde by byla vložena duplicitně
+// proto jsou tyto dva řádky zakomentovány
+//* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
+//* entry[documentReference][=].resource = DischargeDocumenPDF
 * entry[documentReference][+].fullUrl = "urn:uuid:d9ad8a22-a12b-48db-938c-4066a3a0617a"
 * entry[documentReference][=].resource = DischargeDocumentHTML
 * entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eabb"
@@ -298,8 +301,10 @@ Usage: #example
 //* entry[observation][=].resource = Observation-Education
 * entry[organization][+].fullUrl = "urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
 * entry[organization][=].resource = Organization-1
-* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
-* entry[documentReference][=].resource = DischargeDocumenPDF
+// Prezentovatelná forma dokumentu je součástí kompozice, zde by byla vložena duplicitně
+// proto jsou tyto dva řádky zakomentovány
+//* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
+//* entry[documentReference][=].resource = DischargeDocumenPDF
 * entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eabb"
 * entry[provenance][=].resource = signature-L3
 * entry[flag][+].fullUrl = "urn:uuid:5a17a710-193e-4490-a627-7202925aa56e"
@@ -319,6 +324,38 @@ Usage: #example
 * type = #document
 * timestamp = "2025-03-10T15:00:00+01:00"
 // Bundle Entries (ordered by profile slices):
+* entry[composition][0].fullUrl = "urn:uuid:6891fd68-dc3c-4c91-a8d3-cb5ec990c035"
+* entry[composition][=].resource = DischargeComposition-Novak-Petr_L1
+* entry[patient][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000000"
+* entry[patient][=].resource = Patient-Novak-Petr
+* entry[practitioner][+].fullUrl = "urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a"
+* entry[practitioner][=].resource = Practitioner-Author
+* entry[practitionerRole][+].fullUrl = "urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849"
+* entry[practitionerRole][=].resource = Practitioner-Author-detail
+* entry[organization][+].fullUrl = "urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
+* entry[organization][=].resource = Organization-1
+// Prezentovatelná forma dokumentu je součástí kompozice, zde by byla vložena duplicitně
+// proto jsou tyto dva řádky zakomentovány
+//* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
+//* entry[documentReference][=].resource = DischargeDocumenPDF
+* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
+* entry[provenance][=].resource = signature-L1
+* entry[encounter][+].fullUrl = "urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620"
+* entry[encounter][=].resource = HospitalEncounter-Novak-Petr
+
+
+
+// 2. Bundle: Hospital Discharge Report - Novák Petr - L1+
+Instance: DischargeBundle-Novak-Petr-L1-plus
+InstanceOf: CZ_BundleHdr
+Description: "Example Bundle for Hospital Discharge Report for patient Novák Petr"
+Usage: #example
+* identifier.system = "urn:ietf:rfc:3986"
+//* identifier.value = "urn:uuid:c859d718-03c2-43ed-a16c-dbe57a6e34b5"    // unique Bundle ID
+* identifier.value = "urn:uuid:a90a5972-27bd-4388-a628-2e726a5d7935"    // unique Bundle ID
+* type = #document
+* timestamp = "2025-03-10T15:00:00+01:00"
+// Bundle Entries (ordered by profile slices):
 * entry[composition][0].fullUrl = "urn:uuid:6891fd68-dc3c-4c91-a8d3-cb5ec990c03b"
 * entry[composition][=].resource = DischargeComposition-Novak-Petr_L1
 * entry[patient][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000000"
@@ -329,8 +366,10 @@ Usage: #example
 * entry[practitionerRole][=].resource = Practitioner-Author-detail
 * entry[organization][+].fullUrl = "urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
 * entry[organization][=].resource = Organization-1
-* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
-* entry[documentReference][=].resource = DischargeDocumenPDF
+// Prezentovatelná forma dokumentu je součástí kompozice, zde by byla vložena duplicitně
+// proto jsou tyto dva řádky zakomentovány
+//* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
+//* entry[documentReference][=].resource = DischargeDocumenPDF
 * entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
 * entry[provenance][=].resource = signature-L1
 * entry[encounter][+].fullUrl = "urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620"
@@ -338,9 +377,31 @@ Usage: #example
 
 
 
-
-
-
+// 2. Bundle: Hospital Discharge Report - Novák Petr - L1
+Instance: DischargeBundle-Novak-Petr-L1-core
+InstanceOf: CZ_BundleHdr
+Description: "Example of a minimalist L1 package for the discharge report of patient Novák Petr from the hospital"
+Usage: #example
+//* id = "1c794aff-876a-41bf-9401-fa8fee3b1e57"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:1c794aff-876a-41bf-9401-fa8fee3b1e57"    // unique Bundle ID
+* type = #document
+* timestamp = "2025-03-10T15:00:00+01:00"
+// Bundle Entries (ordered by profile slices):
+* entry[composition][0].fullUrl = "urn:uuid:6891fd68-dc3c-4c91-a8d3-cb5ec990c035" // ok
+* entry[composition][=].resource = DischargeComposition-Novak-Petr_L1_core
+* entry[patient][+].fullUrl = "urn:uuid:48a9d440-4194-42c1-87ad-b5a39020a4d0" // ok
+* entry[patient][=].resource = Patient-Novak-Petr-L1
+* entry[practitioner][+].fullUrl = "urn:uuid:e234a53a-4e0d-4fb8-9403-e0e324a50f64" // ok
+* entry[practitioner][=].resource = Practitioner-Author-L1
+* entry[practitionerRole][+].fullUrl = "urn:uuid:69d34ceb-b556-4f75-9e4c-9184fe8a10c5" // ok
+* entry[practitionerRole][=].resource = Practitioner-Author-detail
+* entry[organization][+].fullUrl = "urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1" // ok
+* entry[organization][=].resource = Organization-1
+* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab" //ok
+* entry[provenance][=].resource = signature-L1
+* entry[encounter][+].fullUrl = "urn:uuid:f08151d0-a7ad-4a7b-b7b9-97eb1d394ffb" // ok
+* entry[encounter][=].resource = HospitalEncounter-Novak-Petr-L1
 
 
 
