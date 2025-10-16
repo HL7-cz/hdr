@@ -584,7 +584,7 @@ Instance: Practitioner-UZV
 InstanceOf: CZ_PractitionerCore
 Usage: #example
 Description: "Participant UZV HDR"
-* id = "Practitioner-UZV"
+* id = "860c684f-aba1-40d9-94cf-721d70237b52"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
 * identifier[+].system = $cz-practitioner-NRZP
 * identifier[=].value = "987654322"
