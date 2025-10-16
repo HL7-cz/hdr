@@ -392,14 +392,18 @@ Usage: #example
 * entry[composition][=].resource = DischargeComposition-Novak-Petr_L1_core
 * entry[patient][+].fullUrl = "urn:uuid:48a9d440-4194-42c1-87ad-b5a39020a4d0" // ok
 * entry[patient][=].resource = Patient-Novak-Petr-L1
-* entry[practitioner][+].fullUrl = "urn:uuid:e234a53a-4e0d-4fb8-9403-e0e324a50f64" // ok
-* entry[practitioner][=].resource = Practitioner-Author-L1
 * entry[practitionerRole][+].fullUrl = "urn:uuid:69d34ceb-b556-4f75-9e4c-9184fe8a10c5" // ok
 * entry[practitionerRole][=].resource = Practitioner-Author-detail
-* entry[organization][+].fullUrl = "urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1" // ok
-* entry[organization][=].resource = Organization-1
-* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab" //ok
-* entry[provenance][=].resource = signature-L1
+* entry[practitioner][+].fullUrl = "urn:uuid:e234a53a-4e0d-4fb8-9403-e0e324a50f64" // ok
+* entry[practitioner][=].resource = Practitioner-Author-L1
+* entry[organization][+].fullUrl = "urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9" // ok útvar
+* entry[organization][=].resource = Organization-L1-HOSP
+* entry[organization][+].fullUrl = "urn:uuid:af2b3114-e872-43b9-9875-cceb39122f7f" // ok oddělení
+* entry[organization][=].resource = Organization-L1-Odd
+* entry[organization][+].fullUrl = "urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1" // ok zařízení
+* entry[organization][=].resource = Organization-L1
+//* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab" //ok
+//* entry[provenance][=].resource = signature-L1
 * entry[encounter][+].fullUrl = "urn:uuid:f08151d0-a7ad-4a7b-b7b9-97eb1d394ffb" // ok
 * entry[encounter][=].resource = HospitalEncounter-Novak-Petr-L1
 

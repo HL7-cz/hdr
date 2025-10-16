@@ -37,9 +37,9 @@ Description: "Obligations for Address in Czech Republic - HDR"
 
 * city insert OblCreator(#SHALL:able-to-populate,L2)
 * postalCode insert OblCreator(#SHALL:able-to-populate,L2)
-* country insert OblCreator(#SHALL:able-to-populate,L1) 
-* country.extension[countryCode] insert OblCreator(#SHOULD:able-to-populate,L1)  
-* country.value insert OblCreator(#SHALL:able-to-populate,L1)
+* country insert OblCreator(#SHALL:able-to-populate,L2) 
+* country.extension[countryCode] insert OblCreator(#SHOULD:able-to-populate,L2)  
+* country.value insert OblCreator(#SHALL:able-to-populate,L2)
 
 // Consumer Obligations L2 ===========>
 //* extension[addressPoint] insert OblConsumer(#SHOULD:display,L2)
@@ -59,9 +59,9 @@ Description: "Obligations for Address in Czech Republic - HDR"
 * line.extension[postBox] insert OblCreator(#SHALL:able-to-populate,L3)
 * city insert OblCreator(#SHALL:able-to-populate,L3)
 * postalCode insert OblCreator(#SHALL:able-to-populate,L3)
-* country insert OblCreator(#SHALL:able-to-populate,L1) 
-* country.extension[countryCode] insert OblCreator(#SHOULD:able-to-populate,L1)  
-* country.value insert OblCreator(#SHALL:able-to-populate,L1)
+* country insert OblCreator(#SHALL:able-to-populate,L3) 
+* country.extension[countryCode] insert OblCreator(#SHOULD:able-to-populate,L3)  
+* country.value insert OblCreator(#SHALL:able-to-populate,L3)
 
 // Consumer Obligations L3 ===========>
 //* extension[addressPoint] insert OblConsumer(#SHOULD:display,L3)

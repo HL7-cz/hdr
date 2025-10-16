@@ -446,6 +446,8 @@ Description: "Sample composition of a discharge report for patient Novák Petr f
 Usage: #example
 * id = "6891fd68-dc3c-4c91-a8d3-cb5ec990c035"
 * status = #final
+* text.status = #empty
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"></div>"
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
 * type.coding[0].display = "Hospital Discharge summary"
@@ -454,14 +456,16 @@ Usage: #example
 * category[0].coding[0].display = "Discharge summary"
 * title = "Propouštěcí zpráva z nemocnice"
 * date = "2025-03-10T14:30:00+01:00"
-* author[+] = Reference(urn:uuid:69d34ceb-b556-4f75-9e4c-9184fe8a10c5) //ok
+* author[0] = Reference(urn:uuid:69d34ceb-b556-4f75-9e4c-9184fe8a10c5) //ok
 * subject = Reference(urn:uuid:48a9d440-4194-42c1-87ad-b5a39020a4d0)  //ok
 * encounter = Reference(urn:uuid:f08151d0-a7ad-4a7b-b7b9-97eb1d394ffb) //ok
 * extension[presentedForm].valueAttachment = cz-pdfhdr-example
 * confidentiality = #N
 * custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1) // Example Organization as custodian
-* attester[0].mode = #legal
-* attester[0].party = Reference(urn:uuid:69d34ceb-b556-4f75-9e4c-9184fe8a10c5) // Attester is the same as one of the authors
+* attester[0].mode = #professional 
+* attester[=].party = Reference(urn:uuid:69d34ceb-b556-4f75-9e4c-9184fe8a10c5)
+* attester[+].mode = #legal
+* attester[=].party = Reference(urn:uuid:69d34ceb-b556-4f75-9e4c-9184fe8a10c5) // Attester is the same as one of the authors
 * section[sectionHospitalCourse].title = "Klinické shrnutí"
 * section[sectionHospitalCourse].text.status = #additional //Additional text status for generated narrative /HONza
 * section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
