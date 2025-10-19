@@ -9,22 +9,26 @@ classDiagram
     <<Bundle>>
   }
   CZ_BundleHDR *-- "1" CZ_CompositionHdr
-  CZ_BundleHDR *-- "1" CZ_DiagnosticReport
   CZ_BundleHDR *-- "1" CZ_PatientCore
-  CZ_BundleHDR *-- "0..*" CZ_ConditionHdr
   CZ_BundleHDR *-- "0..*" CZ_PractionerCore
-  CZ_BundleHDR *-- "0..*" CZ_ConsentHdr
   CZ_BundleHDR *-- "0..*" CZ_OrganizationCore
   CZ_BundleHDR *-- "0..*" CZ_EncounterHdr
-  CZ_BundleHDR *-- "0..*" CZ_FlagHdr
-  CZ_BundleHDR *-- "0..*" CZ_AllergyIntoleranceHdr
-  CZ_BundleHDR *-- "0..*" CZ_ImmunizationHdr
-  CZ_BundleHDR *-- "0..*" CZ_ProcedureHdr
-  CZ_BundleHDR *-- "0..*" CZ_MedicationDispenseHdr
+  CZ_BundleHDR *-- "0..*" CZ_PractitionerRole
+  CZ_BundleHDR *-- "1" CZ_ProvenanceCore
+  CZ_PractitionerRole *-- "0..*" CZ_OrganizationCore
+  CZ_PractitionerRole *-- "0..*" CZ_PractionerCore
+  CZ_EncounterHdr *-- "1" CZ_PatientCore
+  CZ_EncounterHdr *-- "1" CZ_OrganizationCore
+  
 
-  CZ_CompositionHdr --> CZ_Practioner: attester[legalAuthenticator]
-  CZ_CompositionHdr --> CZ_Practioner: attester[resultValidator]
+  CZ_CompositionHdr --> CZ_PractitionerRole: attester[legalAuthenticator]
+  CZ_CompositionHdr --> CZ_PractitionerRole: attester[resultValidator]
+  CZ_CompositionHdr --> CZ_PractitionerRole: author
   CZ_CompositionHdr --> CZ_PatientCore: subject
+  CZ_CompositionHdr --> CZ_EncounterHdr: period [start]
+  CZ_CompositionHdr --> CZ_EncounterHdr: period [end]
+  CZ_EncounterHdr --> CZ_OrganizationCore: serviceProvider
+  CZ_CompositionHdr --> CZ_OrganizationCore: castodian
 
 ```
 
