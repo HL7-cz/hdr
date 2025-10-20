@@ -48,7 +48,7 @@ Usage: #definition
 * group[=].element[=].display = "A.2.6.1.5 - Epidemiological history"
 * group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #unmatched					
+* group[=].element[=].target.equivalence = #unmatched
 * group[=].element[=].target.comment = "decison not to have as distict section"
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts
 * group[=].element[=].display = "A.2.6.1.5.1 - Infectious contacts"
@@ -366,7 +366,7 @@ Usage: #definition
 * group[=].element[=].target.comment = "if details about the body structure have to be provided"
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.date
 * group[=].element[=].display = "A.2.6.1.3.4 - Procedure date"
-* group[=].element[=].target.code = #Procedure.perfomedDateTime	
+* group[=].element[=].target.code = #Procedure.perfomedDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.reason
@@ -376,17 +376,17 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.reason
 * group[=].element[=].display = "A.2.6.1.3.5 - Procedure reason"
-* group[=].element[=].target.code = #Procedure.reasonReference	
+* group[=].element[=].target.code = #Procedure.reasonReference
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.outcome
 * group[=].element[=].display = "A.2.6.1.3.6 - Outcome"
-* group[=].element[=].target.code = #Procedure.outcome	
+* group[=].element[=].target.code = #Procedure.outcome
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures.focalDevice
 * group[=].element[=].display = "A.2.6.1.3.7 - Focal device"
-* group[=].element[=].target.code = #Procedure.focalDevice	
+* group[=].element[=].target.code = #Procedure.focalDevice
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"

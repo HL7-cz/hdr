@@ -13,7 +13,7 @@ Description: "Czech HDR - example of an inpatient encounter"
 
 // Encounter type and subject
 //* type[0].coding[0].system = $encounter-type TODO: custom valueset and codesystem
-//* type[0].coding[0].code = #DIS 
+//* type[0].coding[0].code = #DIS
 //* type[0].coding[0].display = "Discharge"
 * subject = Reference(Mracena2)
 
@@ -100,7 +100,7 @@ Title: "CZ-Encounter-HDR Example of encounter with emergency priority"
 Description: "Czech HDR - example of encounter with emergency priority"
 * id = "10f5c49e-086d-4016-8dd1-b555306bf620"
 * status = #finished
-* class.code = #IMP 
+* class.code = #IMP
 * class.system = $cz-encounter-typ-kontaktu
 * class.display = "inpatient encounter"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
@@ -145,7 +145,7 @@ Title: "CZ-Encounter-HDR  L1 Example of encounter for Novak Petr"
 Description: "Czech HDR – a minimalist example of a encounter for Petr Novák for the document L1 HDR"
 * id = "f08151d0-a7ad-4a7b-b7b9-97eb1d394ffb"
 * status = #finished
-* class.code = #IMP 
+* class.code = #IMP
 * class.system = $cz-encounter-typ-kontaktu
 * class.display = "inpatient encounter"
 * subject = Reference(urn:uuid:48a9d440-4194-42c1-87ad-b5a39020a4d0)
