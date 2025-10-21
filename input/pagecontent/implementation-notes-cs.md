@@ -1,31 +1,33 @@
-
 ## 1. Úvod
 Na následující stránce naleznete poznámky k implementaci nemocniční propouštěcí zprávy. Týkají se tvorby kompozice a naplnění tohoto profilu a dalších příslušnými daty.
 
 Cílem je sjednotit strukturování, validaci a zobrazování zdravotnických dat ve FHIR.  
-Tento dokument je obecná šablona (např. pro propouštěcí zprávu, žádanky, nálezy).
+Tento dokument je obecná šablona (např. pro propouštěcí zprávu, žádanky, nálezy) a slouží jako **implementační průvodce (Implementation Guide)**.
 
-Obsah:
-1) Logický model  
-2) Mapování (Logical Model → FHIR)  
-3) FHIR profily  
-4) Obligations (funkční a zobrazovací povinnosti)  
-5) Vzorové instance  
-6) Doporučený postup práce s IG
+---
+
+### Přehled kapitol
+| Kapitola | Účel | Výstup / Artefakt |
+|-----------|------|-------------------|
+| **Logický model** | Klinická struktura obsahu dokumentu | Tabulka prvků (CZ/EN) |
+| **Mapování** | Vazba logického modelu na FHIR elementy | Mapping table |
+| **FHIR profily** | Formální omezení, kardinality, vazby a terminologie | StructureDefinition |
+| **Obligations** | Funkční a zobrazovací povinnosti | ObligationDefinition |
+| **Vzorové instance** | Referenční příklady a validní výstupy | Bundle a navázané Resource |
+| **Doporučený postup** | Kroky pro implementaci a testování | Postup v rámci IG |
 
 ---
 
 ## 2. Logický model
-**Účel:** Klinicky srozumitelný popis obsahu.  
-**Jazyky:** CZ (pro přehlednost), EN (autorita pro další kroky a mapování).
+**Účel:** Klinicky srozumitelný popis obsahu dokumentu, který tvoří základ pro technické mapování a validaci.  
+**Jazyky:** CZ (pro čitelnost), EN (autorita pro mapování a profily).
 
 Každý prvek obsahuje:
 - Identifikátor prvku (pro mapování)
 - Název (CZ/EN), popis
-- Datový typ/charakter
+- Datový typ / charakter hodnoty
 
-
-> Pozn.: EN verze logického modelu je **závazná** pro mapování a profily.
+> Pozn.: EN verze logického modelu je **závazná** pro mapování a FHIR profily.
 
 ---
 
@@ -37,8 +39,9 @@ Slouží k tomu, aby bylo jednoznačně určeno, **kam se jednotlivé položky l
 
 ### 3.2 Zásady mapování
 - Každý prvek logického modelu musí být mapován na konkrétní FHIR element nebo skupinu elementů.  
-- Mapování vychází z původní struktury eHN HDR (např. A.1 – Header, A.2 – Body) a je rozvedeno do jednotlivých sekcí a podsekcí.  
-- Pokud prvek nemá přímý FHIR ekvivalent, použije se rozšíření (`extension`) nebo komentář s poznámkou o způsobu implementace.  
+- Pokud přímé mapování neexistuje, uvede se `Extension` nebo komentář s vysvětlením.  
+- Mapování vychází z eHN HDR struktury (A.1 – Header, A.2 – Body) a rozvádí se do sekcí a podsekcí.  
+- Každý řádek tabulky musí obsahovat buď vyplněný sloupec **Target Code**, nebo poznámku o způsobu řešení.  
 - Vztah se vyjadřuje sloupcem **Relationship**, obvykle jako `is related to`.
 
 ---
@@ -76,23 +79,33 @@ Slouží k tomu, aby bylo jednoznačně určeno, **kam se jednotlivé položky l
 - Mapování vychází z modelu eHN HDR v části A.2.  
 - V české implementaci se používají pojmenované sekce dle `Composition.section:sectionXXX`.  
 - Názvy sekcí (např. `sectionPharmacotherapy`, `sectionHospitalCourse`) odpovídají profilům definovaným v této implementační specifikaci.  
-- V případě neexistence odpovídajícího FHIR elementu lze využít `Extension` s popisem ve sloupci Comment.
+- V případě neexistence odpovídajícího FHIR elementu lze využít `Extension` s popisem ve sloupci Comment.  
+- Mapování může být podkladem pro generování `ConceptMap` artefaktů nebo pro automatickou validaci v rámci testovacích scénářů.
 
 ---
 
 ## 4. FHIR profily
-**Účel:** Zpřesňují použití FHIR resource v českém kontextu (omezují volitelnost, sjednocují praxi).
+**Účel:** Zpřesňují použití FHIR resource v českém kontextu (omezují volitelnost, sjednocují praxi) a doplňují terminologické bindingy.
 
 ### 4.1 Struktura profilu
-- Základní resource (např. `Composition`, `Patient`, `Encounter`, …)
-- Kardinality (např. `Composition.author 1..1`, `section 1..*`)
-- Vazby mezi profily (např. `Composition.section` → `Condition`)
+- Základní resource (např. `Composition`, `Patient`, `Encounter`, …)  
+- Kardinality (např. `Composition.author 1..1`, `section 1..*`)  
+- Vazby mezi profily (např. `Composition.section` → `Condition`)  
+- Odkazy na použitou terminologii (ValueSet, CodeSystem, Binding strength)
 
 ### 4.2 Kardinalita
 - **Povinné:** `1..1`  
 - **Volitelné:** `0..1`  
 - **Opakovatelné:** `0..*` / `1..*`  
 > Národní profily mohou být **přísnější** než evropské.
+
+### 4.3 Terminologické vazby
+Každý profil využívá závazné nebo doporučené číselníky:
+- **required** – musí být z daného ValueSetu,  
+- **extensible** – primárně z ValueSetu, případně rozšíření,  
+- **preferred** – doporučený ValueSet, ale nevyžadovaný.  
+
+> Příklady: `Composition.type` – LOINC `34105-7`, `Condition.code` – ICD-10/SNOMED CT, `Observation.unit` – UCUM.
 
 ---
 
@@ -126,7 +139,9 @@ Obligations doplňují kardinality a terminologické bindingy všude tam, kde sa
 - **Consumer obligations** – povinnosti pro **zobrazení** v prohlížečích/konzumentech.  
   - Příklad: Konzument **SHALL** zobrazit `Composition.title`, `Composition.date` a `Composition.author`; jazyk dokumentu **MAY** být nezobrazen.
 
-> Pozn.: Obligations mohou **doplňovat nebo zpřísňovat** chování nad rámec kardinality a terminologických bindingů.
+### 5.5 Vazba na profily a testování
+Každé závazné pravidlo (Obligation) je svázáno s konkrétním profilem nebo skupinou profilů, které doplňuje.  
+Obligations se uplatňují v testovacích scénářích validace – např. při kontrole správného zobrazení sekcí nebo existence povinných funkcí při tvorbě dokumentu.
 
 ---
 
@@ -138,23 +153,17 @@ Nejedná se pouze o ukázku `Bundle`, ale o **kompletní sadu vzájemně prováz
 
 ### 6.1 Obsah a struktura příkladů
 Každý příklad:
-- odpovídá konkrétnímu profilu (např. `CZ_CompositionHdr`, `CZ_ConditionHdr`, `CZ_PatientCore`),
-- reflektuje závazná pravidla (Obligations) a kardinality profilu,
-- využívá příslušné číselníky a terminologické bindingy (LOINC, SNOMED CT, ICD-10, UCUM),
+- odpovídá konkrétnímu profilu (např. `CZ_CompositionHdr`, `CZ_ConditionHdr`, `CZ_PatientCore`),  
+- reflektuje závazná pravidla (Obligations) a kardinality profilu,  
+- využívá příslušné číselníky a terminologické bindingy (LOINC, SNOMED CT, ICD-10, UCUM),  
 - je validní vůči definovanému profilu v rámci implementační příručky.
 
 ### 6.2 Úrovně zralosti datové struktury
-- **L1 (Nestrukturovaná verze)**  
-  Příklad obsahuje pouze základní metadata (`Composition`, `Patient`, `Encounter`) a `DocumentReference` s přiloženým PDF dokumentem.  
-  > Cíl: zajistit interoperabilitu i pro systémy bez strukturovaných dat.
-
-- **L2 (Strukturovaná verze)**  
-  Příklad ukazuje členění zprávy do pojmenovaných sekcí (`Composition.section`) s narativním obsahem v textové formě.  
-  > Cíl: standardizovat strukturu sekcí bez nutnosti formalizovaných kódů.
-
-- **L3 (Formální a kódovaná verze)**  
-  Příklad doplňuje formalizované a kódované údaje (např. diagnózy, léky, očkování) prostřednictvím navázaných profilů (`Condition`, `MedicationStatement`, `Immunization`, apod.).  
-  > Cíl: umožnit strojově zpracovatelnou interoperabilitu mezi systémy
+| Úroveň | Obsah příkladu | Struktura | Použití |
+|---------|----------------|------------|----------|
+| **L1** | PDF + metadata | `Composition`, `DocumentReference` | Minimální interoperabilita |
+| **L2** | Sekce + text | `Composition.section` | Strukturovaný narativ |
+| **L3** | Kódované položky | `Composition.section` + `Condition`, `Medication`, … | Strojová interoperabilita |
 
 ### 6.3 Typická sada resource pro příklad propouštěcí zprávy
 - `Composition` – hlavička a sekce dokumentu  
@@ -174,4 +183,7 @@ Příklady mají sloužit:
 - **tvůrcům a konzumentům** (L1–L3) jako ukázka rozsahu dat, které mají být dostupné,  
 - **testovacím scénářům** jako základ pro automatickou validaci proti profilům a závazným pravidlům (*Obligations*).
 
-> Každý příklad musí být validní vůči odpovídajícímu profilu (StructureDefinition) a mít správně navázané reference mezi resource.
+### 6.5 Validace příkladů
+Každý příklad musí být validní vůči příslušnému profilu (`StructureDefinition`) a mít správně navázané reference mezi resource.  
+Validaci lze provést pomocí nástroje **FHIR Validator**, IG Publisheru nebo jiného validačního rámce.  
+> Doporučuje se zahrnout validaci do testovací pipeline (např. CI/CD) jako kontrolu souladu s profily.
