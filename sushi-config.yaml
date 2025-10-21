@@ -10,7 +10,7 @@ title: HL7 Czech Hospital Discharge Report Implementation Guide
 description: This guide contains implementation specification for the HL7 Czech Hospital Discharge Report
 status: draft # draft | active | retired | unknown
 
-version: 0.0.2
+version: 0.1.0
 #language: #cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
@@ -41,16 +41,19 @@ publisher:
 dependencies:
   hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.eu.extensions.r4:
-    id: extensions
-    uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
-    version: 0.1.1-ballot
+  # hl7.fhir.eu.extensions.r4:
+  #   id: extensions
+  #   uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
+  #   version: 0.1.1-ballot
   hl7.fhir.eu.extensions: 0.1.1-ballot
   hl7.fhir.eu.laboratory: 0.1.1
   hl7.fhir.eu.base: 0.1.0-ballot
   hl7.fhir.eu.hdr: 0.1.0-ballot
   ihe.pharm.mpd: 1.0.0-comment-2
   hl7.fhir.cz.core: current
+    # id: cz-core
+    # uri: https://hl7.cz/fhir/core/ImplementationGuide/hl7.fhir.cz.core
+    # version: 0.3.0-ballot
   hl7.fhir.cz.lab: current
   hl7.fhir.cz.img: current
 
@@ -460,7 +463,7 @@ groups:
       - StructureDefinition/cz-organization-obl-hdr
 
   czech-logical-model:
-    name:  Czech logical model 
+    name:  Czech logical model
     description: Logical model in czech language. Informative for this version of the guide.
     resources:
       - StructureDefinition/LogAdmissionEvaluationCz

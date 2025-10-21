@@ -11,7 +11,7 @@ Description: "Czech HDR - example of a condition (Heart Failure)"
 * category[2] = $sct#69845001 "Received therapy or drug for"
 * severity = $sct#24484000 "Severe"
 * code = $icd10#I50 "Heart failure"
-* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000) 
+* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * onsetDateTime = "2025-01-01T08:00:00+01:00"
 * note.text = "Pacient byl přijat s diagnózou srdečního selhání. Byla zahájena léčba diuretiky a ACE inhibitory."
 
@@ -50,7 +50,7 @@ Description: "Czech HDR - example of a condition (Postoperative Hypothyroidism)"
 
 
 //--------------------------------------------
-Instance: Condition-K409 
+Instance: Condition-K409
 InstanceOf: CZ_ConditionHdr
 Usage: #example
 Title: "CZ-Condition-HDR Example K409"
