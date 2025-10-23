@@ -126,7 +126,7 @@ Description: "An example of the organization of a provider"
   * postalCode = "53701"
   * country = "Česká republika"
     * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
-
+//----------------------------------------------------------------------------------------------------------------------------
 Instance: Organization-L1
 InstanceOf: CZ_OrganizationCore
 Usage: #example
@@ -145,6 +145,55 @@ Description: "A minimalist example of the organization of a healthcare provider 
   * country = "Česká republika"
     * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
+//---------------------------------------------------------------------------------------------------------------
+Instance: Organization-L1-Odd
+InstanceOf: CZ_OrganizationCore
+Usage: #example
+Description: "A minimalist example of a subordinate department within a hospital hierarchy for the purposes of the L1 HDR document. "
+* id = "af2b3114-e872-43b9-9875-cceb39122f7f"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
+* identifier[=].value = "12345678"  
+* name = "CHIR - Oddělení chirurgie"
+* partOf = Reference(Organization-L1) "Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice"
+* telecom.system = #phone
+* telecom.value = "+42060385555"
+* address[+]
+  * use = #work
+  * line[+] = "Václavská 570"
+  * city = "Chrudim"
+  * postalCode = "53701"
+  * country = "Česká republika"
+    * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+//---------------------------------------------------------------------------------------------------------------
+Instance: Organization-L1-HOSP
+InstanceOf: CZ_OrganizationCore
+Usage: #example
+Description: "A minimalist example of a subordinate department within a hospital hierarchy for the purposes of the L1 HDR document. "
+* id = "a4641bd0-34af-4038-a7db-872d08a54df9"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
+* identifier[=].value = "12345678"  
+* name = "CHIR-L2 - Lůžková stanice 2"
+* partOf = Reference(Organization-L1-Odd) "Chirurgické oddělení - Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice"
+* telecom.system = #phone
+* telecom.value = "+42060385111"
+* address[+]
+  * use = #work
+  * line[+] = "Václavská 570"
+  * city = "Chrudim"
+  * postalCode = "53701"
+  * country = "Česká republika"
+    * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+//-----------------------------------------------------
+Instance: cz-practitionerRole-L1
+InstanceOf: CZ_PractitionerRoleCore
+Title: "Practitioner Role for L1 documentr"
+Description: "Author of HDR document (phisician MUDr.Ivan Anděl)"
+Usage: #example
+* id = "69d34ceb-b556-4f75-9e4c-9184fe8a10c5"
+* specialty = $sct#309343006 "Physician"
+* practitioner = Reference(urn:uuid:e234a53a-4e0d-4fb8-9403-e0e324a50f64) // ok
+* organization = Reference(urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9) // ok
+//-----------------------------------------------------------------------------------------------------------------
 Instance: Practitioner-2
 InstanceOf: CZ_PractitionerCore
 Usage: #example
@@ -324,16 +373,7 @@ Description: "practitioner's detail"
 * specialty = $sct#419192003 "Internal medicine"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ambulance interního lékařství, MUDr. Jiří Zdvořilý</div>"
 * text.status = #generated
-//-----------------------------------------------------
-Instance: cz-practitionerRole-L1
-InstanceOf: CZ_PractitionerRoleCore
-Title: "Practitioner Role for L1 documentr"
-Description: "Author of HDR document (phisician MUDr.Ivan Anděl)"
-Usage: #example
-* id = "69d34ceb-b556-4f75-9e4c-9184fe8a10c5"
-* specialty = $sct#309343006 "Physician"
-* practitioner = Reference(urn:uuid:e234a53a-4e0d-4fb8-9403-e0e324a50f64) // ok
-* organization = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1) // ok
+
 //-----------------------------------------------------
 Instance: Patient-Novak-Petr-L1
 InstanceOf: CZ_PatientCore
@@ -347,7 +387,8 @@ Description: "Example of patient Petr Novak with identification by czech nationa
   * value = "1597778923"
 * name.text = "Ing. Petr Novák, Ph.D."
 * name.family = "Novák"
-* name.given = "Petr"
+* name.given[0] = "Petr"
+* name.given[+] = "Pavel"
 * telecom[+].system = #phone
 * telecom[=].value = "+420777111222"
 * telecom[+].system = #email

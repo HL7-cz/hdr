@@ -39,22 +39,22 @@ Description: "Czech HDR - example of a Procedure - Acute appendicitis."
   <p>Reason: Akutní apendicitida</p>
   <p>Complication: Peritonitida</p>
   <p>Outcome: Částečně úspěšný</p>
-  <p>Text: Pacient byl přijat s akutní bolestí břicha, horečkou a známkami podráždění pobřišnice. 
-  Klinické vyšetření a zobrazovací metody potvrdily diagnózu akutní apendicitidy s generalizovanou peritonitidou (MKN-10: K35.2, K65.0). 
-  Byla provedena urgentní laparotomie, při které bylo odhaleno perforované apendix s difuzní hnisavou peritonitidou. 
-  Byla provedena apendektomie a následně peritoneální výplach a drenáž. 
+  <p>Text: Pacient byl přijat s akutní bolestí břicha, horečkou a známkami podráždění pobřišnice.
+  Klinické vyšetření a zobrazovací metody potvrdily diagnózu akutní apendicitidy s generalizovanou peritonitidou (MKN-10: K35.2, K65.0).
+  Byla provedena urgentní laparotomie, při které bylo odhaleno perforované apendix s difuzní hnisavou peritonitidou.
+  Byla provedena apendektomie a následně peritoneální výplach a drenáž.
   Byla podána pooperační antibiotika. Pacient se momentálně zotavuje pod pečlivým dohledem. </p>
 </div>
 """
- 
- 
+
+
 // Příklad zákroku s odkazem na přístroj
 Instance: Procedure-Insert-Pacemaker
 InstanceOf: CZ_ProcedureHdr
 Title: "CZ-Procedure-HDR Example - Pacemaker"
 Usage: #example
 Description: "Czech HDR - example of a Procedure - Pacemaker"
- 
+
 * contained[+] = Device-Pacemaker
 * status = #completed
 * code = $sct#70573000 "Insertion of pacemaker pulse generator"
@@ -77,19 +77,19 @@ Description: "Czech HDR - example of a Procedure - Pacemaker"
   <p>Device: Kardiostimulátor Medtronic W1DR01</p>
 </div>
 """
- 
-// HON Kvůli změně balíčku ips na 1.1.0, je potřeba aktualizovat i tuto instanci 
+
+// HON Kvůli změně balíčku ips na 1.1.0, je potřeba aktualizovat i tuto instanci
 // Instance: Procedure-No-Procedure
 // InstanceOf: CZ_ProcedureHdr
 // Title: "CZ-Procedure-HDR Example - No known procedures"
 // Description: "Czech HDR - example of a Procedure - No known procedures."
- 
+
 
 Instance: Procedure-No-Procedure
 InstanceOf: CZ_ProcedureHdr
 Title: "CZ-Procedure-HDR Example - No known procedures"
 Description: "Czech HDR - example of a Procedure - No known procedures."
- 
+
 * status = #completed
 * code = $absent-or-uknown#no-known-procedures "No known procedures"
 * subject = Reference(Mracena2)
@@ -100,7 +100,7 @@ Description: "Czech HDR - example of a Procedure - No known procedures."
 <p>No known procedures</p>
 </div>
 """
- 
+
  // 6. Procedure: Colonoscopy of angiodysplasia (CZ_ProcedureHdr)
 Instance: ColonoscopyProcedure
 InstanceOf: CZ_ProcedureHdr
@@ -124,7 +124,7 @@ Description: "Czech HDR - example of a Procedure - Colonoscopy"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Angiodyspl\u00e1zie v tra\u010dn\u00edku o\u0161et\u0159ena argonovou plazmakoagulac\u00ed.</div>"
 * text.status = #generated
 
-//--------------------------------------------------- 
+//---------------------------------------------------
 // Procedure: inguinal-hernia (CZ_ProcedureHdr)
 Instance: Procedure-inguinal-hernia
 InstanceOf: CZ_ProcedureHdr
