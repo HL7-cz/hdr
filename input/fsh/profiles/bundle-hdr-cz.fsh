@@ -63,7 +63,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     carePlan 0..* and
     goal 0..* and
     consent 0..* and
-    provenance 1..* and
+    provenance 0..* and
     coverage 0..*
 
 * entry[composition].resource only CZ_CompositionHdr

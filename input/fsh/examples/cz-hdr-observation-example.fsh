@@ -177,7 +177,7 @@ Description: "Czech HDR - example of an ultrasound observation for Novák Petr"
 * code = $sct#13221000087107 "Ultrasonography of groin and scrotum"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-10T10:00:00+01:00"
-* performer = Reference(Practitioner-UZV)
+* performer = Reference(urn:uuid:860c684f-aba1-40d9-94cf-721d70237b52) // Practitioner-UZV)
 * valueString = "UZ vyšetření pravého třísla: v oblasti tříselného kanálu patrný hypoechogenní vak komunikující s peritoneální dutinou, obsahující střevní kličku. Obsah je mobilní, bez známek ischemie. Závěr: vpravo tříselná kýla bez známek komplikace."
 
 //-----------------------------------------
@@ -193,7 +193,7 @@ Description: "Czech HDR - example of CRP observation for Novák Petr"
 * code = $nclp#07830 "Protein C - kontrola (P; rel. čas [1] *)"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-01T10:00:00+01:00"
-* performer = Reference(Practitioner-UZV)
+* performer = Reference(urn:uuid:860c684f-aba1-40d9-94cf-721d70237b52) // Practitioner-UZV)
 * valueQuantity.value = 6.0
 * valueQuantity.unit = "mg/L"
 * valueQuantity.system = $ucum
