@@ -251,37 +251,37 @@ Usage: #definition
 * group[=].element[=].target.comment = "if details about the body structure have to be provided"
 * group[=].element[+].code = #HospitalStay.significantProcedures.date
 * group[=].element[=].display = "A.2.7.2.4 - Procedure date"
-* group[=].element[=].target.code = #Procedure.perfomedDateTime	
+* group[=].element[=].target.code = #Procedure.perfomedDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #HospitalStay.significantProcedures.reason
 * group[=].element[=].display = "A.2.7.2.5 - Procedure reason"
-* group[=].element[=].target.code = #Procedure.reasonCode	
+* group[=].element[=].target.code = #Procedure.reasonCode
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #HospitalStay.significantProcedures.reason
 * group[=].element[=].display = "A.2.7.2.5 - Procedure reason"
-* group[=].element[=].target.code = #Procedure.reasonReference	
+* group[=].element[=].target.code = #Procedure.reasonReference
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #HospitalStay.significantProcedures.outcome
 * group[=].element[=].display = "A.2.7.2.6 - Outcome"
-* group[=].element[=].target.code = #Procedure.outcome	
+* group[=].element[=].target.code = #Procedure.outcome
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #HospitalStay.significantProcedures.complication
 * group[=].element[=].display = "A.2.7.2.7 - Complication"
-* group[=].element[=].target.code = #Procedure.complication	
+* group[=].element[=].target.code = #Procedure.complication
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #HospitalStay.significantProcedures.complication
 * group[=].element[=].display = "A.2.7.2.7 - Complication"
-* group[=].element[=].target.code = #Procedure.complicationDetail	
+* group[=].element[=].target.code = #Procedure.complicationDetail
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #HospitalStay.significantProcedures.focalDevice
 * group[=].element[=].display = "A.2.7.2.8 - Focal device"
-* group[=].element[=].target.code = #Procedure.focalDevice	
+* group[=].element[=].target.code = #Procedure.focalDevice
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #HospitalStay.medicalDevices.implantDate

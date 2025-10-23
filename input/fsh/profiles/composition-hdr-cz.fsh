@@ -65,7 +65,8 @@ Description: "This profile defines how to represent Composition resource in HL7 
 
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient]
-* extension[information-recipient].valueReference only Reference( CZ_PractitionerRoleCore or CZ_PractitionerCore or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+* extension[information-recipient].valueReference only Reference(  CZ_PractitionerCore or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+/* CZ_PractitionerRoleCore or*/
 
 /* GC TO DO
 - check if we need a R5 composition.status
@@ -86,12 +87,12 @@ Description: "This profile defines how to represent Composition resource in HL7 
 // * encounter only Reference (Encounter)
 
 * encounter only Reference (CZ_EncounterHdr)
-* encounter 1..1 
+* encounter 1..1
 
 * date ^short = "HDR date"
 * author ^short = "Who and/or what authored the Hospital Discharge Report"
 * author ^definition = "Identifies who is responsible for the information in the Hospital Discharge Report, not necessarily who typed it in."
-* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore 
+* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore
 
 
 * title ^short = "Hospital Discharge Report"
@@ -208,11 +209,11 @@ Description: "This profile defines how to represent Composition resource in HL7 
     Alert Section, // SHORT
     A warning\, other than included in allergies.
     The warning can be entered in code there are codes for frequently used alerts but seeing the dynamic nature of the warnings\, these alerts will often be entered as free text.
-    Any clinical information that is imperative to know so that the life or health of the patient does not come under threat. 
-    Example 1: the patient has a rare disease that requires special treatment 
+    Any clinical information that is imperative to know so that the life or health of the patient does not come under threat.
+    Example 1: the patient has a rare disease that requires special treatment
     Example 2: Airway Alert / Difficult Intubation
-    Example 3: Diagnoses such as malignant hyperthermia\, porphyria\, and bleeding disorders; special treatments like anticoagulants or immunosuppressants; implanted devices. 
-    Example 4: transplanted organs illustrate other information that has to be taken into account in a healthcare contact. 
+    Example 3: Diagnoses such as malignant hyperthermia\, porphyria\, and bleeding disorders; special treatments like anticoagulants or immunosuppressants; implanted devices.
+    Example 4: transplanted organs illustrate other information that has to be taken into account in a healthcare contact.
     Example 5: participation in a clinical trial that has to be taken into account in a healthcare contact. , // DESC
       http://loinc.org#104605-1 )   // CODE
   * entry 0..
@@ -494,7 +495,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 * section[sectionSubstanceUse]
   * insert SectionComRules (
     Use of Substances Section,
-    The Use of Substances Section contains a description of the use abuse of substances E.g. tobacco; alcohol; drugs,  
+    The Use of Substances Section contains a description of the use abuse of substances E.g. tobacco; alcohol; drugs,
     TemporaryHDRSystem#substance-use  )   // CODE
   * entry 0..
   * entry only Reference(Observation) // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips
@@ -506,10 +507,10 @@ $loinc#87232-5 ) // 	Medication administration.brief
 * section[sectionAlcoholUse]
   * insert SectionComRules (
     Alcohol use Section,
-    The Alcohol use Section contains a description of the use abuse of alcohol,  
+    The Alcohol use Section contains a description of the use abuse of alcohol,
     $loinc#11331-6  )   // History of Alcohol use
   * entry 0..
-  * entry only Reference(Observation) 
+  * entry only Reference(Observation)
 
 // -------------------------------------
 // Tobacco use Section
@@ -518,10 +519,10 @@ $loinc#87232-5 ) // 	Medication administration.brief
 * section[sectionTobaccoUse]
   * insert SectionComRules (
     Tobacco use Section,
-    The Tobacco use Section contains a description of the use abuse of tobacco,  
+    The Tobacco use Section contains a description of the use abuse of tobacco,
     $loinc#11367-0  )   // History of Tobacco use
   * entry 0..
-  * entry only Reference(Observation) 
+  * entry only Reference(Observation)
 
 // -------------------------------------
 // Drug use Section
@@ -530,7 +531,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 * section[sectionDrugUse]
   * insert SectionComRules (
     Drug use Section,
-    The Drug use Section contains a description of the use abuse of drugs,  
+    The Drug use Section contains a description of the use abuse of drugs,
     $loinc#11343-1  )   // History of Other nonmedical drug use
   * entry 0..
   * entry only Reference(Observation)
