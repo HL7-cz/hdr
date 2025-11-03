@@ -154,7 +154,7 @@ Description: "A minimalist example of a subordinate department within a hospital
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
 * identifier[=].value = "12345678"  
 * name = "CHIR - Oddělení chirurgie"
-* partOf = Reference(Organization-L1) "Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice"
+* partOf = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1) "Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice"
 * telecom.system = #phone
 * telecom.value = "+42060385555"
 * address[+]
@@ -173,7 +173,7 @@ Description: "A minimalist example of a subordinate department within a hospital
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
 * identifier[=].value = "12345678"  
 * name = "CHIR-L2 - Lůžková stanice 2"
-* partOf = Reference(Organization-L1-Odd) "Chirurgické oddělení - Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice"
+* partOf = Reference(urn:uuid:af2b3114-e872-43b9-9875-cceb39122f7f) "Chirurgické oddělení - Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice"
 * telecom.system = #phone
 * telecom.value = "+42060385111"
 * address[+]

@@ -191,8 +191,12 @@ Usage: #example
 //* entry[observation][=].resource = Observation-Education-level
 * entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000027"
 * entry[observation][=].resource = Observation-Education
-* entry[organization][+].fullUrl = "urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
-* entry[organization][=].resource = Organization-1
+* entry[organization][+].fullUrl = "urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9"
+* entry[organization][=].resource = Organization-L1-HOSP
+* entry[organization][+].fullUrl = "urn:uuid:af2b3114-e872-43b9-9875-cceb39122f7f"
+* entry[organization][=].resource = Organization-L1-Odd
+* entry[organization][+].fullUrl = "urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1"
+* entry[organization][=].resource = Organization-L1
 // TODO: Add DocumentReference resources (PDF, HTML) ale nikoliv propouštěcí zprávu, např. záznam konzilia atp.
 // Prezentovatelná forma dokumentu je součástí kompozice, zde by byla vložena duplicitně
 // proto jsou tyto dva řádky zakomentovány
