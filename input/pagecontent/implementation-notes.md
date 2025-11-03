@@ -39,6 +39,7 @@ This document serves as a **general template** (e.g., for discharge summaries, r
 ---
 
 ### Chapter Overview
+
 | Chapter | Purpose | Output / Artifact |
 |----------|----------|-------------------|
 | **Logical Model** | Clinical structure of the document content | Table of elements (CZ/EN) |
@@ -82,11 +83,13 @@ It ensures that **each item of the logical model is unambiguously represented** 
 **CZ Hospital Discharge Report Model → CZ FHIR Implementation Guide**
 
 #### Group 1 – Mapping from A – Hospital Discharge Report (eHN) → Bundle (HDR CZ)
+
 | Source Code | Relationship | Target Code | Comment |
 |--------------|---------------|--------------|----------|
 | HospitalDischargeReport.header (A.1 – Hospital Discharge Report header data element) | is related to | Bundle | See the header model and map for details |
 
 #### Group 2 – Mapping from A – Hospital Discharge Report (eHN) → Composition (HDR CZ)
+
 | Source Code | Relationship | Target Code | Comment |
 |--------------|---------------|--------------|----------|
 | HospitalDischargeReport.body (A.2 – Hospital Discharge Report body data element) | is related to | Composition | See details below |
@@ -191,6 +194,7 @@ Each example:
 - validates successfully against the respective profile within the Implementation Guide.
 
 ### 6.2 Data Structure Maturity Levels
+
 | Level | Example Content | Structure | Usage |
 |--------|------------------|------------|--------|
 | **L1** | PDF + metadata | `Composition`, `DocumentReference` | Minimal interoperability |
