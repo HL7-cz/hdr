@@ -38,6 +38,7 @@ Tento dokument je obecná šablona (např. pro propouštěcí zprávu, žádanky
 ---
 
 ### Přehled kapitol
+
 | Kapitola | Účel | Výstup / Artefakt |
 |-----------|------|-------------------|
 | **Logický model** | Klinická struktura obsahu dokumentu | Tabulka prvků (CZ/EN) |
@@ -81,11 +82,13 @@ Slouží k tomu, aby bylo jednoznačně určeno, **kam se jednotlivé položky l
 **CZ Hospital Discharge Report Model → CZ FHIR Implementation Guide**
 
 #### Group 1 – Mapping from A – Hospital Discharge Report (eHN) → Bundle (HDR CZ)
+
 | Source Code | Relationship | Target Code | Comment |
 |--------------|---------------|--------------|----------|
 | HospitalDischargeReport.header (A.1 – Hospital Discharge Report header data element) | is related to | Bundle | See the header model and map for details |
 
 #### Group 2 – Mapping from A – Hospital Discharge Report (eHN) → Composition (HDR CZ)
+
 | Source Code | Relationship | Target Code | Comment |
 |--------------|---------------|--------------|----------|
 | HospitalDischargeReport.body (A.2 – Hospital Discharge Report body data element) | is related to | Composition | See details below |
@@ -190,6 +193,7 @@ Každý příklad:
 - je validní vůči definovanému profilu v rámci implementační příručky.
 
 ### 6.2 Úrovně zralosti datové struktury
+
 | Úroveň | Obsah příkladu | Struktura | Použití |
 |---------|----------------|------------|----------|
 | **L1** | PDF + metadata | `Composition`, `DocumentReference` | Minimální interoperabilita |
