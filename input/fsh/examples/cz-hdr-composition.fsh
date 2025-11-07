@@ -278,6 +278,25 @@ Usage: #example
   </div>"""
 * section[sectionFamilyHistory].text.status = #additional
 
+//Add section PatientHx
+* section[sectionPatientHx].title = "Osobní anamnéza"
+* section[sectionPatientHx].code.coding[0].system = "http://loinc.org"
+* section[sectionPatientHx].code.coding[0].code = #35090-0 // Patient history note
+* section[sectionPatientHx].text.div = """
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>Osobní anamnéza: pacient prodělal v roce 2015 apendektomii, v roce 2018 byl léčen pro hypertenzi. V roce 2020 prodělal chřipku bez komplikací. V anamnéze je také hypotyreóza, léčená substituční terapií (Euthyrox 75 µg denně).</p>
+  </div>"""
+* section[sectionPatientHx].text.status = #additional
+
+* section[sectionFamilyHistory].title = "Rodinná anamnéza"
+* section[sectionFamilyHistory].code.coding[0].system = "http://loinc.org"
+* section[sectionFamilyHistory].code.coding[0].code = #10157-6 // Corrected code assignment
+* section[sectionFamilyHistory].code.coding[0].display = "History of family member diseases note"
+* section[sectionFamilyHistory].text.div = """
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>Rodinná anamnéza: matka zemřela na infarkt ve věku 75 let, otec žije, má 80 let a trpí hypertenzí. Sourozenci zdraví.</p>
+  </div>"""
+* section[sectionFamilyHistory].text.status = #additional
 
 //Add section for social history
 * section[sectionSocialHistory].title = "Sociální anamnéza"
@@ -745,7 +764,18 @@ Usage: #example
 //Volitelné části
 
 
-//Anamnéza
+//
+
+//Add section PatientHx
+* section[sectionPatientHx].title = "Osobní anamnéza"
+* section[sectionPatientHx].code.coding[0].system = "http://loinc.org"
+* section[sectionPatientHx].code.coding[0].code = #35090-0 // Patient history note
+* section[sectionPatientHx].text.div = """
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>Osobní anamnéza: pacient prodělal v roce 2015 apendektomii, v roce 2018 byl léčen pro hypertenzi. V roce 2020 prodělal chřipku bez komplikací. V anamnéze je také hypotyreóza, léčená substituční terapií (Euthyrox 75 µg denně).</p>
+  </div>"""
+* section[sectionPatientHx].text.status = #additional
+
 ///Add section for Family History
 * section[sectionFamilyHistory].title = "Rodinná anamnéza"
 * section[sectionFamilyHistory].code.coding[0].system = "http://loinc.org"
