@@ -18,30 +18,30 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
 * group[=].element[+].code = #PatientHistory.medicalHistory
 * group[=].element[=].display = "A.2.6.1 - Medical history"
-* group[=].element[=].target.code = #Composiiton.section
+* group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "several sections"
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfConditions
 * group[=].element[=].display = "A.2.6.1.1 - History of problems"
-* group[=].element[=].target.code = #Composiiton.section:sectionDiagnosticSummary
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPastIllnessHx
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "The same section used by the hospital stay ?"
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfConditions.resolution
 * group[=].element[=].display = "A.2.6.1.1.6 - Resolution circumstances"
-* group[=].element[=].target.code = #Composition.section:sectionDiagnosticSummary.text
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPastIllnessHx.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "The resolution circumstances may be described as resource or composiiton.section text ; or indirectly determined by the resource (e.g. Procedure) that has been perfomed in reason of this Condition no more active"
 * group[=].element[+].code = #PatientHistory.medicalHistory.medicalDevices
 * group[=].element[=].display = "A.2.6.1.2 - Devices and Implants"
-* group[=].element[=].target.code = #Composition.section:sectionMedicalDevices
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionHistoryMedicalDevices
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #PatientHistory.medicalHistory.vaccination
 * group[=].element[=].display = "A.2.6.1.4 - Vaccination"
-* group[=].element[=].target.code = #Composition.section:sectionImmunizations
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionImmunizations
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory
@@ -52,45 +52,45 @@ Usage: #definition
 * group[=].element[=].target.comment = "decison not to have as distict section"
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts
 * group[=].element[=].display = "A.2.6.1.5.1 - Infectious contacts"
-* group[=].element[=].target.code = #Composition.section:infectiousContacts
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionInfectiousContacts
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.travelHistory
 * group[=].element[=].display = "A.2.6.1.5.2 - Travel history"
-* group[=].element[=].target.code = #Composition.section:sectionTravelHx
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionTravelHx
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.travelHistory.period
 * group[=].element[=].display = "A.2.6.1.5.2.1 - Time period"
-* group[=].element[=].target.code = #Composition.section:sectionTravelHx
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionTravelHx
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "To be specified"
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.travelHistory.country
 * group[=].element[=].display = "A.2.6.1.5.2.2 - Country visited"
-* group[=].element[=].target.code = #Composition.section:sectionTravelHx
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionTravelHx
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "To be specified"
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.travelHistory.comment
 * group[=].element[=].display = "A.2.6.1.5.2.3 - Comment"
-* group[=].element[=].target.code = #Composition.section:sectionTravelHx
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionTravelHx
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "To be specified"
 * group[=].element[+].code = #PatientHistory.familyHistory
 * group[=].element[=].display = "A.2.6.2 - Family history"
-* group[=].element[=].target.code = #Composition.section:sectionFamilyHistory
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionFamilyHistory
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #PatientHistory.socialDeterminants
 * group[=].element[=].display = "A.2.6.3 - Social determinants of health"
-* group[=].element[=].target.code = #Composition.section:sectionSocialHistory
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionSocialHistory
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #PatientHistory.useOfSubstances
 * group[=].element[=].display = "A.2.6.4 - Use of substances"
-* group[=].element[=].target.code = #Composition.section:sectionSocialHistory
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionSocialHistory
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "To be specified"
@@ -189,7 +189,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfProcedures
 * group[=].element[=].display = "A.2.6.1.3 - History of procedures"
-* group[=].element[=].target.code = #Composition.section:sectionSignificantProcedures
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionSignificantProcedures
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "The same section usd by the hospital stay ?"
@@ -518,13 +518,13 @@ Usage: #definition
 * group[=].element[=].target.comment = "In the current value set the disease is indicated"
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts.proximity
 * group[=].element[=].display = "A.2.6.1.5.1.3 - Proximity"
-* group[=].element[=].target.code = #Composition.section:infectiousContacts
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionInfectiousContacts
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "in this version as textual description"
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts.country
 * group[=].element[=].display = "A.2.6.1.5.1.4 - Country"
-* group[=].element[=].target.code = #Composition.section:infectiousContacts
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionInfectiousContacts
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "in this version as textual description"
