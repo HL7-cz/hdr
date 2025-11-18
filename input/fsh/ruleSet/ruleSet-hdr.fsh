@@ -55,6 +55,9 @@ RuleSet: EvaluationSubSectionRules
     Anthropometric Observations sub-section,
     $sct#248326004) // to be updated
   * entry 1..
+  * entry only Reference(CZ_ObservationAbdominalCircumferenceHdr or CZ_ObservationHeightHdr or CZ_ObservationWeightHdr or CZ_ObservationBMIHdr or CZ_ObservationHeadCircumferenceHdr or CZ_ObservationChestCircumferenceHdr or Observation) 
+    * ^short = "Entry used to represent anthropometric measurements"
+    * ^definition = "It describes findings from anthropometric measurements of the patient, such as height, weight, BMI, head circumference, chest circumference, abdominal circumference"
   /* * entry only Reference(BodyHeightXpandh or BodyWeightXpandh or BMIProfileXpandh or SkinfoldThicknessXpandh or CircumferenceMeasurementXpandh)
    */
 
@@ -68,6 +71,10 @@ RuleSet: EvaluationSubSectionRules
 /*   * title = "Vital signs"
   * code = $sct#1184593002 "Vital sign document section (record artifact)" */
   * entry 1..
+  * entry only Reference(Observation) ///HON Tady by to chtělo dodělat profily pro jednotlivé vital signs
+    * ^short = "Entry used to represent vital sign measurements"
+    * ^definition = "It describes findings from vital sign measurements of the patient. Profiles to express structured vital sign measurements will be specified by future versions of this guide."
+
 
   /* * entry only Reference(BloodPressureXpandh or HeartRateXpandh or RespiratoryRateXpandh or BodyTemperatureXpandh or OxygenSaturationXpandh )
  */
@@ -79,6 +86,9 @@ RuleSet: EvaluationSubSectionRules
   * code = $sct#425044008 "Physical exam section (record artifact)"
   * text 1..    // now only textual section, should we use questionnair resource for structuring per body part? Maybe as on option?
   * entry 0..   // now only textual section, should we use questionnair response or Observation for structuring per body part?
+  * entry only Reference(ClinicalImpression or Observation or DocumentReference or QuestionnaireResponse)
+    * ^short = "Optional entry used to represent physical examination findings"
+    * ^definition = "It describes findings from physical examination of the patient. Profiles to express structured physical examination findings will be specified by future versions of this guide."
 
 * section contains sectionFunctionalStatus 0..1
 * section[sectionFunctionalStatus]
