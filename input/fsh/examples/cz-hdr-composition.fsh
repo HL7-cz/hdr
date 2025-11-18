@@ -267,16 +267,6 @@ Usage: #example
 
 
 //Anamnéza
-///Add section for Family History
-* section[sectionFamilyHistory].title = "Rodinná anamnéza"
-* section[sectionFamilyHistory].code.coding[0].system = "http://loinc.org"
-* section[sectionFamilyHistory].code.coding[0].code = #10157-6 // Corrected code assignment
-* section[sectionFamilyHistory].code.coding[0].display = "History of family member diseases note"
-* section[sectionFamilyHistory].text.div = """
-  <div xmlns="http://www.w3.org/1999/xhtml">
-    <p>Rodinná anamnéza: matka zemřela na infarkt ve věku 75 let, otec žije, má 80 let a trpí hypertenzí. Sourozenci zdraví.</p>
-  </div>"""
-* section[sectionFamilyHistory].text.status = #additional
 
 //Add section PatientHx
 * section[sectionPatientHx].title = "Osobní anamnéza"
@@ -288,22 +278,22 @@ Usage: #example
   </div>"""
 * section[sectionPatientHx].text.status = #additional
 
-* section[sectionFamilyHistory].title = "Rodinná anamnéza"
-* section[sectionFamilyHistory].code.coding[0].system = "http://loinc.org"
-* section[sectionFamilyHistory].code.coding[0].code = #10157-6 // Corrected code assignment
-* section[sectionFamilyHistory].code.coding[0].display = "History of family member diseases note"
-* section[sectionFamilyHistory].text.div = """
+* section[sectionPatientHx].section[sectionFamilyHistory].title = "Rodinná anamnéza"
+* section[sectionPatientHx].section[sectionFamilyHistory].code.coding[0].system = "http://loinc.org"
+* section[sectionPatientHx].section[sectionFamilyHistory].code.coding[0].code = #10157-6 // Corrected code assignment
+* section[sectionPatientHx].section[sectionFamilyHistory].code.coding[0].display = "History of family member diseases note"
+* section[sectionPatientHx].section[sectionFamilyHistory].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Rodinná anamnéza: matka zemřela na infarkt ve věku 75 let, otec žije, má 80 let a trpí hypertenzí. Sourozenci zdraví.</p>
   </div>"""
-* section[sectionFamilyHistory].text.status = #additional
+* section[sectionPatientHx].section[sectionFamilyHistory].text.status = #additional
 
 //Add section for social history
-* section[sectionSocialHistory].title = "Sociální anamnéza"
-* section[sectionSocialHistory].code.coding[0].system = "http://loinc.org"
-* section[sectionSocialHistory].code.coding[0].code = #29762-2 // Corrected code assignment
-* section[sectionSocialHistory].code.coding[0].display = "Social history note"
-* section[sectionSocialHistory].text.div = """
+* section[sectionPatientHx].section[sectionSocialHistory].title = "Sociální anamnéza"
+* section[sectionPatientHx].section[sectionSocialHistory].code.coding[0].system = "http://loinc.org"
+* section[sectionPatientHx].section[sectionSocialHistory].code.coding[0].code = #29762-2 // Corrected code assignment
+* section[sectionPatientHx].section[sectionSocialHistory].code.coding[0].display = "Social history note"
+* section[sectionPatientHx].section[sectionSocialHistory].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
   <p><strong>Společenské uplatnění</strong></p>
     <p>Pracovní zapojení: Pacient pracuje jako programátor na plný úvazek v IT firmě.</p>
@@ -312,40 +302,40 @@ Usage: #example
   <p><strong>Vzdělání</strong></p>
     <p>Dosažený stupeň vzdělání: Pacient má vysokoškolské vzdělání v oboru informatiky.</p>
   </div>"""
-* section[sectionSocialHistory].text.status = #additional
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000022)
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000027)
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c)
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001d)
+* section[sectionPatientHx].section[sectionSocialHistory].text.status = #additional
+* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000022)
+* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000027)
+* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c)
+* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001d)
 
 //Add section for imunizations
-* section[sectionImmunizations].title = "Očkování"
-* section[sectionImmunizations].code.coding[0].system = "http://loinc.org"
-* section[sectionImmunizations].code.coding[0].code = #11369-6
-* section[sectionImmunizations].code.coding[0].display = "History of Immunization note"
-* section[sectionImmunizations].text.div = """
+* section[sectionPatientHx].section[sectionImmunizations].title = "Očkování"
+* section[sectionPatientHx].section[sectionImmunizations].code.coding[0].system = "http://loinc.org"
+* section[sectionPatientHx].section[sectionImmunizations].code.coding[0].code = #11369-6
+* section[sectionPatientHx].section[sectionImmunizations].code.coding[0].display = "History of Immunization note"
+* section[sectionPatientHx].section[sectionImmunizations].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Pacient byl očkován vakcínou proti onemocnění COVID-19 (SNOMED CT: 1119349007) dne 5. 5. 2021. Očkování bylo provedeno a zaznamenáno jako kompletní, bez komplikací.</p>
   </div>
   """
-* section[sectionImmunizations].text.status = #generated
-* section[sectionImmunizations].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001e)
+* section[sectionPatientHx].section[sectionImmunizations].text.status = #generated
+* section[sectionPatientHx].section[sectionImmunizations].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001e)
 
 // Sekce Infekční kontakty
-* section[sectionInfectiousContacts].title = "Infekční kontakty"
-* section[sectionInfectiousContacts].code = TemporaryHDRSystem#infection-contact "Infectious contacts"
-* section[sectionInfectiousContacts].text.status = #additional
-* section[sectionInfectiousContacts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient byl v kontaktu s osobou nakaženou COVID-19.</p></div>"
-* section[sectionInfectiousContacts].entry[0] = Reference(urn:uuid:af4dcfeb-2cb3-4fc8-98e2-5c8f0b2d4e3a)
+* section[sectionPatientHx].section[sectionInfectiousContacts].title = "Infekční kontakty"
+* section[sectionPatientHx].section[sectionInfectiousContacts].code = TemporaryHDRSystem#infection-contact "Infectious contacts"
+* section[sectionPatientHx].section[sectionInfectiousContacts].text.status = #additional
+* section[sectionPatientHx].section[sectionInfectiousContacts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient byl v kontaktu s osobou nakaženou COVID-19.</p></div>"
+* section[sectionPatientHx].section[sectionInfectiousContacts].entry[0] = Reference(urn:uuid:af4dcfeb-2cb3-4fc8-98e2-5c8f0b2d4e3a)
 
 
 // Sekce cestovatelská anamnéza
-* section[sectionTravelHx].title = "Cestovatelská anamnéza"
-* section[sectionTravelHx].code = $loinc#10182-4 "History of Travel note"
-* section[sectionTravelHx].text.status = #additional
-* section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient nedávno cestoval na Madagaskar.</p></div>"
-* section[sectionTravelHx].entry[0] = Reference(urn:uuid:f95f843e-701f-434a-94c9-3c8f0b2d4e3a)
-* section[sectionTravelHx].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) // Example reference to a travel history observation
+* section[sectionPatientHx].section[sectionTravelHx].title = "Cestovatelská anamnéza"
+* section[sectionPatientHx].section[sectionTravelHx].code = $loinc#10182-4 "History of Travel note"
+* section[sectionPatientHx].section[sectionTravelHx].text.status = #additional
+* section[sectionPatientHx].section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient nedávno cestoval na Madagaskar.</p></div>"
+* section[sectionPatientHx].section[sectionTravelHx].entry[0] = Reference(urn:uuid:f95f843e-701f-434a-94c9-3c8f0b2d4e3a)
+* section[sectionPatientHx].section[sectionTravelHx].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) // Example reference to a travel history observation
 
 
 //* section[sectionHospitalCourse].title = "Průběh hospitalizace - klinické shrnutí"
@@ -777,23 +767,23 @@ Usage: #example
 * section[sectionPatientHx].text.status = #additional
 
 ///Add section for Family History
-* section[sectionFamilyHistory].title = "Rodinná anamnéza"
-* section[sectionFamilyHistory].code.coding[0].system = "http://loinc.org"
-* section[sectionFamilyHistory].code.coding[0].code = #10157-6 // Corrected code assignment
-* section[sectionFamilyHistory].code.coding[0].display = "History of family member diseases note"
-* section[sectionFamilyHistory].text.div = """
+* section[sectionPatientHx].section[sectionFamilyHistory].title = "Rodinná anamnéza"
+* section[sectionPatientHx].section[sectionFamilyHistory].code.coding[0].system = "http://loinc.org"
+* section[sectionPatientHx].section[sectionFamilyHistory].code.coding[0].code = #10157-6 // Corrected code assignment
+* section[sectionPatientHx].section[sectionFamilyHistory].code.coding[0].display = "History of family member diseases note"
+* section[sectionPatientHx].section[sectionFamilyHistory].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Rodinná anamnéza: matka zemřela na infarkt ve věku 75 let, otec žije, má 80 let a trpí hypertenzí. Sourozenci zdraví.</p>
   </div>"""
-* section[sectionFamilyHistory].text.status = #additional
+* section[sectionPatientHx].section[sectionFamilyHistory].text.status = #additional
 
 
 //Add section for social history
-* section[sectionSocialHistory].title = "Sociální anamnéza"
-* section[sectionSocialHistory].code.coding[0].system = "http://loinc.org"
-* section[sectionSocialHistory].code.coding[0].code = #29762-2 // Corrected code assignment
-* section[sectionSocialHistory].code.coding[0].display = "Social history note"
-* section[sectionSocialHistory].text.div = """
+* section[sectionPatientHx].section[sectionSocialHistory].title = "Sociální anamnéza"
+* section[sectionPatientHx].section[sectionSocialHistory].code.coding[0].system = "http://loinc.org"
+* section[sectionPatientHx].section[sectionSocialHistory].code.coding[0].code = #29762-2 // Corrected code assignment
+* section[sectionPatientHx].section[sectionSocialHistory].code.coding[0].display = "Social history note"
+* section[sectionPatientHx].section[sectionSocialHistory].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
   <p><strong>Společenské uplatnění</strong></p>
     <p>Pracovní zapojení: Pacient pracuje jako programátor na plný úvazek v IT firmě.</p>
@@ -802,40 +792,40 @@ Usage: #example
   <p><strong>Vzdělání</strong></p>
     <p>Dosažený stupeň vzdělání: Pacient má vysokoškolské vzdělání v oboru informatiky.</p>
   </div>"""
-* section[sectionSocialHistory].text.status = #additional
-* section[sectionSocialHistory].entry[+] = Reference(Observation-Participation-in-society)
-* section[sectionSocialHistory].entry[+] = Reference(Observation-Education)
-* section[sectionSocialHistory].entry[+] = Reference(ExampleSdohSmokingEnded)
-* section[sectionSocialHistory].entry[+] = Reference(ExampleSdohAlcoholSporadic)
+* section[sectionPatientHx].section[sectionSocialHistory].text.status = #additional
+* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(Observation-Participation-in-society)
+* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(Observation-Education)
+* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(ExampleSdohSmokingEnded)
+* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(ExampleSdohAlcoholSporadic)
 
 //Add section for imunizations
-* section[sectionImmunizations].title = "Očkování"
-* section[sectionImmunizations].code.coding[0].system = "http://loinc.org"
-* section[sectionImmunizations].code.coding[0].code = #11369-6
-* section[sectionImmunizations].code.coding[0].display = "History of Immunization note"
-* section[sectionImmunizations].text.div = """
+* section[sectionPatientHx].section[sectionImmunizations].title = "Očkování"
+* section[sectionPatientHx].section[sectionImmunizations].code.coding[0].system = "http://loinc.org"
+* section[sectionPatientHx].section[sectionImmunizations].code.coding[0].code = #11369-6
+* section[sectionPatientHx].section[sectionImmunizations].code.coding[0].display = "History of Immunization note"
+* section[sectionPatientHx].section[sectionImmunizations].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Pacient byl očkován vakcínou proti onemocnění COVID-19 (SNOMED CT: 1119349007) dne 5. 5. 2021. Očkování bylo provedeno a zaznamenáno jako kompletní, bez komplikací.</p>
   </div>
   """
-* section[sectionImmunizations].text.status = #generated
-* section[sectionImmunizations].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001e)
+* section[sectionPatientHx].section[sectionImmunizations].text.status = #generated
+* section[sectionPatientHx].section[sectionImmunizations].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001e)
 
 // Sekce Infekční kontakty
-* section[sectionInfectiousContacts].title = "Infekční kontakty"
-* section[sectionInfectiousContacts].code = TemporaryHDRSystem#infection-contact "Infectious contacts"
-* section[sectionInfectiousContacts].text.status = #additional
-* section[sectionInfectiousContacts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient byl v kontaktu s osobou nakaženou COVID-19.</p></div>"
-* section[sectionInfectiousContacts].entry[0] = Reference(urn:uuid:af4dcfeb-2cb3-4fc8-98e2-5c8f0b2d4e3a)
+* section[sectionPatientHx].section[sectionInfectiousContacts].title = "Infekční kontakty"
+* section[sectionPatientHx].section[sectionInfectiousContacts].code = TemporaryHDRSystem#infection-contact "Infectious contacts"
+* section[sectionPatientHx].section[sectionInfectiousContacts].text.status = #additional
+* section[sectionPatientHx].section[sectionInfectiousContacts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient byl v kontaktu s osobou nakaženou COVID-19.</p></div>"
+* section[sectionPatientHx].section[sectionInfectiousContacts].entry[0] = Reference(urn:uuid:af4dcfeb-2cb3-4fc8-98e2-5c8f0b2d4e3a)
 
 
 // Sekce cestovatelská anamnéza
-* section[sectionTravelHx].title = "Cestovatelská anamnéza"
-* section[sectionTravelHx].code = $loinc#10182-4 "History of Travel note"
-* section[sectionTravelHx].text.status = #additional
-* section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient nedávno cestoval na Madagaskar.</p></div>"
-* section[sectionTravelHx].entry[0] = Reference(urn:uuid:f95f843e-701f-434a-94c9-3c8f0b2d4e3a)
-* section[sectionTravelHx].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) // Example reference to a travel history observation
+* section[sectionPatientHx].section[sectionTravelHx].title = "Cestovatelská anamnéza"
+* section[sectionPatientHx].section[sectionTravelHx].code = $loinc#10182-4 "History of Travel note"
+* section[sectionPatientHx].section[sectionTravelHx].text.status = #additional
+* section[sectionPatientHx].section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacient nedávno cestoval na Madagaskar.</p></div>"
+* section[sectionPatientHx].section[sectionTravelHx].entry[0] = Reference(urn:uuid:f95f843e-701f-434a-94c9-3c8f0b2d4e3a)
+* section[sectionPatientHx].section[sectionTravelHx].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) // Example reference to a travel history observation
 
 
 //* section[sectionHospitalCourse].title = "Průběh hospitalizace - klinické shrnutí"
