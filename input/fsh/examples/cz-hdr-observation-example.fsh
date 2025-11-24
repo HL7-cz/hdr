@@ -5,7 +5,7 @@ Description: "Example instance for SDOH observation (assessment-based) using CZ_
 * status = #final
 * category[SocialHistory] = $observation-category#social-history
 //* category[SDOH] = SDOHCCValueSetSDOHCategory#food-insecurity
-* code = LOINC#88124-3 "Food insecurity risk [HVS]"
+* code = $loinc#88124-3 "Food insecurity risk [HVS]"
 * subject = Reference(Mracena2)
 * effectiveDateTime = "2024-03-28"
 * performer = Reference(Practitioner-2)
