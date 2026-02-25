@@ -32,3 +32,4 @@ Description: """Hospital Discharge Report - Encounter - A.2.3 eHN"""
 * location.organization.identifier 0..1 Identifier "A.2.3.6.2 - Organisation Part ID" """The organisation’s part identifier."""
 * location.organization.name 1..1 string "A.2.3.6.3 - Organisation Part Name" """Full name of the organisation part, e.g. Name of the department"""
 * location.organization.details 0..1 Base "A.2.3.6.4 - Organisation Part Details" """Address, contact names and contact details, specialty of the organisation part."""
+

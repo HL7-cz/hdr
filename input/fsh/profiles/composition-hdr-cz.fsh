@@ -665,8 +665,21 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * ^definition = "This section includes heath insurance and payment information."
   * entry only Reference(CZ_Coverage) // ==> Add Profile
 
-// -------------------------------------
 
+
+// -------------------------------------
+* section contains sectionDelivery 0..1
+* section[sectionDelivery]
+  * insert SectionComRules(
+      Delivery,
+      Information about labour\, delivery and newborn outcome.,
+      http://loinc.org#57074-7 ) // "Delivery note"
+  * entry only Reference(
+        CZ_ProcedureHdr
+     or Observation
+     or CZ_ConditionHdr
+     or CZ_PatientCore
+  )
 
 
 // // -------------------------------------------------------------
