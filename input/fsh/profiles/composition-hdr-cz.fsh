@@ -60,7 +60,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * data ^short = "B64 in-line data"
   * url ^short = "URL of the document"
 
-* extension contains $composition.version-r5 named compositionVersionR5 0..
+* extension contains $composition.version-r5 named compositionVersionR5 0..1
 * extension[compositionVersionR5].valueString ^short = "Business version"
 
 * extension contains $information-recipient named information-recipient 0..*
@@ -218,6 +218,24 @@ Description: "This profile defines how to represent Composition resource in HL7 
     $loinc#8648-8 )   // "Hospital course Narrative"
   * ^short = "Significant information about course of hospital stay"
   * ^definition = "This section includes basic information about hospital staty (encounter), diagnostic summary in narrative form, pharmacotherapy, major procedures, medical devices, significant findings during hospital stay and clinical synthesis."
+* section[sectionHospitalCourse].section ^slicing.discriminator[0].type = #value
+* section[sectionHospitalCourse].section ^slicing.discriminator[0].path = "code"
+* section[sectionHospitalCourse].section ^slicing.ordered = false
+* section[sectionHospitalCourse].section ^slicing.rules = #open
+* section[sectionHospitalCourse].section contains sectionDelivery 0..1
+* section[sectionHospitalCourse].section[sectionDelivery]
+  * insert SectionComRules(
+      Delivery,
+      Information about labour\, delivery and newborn outcome.,
+      http://loinc.org#57074-7 ) // "Delivery note"
+  * entry only Reference(
+        CZ_ProcedureHdr
+     or CZ_ProcedureMethodOfDelivery
+     or CZ_ProcedureInductionOfLabor
+     or Observation
+     or CZ_ConditionHdr
+     or CZ_PatientCore
+  )
 
 * section contains sectionDiagnosticSummary 0..1
 * section[sectionDiagnosticSummary]
@@ -665,21 +683,6 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * ^definition = "This section includes heath insurance and payment information."
   * entry only Reference(CZ_Coverage) // ==> Add Profile
 
-
-
-// -------------------------------------
-* section contains sectionDelivery 0..1
-* section[sectionDelivery]
-  * insert SectionComRules(
-      Delivery,
-      Information about labour\, delivery and newborn outcome.,
-      http://loinc.org#57074-7 ) // "Delivery note"
-  * entry only Reference(
-        CZ_ProcedureHdr
-     or Observation
-     or CZ_ConditionHdr
-     or CZ_PatientCore
-  )
 
 
 // // -------------------------------------------------------------
