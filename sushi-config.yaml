@@ -39,7 +39,7 @@ publisher:
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
 dependencies:
-  hl7.fhir.uv.ips: 1.1.0
+  hl7.fhir.uv.ips: 2.0.0
   hl7.fhir.extensions.r5: 4.0.1
   # hl7.fhir.eu.extensions.r4:
   #   id: extensions
@@ -174,8 +174,6 @@ pages:
     title: HospitalDischargeReport Relationships
   Header-map.html:
     title: Header Relationships
-  Subject-map.html:
-    title: Subject Relationships
   InPatientEncounter-map.html:
     title: InPatientEncounter Relationships
   AdmissionEvaluation-map.html:
@@ -466,23 +464,22 @@ groups:
     name:  Czech logical model
     description: Logical model in czech language. Informative for this version of the guide.
     resources:
-      - StructureDefinition/LogAdmissionEvaluationCz
-      - StructureDefinition/LogAdvanceDirectivesCz
-      - StructureDefinition/LogAlertsCz
-      - StructureDefinition/LogAttachmentsCz
-      - StructureDefinition/LogdigitalSignatureCz
-      - StructureDefinition/LogDischargeDetailsCz
-      - StructureDefinition/LogInPatientEncounterCz
-      - StructureDefinition/LogFunctionalStatusCz
-      - StructureDefinition/LogHeaderHdrCz
-      - StructureDefinition/LogHospitalDischargeReportCz
-      - StructureDefinition/LogHospitalStayCz
-      - StructureDefinition/LogMedicationSummaryCz
-      - StructureDefinition/LogCzObjectiveFindingsCz
-      - StructureDefinition/LogPlanOfCareCz
-      - StructureDefinition/LogPatientHistoryCz
-      - StructureDefinition/LogSubjectCz
-      - StructureDefinition/LogPresentedFormCz
+      - StructureDefinition/LMAdmissionEvaluationCz
+      - StructureDefinition/LMAdvanceDirectivesCz
+      - StructureDefinition/LMAlertsCz
+      - StructureDefinition/LMAttachmentsCz
+      - StructureDefinition/LMDischargeDetailsCz
+      - StructureDefinition/LMInPatientEncounterCz
+      - StructureDefinition/LMFunctionalStatusCz
+      - StructureDefinition/LMHeaderHdrCz
+      - StructureDefinition/LMHospitalDischargeReportCz
+      - StructureDefinition/LMHospitalStayCz
+      - StructureDefinition/LMMedicationSummaryCz
+      - StructureDefinition/LMBirthSummaryCz
+      - StructureDefinition/LMCzObjectiveFindingsCz
+      - StructureDefinition/LMPlanOfCareCz
+      - StructureDefinition/LMPatientHistoryCz
+      - StructureDefinition/LMPresentedFormCz
 
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and

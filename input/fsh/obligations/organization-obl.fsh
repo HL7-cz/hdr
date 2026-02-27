@@ -38,3 +38,15 @@ Description: "This profile defines obligations for."
 // Consumer obligations L3
 * identifier insert OblConsumer(#SHOULD:display,L3)
 * name insert OblConsumer(#SHALL:display,L3)*/
+// Creator Obligations L3 ============>
+* identifier insert OblCreator(#SHALL:able-to-populate,L3)
+* identifier[KRPZS] insert OblCreator(#SHOULD:able-to-populate,L3)
+* name insert OblCreator(#SHALL:able-to-populate,L3)
+* telecom insert OblCreator(#SHOULD:able-to-populate,L3)
+* address insert OblCreator(#SHOULD:able-to-populate,L3) 
+
+// Consumer obligations L3
+* name insert OblConsumer(#SHALL:display,L3)
+* identifier insert OblConsumer(#SHOULD:display,L3)
+* telecom insert OblConsumer(#SHALL:display,L3)
+* address insert OblConsumer(#SHOULD:display,L3) 

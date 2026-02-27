@@ -226,6 +226,19 @@ RuleSet: PatientHxSubsectionRules
   * entry ^definition = "Family History"
 
 // -------------------------------------
+// Gynecology History Section 0 … 1
+// -------------------------------------
+* section contains sectionGynecologyHistory ..1
+* section[sectionGynecologyHistory]
+  * insert SectionComRules (
+    Gynecology History Section,
+      This section contains data defining the patient’s gynecology history in terms of possible or relevant health risk factors that have a potential impact on the patient’s healthcare risk profile.
+      ,  http://loinc.org#10162-6  )   // CODE
+  * entry 0..
+  * entry only Reference(CZ_ObservationGravidity or CZ_ObservationParity or CZ_ObservationMultiplePregnancy or Observation)
+  * entry ^short = "Gynecology History"
+  * entry ^definition = "Gynecology History"
+// -------------------------------------
 // Use of substances Section
 // -------------------------------------
 * section contains sectionSubstanceUse ..1
