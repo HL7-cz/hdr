@@ -34,14 +34,14 @@ Description: "Example gynecology hospital discharge composition with spontaneous
 * section[sectionPatientHx].text.status = #additional
 * section[sectionPatientHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gynekologická anamnéza: gravidita/parita 2/2, gestační stáří při porodu 39+6.</p></div>"""
 
-* section[sectionPatientHx].section[sectionGynecologyHistory].title = "Gynekologická anamnéza"
-* section[sectionPatientHx].section[sectionGynecologyHistory].code = $loinc#10162-6 "History of pregnancies"
-* section[sectionPatientHx].section[sectionGynecologyHistory].text.status = #additional
-* section[sectionPatientHx].section[sectionGynecologyHistory].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gestační stáří 39+6, gravidita 2, parita 2, singleton gravidita.</p></div>"""
-* section[sectionPatientHx].section[sectionGynecologyHistory].entry[+] = Reference(GynNaturalBirth-GestationalAgeAtDelivery)
-* section[sectionPatientHx].section[sectionGynecologyHistory].entry[+] = Reference(GynNaturalBirth-Gravidity)
-* section[sectionPatientHx].section[sectionGynecologyHistory].entry[+] = Reference(GynNaturalBirth-Parity)
-* section[sectionPatientHx].section[sectionGynecologyHistory].entry[+] = Reference(GynNaturalBirth-MultiplePregnancy)
+* section[sectionPatientHx].section[sectionPregnancyHx].title = "Těhotenská anamnéza"
+* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies"
+* section[sectionPatientHx].section[sectionPregnancyHx].text.status = #additional
+* section[sectionPatientHx].section[sectionPregnancyHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gestační stáří 39+6, gravidita 2, parita 2, singleton gravidita.</p></div>"""
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirth-GestationalAgeAtDelivery)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirth-Gravidity)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirth-Parity)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirth-MultiplePregnancy)
 
 Instance: GynNaturalBirth-DeliveryMethod
 InstanceOf: CZ_ProcedureMethodOfDelivery
