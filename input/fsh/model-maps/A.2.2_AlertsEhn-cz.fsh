@@ -1,6 +1,6 @@
 Logical: LMCzAlertsCz
 Id: LMAlertsCz
-Title: "A.2.2 - Urgentní informace (cz)"
+Title: "A.2.2 - Urgentní informace"
 Description: """Nemocniční propouštěcí zpráva - Urgentní informace"""
 
 * alergie 1..* Base "A.2.2.1 - Alergie a intolerance" """Záznam alergie a intolerance je povinný. U pacientů, bez alergie či intolerance je nutné tento fakt explicitně vyjádřit příslušným kódem."""

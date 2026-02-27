@@ -20,24 +20,24 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #BirthSummary.maternal
+* group[=].element[+].code = #BirthSummary.mother
 * group[=].element[=].display = "A.2.10.1 - Maternal delivery information"
-* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionGynecologyHistory
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #BirthSummary.maternal.gestationalAgeAtDelivery
+* group[=].element[+].code = #BirthSummary.mother.gestationalAgeAtDelivery
 * group[=].element[=].display = "A.2.10.1.1 - Gestational age at delivery"
-* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionGynecologyHistory.entry
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #BirthSummary.maternal.gravidity
 * group[=].element[=].display = "A.2.10.1.2 - Gravidity"
-* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionGynecologyHistory.entry
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #BirthSummary.maternal.parity
 * group[=].element[=].display = "A.2.10.1.3 - Parity"
-* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionGynecologyHistory.entry
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 

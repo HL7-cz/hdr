@@ -3,32 +3,32 @@ Id: LMBirthSummaryEnCz
 Title: "A.2.10 - Delivery"
 Description: """Hospital Discharge Report – Delivery section. Records key information about the course of labour and delivery and its outcome."""
 
-* maternal 0..* BackboneElement "A.2.10.1 - Maternal delivery information"
+* mother 0..* BackboneElement "A.2.10.1 - Maternal delivery information"
 
-* maternal.gestationalAgeAtDelivery 1..1 string "A.2.10.1.1 - Gestational age at delivery"
+* mother.gestationalAgeAtDelivery 1..1 string "A.2.10.1.1 - Gestational age at delivery"
 """Gestational age expressed as weeks + days at the time of delivery (e.g. 39+2)."""
 
-* maternal.gravidity 1..1 integer "A.2.10.1.2 - Gravidity"
+* mother.gravidity 1..1 integer "A.2.10.1.2 - Gravidity"
 """Total number of pregnancies."""
 
-* maternal.parity 1..1 integer "A.2.10.1.3 - Parity"
+* mother.parity 1..1 integer "A.2.10.1.3 - Parity"
 """Total number of prior births."""
 
-* maternal.laborInduction 0..1 CodeableConcept "A.2.10.1.4 - Labour pre-induction / induction"
+* mother.laborInduction 0..1 CodeableConcept "A.2.10.1.4 - Labour pre-induction / induction"
 """Indicates whether labour was induced and the method used. SNOMED CT may be used."""
 
-* maternal.birthInjury 1..* BackboneElement "A.2.10.1.5 - Birth injury"
+* mother.birthInjury 1..* BackboneElement "A.2.10.1.5 - Birth injury"
 
-* maternal.birthInjury.description 0..* string "A.2.10.1.5.1 - Birth injury description"
-"""Textual description of maternal birth injury."""
+* mother.birthInjury.description 0..* string "A.2.10.1.5.1 - Birth injury description"
+"""Textual description of mother birth injury."""
 
-* maternal.birthInjury.code 0..* CodeableConcept "A.2.10.1.5.2 - Birth injury code"
+* mother.birthInjury.code 0..* CodeableConcept "A.2.10.1.5.2 - Birth injury code"
 """Coded birth injury, preferably SNOMED CT."""
 
-* maternal.multiplePregnancy 0..1 boolean "A.2.10.1.6 - Multiple pregnancy"
+* mother.multiplePregnancy 0..1 boolean "A.2.10.1.6 - Multiple pregnancy"
 """Indicates whether the pregnancy was multiple (e.g. twins, triplets)."""
 
-* maternal.fetusCount 0..1 integer "A.2.10.1.6.1 - Number of fetuses"
+* mother.fetusCount 0..1 integer "A.2.10.1.6.1 - Number of fetuses"
 """Number of fetuses/newborns in case of multiple pregnancy."""
 
 
