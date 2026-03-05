@@ -41,7 +41,7 @@ Description: "Maternity department of the hospital."
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "12345671"
 * name = "Porodni oddeleni Nemocnice Prostejov"
-* partOf = Reference("urn:uuid:organization-prostejov-hospital")
+* partOf = Reference(Organization-Prostejov-Hospital)
 
 Instance: Organization-Payer-111-Story
 InstanceOf: CZ_OrganizationCore
@@ -81,7 +81,7 @@ Description: "Newborn from story-based delivery discharge use case."
 * gender = #male
 * birthDate = "2026-03-03"
 * multipleBirthBoolean = false
-* link[+].other = Reference("urn:uuid:patient-story-mother")
+* link[+].other = Reference(Patient-Story-Mother)
 * link[=].type = #seealso
 
 Instance: Coverage-Story-Mother
@@ -90,8 +90,8 @@ Usage: #example
 Description: "Coverage of the mother for payer 111."
 * id = "coverage-story-mother"
 * status = #active
-* beneficiary = Reference("urn:uuid:patient-story-mother")
-* payor[+] = Reference("urn:uuid:organization-payer-111-story")
+* beneficiary = Reference(Patient-Story-Mother)
+* payor[+] = Reference(Organization-Payer-111-Story)
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/cislo-pojistence"
 * identifier[=].value = "8653034455"
 
@@ -103,16 +103,16 @@ Description: "Inpatient encounter for delivery hospitalization."
 * status = #finished
 * class.code = #IMP
 * class.system = $cz-encounter-typ-kontaktu
-* class.display = "lÄąĹ»ÄąÄľkovÄ‚Ëť kontakt"
-* subject = Reference("urn:uuid:patient-story-mother")
+* class.display = "lĂ„Ä…ÄąÂ»Ă„Ä…Ă„ÄľkovĂ„â€šĂ‹ĹĄ kontakt"
+* subject = Reference(Patient-Story-Mother)
 * period.start = "2026-03-03T05:22:00+01:00"
 * period.end = "2026-03-04T18:41:00+01:00"
-* serviceProvider = Reference("urn:uuid:organization-prostejov-maternity")
-* participant[admitter][0].individual = Reference("urn:uuid:practitioner-cerna-raketa")
-* participant[discharger][0].individual = Reference("urn:uuid:practitioner-bila-palka")
+* serviceProvider = Reference(Organization-Prostejov-Maternity)
+* participant[admitter][0].individual = Reference(Practitioner-Cerna-Raketa)
+* participant[discharger][0].individual = Reference(Practitioner-Bila-Palka)
 * hospitalization.dischargeDisposition.coding[0].system = $discharge-disposition
 * hospitalization.dischargeDisposition.coding[0].code = #home
-* hospitalization.dischargeDisposition.coding[0].display = "DomÄąĹ»"
+* hospitalization.dischargeDisposition.coding[0].display = "DomĂ„Ä…ÄąÂ»"
 
 Instance: Procedure-Story-DeliveryMethod
 InstanceOf: CZ_ProcedureMethodOfDelivery
@@ -120,10 +120,10 @@ Usage: #example
 Description: "Induced vaginal delivery in week 40+2."
 * id = "procedure-story-delivery-method"
 * status = #completed
-* code = $sct#22640007 "VaginÄ‚Ë‡lnÄ‚Â­ porod"
-* subject = Reference("urn:uuid:patient-story-mother")
+* code = $sct#22640007 "VaginĂ„â€šĂ‹â€ˇlnĂ„â€šĂ‚Â­ porod"
+* subject = Reference(Patient-Story-Mother)
 * performedDateTime = "2026-03-03T17:13:00+01:00"
-* performer.actor = Reference("urn:uuid:practitioner-cerna-raketa")
+* performer.actor = Reference(Practitioner-Cerna-Raketa)
 
 Instance: Procedure-Story-Induction
 InstanceOf: CZ_ProcedureInductionOfLabor
@@ -132,7 +132,7 @@ Description: "Labor induction by Prostin E2 due to labor stagnation."
 * id = "procedure-story-induction"
 * status = #completed
 * code = $sct#398307005 "Indukce porodu"
-* subject = Reference("urn:uuid:patient-story-mother")
+* subject = Reference(Patient-Story-Mother)
 * performedPeriod.start = "2026-03-03T12:30:00+01:00"
 * performedPeriod.end = "2026-03-03T16:30:00+01:00"
 
@@ -144,7 +144,7 @@ Description: "Primary diagnosis for vaginal delivery."
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * code = $MKN10#O800 "IZ, III.p., CH 3200g, rpt.perinei I, KS 0 pozit., ZK 250ml"
-* subject = Reference("urn:uuid:patient-story-mother")
+* subject = Reference(Patient-Story-Mother)
 
 Instance: Condition-Story-GestHypertension
 InstanceOf: CZ_ConditionHdr
@@ -153,8 +153,8 @@ Description: "Gestational hypertension from week 38."
 * id = "condition-story-o13"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* code = $MKN10#O13 "GestaĂ„Ĺ¤nÄ‚Â­ (vyvolanÄ‚Ë‡ tĂ„â€şhotenstvÄ‚Â­m) hypertenze"
-* subject = Reference("urn:uuid:patient-story-mother")
+* code = $MKN10#O13 "GestaÄ‚â€žÄąÂ¤nĂ„â€šĂ‚Â­ (vyvolanĂ„â€šĂ‹â€ˇ tÄ‚â€žĂ˘â‚¬ĹźhotenstvĂ„â€šĂ‚Â­m) hypertenze"
+* subject = Reference(Patient-Story-Mother)
 
 Instance: Condition-Story-GDM
 InstanceOf: CZ_ConditionHdr
@@ -163,8 +163,8 @@ Description: "Gestational diabetes mellitus."
 * id = "condition-story-o244"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* code = $MKN10#O244 "Diabetes mellitus vzniklÄ‚Ëť v tĂ„â€şhotenstvÄ‚Â­"
-* subject = Reference("urn:uuid:patient-story-mother")
+* code = $MKN10#O244 "Diabetes mellitus vzniklĂ„â€šĂ‹ĹĄ v tÄ‚â€žĂ˘â‚¬ĹźhotenstvĂ„â€šĂ‚Â­"
+* subject = Reference(Patient-Story-Mother)
 
 Instance: Condition-Story-CordAroundNeck
 InstanceOf: CZ_ConditionHdr
@@ -173,8 +173,8 @@ Description: "Delivery complicated by cord around neck."
 * id = "condition-story-o691"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* code = $MKN10#O691 "Porod komplikovanÄ‚Ëť pupeĂ„Ĺ¤nÄ‚Â­kem kolem krku s kompresÄ‚Â­"
-* subject = Reference("urn:uuid:patient-story-mother")
+* code = $MKN10#O691 "Porod komplikovanĂ„â€šĂ‹ĹĄ pupeÄ‚â€žÄąÂ¤nĂ„â€šĂ‚Â­kem kolem krku s kompresĂ„â€šĂ‚Â­"
+* subject = Reference(Patient-Story-Mother)
 
 Instance: Condition-Story-PerinealTear
 InstanceOf: CZ_ConditionHdr
@@ -183,8 +183,8 @@ Description: "First degree perineal tear during delivery, sutured."
 * id = "condition-story-o700"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* code = $MKN10#O700 "Trhlina hrÄ‚Ë‡ze prvnÄ‚Â­ho stupnĂ„â€ş pÄąâ„˘i porodu"
-* subject = Reference("urn:uuid:patient-story-mother")
+* code = $MKN10#O700 "Trhlina hrĂ„â€šĂ‹â€ˇze prvnĂ„â€šĂ‚Â­ho stupnÄ‚â€žĂ˘â‚¬Ĺź pĂ„Ä…Ă˘â€žËi porodu"
+* subject = Reference(Patient-Story-Mother)
 * onsetDateTime = "2026-03-03T17:13:00+01:00"
 
 Instance: Condition-Story-LivebornSingle
@@ -194,8 +194,8 @@ Description: "Single liveborn infant."
 * id = "condition-story-z370"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* code = $MKN10#Z370 "JedinÄ‚Â© dÄ‚Â­tĂ„â€ş, ÄąÄľivĂ„â€ş narozenÄ‚Â©"
-* subject = Reference("urn:uuid:patient-story-mother")
+* code = $MKN10#Z370 "JedinĂ„â€šĂ‚Â© dĂ„â€šĂ‚Â­tÄ‚â€žĂ˘â‚¬Ĺź, Ă„Ä…Ă„ÄľivÄ‚â€žĂ˘â‚¬Ĺź narozenĂ„â€šĂ‚Â©"
+* subject = Reference(Patient-Story-Mother)
 
 Instance: Observation-Story-Gravidity
 InstanceOf: CZ_ObservationGravidity
@@ -203,7 +203,7 @@ Usage: #example
 Description: "Gravidity IV."
 * id = "observation-story-gravidity"
 * status = #final
-* subject = Reference("urn:uuid:patient-story-mother")
+* subject = Reference(Patient-Story-Mother)
 * effectiveDateTime = "2026-03-03T10:00:00+01:00"
 * valueInteger = 4
 
@@ -213,7 +213,7 @@ Usage: #example
 Description: "Parity II."
 * id = "observation-story-parity"
 * status = #final
-* subject = Reference("urn:uuid:patient-story-mother")
+* subject = Reference(Patient-Story-Mother)
 * effectiveDateTime = "2026-03-03T10:00:00+01:00"
 * valueInteger = 2
 
@@ -223,7 +223,7 @@ Usage: #example
 Description: "Singleton pregnancy."
 * id = "observation-story-multiple-pregnancy"
 * status = #final
-* subject = Reference("urn:uuid:patient-story-mother")
+* subject = Reference(Patient-Story-Mother)
 * effectiveDateTime = "2026-03-03T10:00:00+01:00"
 * valueBoolean = false
 * component.valueInteger = 1
@@ -234,8 +234,8 @@ Usage: #example
 Description: "Gestational age at delivery 40+2."
 * id = "observation-story-gest-age"
 * status = #final
-* code = $loinc#76516-4 "GestaĂ„Ĺ¤nÄ‚Â­ stÄ‚Ë‡Äąâ„˘Ä‚Â­ pÄąâ„˘i porodu"
-* subject = Reference("urn:uuid:patient-story-mother")
+* code = $loinc#76516-4 "GestaÄ‚â€žÄąÂ¤nĂ„â€šĂ‚Â­ stĂ„â€šĂ‹â€ˇĂ„Ä…Ă˘â€žËĂ„â€šĂ‚Â­ pĂ„Ä…Ă˘â€žËi porodu"
+* subject = Reference(Patient-Story-Mother)
 * effectiveDateTime = "2026-03-03T17:13:00+01:00"
 * valueString = "40+2"
 
@@ -244,7 +244,7 @@ InstanceOf: CZ_ObservationBirthWeight
 Usage: #example
 Description: "Newborn birth weight."
 * id = "observation-story-birth-weight"
-* subject = Reference("urn:uuid:patient-story-newborn")
+* subject = Reference(Patient-Story-Newborn)
 * valueQuantity = 3200 'g' "g"
 
 Instance: Observation-Story-BirthLength
@@ -252,7 +252,7 @@ InstanceOf: CZ_ObservationBirthLength
 Usage: #example
 Description: "Newborn birth length."
 * id = "observation-story-birth-length"
-* subject = Reference("urn:uuid:patient-story-newborn")
+* subject = Reference(Patient-Story-Newborn)
 * valueQuantity = 50 'cm' "cm"
 
 Instance: Allergy-Story-Zinnat
@@ -265,10 +265,10 @@ Description: "Unverified allergy to Zinnat with vertigo."
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = $allergyintolerance-verification#unconfirmed
 * code.text = "Zinnat"
-* patient = Reference("urn:uuid:patient-story-mother")
+* patient = Reference(Patient-Story-Mother)
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #404640003
-* reaction[0].manifestation[0].coding[0].display = "ZÄ‚Ë‡vraÄąÄ„"
+* reaction[0].manifestation[0].coding[0].display = "ZĂ„â€šĂ‹â€ˇvraĂ„Ä…Ă„â€ž"
 * reaction[0].description = "Vertigo"
 
 Instance: Allergy-Story-Environmental
@@ -281,7 +281,7 @@ Description: "Unverified environmental allergies: grass, dust, pollen."
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = $allergyintolerance-verification#unconfirmed
 * code.text = "Travy, prach, pyl"
-* patient = Reference("urn:uuid:patient-story-mother")
+* patient = Reference(Patient-Story-Mother)
 
 Instance: Medication-Story-Dopegyt
 InstanceOf: CZ_Medication
@@ -349,11 +349,11 @@ Description: "Discharge medication request for Dopegyt."
 * id = "medicationrequest-story-dopegyt-discharge"
 * status = #active
 * intent = #order
-* medicationReference = Reference("urn:uuid:medication-story-dopegyt")
-* subject = Reference("urn:uuid:patient-story-mother")
-* encounter = Reference("urn:uuid:encounter-story-delivery")
+* medicationReference = Reference(Medication-Story-Dopegyt)
+* subject = Reference(Patient-Story-Mother)
+* encounter = Reference(Encounter-Story-Delivery)
 * authoredOn = "2026-03-04T18:31:00+01:00"
-* requester = Reference("urn:uuid:practitioner-bila-palka")
+* requester = Reference(Practitioner-Bila-Palka)
 * dosageInstruction[0].text = "1-0-1 po 12 hodinach (07:00, 19:00)."
 * dispenseRequest.quantity.value = 60
 * dispenseRequest.quantity.unit = "tablet"
@@ -366,14 +366,14 @@ Description: "Discharge medication request for Fraxiparine (LMWH prophylaxis)."
 * id = "medicationrequest-story-fraxiparine-discharge"
 * status = #active
 * intent = #order
-* medicationReference = Reference("urn:uuid:medication-story-fraxiparine")
-* subject = Reference("urn:uuid:patient-story-mother")
-* encounter = Reference("urn:uuid:encounter-story-delivery")
+* medicationReference = Reference(Medication-Story-Fraxiparine)
+* subject = Reference(Patient-Story-Mother)
+* encounter = Reference(Encounter-Story-Delivery)
 * authoredOn = "2026-03-04T18:31:00+01:00"
-* requester = Reference("urn:uuid:practitioner-bila-palka")
+* requester = Reference(Practitioner-Bila-Palka)
 * dosageInstruction[0].text = "0,6 ml s.c. 1x denne v 18:00 do 10.03.2026 vcetne."
 * dispenseRequest.quantity.value = 7
-* dispenseRequest.quantity.unit = "dĂˇvka"
+* dispenseRequest.quantity.unit = "dÄ‚Ë‡vka"
 * substitution.allowedCodeableConcept.text = "Substituce nepovolena"
 
 Instance: Device-Story-SamsungR7
@@ -384,7 +384,7 @@ Description: "Ultrasound device used for obstetric examination."
 * manufacturer = "Samsung"
 * modelNumber = "R7"
 * type = $sct#706171005 "Ultrasound imaging system"
-* patient = Reference("urn:uuid:patient-story-mother")
+* patient = Reference(Patient-Story-Mother)
 
 Instance: Observation-Story-UZ
 InstanceOf: Observation
@@ -394,10 +394,10 @@ Description: "Obstetric ultrasound finding recorded during admission."
 * status = #final
 * category = $observation-category#imaging
 * code = $sct#169238002 "Obstetric ultrasound scan"
-* subject = Reference("urn:uuid:patient-story-mother")
+* subject = Reference(Patient-Story-Mother)
 * effectiveDateTime = "2026-03-02T10:00:00+01:00"
-* device = Reference("urn:uuid:device-story-samsung-r7")
-* valueString = "UZ: PPH, postavenĂ­ II pĹ™ednĂ­, ASP+, PP+, placenta na zadnĂ­ stÄ›nÄ› mimo DS, pĹ™Ă­datnĂ˝ lalok i na pĹ™ednĂ­ stÄ›nÄ›, bez znĂˇmek patologie plodovĂ© vody, normohydramnion, EFW 3480 g proporÄŤnÄ›."
+* device = Reference(Device-Story-SamsungR7)
+* valueString = "UZ: PPH, postavenÄ‚Â­ II pÄąâ„˘ednÄ‚Â­, ASP+, PP+, placenta na zadnÄ‚Â­ stĂ„â€şnĂ„â€ş mimo DS, pÄąâ„˘Ä‚Â­datnÄ‚Ëť lalok i na pÄąâ„˘ednÄ‚Â­ stĂ„â€şnĂ„â€ş, bez znÄ‚Ë‡mek patologie plodovÄ‚Â© vody, normohydramnion, EFW 3480 g proporĂ„Ĺ¤nĂ„â€ş."
 
 Instance: Observation-Story-BloodGroup
 InstanceOf: CZ_ObservationResultLaboratory
@@ -407,9 +407,10 @@ Description: "Maternal blood group test."
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#26436-6 "Laboratory studies (set)"
-* code = $nclp#15961 "AB0 a RhD krevní skupina"
-* subject = Reference("urn:uuid:patient-story-mother")
+* code = $nclp#15961 "AB0 a RhD krevnĂ­ skupina"
+* subject = Reference(Patient-Story-Mother)
 * effectiveDateTime = "2026-03-03T06:10:00+01:00"
+* performer = Reference(Practitioner-Cerna-Raketa)
 * valueCodeableConcept.text = "0 RhD pozitivni (0+)"
 
 Instance: DischargeComposition-Story-GynDelivery
@@ -421,102 +422,102 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * type = $loinc#34105-7 "Hospital Discharge summary"
 * title = "Gynekologicka propousteci zprava - indukovany vaginalni porod"
 * date = "2026-03-04T18:31:00+01:00"
-* author[0] = Reference("urn:uuid:practitioner-bila-palka")
-* subject = Reference("urn:uuid:patient-story-mother")
-* encounter = Reference("urn:uuid:encounter-story-delivery")
-* extension[information-recipient][+].valueReference = Reference("urn:uuid:practitioner-novakovajana-gp")
-* extension[information-recipient][+].valueReference = Reference("urn:uuid:practitioner-novakovajana-gyn")
+* author[0] = Reference(Practitioner-Bila-Palka)
+* subject = Reference(Patient-Story-Mother)
+* encounter = Reference(Encounter-Story-Delivery)
+* extension[information-recipient][+].valueReference = Reference(Practitioner-NovakovaJana-GP)
+* extension[information-recipient][+].valueReference = Reference(Practitioner-NovakovaJana-GYN)
 
-* section[sectionAdmissionEvaluation].title = "PĹ™Ă­jmovĂ© vyĹˇetĹ™enĂ­"
-* section[sectionAdmissionEvaluation].code = $loinc#67851-6 "PĹ™Ă­jmovĂ© vyĹˇetĹ™enĂ­"
+* section[sectionAdmissionEvaluation].title = "PÄąâ„˘Ä‚Â­jmovÄ‚Â© vyÄąË‡etÄąâ„˘enÄ‚Â­"
+* section[sectionAdmissionEvaluation].code = $loinc#67851-6 "PÄąâ„˘Ä‚Â­jmovÄ‚Â© vyÄąË‡etÄąâ„˘enÄ‚Â­"
 * section[sectionAdmissionEvaluation].text.status = #additional
-* section[sectionAdmissionEvaluation].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>PĹ™ijata pro zesilujĂ­cĂ­ dÄ›loĹľnĂ­ kontrakce.</p><p>SubjektivnÄ›: cĂ­tĂ­ se dobĹ™e, pohyby plodu cĂ­tĂ­, cefaleu neguje, epigastrickou bolest neguje, vizus v normÄ›, otoky prstĹŻ hornĂ­ch i dolnĂ­ch konÄŤetin, bez krvĂˇcenĂ­.</p><p>ObjektivnÄ›: PPH, hlava nalĂ©hĂˇ, branka 5 cm, hmatnĂ˝ VB, kontrakce Ăˇ 5 min.</p><p>KTG: fyziologickĂ˝ zĂˇznam, akcelerace pĹ™Ă­tomny, bez deceleracĂ­, oscilace undulatornĂ­.</p><p>UZ bĹ™icha (Samsung R7, 02.03.): PPH, postavenĂ­ II pĹ™ednĂ­, ASP+, PP+, placenta na zadnĂ­ stÄ›nÄ› mimo DS, pĹ™Ă­datnĂ˝ lalok i na pĹ™ednĂ­ stÄ›nÄ›, bez znĂˇmek patologie plodovĂ© vody, normohydramnion. EFW 01.03.2026: 3480 g, proporÄŤnĂ­ rĹŻst.</p><p>ZĂˇvÄ›r: gravidita 40+2 dle UZ, IV/II, GBS pozitivnĂ­, GDM na dietÄ›, gestaÄŤnĂ­ hypertenze na Dopegytu 1-0-1.</p><p>DoporuÄŤenĂ­ pĹ™i pĹ™Ă­jmu: s ohledem na GBS pozitivitu doporuÄŤena antibiotickĂˇ profylaxe, dĂˇle pĹ™Ă­prava k porodu, spontĂˇnnĂ­ vedenĂ­ porodu, KTG Ăˇ 3 hod, OP Ăˇ 30 min, TK Ăˇ 3 hod.</p></div>"""
+* section[sectionAdmissionEvaluation].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>PÄąâ„˘ijata pro zesilujÄ‚Â­cÄ‚Â­ dĂ„â€şloÄąÄľnÄ‚Â­ kontrakce.</p><p>SubjektivnĂ„â€ş: cÄ‚Â­tÄ‚Â­ se dobÄąâ„˘e, pohyby plodu cÄ‚Â­tÄ‚Â­, cefaleu neguje, epigastrickou bolest neguje, vizus v normĂ„â€ş, otoky prstÄąĹ» hornÄ‚Â­ch i dolnÄ‚Â­ch konĂ„Ĺ¤etin, bez krvÄ‚Ë‡cenÄ‚Â­.</p><p>ObjektivnĂ„â€ş: PPH, hlava nalÄ‚Â©hÄ‚Ë‡, branka 5 cm, hmatnÄ‚Ëť VB, kontrakce Ä‚Ë‡ 5 min.</p><p>KTG: fyziologickÄ‚Ëť zÄ‚Ë‡znam, akcelerace pÄąâ„˘Ä‚Â­tomny, bez deceleracÄ‚Â­, oscilace undulatornÄ‚Â­.</p><p>UZ bÄąâ„˘icha (Samsung R7, 02.03.): PPH, postavenÄ‚Â­ II pÄąâ„˘ednÄ‚Â­, ASP+, PP+, placenta na zadnÄ‚Â­ stĂ„â€şnĂ„â€ş mimo DS, pÄąâ„˘Ä‚Â­datnÄ‚Ëť lalok i na pÄąâ„˘ednÄ‚Â­ stĂ„â€şnĂ„â€ş, bez znÄ‚Ë‡mek patologie plodovÄ‚Â© vody, normohydramnion. EFW 01.03.2026: 3480 g, proporĂ„Ĺ¤nÄ‚Â­ rÄąĹ»st.</p><p>ZÄ‚Ë‡vĂ„â€şr: gravidita 40+2 dle UZ, IV/II, GBS pozitivnÄ‚Â­, GDM na dietĂ„â€ş, gestaĂ„Ĺ¤nÄ‚Â­ hypertenze na Dopegytu 1-0-1.</p><p>DoporuĂ„Ĺ¤enÄ‚Â­ pÄąâ„˘i pÄąâ„˘Ä‚Â­jmu: s ohledem na GBS pozitivitu doporuĂ„Ĺ¤ena antibiotickÄ‚Ë‡ profylaxe, dÄ‚Ë‡le pÄąâ„˘Ä‚Â­prava k porodu, spontÄ‚Ë‡nnÄ‚Â­ vedenÄ‚Â­ porodu, KTG Ä‚Ë‡ 3 hod, OP Ä‚Ë‡ 30 min, TK Ä‚Ë‡ 3 hod.</p></div>"""
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].code = $sct#425044008 "Physical exam section (record artifact)"
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text.status = #additional
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>SouÄŤĂˇstĂ­ pĹ™Ă­jmovĂ©ho vyĹˇetĹ™enĂ­ bylo i UZ vyĹˇetĹ™enĂ­ na pĹ™Ă­stroji Samsung R7. Doplneno laboratorni vysetreni krevni skupiny: 0 RhD pozitivni.</p></div>"""
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry[+] = Reference("urn:uuid:observation-story-uz")
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry[+] = Reference("urn:uuid:observation-story-blood-group")
+* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>SouĂ„Ĺ¤Ä‚Ë‡stÄ‚Â­ pÄąâ„˘Ä‚Â­jmovÄ‚Â©ho vyÄąË‡etÄąâ„˘enÄ‚Â­ bylo i UZ vyÄąË‡etÄąâ„˘enÄ‚Â­ na pÄąâ„˘Ä‚Â­stroji Samsung R7. Doplneno laboratorni vysetreni krevni skupiny: 0 RhD pozitivni.</p></div>"""
+* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry[+] = Reference(Observation-Story-UZ)
+* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry[+] = Reference(Observation-Story-BloodGroup)
 * section[sectionHospitalCourse].title = "Prubeh hospitalizace"
-* section[sectionHospitalCourse].code = $loinc#8648-8 "PrÄąĹ»bĂ„â€şh hospitalizace"
+* section[sectionHospitalCourse].code = $loinc#8648-8 "PrĂ„Ä…ÄąÂ»bÄ‚â€žĂ˘â‚¬Ĺźh hospitalizace"
 * section[sectionHospitalCourse].text.status = #additional
 * section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Hospitalizace od 03.03.2026 05:22 do 04.03.2026 18:41. Prijata pro pravidelne kontrakce a 5 minut. Pro stagnaci porodnickeho nalezu byla provedena indukce porodu Prostin E2. Poporodni prubeh bez komplikaci.</p></div>"""
 
 * section[sectionHospitalCourse].section[sectionDelivery].title = "Porod"
-* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "ZÄ‚Ë‡znam o porodu"
+* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "ZĂ„â€šĂ‹â€ˇznam o porodu"
 * section[sectionHospitalCourse].section[sectionDelivery].text.status = #additional
-* section[sectionHospitalCourse].section[sectionDelivery].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>PorodnickÄ‚Ëť prÄąĹ»bĂ„â€şh: pÄąâ„˘ijata pro pravidelnÄ‚Â© kontrakce Ä‚Ë‡ 5 minut v gestaĂ„Ĺ¤nÄ‚Â­m stÄ‚Ë‡Äąâ„˘Ä‚Â­ 40+2. Pro stagnaci porodnickÄ‚Â©ho nÄ‚Ë‡lezu byla zahÄ‚Ë‡jena indukce porodu Prostin E2.</p><p>Porod dne 03.03.2026 v 17:13, spontÄ‚Ë‡nnĂ„â€ş zÄ‚Ë‡hlavÄ‚Â­m. BĂ„â€şhem porodu pupeĂ„Ĺ¤nÄ‚Â­k 1x kolem krku s kompresÄ‚Â­.</p><p>PorodnÄ‚Â­ poranĂ„â€şnÄ‚Â­: ruptura perinea I. stupnĂ„â€ş, oÄąË‡etÄąâ„˘eno suturou. OdhadovanÄ‚Ë‡ krevnÄ‚Â­ ztrÄ‚Ë‡ta 250 ml.</p><p>Novorozenec: chlapec, ÄąÄľivĂ„â€ş narozenÄ‚Ëť, porodnÄ‚Â­ hmotnost 3200 g.</p><p>Souvislosti: GBS pozitivita, gestaĂ„Ĺ¤nÄ‚Â­ hypertenze (Dopegyt), gestaĂ„Ĺ¤nÄ‚Â­ diabetes na dietĂ„â€ş.</p></div>"""
-* section[sectionHospitalCourse].section[sectionDelivery].entry[deliveryProcedure][+] = Reference("urn:uuid:procedure-story-delivery-method")
-* section[sectionHospitalCourse].section[sectionDelivery].entry[inductionProcedure][+] = Reference("urn:uuid:procedure-story-induction")
-* section[sectionHospitalCourse].section[sectionDelivery].entry[birthInjury][+] = Reference("urn:uuid:condition-story-o700")
-* section[sectionHospitalCourse].section[sectionDelivery].entry[birthWeight][+] = Reference("urn:uuid:observation-story-birth-weight")
-* section[sectionHospitalCourse].section[sectionDelivery].entry[birthLength][+] = Reference("urn:uuid:observation-story-birth-length")
-* section[sectionHospitalCourse].section[sectionDelivery].entry[deliveryObservation][+] = Reference("urn:uuid:observation-story-gest-age")
-* section[sectionHospitalCourse].section[sectionDelivery].entry[newborn][+] = Reference("urn:uuid:patient-story-newborn")
-* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference("urn:uuid:condition-story-o691")
-* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference("urn:uuid:condition-story-z370")
+* section[sectionHospitalCourse].section[sectionDelivery].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>PorodnickĂ„â€šĂ‹ĹĄ prĂ„Ä…ÄąÂ»bÄ‚â€žĂ˘â‚¬Ĺźh: pĂ„Ä…Ă˘â€žËijata pro pravidelnĂ„â€šĂ‚Â© kontrakce Ă„â€šĂ‹â€ˇ 5 minut v gestaÄ‚â€žÄąÂ¤nĂ„â€šĂ‚Â­m stĂ„â€šĂ‹â€ˇĂ„Ä…Ă˘â€žËĂ„â€šĂ‚Â­ 40+2. Pro stagnaci porodnickĂ„â€šĂ‚Â©ho nĂ„â€šĂ‹â€ˇlezu byla zahĂ„â€šĂ‹â€ˇjena indukce porodu Prostin E2.</p><p>Porod dne 03.03.2026 v 17:13, spontĂ„â€šĂ‹â€ˇnnÄ‚â€žĂ˘â‚¬Ĺź zĂ„â€šĂ‹â€ˇhlavĂ„â€šĂ‚Â­m. BÄ‚â€žĂ˘â‚¬Ĺźhem porodu pupeÄ‚â€žÄąÂ¤nĂ„â€šĂ‚Â­k 1x kolem krku s kompresĂ„â€šĂ‚Â­.</p><p>PorodnĂ„â€šĂ‚Â­ poranÄ‚â€žĂ˘â‚¬ĹźnĂ„â€šĂ‚Â­: ruptura perinea I. stupnÄ‚â€žĂ˘â‚¬Ĺź, oĂ„Ä…Ă‹â€ˇetĂ„Ä…Ă˘â€žËeno suturou. OdhadovanĂ„â€šĂ‹â€ˇ krevnĂ„â€šĂ‚Â­ ztrĂ„â€šĂ‹â€ˇta 250 ml.</p><p>Novorozenec: chlapec, Ă„Ä…Ă„ÄľivÄ‚â€žĂ˘â‚¬Ĺź narozenĂ„â€šĂ‹ĹĄ, porodnĂ„â€šĂ‚Â­ hmotnost 3200 g.</p><p>Souvislosti: GBS pozitivita, gestaÄ‚â€žÄąÂ¤nĂ„â€šĂ‚Â­ hypertenze (Dopegyt), gestaÄ‚â€žÄąÂ¤nĂ„â€šĂ‚Â­ diabetes na dietÄ‚â€žĂ˘â‚¬Ĺź.</p></div>"""
+* section[sectionHospitalCourse].section[sectionDelivery].entry[deliveryProcedure][+] = Reference(Procedure-Story-DeliveryMethod)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[inductionProcedure][+] = Reference(Procedure-Story-Induction)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[birthInjury][+] = Reference(Condition-Story-PerinealTear)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[birthWeight][+] = Reference(Observation-Story-BirthWeight)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[birthLength][+] = Reference(Observation-Story-BirthLength)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[deliveryObservation][+] = Reference(Observation-Story-GestAgeAtDelivery)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[newborn][+] = Reference(Patient-Story-Newborn)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(Condition-Story-CordAroundNeck)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(Condition-Story-LivebornSingle)
 
 * section[sectionPatientHx].title = "Anamneza"
-* section[sectionPatientHx].code = $loinc#35090-0 "AnamnestickÄ‚Ë‡ poznÄ‚Ë‡mka"
+* section[sectionPatientHx].code = $loinc#35090-0 "AnamnestickĂ„â€šĂ‹â€ˇ poznĂ„â€šĂ‹â€ˇmka"
 * section[sectionPatientHx].text.status = #additional
-* section[sectionPatientHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>AnamnÄ‚Â©za strukturovÄ‚Ë‡na: RA, OA, FA, AA, GA, FF, abÄ‚Ĺźzus, SA+PA. OA: bez trvalÄ‚Â© lÄ‚Â©Ă„Ĺ¤by mimo graviditu, nynÄ‚Â­ GDM dieta (takÄ‚Â© ve II. graviditĂ„â€ş), TEN 0, Ä‚Ĺźrazy 0, operace 0, transfuze 0, epidemiologickÄ‚Ë‡ anamnÄ‚Â©za bez oĂ„Ĺ¤kovÄ‚Ë‡nÄ‚Â­ proti RSV. FA: aktuÄ‚Ë‡lnĂ„â€ş dlouhodobĂ„â€ş Dopegyt. FF: moĂ„Ĺ¤enÄ‚Â­ i stolice v poÄąâ„˘Ä‚Ë‡dku.</p></div>"""
-* section[sectionPatientHx].section[sectionFamilyHistory].title = "RodinnÄ‚Ë‡ anamnÄ‚Â©za"
-* section[sectionPatientHx].section[sectionFamilyHistory].code = $loinc#10157-6 "RodinnÄ‚Ë‡ anamnÄ‚Â©za"
+* section[sectionPatientHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>AnamnĂ„â€šĂ‚Â©za strukturovĂ„â€šĂ‹â€ˇna: RA, OA, FA, AA, GA, FF, abĂ„â€šÄąĹşzus, SA+PA. OA: bez trvalĂ„â€šĂ‚Â© lĂ„â€šĂ‚Â©Ä‚â€žÄąÂ¤by mimo graviditu, nynĂ„â€šĂ‚Â­ GDM dieta (takĂ„â€šĂ‚Â© ve II. graviditÄ‚â€žĂ˘â‚¬Ĺź), TEN 0, Ă„â€šÄąĹşrazy 0, operace 0, transfuze 0, epidemiologickĂ„â€šĂ‹â€ˇ anamnĂ„â€šĂ‚Â©za bez oÄ‚â€žÄąÂ¤kovĂ„â€šĂ‹â€ˇnĂ„â€šĂ‚Â­ proti RSV. FA: aktuĂ„â€šĂ‹â€ˇlnÄ‚â€žĂ˘â‚¬Ĺź dlouhodobÄ‚â€žĂ˘â‚¬Ĺź Dopegyt. FF: moÄ‚â€žÄąÂ¤enĂ„â€šĂ‚Â­ i stolice v poĂ„Ä…Ă˘â€žËĂ„â€šĂ‹â€ˇdku.</p></div>"""
+* section[sectionPatientHx].section[sectionFamilyHistory].title = "RodinnĂ„â€šĂ‹â€ˇ anamnĂ„â€šĂ‚Â©za"
+* section[sectionPatientHx].section[sectionFamilyHistory].code = $loinc#10157-6 "RodinnĂ„â€šĂ‹â€ˇ anamnĂ„â€šĂ‚Â©za"
 * section[sectionPatientHx].section[sectionFamilyHistory].text.status = #additional
-* section[sectionPatientHx].section[sectionFamilyHistory].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>RA: matka karcinom prsu v 57 letech, hypertenze a onemocnĂ„â€şnÄ‚Â­ ÄąË‡tÄ‚Â­tnÄ‚Â© ÄąÄľlÄ‚Ë‡zy; bratÄąâ„˘i hypertenze; sestra hypotyreÄ‚Ĺ‚za; prarodiĂ„Ĺ¤e diabetes mellitus; dĂ„â€şdeĂ„Ĺ¤ek leukemie.</p></div>"""
+* section[sectionPatientHx].section[sectionFamilyHistory].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>RA: matka karcinom prsu v 57 letech, hypertenze a onemocnÄ‚â€žĂ˘â‚¬ĹźnĂ„â€šĂ‚Â­ Ă„Ä…Ă‹â€ˇtĂ„â€šĂ‚Â­tnĂ„â€šĂ‚Â© Ă„Ä…Ă„ÄľlĂ„â€šĂ‹â€ˇzy; bratĂ„Ä…Ă˘â€žËi hypertenze; sestra hypotyreĂ„â€šÄąâ€šza; prarodiÄ‚â€žÄąÂ¤e diabetes mellitus; dÄ‚â€žĂ˘â‚¬ĹźdeÄ‚â€žÄąÂ¤ek leukemie.</p></div>"""
 * section[sectionPatientHx].section[sectionPregnancyHx].title = "Tehotenska anamneza"
-* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "TĂ„â€şhotenskÄ‚Ë‡ anamnÄ‚Â©za"
+* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "TÄ‚â€žĂ˘â‚¬ĹźhotenskĂ„â€šĂ‹â€ˇ anamnĂ„â€šĂ‚Â©za"
 * section[sectionPatientHx].section[sectionPregnancyHx].text.status = #additional
-* section[sectionPatientHx].section[sectionPregnancyHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>GA: gravidita spontÄ‚Ë‡nnÄ‚Â­. Gravidita/parita IV/II, gestaĂ„Ĺ¤nÄ‚Â­ stÄ‚Ë‡Äąâ„˘Ä‚Â­ pÄąâ„˘i porodu 40+2, singleton gravidita. PÄąâ„˘edchozÄ‚Â­ porody: 05/2016 spontÄ‚Ë‡nnÄ‚Â­ porod zÄ‚Ë‡hlavÄ‚Â­m, chlapec 3800 g, epiziotomie a infekce poranĂ„â€şnÄ‚Â­ v ÄąË‡estinedĂ„â€şlÄ‚Â­; 02/2019 spontÄ‚Ë‡nnÄ‚Â­ porod zÄ‚Ë‡hlavÄ‚Â­m 3740 g bez komplikacÄ‚Â­. Abortus: 01/2022 spontÄ‚Ë‡nnÄ‚Â­ abortus completus. UUT: 0. MenarchÄ‚Â© v 11 letech, cyklus nepravidelnÄ‚Ëť, gynekologickÄ‚Â© operace ne.</p></div>"""
-* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference("urn:uuid:condition-story-primary")
-* section[sectionPatientHx].section[sectionPregnancyHx].entry[gestationalAge][+] = Reference("urn:uuid:observation-story-gest-age")
-* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference("urn:uuid:observation-story-gravidity")
-* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference("urn:uuid:observation-story-parity")
-* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference("urn:uuid:observation-story-multiple-pregnancy")
-* section[sectionPatientHx].section[sectionSocialHistory].title = "SociÄ‚Ë‡lnÄ‚Â­ a pracovnÄ‚Â­ anamnÄ‚Â©za"
-* section[sectionPatientHx].section[sectionSocialHistory].code = $loinc#29762-2 "SociÄ‚Ë‡lnÄ‚Â­ anamnÄ‚Â©za"
+* section[sectionPatientHx].section[sectionPregnancyHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>GA: gravidita spontĂ„â€šĂ‹â€ˇnnĂ„â€šĂ‚Â­. Gravidita/parita IV/II, gestaÄ‚â€žÄąÂ¤nĂ„â€šĂ‚Â­ stĂ„â€šĂ‹â€ˇĂ„Ä…Ă˘â€žËĂ„â€šĂ‚Â­ pĂ„Ä…Ă˘â€žËi porodu 40+2, singleton gravidita. PĂ„Ä…Ă˘â€žËedchozĂ„â€šĂ‚Â­ porody: 05/2016 spontĂ„â€šĂ‹â€ˇnnĂ„â€šĂ‚Â­ porod zĂ„â€šĂ‹â€ˇhlavĂ„â€šĂ‚Â­m, chlapec 3800 g, epiziotomie a infekce poranÄ‚â€žĂ˘â‚¬ĹźnĂ„â€šĂ‚Â­ v Ă„Ä…Ă‹â€ˇestinedÄ‚â€žĂ˘â‚¬ĹźlĂ„â€šĂ‚Â­; 02/2019 spontĂ„â€šĂ‹â€ˇnnĂ„â€šĂ‚Â­ porod zĂ„â€šĂ‹â€ˇhlavĂ„â€šĂ‚Â­m 3740 g bez komplikacĂ„â€šĂ‚Â­. Abortus: 01/2022 spontĂ„â€šĂ‹â€ˇnnĂ„â€šĂ‚Â­ abortus completus. UUT: 0. MenarchĂ„â€šĂ‚Â© v 11 letech, cyklus nepravidelnĂ„â€šĂ‹ĹĄ, gynekologickĂ„â€šĂ‚Â© operace ne.</p></div>"""
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(Condition-Story-Primary)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[gestationalAge][+] = Reference(Observation-Story-GestAgeAtDelivery)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(Observation-Story-Gravidity)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(Observation-Story-Parity)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(Observation-Story-MultiplePregnancy)
+* section[sectionPatientHx].section[sectionSocialHistory].title = "SociĂ„â€šĂ‹â€ˇlnĂ„â€šĂ‚Â­ a pracovnĂ„â€šĂ‚Â­ anamnĂ„â€šĂ‚Â©za"
+* section[sectionPatientHx].section[sectionSocialHistory].code = $loinc#29762-2 "SociĂ„â€šĂ‹â€ˇlnĂ„â€šĂ‚Â­ anamnĂ„â€šĂ‚Â©za"
 * section[sectionPatientHx].section[sectionSocialHistory].text.status = #additional
-* section[sectionPatientHx].section[sectionSocialHistory].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>SA+PA: bydlÄ‚Â­ s manÄąÄľelem, na mateÄąâ„˘skÄ‚Â© dovolenÄ‚Â©, povolÄ‚Ë‡nÄ‚Â­m lÄ‚Â©kÄ‚Ë‡rnice. AbÄ‚Ĺźzus: nekuÄąâ„˘aĂ„Ĺ¤ka, alkohol nepije.</p></div>"""
-* section[sectionPatientHx].section[sectionInfectiousContacts].title = "EpidemiologickÄ‚Ë‡ anamnÄ‚Â©za"
-* section[sectionPatientHx].section[sectionInfectiousContacts].code = TemporaryHDRSystem#infection-contact "InfekĂ„Ĺ¤nÄ‚Â­ kontakty"
+* section[sectionPatientHx].section[sectionSocialHistory].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>SA+PA: bydlĂ„â€šĂ‚Â­ s manĂ„Ä…Ă„Äľelem, na mateĂ„Ä…Ă˘â€žËskĂ„â€šĂ‚Â© dovolenĂ„â€šĂ‚Â©, povolĂ„â€šĂ‹â€ˇnĂ„â€šĂ‚Â­m lĂ„â€šĂ‚Â©kĂ„â€šĂ‹â€ˇrnice. AbĂ„â€šÄąĹşzus: nekuĂ„Ä…Ă˘â€žËaÄ‚â€žÄąÂ¤ka, alkohol nepije.</p></div>"""
+* section[sectionPatientHx].section[sectionInfectiousContacts].title = "EpidemiologickĂ„â€šĂ‹â€ˇ anamnĂ„â€šĂ‚Â©za"
+* section[sectionPatientHx].section[sectionInfectiousContacts].code = TemporaryHDRSystem#infection-contact "InfekÄ‚â€žÄąÂ¤nĂ„â€šĂ‚Â­ kontakty"
 * section[sectionPatientHx].section[sectionInfectiousContacts].text.status = #additional
-* section[sectionPatientHx].section[sectionInfectiousContacts].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>EpidemiologickÄ‚Ë‡ anamnÄ‚Â©za: bez vÄ‚ËťznamnÄ‚Ëťch rizikovÄ‚Ëťch kontaktÄąĹ», proti RSV neoĂ„Ĺ¤kovÄ‚Ë‡na.</p></div>"""
-* section[sectionPatientHx].section[sectionSubstanceUse].title = "UÄąÄľÄ‚Â­vÄ‚Ë‡nÄ‚Â­ nÄ‚Ë‡vykovÄ‚Ëťch lÄ‚Ë‡tek"
-* section[sectionPatientHx].section[sectionSubstanceUse].code = TemporaryHDRSystem#substance-use "UÄąÄľÄ‚Â­vÄ‚Ë‡nÄ‚Â­ nÄ‚Ë‡vykovÄ‚Ëťch lÄ‚Ë‡tek"
+* section[sectionPatientHx].section[sectionInfectiousContacts].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>EpidemiologickĂ„â€šĂ‹â€ˇ anamnĂ„â€šĂ‚Â©za: bez vĂ„â€šĂ‹ĹĄznamnĂ„â€šĂ‹ĹĄch rizikovĂ„â€šĂ‹ĹĄch kontaktĂ„Ä…ÄąÂ», proti RSV neoÄ‚â€žÄąÂ¤kovĂ„â€šĂ‹â€ˇna.</p></div>"""
+* section[sectionPatientHx].section[sectionSubstanceUse].title = "UĂ„Ä…Ă„ÄľĂ„â€šĂ‚Â­vĂ„â€šĂ‹â€ˇnĂ„â€šĂ‚Â­ nĂ„â€šĂ‹â€ˇvykovĂ„â€šĂ‹ĹĄch lĂ„â€šĂ‹â€ˇtek"
+* section[sectionPatientHx].section[sectionSubstanceUse].code = TemporaryHDRSystem#substance-use "UĂ„Ä…Ă„ÄľĂ„â€šĂ‚Â­vĂ„â€šĂ‹â€ˇnĂ„â€šĂ‚Â­ nĂ„â€šĂ‹â€ˇvykovĂ„â€šĂ‹ĹĄch lĂ„â€šĂ‹â€ˇtek"
 * section[sectionPatientHx].section[sectionSubstanceUse].text.status = #additional
-* section[sectionPatientHx].section[sectionSubstanceUse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>NekouÄąâ„˘Ä‚Â­, alkohol nepije, drogy neudÄ‚Ë‡vÄ‚Ë‡.</p></div>"""
+* section[sectionPatientHx].section[sectionSubstanceUse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>NekouĂ„Ä…Ă˘â€žËĂ„â€šĂ‚Â­, alkohol nepije, drogy neudĂ„â€šĂ‹â€ˇvĂ„â€šĂ‹â€ˇ.</p></div>"""
 
 * section[sectionAllergies].title = "Alergie, intolerance a varovani"
-* section[sectionAllergies].code = $loinc#48765-2 "Alergie a neÄąÄľÄ‚Ë‡doucÄ‚Â­ reakce"
+* section[sectionAllergies].code = $loinc#48765-2 "Alergie a neĂ„Ä…Ă„ÄľĂ„â€šĂ‹â€ˇdoucĂ„â€šĂ‚Â­ reakce"
 * section[sectionAllergies].text.status = #additional
-* section[sectionAllergies].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>AA: alergie neovĂ„â€şÄąâ„˘eny - trÄ‚Ë‡vy, prach, pyl, Zinnat (vertigo).</p></div>"""
-* section[sectionAllergies].entry[allergyIntolerance][+] = Reference("urn:uuid:allergy-story-environmental")
-* section[sectionAllergies].entry[allergyIntolerance][+] = Reference("urn:uuid:allergy-story-zinnat")
+* section[sectionAllergies].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>AA: alergie neovÄ‚â€žĂ˘â‚¬ĹźĂ„Ä…Ă˘â€žËeny - trĂ„â€šĂ‹â€ˇvy, prach, pyl, Zinnat (vertigo).</p></div>"""
+* section[sectionAllergies].entry[allergyIntolerance][+] = Reference(Allergy-Story-Environmental)
+* section[sectionAllergies].entry[allergyIntolerance][+] = Reference(Allergy-Story-Zinnat)
 
 * section[sectionPharmacotherapy].title = "Pharmacotherapy"
-* section[sectionPharmacotherapy].code = $loinc#87232-5 "StruĂ„Ĺ¤nÄ‚Ëť pÄąâ„˘ehled podanÄ‚Ëťch lÄ‚Â©Ă„Ĺ¤iv"
+* section[sectionPharmacotherapy].code = $loinc#87232-5 "StruÄ‚â€žÄąÂ¤nĂ„â€šĂ‹ĹĄ pĂ„Ä…Ă˘â€žËehled podanĂ„â€šĂ‹ĹĄch lĂ„â€šĂ‚Â©Ä‚â€žÄąÂ¤iv"
 * section[sectionPharmacotherapy].text.status = #additional
 * section[sectionPharmacotherapy].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Behem hospitalizace podany Dopegyt, Fraxiparine, Lidocaine, OFOST, Prostin E2. Pri propusteni doporucen Dopegyt 1-0-1 a LMWH profylaxe do 10.03.2026 vcetne.</p></div>"""
-* section[sectionPharmacotherapy].entry[+] = Reference("urn:uuid:medication-story-dopegyt")
-* section[sectionPharmacotherapy].entry[+] = Reference("urn:uuid:medication-story-fraxiparine")
-* section[sectionPharmacotherapy].entry[+] = Reference("urn:uuid:medication-story-lidocaine-egis")
-* section[sectionPharmacotherapy].entry[+] = Reference("urn:uuid:medication-story-ofost")
-* section[sectionPharmacotherapy].entry[+] = Reference("urn:uuid:medication-story-prostin-e2")
+* section[sectionPharmacotherapy].entry[+] = Reference(Medication-Story-Dopegyt)
+* section[sectionPharmacotherapy].entry[+] = Reference(Medication-Story-Fraxiparine)
+* section[sectionPharmacotherapy].entry[+] = Reference(Medication-Story-LidocaineEgis)
+* section[sectionPharmacotherapy].entry[+] = Reference(Medication-Story-Ofost)
+* section[sectionPharmacotherapy].entry[+] = Reference(Medication-Story-ProstinE2)
 
 * section[sectionDischargeMedications].title = "Hospital discharge medications"
 * section[sectionDischargeMedications].code = $loinc#75311-1 "Hospital discharge medications"
 * section[sectionDischargeMedications].text.status = #additional
 * section[sectionDischargeMedications].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Doporucena medikace pri propusteni: Dopegyt 1-0-1 a Fraxiparine 0,6 ml s.c. 1x denne do 10.03.2026 vcetne.</p></div>"""
-* section[sectionDischargeMedications].entry[+] = Reference("urn:uuid:medicationrequest-story-dopegyt-discharge")
-* section[sectionDischargeMedications].entry[+] = Reference("urn:uuid:medicationrequest-story-fraxiparine-discharge")
+* section[sectionDischargeMedications].entry[+] = Reference(MedicationRequest-Story-Dopegyt-Discharge)
+* section[sectionDischargeMedications].entry[+] = Reference(MedicationRequest-Story-Fraxiparine-Discharge)
 
 * section[sectionPayers].title = "Health insurance and payment information"
-* section[sectionPayers].code = $loinc#48768-6 "Informace o plÄ‚Ë‡tci pÄ‚Â©Ă„Ĺ¤e"
+* section[sectionPayers].code = $loinc#48768-6 "Informace o plĂ„â€šĂ‹â€ˇtci pĂ„â€šĂ‚Â©Ä‚â€žÄąÂ¤e"
 * section[sectionPayers].text.status = #additional
 * section[sectionPayers].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Payer: 111 (VZP).</p></div>"""
-* section[sectionPayers].entry[+] = Reference("urn:uuid:coverage-story-mother")
+* section[sectionPayers].entry[+] = Reference(Coverage-Story-Mother)
 
 * section[sectionPlanOfCare].title = "Plan of care"
-* section[sectionPlanOfCare].code = $loinc#18776-5 "LÄ‚Â©Ă„Ĺ¤ebnÄ‚Ëť plÄ‚Ë‡n"
+* section[sectionPlanOfCare].code = $loinc#18776-5 "LĂ„â€šĂ‚Â©Ä‚â€žÄąÂ¤ebnĂ„â€šĂ‹ĹĄ plĂ„â€šĂ‹â€ˇn"
 * section[sectionPlanOfCare].text.status = #additional
 * section[sectionPlanOfCare].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Doporuceno: self-monitoring TK 5x denne, pri hodnotach nad 150/100 mmHg okamzita kontrola. Kontrola u praktickeho lekare do tydne, gynekologicka kontrola po sestinedeli.</p></div>"""
 
