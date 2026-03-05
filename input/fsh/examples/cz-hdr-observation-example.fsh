@@ -167,7 +167,8 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 
 //-----------------------------------------
 Instance: Observation-UZV-Novak
-InstanceOf: CZ_ObservationResultImaging
+// IMG_RESTORE: switch back to CZ_ObservationResultImaging after upstream package fix
+InstanceOf: Observation
 Usage: #example
 Title: "UZV - Novák Petr"
 Description: "Czech HDR - example of an ultrasound observation for Novák Petr"

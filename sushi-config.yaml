@@ -55,7 +55,8 @@ dependencies:
     # uri: https://hl7.cz/fhir/core/ImplementationGuide/hl7.fhir.cz.core
     # version: 0.3.0-ballot
   hl7.fhir.cz.lab: current
-  hl7.fhir.cz.img: current
+  # IMG_RESTORE: re-enable after upstream package fix
+  # hl7.fhir.cz.img: current
 
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -186,6 +187,8 @@ pages:
     title: HospitalStay Relationships
   PatientHistory-map.html:
     title: PatientHistory Relationships
+  BirthSummary-map.html:
+    title: Delivery Relationships
   Alerts-map.html:
     title: Alerts Relationships
   AdvanceDirectives-map.html:

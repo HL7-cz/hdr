@@ -232,27 +232,27 @@ RuleSet: PatientHxSubsectionRules
 * section[sectionPregnancyHx]
   * insert SectionComRules (
     HDR Pregnancy History Section,
-      This section summarizes pregnancy history relevant for continuity of care in the hospital discharge report.
+      This section SHALL summarize pregnancy history relevant for continuity of care in the hospital discharge report. For obstetric discharge this section SHALL support documenting key maternal pregnancy parameters used for post-discharge follow-up. / Tato sekce SHALL shrnovat tehotenskou anamnezu relevantni pro kontinuitu pece v propousteci zprave. Pro gynekologickou propousteci zpravu tato sekce SHALL podporovat zaznam klicovych parametru matky pro naslednou peci.
       ,  http://loinc.org#10162-6  )   // CODE
-  * insert SectionEntrySliceComRules(Current pregnancy status and\, optionally\, information about the outcome of earlier pregnancies,
-    It contains information about whether the patient is currently pregnant or not. It may contain addition summarizing information about the outcome of earlier pregnancies.)
+  * insert SectionEntrySliceComRules(Current pregnancy status and where relevant information about the outcome of earlier pregnancies / Aktualni stav tehotenstvi a podle relevance informace o vysledku drivejsich tehotenstvi,
+    This section SHALL contain pregnancy status information. It MAY contain additional summarizing information about outcomes of earlier pregnancies and related obstetric parameters such as gravidity parity gestational age at delivery and multiple pregnancy. / Tato sekce SHALL obsahovat informaci o stavu tehotenstvi. MAY obsahovat i doplnujici souhrnne informace o vysledcich drivejsich tehotenstvi a souvisejicich porodnickych parametrech jako gravidita parita gestacni stari pri porodu a vicecetne tehotenstvi.)
   * insert SectionEntrySliceDefRules (pregnancyStatus, 0..*,
-    Current pregnancy status, Current pregnancy status,
+    Current pregnancy status / Aktualni stav tehotenstvi, Current pregnancy status / Aktualni stav tehotenstvi,
     $Observation-pregnancy-status-uv-ips)
   * insert SectionEntrySliceDefRules (pregnancyOutcome, 0..*,
-    Information about the outcome of earlier pregnancies, Information about the outcome of earlier pregnancies,
+    Information about the outcome of earlier pregnancies / Informace o vysledku drivejsich tehotenstvi, Information about the outcome of earlier pregnancies / Informace o vysledku drivejsich tehotenstvi,
     $Observation-pregnancy-outcome-uv-ips)
   * insert SectionEntrySliceDefRules (gestationalAge, 0..*,
-    Information about the gestational age of the pregnancy, Information about the gestational age of the pregnancy,
+    Gestational age at delivery / Gestacni stari pri porodu, Gestational age at delivery format weeks and days for example 39-6 / Format gestacniho stari tydny a dny napr 39-6,
     Observation)
   * insert SectionEntrySliceDefRules (gravidity, 0..*,
-    Gravidity, Gravidity,
+    Gravidity / Gravidita, Gravidity / Gravidita,
     CZ_ObservationGravidity)
   * insert SectionEntrySliceDefRules (parity, 0..*,
-    Parity, Parity,
+    Parity / Parita, Parity / Parita,
     CZ_ObservationParity)
   * insert SectionEntrySliceDefRules (multiplePregnancy, 0..*,
-    Multiple pregnancy and fetus count, Multiple pregnancy and fetus count,
+    Multiple pregnancy and fetus count / Vicecetne tehotenstvi a pocet plodu, Multiple pregnancy and fetus count / Vicecetne tehotenstvi a pocet plodu,
     CZ_ObservationMultiplePregnancy)
 // -------------------------------------
 // Use of substances Section

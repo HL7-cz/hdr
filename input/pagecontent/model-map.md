@@ -5,12 +5,12 @@ This page lists the pages documenting with a graphical representation the maps b
 |------------------------|-------------------------------------------|
 | HospitalDischargeReport| [HospitalDischargeReport-map.html](HospitalDischargeReport-map.html) |
 | Header                 | [Header-map.html](Header-map.html)        |
-| Subject                | [Subject-map.html](Subject-map.html)      |
 | InPatientEncounter     | [InPatientEncounter-map.html](InPatientEncounter-map.html) |
 | AdmissionEvaluation    | [AdmissionEvaluation-map.html](AdmissionEvaluation-map.html) |
 | ObjectiveFindings      | [ObjectiveFindings-map.html](ObjectiveFindings-map.html) |
 | FunctionalStatus       | [FunctionalStatus-map.html](FunctionalStatus-map.html) |
 | PatientHistory         | [PatientHistory-map.html](PatientHistory-map.html) |
+| Delivery               | [BirthSummary-map.html](BirthSummary-map.html)| 
 | HospitalStay           | [HospitalStay-map.html](HospitalStay-map.html) |
 | Alerts                 | [Alerts-map.html](Alerts-map.html)        |
 | AdvanceDirectives      | [AdvanceDirectives-map.html](AdvanceDirectives-map.html) |
