@@ -144,3 +144,69 @@ Usage: #example
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Oddělení CHIR-JIP nemocnice Chrudim</div>" 
 * text.status = #generated
 
+
+//---------------------------------------------------------
+Instance: Location-Brno-Hospital
+InstanceOf: CZ_LocationCore
+Title: "Mestska nemocnice Brno - areal"
+Description: "Main hospital location for fictional Brno provider."
+Usage: #example
+* id = "loc-brno-hospital"
+* status = #active
+* name = "Mestska nemocnice Brno"
+* description = "Hlavni areal Mestske nemocnice Brno"
+* managingOrganization = Reference(Organization-Brno-Hospital)
+* telecom[0].system = #phone
+* telecom[0].value = "+420543111222"
+* telecom[0].use = #work
+* address
+  * use = #work
+  * type = #both
+  * text = "Kvetna 15, 60200 Brno, Ceska republika"
+  * line[0] = "Kvetna 15"
+  * city = "Brno"
+  * postalCode = "60200"
+  * country = "CZ"
+* physicalType = $locationType#bu
+
+Instance: Location-Brno-MaternityWard
+InstanceOf: CZ_LocationCore
+Title: "Porodni oddeleni Brno"
+Description: "Maternity ward in the fictional Brno hospital."
+Usage: #example
+* id = "loc-brno-maternity-ward"
+* status = #active
+* name = "Porodni oddeleni"
+* description = "Porodni oddeleni - Mestska nemocnice Brno"
+* managingOrganization = Reference(Organization-Brno-Maternity)
+* partOf = Reference(Location-Brno-Hospital)
+* partOf.display = "Mestska nemocnice Brno"
+* physicalType = $locationType#wa
+
+Instance: Location-Brno-Maternity-Room3
+InstanceOf: CZ_LocationCore
+Title: "Porodni oddeleni - pokoj 3"
+Description: "Room 3 at maternity ward."
+Usage: #example
+* id = "loc-brno-maternity-room-3"
+* status = #active
+* name = "Pokoj 3"
+* description = "Pokoj 3 na porodni oddeleni"
+* managingOrganization = Reference(Organization-Brno-Maternity)
+* partOf = Reference(Location-Brno-MaternityWard)
+* partOf.display = "Porodni oddeleni"
+* physicalType = $locationType#ro
+
+Instance: Location-Brno-Maternity-Room3-Bed01
+InstanceOf: CZ_LocationCore
+Title: "Porodni oddeleni - pokoj 3 luzko 01"
+Description: "Bed 01 in room 3 at maternity ward."
+Usage: #example
+* id = "loc-brno-maternity-room-3-bed-01"
+* status = #active
+* name = "Luzko 01"
+* description = "Luzko 01, pokoj 3, porodni oddeleni"
+* managingOrganization = Reference(Organization-Brno-Maternity)
+* partOf = Reference(Location-Brno-Maternity-Room3)
+* partOf.display = "Pokoj 3"
+* physicalType = $locationType#bd

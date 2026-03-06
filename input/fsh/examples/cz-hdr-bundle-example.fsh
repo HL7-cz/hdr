@@ -413,5 +413,108 @@ Usage: #example
 
 
 
+// 3. Bundle: Hospital Discharge Report - Novakova Jana (natural birth)
+Instance: DischargeBundle-Novakova-Jana-NaturalBirth
+InstanceOf: CZ_BundleHdr
+Description: "Example Bundle for gynecology discharge report - patient Novakova Jana after spontaneous vaginal delivery"
+Usage: #example
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:0a227a03-5f1d-4f00-b7a8-82f0878b2f80"
+* type = #document
+* timestamp = "2025-05-20T11:30:00+02:00"
+
+* entry[composition][0].fullUrl = "urn:uuid:5e848ec9-b5bf-4c90-9d7e-6b0894208bfe"
+* entry[composition][=].resource = DischargeComposition-Novakova-Jana-NaturalBirth
+
+* entry[patient][+].fullUrl = "urn:uuid:6c4f4d2c-5f24-4a91-a75e-1b0e2a1f7731"
+* entry[patient][=].resource = Patient-Novakova-Jana
+* entry[patient][+].fullUrl = "urn:uuid:b7e6c8a1-4a8d-4d9f-8f69-df4f210cb2d7"
+* entry[patient][=].resource = Patient-Novak-Jan-Newborn
+
+* entry[encounter][+].fullUrl = "urn:uuid:7d7a6f19-5dfb-45ee-8bcf-0f63d9fe49f2"
+* entry[encounter][=].resource = HospitalEncounter-Novakova-Jana
+
+* entry[coverage][+].fullUrl = "urn:uuid:8f9c2f14-1f69-4f2b-b4a8-8b7ca4db9f31"
+* entry[coverage][=].resource = Coverage-Novakova-Jana
+
+* entry[allergyIntolerance][+].fullUrl = "urn:uuid:allergy-penicillin-novakova-jana"
+* entry[allergyIntolerance][=].resource = Allergy-Penicillin-Novakova-Jana
+
+* entry[procedure][+].fullUrl = "urn:uuid:9ac1fd24-6d6a-4d55-b6c0-5f8a6f2f5f31"
+* entry[procedure][=].resource = GynNaturalBirthJana-DeliveryMethod
+
+* entry[condition][+].fullUrl = "urn:uuid:8a6aa5a5-0f66-4c09-b4d0-e2ca7ab6450c"
+* entry[condition][=].resource = GynNaturalBirthJana-BirthInjury
+
+* entry[observation][+].fullUrl = "urn:uuid:4c00d8d9-2b0e-4f8f-82b5-9692eec6d3c1"
+* entry[observation][=].resource = GynNaturalBirthJana-FetalPresentation
+* entry[observation][+].fullUrl = "urn:uuid:3c2dd8f5-58b4-4cc2-a4d7-72ca2f1fbc18"
+* entry[observation][=].resource = GynNaturalBirthJana-BirthWeight
+* entry[observation][+].fullUrl = "urn:uuid:cf6608f4-7e10-4c50-9a2a-78511d95b5be"
+* entry[observation][=].resource = GynNaturalBirthJana-BirthLength
+* entry[observation][+].fullUrl = "urn:uuid:9d0b2e3f-6e66-4dcb-a457-6d6108b1fb89"
+* entry[observation][=].resource = GynNaturalBirthJana-Gravidity
+* entry[observation][+].fullUrl = "urn:uuid:11ab1738-4c81-4d40-8b7e-f0cda2c83ec3"
+* entry[observation][=].resource = GynNaturalBirthJana-Parity
+* entry[observation][+].fullUrl = "urn:uuid:5b9a67e0-d8ed-4dd8-b690-3f61a804c6a4"
+* entry[observation][=].resource = GynNaturalBirthJana-MultiplePregnancy
+* entry[observation][+].fullUrl = "urn:uuid:810c3a4f-c29d-4ce4-8ba0-a7cbbf37ef89"
+* entry[observation][=].resource = GynNaturalBirthJana-GestationalAgeAtDelivery
+* entry[observation][+].fullUrl = "urn:uuid:8d0af4d9-f653-49db-a940-83af87f1da8f"
+* entry[observation][=].resource = GynNaturalBirthJana-Apgar1
+* entry[observation][+].fullUrl = "urn:uuid:24e6d365-6456-4916-81f6-4258e9cd3f5a"
+* entry[observation][=].resource = GynNaturalBirthJana-Apgar5
+* entry[observation][+].fullUrl = "urn:uuid:4ae1602e-6dff-4879-ad22-1ea0ef8cc58d"
+* entry[observation][=].resource = GynNaturalBirthJana-Apgar10
+* entry[observation][+].fullUrl = "urn:uuid:49f3de6d-5b80-47fe-84c0-560037fd14a7"
+* entry[observation][=].resource = GynNaturalBirthJana-BirthOutcome
+
+* entry[medication][+].fullUrl = "urn:uuid:cc11aeb9-c765-4de4-8c69-31cb3235d40c"
+* entry[medication][=].resource = Medication-Ropivacaine-Epidural
+* entry[medication][+].fullUrl = "urn:uuid:95f86512-9ec4-4279-980b-f2fe885322e5"
+* entry[medication][=].resource = Medication-Fentanyl-Epidural
+
+* entry[medicationStatement][+].fullUrl = "urn:uuid:c8e815f2-e5fd-475e-93f6-c6f0f4f26609"
+* entry[medicationStatement][=].resource = MedicationStatement-Ropivacaine-Epidural-Jana
+* entry[medicationStatement][+].fullUrl = "urn:uuid:6f0a9df3-07b9-4f74-b4f2-a484494f0cf5"
+* entry[medicationStatement][=].resource = MedicationStatement-Fentanyl-Epidural-Jana
+* entry[medicationAdministration][+].fullUrl = "urn:uuid:ba94ff27-e9eb-4b1f-b154-c62fc4836be8"
+* entry[medicationAdministration][=].resource = MedicationAdministration-Ropivacaine-Epidural-Jana
+* entry[medicationAdministration][+].fullUrl = "urn:uuid:7af3468d-a53e-4f29-94fd-b0f5d92f49b8"
+* entry[medicationAdministration][=].resource = MedicationAdministration-Fentanyl-Epidural-Jana
+
+* entry[practitioner][+].fullUrl = "urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5"
+* entry[practitioner][=].resource = Practitioner-Novakova-Jana-Author
+* entry[practitioner][+].fullUrl = "urn:uuid:0f2a4a4e-ea00-4b8d-87cf-0f8ae2d1786a"
+* entry[practitioner][=].resource = Practitioner-NovakovaJana-GP
+* entry[practitioner][+].fullUrl = "urn:uuid:7f2542b8-afe3-4a30-8f4f-c2f6fd2c2f85"
+* entry[practitioner][=].resource = Practitioner-NovakovaJana-GYN
+
+* entry[practitionerRole][+].fullUrl = "urn:uuid:25d8c868-5715-48bb-9d19-bbe294f7a8f6"
+* entry[practitionerRole][=].resource = PractitionerRole-NovakovaJana-GP
+* entry[practitionerRole][+].fullUrl = "urn:uuid:e5ef1313-3f47-4ae2-b5f2-6cedfb74a4f1"
+* entry[practitionerRole][=].resource = PractitionerRole-NovakovaJana-GYN
+
+* entry[organization][+].fullUrl = "urn:uuid:6dbf2b1f-67f6-46c9-b1b7-f412aaadf2ba"
+* entry[organization][=].resource = RegisteringProviderExample-gynecology
+* entry[organization][+].fullUrl = "urn:uuid:4f5f6b0d-f1a6-4ff0-9457-5ddd2117e9d9"
+* entry[organization][=].resource = RegisteringProviderExample
+* entry[organization][+].fullUrl = "urn:uuid:96cb3f63-2644-4fd8-8df2-eed1a9bc16f9"
+* entry[organization][=].resource = Organization-Payer-111
+* entry[organization][+].fullUrl = "urn:uuid:d4545f84-0d58-4f6f-a50a-2f2ea2ea4dc4"
+* entry[organization][=].resource = Organization-Brno-Hospital
+* entry[organization][+].fullUrl = "urn:uuid:2f823e1c-b1a5-42f8-9ba4-7df32768b2a7"
+* entry[organization][=].resource = Organization-Brno-Maternity
+* entry[+].fullUrl = "urn:uuid:loc-brno-hospital"
+* entry[=].resource = Location-Brno-Hospital
+* entry[+].fullUrl = "urn:uuid:loc-brno-maternity-ward"
+* entry[=].resource = Location-Brno-MaternityWard
+* entry[+].fullUrl = "urn:uuid:loc-brno-maternity-room-3"
+* entry[=].resource = Location-Brno-Maternity-Room3
+* entry[+].fullUrl = "urn:uuid:loc-brno-maternity-room-3-bed-01"
+* entry[=].resource = Location-Brno-Maternity-Room3-Bed01
+* entry[+].fullUrl = "urn:uuid:relatedperson-novak-petr-husband"
+* entry[=].resource = RelatedPerson-Novak-Petr-Husband
+
 
 

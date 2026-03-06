@@ -98,7 +98,8 @@ Usage: #example
     </ul>
   </div>"""
 * section[sectionSignificantResults].text.status = #additional
-* section[sectionSignificantResults].entry[radResult] = Reference(urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a) // Corrected Reference to include the resource type
+// IMG_RESTORE: re-enable radResult entry after upstream package fix
+// * section[sectionSignificantResults].entry[radResult] = Reference(urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a) // Corrected Reference to include the resource type
 * section[sectionSignificantResults].entry[labResult] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b) // Corrected Reference to include the resource type
 
 // Sekce Implantáty a zdravotní pomůcky

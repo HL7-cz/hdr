@@ -7,7 +7,7 @@ RuleSet: AlertSectionRules
 * section[sectionAlert]
   * insert SectionComRules (
     Health Concern Section, // SHORT
-      This section contains data describing an interest or worry about a health state or process that could possibly require attention\, intervention\, or management. A Health Concern is a health related matter that is of interest\, importance or worry to someone\, who may be the patient\, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR\, such as Problem List\, Family History\, Social Histor\, Social Worker Note\, etc. Health concerns can be medical\, surgical\, nursing\, allied health or patient-reported concerns. Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a classic “Problem List”\, such as “Diabetes Mellitus” or “Family History of Melanoma” or “Tobacco abuse”. These are of broad interest to multiple members of the care team. Examples of other Health Concerns that might not typically be considered a Problem Concern include “Risk of Hyperkalemia” for a patient taking an ACE-inhibitor medication\, or “Transportation difficulties” for someone who doesn't drive and has trouble getting to appointments\, or “Under-insured” for someone who doesn't have sufficient insurance to properly cover their medical needs such as medications. These are typically most important to just a limited number of care team members, // DESC
+      This section contains data describing an interest or worry about a health state or process that could possibly require attention\, intervention\, or management. A Health Concern is a health related matter that is of interest\, importance or worry to someone\, who may be the patient\, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR\, such as Problem List\, Family History\, Social Histor\, Social Worker Note\, etc. Health concerns can be medical\, surgical\, nursing\, allied health or patient-reported concerns. Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a classic â€śProblem Listâ€ť\, such as â€śDiabetes Mellitusâ€ť or â€śFamily History of Melanomaâ€ť or â€śTobacco abuseâ€ť. These are of broad interest to multiple members of the care team. Examples of other Health Concerns that might not typically be considered a Problem Concern include â€śRisk of Hyperkalemiaâ€ť for a patient taking an ACE-inhibitor medication\, or â€śTransportation difficultiesâ€ť for someone who doesn't drive and has trouble getting to appointments\, or â€śUnder-insuredâ€ť for someone who doesn't have sufficient insurance to properly cover their medical needs such as medications. These are typically most important to just a limited number of care team members, // DESC
       http://loinc.org#75310-3 )   // CODE
   * entry 0..
   * insert SectionEntrySliceComRules(Alerts, Alerts)
@@ -71,7 +71,7 @@ RuleSet: EvaluationSubSectionRules
 /*   * title = "Vital signs"
   * code = $sct#1184593002 "Vital sign document section (record artifact)" */
   * entry 1..
-  * entry only Reference(Observation) ///HON Tady by to chtělo dodělat profily pro jednotlivé vital signs
+  * entry only Reference(Observation) ///HON Tady by to chtÄ›lo dodÄ›lat profily pro jednotlivĂ© vital signs
     * ^short = "Entry used to represent vital sign measurements"
     * ^definition = "It describes findings from vital sign measurements of the patient. Profiles to express structured vital sign measurements will be specified by future versions of this guide."
 
@@ -82,7 +82,7 @@ RuleSet: EvaluationSubSectionRules
 // ==> TO BE REVIEWED
 * section contains sectionPhysicalExamination 0..1  // ToDo: add structure
 * section[sectionPhysicalExamination]
-  * title = "Somatické vyšetření"
+  * title = "SomatickĂ© vyĹˇetĹ™enĂ­"
   * code = $sct#425044008 "Physical exam section (record artifact)"
   * text 1..    // now only textual section, should we use questionnair resource for structuring per body part? Maybe as on option?
   * entry 0..   // now only textual section, should we use questionnair response or Observation for structuring per body part?
@@ -143,13 +143,13 @@ RuleSet: PatientHxSubsectionRules
     The social history section contains a description of the person Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
     $loinc#29762-2  )   // CODE
 
-// \’s Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
+// \â€™s Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
 
   * entry 0..
   * entry only Reference(CZ_ObservationSdohHdr or DocumentReference)    // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips)
 
   // -------------------------------------
-// History of Past Illness Section 0 … 1
+// History of Past Illness Section 0 â€¦ 1
 // -------------------------------------
 
 * section contains sectionPastIllnessHx ..1
@@ -170,7 +170,7 @@ RuleSet: PatientHxSubsectionRules
 * section[sectionPastIllnessHx].emptyReason ^mustSupport = false */
 
 // -------------------------------------
-// History of Procedures Section 0 … 1
+// History of Procedures Section 0 â€¦ 1
 // -------------------------------------
 * section contains sectionProceduresHx ..1
 * section[sectionProceduresHx]
@@ -189,7 +189,7 @@ RuleSet: PatientHxSubsectionRules
 
 
 // -------------------------------------
-// Immunizations Section 0 … 1
+// Immunizations Section 0 â€¦ 1
 // -------------------------------------
 
 * section contains sectionImmunizations ..1
@@ -212,13 +212,13 @@ RuleSet: PatientHxSubsectionRules
 
 
 // -------------------------------------
-// Family History Section 0 … 1
+// Family History Section 0 â€¦ 1
 // -------------------------------------
 * section contains sectionFamilyHistory ..1
 * section[sectionFamilyHistory]
   * insert SectionComRules (
     Family History Section,
-      This section contains data defining the patient’s genetic relatives in terms of possible or relevant health risk factors that have a potential impact on the patient’s healthcare risk profile.
+      This section contains data defining the patientâ€™s genetic relatives in terms of possible or relevant health risk factors that have a potential impact on the patientâ€™s healthcare risk profile.
       ,  http://loinc.org#10157-6  )   // CODE
   * entry 0..
   * entry only Reference(CZ_FamilyMemberHistoryHdr)
@@ -226,18 +226,34 @@ RuleSet: PatientHxSubsectionRules
   * entry ^definition = "Family History"
 
 // -------------------------------------
-// Gynecology History Section 0 … 1
+// Gynecology History Section 0 â€¦ 1
 // -------------------------------------
-* section contains sectionGynecologyHistory ..1
-* section[sectionGynecologyHistory]
+* section contains sectionPregnancyHx ..1
+* section[sectionPregnancyHx]
   * insert SectionComRules (
-    Gynecology History Section,
-      This section contains data defining the patient’s gynecology history in terms of possible or relevant health risk factors that have a potential impact on the patient’s healthcare risk profile.
+    HDR Pregnancy History Section,
+      This section SHALL summarize pregnancy history relevant for continuity of care in the hospital discharge report. For obstetric discharge this section SHALL support documenting key maternal pregnancy parameters used for post-discharge follow-up. / Tato sekce SHALL shrnovat tehotenskou anamnezu relevantni pro kontinuitu pece v propousteci zprave. Pro gynekologickou propousteci zpravu tato sekce SHALL podporovat zaznam klicovych parametru matky pro naslednou peci.
       ,  http://loinc.org#10162-6  )   // CODE
-  * entry 0..
-  * entry only Reference(CZ_ObservationGravidity or CZ_ObservationParity or CZ_ObservationMultiplePregnancy or Observation)
-  * entry ^short = "Gynecology History"
-  * entry ^definition = "Gynecology History"
+  * insert SectionEntrySliceComRules(Current pregnancy status and where relevant information about the outcome of earlier pregnancies / Aktualni stav tehotenstvi a podle relevance informace o vysledku drivejsich tehotenstvi,
+    This section SHALL contain pregnancy status information. It MAY contain additional summarizing information about outcomes of earlier pregnancies and related obstetric parameters such as gravidity parity gestational age at delivery and multiple pregnancy. / Tato sekce SHALL obsahovat informaci o stavu tehotenstvi. MAY obsahovat i doplnujici souhrnne informace o vysledcich drivejsich tehotenstvi a souvisejicich porodnickych parametrech jako gravidita parita gestacni stari pri porodu a vicecetne tehotenstvi.)
+  * insert SectionEntrySliceDefRules (pregnancyStatus, 0..*,
+    Current pregnancy status / Aktualni stav tehotenstvi, Current pregnancy status / Aktualni stav tehotenstvi,
+    $Observation-pregnancy-status-uv-ips)
+  * insert SectionEntrySliceDefRules (pregnancyOutcome, 0..*,
+    Information about the outcome of earlier pregnancies / Informace o vysledku drivejsich tehotenstvi, Information about the outcome of earlier pregnancies / Informace o vysledku drivejsich tehotenstvi,
+    $Observation-pregnancy-outcome-uv-ips)
+  * insert SectionEntrySliceDefRules (gestationalAge, 0..*,
+    Gestational age at delivery / Gestacni stari pri porodu, Gestational age at delivery format weeks and days for example 39-6 / Format gestacniho stari tydny a dny napr 39-6,
+    Observation)
+  * insert SectionEntrySliceDefRules (gravidity, 0..*,
+    Gravidity / Gravidita, Gravidity / Gravidita,
+    CZ_ObservationGravidity)
+  * insert SectionEntrySliceDefRules (parity, 0..*,
+    Parity / Parita, Parity / Parita,
+    CZ_ObservationParity)
+  * insert SectionEntrySliceDefRules (multiplePregnancy, 0..*,
+    Multiple pregnancy and fetus count / Vicecetne tehotenstvi a pocet plodu, Multiple pregnancy and fetus count / Vicecetne tehotenstvi a pocet plodu,
+    CZ_ObservationMultiplePregnancy)
 // -------------------------------------
 // Use of substances Section
 // -------------------------------------
@@ -287,7 +303,7 @@ RuleSet: PatientHxSubsectionRules
   * entry only Reference(Observation)
 
 // -------------------------------------
-// Problem List Section 0 … 1
+// Problem List Section 0 â€¦ 1
 // covers the active part of the History of Past Illness heading
 // -------------------------------------
 

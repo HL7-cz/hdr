@@ -225,8 +225,8 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * section[sectionHospitalCourse].section contains sectionDelivery 0..1
 * section[sectionHospitalCourse].section[sectionDelivery]
   * insert SectionComRules(
-      Delivery,
-      Information about labour\, delivery and newborn outcome.,
+      Delivery / Porod,
+      Information about labour\, delivery and newborn outcome / Informace o prubehu porodu\, porodu a stavu novorozence.,
       http://loinc.org#57074-7 ) // "Delivery note"
   * entry only Reference(
         CZ_ProcedureHdr
@@ -236,6 +236,33 @@ Description: "This profile defines how to represent Composition resource in HL7 
      or CZ_ConditionHdr
      or CZ_PatientCore
   )
+  * insert SectionEntrySliceComRules(
+      Delivery-related entries / Polozky vztahujici se k porodu,
+      Structured entries for delivery method\, induction\, birth injury\, newborn and related observations / Strukturovane polozky pro zpusob porodu\, indukci\, porodni poraneni\, novorozence a souvisejici pozorovani.)
+  * insert SectionEntrySliceDefRules (deliveryProcedure, 0..*,
+      Delivery procedure / Vykon porodu, Delivery procedure / Vykon porodu,
+      CZ_ProcedureMethodOfDelivery)
+  * insert SectionEntrySliceDefRules (inductionProcedure, 0..*,
+      Labour induction procedure / Indukce porodu, Labour induction procedure / Indukce porodu,
+      CZ_ProcedureInductionOfLabor)
+  * insert SectionEntrySliceDefRules (birthInjury, 0..*,
+      Birth injury condition / Porodni poraneni, Birth injury condition / Porodni poraneni,
+      CZ_ConditionHdr)
+  * insert SectionEntrySliceDefRules (fetalPresentation, 0..*,
+      Fetal presentation observation / Poloha plodu, Fetal presentation observation / Poloha plodu,
+      CZ_ObservationFetalPresentation)
+  * insert SectionEntrySliceDefRules (birthWeight, 0..*,
+      Birth weight observation / Porodni hmotnost, Birth weight observation / Porodni hmotnost,
+      CZ_ObservationBirthWeight)
+  * insert SectionEntrySliceDefRules (birthLength, 0..*,
+      Birth length observation / Porodni delka, Birth length observation / Porodni delka,
+      CZ_ObservationBirthLength)
+  * insert SectionEntrySliceDefRules (deliveryObservation, 0..*,
+      Other delivery observations / Ostatni pozorovani k porodu, Other delivery observations / Ostatni pozorovani k porodu,
+      Observation)
+  * insert SectionEntrySliceDefRules (newborn, 0..*,
+      Newborn patient / Novorozenec, Newborn patient / Novorozenec,
+      CZ_PatientCore)
 
 * section contains sectionDiagnosticSummary 0..1
 * section[sectionDiagnosticSummary]
@@ -300,7 +327,8 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * entry insert OpenReferenceSlicePerTypeRules (significant results, significant results)
   //* insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result ,Laboratory Result  , $Observation-resultslab-eu-lab)
   * insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result , Laboratory Result, $Observation-resultslab-cz-lab)
-  * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result , Radiology Result  ,$Observation-results-radiology-cz)
+  // IMG_RESTORE: re-enable radResult slice after upstream package fix
+  // * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result , Radiology Result  ,$Observation-results-radiology-cz)
 
 
   // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)

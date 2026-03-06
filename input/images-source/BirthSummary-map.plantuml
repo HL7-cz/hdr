@@ -1,0 +1,68 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+
+class "BirthSummary" <<LogicalModel>> [[StructureDefinition-LMBirthSummaryEnCz.html]]
+note top #PaleTurquoise [[ConceptMap-birthSummary2FHIR-hdr-cz.html]]
+Concept Map
+endnote
+
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+"BirthSummary" <|. "composition-cz-hdr"
+
+class "procedure-method-of-delivery-cz-hdr" <<Profile>> [[StructureDefinition-cz-procedure-method-of-delivery-hdr.html]]
+"BirthSummary" <|. "procedure-method-of-delivery-cz-hdr"
+"composition-cz-hdr" -d[hidden]-> "procedure-method-of-delivery-cz-hdr"
+
+class "procedure-induction-of-labor-cz-hdr" <<Profile>> [[StructureDefinition-cz-procedure-induction-of-labor-hdr.html]]
+"BirthSummary" <|. "procedure-induction-of-labor-cz-hdr"
+"procedure-method-of-delivery-cz-hdr" -d[hidden]-> "procedure-induction-of-labor-cz-hdr"
+
+class "condition-cz-hdr" <<Profile>> [[StructureDefinition-cz-condition-hdr.html]]
+"BirthSummary" <|. "condition-cz-hdr"
+"procedure-induction-of-labor-cz-hdr" -d[hidden]-> "condition-cz-hdr"
+
+class "observation-gravidity-cz-hdr" <<Profile>> [[StructureDefinition-cz-observation-gravidity.html]]
+"BirthSummary" <|. "observation-gravidity-cz-hdr"
+"condition-cz-hdr" -d[hidden]-> "observation-gravidity-cz-hdr"
+
+class "observation-parity-cz-hdr" <<Profile>> [[StructureDefinition-cz-observation-parity.html]]
+"BirthSummary" <|. "observation-parity-cz-hdr"
+"observation-gravidity-cz-hdr" -d[hidden]-> "observation-parity-cz-hdr"
+
+class "observation-multiple-pregnancy-cz-hdr" <<Profile>> [[StructureDefinition-cz-observation-multiple-pregnancy.html]]
+"BirthSummary" <|. "observation-multiple-pregnancy-cz-hdr"
+"observation-parity-cz-hdr" -d[hidden]-> "observation-multiple-pregnancy-cz-hdr"
+
+class "observation-birth-weight-cz-hdr" <<Profile>> [[StructureDefinition-cz-observation-birth-weight.html]]
+"BirthSummary" <|. "observation-birth-weight-cz-hdr"
+"observation-multiple-pregnancy-cz-hdr" -d[hidden]-> "observation-birth-weight-cz-hdr"
+
+class "observation-birth-length-cz-hdr" <<Profile>> [[StructureDefinition-cz-observation-birth-length.html]]
+"BirthSummary" <|. "observation-birth-length-cz-hdr"
+"observation-birth-weight-cz-hdr" -d[hidden]-> "observation-birth-length-cz-hdr"
+
+class "observation-fetal-presentation-cz-hdr" <<Profile>> [[StructureDefinition-cz-observation-fetal-presentation.html]]
+"BirthSummary" <|. "observation-fetal-presentation-cz-hdr"
+"observation-birth-length-cz-hdr" -d[hidden]-> "observation-fetal-presentation-cz-hdr"
+
+class "Observation" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Observation]]
+"BirthSummary" <|. "Observation"
+"observation-fetal-presentation-cz-hdr" -d[hidden]-> "Observation"
+
+class "patient-core-cz" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
+"BirthSummary" <|. "patient-core-cz"
+"Observation" -d[hidden]-> "patient-core-cz"
+
+@enduml

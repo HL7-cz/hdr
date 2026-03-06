@@ -152,3 +152,40 @@ Description: "Czech HDR – a minimalist example of a encounter for Petr Novák 
 * period.start = "2025-03-01T10:15:00+01:00"
 * period.end = "2025-03-10T09:30:00+01:00"
 * serviceProvider = Reference(urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9)
+
+Instance: HospitalEncounter-Novakova-Jana
+InstanceOf: CZ_EncounterHdr
+Usage: #example
+Title: "CZ-Encounter-HDR Example of encounter for Novakova Jana"
+Description: "Czech HDR - example of encounter for Jana Novakova after spontaneous vaginal delivery"
+* id = "7d7a6f19-5dfb-45ee-8bcf-0f63d9fe49f2"
+* status = #finished
+* class.code = #IMP
+* class.system = $cz-encounter-typ-kontaktu
+* class.display = "inpatient encounter"
+* subject = Reference(Patient-Novakova-Jana)
+* period.start = "2025-05-17T06:20:00+02:00"
+* period.end = "2025-05-20T11:30:00+02:00"
+* serviceProvider = Reference(Organization-Brno-Maternity)
+* hospitalization.admitSource.coding[0].system = $admit-source
+* hospitalization.admitSource.coding[0].code = #outp
+* hospitalization.admitSource.coding[0].display = "From outpatient department"
+* priority.coding[0].system = $actPriority
+* priority.coding[0].code = #UR
+* priority.coding[0].display = "urgent"
+* hospitalization.dischargeDisposition.coding[0].system = $discharge-disposition
+* hospitalization.dischargeDisposition.coding[0].code = #home
+* hospitalization.dischargeDisposition.coding[0].display = "Home"
+* participant[0].individual = Reference(Practitioner-Novakova-Jana-Author)
+* participant[0].type.coding[0].system = $v3-ParticipationType
+* participant[0].type.coding[0].code = #ADM
+* participant[0].type.coding[0].display = "Admitter"
+* location[0].location = Reference(Location-Brno-MaternityWard)
+* location[0].period.start = "2025-05-17T06:20:00+02:00"
+* location[0].period.end = "2025-05-18T09:00:00+02:00"
+* location[1].location = Reference(Location-Brno-Maternity-Room3)
+* location[1].period.start = "2025-05-18T09:00:00+02:00"
+* location[1].period.end = "2025-05-20T10:00:00+02:00"
+* location[2].location = Reference(Location-Brno-Maternity-Room3-Bed01)
+* location[2].period.start = "2025-05-18T09:10:00+02:00"
+* location[2].period.end = "2025-05-19T18:00:00+02:00"

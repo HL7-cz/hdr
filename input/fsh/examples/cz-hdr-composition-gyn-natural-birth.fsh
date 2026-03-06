@@ -7,7 +7,7 @@ Description: "Example gynecology hospital discharge composition with spontaneous
 * type = $loinc#34105-7 "Hospital Discharge summary"
 * title = "Gynekologická propouštěcí zpráva - spontánní vaginální porod"
 * date = "2025-05-18T12:30:00+02:00"
-* author[0] = Reference(Practitioner-Author)
+* author[0] = Reference(Practitioner-Novakova-Jana-Author)
 * subject = Reference(Mracena2)
 * encounter = Reference(CZ-Encounter-HDR-Example)
 
@@ -34,14 +34,14 @@ Description: "Example gynecology hospital discharge composition with spontaneous
 * section[sectionPatientHx].text.status = #additional
 * section[sectionPatientHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gynekologická anamnéza: gravidita/parita 2/2, gestační stáří při porodu 39+6.</p></div>"""
 
-* section[sectionPatientHx].section[sectionGynecologyHistory].title = "Gynekologická anamnéza"
-* section[sectionPatientHx].section[sectionGynecologyHistory].code = $loinc#10162-6 "History of pregnancies"
-* section[sectionPatientHx].section[sectionGynecologyHistory].text.status = #additional
-* section[sectionPatientHx].section[sectionGynecologyHistory].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gestační stáří 39+6, gravidita 2, parita 2, singleton gravidita.</p></div>"""
-* section[sectionPatientHx].section[sectionGynecologyHistory].entry[+] = Reference(GynNaturalBirth-GestationalAgeAtDelivery)
-* section[sectionPatientHx].section[sectionGynecologyHistory].entry[+] = Reference(GynNaturalBirth-Gravidity)
-* section[sectionPatientHx].section[sectionGynecologyHistory].entry[+] = Reference(GynNaturalBirth-Parity)
-* section[sectionPatientHx].section[sectionGynecologyHistory].entry[+] = Reference(GynNaturalBirth-MultiplePregnancy)
+* section[sectionPatientHx].section[sectionPregnancyHx].title = "Těhotenská anamnéza"
+* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies"
+* section[sectionPatientHx].section[sectionPregnancyHx].text.status = #additional
+* section[sectionPatientHx].section[sectionPregnancyHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gestační stáří 39+6, gravidita 2, parita 2, singleton gravidita.</p></div>"""
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirth-GestationalAgeAtDelivery)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirth-Gravidity)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirth-Parity)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirth-MultiplePregnancy)
 
 Instance: GynNaturalBirth-DeliveryMethod
 InstanceOf: CZ_ProcedureMethodOfDelivery
@@ -130,5 +130,305 @@ Usage: #example
 * status = #final
 * code = $loinc#9271-8 "Apgar score 10 minute"
 * subject = Reference(Patient-Novak-Petr)
+* effectiveDateTime = "2025-05-18T10:56:00+02:00"
+* valueInteger = 10
+
+Instance: DischargeComposition-Novakova-Jana-NaturalBirth
+InstanceOf: CZ_CompositionHdr
+Usage: #example
+Description: "Example gynecology hospital discharge composition for Jana Novakova with spontaneous vaginal delivery."
+* id = "5e848ec9-b5bf-4c90-9d7e-6b0894208bfe"
+* status = #final
+* type = $loinc#34105-7 "Hospital Discharge summary"
+* title = "Gynekologická propouštěcí zpráva - spontánní vaginální porod (Jana Nováková)"
+* date = "2025-05-20T11:30:00+02:00"
+* author[0] = Reference(Practitioner-Novakova-Jana-Author)
+* subject = Reference(Patient-Novakova-Jana)
+* encounter = Reference(HospitalEncounter-Novakova-Jana)
+
+* section[sectionHospitalCourse].title = "Průběh hospitalizace"
+* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
+* section[sectionHospitalCourse].text.status = #additional
+* section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Hospitalizace pro spontánní porod v termínu, bez závažných komplikací.</p></div>"""
+
+* section[sectionHospitalCourse].section[sectionDelivery].title = "Porod"
+* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "Delivery note"
+* section[sectionHospitalCourse].section[sectionDelivery].text.status = #additional
+* section[sectionHospitalCourse].section[sectionDelivery].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Porod dne 18.05.2025 v 10:46, spontánní vaginální, bez indukce, analgezie EDA (ropivakain + fentanyl), novorozenec mužského pohlaví, 3210 g, 49 cm, Apgar 10-10-10. Mateřské poranění: epiziotomie mediolaterální.</p></div>"""
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-DeliveryMethod)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-FetalPresentation)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-BirthWeight)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-BirthLength)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-BirthInjury)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-BirthOutcome)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-Apgar1)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-Apgar5)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-Apgar10)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(Patient-Novak-Jan-Newborn)
+
+* section[sectionPatientHx].title = "Anamnéza"
+* section[sectionPatientHx].code = $loinc#35090-0 "Patient history note"
+* section[sectionPatientHx].text.status = #additional
+* section[sectionPatientHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gynekologická anamnéza: prvorodička, gravidita/parita 1/1, gestační stáří při porodu 39+6.</p></div>"""
+* section[sectionPatientHx].section[sectionPregnancyHx].title = "Těhotenská anamnéza"
+* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies"
+* section[sectionPatientHx].section[sectionPregnancyHx].text.status = #additional
+* section[sectionPatientHx].section[sectionPregnancyHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gestační stáří 39+6, prvorodička, gravidita 1, parita 1, singleton gravidita.</p></div>"""
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirthJana-GestationalAgeAtDelivery)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirthJana-Gravidity)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirthJana-Parity)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirthJana-MultiplePregnancy)
+
+* section[sectionPayers].title = "Health insurance and payment information"
+* section[sectionPayers].code = $loinc#48768-6 "Payment sources Document"
+* section[sectionPayers].text.status = #additional
+* section[sectionPayers].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Payer: 111 (VZP), insurance number: 9355181234.</p></div>"""
+* section[sectionPayers].entry[+] = Reference(Coverage-Novakova-Jana)
+
+* section[sectionAllergies].title = "Alergie, intolerance a varování"
+* section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
+* section[sectionAllergies].text.status = #additional
+* section[sectionAllergies].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Alergie na penicilin, reakce: kožní vyrážka a otok rtů.</p></div>"""
+* section[sectionAllergies].entry[allergyIntolerance][+] = Reference(Allergy-Penicillin-Novakova-Jana)
+
+* section[sectionPharmacotherapy].title = "Pharmacotherapy"
+* section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration brief"
+* section[sectionPharmacotherapy].text.status = #additional
+* section[sectionPharmacotherapy].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Porodní analgezie: epidurální podání ropivakainu s malou dávkou fentanylu během porodu.</p></div>"""
+* section[sectionPharmacotherapy].entry[+] = Reference(Medication-Ropivacaine-Epidural)
+* section[sectionPharmacotherapy].entry[+] = Reference(Medication-Fentanyl-Epidural)
+* section[sectionPharmacotherapy].entry[+] = Reference(MedicationStatement-Ropivacaine-Epidural-Jana)
+* section[sectionPharmacotherapy].entry[+] = Reference(MedicationStatement-Fentanyl-Epidural-Jana)
+
+Instance: Medication-Ropivacaine-Epidural
+InstanceOf: CZ_Medication
+Usage: #example
+Description: "Ropivacaine used for epidural labor analgesia."
+* id = "med-ropivacaine-epidural"
+* status = #active
+* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].value = "0299001"
+* code.coding[0].system = "http://www.whocc.no/atc"
+* code.coding[0].code = #N01BB09
+* code.coding[0].display = "Ropivacaine"
+* code.text = "Ropivakain epiduralni roztok"
+
+Instance: Medication-Fentanyl-Epidural
+InstanceOf: CZ_Medication
+Usage: #example
+Description: "Fentanyl used as adjuvant in epidural labor analgesia."
+* id = "med-fentanyl-epidural"
+* status = #active
+* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].value = "0299002"
+* code.coding[0].system = "http://www.whocc.no/atc"
+* code.coding[0].code = #N01AH01
+* code.coding[0].display = "Fentanyl"
+* code.text = "Fentanyl pro epiduralni analgezii"
+
+Instance: MedicationStatement-Ropivacaine-Epidural-Jana
+InstanceOf: CZ_MedicationStatement
+Usage: #example
+Description: "Epidural administration of ropivacaine during labor."
+* id = "medstmt-ropivacaine-epidural-jana"
+* status = #completed
+* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].value = "0299001"
+* subject = Reference(Patient-Novakova-Jana)
+* medicationReference = Reference(Medication-Ropivacaine-Epidural)
+* effectivePeriod.start = "2025-05-18T09:35:00+02:00"
+* effectivePeriod.end = "2025-05-18T11:10:00+02:00"
+* dosage[0].text = "Epidurální podání ropivakainu během porodu"
+* dosage[0].route.coding[0].system = $sct
+* dosage[0].route.coding[0].code = #47625008
+* dosage[0].route.coding[0].display = "Epidural route"
+* category[0].coding[0].system = $medication-statement
+* category[0].coding[0].code = #inpatient
+* category[0].coding[0].display = "Inpatient"
+
+Instance: MedicationStatement-Fentanyl-Epidural-Jana
+InstanceOf: CZ_MedicationStatement
+Usage: #example
+Description: "Epidural fentanyl adjuvant during labor analgesia."
+* id = "medstmt-fentanyl-epidural-jana"
+* status = #completed
+* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].value = "0299002"
+* subject = Reference(Patient-Novakova-Jana)
+* medicationReference = Reference(Medication-Fentanyl-Epidural)
+* effectivePeriod.start = "2025-05-18T09:40:00+02:00"
+* effectivePeriod.end = "2025-05-18T10:50:00+02:00"
+* dosage[0].text = "Epidurální podání malé dávky fentanylu jako součást EDA"
+* dosage[0].route.coding[0].system = $sct
+* dosage[0].route.coding[0].code = #47625008
+* dosage[0].route.coding[0].display = "Epidural route"
+* category[0].coding[0].system = $medication-statement
+* category[0].coding[0].code = #inpatient
+* category[0].coding[0].display = "Inpatient"
+
+Instance: MedicationAdministration-Ropivacaine-Epidural-Jana
+InstanceOf: MedicationAdministration
+Usage: #example
+Description: "Intrapartum epidural administration of ropivacaine."
+* id = "medadmin-ropivacaine-epidural-jana"
+* status = #completed
+* subject = Reference(Patient-Novakova-Jana)
+* context = Reference(HospitalEncounter-Novakova-Jana)
+* medicationReference = Reference(Medication-Ropivacaine-Epidural)
+* effectivePeriod.start = "2025-05-18T09:35:00+02:00"
+* effectivePeriod.end = "2025-05-18T11:10:00+02:00"
+* dosage.route.coding[0].system = $sct
+* dosage.route.coding[0].code = #47625008
+* dosage.route.coding[0].display = "Epidural route"
+* dosage.dose = 10 'mg' "mg"
+
+Instance: MedicationAdministration-Fentanyl-Epidural-Jana
+InstanceOf: MedicationAdministration
+Usage: #example
+Description: "Intrapartum epidural administration of fentanyl."
+* id = "medadmin-fentanyl-epidural-jana"
+* status = #completed
+* subject = Reference(Patient-Novakova-Jana)
+* context = Reference(HospitalEncounter-Novakova-Jana)
+* medicationReference = Reference(Medication-Fentanyl-Epidural)
+* effectivePeriod.start = "2025-05-18T09:40:00+02:00"
+* effectivePeriod.end = "2025-05-18T10:50:00+02:00"
+* dosage.route.coding[0].system = $sct
+* dosage.route.coding[0].code = #47625008
+* dosage.route.coding[0].display = "Epidural route"
+* dosage.dose = 0.05 'mg' "mg"
+
+Instance: GynNaturalBirthJana-DeliveryMethod
+InstanceOf: CZ_ProcedureMethodOfDelivery
+Usage: #example
+* status = #completed
+* code = $sct#22640007 "Vaginal delivery"
+* subject = Reference(Patient-Novakova-Jana)
+* performedDateTime = "2025-05-18T10:46:00+02:00"
+* performer.actor = Reference(Practitioner-Novakova-Jana-Author)
+
+Instance: GynNaturalBirthJana-FetalPresentation
+InstanceOf: CZ_ObservationFetalPresentation
+Usage: #example
+* status = #final
+* code = $loinc#57076-2 "Fetal presentation at birth"
+* subject = Reference(Patient-Novakova-Jana)
+* effectiveDateTime = "2025-05-18T10:46:00+02:00"
+* valueCodeableConcept = $sct#70028003 "Vertex presentation"
+
+Instance: GynNaturalBirthJana-BirthWeight
+InstanceOf: CZ_ObservationBirthWeight
+Usage: #example
+* subject = Reference(Patient-Novak-Jan-Newborn)
+* valueQuantity = 3210 'g' "g"
+
+Instance: GynNaturalBirthJana-BirthLength
+InstanceOf: CZ_ObservationBirthLength
+Usage: #example
+* subject = Reference(Patient-Novak-Jan-Newborn)
+* valueQuantity = 49 'cm' "cm"
+
+Instance: GynNaturalBirthJana-BirthInjury
+InstanceOf: CZ_ConditionHdr
+Usage: #example
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
+* code = $icd10#O70.0 "First degree perineal laceration during delivery"
+* subject = Reference(Patient-Novakova-Jana)
+* onsetDateTime = "2025-05-18T10:46:00+02:00"
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Epiziotomie mediolaterální během porodu.</div>"
+
+Instance: Allergy-Penicillin-Novakova-Jana
+InstanceOf: CZ_AllergyIntoleranceHdr
+Usage: #example
+Description: "Alergie pacientky na penicilin s kožní vyrážkou a otokem rtů."
+* identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
+* identifier[0].value = "Allergy-Penicillin-Novakova-Jana-001"
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Alergie na penicilin - kožní vyrážka, otok rtů.</p></div>"
+* clinicalStatus = $allergyintolerance-clinical#active
+* verificationStatus = $allergyintolerance-verification#confirmed
+* type = #allergy
+* criticality = #low
+* code.coding[0].system = $sct
+* code.coding[0].code = #764146007
+* code.coding[0].display = "Penicillin"
+* patient = Reference(Patient-Novakova-Jana)
+* reaction[0].manifestation[0].coding[0].system = $sct
+* reaction[0].manifestation[0].coding[0].code = #271807003
+* reaction[0].manifestation[0].coding[0].display = "Eruption of skin"
+* reaction[0].manifestation[1].coding[0].system = $sct
+* reaction[0].manifestation[1].coding[0].code = #267038008
+* reaction[0].manifestation[1].coding[0].display = "Edema (finding)"
+* reaction[0].description = "Kožní vyrážka, otok rtů."
+
+Instance: GynNaturalBirthJana-BirthOutcome
+InstanceOf: Observation
+Usage: #example
+* status = #final
+* code = $loinc#73764-3 "Birth outcome"
+* subject = Reference(Patient-Novakova-Jana)
+* effectiveDateTime = "2025-05-18T10:46:00+02:00"
+* valueCodeableConcept = $sct#169826009 "Liveborn infant"
+
+Instance: GynNaturalBirthJana-Gravidity
+InstanceOf: CZ_ObservationGravidity
+Usage: #example
+* status = #final
+* subject = Reference(Patient-Novakova-Jana)
+* effectiveDateTime = "2025-05-18T10:46:00+02:00"
+* valueInteger = 1
+
+Instance: GynNaturalBirthJana-Parity
+InstanceOf: CZ_ObservationParity
+Usage: #example
+* status = #final
+* subject = Reference(Patient-Novakova-Jana)
+* effectiveDateTime = "2025-05-18T10:46:00+02:00"
+* valueInteger = 1
+
+Instance: GynNaturalBirthJana-MultiplePregnancy
+InstanceOf: CZ_ObservationMultiplePregnancy
+Usage: #example
+* status = #final
+* subject = Reference(Patient-Novakova-Jana)
+* effectiveDateTime = "2025-05-18T10:46:00+02:00"
+* valueBoolean = false
+* component.valueInteger = 1
+
+Instance: GynNaturalBirthJana-GestationalAgeAtDelivery
+InstanceOf: Observation
+Usage: #example
+* status = #final
+* code = $loinc#76516-4 "Gestational age--at birth"
+* subject = Reference(Patient-Novakova-Jana)
+* effectiveDateTime = "2025-05-18T10:46:00+02:00"
+* valueString = "39+6"
+
+Instance: GynNaturalBirthJana-Apgar1
+InstanceOf: Observation
+Usage: #example
+* status = #final
+* code = $loinc#9272-6 "Apgar score 1 minute"
+* subject = Reference(Patient-Novak-Jan-Newborn)
+* effectiveDateTime = "2025-05-18T10:47:00+02:00"
+* valueInteger = 10
+
+Instance: GynNaturalBirthJana-Apgar5
+InstanceOf: Observation
+Usage: #example
+* status = #final
+* code = $loinc#9274-2 "Apgar score 5 minute"
+* subject = Reference(Patient-Novak-Jan-Newborn)
+* effectiveDateTime = "2025-05-18T10:51:00+02:00"
+* valueInteger = 10
+
+Instance: GynNaturalBirthJana-Apgar10
+InstanceOf: Observation
+Usage: #example
+* status = #final
+* code = $loinc#9271-8 "Apgar score 10 minute"
+* subject = Reference(Patient-Novak-Jan-Newborn)
 * effectiveDateTime = "2025-05-18T10:56:00+02:00"
 * valueInteger = 10

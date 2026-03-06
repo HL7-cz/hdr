@@ -1,6 +1,6 @@
 Logical: LMCzAdmissionEvaluation
 Id: LMAdmissionEvaluationCz
-Title: "A.2.4 - Stav při přijetí (cz)"
+Title: "A.2.4 - Stav při přijetí"
 Description: """Nemocniční propouštěcí zpráva - Stav při přijetí - A.2.4 CZ poznámka: Nepovinná sekce uvádět pouze v případě významu pro zajištění kontinuity péče. """
 * objektivniNalez 0..1 Base "A.2.4.1 - Objektivní nález" """Objektivní nález"""
   * datum 0..1 dateTime "A.2.4.1.1 - Datum a čas" """Datum a čas vyšetření pacienta lékařem v průběhu jeho přijímání k hospitalizaci"""
