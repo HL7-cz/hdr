@@ -275,7 +275,7 @@ Usage: #example
 * section[sectionPatientHx].code.coding[0].code = #35090-0 // Patient history note
 * section[sectionPatientHx].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
-    <p>Osobní anamnéza: pacient prodělal v roce 2015 apendektomii, v roce 2018 byl léčen pro hypertenzi. V roce 2020 prodělal chřipku bez komplikací. V anamnéze je také hypotyreóza, léčená substituční terapií (Euthyrox 75 µg denně).</p>
+    <p>Pacient prodělal v roce 2015 apendektomii, v roce 2018 byl léčen pro hypertenzi. V roce 2020 prodělal chřipku bez komplikací. V anamnéze je také hypotyreóza, léčená substituční terapií (Euthyrox 75 µg denně).</p>
   </div>"""
 * section[sectionPatientHx].text.status = #additional
 
@@ -285,7 +285,7 @@ Usage: #example
 * section[sectionPatientHx].section[sectionFamilyHistory].code.coding[0].display = "History of family member diseases note"
 * section[sectionPatientHx].section[sectionFamilyHistory].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
-    <p>Rodinná anamnéza: matka zemřela na infarkt ve věku 75 let, otec žije, má 80 let a trpí hypertenzí. Sourozenci zdraví.</p>
+    <p>Matka zemřela na infarkt ve věku 75 let, otec žije, má 80 let a trpí hypertenzí. Sourozenci zdraví.</p>
   </div>"""
 * section[sectionPatientHx].section[sectionFamilyHistory].text.status = #additional
 

@@ -257,6 +257,9 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * insert SectionEntrySliceDefRules (birthLength, 0..*,
       Birth length observation / Porodni delka, Birth length observation / Porodni delka,
       CZ_ObservationBirthLength)
+  * insert SectionEntrySliceDefRules (apgarScore, 0..*,
+      APGAR score observation / APGAR skore, APGAR score observation / APGAR skore,
+      CZ_ObservationApgarScore)
   * insert SectionEntrySliceDefRules (deliveryObservation, 0..*,
       Other delivery observations / Ostatni pozorovani k porodu, Other delivery observations / Ostatni pozorovani k porodu,
       Observation)
