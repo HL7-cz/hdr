@@ -1,7 +1,7 @@
 Instance: DischargeComposition-Gyn-NaturalBirth
 InstanceOf: CZ_CompositionHdr
 Usage: #example
-Description: "Example gynecology hospital discharge composition with spontaneous vaginal delivery."
+Description: "Příklad gynekologické propouštěcí zprávy po spontánním vaginálním porodu. / Example gynecology hospital discharge composition with spontaneous vaginal delivery."
 * id = "6e9f3ec7-0a3c-4ee4-a2f2-a9c6ad91d001"
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
@@ -24,9 +24,9 @@ Description: "Example gynecology hospital discharge composition with spontaneous
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirth-FetalPresentation)
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirth-BirthWeight)
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirth-BirthLength)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirth-Apgar1)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirth-Apgar5)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirth-Apgar10)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(GynNaturalBirth-Apgar1)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(GynNaturalBirth-Apgar5)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(GynNaturalBirth-Apgar10)
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(Patient-Novak-Petr)
 
 * section[sectionPatientHx].title = "Anamnéza"
@@ -46,6 +46,7 @@ Description: "Example gynecology hospital discharge composition with spontaneous
 Instance: GynNaturalBirth-DeliveryMethod
 InstanceOf: CZ_ProcedureMethodOfDelivery
 Usage: #example
+Description: "Příklad způsobu vedení spontánního vaginálního porodu. / Example delivery method for spontaneous vaginal birth."
 * status = #completed
 * code = $sct#22640007 "Vaginal delivery"
 * subject = Reference(Mracena2)
@@ -54,6 +55,7 @@ Usage: #example
 Instance: GynNaturalBirth-FetalPresentation
 InstanceOf: CZ_ObservationFetalPresentation
 Usage: #example
+Description: "Příklad observace naléhání plodu při porodu. / Example fetal presentation observation for the newborn."
 * status = #final
 * code = $loinc#57076-2 "Fetal presentation at birth"
 * subject = Reference(Mracena2)
@@ -63,18 +65,21 @@ Usage: #example
 Instance: GynNaturalBirth-BirthWeight
 InstanceOf: CZ_ObservationBirthWeight
 Usage: #example
+Description: "Příklad observace porodní hmotnosti novorozence. / Example newborn birth weight observation."
 * subject = Reference(Patient-Novak-Petr)
 * valueQuantity = 3210 'g' "g"
 
 Instance: GynNaturalBirth-BirthLength
 InstanceOf: CZ_ObservationBirthLength
 Usage: #example
+Description: "Příklad observace porodní délky novorozence. / Example newborn birth length observation."
 * subject = Reference(Patient-Novak-Petr)
 * valueQuantity = 49 'cm' "cm"
 
 Instance: GynNaturalBirth-Gravidity
 InstanceOf: CZ_ObservationGravidity
 Usage: #example
+Description: "Příklad observace gravidity matky. / Example maternal gravidity observation."
 * status = #final
 * subject = Reference(Mracena2)
 * effectiveDateTime = "2025-05-18T10:46:00+02:00"
@@ -83,6 +88,7 @@ Usage: #example
 Instance: GynNaturalBirth-Parity
 InstanceOf: CZ_ObservationParity
 Usage: #example
+Description: "Příklad observace parity matky. / Example maternal parity observation."
 * status = #final
 * subject = Reference(Mracena2)
 * effectiveDateTime = "2025-05-18T10:46:00+02:00"
@@ -91,6 +97,7 @@ Usage: #example
 Instance: GynNaturalBirth-MultiplePregnancy
 InstanceOf: CZ_ObservationMultiplePregnancy
 Usage: #example
+Description: "Příklad observace potvrzující jednoplodové těhotenství. / Example observation indicating singleton pregnancy."
 * status = #final
 * subject = Reference(Mracena2)
 * effectiveDateTime = "2025-05-18T10:46:00+02:00"
@@ -100,6 +107,7 @@ Usage: #example
 Instance: GynNaturalBirth-GestationalAgeAtDelivery
 InstanceOf: Observation
 Usage: #example
+Description: "Příklad observace gestačního stáří při porodu. / Example gestational age at delivery observation."
 * status = #final
 * code = $loinc#76516-4 "Gestational age--at birth"
 * subject = Reference(Mracena2)
@@ -107,8 +115,9 @@ Usage: #example
 * valueString = "39+6"
 
 Instance: GynNaturalBirth-Apgar1
-InstanceOf: Observation
+InstanceOf: CZ_ObservationApgarScore1Min
 Usage: #example
+Description: "Příklad APGAR skóre novorozence v 1. minutě. / Example APGAR score at 1 minute for the newborn."
 * status = #final
 * code = $loinc#9272-6 "Apgar score 1 minute"
 * subject = Reference(Patient-Novak-Petr)
@@ -116,19 +125,19 @@ Usage: #example
 * valueInteger = 10
 
 Instance: GynNaturalBirth-Apgar5
-InstanceOf: Observation
+InstanceOf: CZ_ObservationApgarScore5Min
 Usage: #example
+Description: "Příklad APGAR skóre novorozence v 5. minutě. / Example APGAR score at 5 minutes for the newborn."
 * status = #final
-* code = $loinc#9274-2 "Apgar score 5 minute"
 * subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2025-05-18T10:51:00+02:00"
 * valueInteger = 10
 
 Instance: GynNaturalBirth-Apgar10
-InstanceOf: Observation
+InstanceOf: CZ_ObservationApgarScore10Min
 Usage: #example
+Description: "Příklad APGAR skóre novorozence v 10. minutě. / Example APGAR score at 10 minutes for the newborn."
 * status = #final
-* code = $loinc#9271-8 "Apgar score 10 minute"
 * subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2025-05-18T10:56:00+02:00"
 * valueInteger = 10
@@ -136,7 +145,7 @@ Usage: #example
 Instance: DischargeComposition-Novakova-Jana-NaturalBirth
 InstanceOf: CZ_CompositionHdr
 Usage: #example
-Description: "Example gynecology hospital discharge composition for Jana Novakova with spontaneous vaginal delivery."
+Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovou po spontánním vaginálním porodu. / Example gynecology hospital discharge composition for Jana Novakova with spontaneous vaginal delivery."
 * id = "5e848ec9-b5bf-4c90-9d7e-6b0894208bfe"
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
@@ -161,9 +170,9 @@ Description: "Example gynecology hospital discharge composition for Jana Novakov
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-BirthLength)
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-BirthInjury)
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-BirthOutcome)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-Apgar1)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-Apgar5)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-Apgar10)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(GynNaturalBirthJana-Apgar1)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(GynNaturalBirthJana-Apgar5)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(GynNaturalBirthJana-Apgar10)
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(Patient-Novak-Jan-Newborn)
 
 * section[sectionPatientHx].title = "Anamnéza"
@@ -203,7 +212,7 @@ Description: "Example gynecology hospital discharge composition for Jana Novakov
 Instance: Medication-Ropivacaine-Epidural
 InstanceOf: CZ_Medication
 Usage: #example
-Description: "Ropivacaine used for epidural labor analgesia."
+Description: "Ropivakain použitý pro epidurální porodnickou analgezii. / Ropivacaine used for epidural labor analgesia."
 * id = "med-ropivacaine-epidural"
 * status = #active
 * identifier[0].system = $cz-medication-DLP-cs
@@ -216,7 +225,7 @@ Description: "Ropivacaine used for epidural labor analgesia."
 Instance: Medication-Fentanyl-Epidural
 InstanceOf: CZ_Medication
 Usage: #example
-Description: "Fentanyl used as adjuvant in epidural labor analgesia."
+Description: "Fentanyl použitý jako adjuvans při epidurální porodnické analgezii. / Fentanyl used as adjuvant in epidural labor analgesia."
 * id = "med-fentanyl-epidural"
 * status = #active
 * identifier[0].system = $cz-medication-DLP-cs
@@ -229,7 +238,7 @@ Description: "Fentanyl used as adjuvant in epidural labor analgesia."
 Instance: MedicationStatement-Ropivacaine-Epidural-Jana
 InstanceOf: CZ_MedicationStatement
 Usage: #example
-Description: "Epidural administration of ropivacaine during labor."
+Description: "Epidurální podání ropivakainu během porodu. / Epidural administration of ropivacaine during labor."
 * id = "medstmt-ropivacaine-epidural-jana"
 * status = #completed
 * identifier[0].system = $cz-medication-DLP-cs
@@ -249,7 +258,7 @@ Description: "Epidural administration of ropivacaine during labor."
 Instance: MedicationStatement-Fentanyl-Epidural-Jana
 InstanceOf: CZ_MedicationStatement
 Usage: #example
-Description: "Epidural fentanyl adjuvant during labor analgesia."
+Description: "Epidurální podání fentanylu jako adjuvans během porodnické analgezie. / Epidural fentanyl adjuvant during labor analgesia."
 * id = "medstmt-fentanyl-epidural-jana"
 * status = #completed
 * identifier[0].system = $cz-medication-DLP-cs
@@ -269,7 +278,7 @@ Description: "Epidural fentanyl adjuvant during labor analgesia."
 Instance: MedicationAdministration-Ropivacaine-Epidural-Jana
 InstanceOf: MedicationAdministration
 Usage: #example
-Description: "Intrapartum epidural administration of ropivacaine."
+Description: "Intrapartální epidurální podání ropivakainu. / Intrapartum epidural administration of ropivacaine."
 * id = "medadmin-ropivacaine-epidural-jana"
 * status = #completed
 * subject = Reference(Patient-Novakova-Jana)
@@ -285,7 +294,7 @@ Description: "Intrapartum epidural administration of ropivacaine."
 Instance: MedicationAdministration-Fentanyl-Epidural-Jana
 InstanceOf: MedicationAdministration
 Usage: #example
-Description: "Intrapartum epidural administration of fentanyl."
+Description: "Intrapartální epidurální podání fentanylu. / Intrapartum epidural administration of fentanyl."
 * id = "medadmin-fentanyl-epidural-jana"
 * status = #completed
 * subject = Reference(Patient-Novakova-Jana)
@@ -301,6 +310,7 @@ Description: "Intrapartum epidural administration of fentanyl."
 Instance: GynNaturalBirthJana-DeliveryMethod
 InstanceOf: CZ_ProcedureMethodOfDelivery
 Usage: #example
+Description: "Příklad způsobu vedení spontánního vaginálního porodu u Jany Novákové. / Example delivery method for Jana Novakova spontaneous vaginal birth."
 * status = #completed
 * code = $sct#22640007 "Vaginal delivery"
 * subject = Reference(Patient-Novakova-Jana)
@@ -310,6 +320,7 @@ Usage: #example
 Instance: GynNaturalBirthJana-FetalPresentation
 InstanceOf: CZ_ObservationFetalPresentation
 Usage: #example
+Description: "Příklad observace naléhání plodu u novorozence Jany Novákové. / Example fetal presentation observation for Jana Novakova newborn."
 * status = #final
 * code = $loinc#57076-2 "Fetal presentation at birth"
 * subject = Reference(Patient-Novakova-Jana)
@@ -319,18 +330,21 @@ Usage: #example
 Instance: GynNaturalBirthJana-BirthWeight
 InstanceOf: CZ_ObservationBirthWeight
 Usage: #example
+Description: "Příklad observace porodní hmotnosti novorozence v případě Jany Novákové. / Example newborn birth weight observation for Jana Novakova case."
 * subject = Reference(Patient-Novak-Jan-Newborn)
 * valueQuantity = 3210 'g' "g"
 
 Instance: GynNaturalBirthJana-BirthLength
 InstanceOf: CZ_ObservationBirthLength
 Usage: #example
+Description: "Příklad observace porodní délky novorozence v případě Jany Novákové. / Example newborn birth length observation for Jana Novakova case."
 * subject = Reference(Patient-Novak-Jan-Newborn)
 * valueQuantity = 49 'cm' "cm"
 
 Instance: GynNaturalBirthJana-BirthInjury
 InstanceOf: CZ_ConditionHdr
 Usage: #example
+Description: "Příklad záznamu porodního poranění matky v případě Jany Novákové. / Example maternal birth injury condition for Jana Novakova case."
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * code = $icd10#O70.0 "First degree perineal laceration during delivery"
@@ -342,7 +356,7 @@ Usage: #example
 Instance: Allergy-Penicillin-Novakova-Jana
 InstanceOf: CZ_AllergyIntoleranceHdr
 Usage: #example
-Description: "Alergie pacientky na penicilin s kožní vyrážkou a otokem rtů."
+Description: "Alergie pacientky na penicilin s kožní vyrážkou a otokem rtů. / Patient allergy to penicillin with skin rash and lip swelling."
 * identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
 * identifier[0].value = "Allergy-Penicillin-Novakova-Jana-001"
 * text.status = #additional
@@ -366,6 +380,7 @@ Description: "Alergie pacientky na penicilin s kožní vyrážkou a otokem rtů.
 Instance: GynNaturalBirthJana-BirthOutcome
 InstanceOf: Observation
 Usage: #example
+Description: "Příklad observace výsledku porodu v případě Jany Novákové. / Example birth outcome observation for Jana Novakova case."
 * status = #final
 * code = $loinc#73764-3 "Birth outcome"
 * subject = Reference(Patient-Novakova-Jana)
@@ -375,6 +390,7 @@ Usage: #example
 Instance: GynNaturalBirthJana-Gravidity
 InstanceOf: CZ_ObservationGravidity
 Usage: #example
+Description: "Příklad observace gravidity matky v případě Jany Novákové. / Example maternal gravidity observation for Jana Novakova case."
 * status = #final
 * subject = Reference(Patient-Novakova-Jana)
 * effectiveDateTime = "2025-05-18T10:46:00+02:00"
@@ -383,6 +399,7 @@ Usage: #example
 Instance: GynNaturalBirthJana-Parity
 InstanceOf: CZ_ObservationParity
 Usage: #example
+Description: "Příklad observace parity matky v případě Jany Novákové. / Example maternal parity observation for Jana Novakova case."
 * status = #final
 * subject = Reference(Patient-Novakova-Jana)
 * effectiveDateTime = "2025-05-18T10:46:00+02:00"
@@ -391,6 +408,7 @@ Usage: #example
 Instance: GynNaturalBirthJana-MultiplePregnancy
 InstanceOf: CZ_ObservationMultiplePregnancy
 Usage: #example
+Description: "Příklad observace potvrzující jednoplodové těhotenství v případě Jany Novákové. / Example observation indicating singleton pregnancy for Jana Novakova case."
 * status = #final
 * subject = Reference(Patient-Novakova-Jana)
 * effectiveDateTime = "2025-05-18T10:46:00+02:00"
@@ -400,6 +418,7 @@ Usage: #example
 Instance: GynNaturalBirthJana-GestationalAgeAtDelivery
 InstanceOf: Observation
 Usage: #example
+Description: "Příklad observace gestačního stáří při porodu v případě Jany Novákové. / Example gestational age at delivery observation for Jana Novakova case."
 * status = #final
 * code = $loinc#76516-4 "Gestational age--at birth"
 * subject = Reference(Patient-Novakova-Jana)
@@ -407,8 +426,9 @@ Usage: #example
 * valueString = "39+6"
 
 Instance: GynNaturalBirthJana-Apgar1
-InstanceOf: Observation
+InstanceOf: CZ_ObservationApgarScore1Min
 Usage: #example
+Description: "Příklad APGAR skóre novorozence Jany Novákové v 1. minutě. / Example APGAR score at 1 minute for Jana Novakova newborn."
 * status = #final
 * code = $loinc#9272-6 "Apgar score 1 minute"
 * subject = Reference(Patient-Novak-Jan-Newborn)
@@ -416,19 +436,19 @@ Usage: #example
 * valueInteger = 10
 
 Instance: GynNaturalBirthJana-Apgar5
-InstanceOf: Observation
+InstanceOf: CZ_ObservationApgarScore5Min
 Usage: #example
+Description: "Příklad APGAR skóre novorozence Jany Novákové v 5. minutě. / Example APGAR score at 5 minutes for Jana Novakova newborn."
 * status = #final
-* code = $loinc#9274-2 "Apgar score 5 minute"
 * subject = Reference(Patient-Novak-Jan-Newborn)
 * effectiveDateTime = "2025-05-18T10:51:00+02:00"
 * valueInteger = 10
 
 Instance: GynNaturalBirthJana-Apgar10
-InstanceOf: Observation
+InstanceOf: CZ_ObservationApgarScore10Min
 Usage: #example
+Description: "Příklad APGAR skóre novorozence Jany Novákové v 10. minutě. / Example APGAR score at 10 minutes for Jana Novakova newborn."
 * status = #final
-* code = $loinc#9271-8 "Apgar score 10 minute"
 * subject = Reference(Patient-Novak-Jan-Newborn)
 * effectiveDateTime = "2025-05-18T10:56:00+02:00"
 * valueInteger = 10

@@ -1,14 +1,881 @@
-<div xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
 
-    <h3 id="overview">Hospital Discharge Report Model Map</h3>
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Header -&gt; cz-patient-core</title>
 
-    <a> </a>
+    <style type="text/css">
 
-    <p>Hereafter a browseable diagram showing how the Header model is realized by the HL7 FHIR Profiles of this guide</p>
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Ongoing alignment:</strong>
+          The Xt-EHR logical models are under active revision and continuous refinement.
+          Updates from Xt-EHR will be progressively incorporated into this Implementation
+          Guide to maintain alignment with the evolving EHDS specifications.
+        </div>
+      </div>
+    </div>
+
+    <h3>Header -&gt; cz-patient-core</h3>
+
+    <p>
+      This page explains how conceptual elements from the Header logical model
+      are expressed in the corresponding FHIR profiles used by this Implementation Guide.
+    </p>
 
     <h4 id="model">Model Overview</h4>
-<a> </a>
-<p>{% include Header-map.svg %}</p>
+
+    <p>{% include Header-map.svg %}</p>
+
+    <div class="table-wrap">
+
+      <strong>Mapping Context</strong>
+
+      <ul>
+        <li>
+          <strong>Source logical model:</strong>
+          <a href="StructureDefinition-LMHeaderHdrCz.html">LMHeaderHdrCz</a>
+        </li>
+        <li>
+          <strong>Target concept map:</strong>
+          <a href="ConceptMap-hdrHeader2FHIR-cz-hdr.html">hdrHeader2FHIR-cz-hdr</a>
+          (https://hl7.cz/fhir/hdr/ConceptMap/hdrHeader2FHIR-cz-hdr)
+        </li>
+        <li>
+          <strong>Main target profile:</strong>
+          <a href="StructureDefinition-cz-patient-core.html">cz-patient-core</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="table-wrap">
+
+      <table summary="Header logical model to FHIR profiles">
+
+        <caption>Header -&gt; FHIR Profiles</caption>
+
+        <thead>
+
+          <tr>
+            <th colspan="2" class="src-head">Header (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">FHIR Target</th>
+          </tr>
+
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource/Profile</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Description</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>subjectIdentification</td>
+            <td>A.1.1 - Identification of the patient/subject</td>
+            <td>equivalent</td>
+            <td>cz-patient-core</td>
+            <td>Patient</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectIdentification.given</td>
+            <td>A.1.1.1 - Given name</td>
+            <td>equal</td>
+            <td>cz-patient-core</td>
+            <td>Patient.name.given</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectIdentification.family</td>
+            <td>A.1.1.2 - Family name/surname</td>
+            <td>equal</td>
+            <td>cz-patient-core</td>
+            <td>Patient.name.family</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectIdentification.birthDate</td>
+            <td>A.1.1.3 - Date of birth</td>
+            <td>equal</td>
+            <td>cz-patient-core</td>
+            <td>Patient.birthDate</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectIdentification.identifier</td>
+            <td>A.1.1.4 - National healthcare patient ID</td>
+            <td>equal</td>
+            <td>cz-patient-core</td>
+            <td>Patient.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectIdentification.Citizenship</td>
+            <td>A.1.1.5 - Citizenship</td>
+            <td>equivalent</td>
+            <td>cz-patient-core</td>
+            <td>Patient.extension:Citizenship.valueCodeableConcept</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectIdentification.gender</td>
+            <td>A.1.1.6 - Gender</td>
+            <td>equal</td>
+            <td>cz-patient-core</td>
+            <td>Patient.gender</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectIdentification.Communication</td>
+            <td>A.1.1.7 - Communication - Language</td>
+            <td>equal</td>
+            <td>cz-patient-core</td>
+            <td>Patient.Communication</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact</td>
+            <td>A.1.2 - Patient/subject related contact information</td>
+            <td>related-to</td>
+            <td>cz-patient-core</td>
+            <td>Patient</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.personalContact</td>
+            <td>A.1.2.1 - Patient address</td>
+            <td>related-to</td>
+            <td>cz-patient-core</td>
+            <td>Patient</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.personalContact.address</td>
+            <td>A.1.2.1.1 - Address</td>
+            <td>equivalent</td>
+            <td>cz-patient-core</td>
+            <td>Patient.address</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.personalContact.telecom</td>
+            <td>A.1.2.1.2 - Telecom</td>
+            <td>equivalent</td>
+            <td>cz-patient-core</td>
+            <td>Patient.telecom</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.preferredHP</td>
+            <td>A.1.2.2 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section).</td>
+            <td>equivalent</td>
+            <td>cz-patient-core</td>
+            <td>Patient.generalPractitioner</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.contactPerson</td>
+            <td>A.1.2.3 - Contact person/ legal guardian (multiple contacts could be provided)</td>
+            <td>related-to</td>
+            <td>cz-patient-core</td>
+            <td>Patient.contact</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.contactPerson.role</td>
+            <td>A.1.2.3.1 - Role of that person</td>
+            <td>equivalent</td>
+            <td>cz-patient-core</td>
+            <td>Patient.contact.relationship:role</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.contactPerson.relationship</td>
+            <td>A.1.2.3.2 - Relationship level</td>
+            <td>equivalent</td>
+            <td>cz-patient-core</td>
+            <td>Patient.contact.relationship:type</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.contactPerson.given</td>
+            <td>A.1.2.3.4 - Given name</td>
+            <td>equivalent</td>
+            <td>cz-patient-core</td>
+            <td>Patient.contact.name.given</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.contactPerson.family</td>
+            <td>A.1.2.3.5 - Family name/surname</td>
+            <td>equal</td>
+            <td>cz-patient-core</td>
+            <td>Patient.contact.name.family</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.contactPerson.address</td>
+            <td>A.1.2.3.6 - Address</td>
+            <td>equivalent</td>
+            <td>cz-patient-core</td>
+            <td>Patient.contact.address</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.contactPerson.telecom</td>
+            <td>A.1.2.3.7 - Telecom</td>
+            <td>equivalent</td>
+            <td>cz-patient-core</td>
+            <td>Patient.contact.telecom</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.contactPerson.organization</td>
+            <td>A.1.2.3.8 - Contact person organisation</td>
+            <td>equivalent</td>
+            <td>cz-patient-core</td>
+            <td>Patient.contact</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>subjectContact.preferredHP</td>
+            <td>A.1.2.2 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section).</td>
+            <td>equivalent</td>
+            <td>cz-practitioner-core</td>
+            <td>Practictioner</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.preferredHP.identifier</td>
+            <td>A.1.2.2.1 - Identifier of the HP</td>
+            <td>equivalent</td>
+            <td>cz-practitioner-core</td>
+            <td>Practictioner.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.preferredHP.name</td>
+            <td>A.1.2.2.2 - Name of the HP</td>
+            <td>equivalent</td>
+            <td>cz-practitioner-core</td>
+            <td>Practictioner.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.preferredHP.address</td>
+            <td>A.1.2.2.5 - Address</td>
+            <td>equivalent</td>
+            <td>cz-practitioner-core</td>
+            <td>Practictioner.address</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.preferredHP.telecom</td>
+            <td>A.1.2.2.6 - Telecom</td>
+            <td>equivalent</td>
+            <td>cz-practitioner-core</td>
+            <td>Practictioner.telecom</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>subjectContact.preferredHP</td>
+            <td>A.1.2.2 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section).</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractictionerRole</td>
+            <td></td>
+            <td>preferred</td>
+          </tr>
+          <tr>
+            <td>subjectContact.preferredHP.identifier</td>
+            <td>A.1.2.2.1 - Identifier of the HP</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractictionerRole.identifier</td>
+            <td></td>
+            <td>preferred</td>
+          </tr>
+          <tr>
+            <td>subjectContact.preferredHP.name</td>
+            <td>A.1.2.2.2 - Name of the HP</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractictionerRole.practictioner.name</td>
+            <td></td>
+            <td>preferred</td>
+          </tr>
+          <tr>
+            <td>subjectContact.preferredHP.role</td>
+            <td>A.1.2.2.3 - Role of the HP</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractictionerRole.code</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.preferredHP.organization</td>
+            <td>A.1.2.2.4 - HP Organisation</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractictionerRole.organization</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subjectContact.preferredHP.address</td>
+            <td>A.1.2.2.5 - Address</td>
+            <td>related-to</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractictionerRole.address</td>
+            <td></td>
+            <td>preferred</td>
+          </tr>
+          <tr>
+            <td>subjectContact.preferredHP.telecom</td>
+            <td>A.1.2.2.6 - Telecom</td>
+            <td>related-to</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractictionerRole.telecom</td>
+            <td></td>
+            <td>preferred</td>
+          </tr>
+
+          <tr>
+            <td>Header.payer.insuranceCode</td>
+            <td>A.1.3.1 - Health insurance code</td>
+            <td>equivalent</td>
+            <td>cz-organization-core</td>
+            <td>Organization.identifier.KP</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.payer.insuranceName</td>
+            <td>A.1.3.2 - Health insurance name</td>
+            <td>equivalent</td>
+            <td>cz-organization-core</td>
+            <td>Organization.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Header.coverage.insuranceNumber</td>
+            <td>A.1.3.3 - insuranceNumber</td>
+            <td>equivalent</td>
+            <td>cz-coverage</td>
+            <td>CZ_Coverage.identifer</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Header.subject</td>
+            <td>A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject</td>
+            <td>equivalent</td>
+            <td>cz-patient-core</td>
+            <td>Patient</td>
+            <td></td>
+            <td>Composition.subject.ofType(Patient).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core')</td>
+          </tr>
+          <tr>
+            <td>Header.payer.insuranceNumber</td>
+            <td>A.1.3.3 - Health insurance number</td>
+            <td>equivalent</td>
+            <td>cz-patient-core</td>
+            <td>Patient.identifier</td>
+            <td></td>
+            <td>If treated as one of the Patient identifiers; this applies in some jurisdictions.</td>
+          </tr>
+
+          <tr>
+            <td>Header.informationRecipient.identifier</td>
+            <td>A.1.4.1 - Recipient identifier</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole.identifier</td>
+            <td></td>
+            <td>Composition.extension:information-recipient.valueReference.resolve()</td>
+          </tr>
+          <tr>
+            <td>Header.author</td>
+            <td>A.1.5 - Author (by whom the Hospital discharge report was/were authored). Multiple authors could be provided.</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole</td>
+            <td></td>
+            <td>Composition.author.resolve().ofType(PractitionerRole).confirmsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core')</td>
+          </tr>
+          <tr>
+            <td>Header.author.identifier</td>
+            <td>A.1.5.1 - Author identifier</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.author.name</td>
+            <td>A.1.5.2 - Author name</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole.practictioner.name</td>
+            <td></td>
+            <td>If PractitionerRole</td>
+          </tr>
+          <tr>
+            <td>Header.author.organizationID</td>
+            <td>A.1.5.3 - Author organisation ID</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole.organization.identifier</td>
+            <td></td>
+            <td>If Organization</td>
+          </tr>
+          <tr>
+            <td>Header.author.organization</td>
+            <td>A.1.5.4 - Author organisation</td>
+            <td>related-to</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole.organization</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.attester</td>
+            <td>A.1.6 - Attester (multiple attesters could be provided)</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole</td>
+            <td></td>
+            <td>where attester.mode = 'professional' AND Composition.attester.party.resolve().ofType(PractitionerRole).confirmsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core')</td>
+          </tr>
+          <tr>
+            <td>Header.attester.identifier</td>
+            <td>A.1.6.1 - Attester identifier</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.attester.name</td>
+            <td>A.1.6.2 - Attester name</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole.practictioner.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.attester.organizationID</td>
+            <td>A.1.6.3 - Attester organisation ID</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole.organization.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.attester.organization</td>
+            <td>A.1.6.4 - Attester organisation</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole.organization</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.legalAuthenticator</td>
+            <td>A.1.7 - Legal authenticator (The person taking responsibility for the medical content of the document)</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole</td>
+            <td></td>
+            <td>where attester.mode = 'legal' AND Composition.attester.party.resolve().ofType(PractitionerRole).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core')</td>
+          </tr>
+          <tr>
+            <td>Header.legalAuthenticator.identifier</td>
+            <td>A.1.7.1 - Legal authenticator identifier</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole.identifier</td>
+            <td></td>
+            <td>where attester.mode = 'legal'</td>
+          </tr>
+          <tr>
+            <td>Header.legalAuthenticator.name</td>
+            <td>A.1.7.2 - Legal authenticator name</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole.practictioner.name</td>
+            <td></td>
+            <td>where attester.mode = 'legal'</td>
+          </tr>
+          <tr>
+            <td>Header.legalAuthenticator.organizationID</td>
+            <td>A.1.7.3 - Legal authenticator organisation ID</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole.organization.identifier</td>
+            <td></td>
+            <td>where attester.mode = 'legal'</td>
+          </tr>
+          <tr>
+            <td>Header.legalAuthenticator.organization</td>
+            <td>A.1.7.4 - Legal authenticator organisation</td>
+            <td>equivalent</td>
+            <td>cz-practitionerrole-core</td>
+            <td>PractitionerRole.organization</td>
+            <td></td>
+            <td>where attester.mode = 'legal'</td>
+          </tr>
+
+          <tr>
+            <td>Header.documentMetadata.identifier</td>
+            <td>A.1.8.1 - Document ID</td>
+            <td>equivalent</td>
+            <td>cz-bundle-hdr</td>
+            <td>Bundle.identifier</td>
+            <td></td>
+            <td>If it is the identifier of a particular report instance</td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.dateTime</td>
+            <td>A.1.8.4 - Report date and time</td>
+            <td>equivalent</td>
+            <td>cz-bundle-hdr</td>
+            <td>Bundle.timeStamp</td>
+            <td></td>
+            <td>If it is when this particular version of this report has been assembled into a Bundle.</td>
+          </tr>
+
+          <tr>
+            <td>Header.subject</td>
+            <td>A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject</td>
+            <td>equivalent</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.subject</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.payer</td>
+            <td>A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.</td>
+            <td>related-to</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.extension:basedOn:order</td>
+            <td></td>
+            <td>To be disucssed if the payor data are conveyed with the request or thorugh other means. Check also the extension to be used.</td>
+          </tr>
+          <tr>
+            <td>Header.payer</td>
+            <td>A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.</td>
+            <td>related-to</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.section:sectionPayers.entry</td>
+            <td></td>
+            <td>Composition.section:sectionPayers.entry.ofType(Coverage).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-coverage')</td>
+          </tr>
+          <tr>
+            <td>Header.informationRecipient</td>
+            <td>A.1.4 - Information recipient - (intended recipient or recipients of the report), if applicable</td>
+            <td>related-to</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.extension:information-recipient</td>
+            <td></td>
+            <td>Composition.extension:information-recipient.valueReference.resolve().ofType(PracittionerRole)</td>
+          </tr>
+          <tr>
+            <td>Header.informationRecipient.name</td>
+            <td>A.1.4.2 - Recipient name</td>
+            <td>equivalent</td>
+            <td>cz-composition-hdr</td>
+            <td>PractitionerRole.practitioner.name</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.informationRecipient.organizationID</td>
+            <td>A.1.4.3 - Recipient organisation ID</td>
+            <td>equivalent</td>
+            <td>cz-composition-hdr</td>
+            <td>PractitionerRole.practitioner.organization.identifier</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.informationRecipient.organization</td>
+            <td>A.1.4.4 - Recipient organisation</td>
+            <td>related-to</td>
+            <td>cz-composition-hdr</td>
+            <td>PractitionerRole.practitioner.organization</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.informationRecipient.address</td>
+            <td>A.1.4.5 - Address</td>
+            <td>related-to</td>
+            <td>cz-composition-hdr</td>
+            <td>PractitionerRole.address</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.informationRecipient.country</td>
+            <td>A.1.4.6 - Country</td>
+            <td>related-to</td>
+            <td>cz-composition-hdr</td>
+            <td>PractitionerRole.country</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.informationRecipient.telecom</td>
+            <td>A.1.4.7 - Telecom</td>
+            <td>related-to</td>
+            <td>cz-composition-hdr</td>
+            <td>PractitionerRole.telecom</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.author</td>
+            <td>A.1.5 - Author (by whom the Hospital discharge report was/were authored). Multiple authors could be provided.</td>
+            <td>equivalent</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.author</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.author.dateTime</td>
+            <td>A.1.5.5 - Date Time</td>
+            <td>equivalent</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.date</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.attester</td>
+            <td>A.1.6 - Attester (multiple attesters could be provided)</td>
+            <td>equivalent</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.attester.party</td>
+            <td></td>
+            <td>where attester.mode = 'professional'</td>
+          </tr>
+          <tr>
+            <td>Header.attester.dateTime</td>
+            <td>A.1.6.5 - Approval date and time</td>
+            <td>equal</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.attester.time</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.legalAuthenticator</td>
+            <td>A.1.7 - Legal authenticator (The person taking responsibility for the medical content of the document)</td>
+            <td>equivalent</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.attester.party</td>
+            <td></td>
+            <td>where attester.mode = 'legal'</td>
+          </tr>
+          <tr>
+            <td>Header.legalAuthenticator.dateTime</td>
+            <td>A.1.7.5 - Authentication date and time</td>
+            <td>equal</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.attester.time</td>
+            <td></td>
+            <td>where attester.mode = 'legal'</td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata</td>
+            <td>A.1.8 - Document metadata</td>
+            <td>related-to</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.type</td>
+            <td>A.1.8.2 - Document type</td>
+            <td>equivalent</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.type</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.status</td>
+            <td>A.1.8.3 - Document status</td>
+            <td>equivalent</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.status</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.dateTime</td>
+            <td>A.1.8.4 - Report date and time</td>
+            <td>equivalent</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.date</td>
+            <td></td>
+            <td>If it is when this document has been created (indipendently by its version)</td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.title</td>
+            <td>A.1.8.5 - Document title</td>
+            <td>equivalent</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.title</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.custodian</td>
+            <td>A.1.8.6 - Report custodian</td>
+            <td>equivalent</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.custodian</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.confidentiality</td>
+            <td>A.1.8.7 - Confidentiality</td>
+            <td>equivalent</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.confidentiality</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.language</td>
+            <td>A.1.8.8 - Language</td>
+            <td>related-to</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.language</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Header.documentMetadata.version</td>
+            <td>A.1.8.9 - Version</td>
+            <td>equivalent</td>
+            <td>cz-composition-hdr</td>
+            <td>Composition.extension:versionNumber.valueString</td>
+            <td></td>
+            <td>As business version, not as resource version</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </body>
 
 </div>

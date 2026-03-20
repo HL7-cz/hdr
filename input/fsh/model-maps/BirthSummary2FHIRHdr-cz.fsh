@@ -1,286 +1,190 @@
 Instance: birthSummary2FHIR-hdr-cz
 InstanceOf: ConceptMap
 Usage: #definition
+
 * url = "https://hl7.cz/fhir/hdr/ConceptMap/birthSummary2FHIR-hdr-cz"
 * name = "BirthSummary2FHIRCzHdr"
-* title = "eHN Birth Summary Model to this guide Map"
+* title = "eHN Birth Summary Model to CZ HDR Map"
 * status = #draft
 * experimental = true
-* description = """eHN HDR Birth Summary model to CZ HDR Composition Delivery section"""
+* description = """
+Mapping of the eHN Birth Summary logical model to Czech HDR FHIR profiles.
+The mapping defines placement of delivery and pregnancy data into HDR Composition
+sections and related clinical resources.
+"""
+
+// =====================================================
+// COMPOSITION SECTION MAPPING
+// =====================================================
 
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
-* group[=].element[+].code = #PregnancyHx
-* group[=].element[=].display = "A.2.10 - Delivery"
+
+// Delivery section
+
+* group[=].element[+].code = #DeliveryDetails
+* group[=].element[=].display = "Delivery section"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #PregnancyHx.newborn
-* group[=].element[=].display = "A.2.10.2 - Fetus/Newborn"
+
+// Newborn subsection
+
+* group[=].element[+].code = #DeliveryDetails.newborn
+* group[=].element[=].display = "Newborn information"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:newborn
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
+
+// Pregnancy history section
+
 * group[=].element[+].code = #PregnancyHx.mother
-* group[=].element[=].display = "A.2.10.1 - Maternal delivery information"
+* group[=].element[=].display = "Maternal pregnancy history"
 * group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
+
+
+// =====================================================
+// MATERNAL PREGNANCY OBSERVATIONS
+// =====================================================
+
 * group[=].element[+].code = #PregnancyHx.mother.gestationalAgeAtDelivery
-* group[=].element[=].display = "A.2.10.1.1 - Gestational age at delivery"
+* group[=].element[=].display = "Gestational age at delivery"
 * group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:gestationalAge
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
+
 * group[=].element[+].code = #PregnancyHx.mother.gravidity
-* group[=].element[=].display = "A.2.10.1.2 - Gravidity"
+* group[=].element[=].display = "Gravidity"
 * group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:gravidity
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
+
 * group[=].element[+].code = #PregnancyHx.mother.parity
-* group[=].element[=].display = "A.2.10.1.3 - Parity"
+* group[=].element[=].display = "Parity"
 * group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:parity
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
+
 * group[=].element[+].code = #PregnancyHx.mother.multiplePregnancy
-* group[=].element[=].display = "A.2.10.1.6 - Multiple pregnancy"
+* group[=].element[=].display = "Multiple pregnancy"
 * group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:multiplePregnancy
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
+
 * group[=].element[+].code = #PregnancyHx.mother.fetusCount
-* group[=].element[=].display = "A.2.10.1.6.1 - Number of fetuses"
+* group[=].element[=].display = "Number of fetuses"
 * group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:multiplePregnancy
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #PregnancyHx.newborn.deliveryMethod
-* group[=].element[=].display = "A.2.10.2.3 - Delivery method"
+
+
+// =====================================================
+// DELIVERY DETAILS (Hospital course)
+// =====================================================
+
+* group[=].element[+].code = #DeliveryDetails.newborn.deliveryMethod
+* group[=].element[=].display = "Delivery method"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:deliveryProcedure
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #PregnancyHx.mother.laborInduction
-* group[=].element[=].display = "A.2.10.1.4 - Labour pre-induction / induction"
+
+* group[=].element[+].code = #DeliveryDetails.mother.laborInduction
+* group[=].element[=].display = "Induction of labor"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:inductionProcedure
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #PregnancyHx.mother.birthInjury.code
-* group[=].element[=].display = "A.2.10.1.5.2 - Birth injury code"
+
+* group[=].element[+].code = #DeliveryDetails.mother.birthInjury.code
+* group[=].element[=].display = "Birth injury code"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthInjury
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #PregnancyHx.mother.birthInjury.description
-* group[=].element[=].display = "A.2.10.1.5.1 - Birth injury description"
+
+* group[=].element[+].code = #DeliveryDetails.mother.birthInjury.description
+* group[=].element[=].display = "Birth injury description"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthInjury
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #PregnancyHx.newborn.fetalPresentation
-* group[=].element[=].display = "A.2.10.2.2 - Fetal presentation during delivery"
+
+
+// =====================================================
+// NEWBORN OBSERVATIONS
+// =====================================================
+
+* group[=].element[+].code = #DeliveryDetails.newborn.fetalPresentation
+* group[=].element[=].display = "Fetal presentation"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:fetalPresentation
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #PregnancyHx.newborn.birthWeight
-* group[=].element[=].display = "A.2.10.2.6 - Birth weight"
+
+* group[=].element[+].code = #DeliveryDetails.newborn.birthWeight
+* group[=].element[=].display = "Birth weight"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthWeight
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #PregnancyHx.newborn.birthLength
-* group[=].element[=].display = "A.2.10.2.7 - Birth length"
+
+* group[=].element[+].code = #DeliveryDetails.newborn.birthLength
+* group[=].element[=].display = "Birth length"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthLength
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #PregnancyHx.newborn.birthOutcome
-* group[=].element[=].display = "A.2.10.2.4 - Birth outcome"
+
+* group[=].element[+].code = #DeliveryDetails.newborn.birthOutcome
+* group[=].element[=].display = "Birth outcome"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:deliveryObservation
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #PregnancyHx.newborn.apgarScore.minute1
-* group[=].element[=].display = "A.2.10.2.8.1 - Apgar score at 1 minute"
-* group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:deliveryObservation
-* group[=].element[=].target.display = ""
+
+
+// =====================================================
+// APGAR SCORES
+// =====================================================
+
+* group[=].element[+].code = #DeliveryDetails.newborn.apgarScore.minute1
+* group[=].element[=].display = "Apgar score at 1 minute"
+* group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:apgarScore
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #PregnancyHx.newborn.apgarScore.minute5
-* group[=].element[=].display = "A.2.10.2.8.2 - Apgar score at 5 minutes"
-* group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:deliveryObservation
-* group[=].element[=].target.display = ""
+
+* group[=].element[+].code = #DeliveryDetails.newborn.apgarScore.minute5
+* group[=].element[=].display = "Apgar score at 5 minutes"
+* group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:apgarScore
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #PregnancyHx.newborn.apgarScore.minute10
-* group[=].element[=].display = "A.2.10.2.8.3 - Apgar score at 10 minutes"
-* group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:deliveryObservation
-* group[=].element[=].target.display = ""
+
+* group[=].element[+].code = #DeliveryDetails.newborn.apgarScore.minute10
+* group[=].element[=].display = "Apgar score at 10 minutes"
+* group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:apgarScore
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #PregnancyHx.newborn.sex
-* group[=].element[=].display = "A.2.10.2.5 - Newborn sex"
-* group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:newborn
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #PregnancyHx.newborn.name
-* group[=].element[=].display = "A.2.10.2.9 - Newborn name"
-* group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:newborn
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
+
+
+// =====================================================
+// PROCEDURES
+// =====================================================
 
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-procedure-method-of-delivery"
-* group[=].element[+].code = #PregnancyHx.newborn.deliveryMethod
-* group[=].element[=].display = "A.2.10.2.3 - Delivery method"
+
+* group[=].element[+].code = #DeliveryDetails.newborn.deliveryMethod
 * group[=].element[=].target.code = #Procedure.code
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #PregnancyHx.newborn.birthDateTime
-* group[=].element[=].display = "A.2.10.2.1 - Date and time of birth"
+
+* group[=].element[+].code = #DeliveryDetails.newborn.birthDateTime
 * group[=].element[=].target.code = #Procedure.performedDateTime
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equal
 
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-procedure-induction-of-labor"
-* group[=].element[+].code = #PregnancyHx.mother.laborInduction
-* group[=].element[=].display = "A.2.10.1.4 - Labour pre-induction / induction"
-* group[=].element[=].target.code = #Procedure.code
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
+
+// =====================================================
+// CONDITION (Birth injury)
+// =====================================================
 
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
-* group[=].element[+].code = #PregnancyHx.mother.birthInjury.code
-* group[=].element[=].display = "A.2.10.1.5.2 - Birth injury code"
+
+* group[=].element[+].code = #DeliveryDetails.mother.birthInjury.code
 * group[=].element[=].target.code = #Condition.code
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #PregnancyHx.mother.birthInjury.description
-* group[=].element[=].display = "A.2.10.1.5.1 - Birth injury description"
+
+* group[=].element[+].code = #DeliveryDetails.mother.birthInjury.description
 * group[=].element[=].target.code = #Condition.text
-* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-gravidity"
-* group[=].element[+].code = #PregnancyHx.mother.gravidity
-* group[=].element[=].display = "A.2.10.1.2 - Gravidity"
-* group[=].element[=].target.code = #Observation.valueInteger
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #PregnancyHx.newborn.birthDateTime
-* group[=].element[=].display = "A.2.10.2.1 - Date and time of birth"
-* group[=].element[=].target.code = #Observation.effectiveDateTime
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
 
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-parity"
-* group[=].element[+].code = #PregnancyHx.mother.parity
-* group[=].element[=].display = "A.2.10.1.3 - Parity"
-* group[=].element[=].target.code = #Observation.valueInteger
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #PregnancyHx.newborn.birthDateTime
-* group[=].element[=].display = "A.2.10.2.1 - Date and time of birth"
-* group[=].element[=].target.code = #Observation.effectiveDateTime
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-multiple-pregnancy"
-* group[=].element[+].code = #PregnancyHx.mother.multiplePregnancy
-* group[=].element[=].display = "A.2.10.1.6 - Multiple pregnancy"
-* group[=].element[=].target.code = #Observation.valueBoolean
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #PregnancyHx.mother.fetusCount
-* group[=].element[=].display = "A.2.10.1.6.1 - Number of fetuses"
-* group[=].element[=].target.code = #Observation.component.valueInteger
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #PregnancyHx.newborn.birthDateTime
-* group[=].element[=].display = "A.2.10.2.1 - Date and time of birth"
-* group[=].element[=].target.code = #Observation.effectiveDateTime
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-birth-weight"
-* group[=].element[+].code = #PregnancyHx.newborn.birthWeight
-* group[=].element[=].display = "A.2.10.2.6 - Birth weight"
-* group[=].element[=].target.code = #Observation.valueQuantity
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #PregnancyHx.newborn.birthDateTime
-* group[=].element[=].display = "A.2.10.2.1 - Date and time of birth"
-* group[=].element[=].target.code = #Observation.effectiveDateTime
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-birth-length"
-* group[=].element[+].code = #PregnancyHx.newborn.birthLength
-* group[=].element[=].display = "A.2.10.2.7 - Birth length"
-* group[=].element[=].target.code = #Observation.valueQuantity
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #PregnancyHx.newborn.birthDateTime
-* group[=].element[=].display = "A.2.10.2.1 - Date and time of birth"
-* group[=].element[=].target.code = #Observation.effectiveDateTime
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
-* group[=].target = "http://hl7.org/fhir/StructureDefinition/Observation"
-* group[=].element[+].code = #PregnancyHx.mother.gestationalAgeAtDelivery
-* group[=].element[=].display = "A.2.10.1.1 - Gestational age at delivery"
-* group[=].element[=].target.code = #Observation.valueString
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "No dedicated CZ profile yet, value example: 39+6"
-* group[=].element[+].code = #PregnancyHx.newborn.birthOutcome
-* group[=].element[=].display = "A.2.10.2.4 - Birth outcome"
-* group[=].element[=].target.code = #Observation.valueCodeableConcept
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "No dedicated CZ profile yet; recommended dedicated Observation profile for outcome at birth"
-
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-fetal-presentation"
-* group[=].element[+].code = #PregnancyHx.newborn.fetalPresentation
-* group[=].element[=].display = "A.2.10.2.2 - Fetal presentation during delivery"
-* group[=].element[=].target.code = #Observation.valueCodeableConcept
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #PregnancyHx.newborn.birthDateTime
-* group[=].element[=].display = "A.2.10.2.1 - Date and time of birth"
-* group[=].element[=].target.code = #Observation.effectiveDateTime
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #PregnancyHx.newborn.apgarScore.minute1
-* group[=].element[=].display = "A.2.10.2.8.1 - Apgar score at 1 minute"
-* group[=].element[=].target.code = #Observation.valueInteger
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "No dedicated CZ profile yet; use one Observation per minute or a panel with components"
-* group[=].element[+].code = #PregnancyHx.newborn.apgarScore.minute5
-* group[=].element[=].display = "A.2.10.2.8.2 - Apgar score at 5 minutes"
-* group[=].element[=].target.code = #Observation.valueInteger
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "No dedicated CZ profile yet; use one Observation per minute or a panel with components"
-* group[=].element[+].code = #PregnancyHx.newborn.apgarScore.minute10
-* group[=].element[=].display = "A.2.10.2.8.3 - Apgar score at 10 minutes"
-* group[=].element[=].target.code = #Observation.valueInteger
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "No dedicated CZ profile yet; use one Observation per minute or a panel with components"
-* group[=].element[+].code = #PregnancyHx.newborn.birthDateTime
-* group[=].element[=].display = "A.2.10.2.1 - Date and time of birth"
-* group[=].element[=].target.code = #Observation.effectiveDateTime
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
+// =====================================================
+// PATIENT (Newborn)
+// =====================================================
 
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core"
-* group[=].element[+].code = #PregnancyHx.newborn.sex
-* group[=].element[=].display = "A.2.10.2.5 - Newborn sex"
-* group[=].element[=].target.code = #Patient.gender
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #PregnancyHx.newborn.name
-* group[=].element[=].display = "A.2.10.2.9 - Newborn name"
-* group[=].element[=].target.code = #Patient.name.given
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
 
+* group[=].element[+].code = #DeliveryDetails.newborn.sex
+* group[=].element[=].target.code = #Patient.gender
+* group[=].element[=].target.equivalence = #equivalent
+
+* group[=].element[+].code = #DeliveryDetails.newborn.name
+* group[=].element[=].target.code = #Patient.name.given
+* group[=].element[=].target.equivalence = #relatedto
