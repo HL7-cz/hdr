@@ -8,12 +8,15 @@ Description: """This profile constrains the Consent resource for the purpose of 
 * insert SetFmmandStatusRule (1, draft)
 
 * dateTime 1..1
-* category 1..1
+* category 1..1 
   * ^binding.valueSet = "https://hl7.cz/fhir/hdr/ValueSet/cz-consent-category"
+* status = #active
 * text 0..1
-* provision.code 0..*
+* provision 0..0 //změna z 0..1 na 0..0 základě schůzky Display tool 30.10.2025 
+
+/*
   * ^short = "ICD-10 or Orphacode, etc. in the content"
   * ^binding.valueSet = "https://hl7.cz/fhir/hdr/ValueSet/cz-provision-code"
   * ^binding.strength = #extensible
-
+*/
 // TODO: číselníky a význam jednotlivých elementů se budou muset dořešit s kliniky a právníky

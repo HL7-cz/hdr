@@ -60,12 +60,13 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * data ^short = "B64 in-line data"
   * url ^short = "URL of the document"
 
-* extension contains $composition.version-r5 named compositionVersionR5 0..
+* extension contains $composition.version-r5 named compositionVersionR5 0..1
 * extension[compositionVersionR5].valueString ^short = "Business version"
 
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient]
-* extension[information-recipient].valueReference only Reference( CZ_PractitionerRoleCore or CZ_PractitionerCore or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+* extension[information-recipient].valueReference only Reference(  CZ_PractitionerCore or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+/* CZ_PractitionerRoleCore or*/
 
 /* GC TO DO
 - check if we need a R5 composition.status
@@ -86,12 +87,12 @@ Description: "This profile defines how to represent Composition resource in HL7 
 // * encounter only Reference (Encounter)
 
 * encounter only Reference (CZ_EncounterHdr)
-* encounter 1..1 
+* encounter 1..1
 
 * date ^short = "HDR date"
 * author ^short = "Who and/or what authored the Hospital Discharge Report"
 * author ^definition = "Identifies who is responsible for the information in the Hospital Discharge Report, not necessarily who typed it in."
-* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore 
+* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore
 
 
 * title ^short = "Hospital Discharge Report"
@@ -121,20 +122,6 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * code = $loinc#67851-6
   * ^comment = "Admission evaluation should be reported only exceptionally, if it is relevant to ensure continuity of care."
   * insert EvaluationSubSectionRules
-
-// -------------------------------------
-// Patient History Section 0 … 1 R
-// ToDo: Review
-// -------------------------------------
-
-* section contains sectionPatientHx ..1
-* section[sectionPatientHx]
-  * insert SectionComRules (
-    Patient History Section,
-    This Section describes all aspects of the medical history of the patient even if not pertinent to the current procedure\, and may include chief complaint\, past medical history\, social history\, family history\, surgical or procedure history\, medication history\, and other history information. The history may be limited to information pertinent to the current procedure or may be more comprehensive. The history may be reported as a collection of random clinical statements or it may be reported categorically. Categorical report formats may be divided into multiple subsections including Past Medical History\, Social History.,
-    $loinc#35090-0 )
-
-
 
 
 // -------------------------------------
@@ -208,11 +195,11 @@ Description: "This profile defines how to represent Composition resource in HL7 
     Alert Section, // SHORT
     A warning\, other than included in allergies.
     The warning can be entered in code there are codes for frequently used alerts but seeing the dynamic nature of the warnings\, these alerts will often be entered as free text.
-    Any clinical information that is imperative to know so that the life or health of the patient does not come under threat. 
-    Example 1: the patient has a rare disease that requires special treatment 
+    Any clinical information that is imperative to know so that the life or health of the patient does not come under threat.
+    Example 1: the patient has a rare disease that requires special treatment
     Example 2: Airway Alert / Difficult Intubation
-    Example 3: Diagnoses such as malignant hyperthermia\, porphyria\, and bleeding disorders; special treatments like anticoagulants or immunosuppressants; implanted devices. 
-    Example 4: transplanted organs illustrate other information that has to be taken into account in a healthcare contact. 
+    Example 3: Diagnoses such as malignant hyperthermia\, porphyria\, and bleeding disorders; special treatments like anticoagulants or immunosuppressants; implanted devices.
+    Example 4: transplanted organs illustrate other information that has to be taken into account in a healthcare contact.
     Example 5: participation in a clinical trial that has to be taken into account in a healthcare contact. , // DESC
       http://loinc.org#104605-1 )   // CODE
   * entry 0..
@@ -231,6 +218,54 @@ Description: "This profile defines how to represent Composition resource in HL7 
     $loinc#8648-8 )   // "Hospital course Narrative"
   * ^short = "Significant information about course of hospital stay"
   * ^definition = "This section includes basic information about hospital staty (encounter), diagnostic summary in narrative form, pharmacotherapy, major procedures, medical devices, significant findings during hospital stay and clinical synthesis."
+* section[sectionHospitalCourse].section ^slicing.discriminator[0].type = #value
+* section[sectionHospitalCourse].section ^slicing.discriminator[0].path = "code"
+* section[sectionHospitalCourse].section ^slicing.ordered = false
+* section[sectionHospitalCourse].section ^slicing.rules = #open
+* section[sectionHospitalCourse].section contains sectionDelivery 0..1
+* section[sectionHospitalCourse].section[sectionDelivery]
+  * insert SectionComRules(
+      Delivery / Porod,
+      Information about labour\, delivery and newborn outcome / Informace o prubehu porodu\, porodu a stavu novorozence.,
+      http://loinc.org#57074-7 ) // "Delivery note"
+  * entry only Reference(
+        CZ_ProcedureHdr
+     or CZ_ProcedureMethodOfDelivery
+     or CZ_ProcedureInductionOfLabor
+     or Observation
+     or CZ_ConditionHdr
+     or CZ_PatientCore
+  )
+  * insert SectionEntrySliceComRules(
+      Delivery-related entries / Polozky vztahujici se k porodu,
+      Structured entries for delivery method\, induction\, birth injury\, newborn and related observations / Strukturovane polozky pro zpusob porodu\, indukci\, porodni poraneni\, novorozence a souvisejici pozorovani.)
+  * insert SectionEntrySliceDefRules (deliveryProcedure, 0..*,
+      Delivery procedure / Vykon porodu, Delivery procedure / Vykon porodu,
+      CZ_ProcedureMethodOfDelivery)
+  * insert SectionEntrySliceDefRules (inductionProcedure, 0..*,
+      Labour induction procedure / Indukce porodu, Labour induction procedure / Indukce porodu,
+      CZ_ProcedureInductionOfLabor)
+  * insert SectionEntrySliceDefRules (birthInjury, 0..*,
+      Birth injury condition / Porodni poraneni, Birth injury condition / Porodni poraneni,
+      CZ_ConditionHdr)
+  * insert SectionEntrySliceDefRules (fetalPresentation, 0..*,
+      Fetal presentation observation / Poloha plodu, Fetal presentation observation / Poloha plodu,
+      CZ_ObservationFetalPresentation)
+  * insert SectionEntrySliceDefRules (birthWeight, 0..*,
+      Birth weight observation / Porodni hmotnost, Birth weight observation / Porodni hmotnost,
+      CZ_ObservationBirthWeight)
+  * insert SectionEntrySliceDefRules (birthLength, 0..*,
+      Birth length observation / Porodni delka, Birth length observation / Porodni delka,
+      CZ_ObservationBirthLength)
+  * insert SectionEntrySliceDefRules (apgarScore, 0..*,
+      APGAR score observation / APGAR skore, APGAR score observation / APGAR skore,
+      CZ_ObservationApgarScore)
+  * insert SectionEntrySliceDefRules (deliveryObservation, 0..*,
+      Other delivery observations / Ostatni pozorovani k porodu, Other delivery observations / Ostatni pozorovani k porodu,
+      Observation)
+  * insert SectionEntrySliceDefRules (newborn, 0..*,
+      Newborn patient / Novorozenec, Newborn patient / Novorozenec,
+      CZ_PatientCore)
 
 * section contains sectionDiagnosticSummary 0..1
 * section[sectionDiagnosticSummary]
@@ -267,17 +302,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * entry only Reference(CZ_DeviceUseStatementHdr or CZ_ProcedureHdr )
   * section ..0
 
-// -------------------------------------
-* section contains sectionHistoryMedicalDevices 0..1
-* section[sectionHistoryMedicalDevices]
-  * insert SectionComRules (
-    History of Medical devices and implants,
-    The medical devices section contains narrative text and coded entries describing the patient history of medical device use.,
-    $loinc#46264-8) // History of medical device use
-    // $sct#1184586001) //"Medical device document section (record artifact\)
-  * entry 0..
-  * entry only Reference(CZ_DeviceUseStatementHdr or CZ_ProcedureHdr ) // DeviceUseStatementEuHdr also ?
-  * section ..0
+
 
 
 * section contains sectionPharmacotherapy 0..1
@@ -305,7 +330,8 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * entry insert OpenReferenceSlicePerTypeRules (significant results, significant results)
   //* insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result ,Laboratory Result  , $Observation-resultslab-eu-lab)
   * insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result , Laboratory Result, $Observation-resultslab-cz-lab)
-  * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result , Radiology Result  ,$Observation-results-radiology-cz)
+  // IMG_RESTORE: re-enable radResult slice after upstream package fix
+  // * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result , Radiology Result  ,$Observation-results-radiology-cz)
 
 
   // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)
@@ -415,9 +441,20 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
 // -------------------------------------
-// Problem List Section 0 … 1
-// covers the active part of the History of Past Illness heading
+// Patient History Section 0 … 1 R
+// ToDo: Review
 // -------------------------------------
+
+* section contains sectionPatientHx ..1
+* section[sectionPatientHx]
+  * insert SectionComRules (
+    Patient History Section,
+    This Section describes all aspects of the medical history of the patient even if not pertinent to the current procedure\, and may include chief complaint\, past medical history\, social history\, family history\, surgical or procedure history\, medication history\, and other history information. The history may be limited to information pertinent to the current procedure or may be more comprehensive. The history may be reported as a collection of random clinical statements or it may be reported categorically. Categorical report formats may be divided into multiple subsections including Past Medical History\, Social History.,
+    $loinc#35090-0 )
+  * insert PatientHxSubsectionRules
+
+
+
 
 * section contains sectionProblemList ..1
 * section[sectionProblemList]
@@ -431,131 +468,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     * ^definition = "It contains a description of the conditions the patient suffered in the past."
 
 
-// -------------------------------------
-// History of Procedures Section 0 … 1
-// -------------------------------------
-* section contains sectionProceduresHx ..1
-* section[sectionProceduresHx]
-  * insert SectionComRules (
-    History of Procedures Section,
-      The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy
-      ,$loinc#47519-4)   // CODE  "History of Procedures Document"
-  * entry 1..
-  * entry only Reference(Procedure
-                          or DocumentReference  )
-  * insert SectionEntrySliceComRules(Patient past procedures pertinent to the scope of this document.,
-    It lists the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy. This entry shall be used to document that no information about past procedures is available\, or that no relevant past procedures are known.)
-  // entry slices
-  //* insert SectionEntrySliceDefRules (procedure, 0.. , Past Procedure entry ,  Past Procedure entry  , $Procedure-uv-ips-cz)
-  * insert SectionEntrySliceDefRules (procedure, 0.. , Past Procedure entry ,  Past Procedure entry  , CZ_ProcedureHdr)
 
-
-// -------------------------------------
-// Immunizations Section 0 … 1
-// -------------------------------------
-
-* section contains sectionImmunizations ..1
-
-* section[sectionImmunizations]
-  * insert SectionComRules (
-    Immunizations Section,
-      The Immunizations Section defines a patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nThe section includes current immunization status\, and may contain the entire immunization history that is relevant to the period of time being summarized.
-      , $loinc#11369-6 )   // CODE "History of Immunization Narrative"
-  * entry 1..
-  * entry only Reference(CZ_ImmunizationHdr  or ImmunizationRecommendationEuHdr
-                          or DocumentReference  )
-  * insert SectionEntrySliceComRules ( Patient's immunization status and pertinent history.
-    , It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\n It may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. ) //'
-
-
-  // entry slices
-  * insert SectionEntrySliceDefRules (immunization, 0.. , Immunization entry ,
-    Immunization entry  , CZ_ImmunizationHdr)
-
-
-// -------------------------------------
-// Family History Section 0 … 1
-// -------------------------------------
-* section contains sectionFamilyHistory ..1
-* section[sectionFamilyHistory]
-  * insert SectionComRules (
-    Family History Section,
-      This section contains data defining the patient’s genetic relatives in terms of possible or relevant health risk factors that have a potential impact on the patient’s healthcare risk profile.
-      ,  http://loinc.org#10157-6  )   // CODE
-  * entry 0..
-  * entry only Reference(CZ_FamilyMemberHistoryHdr)
-  * entry ^short = "Family History"
-  * entry ^definition = "Family History"
-
-// -------------------------------------
-// Use of substances Section
-// -------------------------------------
-* section contains sectionSubstanceUse ..1
-* section[sectionSubstanceUse]
-  * insert SectionComRules (
-    Use of Substances Section,
-    The Use of Substances Section contains a description of the use abuse of substances E.g. tobacco; alcohol; drugs,  
-    TemporaryHDRSystem#substance-use  )   // CODE
-  * entry 0..
-  * entry only Reference(Observation) // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips
-
-// -------------------------------------
-// Alcohol use Section
-// -------------------------------------
-* section contains sectionAlcoholUse ..1
-* section[sectionAlcoholUse]
-  * insert SectionComRules (
-    Alcohol use Section,
-    The Alcohol use Section contains a description of the use abuse of alcohol,  
-    $loinc#11331-6  )   // History of Alcohol use
-  * entry 0..
-  * entry only Reference(Observation) 
-
-// -------------------------------------
-// Tobacco use Section
-// -------------------------------------
-* section contains sectionTobaccoUse ..1
-* section[sectionTobaccoUse]
-  * insert SectionComRules (
-    Tobacco use Section,
-    The Tobacco use Section contains a description of the use abuse of tobacco,  
-    $loinc#11367-0  )   // History of Tobacco use
-  * entry 0..
-  * entry only Reference(Observation) 
-
-// -------------------------------------
-// Drug use Section
-// -------------------------------------
-* section contains sectionDrugUse ..1
-* section[sectionDrugUse]
-  * insert SectionComRules (
-    Drug use Section,
-    The Drug use Section contains a description of the use abuse of drugs,  
-    $loinc#11343-1  )   // History of Other nonmedical drug use
-  * entry 0..
-  * entry only Reference(Observation)
-
-
-// -------------------------------------
-// History of Past Illness Section 0 … 1
-// -------------------------------------
-
-* section contains sectionPastIllnessHx ..1
-* section[sectionPastIllnessHx] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionPastIllnessHx] ^extension[0].valueString = "Section"
-* section[sectionPastIllnessHx] ^short = "HDR History of Past Illness Section"
-* section[sectionPastIllnessHx] ^definition = "The History of Past Illness section contains a narrative description and coded entries of the conditions the patient suffered in the past"
-* section[sectionPastIllnessHx].title 1..
-* section[sectionPastIllnessHx].code 1..
-* section[sectionPastIllnessHx].code only $CodeableConcept-uv-ips
-* section[sectionPastIllnessHx].code = http://loinc.org#11348-0 (exactly)
-* section[sectionPastIllnessHx].text 1..
-* section[sectionPastIllnessHx].entry 1..
-* section[sectionPastIllnessHx].entry only Reference($Condition-uv-ips-cz)
-* section[sectionPastIllnessHx].entry ^short = "Conditions the patient suffered in the past."
-* section[sectionPastIllnessHx].entry ^definition = "It contains a description of the conditions the patient suffered in the past."
-/* * section[sectionPastIllnessHx].emptyReason ..0
-* section[sectionPastIllnessHx].emptyReason ^mustSupport = false */
 
 // -------------------------------------
 // Care Team 0 … 1
@@ -585,20 +498,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 */
 
 
-// -------------------------------------
-// Social History Section
-// -------------------------------------
-* section contains sectionSocialHistory ..1
-* section[sectionSocialHistory]
-  * insert SectionComRules (
-    Social History Section,
-    The social history section contains a description of the person Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
-    $loinc#29762-2  )   // CODE
 
-// \’s Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
-
-  * entry 0..
-  * entry only Reference(CZ_ObservationSdohHdr or DocumentReference)    // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips)
 
 /*
 * section[sectionSocialHistory] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -780,24 +680,6 @@ $loinc#87232-5 ) // 	Medication administration.brief
     $loinc#42348-3 )  // 	Advance directives
   * entry only Reference(CZ_ConsentHdr or DocumentReference) // ==> Add Profile
 
-* section contains sectionInfectiousContacts ..1
-* section[sectionInfectiousContacts]
-  * insert SectionComRules (
-    Infectious contacts,
-    Infectious contacts of the patient,
-     TemporaryHDRSystem#infection-contact ) // $sct#444071008"Exposure to organism (event\)"
-  * entry 0..*
-  * entry only Reference(CZ_ObservationInfectiousContactHdr)
-    * ^short = "Exposure to an infectious agent."
-    * ^definition = "Information about a suspected infectious agent or agents the person was exposed to."
-  * section ..0
-
-* section contains sectionTravelHx ..1
-* section[sectionTravelHx]
-  * insert SectionComRules (
-        Travel History Section,
-        This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
-        $loinc#10182-4 )
 
 
 
@@ -831,8 +713,6 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * ^short = "Health insurance and payment information."
   * ^definition = "This section includes heath insurance and payment information."
   * entry only Reference(CZ_Coverage) // ==> Add Profile
-
-// -------------------------------------
 
 
 

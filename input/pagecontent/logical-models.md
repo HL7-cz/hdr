@@ -6,7 +6,7 @@ The HL7 FHIR logical model requires that element cardinality is specified, while
 
 
 {% sql {
-  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'LogEn%' ORDER BY Title",
+  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'LMEn%' ORDER BY Title",
   "class" : "lines",
   "columns" : [
     { "name" : "Title"      , "type" : "link"     , "source" : "Name", "target" : "Web"},

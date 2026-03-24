@@ -3,7 +3,7 @@
 Tato stránka uvádí logické modely HL7 FHIR používané k reprezentaci nemocniční propouštěcí zprávy.
 
 {% sql {
-  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'LogCz%' ORDER BY Title",
+  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'LMCz%' ORDER BY Title",
   "class" : "lines",
   "columns" : [
     { "name" : "Title"      , "type" : "link"     , "source" : "Name", "target" : "Web"},

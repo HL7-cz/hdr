@@ -154,7 +154,7 @@ Description: "A minimalist example of a subordinate department within a hospital
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
 * identifier[=].value = "12345678"  
 * name = "CHIR - Oddělení chirurgie"
-* partOf = Reference(Organization-L1) "Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice"
+* partOf = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1) "Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice"
 * telecom.system = #phone
 * telecom.value = "+42060385555"
 * address[+]
@@ -173,7 +173,7 @@ Description: "A minimalist example of a subordinate department within a hospital
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
 * identifier[=].value = "12345678"  
 * name = "CHIR-L2 - Lůžková stanice 2"
-* partOf = Reference(Organization-L1-Odd) "Chirurgické oddělení - Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice"
+* partOf = Reference(urn:uuid:af2b3114-e872-43b9-9875-cceb39122f7f) "Chirurgické oddělení - Nemocnice Pardubického kraje, a.s., Chrudimská nemocnice"
 * telecom.system = #phone
 * telecom.value = "+42060385111"
 * address[+]
@@ -584,7 +584,7 @@ Instance: Practitioner-UZV
 InstanceOf: CZ_PractitionerCore
 Usage: #example
 Description: "Participant UZV HDR"
-* id = "Practitioner-UZV"
+* id = "860c684f-aba1-40d9-94cf-721d70237b52"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
 * identifier[+].system = $cz-practitioner-NRZP
 * identifier[=].value = "987654322"
@@ -616,6 +616,58 @@ Description: "Czech national profile on Signature holds an electronic representa
 * signature.targetFormat = #application/fhir+xml
 * signature.sigFormat = #application/signature+xml
 * signature.data = "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
+
+//-----------------------------------------------------
+Instance: Organization-Brno-Hospital
+InstanceOf: CZ_OrganizationCore
+Usage: #example
+Description: "Fictional healthcare provider organization in Brno."
+* id = "d4545f84-0d58-4f6f-a50a-2f2ea2ea4dc4"
+* identifier[+].system = $cz-organization-ico
+* identifier[=].value = "27999911"
+* identifier[+].system = $cz-organization-icz
+* identifier[=].value = "62010000"
+* name = "Mestska nemocnice Brno"
+* telecom.system = #phone
+* telecom.value = "+420543111222"
+* telecom.use = #work
+* address.line = "Kvetna 15, 60200 Brno"
+* address.city = "Brno"
+* address.postalCode = "60200"
+* address.country = "CZ"
+
+Instance: Organization-Brno-Maternity
+InstanceOf: CZ_OrganizationCore
+Usage: #example
+Description: "Maternity department of the fictional Brno hospital."
+* id = "2f823e1c-b1a5-42f8-9ba4-7df32768b2a7"
+* identifier[+].system = $cz-organization-icp
+* identifier[=].value = "62010123"
+* name = "Porodni oddeleni - Mestska nemocnice Brno"
+* partOf = Reference(Organization-Brno-Hospital)
+* telecom.system = #phone
+* telecom.value = "+420543111333"
+* telecom.use = #work
+* address.line = "Kvetna 15, 60200 Brno"
+* address.city = "Brno"
+* address.postalCode = "60200"
+* address.country = "CZ"
+
+Instance: Practitioner-Novakova-Jana-Author
+InstanceOf: CZ_PractitionerCore
+Usage: #example
+Description: "Fictional physician in Brno maternity ward; author of discharge report and delivery lead."
+* id = "1ec5e355-648f-42b9-a316-3f056fbd04b5"
+* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
+* identifier[+].system = $cz-practitioner-NRZP
+* identifier[=].value = "999111222"
+* name.use = #usual
+* name.prefix = "MUDr."
+* name.family = "Svobodova"
+* name.given[0] = "Eva"
+* telecom[+].system = #phone
+* telecom[=].value = "+420777888999"
+* telecom[=].use = #work
 
 Instance: signature-L3
 InstanceOf: CZ_Provenance

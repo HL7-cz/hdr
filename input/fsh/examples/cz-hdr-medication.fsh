@@ -30,9 +30,9 @@ Description: "Euthyrox v tabletách"
 * ingredient[0].strength.numerator.unit = "mcg"
 * ingredient[0].strength.numerator.system = $ucum
 * ingredient[0].strength.numerator.code = #"/ug"
-* ingredient[0].strength.denominator.value = 1    
+* ingredient[0].strength.denominator.value = 1
 * ingredient[0].strength.denominator.unit = "tableta"
-//* ingredient[0].strength.denominator.system = $ucum    
+//* ingredient[0].strength.denominator.system = $ucum
 //* ingredient[0].strength.denominator.code = #"{tbl}"
 //* ingredient[0].strength.denominator.unit = "tableta"
 * identifier[0].system = $cz-medication-DLP-cs
@@ -64,7 +64,7 @@ Description: "Lek Paracetamol v tabletách"
 * code.coding[0].code = #0253304
 * code.coding[0].display = "PARACETAMOL ZENTIVA K.S."
 * code.coding[1].system = $cz-medication-DLPATC-cs
-* code.coding[1].code = #N02BE01    
+* code.coding[1].code = #N02BE01
 * code.coding[1].display = "Paracetamol"
 * code.text = "PARACETAMOL ZENTIVA K.S. 500 mg"
 * form.coding[0].system = $cz-medication-DLPForma-cs
@@ -85,9 +85,9 @@ Description: "Lek Paracetamol v tabletách"
 * ingredient[0].strength.numerator.unit = "mg"
 * ingredient[0].strength.numerator.system = $ucum
 * ingredient[0].strength.numerator.code = #"/mg"
-* ingredient[0].strength.denominator.value = 1    
+* ingredient[0].strength.denominator.value = 1
 * ingredient[0].strength.denominator.unit = "tableta"
-//* ingredient[0].strength.denominator.system = $ucum    
+//* ingredient[0].strength.denominator.system = $ucum
 //* ingredient[0].strength.denominator.code = #"{tbl}"
 //* ingredient[0].strength.denominator.unit = "tableta"
 * identifier[0].system = $cz-medication-DLP-cs
@@ -140,9 +140,9 @@ Description: "Lek Ibalgin 400 v tabletách"
 * ingredient[0].strength.numerator.unit = "mg"
 * ingredient[0].strength.numerator.system = $ucum
 * ingredient[0].strength.numerator.code = #"/mg"
-* ingredient[0].strength.denominator.value = 1    
+* ingredient[0].strength.denominator.value = 1
 * ingredient[0].strength.denominator.unit = "tableta"
-//* ingredient[0].strength.denominator.system = $ucum    
+//* ingredient[0].strength.denominator.system = $ucum
 //* ingredient[0].strength.denominator.code = #"{tbl}"
 //* ingredient[0].strength.denominator.unit = "tableta"
 * identifier[0].system = $cz-medication-DLP-cs
@@ -209,7 +209,7 @@ Description: "Lek Covid vakcína"
 
 
 
-   
+
 
 
 

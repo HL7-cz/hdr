@@ -167,5 +167,5 @@ Description: "Referenční laboratoř pro klinickou hematologii"
 * address[0].city = "Brno"
 * address[0].postalCode = "60200"
 * address[0].country = "CZ"
-//* extension[0].url = "http://hl7.cz/fhir/core/StructureDefinition/cz-organization-specialization" nelze pouzit
+//* extension[0].url = "http://fhir.hl7cr.eu/core/StructureDefinition/cz-organization-specialization" nelze pouzit
 

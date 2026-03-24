@@ -90,7 +90,7 @@ Alias: $cz-allergyintolerance-riziko = http://hl7.org/fhir/ValueSet/allergy-into
 Alias: $cz-allergyintolerance-reakce = http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips
 Alias: $cz-allergyintolerance-reakce-zavaznost = http://hl7.org/fhir/ValueSet/reaction-event-severity
 Alias: $cz-medicationStatement-reason-status = http://hl7.org/fhir/ValueSet/reason-medication-status-codes
-Alias: $cz-medicationStatement-category = http://hl7.org/fhir/ValueSet/medication-statement-category 
+Alias: $cz-medicationStatement-category = http://hl7.org/fhir/ValueSet/medication-statement-category
 Alias: $cz-medicationStatement-route = http://hl7.org/fhir/ValueSet/route-codes
 Alias: $cz-medication-DLP = https://hl7.cz/fhir/core/ValueSet/cz-dlplecivepripravky-vs
 Alias: $cz-medication-DLPForma =  https://hl7.cz/fhir/core/ValueSet/cz-dlpformy-vs
@@ -118,7 +118,8 @@ Alias: $flagPriority = http://hl7.org/fhir/flag-priority-code
 
 //Composition
 Alias: $Observation-resultslab-cz-lab = https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory
-Alias: $Observation-results-radiology-cz = https://hl7.cz/fhir/img/StructureDefinition/cz-observation-result-imaging
+// IMG_RESTORE: re-enable alias after upstream package fix
+// Alias: $Observation-results-radiology-cz = https://hl7.cz/fhir/img/StructureDefinition/cz-observation-result-imaging
 Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
 Alias: $Procedure-uv-ips-cz = http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips
 Alias: $Condition-uv-ips-cz = http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips

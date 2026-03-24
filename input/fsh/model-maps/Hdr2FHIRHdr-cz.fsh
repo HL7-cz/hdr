@@ -78,15 +78,21 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "Narrative patient history section"
 
-// A.2.6 Course of hospitalisation
+// A.2.5 Course of hospitalisation
 * group[=].element[+].code = #HospitalDischargeReport.body.hospitalStay
 * group[=].element[=].display = "A.2.6 - Course of hospitalisation (Hospital stay)"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "Hospital course narrative + entries"
+* group[=].element[+].code = #HospitalDischargeReport.body.hospitalStay
+* group[=].element[=].display = "A.2.10 - Delivery"
+* group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "See BirthSummary2FHIR map for detailed element mapping"
 
-// A.2.7 Discharge details (container)
+// A.2.6 Discharge details (container)
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails
 * group[=].element[=].display = "A.2.7 - Discharge details"
 * group[=].element[=].target.code = #Composition.section:sectionDischargeDetails
@@ -94,21 +100,21 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "Container for discharge subsections and narrative"
 
-// A.2.7.1 Objective findings at discharge → DischargeDetails/PhysicalExamination (subsection)
+// A.2.6.1 Objective findings at discharge → DischargeDetails/PhysicalExamination (subsection)
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.objectiveFindings
 * group[=].element[=].display = "A.2.7.1 - Objective findings"
 * group[=].element[=].target.code = #Composition.section:sectionDischargeDetails.section:sectionPhysicalExamination
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 
-// A.2.7.2 Functional status at discharge → DischargeDetails/FunctionalStatus (subsection)
+// A.2.6.2 Functional status at discharge → DischargeDetails/FunctionalStatus (subsection)
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.functionalStatus
 * group[=].element[=].display = "A.2.7.2 - Functional status"
 * group[=].element[=].target.code = #Composition.section:sectionDischargeDetails.section:sectionFunctionalStatus
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 
-// A.2.7.3 Discharge note → DischargeDetails (narrative)
+// A.2.6.3 Discharge note → DischargeDetails (narrative)
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.dischargeNote
 * group[=].element[=].display = "A.2.7.3 - Discharge note"
 * group[=].element[=].target.code = #Composition.section:sectionDischargeDetails
@@ -125,14 +131,14 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "Potentially covered by several sections"
 
-// A.2.8.1 Care plan
+// A.2.7.1 Care plan
 * group[=].element[+].code = #HospitalDischargeReport.body.recommendations.carePlan
 * group[=].element[=].display = "A.2.8.1 - Care plan"
 * group[=].element[=].target.code = #Composition.section:sectionPlanOfCare
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 
-// A.2.8.2 Medication summary → Pharmacotherapy (align with examples)
+// A.2.7.2 Medication summary → Pharmacotherapy (align with examples)
 * group[=].element[+].code = #HospitalDischargeReport.body.recommendations.medicationSummary
 * group[=].element[=].display = "A.2.8.2 - Medication summary"
 * group[=].element[=].target.code = #Composition.section:sectionPharmacotherapy

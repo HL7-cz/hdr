@@ -1,0 +1,23 @@
+Logical: LMCzHospitalDischargeReportCz
+Id: LMHospitalDischargeReportCz
+Title: "A - Propouštěcí zpráva"
+Description: """Nemocniční propouštěcí zpráva"""
+
+* hlavicka 1..1 LMHeaderHdrCz "A.1 - Hlavička dokumentu" """Hlavička propouštěcí zprávy – podle české specifikace"""
+* telo 0..1 Base "A.2 - Tělo propouštěcí zprávy" """Hlavní klinické části propouštěcí zprávy"""
+  //* presentedForm 0..1 Base "A.2.0 - Narrativní forma zprávy" """Narrativní část propouštěcí zprávy ve formě textu."""
+  * driveVyslovenaPrani 0..1 LMAdvanceDirectivesCz "A.2.1 - Dříve vyslovená přání" """Dříve vyslovená přání pacienta."""
+  * alerts 1..1 LMAlertsCz "A.2.2 - Urgentní informace" """Závažné alergie, interakce nebo jiná rizika."""
+  * udajeOHospitalizaci 1..1 LMInPatientEncounterCz "A.2.3 - Údaje o hospitalizaci" """Záznam o samotné hospitalizaci a jejím průběhu."""
+  * duvodPrijeti 0..1 LMAdmissionEvaluationCz "A.2.4 - Důvod přijetí" """Vyhodnocení zdravotního stavu při příjmu."""
+  * anamneza 0..1 LMPatientHistoryCz "A.2.5 - Anamnéza pacienta" """Stručná anamnéza, včetně původu informací."""
+  * prubehHospitalizace 0..1 LMHospitalStayCz "A.2.6 - Průběh hospitalizace" """Popis průběhu hospitalizace pacienta."""
+  * stavPriPropusteni 0..1 LMDischargeDetailsCz "A.2.7 - Stav při propuštění" """Strukturované nebo narativní informace o ukončení hospitalizace."""
+    * objektivniNalez 0..1 LMCzObjectiveFindingsCz "A.2.7.1 - Objektivní nález" """Objektivní klinické nálezy při propuštění."""
+    * funkcniStav 0..1 LMFunctionalStatusCz "A.2.7.2 - Funkční stav při propuštění" """Zhodnocení schopnosti pacienta vykonávat denní aktivity."""
+    * poznamka 0..1 string "A.2.7.3 - Poznámka k propuštění" """Shrnutí propuštění ve formě volného textu."""
+  * doporuceni 0..1 Base "A.2.8 - Doporučení po propuštění" """Doporučení, péče a léčba po ukončení hospitalizace."""
+    * planPece 0..* LMPlanOfCareCz "A.2.8.1 - Plán péče" """Plánované kroky péče po propuštění."""
+    * souhrnaMedikace 1..* LMMedicationSummaryCz "A.2.8.2 - Souhrná medikace" """Shrnutí předepsané i ukončené medikace."""
+* zobrazitelnaForma 1..* LMPresentedFormCz "A.3 - Zobrazitelná forma dokumentu" """Zobrazená verze dokumentu, doporučeno PDF."""
+* prilohy 0..* LMAttachmentsCz "A.4 - Přílohy" """Přiložené obrázky, dokumenty nebo jiná média."""

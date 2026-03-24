@@ -10,7 +10,7 @@ title: HL7 Czech Hospital Discharge Report Implementation Guide
 description: This guide contains implementation specification for the HL7 Czech Hospital Discharge Report
 status: draft # draft | active | retired | unknown
 
-version: 0.0.2
+version: 0.1.0
 #language: #cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
@@ -39,20 +39,25 @@ publisher:
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
 dependencies:
-  hl7.fhir.uv.ips: 1.1.0
+  hl7.fhir.uv.ips: 2.0.0
   hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.eu.extensions.r4:
-    id: extensions
-    uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
-    version: 0.1.1-ballot
-  hl7.fhir.eu.extensions: 0.1.1-ballot
+  # hl7.fhir.eu.extensions.r4:
+  #   id: extensions
+  #   uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
+  #   version: 0.1.1-ballot
+  hl7.fhir.eu.extensions: 1.2.0
   hl7.fhir.eu.laboratory: 0.1.1
   hl7.fhir.eu.base: 0.1.0-ballot
   hl7.fhir.eu.hdr: 0.1.0-ballot
   ihe.pharm.mpd: 1.0.0-comment-2
   hl7.fhir.cz.core: current
+    # id: cz-core
+    # uri: https://hl7.cz/fhir/core/ImplementationGuide/hl7.fhir.cz.core
+    # version: 0.3.0-ballot
   hl7.fhir.cz.lab: current
-  hl7.fhir.cz.img: current
+  # IMG_RESTORE: re-enable after upstream package fix
+  # hl7.fhir.cz.img: current
+  
 
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -171,8 +176,6 @@ pages:
     title: HospitalDischargeReport Relationships
   Header-map.html:
     title: Header Relationships
-  Subject-map.html:
-    title: Subject Relationships
   InPatientEncounter-map.html:
     title: InPatientEncounter Relationships
   AdmissionEvaluation-map.html:
@@ -185,6 +188,8 @@ pages:
     title: HospitalStay Relationships
   PatientHistory-map.html:
     title: PatientHistory Relationships
+  BirthSummary-map.html:
+    title: Delivery Relationships
   Alerts-map.html:
     title: Alerts Relationships
   AdvanceDirectives-map.html:
@@ -460,26 +465,25 @@ groups:
       - StructureDefinition/cz-organization-obl-hdr
 
   czech-logical-model:
-    name:  Czech logical model 
+    name:  Czech logical model
     description: Logical model in czech language. Informative for this version of the guide.
     resources:
-      - StructureDefinition/LogAdmissionEvaluationCz
-      - StructureDefinition/LogAdvanceDirectivesCz
-      - StructureDefinition/LogAlertsCz
-      - StructureDefinition/LogAttachmentsCz
-      - StructureDefinition/LogdigitalSignatureCz
-      - StructureDefinition/LogDischargeDetailsCz
-      - StructureDefinition/LogInPatientEncounterCz
-      - StructureDefinition/LogFunctionalStatusCz
-      - StructureDefinition/LogHeaderHdrCz
-      - StructureDefinition/LogHospitalDischargeReportCz
-      - StructureDefinition/LogHospitalStayCz
-      - StructureDefinition/LogMedicationSummaryCz
-      - StructureDefinition/LogCzObjectiveFindingsCz
-      - StructureDefinition/LogPlanOfCareCz
-      - StructureDefinition/LogPatientHistoryCz
-      - StructureDefinition/LogSubjectCz
-      - StructureDefinition/LogPresentedFormCz
+      - StructureDefinition/LMAdmissionEvaluationCz
+      - StructureDefinition/LMAdvanceDirectivesCz
+      - StructureDefinition/LMAlertsCz
+      - StructureDefinition/LMAttachmentsCz
+      - StructureDefinition/LMDischargeDetailsCz
+      - StructureDefinition/LMInPatientEncounterCz
+      - StructureDefinition/LMFunctionalStatusCz
+      - StructureDefinition/LMHeaderHdrCz
+      - StructureDefinition/LMHospitalDischargeReportCz
+      - StructureDefinition/LMHospitalStayCz
+      - StructureDefinition/LMMedicationSummaryCz
+      - StructureDefinition/LMBirthSummaryCz
+      - StructureDefinition/LMCzObjectiveFindingsCz
+      - StructureDefinition/LMPlanOfCareCz
+      - StructureDefinition/LMPatientHistoryCz
+      - StructureDefinition/LMPresentedFormCz
 
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
