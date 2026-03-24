@@ -13,7 +13,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 
 * status from EncounterStatusHdrVS
   * ^short = "Status of this Hospital stay"
-  * ^definition = "At the discharge report status of the encounter should be always = \"finished\""
+  * ^definition = "At the discharge report status of the encounter should be always = \"completed\""
 
 * class from $v3-ActClassHDR (extensible)
   * ^definition = "Concepts representing classification of inpatient encounter such as inpatient, emergency or others due to local variations."

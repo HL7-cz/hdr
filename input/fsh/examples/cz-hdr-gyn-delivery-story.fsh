@@ -109,7 +109,7 @@ Usage: #example
 Title: "HDR - GYNPOR - Hospitalizace k porodu / Delivery hospitalization"
 Description: "Inpatient encounter for delivery hospitalization."
 * id = "encounter-story-delivery"
-* status = #finished
+* status = #completed
 * class.code = #IMP
 * class.system = $cz-encounter-typ-kontaktu
 * class.display = "lůžkový kontakt"
@@ -504,7 +504,7 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionAdmissionEvaluation].code = $loinc#67851-6 "Příjmové vyšetření"
 * section[sectionAdmissionEvaluation].text.status = #additional
 * section[sectionAdmissionEvaluation].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Přijata pro zesilující děložní kontrakce.</p><p>Subjektivně: cítí se dobře, pohyby plodu cítí, cefaleu neguje, epigastrickou bolest neguje, vizus v normě, otoky prstů horních i dolních končetin, bez krvácení.</p><p>Objektivně: PPH, hlava naléhá, branka 5 cm, hmatný VB, kontrakce á 5 min.</p><p>KTG: fyziologický záznam, akcelerace přítomny, bez decelerací, oscilace undulatorní.</p><p>UZ břicha (Samsung R7, 02.03.): PPH, postavení II přední, ASP+, PP+, placenta na zadní stěně mimo DS, přídatný lalok i na přední stěně, bez známek patologie plodové vody, normohydramnion. EFW 01.03.2026: 3480 g, proporční růst.</p><p>Závěr: gravidita 40+2 dle UZ, IV/II, GBS pozitivní, GDM na dietě, gestační hypertenze na Dopegytu 1-0-1.</p><p>Doporučení při příjmu: s ohledem na GBS pozitivitu doporučena antibiotická profylaxe, dále příprava k porodu, spontánní vedení porodu, KTG á 3 hod, OP á 30 min, TK á 3 hod.</p></div>"""
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].code = $sct#425044008 "Physical exam section (record artifact)"
+* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].code = $sct#425044008 "Physical exam section"
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text.status = #additional
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Součástí příjmového vyšetření bylo i UZ vyšetření na přístroji Samsung R7. Doplněno laboratorní vyšetření krevní skupiny: 0 RhD pozitivní.</p></div>"""
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry[+] = Reference(Observation-Story-UZ)

@@ -44,8 +44,8 @@ Description: "Patient, contact information including registering practitioner"
   * postalCode = "15000"
   * country = "CZ"
 
-* contact[+].relationship.coding[+] = $v3-RoleCode#MTH "matka"
-* contact[=].relationship.coding[+] = $v2-0131#N "Příbuzný"
+* contact[+].relationship.coding[+] = $v3-RoleCode#MTH "mother"
+* contact[=].relationship.coding[+] = $v2-0131#N "Next-of-Kin"
 * contact[=].name[+]
   * use = #usual
   * family = "Mrakomorová"
@@ -459,8 +459,8 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * birthDate = "1985-06-15"
 //Contact persons and their details
 //guardian -contact person
-* contact[+].relationship.coding[+] = $cz-patient-relationship#MTH "Matka"
-* contact[=].relationship.coding[+] = $v2-0131#N "příbuzný"
+* contact[+].relationship.coding[+] = $cz-patient-relationship#MTH "Mother"
+* contact[=].relationship.coding[+] = $v2-0131#N "Next-of-Kin"
 * contact[=].name.use = #usual
 * contact[=].name.family = "Nováková"
 * contact[=].name.given[0] = "Alena"
@@ -477,8 +477,8 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * contact[=].address[=].postalCode = "70800"
 * contact[=].address[=].country = "CZ"
 //contact person
-* contact[+].relationship.coding[+] = $cz-patient-relationship#FRND "přítel/přítelkyně"
-* contact[=].relationship.coding[+] = $v2-0131#N "příbuzný"
+* contact[+].relationship.coding[+] = $cz-patient-relationship#FRND "unrelated friend"
+* contact[=].relationship.coding[+] = $v2-0131#N "Next-of-Kin"
 * contact[=].name.use = #usual
 * contact[=].name.family = "Dlouhá"
 * contact[=].name.given[0] = "Alena"

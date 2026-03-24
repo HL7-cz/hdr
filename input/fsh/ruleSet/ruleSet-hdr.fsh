@@ -83,7 +83,7 @@ RuleSet: EvaluationSubSectionRules
 * section contains sectionPhysicalExamination 0..1  // ToDo: add structure
 * section[sectionPhysicalExamination]
   * title = "Somatické vyšetření­"
-  * code = $sct#425044008 "Physical exam section (record artifact)"
+  * code = $sct#425044008 "Physical exam section"
   * text 1..    // now only textual section, should we use questionnair resource for structuring per body part? Maybe as on option?
   * entry 0..   // now only textual section, should we use questionnair response or Observation for structuring per body part?
   * entry only Reference(ClinicalImpression or Observation or DocumentReference or QuestionnaireResponse)

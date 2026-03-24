@@ -247,9 +247,20 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
   # excludejson: false
   # excludettl: true
   # excludemap: true
-  # no-narrative:
-  #   - Patient/example-targeted-provenance
-  #   - Bundle/docref-example-1
+  no-narrative:
+    - ConceptMap/advanceDirectives2FHIR-cz-hdr
+    - ConceptMap/alerts2FHIR-cz-hdr
+    - ConceptMap/encounter2FHIR-cz-hdr
+    - ConceptMap/functionalStatus2FHIR-hdr-cz
+    - ConceptMap/hdr2FHIR-cz-hdr
+    - ConceptMap/hdrHeader2FHIR-cz-hdr
+    - ConceptMap/hospitalStay2FHIR-cz-hdr
+    - ConceptMap/medicationSummary2FHIR-cz-hdr
+    - ConceptMap/objectiveFindings2FHIR-hdr-cz
+    - ConceptMap/patientHistory2FHIR-cz-hdr
+    - ConceptMap/planOfCare2FHIR-cz-hdr
+    - ConceptMap/birthSummary2FHIR-hdr-cz
+    - ConceptMap/AttachmentHDR2FHIR-cz
   # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
