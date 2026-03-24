@@ -9,61 +9,61 @@ Usage: #definition
 * description = """eHN HDR Objective Findings Model to this guide Map"""
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMCzObjectiveFindingsCz"
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
-* group[=].element[+].code = #ObjectiveFindings.anthropometricObservations
+* group[=].element[+].code = #LMCzObjectiveFindingsCz.anthropometricObservations
 * group[=].element[=].display = "A.2.7.1.3 - Anthropometric observations"
 * group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #ObjectiveFindings.vitalSigns
+* group[=].element[+].code = #LMCzObjectiveFindingsCz.vitalSigns
 * group[=].element[=].display = "A.2.7.1.4 - Vital signs"
 * group[=].element[=].target.code = #Composition.section:sectionVitalSigns
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #ObjectiveFindings.physicalExamination
+* group[=].element[+].code = #LMCzObjectiveFindingsCz.physicalExamination
 * group[=].element[=].display = "A.2.7.1.5 - Physical examination"
 * group[=].element[=].target.code = #Composition.section:sectionPhysicalExamination
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #ObjectiveFindings.physicalExamination.description
+* group[=].element[+].code = #LMCzObjectiveFindingsCz.physicalExamination.description
 * group[=].element[=].display = "A.2.7.1.5.1 - Observation Note"
 * group[=].element[=].target.code = #Composition.section:sectionPhysicalExamination.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMCzObjectiveFindingsCz"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/Observation"
-* group[=].element[+].code = #ObjectiveFindings.date
+* group[=].element[+].code = #LMCzObjectiveFindingsCz.date
 * group[=].element[=].display = "A.2.7.1.1 - Date"
 * group[=].element[=].target.code = #Observation.effectiveDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMCzObjectiveFindingsCz"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
-* group[=].element[+].code = #ObjectiveFindings.anthropometricObservations.description
+* group[=].element[+].code = #LMCzObjectiveFindingsCz.anthropometricObservations.description
 * group[=].element[=].display = "A.2.7.1.3.1 - Result description"
 * group[=].element[=].target.code = #Observation.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #ObjectiveFindings.anthropometricObservations.details
+* group[=].element[+].code = #LMCzObjectiveFindingsCz.anthropometricObservations.details
 * group[=].element[=].display = "A.2.7.1.3.2 - Observation details"
 * group[=].element[=].target.code = #Observation
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #ObjectiveFindings.anthropometricObservations.result
+* group[=].element[+].code = #LMCzObjectiveFindingsCz.anthropometricObservations.result
 * group[=].element[=].display = "A.2.7.1.3.3 - Observation result"
 * group[=].element[=].target.code = #Observation.value[x]
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #ObjectiveFindings.vitalSigns.description
+* group[=].element[+].code = #LMCzObjectiveFindingsCz.vitalSigns.description
 * group[=].element[=].display = "A.2.7.1.4.1 - Result description"
 * group[=].element[=].target.code = #Observation.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #ObjectiveFindings.vitalSigns.details
+* group[=].element[+].code = #LMCzObjectiveFindingsCz.vitalSigns.details
 * group[=].element[=].display = "A.2.7.1.4.2 - Observation details"
 * group[=].element[=].target.code = #Observation
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #ObjectiveFindings.vitalSigns.result
+* group[=].element[+].code = #LMCzObjectiveFindingsCz.vitalSigns.result
 * group[=].element[=].display = "A.2.7.1.4.3 - Observation result"
 * group[=].element[=].target.code = #Observation.value[x]
 * group[=].element[=].target.display = ""
