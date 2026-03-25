@@ -12,7 +12,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
 * group[=].element[+].code = #AttachmentsCz
 * group[=].element[=].display = "A.4 - Attachments"
-* group[=].element[=].target.code = #Composition.section:sectionAttachments.entry[x].DocumentReference.content[x].attachment
+* group[=].element[=].target.code = #Composition.section:sectionAttachments.entry.DocumentReference.content[x].attachment
 * group[=].element[=].target.display = "If it is additional attachments"
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/AttachmentsCz"
