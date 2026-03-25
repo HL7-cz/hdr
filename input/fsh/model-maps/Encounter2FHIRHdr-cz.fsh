@@ -165,6 +165,7 @@ Encounter.participant.individual.ofType(PractitionerRole).practitioner"
 * group[=].element[=].target.comment = "to be checked"
 * group[=].element[+].code = #InPatientEncounterCz.admissionReason.legalStatus
 * group[=].element[=].display = "A.2.3.4.3 - Admission legal status"
+* group[=].element[=].target.code = #Encounter.extension:legalStatus
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "to be checked"
 * group[=].element[+].code = #InPatientEncounterCz.discharge
