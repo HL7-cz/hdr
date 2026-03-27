@@ -24,6 +24,9 @@ Alias: $absent-or-uknown = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-
 Alias: $actPriority = http://terminology.hl7.org/CodeSystem/v3-ActPriority
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
+Alias: $MKN10 = https://uzis.cz/terminology/CodeSystem/mkn-10
+Alias: $atc = http://www.whocc.no/atc
+
 
 // Extensions:
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
@@ -108,8 +111,6 @@ Alias: $composition-category = http://hl7.org/fhir/ValueSet/document-classcodes
 Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $encounter-participant-type = http://hl7.org/fhir/ValueSet/encounter-participant-type
-Alias: $MKN10 = http://hl7.org/fhir/sid/icd-10
-Alias: $atc = http://www.whocc.no/atc
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $observation-interpretation = http://hl7.org/fhir/ValueSet/observation-interpretation
 Alias: $flagPriority = http://hl7.org/fhir/flag-priority-code
