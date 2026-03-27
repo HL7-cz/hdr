@@ -13,9 +13,7 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "Header" <<LogicalModel>> [[StructureDefinition-Header.html]]
-note top #PaleTurquoise [[ConceptMap-hdrHeader2FHIR-cz-hdr.html]]
-Concept Map
-endnote
+
 class "organization-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html]]
 "Header" <|. "organization-cz-core"
 class "patient-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]

@@ -18,19 +18,19 @@ Basic Sections of the Hospital Discharge Report
 
 | Section |	Cardinality	| Obligation | Link |
 | - | - | - | - |
-| A.1 Header with Administrative Document Data | 1..1 |	Mandatory | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2 Document Content | 1..1 | Mandatory | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.1 Previously Expressed Wishes | 0..1 | Required | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.2 Urgent Information | 1..1 | Mandatory | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.3 Hospitalization Data | 1..1 | Mandatory | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.4 Reason for Admission | 0..1 | Required | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.5 Condition at Admission (Initial Examination) | 0..1 | Optional | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.6 Medical History | 0..1 | Optional | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.7 Course of Hospitalization | 1..1| Mandatory| [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.8 Condition at Discharge |	1..1| Mandatory | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.2.9 Recommendations | 0..1 | Required | [Link](ConceptMap-advanceDirectives2FHIR-cz-hdr.html) |
-| A.3 Presentation form | 1..1 | Mandatory | [Link] |
-| A.4 Attachments | 0..1 | Optional | [Link] |
+| A.1 Header with Administrative Document Data | 1..1 |	Mandatory | [Link](StructureDefinition-Header.html) |
+| A.2 Document Content | 1..1 | Mandatory |  |
+| A.2.1 Previously Expressed Wishes | 0..1 | Required | [Link](StructureDefinition-AdvanceDirectivesCz.html) |
+| A.2.2 Urgent Information | 1..1 | Mandatory | [Link](StructureDefinition-AlertsCz.html) |
+| A.2.3 Hospitalization Data | 1..1 | Mandatory | [Link](StructureDefinition-InPatientEncounterCz.html) |
+| A.2.4 Reason for Admission | 0..1 | Required | [Link](StructureDefinition-AdmissionEvaluationEhnEn.html) |
+| A.2.5 Condition at Admission (Initial Examination) | 0..1 | Optional | [Link](StructureDefinition-PatientHistoryCz.html) |
+| A.2.6 Medical History | 0..1 | Optional | [Link](StructureDefinition-HospitalStayCz.html) |
+| A.2.7 Course of Hospitalization | 1..1| Mandatory| [Link](StructureDefinition-DischargeDetailsCz.html) |
+| A.2.8 Condition at Discharge |	1..1| Mandatory |  |
+| A.2.9 Recommendations | 0..1 | Required |  |
+| A.3 Presentation form | 1..1 | Mandatory | [Link] (StructureDefinition-PresentedFormCz.html) |
+| A.4 Attachments | 0..1 | Optional | [Link] (StructureDefinition-AttachmentsCz.html)|
 
 
 ### Scope

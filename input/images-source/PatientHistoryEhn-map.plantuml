@@ -13,9 +13,7 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "PatientHistoryEhn" <<LogicalModel>> [[StructureDefinition-PatientHistoryCz.html]]
-note top #PaleTurquoise [[ConceptMap-hdr2FHIR-cz-hdr.html]]
-Concept Map
-endnote
+
 class "ImmunizationRecommendation-cz-hdr" <<Profile>> [[StructureDefinition-cz-immunizationRecommendation-hdr.html]]
 "PatientHistoryEhn" <|. "ImmunizationRecommendation-cz-hdr"
 class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]

@@ -14,9 +14,6 @@ legend right
 endlegend
 
 class "BirthSummary" <<LogicalModel>> [[StructureDefinition-LMBirthSummaryEnCz.html]]
-note top #PaleTurquoise [[ConceptMap-birthSummary2FHIR-hdr-cz.html]]
-Concept Map
-endnote
 
 class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
 "BirthSummary" <|. "composition-cz-hdr"
