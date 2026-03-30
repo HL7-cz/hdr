@@ -121,7 +121,7 @@ Description: "Patient experiences skin rash and lip swelling in response to peni
 // Reakce
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #271807003
-* reaction[0].manifestation[0].coding[0].display = "Eruption of skin"
+* reaction[0].manifestation[0].coding[0].display = "Eruption"
 * reaction[0].manifestation[1].coding[0].system = $sct
 * reaction[0].manifestation[1].coding[0].code = #267038008
 * reaction[0].manifestation[1].coding[0].display = "Edema (finding)"
@@ -208,7 +208,7 @@ Description: "Patient experiences itching and tongue swelling in response to str
 */
 * criticality = #low
 // Alergen (SNOMED CT)
-* code = $sct#102261002 "Strawberry"
+* code = $sct#102261002 "jahoda"
 /*
 * code.coding[0].system = $cz-allergyintolerance-puvodce
 * code.coding[0].code = #91938006
