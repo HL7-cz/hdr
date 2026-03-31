@@ -27,8 +27,8 @@ Basic Sections of the Hospital Discharge Report
 | A.2.5 Condition at Admission (Initial Examination) | 0..1 | Optional | [Link](StructureDefinition-PatientHistoryCz.html) |
 | A.2.6 Medical History | 0..1 | Optional | [Link](StructureDefinition-HospitalStayCz.html) |
 | A.2.7 Course of Hospitalization | 1..1| Mandatory| [Link](StructureDefinition-DischargeDetailsCz.html) |
-| A.2.8 Condition at Discharge |	1..1| Mandatory |  |
-| A.2.9 Recommendations | 0..1 | Required |  |
+| A.2.8 Condition at Discharge |	1..1| Mandatory | [Link] |
+| A.2.9 Recommendations | 0..1 | Required | [Link] |
 | A.3 Presentation form | 1..1 | Mandatory | [Link] (StructureDefinition-PresentedFormCz.html) |
 | A.4 Attachments | 0..1 | Optional | [Link] (StructureDefinition-AttachmentsCz.html)|
 

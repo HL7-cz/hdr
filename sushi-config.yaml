@@ -45,12 +45,12 @@ dependencies:
   #   id: extensions
   #   uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
   #   version: 0.1.1-ballot
-  hl7.fhir.eu.extensions: 1.2.0
+  hl7.fhir.eu.extensions.r4: 1.2.0
   hl7.fhir.eu.laboratory: 0.1.1
-  hl7.fhir.eu.base: 0.1.0-ballot
+  hl7.fhir.eu.base: 0.1.0
   hl7.fhir.eu.hdr: 0.1.0-ballot
   ihe.pharm.mpd: 1.0.0-comment-2
-  hl7.fhir.cz.core: current
+  hl7.fhir.cz.core: 0.3.0
     # id: cz-core
     # uri: https://hl7.cz/fhir/core/ImplementationGuide/hl7.fhir.cz.core
     # version: 0.3.0-ballot
