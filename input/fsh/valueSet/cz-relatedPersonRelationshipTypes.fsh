@@ -8,5 +8,5 @@ Description: """HDR related person relationship types value set."""
 * $v3-RoleCode#ECON "Emergency contact"
 * $v3-RoleCode#NOK "Next of kin"
 * $v3-RoleCode#GUARD "Guardian"
-* $v3-RoleCode#PRS "Personal relationship"
-* $v3-RoleCode#CAREGIVER "Caregiver"
+* $v3-RoleCode#_PersonalRelationshipRoleType "Personal relationship"
+* $v3-RoleCode#CAREGIVER "Caregiver" // tento kód není v terminologii v3-RoleCode - potenciálně může dělat problémy
