@@ -625,7 +625,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge,
     $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital discharge medications Narrative" or 	Discharge medications Narrative
   * entry 1..
-  * entry only Reference  (CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_Medication) //(CZ_MedicationRequestHdr or MedicationDispense)
+  * entry only Reference  (CZ_MedicationStatement or CZ_MedicationRequestHdr) //(CZ_MedicationRequestHdr or MedicationDispense)
 
 // -------------------------------------
 // Discharge Instructions Section 0 … 1
