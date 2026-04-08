@@ -244,7 +244,7 @@ RuleSet: PatientHxSubsectionRules
     $Observation-pregnancy-outcome-uv-ips)
   * insert SectionEntrySliceDefRules (gestationalAge, 0..*,
     Gestational age at delivery / Gestacni stari pri porodu, Gestational age at delivery format weeks and days for example 39-6 / Format gestacniho stari tydny a dny napr 39-6,
-    Observation)
+    CZ_ObservationGestationalAge)
   * insert SectionEntrySliceDefRules (gravidity, 0..*,
     Gravidity / Gravidita, Gravidity / Gravidita,
     CZ_ObservationGravidity)
