@@ -57,7 +57,7 @@ Description: "General practitioner role for patient registration."
 * practitioner = Reference(Practitioner-NovakovaJana-GP)
 * organization = Reference(RegisteringProviderExample)
 * code = $cz-nrzp_povolani#L00 "Lekar"
-* specialty = $sct#419772000 "Family practice (qualifier value)"
+* specialty = $sct#419772000 "Family practice"
 
 Instance: Practitioner-NovakovaJana-GYN
 InstanceOf: CZ_PractitionerCore
@@ -82,7 +82,7 @@ Description: "Gynecology role for patient registration."
 * practitioner = Reference(Practitioner-NovakovaJana-GYN)
 * organization = Reference(RegisteringProviderExample-gynecology)
 * code = $cz-nrzp_povolani#L00 "Lekar"
-* specialty = $sct#394586005 "Gynecology service"
+* specialty = $sct#394586005 "Gynecology"
 
 Instance: Organization-Payer-111
 InstanceOf: CZ_OrganizationCore
@@ -113,7 +113,7 @@ Usage: #example
 Description: "Husband and father of the newborn (Petr Novak), linked to Jana Novakova."
 * id = "relatedperson-novak-petr-husband"
 * patient = Reference(Patient-Novakova-Jana)
-* relationship[+].coding = $v3-RoleCode#PRS "Personal relationship"
+* relationship[+].coding = $v3-RoleCode#_PersonalRelationshipRoleType "Personal relationship"
 * relationship[=].text = "Manzel, otec ditete"
 * identifier[+]
   * system = "https://ncez.mzcr.cz/fhir/sid/rid"

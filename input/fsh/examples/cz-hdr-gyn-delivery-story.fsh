@@ -130,7 +130,7 @@ Title: "HDR - GYNPOR - Vaginální porod / Vaginal delivery"
 Description: "Induced vaginal delivery in week 40+2."
 * id = "procedure-story-delivery-method"
 * status = #completed
-* code = $sct#22640007 "Vaginální porod"
+* code = $sct#289259007 "Vaginal delivery"
 * subject = Reference(Patient-Story-Mother)
 * performedDateTime = "2026-03-03T17:13:00+01:00"
 * performer.actor = Reference(Practitioner-Cerna-Raketa)

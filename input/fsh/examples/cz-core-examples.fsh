@@ -285,7 +285,7 @@ Description: "General practitioner's office"
 * practitioner = Reference(Practitioner/Practitioner-2) "MUDr. Stanislava Kubšová"
 * organization = Reference(Organization/Organization-1) "Ordinace praktického lékaře, MUDr. Stanislava Kubšová"
 * code = $nrzp_povolani#L00 "Lékař"
-* specialty = $sct#419772000 "Family practice (qualifier value)"
+* specialty = $sct#419772000 "Family practice"
 * availableTime[0].daysOfWeek[0] = #mon
 * availableTime[=].daysOfWeek[+] = #wed
 * availableTime[=].availableStartTime = "12:30:00"
