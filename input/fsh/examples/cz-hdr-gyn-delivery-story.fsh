@@ -249,13 +249,12 @@ Description: "Singleton pregnancy."
 * component.valueInteger = 1
 
 Instance: Observation-Story-GestAgeAtDelivery
-InstanceOf: Observation
+InstanceOf: CZ_ObservationGestationalAgeAtDelivery
 Usage: #example
 Title: "HDR - GYNPOR - Gestační stáří při porodu / Gestational age at delivery"
 Description: "Gestational age at delivery 40+2."
 * id = "observation-story-gest-age"
 * status = #final
-* code = $loinc#76516-4 "Gestační stáří při porodu"
 * subject = Reference(Patient-Story-Mother)
 * effectiveDateTime = "2026-03-03T17:13:00+01:00"
 * valueString = "40+2"
@@ -526,7 +525,6 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(Observation-Story-Apgar1)
 * section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(Observation-Story-Apgar5)
 * section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(Observation-Story-Apgar10)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[deliveryObservation][+] = Reference(Observation-Story-GestAgeAtDelivery)
 * section[sectionHospitalCourse].section[sectionDelivery].entry[newborn][+] = Reference(Patient-Story-Newborn)
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(Condition-Story-CordAroundNeck)
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(Condition-Story-LivebornSingle)
