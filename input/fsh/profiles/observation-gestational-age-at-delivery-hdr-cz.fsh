@@ -1,6 +1,6 @@
-Profile: CZ_ObservationGestationalAgeAtDelivery
+Profile: CZ_ObservationGestationalAge
 Parent: Observation
-Id: cz-observation-gestational-age-at-delivery
+Id: cz-observation-gestational-age
 Title: "Observation: Maternal - Gestational age at delivery (CZ)"
 Description: "Gestational age at delivery expressed as weeks + days, for example 39+6."
 

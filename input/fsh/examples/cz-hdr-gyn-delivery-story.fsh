@@ -249,7 +249,7 @@ Description: "Singleton pregnancy."
 * component.valueInteger = 1
 
 Instance: Observation-Story-GestAgeAtDelivery
-InstanceOf: CZ_ObservationGestationalAgeAtDelivery
+InstanceOf: CZ_ObservationGestationalAge
 Usage: #example
 Title: "HDR - GYNPOR - Gestační stáří při porodu / Gestational age at delivery"
 Description: "Gestational age at delivery 40+2."
