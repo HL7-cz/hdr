@@ -47,7 +47,7 @@ Instance: GynNaturalBirth-DeliveryMethod
 InstanceOf: CZ_ProcedureMethodOfDelivery
 Usage: #example
 Description: "Příklad způsobu vedení spontánního vaginálního porodu. / Example delivery method for spontaneous vaginal birth."
-* status = #completed
+* status = #finished
 * code = $sct#289259007 "Vaginal delivery"
 * subject = Reference(Mracena2)
 * performedDateTime = "2025-05-18T10:46:00+02:00"
@@ -310,7 +310,7 @@ Instance: GynNaturalBirthJana-DeliveryMethod
 InstanceOf: CZ_ProcedureMethodOfDelivery
 Usage: #example
 Description: "Příklad způsobu vedení spontánního vaginálního porodu u Jany Novákové. / Example delivery method for Jana Novakova spontaneous vaginal birth."
-* status = #completed
+* status = #finished
 * code = $sct#289259007 "Vaginal delivery"
 * subject = Reference(Patient-Novakova-Jana)
 * performedDateTime = "2025-05-18T10:46:00+02:00"
@@ -370,7 +370,7 @@ Description: "Alergie pacientky na penicilin s kožní vyrážkou a otokem rtů.
 * patient = Reference(Patient-Novakova-Jana)
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #271807003
-* reaction[0].manifestation[0].coding[0].display = "Eruption of skin"
+* reaction[0].manifestation[0].coding[0].display = "vyrážka"
 * reaction[0].manifestation[1].coding[0].system = $sct
 * reaction[0].manifestation[1].coding[0].code = #267038008
 * reaction[0].manifestation[1].coding[0].display = "Edema (finding)"

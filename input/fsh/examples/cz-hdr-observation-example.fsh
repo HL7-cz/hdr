@@ -36,7 +36,7 @@ Description: "Example of Social History Observation - Smoking history"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2015-01-01T00:00:00+01:00" // Datum zanechání kouření
 * performer = Reference(Practitioner-2)
-* valueCodeableConcept = $sct#8517006 "Ex-smoker"
+* valueCodeableConcept = $sct#8517006 "Former smoker"
 * note.text = "Před zanecháním kouřil cca 20 cigaret denně, přestal v roce 2015. Zadáno praktickým lékařem."
 
 
@@ -59,7 +59,7 @@ Description: "Example of Social History Observation - Alcohol Use"
 * id = "3f85726c-ad2f-441b-89ce-10000000001d"
 * status = #final
 * category[SocialHistory] = $observation-category#social-history
-* code = $sct#160573003 "Alcohol consumption"
+* code = $sct#160573003 "Alcohol intake"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-01T00:00:00+01:00"
 * performer = Reference(Practitioner-2)
@@ -175,7 +175,7 @@ Description: "Czech HDR - example of an ultrasound observation for Novák Petr"
 * id = "e15aeeaf-e288-404c-9704-9c8f0b2d4e3a"
 * status = #final
 * category = $observation-category#imaging  //http://terminology.hl7.org/CodeSystem/observation-category
-* code = $sct#13221000087107 "Ultrasonography of groin and scrotum"
+* code = $sct#13221000087107 "Ultrasonography of inguinal region and scrotum"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-10T10:00:00+01:00"
 * performer = Reference(urn:uuid:860c684f-aba1-40d9-94cf-721d70237b52) // Practitioner-UZV)
@@ -190,7 +190,7 @@ Description: "Czech HDR - example of CRP observation for Novák Petr"
 * id = "10f5c49e-086d-4016-8dd1-10000000001b"
 * status = #final
 * category[laboratory] = $observation-category#laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
-* category[studyType] = $loinc#26436-6 "Laboratory studies (set)" 
+* category[studyType] = $loinc#26436-6 "Laboratorní studie" 
 * code = $nclp#07830 "Protein C - kontrola (P; rel. čas [1] *)"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-01T10:00:00+01:00"

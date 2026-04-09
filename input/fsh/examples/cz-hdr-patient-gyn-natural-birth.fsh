@@ -30,7 +30,7 @@ Description: "Example of patient Jana Novakova after spontaneous vaginal deliver
 * communication[+].language = urn:ietf:bcp:47#cs
 * communication[=].preferred = true
 * extension[registeringProvider][+].extension[value].valueReference = Reference(PractitionerRole-NovakovaJana-GP)
-* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#700232004 "General medical service"
+* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#700232004 "všeobecné lékařské služby"
 * extension[registeringProvider][+].extension[value].valueReference = Reference(PractitionerRole-NovakovaJana-GYN)
 * extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#310060005 "Obstetrics and gynecology service"
 

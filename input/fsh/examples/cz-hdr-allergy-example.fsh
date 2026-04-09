@@ -81,10 +81,10 @@ Description: "Patient experiences itching and tongue swelling in response to str
 // Reakce
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #418363000
-* reaction[0].manifestation[0].coding[0].display = "Itching of skin"
+* reaction[0].manifestation[0].coding[0].display = "svědění kůže"
 * reaction[0].manifestation[1].coding[0].system = $sct
 * reaction[0].manifestation[1].coding[0].code = #81950002
-* reaction[0].manifestation[1].coding[0].display = "Edema of the tongue"
+* reaction[0].manifestation[1].coding[0].display = "edém jazyka"
 * reaction[0].description = "Svědění, otok jazyka."
 
 // Penicilinová alergie
@@ -121,10 +121,10 @@ Description: "Patient experiences skin rash and lip swelling in response to peni
 // Reakce
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #271807003
-* reaction[0].manifestation[0].coding[0].display = "Eruption of skin"
+* reaction[0].manifestation[0].coding[0].display = "Eruption"
 * reaction[0].manifestation[1].coding[0].system = $sct
 * reaction[0].manifestation[1].coding[0].code = #267038008
-* reaction[0].manifestation[1].coding[0].display = "Edema (finding)"
+* reaction[0].manifestation[1].coding[0].display = "Interstitial edema"
 * reaction[0].description = "Kožní vyrážka, otok rtů."
 
 
@@ -149,7 +149,7 @@ Description: "Patient experiences rash and itching after ingestion of cow's milk
 * reaction[0].description = "Projevy: vyrážka, svědění kůže po požití mléka."
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #418363000
-* reaction[0].manifestation[0].coding[0].display = "Itching of skin (finding)"
+* reaction[0].manifestation[0].coding[0].display = "svědění kůže"
 
 * criticality = #low
 
@@ -208,7 +208,7 @@ Description: "Patient experiences itching and tongue swelling in response to str
 */
 * criticality = #low
 // Alergen (SNOMED CT)
-* code = $sct#102261002 "Strawberry"
+* code = $sct#102261002 "jahoda"
 /*
 * code.coding[0].system = $cz-allergyintolerance-puvodce
 * code.coding[0].code = #91938006
@@ -220,11 +220,11 @@ Description: "Patient experiences itching and tongue swelling in response to str
 * patient = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 // Reakce
 * reaction[+]
-  * manifestation[+] = $sct#81950002 "Edema of the tongue"
-  * manifestation[+] = $sct#4386001	"Bronchospasm"
+  * manifestation[+] = $sct#81950002 "edém jazyka"
+  * manifestation[+] = $sct#4386001	"bronchospazmus"
   * onset = "2020-01-01T12:00:00Z"
 * reaction[+]
-  * manifestation = $sct#418363000 "Itching of skin"
+  * manifestation = $sct#418363000 "svědění kůže"
   * onset = "2022-10-01T10:00:00Z"
   * severity = #mild
 /* * reaction[0].manifestation[0].coding[0].system = $cz-allergyintolerance-reakce

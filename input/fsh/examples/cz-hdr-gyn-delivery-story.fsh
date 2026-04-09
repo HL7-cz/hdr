@@ -109,7 +109,7 @@ Usage: #example
 Title: "HDR - GYNPOR - Hospitalizace k porodu / Delivery hospitalization"
 Description: "Inpatient encounter for delivery hospitalization."
 * id = "encounter-story-delivery"
-* status = #completed
+* status = #finished
 * class.code = #IMP
 * class.system = $cz-encounter-typ-kontaktu
 * class.display = "lůžkový kontakt"
@@ -129,7 +129,7 @@ Usage: #example
 Title: "HDR - GYNPOR - Vaginální porod / Vaginal delivery"
 Description: "Induced vaginal delivery in week 40+2."
 * id = "procedure-story-delivery-method"
-* status = #completed
+* status = #finished
 * code = $sct#289259007 "Vaginal delivery"
 * subject = Reference(Patient-Story-Mother)
 * performedDateTime = "2026-03-03T17:13:00+01:00"
@@ -476,7 +476,7 @@ Description: "Maternal blood group test."
 * id = "observation-story-blood-group"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#26436-6 "Laboratory studies (set)"
+* category[studyType] = $loinc#26436-6 "Laboratorní studie"
 * code = $nclp#15961 "AB0 a RhD krevní skupina"
 * subject = Reference(Patient-Story-Mother)
 * effectiveDateTime = "2026-03-03T06:10:00+01:00"
