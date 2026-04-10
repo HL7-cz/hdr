@@ -37,7 +37,7 @@ Hlavni priklad: [Propousteci zprava Novak Petr](Bundle-DischargeBundle-Novak-Pet
 - [Porodni delka novorozence - Jana Novakova](Observation-GynNaturalBirthJana-BirthLength.html)
 - [Porodni poraneni matky - Jana Novakova](Condition-GynNaturalBirthJana-BirthInjury.html)
 - [Vysledek porodu - Jana Novakova](Observation-GynNaturalBirthJana-BirthOutcome.html)
-- [Gravidita - Jana Novakova](Observation-GynNaturalBirthJana-Gravidity.html)
+- [Gravidita - Jana Novakova](Observation-9d0b2e3f-6e66-4dcb-a457-6d6108b1fb89.html)
 - [Parita - Jana Novakova](Observation-GynNaturalBirthJana-Parity.html)
 - [Jednoplodove tehotenstvi - Jana Novakova](Observation-GynNaturalBirthJana-MultiplePregnancy.html)
 - [Gestacni stari pri porodu - Jana Novakova](Observation-GynNaturalBirthJana-GestationalAgeAtDelivery.html)

@@ -37,7 +37,7 @@ Main example: [Hospital discharge report Novak Petr](Bundle-DischargeBundle-Nova
 - [Newborn birth length - Jana Novakova](Observation-GynNaturalBirthJana-BirthLength.html)
 - [Maternal birth injury - Jana Novakova](Condition-GynNaturalBirthJana-BirthInjury.html)
 - [Birth outcome - Jana Novakova](Observation-GynNaturalBirthJana-BirthOutcome.html)
-- [Gravidity - Jana Novakova](Observation-GynNaturalBirthJana-Gravidity.html)
+- [Gravidity - Jana Novakova](Observation-9d0b2e3f-6e66-4dcb-a457-6d6108b1fb89.html)
 - [Parity - Jana Novakova](Observation-GynNaturalBirthJana-Parity.html)
 - [Singleton pregnancy - Jana Novakova](Observation-GynNaturalBirthJana-MultiplePregnancy.html)
 - [Gestational age at delivery - Jana Novakova](Observation-GynNaturalBirthJana-GestationalAgeAtDelivery.html)

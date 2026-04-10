@@ -208,7 +208,7 @@ Description: "Patient experiences itching and tongue swelling in response to str
 */
 * criticality = #low
 // Alergen (SNOMED CT)
-* code = $sct#102261002 "jahoda"
+* code = $sct#102261002 "Strawberry"
 /*
 * code.coding[0].system = $cz-allergyintolerance-puvodce
 * code.coding[0].code = #91938006
@@ -221,10 +221,10 @@ Description: "Patient experiences itching and tongue swelling in response to str
 // Reakce
 * reaction[+]
   * manifestation[+] = $sct#81950002 "edém jazyka"
-  * manifestation[+] = $sct#4386001	"bronchospazmus"
+  * manifestation[+] = $sct#4386001	"Bronchospasm"
   * onset = "2020-01-01T12:00:00Z"
 * reaction[+]
-  * manifestation = $sct#418363000 "svědění kůže"
+  * manifestation = $sct#418363000 "Itching of skin"
   * onset = "2022-10-01T10:00:00Z"
   * severity = #mild
 /* * reaction[0].manifestation[0].coding[0].system = $cz-allergyintolerance-reakce

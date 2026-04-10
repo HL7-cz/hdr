@@ -183,7 +183,7 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionPatientHx].section[sectionPregnancyHx].text.status = #additional
 * section[sectionPatientHx].section[sectionPregnancyHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gestační stáří 39+6, prvorodička, gravidita 1, parita 1, singleton gravidita.</p></div>"""
 * section[sectionPatientHx].section[sectionPregnancyHx].entry[gestationalAge][+] = Reference(GynNaturalBirthJana-GestationalAgeAtDelivery)
-* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirthJana-Gravidity)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(urn:uuid:9d0b2e3f-6e66-4dcb-a457-6d6108b1fb89)
 * section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirthJana-Parity)
 * section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirthJana-MultiplePregnancy)
 
@@ -191,7 +191,7 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionPayers].code = $loinc#48768-6 "Payment sources Document"
 * section[sectionPayers].text.status = #additional
 * section[sectionPayers].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Payer: 111 (VZP), insurance number: 9355181234.</p></div>"""
-* section[sectionPayers].entry[+] = Reference(Coverage-Novakova-Jana)
+* section[sectionPayers].entry[+] = Reference(urn:uuid:8f9c2f14-1f69-4f2b-b4a8-8b7ca4db9f31)
 
 * section[sectionAllergies].title = "Alergie, intolerance a varování"
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
@@ -390,6 +390,7 @@ Instance: GynNaturalBirthJana-Gravidity
 InstanceOf: CZ_ObservationGravidity
 Usage: #example
 Description: "Příklad observace gravidity matky v případě Jany Novákové. / Example maternal gravidity observation for Jana Novakova case."
+* id = "9d0b2e3f-6e66-4dcb-a457-6d6108b1fb89"
 * status = #final
 * subject = Reference(Patient-Novakova-Jana)
 * effectiveDateTime = "2025-05-18T10:46:00+02:00"
