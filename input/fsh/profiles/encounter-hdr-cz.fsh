@@ -16,7 +16,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 * extension contains EncounterLegalStatus named legalStatus 0..*
 * extension[legalStatus] ^short = "Legal status/situation at admission"
 
-* status from EncounterStatusHdrVS
+* status
   * ^short = "Status of this Hospital stay"
   * ^definition = "At the discharge report status of the encounter should be always = \"finished\"" // je potřeba v R4 používat #finished, v R5 by to bylo #completed, ale zatím se držíme R4, takže necháme #finished
 

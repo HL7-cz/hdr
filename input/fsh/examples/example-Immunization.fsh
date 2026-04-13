@@ -20,12 +20,12 @@ Description: "Očkování proti COVID-19 u pacienta Novák Petr"
 
 * status = #completed
 //* meta.profile = "http://fhir.hl7cr.eu/hdr/StructureDefinition/cz-immunization-hdr"
-* vaccineCode = http://snomed.info/sct#28531000087107 "SARS-CoV-2 vaccine"
+* vaccineCode = http://snomed.info/sct#28531000087107 "COVID-19 vaccine"
 * patient = Reference(Patient-Novak-Petr)
 * occurrenceDateTime = "2021-05-05"
 * primarySource = true
 * manufacturer = Reference(Organization-Pfizer)
-* protocolApplied[0].targetDisease = http://snomed.info/sct#840539006 "COVID-19"
+* protocolApplied[0].targetDisease = http://snomed.info/sct#840539006 "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
 * protocolApplied[0].doseNumberPositiveInt = 2
 * extension[administeredProduct].extension[reference].valueReference = Reference(Medication-CovidVaccineComirnaty)
 * note[0].text = "Pacient dostal druhou dávku vakcíny Comirnaty."

@@ -109,10 +109,10 @@ Usage: #example
 Title: "HDR - GYNPOR - Hospitalizace k porodu / Delivery hospitalization"
 Description: "Inpatient encounter for delivery hospitalization."
 * id = "encounter-story-delivery"
-* status = #finished
+* status = $encounter-status-r4#finished
 * class.code = #IMP
 * class.system = $cz-encounter-typ-kontaktu
-* class.display = "lůžkový kontakt"
+* class.display = "inpatient encounter"
 * subject = Reference(Patient-Story-Mother)
 * period.start = "2026-03-03T05:22:00+01:00"
 * period.end = "2026-03-04T18:41:00+01:00"
@@ -121,7 +121,7 @@ Description: "Inpatient encounter for delivery hospitalization."
 * participant[discharger][0].individual = Reference(Practitioner-Bila-Palka)
 * hospitalization.dischargeDisposition.coding[0].system = $discharge-disposition
 * hospitalization.dischargeDisposition.coding[0].code = #home
-* hospitalization.dischargeDisposition.coding[0].display = "Domů"
+* hospitalization.dischargeDisposition.coding[0].display = "home"
 
 Instance: Procedure-Story-DeliveryMethod
 InstanceOf: CZ_ProcedureMethodOfDelivery
