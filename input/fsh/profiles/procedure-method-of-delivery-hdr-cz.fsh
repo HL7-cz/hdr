@@ -20,4 +20,4 @@ Description: "The delivery method (e.g., Spontaneous, Cesarean, Forceps). The su
 * reasonReference ^short = "Clinical rationale (condition/observation/procedure/report)"
 
 // Status of the delivery procedure
-* status = #finished
+* status = #completed

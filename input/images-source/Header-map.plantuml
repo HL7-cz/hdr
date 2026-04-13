@@ -16,7 +16,7 @@ class "Header" <<LogicalModel>> [[StructureDefinition-Header.html]]
 
 class "organization-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html]]
 "Header" <|. "organization-cz-core"
-class "patient-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
+class "patient-cz-core" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html]]
 "Header" <|. "patient-cz-core"
 "organization-cz-core" -d[hidden]-> "patient-cz-core"
 class "practitionerRole-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html]]

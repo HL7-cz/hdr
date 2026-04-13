@@ -24,7 +24,7 @@ Základní sekce propouštěcí zprávy z nemocnice
 | A.2.1 Dříve vyjádřená přání | 0..1 | Požadováno | [Link](StructureDefinition-LMAdvanceDirectivesCz.html) |
 | A.2.2 Urgentní informace | 1..1 | Povinné | [Link](StructureDefinition-LMAlertsCz.html) |
 | A.2.3 Údaje o hospitalizaci | 1..1 | Povinné | [Link](StructureDefinition-LMInPatientEncounterCz.html) |
-| A.2.4 Důvod přijetí | 0..1 | Požadováno | [Link](StructureDefinition-LMAdmissionEvaluationEhnEn.html) |
+| A.2.4 Důvod přijetí | 0..1 | Požadováno | [Link](StructureDefinition-LMAdmissionEvaluationCz.html) |
 | A.2.5 Stav při přijetí (vstupní vyšetření) | 0..1 | Volitelné | [Link](StructureDefinition-LMPatientHistoryCz.html) |
 | A.2.6 Anamnéza | 0..1 | Volitelné | [Link](StructureDefinition-LMHospitalStayCz.html) |
 | A.2.7 Průběh hospitalizace | 1..1 | Povinné | [Link](StructureDefinition-LMDischargeDetailsCz.html) |

@@ -47,7 +47,7 @@ Instance: GynNaturalBirth-DeliveryMethod
 InstanceOf: CZ_ProcedureMethodOfDelivery
 Usage: #example
 Description: "Příklad způsobu vedení spontánního vaginálního porodu. / Example delivery method for spontaneous vaginal birth."
-* status = #finished
+* status = #completed
 * code = $sct#289259007 "Vaginal delivery"
 * subject = Reference(Mracena2)
 * performedDateTime = "2025-05-18T10:46:00+02:00"
@@ -310,7 +310,7 @@ Instance: GynNaturalBirthJana-DeliveryMethod
 InstanceOf: CZ_ProcedureMethodOfDelivery
 Usage: #example
 Description: "Příklad způsobu vedení spontánního vaginálního porodu u Jany Novákové. / Example delivery method for Jana Novakova spontaneous vaginal birth."
-* status = #finished
+* status = #completed
 * code = $sct#289259007 "Vaginal delivery"
 * subject = Reference(Patient-Novakova-Jana)
 * performedDateTime = "2025-05-18T10:46:00+02:00"

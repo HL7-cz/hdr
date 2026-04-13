@@ -129,7 +129,7 @@ Usage: #example
 Title: "HDR - GYNPOR - Vaginální porod / Vaginal delivery"
 Description: "Induced vaginal delivery in week 40+2."
 * id = "procedure-story-delivery-method"
-* status = #finished
+* status = #completed
 * code = $sct#289259007 "Vaginal delivery"
 * subject = Reference(Patient-Story-Mother)
 * performedDateTime = "2026-03-03T17:13:00+01:00"
