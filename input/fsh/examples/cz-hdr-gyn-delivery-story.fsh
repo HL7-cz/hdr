@@ -462,7 +462,7 @@ Description: "Obstetric ultrasound finding recorded during admission."
 * id = "observation-story-uz"
 * status = #final
 * category = $observation-category#imaging
-* code = $sct#169238002 "Obstetric ultrasound scan"
+* code = $sct#268445003 "Ultrasound scan - obstetric"
 * subject = Reference(Patient-Story-Mother)
 * effectiveDateTime = "2026-03-02T10:00:00+01:00"
 * device = Reference(Device-Story-SamsungR7)

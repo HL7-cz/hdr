@@ -32,7 +32,7 @@ Description: "Example of patient Jana Novakova after spontaneous vaginal deliver
 * extension[registeringProvider][+].extension[value].valueReference = Reference(PractitionerRole-NovakovaJana-GP)
 * extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#700232004 "všeobecné lékařské služby"
 * extension[registeringProvider][+].extension[value].valueReference = Reference(PractitionerRole-NovakovaJana-GYN)
-* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#310060005 "Obstetrics and gynecology service"
+* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#310061009 "gynekologické služby"
 
 Instance: Practitioner-NovakovaJana-GP
 InstanceOf: CZ_PractitionerCore
@@ -108,12 +108,12 @@ Description: "Coverage for mother after spontaneous vaginal delivery."
   * use = #official
 
 Instance: RelatedPerson-Novak-Petr-Husband
-InstanceOf: CZ_RelatedPersonHdr
+InstanceOf: CZ_RelatedPersonCore
 Usage: #example
 Description: "Husband and father of the newborn (Petr Novak), linked to Jana Novakova."
 * id = "relatedperson-novak-petr-husband"
 * patient = Reference(Patient-Novakova-Jana)
-* relationship[+].coding = $v3-RoleCode#_PersonalRelationshipRoleType "Personal relationship"
+* relationship[+].coding = $v3-RoleCode#HUSB "husband"
 * relationship[=].text = "Manzel, otec ditete"
 * identifier[+]
   * system = "https://ncez.mzcr.cz/fhir/sid/rid"
