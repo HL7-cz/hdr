@@ -56,8 +56,8 @@ Description: "Patient, contact information including registering practitioner"
   * system = #phone
   * value = "+420604123456"
 
-* contact[+].relationship.coding[+] = $v3-RoleCode#FRND "přítel/přítelkyně"
-* contact[=].relationship.coding[+] = $v2-0131#C "Emergentní kontakt"
+* contact[+].relationship.coding[+] = $v3-RoleCode#FRND "unrelated friend"
+* contact[=].relationship.coding[+] = $v2-0131#C "Emergency Contact"
 * contact[=].name.use = #usual
 * contact[=].name.family = "Dlouhá"
 * contact[=].name.given[0] = "Alena"

@@ -284,7 +284,7 @@ Title: "HDR - GYNPOR - APGAR v 1. minutě / APGAR at 1 minute"
 Description: "Newborn APGAR score at 1 minute."
 * id = "observation-story-apgar-1"
 * status = #final
-* code = $loinc#9272-6 "Apgar score 1 minute"
+* code = $loinc#9272-6 "1 minute Apgar Score"
 * subject = Reference(Patient-Story-Newborn)
 * effectiveDateTime = "2026-03-03T17:14:00+01:00"
 * valueInteger = 10
@@ -296,7 +296,7 @@ Title: "HDR - GYNPOR - APGAR v 5. minutě / APGAR at 5 minutes"
 Description: "Newborn APGAR score at 5 minutes."
 * id = "observation-story-apgar-5"
 * status = #final
-* code = $loinc#9274-2 "Apgar score 5 minute"
+* code = $loinc#9274-2 "5 minute Apgar Score"
 * subject = Reference(Patient-Story-Newborn)
 * effectiveDateTime = "2026-03-03T17:18:00+01:00"
 * valueInteger = 10
@@ -308,7 +308,7 @@ Title: "HDR - GYNPOR - APGAR v 10. minutě / APGAR at 10 minutes"
 Description: "Newborn APGAR score at 10 minutes."
 * id = "observation-story-apgar-10"
 * status = #final
-* code = $loinc#9271-8 "Apgar score 10 minute"
+* code = $loinc#9271-8 "10 minute Apgar Score"
 * subject = Reference(Patient-Story-Newborn)
 * effectiveDateTime = "2026-03-03T17:23:00+01:00"
 * valueInteger = 10

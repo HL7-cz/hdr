@@ -31,7 +31,7 @@ Id: cz-observation-apgar-score-1min
 Title: "Observation: APGAR Score at 1 Minute (CZ)"
 Description: "APGAR score of the newborn assessed at 1 minute after birth."
 
-* code = $loinc#9272-6 "Apgar score 1 minute"
+* code = $loinc#9272-6 "1 minute Apgar Score"
 * code ^short = "LOINC: APGAR score at 1 minute"
 
 Profile: CZ_ObservationApgarScore5Min
@@ -40,7 +40,7 @@ Id: cz-observation-apgar-score-5min
 Title: "Observation: APGAR Score at 5 Minutes (CZ)"
 Description: "APGAR score of the newborn assessed at 5 minutes after birth."
 
-* code = $loinc#9274-2 "Apgar score 5 minute"
+* code = $loinc#9274-2 "5 minute Apgar Score"
 * code ^short = "LOINC: APGAR score at 5 minutes"
 
 Profile: CZ_ObservationApgarScore10Min
@@ -49,7 +49,7 @@ Id: cz-observation-apgar-score-10min
 Title: "Observation: APGAR Score at 10 Minutes (CZ)"
 Description: "APGAR score of the newborn assessed at 10 minutes after birth."
 
-* code = $loinc#9271-8 "Apgar score 10 minute"
+* code = $loinc#9271-8 "10 minute Apgar Score"
 * code ^short = "LOINC: APGAR score at 10 minutes"
 
 Invariant: apgar-0-10

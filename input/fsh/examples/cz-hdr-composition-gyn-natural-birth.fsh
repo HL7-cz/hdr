@@ -118,7 +118,7 @@ InstanceOf: CZ_ObservationApgarScore1Min
 Usage: #example
 Description: "Příklad APGAR skóre novorozence v 1. minutě. / Example APGAR score at 1 minute for the newborn."
 * status = #final
-* code = $loinc#9272-6 "Apgar score 1 minute"
+* code = $loinc#9272-6 "1 minute Apgar Score"
 * subject = Reference(Patient-Novak-Petr)
 * effectiveDateTime = "2025-05-18T10:47:00+02:00"
 * valueInteger = 10
@@ -249,7 +249,7 @@ Description: "Epidurální podání ropivakainu během porodu. / Epidural admini
 * dosage[0].text = "Epidurální podání ropivakainu během porodu"
 * dosage[0].route.coding[0].system = $sct
 * dosage[0].route.coding[0].code = #47625008
-* dosage[0].route.coding[0].display = "Epidural route"
+* dosage[0].route.coding[0].display = "Intravenous route"
 * category[0].coding[0].system = $medication-statement
 * category[0].coding[0].code = #inpatient
 * category[0].coding[0].display = "Inpatient"
@@ -269,7 +269,7 @@ Description: "Epidurální podání fentanylu jako adjuvans během porodnické a
 * dosage[0].text = "Epidurální podání malé dávky fentanylu jako součást EDA"
 * dosage[0].route.coding[0].system = $sct
 * dosage[0].route.coding[0].code = #47625008
-* dosage[0].route.coding[0].display = "Epidural route"
+* dosage[0].route.coding[0].display = "Intravenous route"
 * category[0].coding[0].system = $medication-statement
 * category[0].coding[0].code = #inpatient
 * category[0].coding[0].display = "Inpatient"
@@ -287,7 +287,7 @@ Description: "Intrapartální epidurální podání ropivakainu. / Intrapartum e
 * effectivePeriod.end = "2025-05-18T11:10:00+02:00"
 * dosage.route.coding[0].system = $sct
 * dosage.route.coding[0].code = #47625008
-* dosage.route.coding[0].display = "Epidural route"
+* dosage.route.coding[0].display = "Intravenous route"
 * dosage.dose = 10 'mg' "mg"
 
 Instance: MedicationAdministration-Fentanyl-Epidural-Jana
@@ -303,7 +303,7 @@ Description: "Intrapartální epidurální podání fentanylu. / Intrapartum epi
 * effectivePeriod.end = "2025-05-18T10:50:00+02:00"
 * dosage.route.coding[0].system = $sct
 * dosage.route.coding[0].code = #47625008
-* dosage.route.coding[0].display = "Epidural route"
+* dosage.route.coding[0].display = "Intravenous route"
 * dosage.dose = 0.05 'mg' "mg"
 
 Instance: GynNaturalBirthJana-DeliveryMethod
@@ -429,7 +429,7 @@ InstanceOf: CZ_ObservationApgarScore1Min
 Usage: #example
 Description: "Příklad APGAR skóre novorozence Jany Novákové v 1. minutě. / Example APGAR score at 1 minute for Jana Novakova newborn."
 * status = #final
-* code = $loinc#9272-6 "Apgar score 1 minute"
+* code = $loinc#9272-6 "1 minute Apgar Score"
 * subject = Reference(Patient-Novak-Jan-Newborn)
 * effectiveDateTime = "2025-05-18T10:47:00+02:00"
 * valueInteger = 10
