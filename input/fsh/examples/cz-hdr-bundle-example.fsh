@@ -117,6 +117,8 @@ Usage: #example
 * entry[encounter][=].resource = HospitalEncounter-Novak-Petr
 * entry[practitionerRole][+].fullUrl = "urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849"
 * entry[practitionerRole][=].resource = Practitioner-Author-detail
+* entry[practitioner][+].fullUrl = "urn:uuid:860c684f-aba1-40d9-94cf-721d70237b52"
+* entry[practitioner][=].resource = Practitioner-UZV
 * entry[condition][+].fullUrl = "urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2"
 * entry[condition][=].resource = Condition-K409
 * entry[condition][+].fullUrl = "urn:uuid:fdf9e92d-ac48-4706-b15b-d2eaca85f45f"
@@ -197,6 +199,8 @@ Usage: #example
 * entry[organization][=].resource = Organization-L1-Odd
 * entry[organization][+].fullUrl = "urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1"
 * entry[organization][=].resource = Organization-L1
+* entry[organization][+].fullUrl = "urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
+* entry[organization][=].resource = Organization-1
 // TODO: Add DocumentReference resources (PDF, HTML) ale nikoliv propouštěcí zprávu, např. záznam konzilia atp.
 // Prezentovatelná forma dokumentu je součástí kompozice, zde by byla vložena duplicitně
 // proto jsou tyto dva řádky zakomentovány
@@ -485,7 +489,7 @@ Usage: #example
 
 * entry[practitioner][+].fullUrl = "urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5"
 * entry[practitioner][=].resource = Practitioner-Novakova-Jana-Author
-* entry[practitioner][+].fullUrl = "urn:uuid:0f2a4a4e-ea00-4b8d-87cf-0f8ae2d1786a"
+* entry[practitioner][+].fullUrl = "urn:uuid:b1e65698-2b43-481d-b8f4-7ff6d8e81ada"
 * entry[practitioner][=].resource = Practitioner-NovakovaJana-GP
 * entry[practitioner][+].fullUrl = "urn:uuid:7f2542b8-afe3-4a30-8f4f-c2f6fd2c2f85"
 * entry[practitioner][=].resource = Practitioner-NovakovaJana-GYN
@@ -505,16 +509,16 @@ Usage: #example
 * entry[organization][=].resource = Organization-Brno-Hospital
 * entry[organization][+].fullUrl = "urn:uuid:2f823e1c-b1a5-42f8-9ba4-7df32768b2a7"
 * entry[organization][=].resource = Organization-Brno-Maternity
-* entry[+].fullUrl = "urn:uuid:loc-brno-hospital"
-* entry[=].resource = Location-Brno-Hospital
-* entry[+].fullUrl = "urn:uuid:loc-brno-maternity-ward"
-* entry[=].resource = Location-Brno-MaternityWard
-* entry[+].fullUrl = "urn:uuid:loc-brno-maternity-room-3"
-* entry[=].resource = Location-Brno-Maternity-Room3
-* entry[+].fullUrl = "urn:uuid:loc-brno-maternity-room-3-bed-01"
-* entry[=].resource = Location-Brno-Maternity-Room3-Bed01
-* entry[+].fullUrl = "urn:uuid:relatedperson-novak-petr-husband"
-* entry[=].resource = RelatedPerson-Novak-Petr-Husband
+* entry[location][+].fullUrl = "urn:uuid:6c2932f4-fe42-4aea-87b3-182ca2e3670e"
+* entry[location][=].resource = Location-Brno-Hospital
+* entry[location][+].fullUrl = "urn:uuid:0f4953dc-59db-4ada-b9b9-3d80ffc5c657"
+* entry[location][=].resource = Location-Brno-MaternityWard
+* entry[location][+].fullUrl = "urn:uuid:dffe5c17-dd39-40d7-9278-9cce85e2daa1"
+* entry[location][=].resource = Location-Brno-Maternity-Room3
+* entry[location][+].fullUrl = "urn:uuid:c2a20e75-20b6-48cc-b908-1be68597de1b"
+* entry[location][=].resource = Location-Brno-Maternity-Room3-Bed01
+* entry[relatedPerson][+].fullUrl = "urn:uuid:8f283107-54fe-4be4-801b-a535cd1e9e37"
+* entry[relatedPerson][=].resource = RelatedPerson-Novak-Petr-Husband
 
 
 

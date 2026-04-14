@@ -38,7 +38,7 @@ Instance: Practitioner-NovakovaJana-GP
 InstanceOf: CZ_PractitionerCore
 Usage: #example
 Description: "Fictional general practitioner - registering physician for Jana Novakova."
-* id = "practitioner-novakovajana-gp"
+* id = "b1e65698-2b43-481d-b8f4-7ff6d8e81ada"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "971234560"
 * name.use = #usual
@@ -54,7 +54,7 @@ InstanceOf: CZ_PractitionerRoleCore
 Usage: #example
 Description: "General practitioner role for patient registration."
 * id = "practitionerrole-novakovajana-gp"
-* practitioner = Reference(Practitioner-NovakovaJana-GP)
+* practitioner = Reference(urn:uuid:b1e65698-2b43-481d-b8f4-7ff6d8e81ada)
 * organization = Reference(RegisteringProviderExample)
 * code = $cz-nrzp_povolani#L00 "Lekar"
 * specialty = $sct#419772000 "Family practice"
@@ -63,7 +63,7 @@ Instance: Practitioner-NovakovaJana-GYN
 InstanceOf: CZ_PractitionerCore
 Usage: #example
 Description: "Fictional gynecologist - registering physician for Jana Novakova."
-* id = "practitioner-novakovajana-gyn"
+* id = "7f2542b8-afe3-4a30-8f4f-c2f6fd2c2f85"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "971234561"
 * name.use = #usual
@@ -79,7 +79,7 @@ InstanceOf: CZ_PractitionerRoleCore
 Usage: #example
 Description: "Gynecology role for patient registration."
 * id = "practitionerrole-novakovajana-gyn"
-* practitioner = Reference(Practitioner-NovakovaJana-GYN)
+* practitioner = Reference(urn:uuid:7f2542b8-afe3-4a30-8f4f-c2f6fd2c2f85)
 * organization = Reference(RegisteringProviderExample-gynecology)
 * code = $cz-nrzp_povolani#L00 "Lekar"
 * specialty = $sct#394586005 "Gynecology"
@@ -111,7 +111,7 @@ Instance: RelatedPerson-Novak-Petr-Husband
 InstanceOf: CZ_RelatedPersonCore
 Usage: #example
 Description: "Husband and father of the newborn (Petr Novak), linked to Jana Novakova."
-* id = "relatedperson-novak-petr-husband"
+* id = "8f283107-54fe-4be4-801b-a535cd1e9e37"
 * patient = Reference(Patient-Novakova-Jana)
 * relationship[+].coding = $v3-RoleCode#HUSB "husband"
 * relationship[=].text = "Manzel, otec ditete"

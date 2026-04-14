@@ -198,6 +198,7 @@ Instance: Practitioner-2
 InstanceOf: CZ_PractitionerCore
 Usage: #example
 Description: "Practitioner id(KRZP)=987654321"
+* id = "5c33bffd-d3b6-401f-85dc-db99d48b8a3b"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "987654321"
 * name.use = #usual

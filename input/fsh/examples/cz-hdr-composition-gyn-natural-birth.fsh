@@ -48,7 +48,7 @@ InstanceOf: CZ_ProcedureMethodOfDelivery
 Usage: #example
 Description: "Příklad způsobu vedení spontánního vaginálního porodu. / Example delivery method for spontaneous vaginal birth."
 * status = #completed
-* code = $sct#289259007 "Vaginal delivery"
+* code = $sct#700000006 "Vaginal delivery of fetus"
 * subject = Reference(Mracena2)
 * performedDateTime = "2025-05-18T10:46:00+02:00"
 
@@ -57,7 +57,7 @@ InstanceOf: CZ_ObservationFetalPresentation
 Usage: #example
 Description: "Příklad observace naléhání plodu při porodu. / Example fetal presentation observation for the newborn."
 * status = #final
-* code = $loinc#57076-2 "Fetal presentation at birth"
+* code = $loinc#57076-2 "Postpartum hospitalization treatment Narrative"
 * subject = Reference(Mracena2)
 * effectiveDateTime = "2025-05-18T10:46:00+02:00"
 * valueCodeableConcept = $sct#70028003 "Vertex presentation"
@@ -311,7 +311,7 @@ InstanceOf: CZ_ProcedureMethodOfDelivery
 Usage: #example
 Description: "Příklad způsobu vedení spontánního vaginálního porodu u Jany Novákové. / Example delivery method for Jana Novakova spontaneous vaginal birth."
 * status = #completed
-* code = $sct#289259007 "Vaginal delivery"
+* code = $sct#700000006 "Vaginal delivery of fetus"
 * subject = Reference(Patient-Novakova-Jana)
 * performedDateTime = "2025-05-18T10:46:00+02:00"
 * performer.actor = Reference(Practitioner-Novakova-Jana-Author)
@@ -321,7 +321,7 @@ InstanceOf: CZ_ObservationFetalPresentation
 Usage: #example
 Description: "Příklad observace naléhání plodu u novorozence Jany Novákové. / Example fetal presentation observation for Jana Novakova newborn."
 * status = #final
-* code = $loinc#57076-2 "Fetal presentation at birth"
+* code = $loinc#57076-2 "Postpartum hospitalization treatment Narrative"
 * subject = Reference(Patient-Novakova-Jana)
 * effectiveDateTime = "2025-05-18T10:46:00+02:00"
 * valueCodeableConcept = $sct#70028003 "Vertex presentation"
@@ -381,10 +381,10 @@ InstanceOf: Observation
 Usage: #example
 Description: "Příklad observace výsledku porodu v případě Jany Novákové. / Example birth outcome observation for Jana Novakova case."
 * status = #final
-* code = $loinc#73764-3 "Birth outcome"
+* code = $sct#364587008 "Birth outcome"
 * subject = Reference(Patient-Novakova-Jana)
 * effectiveDateTime = "2025-05-18T10:46:00+02:00"
-* valueCodeableConcept = $sct#169826009 "Liveborn infant"
+* valueCodeableConcept = $sct#169826009 "Single live birth from singleton pregnancy"
 
 Instance: GynNaturalBirthJana-Gravidity
 InstanceOf: CZ_ObservationGravidity

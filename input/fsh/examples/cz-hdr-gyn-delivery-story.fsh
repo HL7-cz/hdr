@@ -5,7 +5,7 @@ InstanceOf: CZ_PractitionerCore
 Usage: #example
 Title: "HDR - GYNPOR - Přijímající lékař / Admitting practitioner"
 Description: "Admitting physician for the delivery case."
-* id = "practitioner-cerna-raketa"
+* id = "5cbed9dd-df97-46ee-974d-8bf34ef30efd"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "971234701"
 * name.use = #usual
@@ -18,7 +18,7 @@ InstanceOf: CZ_PractitionerCore
 Usage: #example
 Title: "HDR - GYNPOR - Propouštějící lékař / Discharging practitioner"
 Description: "Discharging physician for the delivery case."
-* id = "practitioner-bila-palka"
+* id = "c02be8d5-83a2-466b-aa82-089088b1abf7"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "971234702"
 * name.use = #usual
@@ -117,8 +117,8 @@ Description: "Inpatient encounter for delivery hospitalization."
 * period.start = "2026-03-03T05:22:00+01:00"
 * period.end = "2026-03-04T18:41:00+01:00"
 * serviceProvider = Reference(Organization-Prostejov-Maternity)
-* participant[admitter][0].individual = Reference(Practitioner-Cerna-Raketa)
-* participant[discharger][0].individual = Reference(Practitioner-Bila-Palka)
+* participant[admitter][0].individual = Reference(urn:uuid:5cbed9dd-df97-46ee-974d-8bf34ef30efd)
+* participant[discharger][0].individual = Reference(urn:uuid:c02be8d5-83a2-466b-aa82-089088b1abf7)
 * hospitalization.dischargeDisposition.coding[0].system = $discharge-disposition
 * hospitalization.dischargeDisposition.coding[0].code = #home
 * hospitalization.dischargeDisposition.coding[0].display = "home"
@@ -130,10 +130,10 @@ Title: "HDR - GYNPOR - Vaginální porod / Vaginal delivery"
 Description: "Induced vaginal delivery in week 40+2."
 * id = "procedure-story-delivery-method"
 * status = #completed
-* code = $sct#289259007 "Vaginal delivery"
+* code = $sct#700000006 "Vaginal delivery of fetus"
 * subject = Reference(Patient-Story-Mother)
 * performedDateTime = "2026-03-03T17:13:00+01:00"
-* performer.actor = Reference(Practitioner-Cerna-Raketa)
+* performer.actor = Reference(urn:uuid:5cbed9dd-df97-46ee-974d-8bf34ef30efd)
 
 Instance: Procedure-Story-Induction
 InstanceOf: CZ_ProcedureInductionOfLabor
@@ -412,14 +412,14 @@ InstanceOf: CZ_MedicationRequestHdr
 Usage: #example
 Title: "HDR - GYNPOR - Dopegyt při propuštění / Dopegyt at discharge"
 Description: "Discharge medication request for Dopegyt."
-* id = "medicationrequest-story-dopegyt-discharge"
+* id = "3d648416-8bea-4a9a-9b50-6859084e53c4"
 * status = #active
 * intent = #order
 * medicationReference = Reference(Medication-Story-Dopegyt)
 * subject = Reference(Patient-Story-Mother)
 * encounter = Reference(Encounter-Story-Delivery)
 * authoredOn = "2026-03-04T18:31:00+01:00"
-* requester = Reference(Practitioner-Bila-Palka)
+* requester = Reference(urn:uuid:c02be8d5-83a2-466b-aa82-089088b1abf7)
 * dosageInstruction[0].text = "1-0-1 po 12 hodinách (07:00, 19:00)."
 * dispenseRequest.quantity.value = 60
 * dispenseRequest.quantity.unit = "tablet"
@@ -430,14 +430,14 @@ InstanceOf: CZ_MedicationRequestHdr
 Usage: #example
 Title: "HDR - GYNPOR - Fraxiparine při propuštění / Fraxiparine at discharge"
 Description: "Discharge medication request for Fraxiparine (LMWH prophylaxis)."
-* id = "medicationrequest-story-fraxiparine-discharge"
+* id = "80806e6f-99e7-4945-9d1b-465e98fbd45b"
 * status = #active
 * intent = #order
 * medicationReference = Reference(Medication-Story-Fraxiparine)
 * subject = Reference(Patient-Story-Mother)
 * encounter = Reference(Encounter-Story-Delivery)
 * authoredOn = "2026-03-04T18:31:00+01:00"
-* requester = Reference(Practitioner-Bila-Palka)
+* requester = Reference(urn:uuid:c02be8d5-83a2-466b-aa82-089088b1abf7)
 * dosageInstruction[0].text = "0,6 ml s.c. 1x denně v 18:00 do 10.03.2026 včetně."
 * dispenseRequest.quantity.value = 7
 * dispenseRequest.quantity.unit = "dávka"
@@ -477,10 +477,10 @@ Description: "Maternal blood group test."
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#26436-6 "Laboratorní studie"
-* code = $nclp#15961 "AB0 a RhD krevní skupina"
+* code = $nclp#05162
 * subject = Reference(Patient-Story-Mother)
 * effectiveDateTime = "2026-03-03T06:10:00+01:00"
-* performer = Reference(Practitioner-Cerna-Raketa)
+* performer = Reference(urn:uuid:5cbed9dd-df97-46ee-974d-8bf34ef30efd)
 * valueCodeableConcept.text = "0 RhD pozitivní (0+)"
 
 Instance: DischargeComposition-Story-GynDelivery
@@ -493,11 +493,11 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * type = $loinc#34105-7 "Hospital Discharge summary"
 * title = "Gynekologická propouštěcí zpráva - indukovaný vaginální porod"
 * date = "2026-03-04T18:31:00+01:00"
-* author[0] = Reference(Practitioner-Bila-Palka)
+* author[0] = Reference(urn:uuid:c02be8d5-83a2-466b-aa82-089088b1abf7)
 * subject = Reference(Patient-Story-Mother)
 * encounter = Reference(Encounter-Story-Delivery)
-* extension[information-recipient][+].valueReference = Reference(Practitioner-NovakovaJana-GP)
-* extension[information-recipient][+].valueReference = Reference(Practitioner-NovakovaJana-GYN)
+* extension[information-recipient][+].valueReference = Reference(urn:uuid:b1e65698-2b43-481d-b8f4-7ff6d8e81ada)
+* extension[information-recipient][+].valueReference = Reference(urn:uuid:7f2542b8-afe3-4a30-8f4f-c2f6fd2c2f85)
 
 * section[sectionAdmissionEvaluation].title = "Příjmové vyšetření"
 * section[sectionAdmissionEvaluation].code = $loinc#67851-6 "Příjmové vyšetření"
@@ -580,8 +580,8 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionDischargeMedications].code = $loinc#75311-1 "Hospital discharge medications"
 * section[sectionDischargeMedications].text.status = #additional
 * section[sectionDischargeMedications].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Doporučená medikace při propuštění: Dopegyt 1-0-1 a Fraxiparine 0,6 ml s.c. 1x denně do 10.03.2026 včetně.</p></div>"""
-* section[sectionDischargeMedications].entry[+] = Reference(MedicationRequest-Story-Dopegyt-Discharge)
-* section[sectionDischargeMedications].entry[+] = Reference(MedicationRequest-Story-Fraxiparine-Discharge)
+* section[sectionDischargeMedications].entry[+] = Reference(urn:uuid:3d648416-8bea-4a9a-9b50-6859084e53c4)
+* section[sectionDischargeMedications].entry[+] = Reference(urn:uuid:80806e6f-99e7-4945-9d1b-465e98fbd45b)
 
 * section[sectionPayers].title = "Health insurance and payment information"
 * section[sectionPayers].code = $loinc#48768-6 "Informace o plátci péče"
@@ -666,17 +666,17 @@ Description: "Document bundle for story-based gynecology discharge report withou
 * entry[medication][=].resource = Medication-Story-Ofost
 * entry[medication][+].fullUrl = "urn:uuid:medication-story-prostin-e2"
 * entry[medication][=].resource = Medication-Story-ProstinE2
-* entry[medicationRequest][+].fullUrl = "urn:uuid:medicationrequest-story-dopegyt-discharge"
+* entry[medicationRequest][+].fullUrl = "urn:uuid:3d648416-8bea-4a9a-9b50-6859084e53c4"
 * entry[medicationRequest][=].resource = MedicationRequest-Story-Dopegyt-Discharge
-* entry[medicationRequest][+].fullUrl = "urn:uuid:medicationrequest-story-fraxiparine-discharge"
+* entry[medicationRequest][+].fullUrl = "urn:uuid:80806e6f-99e7-4945-9d1b-465e98fbd45b"
 * entry[medicationRequest][=].resource = MedicationRequest-Story-Fraxiparine-Discharge
-* entry[practitioner][+].fullUrl = "urn:uuid:practitioner-cerna-raketa"
+* entry[practitioner][+].fullUrl = "urn:uuid:5cbed9dd-df97-46ee-974d-8bf34ef30efd"
 * entry[practitioner][=].resource = Practitioner-Cerna-Raketa
-* entry[practitioner][+].fullUrl = "urn:uuid:practitioner-bila-palka"
+* entry[practitioner][+].fullUrl = "urn:uuid:c02be8d5-83a2-466b-aa82-089088b1abf7"
 * entry[practitioner][=].resource = Practitioner-Bila-Palka
-* entry[practitioner][+].fullUrl = "urn:uuid:practitioner-novakovajana-gp"
+* entry[practitioner][+].fullUrl = "urn:uuid:b1e65698-2b43-481d-b8f4-7ff6d8e81ada"
 * entry[practitioner][=].resource = Practitioner-NovakovaJana-GP
-* entry[practitioner][+].fullUrl = "urn:uuid:practitioner-novakovajana-gyn"
+* entry[practitioner][+].fullUrl = "urn:uuid:7f2542b8-afe3-4a30-8f4f-c2f6fd2c2f85"
 * entry[practitioner][=].resource = Practitioner-NovakovaJana-GYN
 * entry[practitionerRole][+].fullUrl = "urn:uuid:practitionerrole-novakovajana-gp"
 * entry[practitionerRole][=].resource = PractitionerRole-NovakovaJana-GP

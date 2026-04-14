@@ -9,9 +9,4 @@ Description: "ValueSet for maternal delivery methods in the Czech HDR project."
 * ^publisher = "HL7 Czech Republic"
 * insert SNOMEDCopyrightForVS
 
-* $sct#177157003 "Spontaneous breech delivery"
-* $sct#417121007 "Breech extraction"
-* $sct#309469004 "Spontaneous vertex delivery"
-* $sct#61586001 "Delivery by vacuum extraction"
-* $sct#302383001 "Forceps delivery"
-* $sct#11466000 "Cesarean section"
+* include codes from system $sct where concept descendent-of #236973005
