@@ -163,15 +163,15 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "Delivery note"
 * section[sectionHospitalCourse].section[sectionDelivery].text.status = #additional
 * section[sectionHospitalCourse].section[sectionDelivery].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Porod dne 18.05.2025 v 10:46, spontánní vaginální, bez indukce, analgezie EDA (ropivakain + fentanyl), novorozenec mužského pohlaví, 3210 g, 49 cm, Apgar 10-10-10. Mateřské poranění: epiziotomie mediolaterální.</p></div>"""
-* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-DeliveryMethod)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-FetalPresentation)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-BirthWeight)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-BirthLength)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-BirthInjury)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirthJana-BirthOutcome)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(GynNaturalBirthJana-Apgar1)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(GynNaturalBirthJana-Apgar5)
-* section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(GynNaturalBirthJana-Apgar10)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(urn:uuid:9ac1fd24-6d6a-4d55-b6c0-5f8a6f2f5f31)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(urn:uuid:4c00d8d9-2b0e-4f8f-82b5-9692eec6d3c1)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(urn:uuid:3c2dd8f5-58b4-4cc2-a4d7-72ca2f1fbc18)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(urn:uuid:cf6608f4-7e10-4c50-9a2a-78511d95b5be)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(urn:uuid:8a6aa5a5-0f66-4c09-b4d0-e2ca7ab6450c)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(urn:uuid:49f3de6d-5b80-47fe-84c0-560037fd14a7)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(urn:uuid:8d0af4d9-f653-49db-a940-83af87f1da8f)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(urn:uuid:24e6d365-6456-4916-81f6-4258e9cd3f5a)
+* section[sectionHospitalCourse].section[sectionDelivery].entry[apgarScore][+] = Reference(urn:uuid:4ae1602e-6dff-4879-ad22-1ea0ef8cc58d)
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(Patient-Novak-Jan-Newborn)
 
 * section[sectionPatientHx].title = "Anamnéza"
@@ -182,10 +182,10 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies"
 * section[sectionPatientHx].section[sectionPregnancyHx].text.status = #additional
 * section[sectionPatientHx].section[sectionPregnancyHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gestační stáří 39+6, prvorodička, gravidita 1, parita 1, singleton gravidita.</p></div>"""
-* section[sectionPatientHx].section[sectionPregnancyHx].entry[gestationalAge][+] = Reference(GynNaturalBirthJana-GestationalAgeAtDelivery)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[gestationalAge][+] = Reference(urn:uuid:810c3a4f-c29d-4ce4-8ba0-a7cbbf37ef89)
 * section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(urn:uuid:9d0b2e3f-6e66-4dcb-a457-6d6108b1fb89)
-* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirthJana-Parity)
-* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(GynNaturalBirthJana-MultiplePregnancy)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(urn:uuid:11ab1738-4c81-4d40-8b7e-f0cda2c83ec3)
+* section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(urn:uuid:5b9a67e0-d8ed-4dd8-b690-3f61a804c6a4)
 
 * section[sectionPayers].title = "Health insurance and payment information"
 * section[sectionPayers].code = $loinc#48768-6 "Payment sources Document"
@@ -310,6 +310,7 @@ Instance: GynNaturalBirthJana-DeliveryMethod
 InstanceOf: CZ_ProcedureMethodOfDelivery
 Usage: #example
 Description: "Příklad způsobu vedení spontánního vaginálního porodu u Jany Novákové. / Example delivery method for Jana Novakova spontaneous vaginal birth."
+* id = "9ac1fd24-6d6a-4d55-b6c0-5f8a6f2f5f31"
 * status = #completed
 * code = $sct#700000006 "Vaginal delivery of fetus"
 * subject = Reference(Patient-Novakova-Jana)
@@ -320,6 +321,7 @@ Instance: GynNaturalBirthJana-FetalPresentation
 InstanceOf: CZ_ObservationFetalPresentation
 Usage: #example
 Description: "Příklad observace naléhání plodu u novorozence Jany Novákové. / Example fetal presentation observation for Jana Novakova newborn."
+* id = "4c00d8d9-2b0e-4f8f-82b5-9692eec6d3c1"
 * status = #final
 * code = $loinc#57076-2 "Postpartum hospitalization treatment Narrative"
 * subject = Reference(Patient-Novakova-Jana)
@@ -330,6 +332,7 @@ Instance: GynNaturalBirthJana-BirthWeight
 InstanceOf: CZ_ObservationBirthWeight
 Usage: #example
 Description: "Příklad observace porodní hmotnosti novorozence v případě Jany Novákové. / Example newborn birth weight observation for Jana Novakova case."
+* id = "3c2dd8f5-58b4-4cc2-a4d7-72ca2f1fbc18"
 * subject = Reference(Patient-Novak-Jan-Newborn)
 * valueQuantity = 3210 'g' "g"
 
@@ -337,6 +340,7 @@ Instance: GynNaturalBirthJana-BirthLength
 InstanceOf: CZ_ObservationBirthLength
 Usage: #example
 Description: "Příklad observace porodní délky novorozence v případě Jany Novákové. / Example newborn birth length observation for Jana Novakova case."
+* id = "cf6608f4-7e10-4c50-9a2a-78511d95b5be"
 * subject = Reference(Patient-Novak-Jan-Newborn)
 * valueQuantity = 49 'cm' "cm"
 
@@ -344,6 +348,7 @@ Instance: GynNaturalBirthJana-BirthInjury
 InstanceOf: CZ_ConditionHdr
 Usage: #example
 Description: "Příklad záznamu porodního poranění matky v případě Jany Novákové. / Example maternal birth injury condition for Jana Novakova case."
+* id = "8a6aa5a5-0f66-4c09-b4d0-e2ca7ab6450c"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * code = $icd10#O70.0 "First degree perineal laceration during delivery"
@@ -380,6 +385,7 @@ Instance: GynNaturalBirthJana-BirthOutcome
 InstanceOf: Observation
 Usage: #example
 Description: "Příklad observace výsledku porodu v případě Jany Novákové. / Example birth outcome observation for Jana Novakova case."
+* id = "49f3de6d-5b80-47fe-84c0-560037fd14a7"
 * status = #final
 * code = $sct#364587008 "Birth outcome"
 * subject = Reference(Patient-Novakova-Jana)
@@ -400,6 +406,7 @@ Instance: GynNaturalBirthJana-Parity
 InstanceOf: CZ_ObservationParity
 Usage: #example
 Description: "Příklad observace parity matky v případě Jany Novákové. / Example maternal parity observation for Jana Novakova case."
+* id = "11ab1738-4c81-4d40-8b7e-f0cda2c83ec3"
 * status = #final
 * subject = Reference(Patient-Novakova-Jana)
 * effectiveDateTime = "2025-05-18T10:46:00+02:00"
@@ -409,6 +416,7 @@ Instance: GynNaturalBirthJana-MultiplePregnancy
 InstanceOf: CZ_ObservationMultiplePregnancy
 Usage: #example
 Description: "Příklad observace potvrzující jednoplodové těhotenství v případě Jany Novákové. / Example observation indicating singleton pregnancy for Jana Novakova case."
+* id = "5b9a67e0-d8ed-4dd8-b690-3f61a804c6a4"
 * status = #final
 * subject = Reference(Patient-Novakova-Jana)
 * effectiveDateTime = "2025-05-18T10:46:00+02:00"
@@ -419,6 +427,7 @@ Instance: GynNaturalBirthJana-GestationalAgeAtDelivery
 InstanceOf: CZ_ObservationGestationalAge
 Usage: #example
 Description: "Příklad observace gestačního stáří při porodu v případě Jany Novákové. / Example gestational age at delivery observation for Jana Novakova case."
+* id = "810c3a4f-c29d-4ce4-8ba0-a7cbbf37ef89"
 * status = #final
 * subject = Reference(Patient-Novakova-Jana)
 * effectiveDateTime = "2025-05-18T10:46:00+02:00"
@@ -428,6 +437,7 @@ Instance: GynNaturalBirthJana-Apgar1
 InstanceOf: CZ_ObservationApgarScore1Min
 Usage: #example
 Description: "Příklad APGAR skóre novorozence Jany Novákové v 1. minutě. / Example APGAR score at 1 minute for Jana Novakova newborn."
+* id = "8d0af4d9-f653-49db-a940-83af87f1da8f"
 * status = #final
 * code = $loinc#9272-6 "1 minute Apgar Score"
 * subject = Reference(Patient-Novak-Jan-Newborn)
@@ -438,6 +448,7 @@ Instance: GynNaturalBirthJana-Apgar5
 InstanceOf: CZ_ObservationApgarScore5Min
 Usage: #example
 Description: "Příklad APGAR skóre novorozence Jany Novákové v 5. minutě. / Example APGAR score at 5 minutes for Jana Novakova newborn."
+* id = "24e6d365-6456-4916-81f6-4258e9cd3f5a"
 * status = #final
 * subject = Reference(Patient-Novak-Jan-Newborn)
 * effectiveDateTime = "2025-05-18T10:51:00+02:00"
@@ -447,6 +458,7 @@ Instance: GynNaturalBirthJana-Apgar10
 InstanceOf: CZ_ObservationApgarScore10Min
 Usage: #example
 Description: "Příklad APGAR skóre novorozence Jany Novákové v 10. minutě. / Example APGAR score at 10 minutes for Jana Novakova newborn."
+* id = "4ae1602e-6dff-4879-ad22-1ea0ef8cc58d"
 * status = #final
 * subject = Reference(Patient-Novak-Jan-Newborn)
 * effectiveDateTime = "2025-05-18T10:56:00+02:00"
