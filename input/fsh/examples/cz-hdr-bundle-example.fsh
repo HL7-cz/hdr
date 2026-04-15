@@ -441,7 +441,7 @@ Usage: #example
 * entry[coverage][+].fullUrl = "urn:uuid:8f9c2f14-1f69-4f2b-b4a8-8b7ca4db9f31"
 * entry[coverage][=].resource = Coverage-Novakova-Jana
 
-* entry[allergyIntolerance][+].fullUrl = "urn:uuid:allergy-penicillin-novakova-jana"
+* entry[allergyIntolerance][+].fullUrl = "urn:uuid:b63654b0-7876-4074-986b-24dd2fed4f1b"
 * entry[allergyIntolerance][=].resource = Allergy-Penicillin-Novakova-Jana
 
 * entry[procedure][+].fullUrl = "urn:uuid:9ac1fd24-6d6a-4d55-b6c0-5f8a6f2f5f31"
@@ -473,19 +473,19 @@ Usage: #example
 * entry[observation][+].fullUrl = "urn:uuid:49f3de6d-5b80-47fe-84c0-560037fd14a7"
 * entry[observation][=].resource = GynNaturalBirthJana-BirthOutcome
 
-* entry[medication][+].fullUrl = "urn:uuid:cc11aeb9-c765-4de4-8c69-31cb3235d40c"
+* entry[medication][+].fullUrl = "urn:uuid:65dff8dd-87a7-41cb-8a5a-d2b900098fb8"
 * entry[medication][=].resource = Medication-Ropivacaine-Epidural
-* entry[medication][+].fullUrl = "urn:uuid:95f86512-9ec4-4279-980b-f2fe885322e5"
+* entry[medication][+].fullUrl = "urn:uuid:d9cdb566-b6f7-4c3a-96e1-9748c93a738b"
 * entry[medication][=].resource = Medication-Fentanyl-Epidural
 
-* entry[medicationStatement][+].fullUrl = "urn:uuid:c8e815f2-e5fd-475e-93f6-c6f0f4f26609"
+* entry[medicationStatement][+].fullUrl = "urn:uuid:6f97d842-5ce8-4631-b52e-0b79723c7e31"
 * entry[medicationStatement][=].resource = MedicationStatement-Ropivacaine-Epidural-Jana
-* entry[medicationStatement][+].fullUrl = "urn:uuid:6f0a9df3-07b9-4f74-b4f2-a484494f0cf5"
+* entry[medicationStatement][+].fullUrl = "urn:uuid:0a98bc34-677a-4867-b903-461ac06939d5"
 * entry[medicationStatement][=].resource = MedicationStatement-Fentanyl-Epidural-Jana
-* entry[medicationAdministration][+].fullUrl = "urn:uuid:ba94ff27-e9eb-4b1f-b154-c62fc4836be8"
-* entry[medicationAdministration][=].resource = MedicationAdministration-Ropivacaine-Epidural-Jana
-* entry[medicationAdministration][+].fullUrl = "urn:uuid:7af3468d-a53e-4f29-94fd-b0f5d92f49b8"
-* entry[medicationAdministration][=].resource = MedicationAdministration-Fentanyl-Epidural-Jana
+//* entry[medicationAdministration][+].fullUrl = "urn:uuid:ba94ff27-e9eb-4b1f-b154-c62fc4836be8"
+//* entry[medicationAdministration][=].resource = MedicationAdministration-Ropivacaine-Epidural-Jana
+//* entry[medicationAdministration][+].fullUrl = "urn:uuid:7af3468d-a53e-4f29-94fd-b0f5d92f49b8"
+//* entry[medicationAdministration][=].resource = MedicationAdministration-Fentanyl-Epidural-Jana
 
 * entry[practitioner][+].fullUrl = "urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5"
 * entry[practitioner][=].resource = Practitioner-Novakova-Jana-Author

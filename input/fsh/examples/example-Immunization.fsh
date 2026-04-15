@@ -38,7 +38,7 @@ Title: "Pfizer výrobce vakcíny"
 Description: "Organizace Pfizer s.r.o. vyrábějící vakcínu Comirnaty proti COVID-19"
 
 * name = "Pfizer s.r.o."
-* identifier[0].system = "http://fhir.hl7cr.eu/identifier/ico"
+* identifier[0].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[0].value = "47620834" // IČO pro Pfizer s.r.o. (CZ)
 * address[0].text = "Stroupežnického 17, 150 00 Praha 5, Česká republika"
 * telecom[0].system = #phone

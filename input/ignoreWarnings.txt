@@ -46,6 +46,7 @@ URL value 'https://hl7europe.org/example-identifier' does not resolve
 # No definition
 No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/icp'
 No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/ico'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/icz'
 No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/kp'
 No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rid'
 No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rcis'

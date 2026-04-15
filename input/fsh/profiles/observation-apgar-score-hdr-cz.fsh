@@ -5,7 +5,6 @@ Title: "Observation: APGAR Score (CZ)"
 Description: "Profile for recording a single APGAR score observation for a newborn at a defined postnatal time point."
 
 * ^experimental = false
-* obeys apgar-0-10
 
 * status = #final
 * status ^short = "Final APGAR score observation"
@@ -24,6 +23,7 @@ Description: "Profile for recording a single APGAR score observation for a newbo
 * value[x] 1..1
 * value[x] only integer
 * valueInteger ^short = "APGAR score from 0 to 10"
+* obeys apgar-0-10
 
 Profile: CZ_ObservationApgarScore1Min
 Parent: CZ_ObservationApgarScore
@@ -55,4 +55,4 @@ Description: "APGAR score of the newborn assessed at 10 minutes after birth."
 Invariant: apgar-0-10
 Description: "APGAR score must be an integer from 0 to 10."
 Severity: #error
-Expression: "valueInteger >= 0 and valueInteger <= 10"
+Expression: "value >= 0 and value <= 10"

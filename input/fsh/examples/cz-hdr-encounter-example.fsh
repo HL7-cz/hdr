@@ -106,7 +106,7 @@ Description: "Czech HDR - example of encounter with emergency priority"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * period.start = "2025-03-01T10:15:00+01:00"
 * period.end = "2025-03-10T09:30:00+01:00"
-* serviceProvider = Reference(RegisteringProviderExample)
+* serviceProvider = Reference(urn:uuid:4f5f6b0d-f1a6-4ff0-9457-5ddd2117e9d9)
 // Reason for encounter
 * reasonReference = Reference(urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2)
 * hospitalization.admitSource.coding[0].system = $admit-source
