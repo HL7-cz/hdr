@@ -1,0 +1,113 @@
+PROMPT_SPEC_V4
+mode=strict
+scope=generic_ig
+format=xhtml+xml
+deterministic=true
+no_markdown=true
+no_free_layout=true
+no_invention=true
+template_lock=hard
+
+INTERACTION_MODE=required
+
+INITIAL_BEHAVIOR:
+
+ALWAYS ask:
+"Zadej název FSH souboru z IG projektu (např. planOfCare2FHIR-cz-hdr.fsh) a název výstupního XML souboru (např. PlanOfCare-map.xml)."
+DO NOT accept raw FSH content
+DO NOT generate output until both inputs are provided
+INPUT_SCHEMA:
+
+fsh_filename: required (.fsh)
+output_filename: required (.xml)
+INPUT_VALIDATION:
+
+fsh_filename must match: ^[A-Za-z0-9._-]+.fsh$
+output_filename must match: ^[A-Za-z0-9._-]+.xml$
+if invalid => ASK_USER("Neplatný název souboru.")
+PROJECT_CONTEXT_RESOLUTION (REQUIRED):
+
+locate file in IG project structure:
+/input/fsh/<fsh_filename>
+LOAD file content as concept_map_fsh
+if file not found => FAIL("FSH soubor nenalezen v projektu")
+DERIVED:
+
+MODEL = output_filename without ".xml"
+svg_name = MODEL + ".svg"
+output=file:input/pagecontent/<output_filename>
+SOURCE_PARSE:
+
+type=FSH_ConceptMap_STRICT
+same parsing rules as V3 (element blocks, pairing, order locked)
+TARGET_DERIVATION:
+
+main_target_profile = group.target
+MAIN_TARGET_LABEL = last segment after "/"
+page_title=" -> <MAIN_TARGET_LABEL>"
+STRICT_TEMPLATE:
+
+MUST EXACTLY match predefined XHTML skeleton
+CSS MUST match exactly (no deviation allowed)
+TABLE STRUCTURE MUST match exactly:
+same thead
+same colspan
+same class names
+same order
+BODY_LAYOUT_LOCK:
+1 callout block (UNCHANGED TEXT)
+2 h3 page_title
+3 intro paragraph (same style)
+4 h4 id="model"
+5 {% include <svg_name> %}
+6 mapping context block (UL exact structure)
+7 table-wrap (STRICT)
+
+MAPPING_CONTEXT_RULES:
+
+Source logical model:
+link = StructureDefinition-<source_tail>.html
+label = source_tail
+Target concept map:
+link = ConceptMap-<instance.id>.html
+label = instance.id
+Main target profile:
+link = StructureDefinition-<target_tail>.html
+label = target_tail OR formatted name
+TABLE_RULES (HARD LOCK):
+
+EXACT header structure (2 rows)
+EXACT 7 columns
+NO deviation allowed
+ROW_GENERATION:
+FOR EACH parsed mapping:
+col1 = source element code (without #)
+col2 = display
+col3 = normalized relation
+col4 = " ()"
+where:
+resource = prefix of target.code (before ".")
+profile = target_tail
+col5 = target.code (without #)
+col6 = "" (unless clearly derivable, else empty)
+col7 = target.comment OR ""
+
+RELATION_NORMALIZATION:
+
+equal → equivalent
+relatedto → related-to
+equivalent → equivalent
+else → Needs clarification
+FAIL_POLICY (STRICT):
+
+file not found => no output
+parsing error => no output
+template deviation => no output
+missing required mapping data => no output
+NEVER fallback
+NEVER guess
+XHTML_VALIDATION:
+
+must be well-formed
+must match template skeleton
+IG Publisher compatible
