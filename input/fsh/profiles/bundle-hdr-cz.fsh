@@ -64,7 +64,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     goal 0..* and
     consent 0..* and
     provenance 0..* and
-    coverage 0..*
+    coverage 0..* and
+    location 0..* and
+    relatedPerson 0..*
 
 * entry[composition].resource only CZ_CompositionHdr
 * entry[patient].resource only CZ_PatientCore
@@ -98,6 +100,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[consent].resource only Consent
 * entry[provenance].resource only CZ_Provenance
 * entry[coverage].resource only CZ_Coverage
+* entry[location].resource only CZ_LocationCore
+* entry[relatedPerson].resource only CZ_RelatedPersonCore
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"

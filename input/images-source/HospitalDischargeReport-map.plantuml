@@ -13,9 +13,7 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "HospitalDischargeReport" <<LogicalModel>> [[StructureDefinition-HospitalDischargeReportCz.html]]
-note top #PaleTurquoise [[ConceptMap-hdr2FHIR-cz-hdr.html]]
-Concept Map
-endnote
+
 class "bundle-cz-hdr" <<Profile>> [[StructureDefinition-cz-bundle-hdr.html]]
 "HospitalDischargeReport" <|. "bundle-cz-hdr"
 class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]

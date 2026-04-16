@@ -44,8 +44,8 @@ Description: "Patient, contact information including registering practitioner"
   * postalCode = "15000"
   * country = "CZ"
 
-* contact[+].relationship.coding[+] = $v3-RoleCode#MTH "matka"
-* contact[=].relationship.coding[+] = $v2-0131#N "Příbuzný"
+* contact[+].relationship.coding[+] = $v3-RoleCode#MTH "mother"
+* contact[=].relationship.coding[+] = $v2-0131#N "Next-of-Kin"
 * contact[=].name[+]
   * use = #usual
   * family = "Mrakomorová"
@@ -56,8 +56,8 @@ Description: "Patient, contact information including registering practitioner"
   * system = #phone
   * value = "+420604123456"
 
-* contact[+].relationship.coding[+] = $v3-RoleCode#FRND "přítel/přítelkyně"
-* contact[=].relationship.coding[+] = $v2-0131#C "Emergentní kontakt"
+* contact[+].relationship.coding[+] = $v3-RoleCode#FRND "unrelated friend"
+* contact[=].relationship.coding[+] = $v2-0131#C "Emergency Contact"
 * contact[=].name.use = #usual
 * contact[=].name.family = "Dlouhá"
 * contact[=].name.given[0] = "Alena"
@@ -79,7 +79,7 @@ Description: "Patient, contact information including registering practitioner"
 * communication[+].language = urn:ietf:bcp:47#en
 * communication[+].language = urn:ietf:bcp:47#de
 
-* generalPractitioner.identifier.system = "https://ncez.mzcr.cz/fhir/sid/nrzp"
+* generalPractitioner.identifier.system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * generalPractitioner.identifier.value = "123456789"
 * generalPractitioner.display = "MUDr. Josef Švejk"
 
@@ -93,7 +93,7 @@ InstanceOf: CZ_OrganizationCore
 Title: "Organization: Registering healthcare provider example"
 Description: "Example of registering healthcare provider"
 Usage: #example
-
+* id = "4f5f6b0d-f1a6-4ff0-9457-5ddd2117e9d9"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"
 * type[+] = $cz-drzar#320 "Samost. ordinace všeob. prakt. lékaře"
@@ -198,6 +198,7 @@ Instance: Practitioner-2
 InstanceOf: CZ_PractitionerCore
 Usage: #example
 Description: "Practitioner id(KRZP)=987654321"
+* id = "5c33bffd-d3b6-401f-85dc-db99d48b8a3b"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "987654321"
 * name.use = #usual
@@ -285,7 +286,7 @@ Description: "General practitioner's office"
 * practitioner = Reference(Practitioner/Practitioner-2) "MUDr. Stanislava Kubšová"
 * organization = Reference(Organization/Organization-1) "Ordinace praktického lékaře, MUDr. Stanislava Kubšová"
 * code = $nrzp_povolani#L00 "Lékař"
-* specialty = $sct#419772000 "Family practice (qualifier value)"
+* specialty = $sct#419772000 "Family practice"
 * availableTime[0].daysOfWeek[0] = #mon
 * availableTime[=].daysOfWeek[+] = #wed
 * availableTime[=].availableStartTime = "12:30:00"
@@ -306,7 +307,7 @@ InstanceOf: CZ_OrganizationCore
 Title: "Organization: Registering healthcare provider example"
 Description: "Example of registering healthcare provider"
 Usage: #example
-* id = "RegisteringProviderExample-gynecology"
+* id = "6dbf2b1f-67f6-46c9-b1b7-f412aaadf2ba"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-organization-core"
 * identifier[+].system = $cz-organization-ico
 * identifier[=].value = "456789857"
@@ -331,7 +332,7 @@ Usage: #example
 Description: "Participant Admitter HDR"
 * id = "Practitioner-Admitter"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
-* identifier[+].system = $cz-practitioner-NRZP
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "987654321"
 //* identifier[+].system = $cz-practitioner-CLK
 //* identifier[=].value = "4567891230"
@@ -349,7 +350,7 @@ Description: "Participant Referrer HDR"
 
 * id = "Practitioner-Referrer"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
-* identifier[+].system = $cz-practitioner-NRZP
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "987654777"
 //* identifier[+].system = $cz-practitioner-CLK
 //* identifier[=].value = "4567891777"
@@ -459,8 +460,8 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * birthDate = "1985-06-15"
 //Contact persons and their details
 //guardian -contact person
-* contact[+].relationship.coding[+] = $cz-patient-relationship#MTH "Matka"
-* contact[=].relationship.coding[+] = $v2-0131#N "příbuzný"
+* contact[+].relationship.coding[+] = $cz-patient-relationship#MTH "Mother"
+* contact[=].relationship.coding[+] = $v2-0131#N "Next-of-Kin"
 * contact[=].name.use = #usual
 * contact[=].name.family = "Nováková"
 * contact[=].name.given[0] = "Alena"
@@ -477,8 +478,8 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * contact[=].address[=].postalCode = "70800"
 * contact[=].address[=].country = "CZ"
 //contact person
-* contact[+].relationship.coding[+] = $cz-patient-relationship#FRND "přítel/přítelkyně"
-* contact[=].relationship.coding[+] = $v2-0131#N "příbuzný"
+* contact[+].relationship.coding[+] = $cz-patient-relationship#FRND "unrelated friend"
+* contact[=].relationship.coding[+] = $v2-0131#N "Next-of-Kin"
 * contact[=].name.use = #usual
 * contact[=].name.family = "Dlouhá"
 * contact[=].name.given[0] = "Alena"
@@ -512,7 +513,7 @@ Description: "Participant Referrer HDR"
 
 * id = "a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
-//* identifier[+].system = $cz-practitioner-NRZP
+//* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 //* identifier[=].value = "151607357"
 //* identifier[+].system = $cz-practitioner-CLK
 //* identifier[=].value = "4567891777"
@@ -586,9 +587,9 @@ Usage: #example
 Description: "Participant UZV HDR"
 * id = "860c684f-aba1-40d9-94cf-721d70237b52"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
-* identifier[+].system = $cz-practitioner-NRZP
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "987654322"
-//* identifier[+].system = $cz-practitioner-CLK
+//* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/clk"
 //* identifier[=].value = "4567891231"
 * name.use = #usual
 * name.text = "MUDr. Karel Janák"
@@ -659,7 +660,7 @@ Usage: #example
 Description: "Fictional physician in Brno maternity ward; author of discharge report and delivery lead."
 * id = "1ec5e355-648f-42b9-a316-3f056fbd04b5"
 * meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
-* identifier[+].system = $cz-practitioner-NRZP
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "999111222"
 * name.use = #usual
 * name.prefix = "MUDr."

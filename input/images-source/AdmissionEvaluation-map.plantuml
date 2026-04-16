@@ -12,10 +12,8 @@ legend right
 | <#APPLICATION>  Logical Model |
 | <#TECHNOLOGY>  Profile |
 endlegend
-class "AdmissionEvaluation" <<LogicalModel>> [[StructureDefinition-LogAdmissionEvaluationCz.html]]
-note top #PaleTurquoise [[ConceptMap-hdr2FHIR-cz-hdr.html]]
-Concept Map
-endnote
+class "AdmissionEvaluation" <<LogicalModel>> [[StructureDefinition-LmAdmissionEvaluationCz.html]]
+
 class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
 "AdmissionEvaluation" <|. "composition-cz-hdr"
 @enduml

@@ -10,10 +10,15 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 
 * insert SetFmmandStatusRule (1, draft)
 
+* extension contains $note named note 0..*
+* extension[note] ^short = "Enconter note"
 
-* status from EncounterStatusHdrVS
+* extension contains EncounterLegalStatus named legalStatus 0..*
+* extension[legalStatus] ^short = "Legal status/situation at admission"
+
+* status
   * ^short = "Status of this Hospital stay"
-  * ^definition = "At the discharge report status of the encounter should be always = \"finished\""
+  * ^definition = "At the discharge report status of the encounter should be always = \"finished\"" // je potřeba v R4 používat #finished, v R5 by to bylo #completed, ale zatím se držíme R4, takže necháme #finished
 
 * class from $v3-ActClassHDR (extensible)
   * ^definition = "Concepts representing classification of inpatient encounter such as inpatient, emergency or others due to local variations."

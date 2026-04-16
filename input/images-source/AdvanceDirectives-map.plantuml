@@ -13,9 +13,7 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "AdvanceDirectives" <<LogicalModel>> [[StructureDefinition-AdvanceDirectivesCz.html]]
-note top #PaleTurquoise [[ConceptMap-hdr2FHIR-cz-hdr.html]]
-Concept Map
-endnote
+
 class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
 "AdvanceDirectives" <|. "composition-cz-hdr"
 class "consent-cz-hdr" <<Profile>> [[StructureDefinition-cz-consent-hdr.html]]

@@ -22,23 +22,23 @@ sections and related clinical resources.
 
 // Delivery section
 
-* group[=].element[+].code = #DeliveryDetails
+* group[=].element[+].code = #LMBirthSummaryEnCz
 * group[=].element[=].display = "Delivery section"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery
 * group[=].element[=].target.equivalence = #equivalent
 
 // Newborn subsection
 
-* group[=].element[+].code = #DeliveryDetails.newborn
+* group[=].element[+].code = #LMBirthSummaryEnCz.newborn
 * group[=].element[=].display = "Newborn information"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:newborn
 * group[=].element[=].target.equivalence = #relatedto
 
 // Pregnancy history section
 
-* group[=].element[+].code = #PregnancyHx.mother
+* group[=].element[+].code = #LMBirthSummaryEnCz.mother
 * group[=].element[=].display = "Maternal pregnancy history"
-* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionLMBirthSummaryEnCz.
 * group[=].element[=].target.equivalence = #relatedto
 
 
@@ -46,29 +46,29 @@ sections and related clinical resources.
 // MATERNAL PREGNANCY OBSERVATIONS
 // =====================================================
 
-* group[=].element[+].code = #PregnancyHx.mother.gestationalAgeAtDelivery
+* group[=].element[+].code = #LMBirthSummaryEnCz.mother.gestationalAgeAtDelivery
 * group[=].element[=].display = "Gestational age at delivery"
-* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:gestationalAge
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionLMBirthSummaryEnCz.entry:gestationalAge
 * group[=].element[=].target.equivalence = #relatedto
 
-* group[=].element[+].code = #PregnancyHx.mother.gravidity
+* group[=].element[+].code = #LMBirthSummaryEnCz.mother.gravidity
 * group[=].element[=].display = "Gravidity"
-* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:gravidity
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionLMBirthSummaryEnCz.entry:gravidity
 * group[=].element[=].target.equivalence = #relatedto
 
-* group[=].element[+].code = #PregnancyHx.mother.parity
+* group[=].element[+].code = #LMBirthSummaryEnCz.mother.parity
 * group[=].element[=].display = "Parity"
-* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:parity
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionLMBirthSummaryEnCz.entry:parity
 * group[=].element[=].target.equivalence = #relatedto
 
-* group[=].element[+].code = #PregnancyHx.mother.multiplePregnancy
+* group[=].element[+].code = #LMBirthSummaryEnCz.mother.multiplePregnancy
 * group[=].element[=].display = "Multiple pregnancy"
-* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:multiplePregnancy
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionLMBirthSummaryEnCz.entry:multiplePregnancy
 * group[=].element[=].target.equivalence = #relatedto
 
-* group[=].element[+].code = #PregnancyHx.mother.fetusCount
+* group[=].element[+].code = #LMBirthSummaryEnCz.mother.fetusCount
 * group[=].element[=].display = "Number of fetuses"
-* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:multiplePregnancy
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionLMBirthSummaryEnCz.entry:multiplePregnancy
 * group[=].element[=].target.equivalence = #relatedto
 
 
@@ -76,22 +76,22 @@ sections and related clinical resources.
 // DELIVERY DETAILS (Hospital course)
 // =====================================================
 
-* group[=].element[+].code = #DeliveryDetails.newborn.deliveryMethod
+* group[=].element[+].code = #LMBirthSummaryEnCz.newborn.deliveryMethod
 * group[=].element[=].display = "Delivery method"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:deliveryProcedure
 * group[=].element[=].target.equivalence = #relatedto
 
-* group[=].element[+].code = #DeliveryDetails.mother.laborInduction
+* group[=].element[+].code = #LMBirthSummaryEnCz.mother.laborInduction
 * group[=].element[=].display = "Induction of labor"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:inductionProcedure
 * group[=].element[=].target.equivalence = #relatedto
 
-* group[=].element[+].code = #DeliveryDetails.mother.birthInjury.code
+* group[=].element[+].code = #LMBirthSummaryEnCz.mother.birthInjury.code
 * group[=].element[=].display = "Birth injury code"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthInjury
 * group[=].element[=].target.equivalence = #relatedto
 
-* group[=].element[+].code = #DeliveryDetails.mother.birthInjury.description
+* group[=].element[+].code = #LMBirthSummaryEnCz.mother.birthInjury.description
 * group[=].element[=].display = "Birth injury description"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthInjury
 * group[=].element[=].target.equivalence = #relatedto
@@ -101,22 +101,22 @@ sections and related clinical resources.
 // NEWBORN OBSERVATIONS
 // =====================================================
 
-* group[=].element[+].code = #DeliveryDetails.newborn.fetalPresentation
+* group[=].element[+].code = #LMBirthSummaryEnCz.newborn.fetalPresentation
 * group[=].element[=].display = "Fetal presentation"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:fetalPresentation
 * group[=].element[=].target.equivalence = #relatedto
 
-* group[=].element[+].code = #DeliveryDetails.newborn.birthWeight
+* group[=].element[+].code = #LMBirthSummaryEnCz.newborn.birthWeight
 * group[=].element[=].display = "Birth weight"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthWeight
 * group[=].element[=].target.equivalence = #relatedto
 
-* group[=].element[+].code = #DeliveryDetails.newborn.birthLength
+* group[=].element[+].code = #LMBirthSummaryEnCz.newborn.birthLength
 * group[=].element[=].display = "Birth length"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthLength
 * group[=].element[=].target.equivalence = #relatedto
 
-* group[=].element[+].code = #DeliveryDetails.newborn.birthOutcome
+* group[=].element[+].code = #LMBirthSummaryEnCz.newborn.birthOutcome
 * group[=].element[=].display = "Birth outcome"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:deliveryObservation
 * group[=].element[=].target.equivalence = #relatedto
@@ -126,17 +126,17 @@ sections and related clinical resources.
 // APGAR SCORES
 // =====================================================
 
-* group[=].element[+].code = #DeliveryDetails.newborn.apgarScore.minute1
+* group[=].element[+].code = #LMBirthSummaryEnCz.newborn.apgarScore.minute1
 * group[=].element[=].display = "Apgar score at 1 minute"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:apgarScore
 * group[=].element[=].target.equivalence = #relatedto
 
-* group[=].element[+].code = #DeliveryDetails.newborn.apgarScore.minute5
+* group[=].element[+].code = #LMBirthSummaryEnCz.newborn.apgarScore.minute5
 * group[=].element[=].display = "Apgar score at 5 minutes"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:apgarScore
 * group[=].element[=].target.equivalence = #relatedto
 
-* group[=].element[+].code = #DeliveryDetails.newborn.apgarScore.minute10
+* group[=].element[+].code = #LMBirthSummaryEnCz.newborn.apgarScore.minute10
 * group[=].element[=].display = "Apgar score at 10 minutes"
 * group[=].element[=].target.code = #Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:apgarScore
 * group[=].element[=].target.equivalence = #relatedto
@@ -149,11 +149,11 @@ sections and related clinical resources.
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-procedure-method-of-delivery"
 
-* group[=].element[+].code = #DeliveryDetails.newborn.deliveryMethod
+* group[=].element[+].code = #LMBirthSummaryEnCz.newborn.deliveryMethod
 * group[=].element[=].target.code = #Procedure.code
 * group[=].element[=].target.equivalence = #equivalent
 
-* group[=].element[+].code = #DeliveryDetails.newborn.birthDateTime
+* group[=].element[+].code = #LMBirthSummaryEnCz.newborn.birthDateTime
 * group[=].element[=].target.code = #Procedure.performedDateTime
 * group[=].element[=].target.equivalence = #equal
 
@@ -165,11 +165,11 @@ sections and related clinical resources.
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr"
 
-* group[=].element[+].code = #DeliveryDetails.mother.birthInjury.code
+* group[=].element[+].code = #LMBirthSummaryEnCz.mother.birthInjury.code
 * group[=].element[=].target.code = #Condition.code
 * group[=].element[=].target.equivalence = #equivalent
 
-* group[=].element[+].code = #DeliveryDetails.mother.birthInjury.description
+* group[=].element[+].code = #LMBirthSummaryEnCz.mother.birthInjury.description
 * group[=].element[=].target.code = #Condition.text
 * group[=].element[=].target.equivalence = #relatedto
 
@@ -181,10 +181,10 @@ sections and related clinical resources.
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core"
 
-* group[=].element[+].code = #DeliveryDetails.newborn.sex
+* group[=].element[+].code = #LMBirthSummaryEnCz.newborn.sex
 * group[=].element[=].target.code = #Patient.gender
 * group[=].element[=].target.equivalence = #equivalent
 
-* group[=].element[+].code = #DeliveryDetails.newborn.name
+* group[=].element[+].code = #LMBirthSummaryEnCz.newborn.name
 * group[=].element[=].target.code = #Patient.name.given
 * group[=].element[=].target.equivalence = #relatedto

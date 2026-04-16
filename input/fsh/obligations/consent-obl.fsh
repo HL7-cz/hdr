@@ -22,5 +22,5 @@ Description: "This profile defines the obligations for the CZ_ConsentHdr profile
 * category insert OblConsumer(#SHALL:display,L3)
 * text insert OblConsumer(#SHALL:display,L3)
 * scope insert OblConsumer(#SHALL:display,L3)
-* verification.verified insert OblConsumer(#SHALL:Display,L3)
-* verification.verifiedWith insert OblConsumer(#SHALL:Display,L3)
+* verification.verified insert OblConsumer(#SHALL:display,L3)
+* verification.verifiedWith insert OblConsumer(#SHALL:display,L3)

@@ -7,9 +7,8 @@ Description: """This profile constrains the AllergyIntolerance resource for the 
 
 * insert SetFmmandStatusRule (1, draft)
 * insert ImposeProfile($AllergyIntolerance-uv-ips, 0)
-
-* extension contains $allergyintolerance-abatement named abatement 0..1
-* extension[abatement].valueDateTime ^short = "End date"
+// * extension contains $allergyintolerance-abatement named abatement 0..1
+// * extension[abatement].valueDateTime ^short = "End date"
 
 // * clinicalStatus only CodeableConceptIPS
 // * verificationStatus only CodeableConceptIPS

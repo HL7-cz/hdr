@@ -114,7 +114,6 @@ Slouží k tomu, aby bylo jednoznačně určeno, **kam se jednotlivé položky l
 - V české implementaci se používají pojmenované sekce dle `Composition.section:sectionXXX`.  
 - Názvy sekcí (např. `sectionPharmacotherapy`, `sectionHospitalCourse`) odpovídají profilům definovaným v této implementační specifikaci.  
 - V případě neexistence odpovídajícího FHIR elementu lze využít `Extension` s popisem ve sloupci Comment.  
-- Mapování může být podkladem pro generování `ConceptMap` artefaktů nebo pro automatickou validaci v rámci testovacích scénářů.
 
 ---
 
