@@ -1,6 +1,6 @@
 {
-  "name": "hl7.fhir.cz.hdr.template",
-  "version": "0.0.1",
+  "name": "hl7.fhir.cz.img-order.template",
+  "version": "0.1.0",
   "type": "fhir.template",
   "license": "CC0-1.0",
   "description": "HL7 Czech FHIR Template",
