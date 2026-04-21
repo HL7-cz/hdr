@@ -8,7 +8,7 @@ Description: "Multiple pregnancy and fetus count."
 
 // Hlavní kód pro vícečetné těhotenství (SNOMED CT)
 * code = http://loinc.org#64724-8 // "Multiple pregnancy - ano/ne"
-* code ^short = "Multiple pregnancy "
+* code ^short = "Multiple pregnancy"
 
 // Základní informace: Ano/Ne
 * value[x] only boolean

@@ -20,12 +20,12 @@ Description: "Očkování proti COVID-19 u pacienta Novák Petr"
 
 * status = #completed
 //* meta.profile = "http://fhir.hl7cr.eu/hdr/StructureDefinition/cz-immunization-hdr"
-* vaccineCode = http://snomed.info/sct#28531000087107 "SARS-CoV-2 vaccine"
+* vaccineCode = http://snomed.info/sct#28531000087107 "COVID-19 vaccine"
 * patient = Reference(Patient-Novak-Petr)
 * occurrenceDateTime = "2021-05-05"
 * primarySource = true
 * manufacturer = Reference(Organization-Pfizer)
-* protocolApplied[0].targetDisease = http://snomed.info/sct#840539006 "COVID-19"
+* protocolApplied[0].targetDisease = http://snomed.info/sct#840539006 "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
 * protocolApplied[0].doseNumberPositiveInt = 2
 * extension[administeredProduct].extension[reference].valueReference = Reference(Medication-CovidVaccineComirnaty)
 * note[0].text = "Pacient dostal druhou dávku vakcíny Comirnaty."
@@ -38,7 +38,7 @@ Title: "Pfizer výrobce vakcíny"
 Description: "Organizace Pfizer s.r.o. vyrábějící vakcínu Comirnaty proti COVID-19"
 
 * name = "Pfizer s.r.o."
-* identifier[0].system = "http://fhir.hl7cr.eu/identifier/ico"
+* identifier[0].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[0].value = "47620834" // IČO pro Pfizer s.r.o. (CZ)
 * address[0].text = "Stroupežnického 17, 150 00 Praha 5, Česká republika"
 * telecom[0].system = #phone

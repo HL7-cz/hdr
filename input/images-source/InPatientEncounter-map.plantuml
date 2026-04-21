@@ -13,9 +13,7 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "InPatientEncounter" <<LogicalModel>> [[StructureDefinition-InPatientEncounterCz.html]]
-note top #PaleTurquoise [[ConceptMap-encounter2FHIR-cz-hdr.html]]
-Concept Map
-endnote
+
 class "location-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-location-core.html]]
 "InPatientEncounter" <|. "location-cz-core"
 class "organization-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html]]

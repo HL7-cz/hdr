@@ -1,6 +1,6 @@
 @startmindmap
-* [[StructureDefinition-LogHospitalDischargeReportCz.html Propouštěcí zpráva z nemocnice]]
-** [[StructureDefinition-LogHeaderHdrCz.html Hlavička dokumentu]]
+* [[StructureDefinition-LMHospitalDischargeReportCz.html Propouštěcí zpráva z nemocnice]]
+** [[StructureDefinition-LMHeaderHdrCz.html Hlavička dokumentu]]
 ** Tělo dokumentu
 ** Zobrazitelná forma dokumentu
 ** Přílohy

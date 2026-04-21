@@ -115,7 +115,6 @@ It ensures that **each item of the logical model is unambiguously represented** 
 - The Czech implementation uses named sections according to `Composition.section:sectionXXX`.  
 - Section names (e.g., `sectionPharmacotherapy`, `sectionHospitalCourse`) correspond to profiles defined in this implementation guide.  
 - If a corresponding FHIR element does not exist, an `Extension` may be used, described in the Comment column.  
-- The mapping can serve as the basis for generating `ConceptMap` artifacts or for automated validation in test scenarios.
 
 ---
 

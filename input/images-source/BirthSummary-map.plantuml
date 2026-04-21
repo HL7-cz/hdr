@@ -14,18 +14,15 @@ legend right
 endlegend
 
 class "BirthSummary" <<LogicalModel>> [[StructureDefinition-LMBirthSummaryEnCz.html]]
-note top #PaleTurquoise [[ConceptMap-birthSummary2FHIR-hdr-cz.html]]
-Concept Map
-endnote
 
 class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
 "BirthSummary" <|. "composition-cz-hdr"
 
-class "procedure-method-of-delivery-cz-hdr" <<Profile>> [[StructureDefinition-cz-procedure-method-of-delivery-hdr.html]]
+class "procedure-method-of-delivery-cz-hdr" <<Profile>> [[StructureDefinition-cz-procedure-method-of-delivery.html]]
 "BirthSummary" <|. "procedure-method-of-delivery-cz-hdr"
 "composition-cz-hdr" -d[hidden]-> "procedure-method-of-delivery-cz-hdr"
 
-class "procedure-induction-of-labor-cz-hdr" <<Profile>> [[StructureDefinition-cz-procedure-induction-of-labor-hdr.html]]
+class "procedure-induction-of-labor-cz-hdr" <<Profile>> [[StructureDefinition-cz-procedure-induction-of-labor.html]]
 "BirthSummary" <|. "procedure-induction-of-labor-cz-hdr"
 "procedure-method-of-delivery-cz-hdr" -d[hidden]-> "procedure-induction-of-labor-cz-hdr"
 

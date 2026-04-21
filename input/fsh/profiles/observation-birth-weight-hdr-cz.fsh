@@ -7,7 +7,7 @@ Description: "Profile for recording the birth weight of a newborn using a LOINC 
 * ^experimental = false
 
 // Fixed identification for Body Weight (Birth)
-* code = http://loinc.org#8339-4 "Birth weight measured"
+* code = http://loinc.org#8339-4 "Birth weight Measured"
 * code ^short = "LOINC: Birth weight measured"
 
 // The subject must be the newborn

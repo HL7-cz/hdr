@@ -13,9 +13,7 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "HospitalStay" <<LogicalModel>> [[StructureDefinition-HospitalStayCz.html]]
-note top #PaleTurquoise [[ConceptMap-patientHistory2FHIR-cz-hdr.html]]
-Concept Map
-endnote
+
 class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
 "HospitalStay" <|. "composition-cz-hdr"
 class "condition-cz-hdr" <<Profile>> [[StructureDefinition-cz-condition-hdr.html]]

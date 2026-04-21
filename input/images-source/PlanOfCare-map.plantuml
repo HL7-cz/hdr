@@ -13,9 +13,7 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "PlanOfCare" <<LogicalModel>> [[StructureDefinition-PlanOfCareCz.html]]
-note top #PaleTurquoise [[ConceptMap-planOfCare2FHIR-cz-hdr.html]]
-Concept Map
-endnote
+
 class "carePlan-cz-hdr" <<Profile>> [[StructureDefinition-cz-carePlan-hdr.html]]
 "PlanOfCare" <|. "carePlan-cz-hdr"
 @enduml

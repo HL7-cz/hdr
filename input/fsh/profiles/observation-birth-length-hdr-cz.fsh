@@ -7,7 +7,7 @@ Description: "The birth length (body height) of a newborn using a LOINC code and
 * ^experimental = false
 
 // Fixed identification for Body height (Birth)
-* code = http://loinc.org#89269-5 "Birth height measured"
+* code = http://loinc.org#89269-5 "Body height Measured --at birth"
 * code ^short = "LOINC: Birth height measured"
 
 // The subject must be the newborn
