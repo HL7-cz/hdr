@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<div xmlns="http://www.w3.org/1999/xhtml">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
 
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>BirthSummary -&gt; Composition (HDR)</title>
+    <title>Birth Summary -&gt; FHIR profily (CZ HDR)</title>
 
     <style type="text/css">
 
@@ -63,225 +65,293 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Ongoing alignment:</strong>
-          The Xt-EHR logical models are under active revision and continuous refinement.
-          Updates from Xt-EHR will be progressively incorporated into this Implementation
-          Guide to maintain alignment with the evolving EHDS specifications.
+          <strong>ProbĂ­hajĂ­cĂ­ sladÄ›nĂ­:</strong>
+          LogickĂ© modely Xt-EHR jsou prĹŻbÄ›ĹľnÄ› revidovĂˇny a dĂˇle zpĹ™esĹovĂˇny.
         </div>
       </div>
     </div>
 
-    <h3>BirthSummary -&gt; Composition (HDR)</h3>
+    <h3>LMBirthSummaryEnCz -&gt; cz-composition-hdr</h3>
 
-    <p>
-      This page explains how conceptual elements from the BirthSummary logical model
-      are expressed in the corresponding FHIR profiles used by this Implementation Guide.
-    </p>
+    <p>Hereafter a browseable diagram showing how the BirthSummary model is realized by the HL7 FHIR Profiles of this guide</p>
 
     <h4 id="model">Model Overview</h4>
 
     <p>{% include BirthSummary-map.svg %}</p>
 
+    <div class="table-wrap">
+
+      <strong>Kontext mapovĂˇnĂ­</strong>
+
+      <ul>
+        <li>
+          <strong>ZdrojovĂ˝ logickĂ˝ model:</strong>
+          <a href="StructureDefinition-LMBirthSummaryEnCz.html">LMBirthSummaryEnCz</a>
+        </li>
+
+        <li>
+          <strong>CĂ­lovĂˇ ConceptMap:</strong>
+          <a href="ConceptMap-birthSummary2FHIR-hdr-cz.html">birthSummary2FHIR-hdr-cz</a>
+        </li>
+
+        <li>
+          <strong>HlavnĂ­ cĂ­lovĂ˝ profil:</strong>
+          <a href="StructureDefinition-cz-composition-hdr.html">cz-composition-hdr</a>
+        </li>
+
+      </ul>
+
+    </div>
 
     <div class="table-wrap">
 
-      <table summary="BirthSummary logical model to CZ HDR profiles">
+      <table summary="MapovĂˇnĂ­ Birth Summary na CZ HDR profily">
 
-        <caption>BirthSummary -&gt; FHIR Profiles (CZ HDR)</caption>
+        <caption>Birth Summary -&gt; FHIR profily (CZ HDR)</caption>
 
         <thead>
-
           <tr>
-            <th colspan="2" class="src-head">BirthSummary (Logical Model)</th>
-            <th class="relhead">Relationship</th>
-            <th colspan="4" class="tgt-head">FHIR Target</th>
+            <th colspan="2" class="src-head">Birth Summary (LogickĂ˝ model)</th>
+            <th class="relhead">Vztah</th>
+            <th colspan="4" class="tgt-head">FHIR cĂ­l</th>
           </tr>
-
           <tr>
-            <th class="src-sub">Element</th>
-            <th class="src-sub">Description</th>
-            <th class="relsub">Relation</th>
-            <th class="tgt-sub">Resource/Profile</th>
-            <th class="tgt-sub">Element</th>
-            <th class="tgt-sub">Description</th>
-            <th class="tgt-sub">Notes</th>
+            <th class="src-sub">Prvek</th>
+            <th class="src-sub">Popis</th>
+            <th class="relsub">Vztah</th>
+            <th class="tgt-sub">Zdroj/Profil</th>
+            <th class="tgt-sub">Prvek</th>
+            <th class="tgt-sub">Popis</th>
+            <th class="tgt-sub">PoznĂˇmky</th>
           </tr>
-
         </thead>
 
-
         <tbody>
-
           <tr>
-            <td>DeliveryDetails</td>
-            <td>Delivery section as a whole.</td>
+            <td>LMBirthSummaryEnCz</td>
+            <td>Delivery section</td>
             <td>equivalent</td>
             <td>Composition (cz-composition-hdr)</td>
-            <td>section:sectionHospitalCourse.section:sectionDelivery</td>
-            <td>Delivery subsection in hospital course.</td>
+            <td>Composition.section:sectionHospitalCourse.section:sectionDelivery</td>
+            <td></td>
             <td></td>
           </tr>
-
           <tr>
-            <td>DeliveryDetails.newborn</td>
-            <td>Newborn/fetus part.</td>
+            <td>LMBirthSummaryEnCz.newborn</td>
+            <td>Newborn information</td>
             <td>related-to</td>
             <td>Composition (cz-composition-hdr)</td>
-            <td>section:sectionHospitalCourse.section:sectionDelivery.entry:newborn</td>
-            <td>Entry slice for newborn patient reference.</td>
+            <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:newborn</td>
+            <td></td>
             <td></td>
           </tr>
-
           <tr>
-            <td>PregnancyHx.mother</td>
-            <td>Maternal pregnancy history.</td>
+            <td>LMBirthSummaryEnCz.mother</td>
+            <td>Maternal pregnancy history</td>
             <td>related-to</td>
             <td>Composition (cz-composition-hdr)</td>
-            <td>section:sectionPatientHx.section:sectionPregnancyHx</td>
-            <td>Pregnancy history subsection.</td>
+            <td>Composition.section:sectionPatientHx.section:sectionLMBirthSummaryEnCz.</td>
+            <td></td>
             <td></td>
           </tr>
-
           <tr>
-            <td>DeliveryDetails.newborn.deliveryMethod</td>
-            <td>Method of delivery.</td>
+            <td>LMBirthSummaryEnCz.mother.gestationalAgeAtDelivery</td>
+            <td>Gestational age at delivery</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionPatientHx.section:sectionLMBirthSummaryEnCz.entry:gestationalAge</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.mother.gravidity</td>
+            <td>Gravidity</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionPatientHx.section:sectionLMBirthSummaryEnCz.entry:gravidity</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.mother.parity</td>
+            <td>Parity</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionPatientHx.section:sectionLMBirthSummaryEnCz.entry:parity</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.mother.multiplePregnancy</td>
+            <td>Multiple pregnancy</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionPatientHx.section:sectionLMBirthSummaryEnCz.entry:multiplePregnancy</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.mother.fetusCount</td>
+            <td>Number of fetuses</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionPatientHx.section:sectionLMBirthSummaryEnCz.entry:multiplePregnancy</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.newborn.deliveryMethod</td>
+            <td>Delivery method</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:deliveryProcedure</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.mother.laborInduction</td>
+            <td>Induction of labor</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:inductionProcedure</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.mother.birthInjury.code</td>
+            <td>Birth injury code</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthInjury</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.mother.birthInjury.description</td>
+            <td>Birth injury description</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthInjury</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.newborn.fetalPresentation</td>
+            <td>Fetal presentation</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:fetalPresentation</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.newborn.birthWeight</td>
+            <td>Birth weight</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthWeight</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.newborn.birthLength</td>
+            <td>Birth length</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthLength</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.newborn.birthOutcome</td>
+            <td>Birth outcome</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:deliveryObservation</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.newborn.apgarScore.minute1</td>
+            <td>Apgar score at 1 minute</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:apgarScore</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.newborn.apgarScore.minute5</td>
+            <td>Apgar score at 5 minutes</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:apgarScore</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.newborn.apgarScore.minute10</td>
+            <td>Apgar score at 10 minutes</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:apgarScore</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>LMBirthSummaryEnCz.newborn.deliveryMethod</td>
+            <td></td>
             <td>equivalent</td>
             <td>Procedure (cz-procedure-method-of-delivery)</td>
             <td>Procedure.code</td>
-            <td>Coded delivery method.</td>
+            <td></td>
             <td></td>
           </tr>
-
           <tr>
-            <td>DeliveryDetails.mother.laborInduction</td>
-            <td>Pre-induction / induction.</td>
+            <td>LMBirthSummaryEnCz.newborn.birthDateTime</td>
+            <td></td>
             <td>equivalent</td>
-            <td>Procedure (cz-procedure-induction-of-labor)</td>
-            <td>Procedure.code</td>
-            <td>Induction procedure code.</td>
+            <td>Procedure (cz-procedure-method-of-delivery)</td>
+            <td>Procedure.performedDateTime</td>
+            <td></td>
             <td></td>
           </tr>
-
           <tr>
-            <td>DeliveryDetails.mother.birthInjury.code</td>
-            <td>Birth injury diagnosis code.</td>
+            <td>LMBirthSummaryEnCz.mother.birthInjury.code</td>
+            <td></td>
             <td>equivalent</td>
             <td>Condition (cz-condition-hdr)</td>
             <td>Condition.code</td>
-            <td>Coded maternal birth injury.</td>
+            <td></td>
             <td></td>
           </tr>
-
           <tr>
-            <td>PregnancyHx.mother.gravidity</td>
-            <td>Total number of pregnancies.</td>
-            <td>equivalent</td>
-            <td>Observation (cz-observation-gravidity)</td>
-            <td>Observation.valueInteger</td>
-            <td>Gravidity value.</td>
+            <td>LMBirthSummaryEnCz.mother.birthInjury.description</td>
             <td></td>
-          </tr>
-
-          <tr>
-            <td>PregnancyHx.mother.parity</td>
-            <td>Total number of prior births.</td>
-            <td>equivalent</td>
-            <td>Observation (cz-observation-parity)</td>
-            <td>Observation.valueInteger</td>
-            <td>Parity value.</td>
-            <td></td>
-          </tr>
-
-          <tr>
-            <td>PregnancyHx.mother.multiplePregnancy</td>
-            <td>Multiple pregnancy indicator.</td>
-            <td>equivalent</td>
-            <td>Observation (cz-observation-multiple-pregnancy)</td>
-            <td>Observation.valueBoolean</td>
-            <td>True/false for multiple pregnancy.</td>
-            <td></td>
-          </tr>
-
-          <tr>
-            <td>DeliveryDetails.newborn.fetalPresentation</td>
-            <td>Fetal presentation during delivery.</td>
-            <td>equivalent</td>
-            <td>Observation (cz-observation-fetal-presentation)</td>
-            <td>Observation.valueCodeableConcept</td>
-            <td>Presentation/position coding.</td>
-            <td></td>
-          </tr>
-
-          <tr>
-            <td>DeliveryDetails.newborn.birthWeight</td>
-            <td>Birth weight.</td>
-            <td>equivalent</td>
-            <td>Observation (cz-observation-birth-weight)</td>
-            <td>Observation.valueQuantity</td>
-            <td>Weight in grams.</td>
-            <td></td>
-          </tr>
-
-          <tr>
-            <td>DeliveryDetails.newborn.birthLength</td>
-            <td>Birth length.</td>
-            <td>equivalent</td>
-            <td>Observation (cz-observation-birth-length)</td>
-            <td>Observation.valueQuantity</td>
-            <td>Length in centimeters.</td>
-            <td></td>
-          </tr>
-
-          <tr>
-            <td>PregnancyHx.mother.gestationalAgeAtDelivery</td>
-            <td>Gestational age at delivery.</td>
             <td>related-to</td>
-            <td>Observation</td>
-            <td>Observation.valueString</td>
-            <td>Text format like 39+6.</td>
-            <td>No dedicated CZ profile yet.</td>
+            <td>Condition (cz-condition-hdr)</td>
+            <td>Condition.text</td>
+            <td></td>
+            <td></td>
           </tr>
-
           <tr>
-            <td>DeliveryDetails.newborn.sex</td>
-            <td>Newborn sex.</td>
+            <td>LMBirthSummaryEnCz.newborn.sex</td>
+            <td></td>
             <td>equivalent</td>
             <td>Patient (cz-patient-core)</td>
             <td>Patient.gender</td>
-            <td>Administrative gender of newborn.</td>
+            <td></td>
             <td></td>
           </tr>
-
           <tr>
-            <td>DeliveryDetails.newborn.name</td>
-            <td>Newborn name.</td>
+            <td>LMBirthSummaryEnCz.newborn.name</td>
+            <td></td>
             <td>related-to</td>
             <td>Patient (cz-patient-core)</td>
             <td>Patient.name.given</td>
-            <td>Given name mapping.</td>
+            <td></td>
             <td></td>
           </tr>
-
-          <tr>
-            <td>DeliveryDetails.newborn.birthOutcome</td>
-            <td>Birth outcome.</td>
-            <td>related-to</td>
-            <td>Observation</td>
-            <td>Observation.value[x]</td>
-            <td>Generic delivery observation without a dedicated CZ profile.</td>
-            <td>Referenced from Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:deliveryObservation.</td>
-          </tr>
-
-          <tr>
-            <td>DeliveryDetails.newborn.apgarScore.minute1 / minute5 / minute10</td>
-            <td>Apgar score values at 1, 5 and 10 minutes.</td>
-            <td>related-to</td>
-            <td>Observation (cz-observation-apgar-score-1min / -5min / -10min)</td>
-            <td>Observation.valueInteger</td>
-            <td>APGAR score observation with dedicated profile per minute.</td>
-            <td>Referenced from Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:apgarScore.</td>
-          </tr>
-
         </tbody>
 
       </table>

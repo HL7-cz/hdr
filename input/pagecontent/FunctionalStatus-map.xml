@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<div xmlns="http://www.w3.org/1999/xhtml">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
 
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>FunctionalStatus-map -&gt; cz-composition-hdr</title>
+    <title>Functional Status -&gt; FHIR profily (CZ HDR)</title>
 
     <style type="text/css">
 
@@ -63,20 +65,15 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Ongoing alignment:</strong>
-          The Xt-EHR logical models are under active revision and continuous refinement.
-          Updates from Xt-EHR will be progressively incorporated into this Implementation
-          Guide to maintain alignment with the evolving EHDS specifications.
+          <strong>ProbĂ­hajĂ­cĂ­ sladÄ›nĂ­:</strong>
+          LogickĂ© modely Xt-EHR jsou prĹŻbÄ›ĹľnÄ› revidovĂˇny a dĂˇle zpĹ™esĹovĂˇny.
         </div>
       </div>
     </div>
 
-    <h3>FunctionalStatus-map -&gt; cz-composition-hdr</h3>
+    <h3>FunctionalStatusCz -&gt; cz-composition-hdr</h3>
 
-    <p>
-      This page explains how conceptual elements from the FunctionalStatus-map logical model
-      are expressed in the corresponding FHIR profiles used by this Implementation Guide.
-    </p>
+    <p>Hereafter a browseable diagram showing how the FunctionalStatus model is realized by the HL7 FHIR Profiles of this guide</p>
 
     <h4 id="model">Model Overview</h4>
 
@@ -84,34 +81,54 @@
 
     <div class="table-wrap">
 
-      <table summary="FunctionalStatus-map logical model to FHIR profiles">
+      <strong>Kontext mapovĂˇnĂ­</strong>
 
-        <caption>FunctionalStatus-map -&gt; FHIR Profiles</caption>
+      <ul>
+        <li>
+          <strong>ZdrojovĂ˝ logickĂ˝ model:</strong>
+          <a href="StructureDefinition-FunctionalStatusCz.html">FunctionalStatusCz</a>
+        </li>
+
+        <li>
+          <strong>CĂ­lovĂˇ ConceptMap:</strong>
+          <a href="ConceptMap-functionalStatus2FHIR-hdr-cz.html">functionalStatus2FHIR-hdr-cz</a>
+        </li>
+
+        <li>
+          <strong>HlavnĂ­ cĂ­lovĂ˝ profil:</strong>
+          <a href="StructureDefinition-cz-composition-hdr.html">cz-composition-hdr</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="table-wrap">
+
+      <table summary="MapovĂˇnĂ­ Functional Status na CZ HDR profily">
+
+        <caption>Functional Status -&gt; FHIR profily (CZ HDR)</caption>
 
         <thead>
-
           <tr>
-            <th colspan="2" class="src-head">FunctionalStatus-map (Logical Model)</th>
-            <th class="relhead">Relationship</th>
-            <th colspan="4" class="tgt-head">FHIR Target</th>
+            <th colspan="2" class="src-head">Functional Status (LogickĂ˝ model)</th>
+            <th class="relhead">Vztah</th>
+            <th colspan="4" class="tgt-head">FHIR cĂ­l</th>
           </tr>
-
           <tr>
-            <th class="src-sub">Element</th>
-            <th class="src-sub">Description</th>
-            <th class="relsub">Relation</th>
-            <th class="tgt-sub">Resource/Profile</th>
-            <th class="tgt-sub">Element</th>
-            <th class="tgt-sub">Description</th>
-            <th class="tgt-sub">Notes</th>
+            <th class="src-sub">Prvek</th>
+            <th class="src-sub">Popis</th>
+            <th class="relsub">Vztah</th>
+            <th class="tgt-sub">Zdroj/Profil</th>
+            <th class="tgt-sub">Prvek</th>
+            <th class="tgt-sub">Popis</th>
+            <th class="tgt-sub">PoznĂˇmky</th>
           </tr>
-
         </thead>
 
         <tbody>
-
           <tr>
-            <td>FunctionalStatus.description</td>
+            <td>FunctionalStatusCz.description</td>
             <td>A.2.7.2.1 - Description</td>
             <td>related-to</td>
             <td>Composition (cz-composition-hdr)</td>
@@ -120,7 +137,7 @@
             <td></td>
           </tr>
           <tr>
-            <td>FunctionalStatus.assessmentType</td>
+            <td>FunctionalStatusCz.assessmentType</td>
             <td>A.2.7.2.3 - Functional assessment description</td>
             <td>related-to</td>
             <td>ClinicalImpression (ClinicalImpression)</td>
@@ -129,7 +146,7 @@
             <td></td>
           </tr>
           <tr>
-            <td>FunctionalStatus.assessmentDate</td>
+            <td>FunctionalStatusCz.assessmentDate</td>
             <td>A.2.7.2.4 - Functional assessment date</td>
             <td>related-to</td>
             <td>ClinicalImpression (ClinicalImpression)</td>
@@ -138,7 +155,7 @@
             <td></td>
           </tr>
           <tr>
-            <td>FunctionalStatus.assessmentResult</td>
+            <td>FunctionalStatusCz.assessmentResult</td>
             <td>A.2.7.2.5 - Functional assessment result</td>
             <td>related-to</td>
             <td>ClinicalImpression (ClinicalImpression)</td>
@@ -147,7 +164,7 @@
             <td></td>
           </tr>
           <tr>
-            <td>FunctionalStatus.description</td>
+            <td>FunctionalStatusCz.description</td>
             <td>A.2.7.2.1 - Description</td>
             <td>related-to</td>
             <td>Condition (cz-condition-hdr)</td>
@@ -156,7 +173,7 @@
             <td></td>
           </tr>
           <tr>
-            <td>FunctionalStatus.onsetDate</td>
+            <td>FunctionalStatusCz.onsetDate</td>
             <td>A.2.7.2.2 - Onset Date</td>
             <td>related-to</td>
             <td>Condition (cz-condition-hdr)</td>
@@ -164,7 +181,6 @@
             <td></td>
             <td></td>
           </tr>
-
         </tbody>
 
       </table>

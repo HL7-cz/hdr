@@ -1,18 +1,300 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
 
-    <h3 id="overview">Hospital Discharge Report Model Map</h3>
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Hospital Discharge Report -&gt; FHIR profily (CZ HDR)</title>
 
-    <a> </a>
+    <style type="text/css">
+
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>ProbĂ­hajĂ­cĂ­ sladÄ›nĂ­:</strong>
+          LogickĂ© modely Xt-EHR jsou prĹŻbÄ›ĹľnÄ› revidovĂˇny a dĂˇle zpĹ™esĹovĂˇny.
+        </div>
+      </div>
+    </div>
+
+    <h3>HospitalDischargeReportCz -&gt; cz-bundle-hdr</h3>
 
     <p>Hereafter a browseable diagram showing how the HospitalDischargeReport model is realized by the HL7 FHIR Profiles of this guide</p>
 
     <h4 id="model">Model Overview</h4>
-<a> </a>
-<p>{% include HospitalDischargeReport-map.svg %}</p>
 
-    
+    <p>{% include HospitalDischargeReport-map.svg %}</p>
 
-    
+    <div class="table-wrap">
+
+      <strong>Kontext mapovĂˇnĂ­</strong>
+
+      <ul>
+        <li>
+          <strong>ZdrojovĂ˝ logickĂ˝ model:</strong>
+          <a href="StructureDefinition-HospitalDischargeReportCz.html">HospitalDischargeReportCz</a>
+        </li>
+
+        <li>
+          <strong>CĂ­lovĂˇ ConceptMap:</strong>
+          <a href="ConceptMap-hdr2FHIR-cz-hdr.html">hdr2FHIR-cz-hdr</a>
+        </li>
+
+        <li>
+          <strong>HlavnĂ­ cĂ­lovĂ˝ profil:</strong>
+          <a href="StructureDefinition-cz-bundle-hdr.html">cz-bundle-hdr</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="table-wrap">
+
+      <table summary="MapovĂˇnĂ­ Hospital Discharge Report na CZ HDR profily">
+
+        <caption>Hospital Discharge Report -&gt; FHIR profily (CZ HDR)</caption>
+
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">Hospital Discharge Report (LogickĂ˝ model)</th>
+            <th class="relhead">Vztah</th>
+            <th colspan="4" class="tgt-head">FHIR cĂ­l</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Prvek</th>
+            <th class="src-sub">Popis</th>
+            <th class="relsub">Vztah</th>
+            <th class="tgt-sub">Zdroj/Profil</th>
+            <th class="tgt-sub">Prvek</th>
+            <th class="tgt-sub">Popis</th>
+            <th class="tgt-sub">PoznĂˇmky</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>HospitalDischargeReportCz.header</td>
+            <td>A.1 - Hospital Discharge Report header data element</td>
+            <td>related-to</td>
+            <td>Bundle (cz-bundle-hdr)</td>
+            <td>Bundle</td>
+            <td></td>
+            <td>See the header model and map for details</td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body</td>
+            <td>A.2 - Hospital Discharge Report body data element</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition</td>
+            <td></td>
+            <td>See details below</td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.presentedForm</td>
+            <td>A.4 - Hospital Discharge Report in its narrative form</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.extension:relatedArtefact.valueRelatedArtefact.document</td>
+            <td></td>
+            <td>Attachment (e.g., application/pdf) holding the presented form</td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.advanceDirectives</td>
+            <td>A.2.1 - Advance directives</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionAdvanceDirectives</td>
+            <td></td>
+            <td>Advance directives section</td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.alerts</td>
+            <td>A.2.2 - Alerts</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionAlert</td>
+            <td></td>
+            <td>See the Alerts model and map for details</td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.encounter</td>
+            <td>A.2.3 - Encounter</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.encounter</td>
+            <td></td>
+            <td>See the InPatientEncounter model and map for details</td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.admissionEvaluation</td>
+            <td>A.2.4 - Admission evaluation</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionAdmissionEvaluation</td>
+            <td></td>
+            <td>Admission evaluation (with potential subsections)</td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.patientHistory</td>
+            <td>A.2.5 - Patient history</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionPatientHx</td>
+            <td></td>
+            <td>Narrative patient history section</td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.hospitalStay</td>
+            <td>A.2.6 - Course of hospitalisation (Hospital stay)</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionHospitalCourse</td>
+            <td></td>
+            <td>Hospital course narrative + entries</td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.hospitalStay</td>
+            <td>A.2.10 - Delivery</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionHospitalCourse.section:sectionDelivery</td>
+            <td></td>
+            <td>See BirthSummary2FHIR map for detailed element mapping</td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.dischargeDetails</td>
+            <td>A.2.7 - Discharge details</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionDischargeDetails</td>
+            <td></td>
+            <td>Container for discharge subsections and narrative</td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.dischargeDetails.objectiveFindings</td>
+            <td>A.2.7.1 - Objective findings</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionDischargeDetails.section:sectionPhysicalExamination</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.dischargeDetails.functionalStatus</td>
+            <td>A.2.7.2 - Functional status</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionDischargeDetails.section:sectionFunctionalStatus</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.dischargeDetails.dischargeNote</td>
+            <td>A.2.7.3 - Discharge note</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionDischargeDetails</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.recommendations</td>
+            <td>A.2.8 - Care plan and other recommendations after discharge.</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section</td>
+            <td></td>
+            <td>Potentially covered by several sections</td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.recommendations.carePlan</td>
+            <td>A.2.8.1 - Care plan</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionPlanOfCare</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.recommendations.medicationSummary</td>
+            <td>A.2.8.2 - Medication summary</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionPharmacotherapy</td>
+            <td></td>
+            <td>CZ guide uses Pharmacotherapy section; use Discharge Medications if present in jurisdiction</td>
+          </tr>
+          <tr>
+            <td>HospitalDischargeReportCz.body.recommendations.otherRecommendations</td>
+            <td>A.2.8.3 - Other recommendations</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionDischargeInstructions</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </body>
 
 </div>
