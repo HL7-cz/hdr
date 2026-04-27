@@ -114,6 +114,13 @@ RuleSet: PatientHxSubsectionRules
   * section ..0
 * insert SectionSliceComRules (Patient History, History reported by the patient or caregiver)
 
+* section contains sectionEpidemiologicalHistory ..1
+* section[sectionEpidemiologicalHistory]
+  * insert SectionComRules (
+    Epidemiological History Section,
+    This section groups epidemiological history relevant for continuity of care\, including infectious contacts and travel history.,
+    TemporaryHDRSystem#epidemiological-history )
+
 * section contains sectionInfectiousContacts ..1
 * section[sectionInfectiousContacts]
   * insert SectionComRules (

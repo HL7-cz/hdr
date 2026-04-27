@@ -6,6 +6,7 @@ Description: """This is a temporary code system defined to collect concepts expe
 * ^experimental = true
 * ^caseSensitive = true
 
+* #epidemiological-history "Epidemiological history" "Epidemiological history Section"
 * #infection-contact "Infectious contacts" "Infectious contacts Section"
 * #anthropometry "Anthropometry Section" "Anthropometry Section"
 * #substance-use "Use of Substances Section" "Use of Substances Section"

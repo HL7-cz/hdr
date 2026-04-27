@@ -46,8 +46,10 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PatientHistoryCz.medicalHistory.epidemiologicalHistory
 * group[=].element[=].display = "A.2.5.1.5 - Epidemiological history"
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "decison not to have as distict section"
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionEpidemiologicalHistory
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "Container section for infectious contacts and travel history"
 * group[=].element[+].code = #PatientHistoryCz.medicalHistory.epidemiologicalHistory.infectiousContacts
 * group[=].element[=].display = "A.2.5.1.5.1 - Infectious contacts"
 * group[=].element[=].target.code = #Composition.section:sectionPatientHx.section:sectionInfectiousContacts
