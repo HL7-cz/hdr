@@ -559,11 +559,11 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionPatientHx].section[sectionSocialHistory].text.status = #additional
 * section[sectionPatientHx].section[sectionSocialHistory].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Bydlí s manželem, na mateřské dovolené, povoláním lékařnice.</p></div>"""
 * section[sectionPatientHx].section[sectionInfectiousContacts].title = "Epidemiologická anamnéza"
-* section[sectionPatientHx].section[sectionInfectiousContacts].code = TemporaryHDRSystem#infection-contact "Infekční kontakty"
+* section[sectionPatientHx].section[sectionInfectiousContacts].code = TemporaryHDRSystem#infection-contact "Infectious contacts"
 * section[sectionPatientHx].section[sectionInfectiousContacts].text.status = #additional
 * section[sectionPatientHx].section[sectionInfectiousContacts].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Bez významných rizikových kontaktů, proti RSV neočkována.</p></div>"""
 * section[sectionPatientHx].section[sectionSubstanceUse].title = "Užívání návykových látek"
-* section[sectionPatientHx].section[sectionSubstanceUse].code = TemporaryHDRSystem#substance-use "Užívání návykových látek"
+* section[sectionPatientHx].section[sectionSubstanceUse].code = TemporaryHDRSystem#substance-use "Use of Substances Section"
 * section[sectionPatientHx].section[sectionSubstanceUse].text.status = #additional
 * section[sectionPatientHx].section[sectionSubstanceUse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Nekouří, alkohol nepije, drogy neužívá.</p></div>"""
 
