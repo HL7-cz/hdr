@@ -524,7 +524,7 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Hospitalizace od 03.03.2026 05:22 do 04.03.2026 18:41. Přijata pro pravidelné kontrakce á 5 minut. Pro stagnaci porodnického nálezu byla provedena indukce porodu Prostin E2. Poporodní průběh bez komplikací.</p></div>"""
 
 * section[sectionHospitalCourse].section[sectionDelivery].title = "Porod"
-* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "Záznam o porodu"
+* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "Labor and delivery process Narrative"
 * section[sectionHospitalCourse].section[sectionDelivery].text.status = #additional
 * section[sectionHospitalCourse].section[sectionDelivery].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Porodnický průběh: přijata pro pravidelné kontrakce á 5 minut v gestačním stáří 40+2. Pro stagnaci porodnického nálezu byla zahájena indukce porodu Prostin E2.</p><p>Porod dne 03.03.2026 v 17:13, spontánně záhlavím. Během porodu pupečník 1x kolem krku s kompresí.</p><p>Porodní poranění: ruptura perinea I. stupně, ošetřeno suturou. Odhadovaná krevní ztráta 250 ml.</p><p>Novorozenec: chlapec, živě narozený, porodní hmotnost 3200 g, délka 50 cm, APGAR 10-10-10.</p><p>Souvislosti: GBS pozitivita, gestační hypertenze (Dopegyt), gestační diabetes na dietě.</p></div>"""
 * section[sectionHospitalCourse].section[sectionDelivery].entry[deliveryProcedure][+] = Reference(urn:uuid:f1184d84-9da0-4584-82f2-4efbf3ee74b3)
@@ -540,7 +540,7 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(urn:uuid:4f82fd24-88b7-4328-bcbe-b4da5bb4999b)
 
 * section[sectionPatientHx].title = "Anamnéza"
-* section[sectionPatientHx].code = $loinc#35090-0 "Anamnestická poznámka"
+* section[sectionPatientHx].code = $loinc#35090-0 "Patient history"
 * section[sectionPatientHx].text.status = #additional
 * section[sectionPatientHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p> Bez trvalé léčby mimo graviditu, nyní GDM dieta (také ve II. graviditě), TEN 0, úrazy 0, operace 0, transfuze 0, epidemiologická anamnéza bez očkování proti RSV. FA: aktuálně dlouhodobě Dopegyt. FF: močení i stolice v pořádku.</p></div>"""
 * section[sectionPatientHx].section[sectionFamilyHistory].title = "Rodinná anamnéza"
@@ -548,7 +548,7 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionPatientHx].section[sectionFamilyHistory].text.status = #additional
 * section[sectionPatientHx].section[sectionFamilyHistory].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p> Matka karcinom prsu v 57 letech, hypertenze a onemocnění štítné žlázy; bratři hypertenze; sestra hypotyreóza; prarodiče diabetes mellitus; dědeček leukemie.</p></div>"""
 * section[sectionPatientHx].section[sectionPregnancyHx].title = "Těhotenská anamnéza"
-* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "Těhotenská anamnéza"
+* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies Narrative"
 * section[sectionPatientHx].section[sectionPregnancyHx].text.status = #additional
 * section[sectionPatientHx].section[sectionPregnancyHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gravidita spontánní. Gravidita/parita IV/II, gestační stáří při porodu 40+2, singleton gravidita. Předchozí porody: 05/2016 spontánní porod záhlavím, chlapec 3800 g, epiziotomie a infekce poranění v šestinedělí; 02/2019 spontánní porod záhlavím 3740 g bez komplikací. Abortus: 01/2022 spontánní abortus completus. UUT: 0. Menarché v 11 letech, cyklus nepravidelný, gynekologické operace ne.</p></div>"""
 * section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(urn:uuid:1d2b2e56-93b0-4c03-bf01-4612d54b14bc)
@@ -577,7 +577,7 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionAllergies].entry[allergyIntolerance][+] = Reference(urn:uuid:ff3372f1-0189-457f-8368-aa28e36df796)
 
 * section[sectionPharmacotherapy].title = "Pharmacotherapy"
-* section[sectionPharmacotherapy].code = $loinc#87232-5 "Stručný přehled podaných léčiv"
+* section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration.brief"
 * section[sectionPharmacotherapy].text.status = #additional
 * section[sectionPharmacotherapy].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Během hospitalizace podány Dopegyt, Fraxiparine, Lidocaine, OFOST, Prostin E2. Při propuštění doporučen Dopegyt 1-0-1 a LMWH profylaxe do 10.03.2026 včetně.</p></div>"""
 * section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:6910dd1a-deee-463a-b776-6ee3ca8bf7ed)

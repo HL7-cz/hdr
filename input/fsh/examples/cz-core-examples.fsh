@@ -645,7 +645,7 @@ Description: "Maternity department of the fictional Brno hospital."
 * identifier[+].system = $cz-organization-icp
 * identifier[=].value = "62010123"
 * name = "Porodni oddeleni - Mestska nemocnice Brno"
-* partOf = Reference(Organization-Brno-Hospital)
+* partOf = Reference(urn:uuid:d4545f84-0d58-4f6f-a50a-2f2ea2ea4dc4)
 * telecom.system = #phone
 * telecom.value = "+420543111333"
 * telecom.use = #work

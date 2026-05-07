@@ -163,10 +163,10 @@ Description: "Czech HDR - example of encounter for Jana Novakova after spontaneo
 * class.code = #IMP
 * class.system = $cz-encounter-typ-kontaktu
 * class.display = "inpatient encounter"
-* subject = Reference(Patient-Novakova-Jana)
+* subject = Reference(urn:uuid:6c4f4d2c-5f24-4a91-a75e-1b0e2a1f7731)
 * period.start = "2025-05-17T06:20:00+02:00"
 * period.end = "2025-05-20T11:30:00+02:00"
-* serviceProvider = Reference(Organization-Brno-Maternity)
+* serviceProvider = Reference(urn:uuid:2f823e1c-b1a5-42f8-9ba4-7df32768b2a7)
 * hospitalization.admitSource.coding[0].system = $admit-source
 * hospitalization.admitSource.coding[0].code = #outp
 * hospitalization.admitSource.coding[0].display = "From outpatient department"
@@ -176,7 +176,7 @@ Description: "Czech HDR - example of encounter for Jana Novakova after spontaneo
 * hospitalization.dischargeDisposition.coding[0].system = $discharge-disposition
 * hospitalization.dischargeDisposition.coding[0].code = #home
 * hospitalization.dischargeDisposition.coding[0].display = "Home"
-* participant[0].individual = Reference(Practitioner-Novakova-Jana-Author)
+* participant[0].individual = Reference(urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5)
 * participant[0].type.coding[0].system = $v3-ParticipationType
 * participant[0].type.coding[0].code = #ADM
 * participant[0].type.coding[0].display = "Admitter"

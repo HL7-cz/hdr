@@ -18,7 +18,7 @@ Description: "Příklad gynekologické propouštěcí zprávy po spontánním va
 * section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Hospitalizace pro spontánně proběhlý porod v termínu, bez závažných komplikací.</p></div>"""
 
 * section[sectionHospitalCourse].section[sectionDelivery].title = "Porod"
-* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "Delivery note"
+* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "Labor and delivery process Narrative"
 * section[sectionHospitalCourse].section[sectionDelivery].text.status = #additional
 * section[sectionHospitalCourse].section[sectionDelivery].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Porod dne 18.05.2025 v 10:46, spontánní vaginální, novorozenec mužského pohlaví, 3210 g, 49 cm, Apgar 10-10-10.</p></div>"""
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirth-DeliveryMethod)
@@ -31,12 +31,12 @@ Description: "Příklad gynekologické propouštěcí zprávy po spontánním va
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(Patient-Novak-Petr)
 
 * section[sectionPatientHx].title = "Anamnéza"
-* section[sectionPatientHx].code = $loinc#35090-0 "Patient history note"
+* section[sectionPatientHx].code = $loinc#35090-0 "Patient history"
 * section[sectionPatientHx].text.status = #additional
 * section[sectionPatientHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gynekologická anamnéza: gravidita/parita 2/2, gestační stáří při porodu 39+6.</p></div>"""
 
 * section[sectionPatientHx].section[sectionPregnancyHx].title = "Těhotenská anamnéza"
-* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies"
+* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies Narrative"
 * section[sectionPatientHx].section[sectionPregnancyHx].text.status = #additional
 * section[sectionPatientHx].section[sectionPregnancyHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gestační stáří 39+6, gravidita 2, parita 2, singleton gravidita.</p></div>"""
 * section[sectionPatientHx].section[sectionPregnancyHx].entry[gestationalAge][+] = Reference(GynNaturalBirth-GestationalAgeAtDelivery)
@@ -163,9 +163,9 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * type = $loinc#34105-7 "Hospital Discharge summary"
 * title = "Gynekologická propouštěcí zpráva - spontánní vaginální porod (Jana Nováková)"
 * date = "2025-05-20T11:30:00+02:00"
-* author[0] = Reference(Practitioner-Novakova-Jana-Author)
-* subject = Reference(Patient-Novakova-Jana)
-* encounter = Reference(HospitalEncounter-Novakova-Jana)
+* author[0] = Reference(urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5)
+* subject = Reference(urn:uuid:6c4f4d2c-5f24-4a91-a75e-1b0e2a1f7731)
+* encounter = Reference(urn:uuid:7d7a6f19-5dfb-45ee-8bcf-0f63d9fe49f2)
 * extension[presentedForm].valueAttachment = cz-pdfgynnatural-example
 
 * section[sectionHospitalCourse].title = "Průběh hospitalizace"
@@ -174,7 +174,7 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Hospitalizace pro spontánní porod v termínu, bez závažných komplikací.</p></div>"""
 
 * section[sectionHospitalCourse].section[sectionDelivery].title = "Porod"
-* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "Delivery note"
+* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "Labor and delivery process Narrative"
 * section[sectionHospitalCourse].section[sectionDelivery].text.status = #additional
 * section[sectionHospitalCourse].section[sectionDelivery].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Porod dne 18.05.2025 v 10:46, spontánní vaginální, bez indukce, analgezie EDA (ropivakain + fentanyl), novorozenec mužského pohlaví, 3210 g, 49 cm, Apgar 10-10-10. Mateřské poranění: epiziotomie mediolaterální.</p></div>"""
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(urn:uuid:9ac1fd24-6d6a-4d55-b6c0-5f8a6f2f5f31)
@@ -189,11 +189,11 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(urn:uuid:b7e6c8a1-4a8d-4d9f-8f69-df4f210cb2d7)
 
 * section[sectionPatientHx].title = "Anamnéza"
-* section[sectionPatientHx].code = $loinc#35090-0 "Patient history note"
+* section[sectionPatientHx].code = $loinc#35090-0 "Patient history"
 * section[sectionPatientHx].text.status = #additional
 * section[sectionPatientHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gynekologická anamnéza: prvorodička, gravidita/parita 1/1, gestační stáří při porodu 39+6.</p></div>"""
 * section[sectionPatientHx].section[sectionPregnancyHx].title = "Těhotenská anamnéza"
-* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies"
+* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies Narrative"
 * section[sectionPatientHx].section[sectionPregnancyHx].text.status = #additional
 * section[sectionPatientHx].section[sectionPregnancyHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gestační stáří 39+6, prvorodička, gravidita 1, parita 1, singleton gravidita.</p></div>"""
 * section[sectionPatientHx].section[sectionPregnancyHx].entry[gestationalAge][+] = Reference(urn:uuid:810c3a4f-c29d-4ce4-8ba0-a7cbbf37ef89)
@@ -214,7 +214,7 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionAllergies].entry[allergyIntolerance][+] = Reference(b63654b0-7876-4074-986b-24dd2fed4f1b)
 
 * section[sectionPharmacotherapy].title = "Pharmacotherapy"
-* section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration brief"
+* section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration.brief"
 * section[sectionPharmacotherapy].text.status = #additional
 * section[sectionPharmacotherapy].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Porodní analgezie: epidurální podání ropivakainu s malou dávkou fentanylu během porodu.</p></div>"""
 * section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:65dff8dd-87a7-41cb-8a5a-d2b900098fb8)
