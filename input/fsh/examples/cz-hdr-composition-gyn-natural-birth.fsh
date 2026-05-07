@@ -226,7 +226,7 @@ Usage: #example
 Description: "Ropivakain použitý pro epidurální porodnickou analgezii. / Ropivacaine used for epidural labor analgesia."
 * id = "65dff8dd-87a7-41cb-8a5a-d2b900098fb8"
 * status = #active
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "0299001"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0242456
@@ -239,7 +239,7 @@ Usage: #example
 Description: "Fentanyl použitý jako adjuvans při epidurální porodnické analgezii. / Fentanyl used as adjuvant in epidural labor analgesia."
 * id = "d9cdb566-b6f7-4c3a-96e1-9748c93a738b"
 * status = #active
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "0299002"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0024845
@@ -252,7 +252,7 @@ Usage: #example
 Description: "Epidurální podání ropivakainu během porodu. / Epidural administration of ropivacaine during labor."
 * id = "6f97d842-5ce8-4631-b52e-0b79723c7e31"
 * status = #completed
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "0299001"
 * subject = Reference(urn:uuid:6c4f4d2c-5f24-4a91-a75e-1b0e2a1f7731)
 * medicationReference = Reference(urn:uuid:65dff8dd-87a7-41cb-8a5a-d2b900098fb8)
@@ -272,7 +272,7 @@ Usage: #example
 Description: "Epidurální podání fentanylu jako adjuvans během porodnické analgezie. / Epidural fentanyl adjuvant during labor analgesia."
 * id = "0a98bc34-677a-4867-b903-461ac06939d5"
 * status = #completed
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "0299002"
 * subject = Reference(urn:uuid:6c4f4d2c-5f24-4a91-a75e-1b0e2a1f7731)
 * medicationReference = Reference(urn:uuid:d9cdb566-b6f7-4c3a-96e1-9748c93a738b)

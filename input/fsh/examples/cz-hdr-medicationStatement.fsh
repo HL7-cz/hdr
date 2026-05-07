@@ -213,7 +213,7 @@ Description: "Czech HDR - example of Ibalgin 400"
 // reference a další údaje
 * medicationReference = Reference(Medication-Ibalgin400)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
-* identifier[0].system = $cz-medication-DLP-cs //tady má být External identifier
+* identifier[0].system = $dlp_lec_pripravky //tady má být External identifier
 * identifier[0].value = "0207893"   //tady má být External identifier
 * category[0].coding[0].system = $medication-statement 
 * category[0].coding[0].code = #inpatient

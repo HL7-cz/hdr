@@ -357,7 +357,7 @@ Title: "HDR - GYNPOR - Dopegyt 250 mg / Dopegyt 250 mg"
 Description: "Dopegyt 250 mg tablets."
 * id = "6910dd1a-deee-463a-b776-6ee3ca8bf7ed"
 * status = #active
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "DLP-DOPEGYT-001"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0001328
@@ -371,7 +371,7 @@ Title: "HDR - GYNPOR - Fraxiparine 0,6 ml / Fraxiparine 0.6 ml"
 Description: "Fraxiparine 0.6 ml."
 * id = "9b5df9b6-b25b-4f28-a74d-419b1c74acb8"
 * status = #active
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "DLP-FRAXIPARINE-001"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0213479
@@ -385,7 +385,7 @@ Title: "HDR - GYNPOR - Prostin E2 / Prostin E2"
 Description: "Prostin E2 for labor induction."
 * id = "c45659d8-37e0-4d5d-8992-166900cd3a4a"
 * status = #active
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "DLP-PROSTINE2-001"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0002289
@@ -399,7 +399,7 @@ Title: "HDR - GYNPOR - Lidocaine EGIS / Lidocaine EGIS"
 Description: "Lidocaine EGIS used during hospitalization."
 * id = "d894281f-1104-42d0-9746-98e43262ecc3"
 * status = #active
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "DLP-LIDOCAINEEGIS-001"
 * code.text = "Lidocaine EGIS"
 
@@ -410,7 +410,7 @@ Title: "HDR - GYNPOR - OFOST / OFOST"
 Description: "OFOST used during hospitalization."
 * id = "f7206785-f3f2-46e2-9c20-5c684686aabd"
 * status = #active
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "DLP-OFOST-001"
 * code.text = "OFOST"
 

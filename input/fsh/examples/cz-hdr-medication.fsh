@@ -5,7 +5,7 @@ Title: "Dispense – Euthyrox"
 Description: "Euthyrox v tabletách"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
-* code.coding[0].system = $cz-medication-DLP-cs
+* code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0243131
 * code.coding[0].display = "EUTHYROX"
 * code.coding[1].system = $cz-medication-DLPATC-cs
@@ -35,7 +35,7 @@ Description: "Euthyrox v tabletách"
 //* ingredient[0].strength.denominator.system = $ucum
 //* ingredient[0].strength.denominator.code = #"{tbl}"
 //* ingredient[0].strength.denominator.unit = "tableta"
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "0243131"
 
 Instance: MedicationDispense-Euthyrox
@@ -60,7 +60,7 @@ Description: "Lek Paracetamol v tabletách"
 * id = "med-paracetamol"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
-* code.coding[0].system = $cz-medication-DLP-cs
+* code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0253304
 * code.coding[0].display = "PARACETAMOL ZENTIVA K.S."
 * code.coding[1].system = $cz-medication-DLPATC-cs
@@ -90,7 +90,7 @@ Description: "Lek Paracetamol v tabletách"
 //* ingredient[0].strength.denominator.system = $ucum
 //* ingredient[0].strength.denominator.code = #"{tbl}"
 //* ingredient[0].strength.denominator.unit = "tableta"
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "0243131"
 
 Instance: MedicationDispense-Paracetamol
@@ -115,7 +115,7 @@ Description: "Lek Ibalgin 400 v tabletách"
 * id = "med-Ibalgin400"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
-* code.coding[0].system = $cz-medication-DLP-cs
+* code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0254294
 * code.coding[0].display = "IBALGIN"
 * code.coding[1].system = $cz-medication-DLPATC-cs
@@ -145,7 +145,7 @@ Description: "Lek Ibalgin 400 v tabletách"
 //* ingredient[0].strength.denominator.system = $ucum
 //* ingredient[0].strength.denominator.code = #"{tbl}"
 //* ingredient[0].strength.denominator.unit = "tableta"
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "0207893"
 
 Instance: MedicationDispense-Ibalgin400
@@ -171,7 +171,7 @@ Description: "Lek Covid vakcína"
 //* meta.profile = https://hl7.cz/fhir/core/StructureDefinition/cz-Medication
 * status = #active
 
-* code.coding[0].system = $cz-medication-DLP-cs
+* code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0271911
 * code.coding[0].display = "COMIRNATY OMICRON XBB.1.5"
 * code.coding[1].system = $cz-medication-DLPATC-cs
