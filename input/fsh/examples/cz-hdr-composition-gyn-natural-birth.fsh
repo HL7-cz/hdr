@@ -10,6 +10,7 @@ Description: "Příklad gynekologické propouštěcí zprávy po spontánním va
 * author[0] = Reference(urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5)
 * subject = Reference(Mracena2)
 * encounter = Reference(CZ-Encounter-HDR-Example)
+* extension[presentedForm].valueAttachment = cz-pdfgynnatural-example
 
 * section[sectionHospitalCourse].title = "Průběh hospitalizace"
 * section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
@@ -165,6 +166,7 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * author[0] = Reference(Practitioner-Novakova-Jana-Author)
 * subject = Reference(Patient-Novakova-Jana)
 * encounter = Reference(HospitalEncounter-Novakova-Jana)
+* extension[presentedForm].valueAttachment = cz-pdfgynnatural-example
 
 * section[sectionHospitalCourse].title = "Průběh hospitalizace"
 * section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
@@ -487,3 +489,13 @@ Description: "Příklad APGAR skóre novorozence Jany Novákové v 10. minutě. 
 * effectiveDateTime = "2025-05-18T10:56:00+02:00"
 * valueInteger = 10
 * performer = Reference(urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5)
+
+Instance: cz-pdfgynnatural-example
+InstanceOf: Attachment
+Usage: #inline
+Description: "Attachment for Natural Birth"
+* contentType = #application/pdf
+* language = #cs
+* data = "JVBERi0xLjQKJebkw7zUHzExIDAgb2JqCjw8L1R5cGUvQ2F0YWxvZy9QYWdlcyAyIDAgUj4+CmVuZG9iagoyIDAgb2JqCjw8L1R5cGUvUGFnZXMvQ291bnQgMS9LaWRzWzMgMCBSXT4+CmVuZG9iagozIDAgb2JqCjw8L1R5cGUvUGFnZS9QYXJlbnQgMiAwIFIvTWVkaWFCb3hbMCAwIDU5NSA4NDJdL0NvbnRlbnRzIDQgMCBSL1Jlc291cmNlcyA1IDAgUj4+CmVuZG9iago0IDAgb2JqCjw8L0xlbmd0aCAzOTM+PnN0cmVhbQpCVAovRjEgMTggVGYKNTAgODAwIFRkCihHcm91cHVkbyBtZWRpY2FsIHpwcmF2YSAtIFByb3BvdXN0ZWNpIHpwcmF2YSkgVGoKMCAtMjAgVGQKKEYyIDEyIFRmCihQYWNpZW50a2E6IEphbmEgTm92YWtvdmEsIG5hci4gMTguMDUuMTk5MykgVGoKMCAtMjAgVGQKKERpYWdub3phOiBPODAuMCAtIFNwb250YW5uaSB2YWdpbmFsbGkgcG9yb2QpIFRqCjAgLTIwIFRkCihQcnViZWNoOiBCZXoga29tcGxpa2FjaSwgcG9kYW5hIEVEQSAoUm9waXZha2FpbiwgRmVudGFueWwpLikgVGoKMCAtMjAgVGQKKE5vdm9yb3plbmVjOiBKYW4gTm92YWssIG5hci4gMTguMDUuMjAyNSwgMzIxMCBnKSBUbwowIC00MCBUZAooRG9wb3J1Y2VuaSkgVGoKMCAtMTUgVGQKKC0gS29udHJvbGEgdSBvYnZvZG5paG8gZ3luZWtvbG9nYSBwbyBzZXN0aW5lZGVsaSkgVGoKMCAtMTUgVGQKKC0gSHpnaWVuaWNreSByZXppbSBhIHBlY2UgcG8gZXBpemlvdG9taWkpIFRqCkVUCmVuZHN0cmVhbQplbmRvYmoKNSAwIG9iago8PC9Gb250PDwvRjEgNiAwIFIvRjIgNyAwIFI+Pj4+CmVuZG9iago2IDAgb2JqCjw8L1R5cGUvRm9udC9TdWJ0eXBlL1R5cGUxL0Jhc2VGb250L0hlbHZldGljYS1Cb2xkPj4KZW5kb2JqCjcgIDAgb2JqCjw8L1R5cGUvRm9udC9TdWJ0eXBlL1R5cGUxL0Jhc2VGb250L0hlbHZldGljYT4+CmVuZG9iagp4cmVmCjAgOAowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMDkgMDAwMDAgbiAKMDAwMDAwMDA1OCAwMDAwMCBuIAowMDAwMDAwMTE1IDA0MDAwIG4gCjAwMDAwMDAyMTkgMDAwMDAgbiAKMDAwMDAwMDY2MiAwMDAwMCBuIAowMDAwMDAwNzE0IDAwMDAwIG4gCjAwMDAwMDA3OTAgMDAwMDAgbiAKdHJhaWxlcgo8PC9TaXplIDgvUm9vdCAxIDAgUj4+CnN0YXJ0eHJlZgo4NjMKJSVFT0YK"
+* title = "Natural Birth - Jana Nováková"
+* creation = "2025-05-20T12:02:00+01:00"

@@ -504,6 +504,8 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * author[0] = Reference(urn:uuid:c02be8d5-83a2-466b-aa82-089088b1abf7)
 * subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 * encounter = Reference(urn:uuid:a182bf8a-ce46-4e61-9106-0fd5139c3e78)
+* extension[presentedForm].valueAttachment = cz-pdfdelivery-example
+
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:b1e65698-2b43-481d-b8f4-7ff6d8e81ada)
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:7f2542b8-afe3-4a30-8f4f-c2f6fd2c2f85)
 
@@ -702,5 +704,15 @@ Description: "Document bundle for story-based gynecology discharge report withou
 * entry[organization][=].resource = RegisteringProviderExample-gynecology
 * entry[device][+].fullUrl = "urn:uuid:dcf20b83-aacd-45af-99d6-3d277089da35"
 * entry[device][=].resource = Device-Story-SamsungR7
+
+Instance: cz-pdfdelivery-example
+InstanceOf: Attachment
+Usage: #inline
+Description: "Attachment for Delivery Story"
+* contentType = #application/pdf
+* language = #cs
+* data = "JVBERi0xLjQKJebkw7zUHzExIDAgb2JqCjw8L1R5cGUvQ2F0YWxvZy9QYWdlcyAyIDAgUj4+CmVuZG9iagoyIDAgb2JqCjw8L1R5cGUvUGFnZXMvQ291bnQgMS9LaWRzWzMgMCBSXT4+CmVuZG9iagozIDAgb2JqCjw8L1R5cGUvUGFnZS9QYXJlbnQgMiAwIFIvTWVkaWFCb3hbMCAwIDU5NSA4NDJdL0NvbnRlbnRzIDQgMCBSL1Jlc291cmNlcyA1IDAgUj4+CmVuZG9iago0IDAgb2JqCjw8L0xlbmd0aCA0NDI+PnN0cmVhbQpCVAovRjEgMTggVGYKNTAgODAwIFRkCihHcm91cHVkbyBtZWRpY2FsIHpwcmF2YSAtIEluZHVrb3ZhbnkgcG9yb2QpIFRqCjAgLTIwIFRkCihGMiAxMiBJZgooUGFjaWVudGthOiBKYW5hIE5vdmFrb3ZhLCBuYXIuIDE4LjA1LjE5OTMpIFRqCjAgLTIwIFRkCihEaWFnbm96YTogTzYxLjAgLSBJbmR1a2NlIHBvcm9kdSwgTzEzIC0gR2VzdGFjbmkgaHlwZXJ0ZW56ZSkgVGoKMCAtMjAgVGQKKEluZHVrY2U6IFByb3N0YWdsYW5kaW4gKERpbm9wcm9zdG9uKSwgcG9yb2QgcG9zaXRpdm5pIHNwb250YW5uaS4pIFRqCjAgLTIwIFRkCihOb3Zvcm96ZW5lYzogSmFuIE5vdmFrLCBuYXIuIDIwLjA1LjIwMjUsIDM0NTAgZykgVGoKMCAtNDAgVGQKKERvcG9ydWNlbmkpIFRqCjAgLTE1IFRkCigtIFByYXZpZGVsbmUgbWVyZW5pIGtyZXZuaWhvIHRsYWt1IHYgc2VzdGluZWRlbGkpIFRqCjAgLTE1IFRkCigtIEtvbnRyb2xhIG9ib3ZkbmlobyBneW5la29sb2dhIHphIDYgdHlkbnUpIFRqCkVUCmVuZHN0cmVhbQplbmRvYmoKNSAwIG9iago8PC9Gb250PDwvRjEgNiAwIFIvRjIgNyAwIFI+Pj4+CmVuZG9iago2IDAgb2JqCjw8L1R5cGUvRm9udC9TdWJ0eXBlL1R5cGUxL0Jhc2VGb250L0hlbHZldGljYS1Cb2xkPj4KZW5kb2JqCjcgIDAgb2JqCjw8L1R5cGUvRm9udC9TdWJ0eXBlL1R5cGUxL0Jhc2VGb250L0hlbHZldGljYT4+CmVuZG9iagp4cmVmCjAgOAowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMDkgMDAwMDAgbiAKMDAwMDAwMDA1OCAwMDAwMCBuIAowMDAwMDAwMTE1IDAwMDAwIG4gCjAwMDAwMDAyMTkgMDAwMDAgbiAKMDAwMDAwMDcxMSAwMDAwMCBuIAowMDAwMDAwNzYzIDAwMDAwIG4gCjAwMDAwMDA4MzkgMDAwMDAgbiAKdHJhaWxlcgo8PC9TaXplIDgvUm9vdCAxIDAgUj4+CnN0YXJ0eHJlZgo5MTIKJSVFT0YK"
+* title = "Delivery Story - Nováková"
+* creation = "2025-05-20T12:02:00+01:00"
 
 
