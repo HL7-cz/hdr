@@ -510,7 +510,7 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:7f2542b8-afe3-4a30-8f4f-c2f6fd2c2f85)
 
 * section[sectionAdmissionEvaluation].title = "Příjmové vyšetření"
-* section[sectionAdmissionEvaluation].code = $loinc#67851-6 "Příjmové vyšetření"
+* section[sectionAdmissionEvaluation].code = $loinc#67851-6 "Admission evaluation note"
 * section[sectionAdmissionEvaluation].text.status = #additional
 * section[sectionAdmissionEvaluation].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Přijata pro zesilující děložní kontrakce.</p><p>Subjektivně: cítí se dobře, pohyby plodu cítí, cefaleu neguje, epigastrickou bolest neguje, vizus v normě, otoky prstů horních i dolních končetin, bez krvácení.</p><p>Objektivně: PPH, hlava naléhá, branka 5 cm, hmatný VB, kontrakce á 5 min.</p><p>KTG: fyziologický záznam, akcelerace přítomny, bez decelerací, oscilace undulatorní.</p><p>UZ břicha (Samsung R7, 02.03.): PPH, postavení II přední, ASP+, PP+, placenta na zadní stěně mimo DS, přídatný lalok i na přední stěně, bez známek patologie plodové vody, normohydramnion. EFW 01.03.2026: 3480 g, proporční růst.</p><p>Závěr: gravidita 40+2 dle UZ, IV/II, GBS pozitivní, GDM na dietě, gestační hypertenze na Dopegytu 1-0-1.</p><p>Doporučení při příjmu: s ohledem na GBS pozitivitu doporučena antibiotická profylaxe, dále příprava k porodu, spontánní vedení porodu, KTG á 3 hod, OP á 30 min, TK á 3 hod.</p></div>"""
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].code = $sct#425044008 "Physical exam section"
@@ -519,7 +519,7 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry[+] = Reference(urn:uuid:e967fac7-ed30-44a2-8d7a-3ad35db9fff6)
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry[+] = Reference(urn:uuid:f432828d-fa44-4928-afa6-a248b126860b)
 * section[sectionHospitalCourse].title = "Průběh hospitalizace"
-* section[sectionHospitalCourse].code = $loinc#8648-8 "Průběh hospitalizace"
+* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
 * section[sectionHospitalCourse].text.status = #additional
 * section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Hospitalizace od 03.03.2026 05:22 do 04.03.2026 18:41. Přijata pro pravidelné kontrakce á 5 minut. Pro stagnaci porodnického nálezu byla provedena indukce porodu Prostin E2. Poporodní průběh bez komplikací.</p></div>"""
 
@@ -544,7 +544,7 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionPatientHx].text.status = #additional
 * section[sectionPatientHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p> Bez trvalé léčby mimo graviditu, nyní GDM dieta (také ve II. graviditě), TEN 0, úrazy 0, operace 0, transfuze 0, epidemiologická anamnéza bez očkování proti RSV. FA: aktuálně dlouhodobě Dopegyt. FF: močení i stolice v pořádku.</p></div>"""
 * section[sectionPatientHx].section[sectionFamilyHistory].title = "Rodinná anamnéza"
-* section[sectionPatientHx].section[sectionFamilyHistory].code = $loinc#10157-6 "Rodinná anamnéza"
+* section[sectionPatientHx].section[sectionFamilyHistory].code = $loinc#10157-6 "History of family member diseases note"
 * section[sectionPatientHx].section[sectionFamilyHistory].text.status = #additional
 * section[sectionPatientHx].section[sectionFamilyHistory].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p> Matka karcinom prsu v 57 letech, hypertenze a onemocnění štítné žlázy; bratři hypertenze; sestra hypotyreóza; prarodiče diabetes mellitus; dědeček leukemie.</p></div>"""
 * section[sectionPatientHx].section[sectionPregnancyHx].title = "Těhotenská anamnéza"
@@ -557,7 +557,7 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(urn:uuid:b33f71c0-6fb1-45ba-8e8f-e4fb38964d63)
 * section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(urn:uuid:71eab157-2477-495e-8def-2d9ae6386f88)
 * section[sectionPatientHx].section[sectionSocialHistory].title = "Sociální a pracovní anamnéza"
-* section[sectionPatientHx].section[sectionSocialHistory].code = $loinc#29762-2 "Sociální anamnéza"
+* section[sectionPatientHx].section[sectionSocialHistory].code = $loinc#29762-2 "Social history note"
 * section[sectionPatientHx].section[sectionSocialHistory].text.status = #additional
 * section[sectionPatientHx].section[sectionSocialHistory].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Bydlí s manželem, na mateřské dovolené, povoláním lékařnice.</p></div>"""
 * section[sectionPatientHx].section[sectionInfectiousContacts].title = "Epidemiologická anamnéza"
@@ -570,7 +570,7 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionPatientHx].section[sectionSubstanceUse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Nekouří, alkohol nepije, drogy neužívá.</p></div>"""
 
 * section[sectionAllergies].title = "Alergie, intolerance a varování"
-* section[sectionAllergies].code = $loinc#48765-2 "Alergie a nežádoucí reakce"
+* section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #additional
 * section[sectionAllergies].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Alergie neověřeny - trávy, prach, pyl, Zinnat (vertigo).</p></div>"""
 * section[sectionAllergies].entry[allergyIntolerance][+] = Reference(urn:uuid:26be4e8d-b6bc-4b61-a4ff-87641d9aa789)
@@ -587,20 +587,20 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:c45659d8-37e0-4d5d-8992-166900cd3a4a)
 
 * section[sectionDischargeMedications].title = "Hospital discharge medications"
-* section[sectionDischargeMedications].code = $loinc#75311-1 "Hospital discharge medications"
+* section[sectionDischargeMedications].code = $loinc#75311-1 "Discharge medications note"
 * section[sectionDischargeMedications].text.status = #additional
 * section[sectionDischargeMedications].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Doporučená medikace při propuštění: Dopegyt 1-0-1 a Fraxiparine 0,6 ml s.c. 1x denně do 10.03.2026 včetně.</p></div>"""
 * section[sectionDischargeMedications].entry[+] = Reference(urn:uuid:3d648416-8bea-4a9a-9b50-6859084e53c4)
 * section[sectionDischargeMedications].entry[+] = Reference(urn:uuid:80806e6f-99e7-4945-9d1b-465e98fbd45b)
 
 * section[sectionPayers].title = "Health insurance and payment information"
-* section[sectionPayers].code = $loinc#48768-6 "Informace o plátci péče"
+* section[sectionPayers].code = $loinc#48768-6 "Payment sources Document"
 * section[sectionPayers].text.status = #additional
 * section[sectionPayers].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Payer: 111 (VZP).</p></div>"""
 * section[sectionPayers].entry[+] = Reference(urn:uuid:35b9ce78-80c3-443f-b21f-a346a87e15ef)
 
 * section[sectionPlanOfCare].title = "Plan of care"
-* section[sectionPlanOfCare].code = $loinc#18776-5 "Léčebný plán"
+* section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care note"
 * section[sectionPlanOfCare].text.status = #additional
 * section[sectionPlanOfCare].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Doporuceno: self-monitoring TK 5x denne, pri hodnotach nad 150/100 mmHg okamzita kontrola. Kontrola u praktickeho lekare do tydne, gynekologicka kontrola po sestinedeli.</p></div>"""
 

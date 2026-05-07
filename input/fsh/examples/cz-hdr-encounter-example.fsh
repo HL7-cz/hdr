@@ -180,12 +180,12 @@ Description: "Czech HDR - example of encounter for Jana Novakova after spontaneo
 * participant[0].type.coding[0].system = $v3-ParticipationType
 * participant[0].type.coding[0].code = #ADM
 * participant[0].type.coding[0].display = "Admitter"
-* location[0].location = Reference(Location-Brno-MaternityWard)
+* location[0].location = Reference(urn:uuid:0f4953dc-59db-4ada-b9b9-3d80ffc5c657)
 * location[0].period.start = "2025-05-17T06:20:00+02:00"
 * location[0].period.end = "2025-05-18T09:00:00+02:00"
-* location[1].location = Reference(Location-Brno-Maternity-Room3)
+* location[1].location = Reference(urn:uuid:dffe5c17-dd39-40d7-9278-9cce85e2daa1)
 * location[1].period.start = "2025-05-18T09:00:00+02:00"
 * location[1].period.end = "2025-05-20T10:00:00+02:00"
-* location[2].location = Reference(Location-Brno-Maternity-Room3-Bed01)
+* location[2].location = Reference(urn:uuid:c2a20e75-20b6-48cc-b908-1be68597de1b)
 * location[2].period.start = "2025-05-18T09:10:00+02:00"
 * location[2].period.end = "2025-05-19T18:00:00+02:00"

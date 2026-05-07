@@ -211,7 +211,7 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #additional
 * section[sectionAllergies].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Alergie na penicilin, reakce: kožní vyrážka a otok rtů.</p></div>"""
-* section[sectionAllergies].entry[allergyIntolerance][+] = Reference(b63654b0-7876-4074-986b-24dd2fed4f1b)
+* section[sectionAllergies].entry[allergyIntolerance][+] = Reference(urn:uuid:b63654b0-7876-4074-986b-24dd2fed4f1b)
 
 * section[sectionPharmacotherapy].title = "Pharmacotherapy"
 * section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration.brief"
@@ -373,7 +373,6 @@ Description: "Příklad záznamu porodního poranění matky v případě Jany N
 * onsetDateTime = "2025-05-18T10:46:00+02:00"
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Epiziotomie mediolaterální během porodu.</div>"
-
 Instance: Allergy-Penicillin-Novakova-Jana
 InstanceOf: CZ_AllergyIntoleranceHdr
 Usage: #example
