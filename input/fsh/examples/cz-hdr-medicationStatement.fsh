@@ -7,8 +7,8 @@ Description: "Czech HDR - example of Levothyroxine sodium"
 //* id = "med-levothyroxine"
 * status = #active
 * statusReason.text = "Continued on discharge"
-* medicationCodeableConcept.coding[0].system = "http://www.whocc.no/atc"
-* medicationCodeableConcept.coding[0].code = #H03AA01 // Corrected code assignment
+* medicationCodeableConcept.coding[0].system = $dlp_lec_pripravky
+* medicationCodeableConcept.coding[0].code = #0243130 // Corrected code assignment
 * medicationCodeableConcept.coding[0].display = "Levothyroxine sodium"
 * medicationCodeableConcept.text = "Euthyrox 100 \u00b5g"
 * subject = Reference(Mracena2)
@@ -22,8 +22,8 @@ Title: "CZ-MedicationStatement-HDR Example of Rivaroxaban"
 Description: "Czech HDR - example of Rivaroxaban"
 //* id = "med-rivaroxaban"
 * status = #active
-* medicationCodeableConcept.coding[0].system = "http://www.whocc.no/atc"
-* medicationCodeableConcept.coding[0].code = #B01AF01 // Corrected code assignment
+* medicationCodeableConcept.coding[0].system = $dlp_lec_pripravky
+* medicationCodeableConcept.coding[0].code = #0236342 // Corrected code assignment
 * medicationCodeableConcept.coding[0].display = "Rivaroxaban"
 * medicationCodeableConcept.text = "Rivaroxaban 20 mg"
 * subject = Reference(Mracena2)
@@ -37,8 +37,8 @@ Title: "CZ-MedicationStatement-HDR Example of Bisoprolol"
 Description: "Czech HDR - example of Bisoprolol"
 //* id = "med-bisoprolol"
 * status = #active
-* medicationCodeableConcept.coding[0].system = "http://www.whocc.no/atc"
-* medicationCodeableConcept.coding[0].code = #C07AB07 // Corrected code assignment
+* medicationCodeableConcept.coding[0].system = $dlp_lec_pripravky
+* medicationCodeableConcept.coding[0].code = #0032961 // Corrected code assignment
 * medicationCodeableConcept.coding[0].display = "Bisoprolol"
 * medicationCodeableConcept.text = "Bisoprolol 5 mg"
 * subject = Reference(Mracena2)
@@ -52,8 +52,8 @@ Title: "CZ-MedicationStatement-HDR Example of Atorvastatin"
 Description: "Czech HDR - example of Atorvastatin"
 //* id = "med-atorvastatin"
 * status = #active
-* medicationCodeableConcept.coding[0].system = "http://www.whocc.no/atc"
-* medicationCodeableConcept.coding[0].code = #C10AA05 // Corrected code assignment
+* medicationCodeableConcept.coding[0].system = $dlp_lec_pripravky
+* medicationCodeableConcept.coding[0].code = #0185910 // Corrected code assignment
 * medicationCodeableConcept.coding[0].display = "Atorvastatin"
 * medicationCodeableConcept.text = "Atorvastatin 20 mg"
 * subject = Reference(Mracena2)
@@ -79,8 +79,8 @@ Title: "CZ-MedicationStatement-HDR Example of Iron Supplement"
 Description: "Czech HDR - example of Iron Supplement"
 //* id = "med-iron"
 * status = #active
-* medicationCodeableConcept.coding[0].system = "http://www.whocc.no/atc"
-* medicationCodeableConcept.coding[0].code = #B03AA07 // Corrected code assignment
+* medicationCodeableConcept.coding[0].system = $dlp_lec_pripravky
+* medicationCodeableConcept.coding[0].code = #0225688 // Corrected code assignment
 * medicationCodeableConcept.coding[0].display = "Ferrous sulfate"
 * medicationCodeableConcept.text = "Sorbifer Durules (Fe++)"
 * subject = Reference(Mracena2)

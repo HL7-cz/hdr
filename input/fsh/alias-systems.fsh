@@ -3,7 +3,6 @@
 // --- Code Systems
 Alias: $absent-unknown-uv-ips = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips
 Alias: $ajcc = http://cancerstaging.org
-Alias: $atc = http://www.whocc.no/atc
 Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category
 Alias: $data-absent-reason-cs =  http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $diagnosis-role = http://terminology.hl7.org/CodeSystem/diagnosis-role
@@ -44,6 +43,8 @@ Alias: $consent-category = http://terminology.hl7.org/CodeSystem/consentcategory
 Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $locationType = http://terminology.hl7.org/CodeSystem/location-physical-type
 Alias: $nclp = https://nclp.ncez.mzcr.cz/CodeSystem/NCLPPOL
+Alias: $dlp_atc = https://sukl.cz/terminology/CodeSystem/dlp-atc
+Alias: $dlp_lec_pripravky = https://sukl.cz/terminology/CodeSystem/dlp-lecivepripravky
 
 
 // --- SID

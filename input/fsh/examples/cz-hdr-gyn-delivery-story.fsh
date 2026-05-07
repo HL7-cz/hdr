@@ -359,8 +359,8 @@ Description: "Dopegyt 250 mg tablets."
 * status = #active
 * identifier[0].system = $cz-medication-DLP-cs
 * identifier[0].value = "DLP-DOPEGYT-001"
-* code.coding[0].system = "http://www.whocc.no/atc"
-* code.coding[0].code = #C02AB01
+* code.coding[0].system = $dlp_lec_pripravky
+* code.coding[0].code = #0001328
 * code.coding[0].display = "Methyldopa"
 * code.text = "Dopegyt 250 mg tablety"
 
@@ -373,8 +373,8 @@ Description: "Fraxiparine 0.6 ml."
 * status = #active
 * identifier[0].system = $cz-medication-DLP-cs
 * identifier[0].value = "DLP-FRAXIPARINE-001"
-* code.coding[0].system = "http://www.whocc.no/atc"
-* code.coding[0].code = #B01AB06
+* code.coding[0].system = $dlp_lec_pripravky
+* code.coding[0].code = #0213479
 * code.coding[0].display = "Nadroparin"
 * code.text = "Fraxiparine 0.6 ml"
 
@@ -387,8 +387,8 @@ Description: "Prostin E2 for labor induction."
 * status = #active
 * identifier[0].system = $cz-medication-DLP-cs
 * identifier[0].value = "DLP-PROSTINE2-001"
-* code.coding[0].system = "http://www.whocc.no/atc"
-* code.coding[0].code = #G02AD02
+* code.coding[0].system = $dlp_lec_pripravky
+* code.coding[0].code = #0002289
 * code.coding[0].display = "Dinoprostone"
 * code.text = "Prostin E2"
 
