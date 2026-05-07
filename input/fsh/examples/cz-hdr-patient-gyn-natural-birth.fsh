@@ -56,7 +56,7 @@ Description: "General practitioner role for patient registration."
 * id = "b6399cd8-3a91-4c7e-9a03-49d873669ed5"
 * practitioner = Reference(urn:uuid:b1e65698-2b43-481d-b8f4-7ff6d8e81ada)
 * organization = Reference(urn:uuid:4f5f6b0d-f1a6-4ff0-9457-5ddd2117e9d9)
-* code = $cz-nrzp_povolani#L00 "Lekar"
+* code = $cz-nrzp_povolani#L00 "Lékař"
 * specialty = $sct#419772000 "Family practice"
 
 Instance: Practitioner-NovakovaJana-GYN
@@ -81,7 +81,7 @@ Description: "Gynecology role for patient registration."
 * id = "17a26fdf-d36d-464b-b85b-f6f613bb62b4"
 * practitioner = Reference(urn:uuid:7f2542b8-afe3-4a30-8f4f-c2f6fd2c2f85)
 * organization = Reference(urn:uuid:6dbf2b1f-67f6-46c9-b1b7-f412aaadf2ba)
-* code = $cz-nrzp_povolani#L00 "Lekar"
+* code = $cz-nrzp_povolani#L00 "Lékař"
 * specialty = $sct#394586005 "Gynecology"
 
 Instance: Organization-Payer-111
