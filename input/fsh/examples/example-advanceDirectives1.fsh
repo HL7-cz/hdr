@@ -42,6 +42,7 @@ Description: "Czech hdr - example od advance directive"
 
 * status = #active
 * dateTime = "2025-01-01T08:00:00+01:00"
+* policyRule.text = "Act No. 372/2011 Coll. in Section 36"
 
 * category.coding[0].system = $consent-category
 * category.coding[0].code = #dnr
