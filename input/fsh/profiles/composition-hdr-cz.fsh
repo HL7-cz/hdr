@@ -236,7 +236,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
      or CZ_ConditionHdr
      or CZ_PatientCore
   )
-  * insert SectionEntrySliceComRules(
+  * insert SectionEntrySlicePerProfileRules(
       Delivery-related entries / Polozky vztahujici se k porodu,
       Structured entries for delivery method\, induction\, birth injury\, newborn and related observations / Strukturovane polozky pro zpusob porodu\, indukci\, porodni poraneni\, novorozence a souvisejici pozorovani.)
   * insert SectionEntrySliceDefRules (deliveryProcedure, 0..*,
