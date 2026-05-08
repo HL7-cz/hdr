@@ -4,16 +4,12 @@ InstanceOf: CZ_AllergyIntoleranceHdr
 Usage: #example
 Title: "Allergy Information Unknown"
 Description: "No information is available regarding the patient’s allergy status."
-// Povinný identifikátor
-* identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
-* identifier[0].value = "no-known-allergy-001"
-//clinicalStatus
+* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+* identifier[=].value = "allergy-2"
 * clinicalStatus = $allergyintolerance-clinical#active
-// Kód pro “žádné známé alergie” (SNOMED CT)
 * code.coding[0].system = $sct
 * code.coding[0].code = #160244002
 * code.coding[0].display = "No known allergies"
-// Pacienta
 * patient = Reference(Mracena)
 
 // Instance: Bez známých alergií
@@ -22,29 +18,21 @@ InstanceOf: CZ_AllergyIntoleranceHdr
 Usage: #example
 Title: "AllergyIntolerance - No Known Allergies"
 Description: "Patient has no known allergies."
-// Povinný identifikátor
-* identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
-* identifier[0].value = "NoKnownAllergy-001"
-// Narrativní text
+* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+* identifier[=].value = "allergy-5"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient nemá žádné známé alergie.</div>"
-
-// Klinický a verifikační stav
 * clinicalStatus.coding[0].system = $allergyintolerance-clinical
 * clinicalStatus.coding[0].code = #inactive
 * verificationStatus.coding[0].system = $allergyintolerance-verification
 * verificationStatus.coding[0].code = #unconfirmed
 
-// Typ a závažnost (nelze posoudit)
-// type = #allergy
 * criticality = #unable-to-assess
 
-// Kód pro “žádné alergie” (SNOMED CT)
 * code.coding[0].system = $sct
 * code.coding[0].code = #443508001
 * code.coding[0].display = "No history of clinical finding in subject"
 
-// Pacienta
 * patient = Reference(Mracena)
 
 // Jahodová alergie
@@ -53,32 +41,22 @@ InstanceOf: CZ_AllergyIntoleranceHdr
 Usage: #example
 Title: "AllergyIntolerance - Strawberry"
 Description: "Patient experiences itching and tongue swelling in response to strawberries."
-// Povinný identifikátor
-* identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
-* identifier[0].value = "StrawberryAllergy-001"
-// // Narrativní text
-// * text.status = #generated
-// * text.div = "<div><p>Alergie na jahody – svědění, otok jazyka.</p></div>"
-
-// Stav
+* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+* identifier[=].value = "allergy-2"
 * clinicalStatus.coding[0].system = $allergyintolerance-clinical
 * clinicalStatus.coding[0].code = #active
 * verificationStatus.coding[0].system = $allergyintolerance-verification
 * verificationStatus.coding[0].code = #confirmed
 
-// Typ a závažnost
 * type = #allergy
 * criticality = #low
 
-// Alergen (SNOMED CT)
 * code.coding[0].system = $sct
 * code.coding[0].code = #91938006
 * code.coding[0].display = "Allergy to strawberry"
 
-// Pacient
 * patient = Reference(Mracena)
 
-// Reakce
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #418363000
 * reaction[0].manifestation[0].coding[0].display = "svědění kůže"
@@ -93,32 +71,25 @@ InstanceOf: cz-allergyIntolerance-hdr
 Usage: #example
 Title: "AllergyIntolerance - Penicillin"
 Description: "Patient experiences skin rash and lip swelling in response to penicillin."
-// Povinný identifikátor
-* identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
-* identifier[0].value = "PenicillinAllergy-001"
-// Narrativní text
+* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+* identifier[=].value = "allergy-3"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Alergie na penicilin – kožní vyrážka, otok rtů.</p></div>"
 
-// Stav
 * clinicalStatus.coding[0].system = $allergyintolerance-clinical
 * clinicalStatus.coding[0].code = #active
 * verificationStatus.coding[0].system = $allergyintolerance-verification
 * verificationStatus.coding[0].code = #confirmed
 
-// Typ a závažnost
 * type = #allergy
 * criticality = #low
 
-// Alergen (SNOMED CT)
 * code.coding[0].system = $sct
 * code.coding[0].code = #764146007
 * code.coding[0].display = "Penicillin"
 
-// Pacient
 * patient = Reference(Mracena)
 
-// Reakce
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #271807003
 * reaction[0].manifestation[0].coding[0].display = "Eruption"
@@ -133,13 +104,10 @@ InstanceOf: CZ_AllergyIntoleranceHdr
 Usage: #example
 Title: "AllergyIntolerance - cow's milk protein"
 Description: "Patient experiences rash and itching after ingestion of cow's milk protein due to intolerance."
-// Povinný identifikátor
-* identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
-* identifier[0].value = "MilkAllergy-001"
-
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Intolerance na bílkovinu kravského mléka. Počátek období projevu: 15 let</div>"
-
+* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+* identifier[=].value = "allergy-2"
 * type = #intolerance
 * onsetAge = 15 'a'
 * code.coding.system = $sct
@@ -183,42 +151,19 @@ Usage: #example
 Title: "AllergyIntolerance - Strawberry"
 Description: "Patient experiences itching and tongue swelling in response to strawberries."
 * id = "6cf80cb1-9766-470f-ac36-b1d3d8950f1b"
-// Povinný identifikátor
-* identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
-* identifier[0].value = "Allergy-Strawberry-Novak-001"
-// // Narrativní text
-// * text.status = #generated
-// * text.div = xmlns=\"http://www.w3.org/1999/xhtml\"<div><p>Alergie na jahody – svědění, otok jazyka.</p></div>"
-// Stav
+* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+* identifier[=].value = "allergy-1"
 * clinicalStatus.coding[0].system = $allergyintolerance-clinical
 * clinicalStatus.coding[0].code = #active
 * verificationStatus.coding[0].system = $allergyintolerance-verification
 * verificationStatus.coding[0].code = #confirmed
-// Typ a závažnost
-/** type.coding[0].system =  $cz-allergyintolerance-typ-reakce
-* type.coding[0].code = #allergy
-* type.coding[0].display = "Allergy"
-*/
 * type = #allergy
 * category = #food
-/*
-* criticality.coding[0].system = $cz-allergyintolerance-riziko
-* criticality.coding[0].code = #low
-* criticality.coding[0].display = "Low"
-*/
 * criticality = #low
-// Alergen (SNOMED CT)
 * code = $sct#102261002 "Strawberry"
-/*
-* code.coding[0].system = $cz-allergyintolerance-puvodce
-* code.coding[0].code = #91938006
-* code.coding[0].display = "Allergy to strawberry"
-*/
 * onsetDateTime = "2020-01-01"
 * recordedDate = "2023-10-01"
-// Pacient
 * patient = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
-// Reakce
 * reaction[+]
   * manifestation[+] = $sct#81950002 "edém jazyka"
   * manifestation[+] = $sct#4386001	"Bronchospasm"
@@ -227,18 +172,5 @@ Description: "Patient experiences itching and tongue swelling in response to str
   * manifestation = $sct#418363000 "Itching of skin"
   * onset = "2022-10-01T10:00:00Z"
   * severity = #mild
-/* * reaction[0].manifestation[0].coding[0].system = $cz-allergyintolerance-reakce
-* reaction[0].manifestation[0].coding[0].code = #418363000
-* reaction[0].manifestation[0].coding[0].display = "Itching of skin"
-* reaction[0].manifestation[1].coding[0].system = $cz-allergyintolerance-reakce
-* reaction[0].manifestation[1].coding[0].code = #81950002
-* reaction[0].manifestation[1].coding[0].display = "Edema of the tongue"
-* reaction[0].description = "Svědění, otok jazyka."
- *//*
-* reaction[0].severity.coding[0].system = $cz-allergyintolerance-reakce-zavaznost
-* reaction[0].severity.coding[0].code = #mild
-* reaction[0].severity.coding[0].display = "Mírná"
 
-* reaction[0].severity = #mild
-*/
 

@@ -376,8 +376,6 @@ InstanceOf: CZ_AllergyIntoleranceHdr
 Usage: #example
 Description: "Alergie pacientky na penicilin s kožní vyrážkou a otokem rtů. / Patient allergy to penicillin with skin rash and lip swelling."
 * id = "b63654b0-7876-4074-986b-24dd2fed4f1b"
-* identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
-* identifier[0].value = "Allergy-Penicillin-Novakova-Jana-001"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Alergie na penicilin - kožní vyrážka, otok rtů.</p></div>"
 * clinicalStatus = $allergyintolerance-clinical#active

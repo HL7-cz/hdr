@@ -326,8 +326,8 @@ Usage: #example
 Title: "HDR - GYNPOR - Alergie na Zinnat / Zinnat allergy"
 Description: "Unverified allergy to Zinnat with vertigo."
 * id = "ff3372f1-0189-457f-8368-aa28e36df796"
-* identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
-* identifier[0].value = "Allergy-Story-Zinnat-001"
+* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+* identifier[=].value = "allergy-2"
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = $allergyintolerance-verification#unconfirmed
 * code.text = "Zinnat"
@@ -343,8 +343,8 @@ Usage: #example
 Title: "HDR - GYNPOR - Alergie na trávy, prach a pyl / Environmental allergies"
 Description: "Unverified environmental allergies: grass, dust, pollen."
 * id = "26be4e8d-b6bc-4b61-a4ff-87641d9aa789"
-* identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
-* identifier[0].value = "Allergy-Story-Environmental-001"
+* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+* identifier[=].value = "allergy-2"
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = $allergyintolerance-verification#unconfirmed
 * code.text = "Travy, prach, pyl"
