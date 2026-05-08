@@ -8,8 +8,6 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 // this statement says that this profile conforms with the eu lab one
 * insert ImposeProfile($Encounter-eu-hdr,0)
 
-* insert SetFmmandStatusRule (1, draft)
-
 * extension contains $note named note 0..*
 * extension[note] ^short = "Enconter note"
 

@@ -401,6 +401,9 @@ Description: "Lidocaine EGIS used during hospitalization."
 * status = #active
 * identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "DLP-LIDOCAINEEGIS-001"
+* code.coding[0].system = $dlp_lec_pripravky
+* code.coding[0].code = #0030767
+* code.coding[0].display = "Lidocaine"
 * code.text = "Lidocaine EGIS"
 
 Instance: Medication-Story-Ofost
@@ -412,6 +415,9 @@ Description: "OFOST used during hospitalization."
 * status = #active
 * identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "DLP-OFOST-001"
+* code.coding[0].system = $dlp_lec_pripravky
+* code.coding[0].code = #0221535
+* code.coding[0].display = "OFOST"
 * code.text = "OFOST"
 
 Instance: MedicationRequest-Story-Dopegyt-Discharge
