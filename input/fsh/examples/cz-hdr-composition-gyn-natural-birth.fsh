@@ -217,8 +217,6 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration.brief"
 * section[sectionPharmacotherapy].text.status = #additional
 * section[sectionPharmacotherapy].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Porodní analgezie: epidurální podání ropivakainu s malou dávkou fentanylu během porodu.</p></div>"""
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:65dff8dd-87a7-41cb-8a5a-d2b900098fb8)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:d9cdb566-b6f7-4c3a-96e1-9748c93a738b)
 * section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:6f97d842-5ce8-4631-b52e-0b79723c7e31)
 * section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:0a98bc34-677a-4867-b903-461ac06939d5)
 
