@@ -580,11 +580,8 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration.brief"
 * section[sectionPharmacotherapy].text.status = #additional
 * section[sectionPharmacotherapy].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Během hospitalizace podány Dopegyt, Fraxiparine, Lidocaine, OFOST, Prostin E2. Při propuštění doporučen Dopegyt 1-0-1 a LMWH profylaxe do 10.03.2026 včetně.</p></div>"""
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:6910dd1a-deee-463a-b776-6ee3ca8bf7ed)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:9b5df9b6-b25b-4f28-a74d-419b1c74acb8)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:d894281f-1104-42d0-9746-98e43262ecc3)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:f7206785-f3f2-46e2-9c20-5c684686aabd)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:c45659d8-37e0-4d5d-8992-166900cd3a4a)
+* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:3d648416-8bea-4a9a-9b50-6859084e53c4)
+* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:80806e6f-99e7-4945-9d1b-465e98fbd45b)
 
 * section[sectionDischargeMedications].title = "Hospital discharge medications"
 * section[sectionDischargeMedications].code = $loinc#75311-1 "Discharge medications note"
