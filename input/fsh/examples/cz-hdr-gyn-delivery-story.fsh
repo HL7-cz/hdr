@@ -270,6 +270,8 @@ Description: "Newborn birth weight."
 * id = "73f44a2f-9cfd-4b56-b1df-b6898b7a8da3"
 * subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 * valueQuantity = 3200 'g' "g"
+* effectiveDateTime = "2026-03-03T17:14:00+01:00"
+* performer = Reference(urn:uuid:5cbed9dd-df97-46ee-974d-8bf34ef30efd)
 
 Instance: Observation-Story-BirthLength
 InstanceOf: CZ_ObservationBirthLength
@@ -279,6 +281,7 @@ Description: "Newborn birth length."
 * id = "55a402b2-f4af-4904-b01b-0f0953335d85"
 * subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 * valueQuantity = 50 'cm' "cm"
+* effectiveDateTime = "2026-03-03T17:14:00+01:00"
 * performer = Reference(urn:uuid:c02be8d5-83a2-466b-aa82-089088b1abf7)
 
 Instance: Observation-Story-Apgar1
@@ -483,14 +486,13 @@ Description: "Obstetric ultrasound finding recorded during admission."
 * performer = Reference(urn:uuid:c02be8d5-83a2-466b-aa82-089088b1abf7)
 
 Instance: Observation-Story-BloodGroup
-InstanceOf: CZ_ObservationResultLaboratory
+InstanceOf: Observation
 Usage: #example
 Title: "HDR - GYNPOR - Krevní skupina / Blood group"
 Description: "Maternal blood group test."
 * id = "f432828d-fa44-4928-afa6-a248b126860b"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#26436-6 "Laboratorní studie"
+* category = $observation-category#laboratory
 * code = $nclp#05162
 * subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 * effectiveDateTime = "2026-03-03T06:10:00+01:00"

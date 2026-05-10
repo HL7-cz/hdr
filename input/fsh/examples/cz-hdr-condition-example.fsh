@@ -237,6 +237,7 @@ Description: "Example of a condition Postmenopausal osteoporosis"
 * code.coding[0].display = "Postmenopausal osteoporosis"
 * code.text = "Osteopor\u00f3za bez patologick\u00e9 fraktury"
 * subject = Reference(Mracena2)
+* category[0] = $condition-category#encounter-diagnosis "Encounter Diagnosis"
 * category[1] = $sct#278307001 "On admission"
 * category[2] = $sct#25265005 "Did not receive therapy or drug for"
 

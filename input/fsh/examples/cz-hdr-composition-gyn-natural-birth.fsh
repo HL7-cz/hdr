@@ -348,6 +348,7 @@ Description: "Příklad observace porodní hmotnosti novorozence v případě Ja
 * id = "3c2dd8f5-58b4-4cc2-a4d7-72ca2f1fbc18"
 * subject = Reference(urn:uuid:b7e6c8a1-4a8d-4d9f-8f69-df4f210cb2d7)
 * valueQuantity = 3210 'g' "g"
+* effectiveDateTime = "2025-05-18T10:46:00+02:00"
 * performer = Reference(urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5)
 
 Instance: GynNaturalBirthJana-BirthLength
@@ -357,6 +358,7 @@ Description: "Příklad observace porodní délky novorozence v případě Jany 
 * id = "cf6608f4-7e10-4c50-9a2a-78511d95b5be"
 * subject = Reference(urn:uuid:b7e6c8a1-4a8d-4d9f-8f69-df4f210cb2d7)
 * valueQuantity = 49 'cm' "cm"
+* effectiveDateTime = "2025-05-18T10:46:00+02:00"
 * performer = Reference(urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5)
 
 Instance: GynNaturalBirthJana-BirthInjury
@@ -371,11 +373,14 @@ Description: "Příklad záznamu porodního poranění matky v případě Jany N
 * onsetDateTime = "2025-05-18T10:46:00+02:00"
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Epiziotomie mediolaterální během porodu.</div>"
+
 Instance: Allergy-Penicillin-Novakova-Jana
 InstanceOf: CZ_AllergyIntoleranceHdr
 Usage: #example
 Description: "Alergie pacientky na penicilin s kožní vyrážkou a otokem rtů. / Patient allergy to penicillin with skin rash and lip swelling."
 * id = "b63654b0-7876-4074-986b-24dd2fed4f1b"
+* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+* identifier[=].value = "allergy-2"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Alergie na penicilin - kožní vyrážka, otok rtů.</p></div>"
 * clinicalStatus = $allergyintolerance-clinical#active
