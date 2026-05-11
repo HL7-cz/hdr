@@ -24,6 +24,9 @@ Alias: $absent-or-uknown = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-
 Alias: $actPriority = http://terminology.hl7.org/CodeSystem/v3-ActPriority
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
+Alias: $MKN10 = https://uzis.cz/terminology/CodeSystem/mkn-10
+Alias: $atc = http://www.whocc.no/atc
+
 
 // Extensions:
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
