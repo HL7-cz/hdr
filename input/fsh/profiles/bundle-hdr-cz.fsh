@@ -82,7 +82,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[medication].resource only CZ_Medication
 * entry[medicationRequest].resource only CZ_MedicationRequestHdr
 * entry[medicationStatement].resource only $MedicationStatement-uv-ips
-* entry[medicationAdministration].resource only MedicationAdministration
+* entry[medicationAdministration].resource only CZ_MedicationAdministrationHdr
 * entry[medicationDispense].resource only MedicationDispense
 * entry[practitioner].resource only CZ_PractitionerCore
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore

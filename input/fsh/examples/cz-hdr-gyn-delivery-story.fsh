@@ -422,6 +422,51 @@ Description: "OFOST used during hospitalization."
 * code.coding[0].display = "OFOST"
 * code.text = "OFOST"
 
+Instance: MedicationAdministration-Story-Ofost
+InstanceOf: CZ_MedicationAdministrationHdr
+Usage: #example
+Title: "HDR - GYNPOR - Podání OFOSTu / OFOST administration"
+Description: "Medication administration record for OFOST during labor induction."
+* id = "e5c8a1b2-9c3d-4e5a-8c9b-1f2d3e4f5a67"
+* identifier[+].system = "https://www.nempriklad.cz/"
+* identifier[=].value = "e5c8a1b2-9c3d-4e5a-8c9b-1f2d3e4f5a67"
+* status = #completed
+* medicationReference = Reference(urn:uuid:f7206785-f3f2-46e2-9c20-5c684686aabd)
+* subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
+* dosage.dose = 260000 'ul' "ul"
+* dosage.route = $sct#47625008 "Intravenous route"
+* effectiveDateTime = "2026-03-04T18:31:00+01:00"
+
+Instance: MedicationAdministration-Story-Lidocaine
+InstanceOf: CZ_MedicationAdministrationHdr
+Usage: #example
+Title: "HDR - GYNPOR - Podání Lidocaine EGISu / Lidocaine EGIS administration"
+Description: "Medication administration record for Lidocaine EGIS during labor."
+* id = "d1a2b3c4-5678-90ab-cdef-1234567890ab"
+* identifier[+].system = "https://www.nempriklad.cz/"
+* identifier[=].value = "d1a2b3c4-5678-90ab-cdef-1234567890ab"
+* status = #completed
+* medicationReference = Reference(urn:uuid:d894281f-1104-42d0-9746-98e43262ecc3)
+* subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
+* dosage.dose = 100 'mg' "mg"
+* dosage.route = $sct#47625008 "Intravenous route"
+* effectiveDateTime = "2026-03-03T14:00:00+01:00"
+
+Instance: MedicationAdministration-Story-ProstinE2
+InstanceOf: CZ_MedicationAdministrationHdr
+Usage: #example
+Title: "HDR - GYNPOR - Podání Prostin E2 / Prostin E2 administration"
+Description: "Medication administration record for Prostin E2 during labor induction."
+* id = "a1b2c3d4-5678-90ab-cdef-1234567890ab"
+* identifier[+].system = "https://www.nempriklad.cz/"
+* identifier[=].value = "a1b2c3d4-5678-90ab-cdef-1234567890ab"
+* status = #completed
+* medicationReference = Reference(urn:uuid:c45659d8-37e0-4d5d-8992-166900cd3a4a)
+* subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
+* dosage.dose = 3 'mg' "mg"
+* dosage.route = $sct#47625008 "Intravenous route"
+* effectiveDateTime = "2026-03-03T12:30:00+01:00"
+
 Instance: MedicationRequest-Story-Dopegyt-Discharge
 InstanceOf: CZ_MedicationRequestHdr
 Usage: #example
@@ -589,6 +634,9 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionPharmacotherapy].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Během hospitalizace podány Dopegyt, Fraxiparine, Lidocaine, OFOST, Prostin E2. Při propuštění doporučen Dopegyt 1-0-1 a LMWH profylaxe do 10.03.2026 včetně.</p></div>"""
 * section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:3d648416-8bea-4a9a-9b50-6859084e53c4)
 * section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:80806e6f-99e7-4945-9d1b-465e98fbd45b)
+* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:d1a2b3c4-5678-90ab-cdef-1234567890ab)
+* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:e5c8a1b2-9c3d-4e5a-8c9b-1f2d3e4f5a67)
+* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:a1b2c3d4-5678-90ab-cdef-1234567890ab)
 
 * section[sectionDischargeMedications].title = "Hospital discharge medications"
 * section[sectionDischargeMedications].code = $loinc#75311-1 "Discharge medications note"
@@ -680,6 +728,12 @@ Description: "Document bundle for story-based gynecology discharge report withou
 * entry[medication][=].resource = Medication-Story-Ofost
 * entry[medication][+].fullUrl = "urn:uuid:c45659d8-37e0-4d5d-8992-166900cd3a4a"
 * entry[medication][=].resource = Medication-Story-ProstinE2
+* entry[medicationAdministration][+].fullUrl = "urn:uuid:e5c8a1b2-9c3d-4e5a-8c9b-1f2d3e4f5a67"
+* entry[medicationAdministration][=].resource = MedicationAdministration-Story-Ofost
+* entry[medicationAdministration][+].fullUrl = "urn:uuid:d1a2b3c4-5678-90ab-cdef-1234567890ab"
+* entry[medicationAdministration][=].resource = MedicationAdministration-Story-Lidocaine
+* entry[medicationAdministration][+].fullUrl = "urn:uuid:a1b2c3d4-5678-90ab-cdef-1234567890ab"
+* entry[medicationAdministration][=].resource = MedicationAdministration-Story-ProstinE2
 * entry[medicationRequest][+].fullUrl = "urn:uuid:3d648416-8bea-4a9a-9b50-6859084e53c4"
 * entry[medicationRequest][=].resource = MedicationRequest-Story-Dopegyt-Discharge
 * entry[medicationRequest][+].fullUrl = "urn:uuid:80806e6f-99e7-4945-9d1b-465e98fbd45b"
