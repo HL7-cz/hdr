@@ -346,8 +346,8 @@ Usage: #example
 // proto jsou tyto dva řádky zakomentovány
 //* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
 //* entry[documentReference][=].resource = DischargeDocumenPDF
-* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
-* entry[provenance][=].resource = signature-L1
+//* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
+//* entry[provenance][=].resource = signature-L1
 * entry[encounter][+].fullUrl = "urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620"
 * entry[encounter][=].resource = HospitalEncounter-Novak-Petr
 
@@ -378,8 +378,8 @@ Usage: #example
 // proto jsou tyto dva řádky zakomentovány
 //* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
 //* entry[documentReference][=].resource = DischargeDocumenPDF
-* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
-* entry[provenance][=].resource = signature-L1
+//* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
+//* entry[provenance][=].resource = signature-L1
 * entry[encounter][+].fullUrl = "urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620"
 * entry[encounter][=].resource = HospitalEncounter-Novak-Petr
 
@@ -501,8 +501,6 @@ Usage: #example
 
 * entry[organization][+].fullUrl = "urn:uuid:6dbf2b1f-67f6-46c9-b1b7-f412aaadf2ba"
 * entry[organization][=].resource = RegisteringProviderExample-gynecology
-* entry[organization][+].fullUrl = "urn:uuid:4f5f6b0d-f1a6-4ff0-9457-5ddd2117e9d9"
-* entry[organization][=].resource = RegisteringProviderExample
 * entry[organization][+].fullUrl = "urn:uuid:96cb3f63-2644-4fd8-8df2-eed1a9bc16f9"
 * entry[organization][=].resource = Organization-Payer-111
 * entry[organization][+].fullUrl = "urn:uuid:d4545f84-0d58-4f6f-a50a-2f2ea2ea4dc4"

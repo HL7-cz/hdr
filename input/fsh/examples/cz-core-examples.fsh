@@ -599,7 +599,7 @@ Description: "Participant UZV HDR"
 
 Instance: signature-L1
 InstanceOf: CZ_Provenance
-Title: "Signature of image order"
+Title: "Signature of hospital discharge report for document"
 Usage: #example
 Description: "Czech national profile on Signature holds an electronic representation of a signature or timestamp and its supporting context in a FHIR accessible form."
 * id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
