@@ -393,10 +393,8 @@ Description: "Alergie pacientky na penicilin s kožní vyrážkou a otokem rtů.
 * patient = Reference(urn:uuid:6c4f4d2c-5f24-4a91-a75e-1b0e2a1f7731)
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #271807003
-* reaction[0].manifestation[0].coding[0].display = "vyrážka"
 * reaction[0].manifestation[1].coding[0].system = $sct
 * reaction[0].manifestation[1].coding[0].code = #267038008
-* reaction[0].manifestation[1].coding[0].display = "Edema (finding)"
 * reaction[0].description = "Kožní vyrážka, otok rtů."
 
 Instance: GynNaturalBirthJana-BirthOutcome

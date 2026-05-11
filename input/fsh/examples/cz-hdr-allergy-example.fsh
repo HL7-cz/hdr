@@ -53,16 +53,13 @@ Description: "Patient experiences itching and tongue swelling in response to str
 
 * code.coding[0].system = $sct
 * code.coding[0].code = #91938006
-* code.coding[0].display = "Allergy to strawberry"
 
 * patient = Reference(Mracena)
 
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #418363000
-* reaction[0].manifestation[0].coding[0].display = "svědění kůže"
 * reaction[0].manifestation[1].coding[0].system = $sct
 * reaction[0].manifestation[1].coding[0].code = #81950002
-* reaction[0].manifestation[1].coding[0].display = "edém jazyka"
 * reaction[0].description = "Svědění, otok jazyka."
 
 // Penicilinová alergie
@@ -92,10 +89,8 @@ Description: "Patient experiences skin rash and lip swelling in response to peni
 
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #271807003
-* reaction[0].manifestation[0].coding[0].display = "Eruption"
 * reaction[0].manifestation[1].coding[0].system = $sct
 * reaction[0].manifestation[1].coding[0].code = #267038008
-* reaction[0].manifestation[1].coding[0].display = "Interstitial edema"
 * reaction[0].description = "Kožní vyrážka, otok rtů."
 
 
@@ -117,7 +112,6 @@ Description: "Patient experiences rash and itching after ingestion of cow's milk
 * reaction[0].description = "Projevy: vyrážka, svědění kůže po požití mléka."
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #418363000
-* reaction[0].manifestation[0].coding[0].display = "svědění kůže"
 
 * criticality = #low
 
@@ -160,16 +154,16 @@ Description: "Patient experiences itching and tongue swelling in response to str
 * type = #allergy
 * category = #food
 * criticality = #low
-* code = $sct#102261002 "Strawberry"
+* code = $sct#102261002
 * onsetDateTime = "2020-01-01"
 * recordedDate = "2023-10-01"
 * patient = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * reaction[+]
-  * manifestation[+] = $sct#81950002 "edém jazyka"
-  * manifestation[+] = $sct#4386001	"Bronchospasm"
+  * manifestation[+] = $sct#81950002
+  * manifestation[+] = $sct#4386001
   * onset = "2020-01-01T12:00:00Z"
 * reaction[+]
-  * manifestation = $sct#418363000 "Itching of skin"
+  * manifestation = $sct#418363000
   * onset = "2022-10-01T10:00:00Z"
   * severity = #mild
 
