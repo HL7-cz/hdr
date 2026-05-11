@@ -25,7 +25,7 @@ Description: "Očkování proti COVID-19 u pacienta Novák Petr"
 * occurrenceDateTime = "2021-05-05"
 * primarySource = true
 * manufacturer = Reference(Organization-Pfizer)
-* protocolApplied[0].targetDisease = http://snomed.info/sct#840539006 "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
+* protocolApplied[0].targetDisease = http://snomed.info/sct#840539006 
 * protocolApplied[0].doseNumberPositiveInt = 2
 * extension[administeredProduct].extension[reference].valueReference = Reference(Medication-CovidVaccineComirnaty)
 * note[0].text = "Pacient dostal druhou dávku vakcíny Comirnaty."

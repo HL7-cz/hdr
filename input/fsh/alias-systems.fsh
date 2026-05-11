@@ -42,7 +42,7 @@ Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/
 Alias: $consent-category = http://terminology.hl7.org/CodeSystem/consentcategorycodes
 Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $locationType = http://terminology.hl7.org/CodeSystem/location-physical-type
-Alias: $nclp = https://nclp.ncez.mzcr.cz/CodeSystem/NCLPPOL
+Alias: $nclp = https://ncez.mzcr.cz/nclp/CodeSystem/nclppol
 Alias: $dlp_atc = https://sukl.cz/terminology/CodeSystem/dlp-atc
 Alias: $dlp_lec_pripravky = https://sukl.cz/terminology/CodeSystem/dlp-lecivepripravky
 

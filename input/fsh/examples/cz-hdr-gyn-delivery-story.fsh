@@ -467,7 +467,7 @@ Description: "Ultrasound device used for obstetric examination."
 * id = "dcf20b83-aacd-45af-99d6-3d277089da35"
 * manufacturer = "Samsung"
 * modelNumber = "R7"
-* type = $sct#706171005 "Ultrasound imaging system"
+* type = $sct#706332007 "Ultrasound imaging system"
 * patient = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 
 Instance: Observation-Story-UZ
