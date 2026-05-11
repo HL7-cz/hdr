@@ -168,6 +168,8 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * encounter = Reference(urn:uuid:7d7a6f19-5dfb-45ee-8bcf-0f63d9fe49f2)
 * extension[presentedForm].valueAttachment = cz-pdfgynnatural-example
 
+* extension[information-recipient][+].valueReference = Reference(urn:uuid:b1e65698-2b43-481d-b8f4-7ff6d8e81ada)
+
 * section[sectionHospitalCourse].title = "Průběh hospitalizace"
 * section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
 * section[sectionHospitalCourse].text.status = #additional
@@ -211,7 +213,7 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #additional
 * section[sectionAllergies].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Alergie na penicilin, reakce: kožní vyrážka a otok rtů.</p></div>"""
-* section[sectionAllergies].entry[allergyIntolerance][+] = Reference(urn:uuid:b63654b0-7876-4074-986b-24dd2fed4f1b)
+* section[sectionAllergies].entry[allergyIntolerance][0] = Reference(urn:uuid:b63654b0-7876-4074-986b-24dd2fed4f1b)
 
 * section[sectionPharmacotherapy].title = "Pharmacotherapy"
 * section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration.brief"

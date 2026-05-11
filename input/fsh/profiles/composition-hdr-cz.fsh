@@ -180,7 +180,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
       $loinc#48765-2 )   // CODE
   * entry 1..
   * entry only Reference(CZ_AllergyIntoleranceHdr or DocumentReference or AllergyIntolerance)
-  * insert SectionEntrySliceComRules(Relevant allergies or intolerances (conditions\) for that patient.,
+  * insert SectionEntrySlicePerProfileRules(Relevant allergies or intolerances (conditions\) for that patient.,
     It lists the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available\, or that no allergies are known .)
   // entry slices
   * insert SectionEntrySliceDefRules (allergyIntolerance, 0.. , Allergy entry, Allergy entry, CZ_AllergyIntoleranceHdr)
