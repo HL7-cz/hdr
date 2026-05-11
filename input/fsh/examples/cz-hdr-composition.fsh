@@ -402,7 +402,7 @@ Description: "Example Composition for Hospital Discharge Report for patient Nov√
 Usage: #example
 * id = "6891fd68-dc3c-4c91-a8d3-cb5ec990c03b"
 * status = #final //ok
-* language  = #cs
+//* language  = #cs
 * extension[compositionVersionR5].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version"
 * extension[compositionVersionR5].valueString = "1.0.0"
 * type.coding[0].system = $loinc
@@ -457,7 +457,7 @@ Usage: #example
 * id = "6891fd68-dc3c-4c91-a8d3-cb5ec990c035"
 * status = #final
 * text.status = #empty
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Composition for Hospital Discharge Report</div>"
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
 * type.coding[0].display = "Hospital Discharge summary"

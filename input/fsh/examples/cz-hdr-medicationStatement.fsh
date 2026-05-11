@@ -114,7 +114,7 @@ Description: "Czech HDR - example of Euthyrox"
 //cesta podání
 * dosage[0].route.coding[0].system = $sct
 * dosage[0].route.coding[0].code = #26643006
-* dosage[0].route.coding[0].display = "Oral use"  
+* dosage[0].route.coding[0].display = "Oral route"  
 // období podávání
 * effectivePeriod.start = "2025-03-01T10:15:00+01:00"
 * effectivePeriod.end = "2025-03-10T09:30:00+01:00"
@@ -162,7 +162,7 @@ Description: "Czech HDR - example of Paracetamol"
 //cesta podání
 * dosage[0].route.coding[0].system = $sct
 * dosage[0].route.coding[0].code = #26643006
-* dosage[0].route.coding[0].display = "Oral use"  
+* dosage[0].route.coding[0].display = "Oral route"  
 // období podávání
 * effectivePeriod.start = "2025-03-01T10:15:00+01:00"
 * effectivePeriod.end = "2025-03-10T09:30:00+01:00"
@@ -204,7 +204,7 @@ Description: "Czech HDR - example of Ibalgin 400"
 //cesta podání
 * dosage[0].route.coding[0].system = $sct
 * dosage[0].route.coding[0].code = #26643006
-* dosage[0].route.coding[0].display = "Oral use"  
+* dosage[0].route.coding[0].display = "Oral route"  
 // období podávání
 * effectivePeriod.start = "2025-03-01T10:15:00+01:00"
 * effectivePeriod.end = "2025-03-10T09:30:00+01:00"

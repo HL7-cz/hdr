@@ -82,7 +82,7 @@ Title: "CZ-Encounter-HDR Example of finished hospital encounter"
 Description: "Czech HDR - example of finished hospital encounter"
 * meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-encounter-hdr"
 //* id = "hospital-encounter"
-* status = #finished
+* status = $encounter-status-r4#finished
 * class.code = #IMP // Corrected code assignment
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * class.display = "inpatient encounter"
@@ -99,14 +99,14 @@ Usage: #example
 Title: "CZ-Encounter-HDR Example of encounter with emergency priority"
 Description: "Czech HDR - example of encounter with emergency priority"
 * id = "10f5c49e-086d-4016-8dd1-b555306bf620"
-* status = #finished
+* status = $encounter-status-r4#finished
 * class.code = #IMP
 * class.system = $cz-encounter-typ-kontaktu
 * class.display = "inpatient encounter"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * period.start = "2025-03-01T10:15:00+01:00"
 * period.end = "2025-03-10T09:30:00+01:00"
-* serviceProvider = Reference(RegisteringProviderExample)
+* serviceProvider = Reference(urn:uuid:4f5f6b0d-f1a6-4ff0-9457-5ddd2117e9d9)
 // Reason for encounter
 * reasonReference = Reference(urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2)
 * hospitalization.admitSource.coding[0].system = $admit-source
@@ -144,7 +144,7 @@ Usage: #example
 Title: "CZ-Encounter-HDR  L1 Example of encounter for Novak Petr"
 Description: "Czech HDR – a minimalist example of a encounter for Petr Novák for the document L1 HDR"
 * id = "f08151d0-a7ad-4a7b-b7b9-97eb1d394ffb"
-* status = #finished
+* status = $encounter-status-r4#finished
 * class.code = #IMP
 * class.system = $cz-encounter-typ-kontaktu
 * class.display = "inpatient encounter"
@@ -159,7 +159,7 @@ Usage: #example
 Title: "CZ-Encounter-HDR Example of encounter for Novakova Jana"
 Description: "Czech HDR - example of encounter for Jana Novakova after spontaneous vaginal delivery"
 * id = "7d7a6f19-5dfb-45ee-8bcf-0f63d9fe49f2"
-* status = #finished
+* status = $encounter-status-r4#finished
 * class.code = #IMP
 * class.system = $cz-encounter-typ-kontaktu
 * class.display = "inpatient encounter"

@@ -9,7 +9,7 @@ Description: "Czech HDR - example of a Procedure - Appendectomy"
 * performedDateTime = "2023-10-01T10:00:00Z"
 * performer.actor = Reference(Practitioner-2)
 * reasonCode = http://snomed.info/sct#85189001 "Acute appendicitis"
-* outcome = http://snomed.info/sct#385669000 "Successful (qualifier value)"
+* outcome = http://snomed.info/sct#385669000 "Successful"
 * bodySite = http://snomed.info/sct#66754008 "Appendix"
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>This is a test of the procedure text field.</div>"
@@ -28,7 +28,7 @@ Description: "Czech HDR - example of a Procedure - Acute appendicitis."
 * performedDateTime = "2023-10-01T10:00:00Z"
 * performer.actor = Reference(Practitioner-2)
 * reasonCode = $icd10#K35.2 "Acute appendicitis with generalized peritonitis"
-* outcome = $sct#385670004 "Partially successful (qualifier value)"
+* outcome = $sct#385670004 "Partially successful"
 * bodySite = $sct#66754008 "Appendix"
 * text.status = #generated
 * complication = $icd10#K65.0 "Acute peritonitis"
@@ -60,9 +60,9 @@ Description: "Czech HDR - example of a Procedure - Pacemaker"
 * code = $sct#70573000 "Insertion of pacemaker pulse generator"
 * subject = Reference(Patient/Mracena)
 * performedDateTime = "2024-03-05"
-* bodySite = $sct#73829009 "Right atrial structure"
+* bodySite = $sct#73829009 "Right atrium"
 * reasonCode[+] = $icd10#I44.2 "Atrioventricular block, complete"
-* outcome = $sct#385669000 "Successful (qualifier value)"
+* outcome = $sct#385669000 "Successful"
 // Odkaz na přístroj použitý při zákroku
 * focalDevice.manipulated = Reference(Device-Pacemaker)
 * focalDevice.action = $sct#129303008 "Removal - action"
@@ -155,9 +155,9 @@ Description: "Czech HDR - example of a Procedure - Pacemaker"
 * code = $sct#70573000 "Insertion of pacemaker pulse generator"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * performedDateTime = "2024-03-05"
-* bodySite = $sct#73829009 "Right atrial structure"
+* bodySite = $sct#73829009 "Right atrium"
 * reasonCode[+] = $icd10#I50 "Heart failure"
-* outcome = $sct#385669000 "Successful (qualifier value)"
+* outcome = $sct#385669000 "Successful"
 * focalDevice.manipulated = Reference(Device-Pacemaker)
 * focalDevice.action = $sct#129303008 "Removal - action"
 * text.status = #generated

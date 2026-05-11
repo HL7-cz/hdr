@@ -83,7 +83,7 @@ RuleSet: EvaluationSubSectionRules
 * section contains sectionPhysicalExamination 0..1  // ToDo: add structure
 * section[sectionPhysicalExamination]
   * title = "Somatické vyšetření­"
-  * code = $sct#425044008 "Physical exam section (record artifact)"
+  * code = $sct#425044008 "Physical exam section"
   * text 1..    // now only textual section, should we use questionnair resource for structuring per body part? Maybe as on option?
   * entry 0..   // now only textual section, should we use questionnair response or Observation for structuring per body part?
   * entry only Reference(ClinicalImpression or Observation or DocumentReference or QuestionnaireResponse)
@@ -244,7 +244,7 @@ RuleSet: PatientHxSubsectionRules
     $Observation-pregnancy-outcome-uv-ips)
   * insert SectionEntrySliceDefRules (gestationalAge, 0..*,
     Gestational age at delivery / Gestacni stari pri porodu, Gestational age at delivery format weeks and days for example 39-6 / Format gestacniho stari tydny a dny napr 39-6,
-    Observation)
+    CZ_ObservationGestationalAge)
   * insert SectionEntrySliceDefRules (gravidity, 0..*,
     Gravidity / Gravidita, Gravidity / Gravidita,
     CZ_ObservationGravidity)

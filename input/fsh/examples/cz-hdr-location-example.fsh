@@ -151,7 +151,7 @@ InstanceOf: CZ_LocationCore
 Title: "Mestska nemocnice Brno - areal"
 Description: "Main hospital location for fictional Brno provider."
 Usage: #example
-* id = "loc-brno-hospital"
+* id = "6c2932f4-fe42-4aea-87b3-182ca2e3670e"
 * status = #active
 * name = "Mestska nemocnice Brno"
 * description = "Hlavni areal Mestske nemocnice Brno"
@@ -174,7 +174,7 @@ InstanceOf: CZ_LocationCore
 Title: "Porodni oddeleni Brno"
 Description: "Maternity ward in the fictional Brno hospital."
 Usage: #example
-* id = "loc-brno-maternity-ward"
+* id = "0f4953dc-59db-4ada-b9b9-3d80ffc5c657"
 * status = #active
 * name = "Porodni oddeleni"
 * description = "Porodni oddeleni - Mestska nemocnice Brno"
@@ -188,7 +188,7 @@ InstanceOf: CZ_LocationCore
 Title: "Porodni oddeleni - pokoj 3"
 Description: "Room 3 at maternity ward."
 Usage: #example
-* id = "loc-brno-maternity-room-3"
+* id = "dffe5c17-dd39-40d7-9278-9cce85e2daa1"
 * status = #active
 * name = "Pokoj 3"
 * description = "Pokoj 3 na porodni oddeleni"
@@ -202,7 +202,7 @@ InstanceOf: CZ_LocationCore
 Title: "Porodni oddeleni - pokoj 3 luzko 01"
 Description: "Bed 01 in room 3 at maternity ward."
 Usage: #example
-* id = "loc-brno-maternity-room-3-bed-01"
+* id = "c2a20e75-20b6-48cc-b908-1be68597de1b"
 * status = #active
 * name = "Luzko 01"
 * description = "Luzko 01, pokoj 3, porodni oddeleni"

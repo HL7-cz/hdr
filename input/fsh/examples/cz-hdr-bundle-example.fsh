@@ -117,6 +117,8 @@ Usage: #example
 * entry[encounter][=].resource = HospitalEncounter-Novak-Petr
 * entry[practitionerRole][+].fullUrl = "urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849"
 * entry[practitionerRole][=].resource = Practitioner-Author-detail
+* entry[practitioner][+].fullUrl = "urn:uuid:860c684f-aba1-40d9-94cf-721d70237b52"
+* entry[practitioner][=].resource = Practitioner-UZV
 * entry[condition][+].fullUrl = "urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2"
 * entry[condition][=].resource = Condition-K409
 * entry[condition][+].fullUrl = "urn:uuid:fdf9e92d-ac48-4706-b15b-d2eaca85f45f"
@@ -197,6 +199,8 @@ Usage: #example
 * entry[organization][=].resource = Organization-L1-Odd
 * entry[organization][+].fullUrl = "urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1"
 * entry[organization][=].resource = Organization-L1
+* entry[organization][+].fullUrl = "urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
+* entry[organization][=].resource = Organization-1
 // TODO: Add DocumentReference resources (PDF, HTML) ale nikoliv propouštěcí zprávu, např. záznam konzilia atp.
 // Prezentovatelná forma dokumentu je součástí kompozice, zde by byla vložena duplicitně
 // proto jsou tyto dva řádky zakomentovány
@@ -437,7 +441,7 @@ Usage: #example
 * entry[coverage][+].fullUrl = "urn:uuid:8f9c2f14-1f69-4f2b-b4a8-8b7ca4db9f31"
 * entry[coverage][=].resource = Coverage-Novakova-Jana
 
-* entry[allergyIntolerance][+].fullUrl = "urn:uuid:allergy-penicillin-novakova-jana"
+* entry[allergyIntolerance][+].fullUrl = "urn:uuid:b63654b0-7876-4074-986b-24dd2fed4f1b"
 * entry[allergyIntolerance][=].resource = Allergy-Penicillin-Novakova-Jana
 
 * entry[procedure][+].fullUrl = "urn:uuid:9ac1fd24-6d6a-4d55-b6c0-5f8a6f2f5f31"
@@ -469,23 +473,23 @@ Usage: #example
 * entry[observation][+].fullUrl = "urn:uuid:49f3de6d-5b80-47fe-84c0-560037fd14a7"
 * entry[observation][=].resource = GynNaturalBirthJana-BirthOutcome
 
-* entry[medication][+].fullUrl = "urn:uuid:cc11aeb9-c765-4de4-8c69-31cb3235d40c"
+* entry[medication][+].fullUrl = "urn:uuid:65dff8dd-87a7-41cb-8a5a-d2b900098fb8"
 * entry[medication][=].resource = Medication-Ropivacaine-Epidural
-* entry[medication][+].fullUrl = "urn:uuid:95f86512-9ec4-4279-980b-f2fe885322e5"
+* entry[medication][+].fullUrl = "urn:uuid:d9cdb566-b6f7-4c3a-96e1-9748c93a738b"
 * entry[medication][=].resource = Medication-Fentanyl-Epidural
 
-* entry[medicationStatement][+].fullUrl = "urn:uuid:c8e815f2-e5fd-475e-93f6-c6f0f4f26609"
+* entry[medicationStatement][+].fullUrl = "urn:uuid:6f97d842-5ce8-4631-b52e-0b79723c7e31"
 * entry[medicationStatement][=].resource = MedicationStatement-Ropivacaine-Epidural-Jana
-* entry[medicationStatement][+].fullUrl = "urn:uuid:6f0a9df3-07b9-4f74-b4f2-a484494f0cf5"
+* entry[medicationStatement][+].fullUrl = "urn:uuid:0a98bc34-677a-4867-b903-461ac06939d5"
 * entry[medicationStatement][=].resource = MedicationStatement-Fentanyl-Epidural-Jana
-* entry[medicationAdministration][+].fullUrl = "urn:uuid:ba94ff27-e9eb-4b1f-b154-c62fc4836be8"
-* entry[medicationAdministration][=].resource = MedicationAdministration-Ropivacaine-Epidural-Jana
-* entry[medicationAdministration][+].fullUrl = "urn:uuid:7af3468d-a53e-4f29-94fd-b0f5d92f49b8"
-* entry[medicationAdministration][=].resource = MedicationAdministration-Fentanyl-Epidural-Jana
+//* entry[medicationAdministration][+].fullUrl = "urn:uuid:ba94ff27-e9eb-4b1f-b154-c62fc4836be8"
+//* entry[medicationAdministration][=].resource = MedicationAdministration-Ropivacaine-Epidural-Jana
+//* entry[medicationAdministration][+].fullUrl = "urn:uuid:7af3468d-a53e-4f29-94fd-b0f5d92f49b8"
+//* entry[medicationAdministration][=].resource = MedicationAdministration-Fentanyl-Epidural-Jana
 
 * entry[practitioner][+].fullUrl = "urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5"
 * entry[practitioner][=].resource = Practitioner-Novakova-Jana-Author
-* entry[practitioner][+].fullUrl = "urn:uuid:0f2a4a4e-ea00-4b8d-87cf-0f8ae2d1786a"
+* entry[practitioner][+].fullUrl = "urn:uuid:b1e65698-2b43-481d-b8f4-7ff6d8e81ada"
 * entry[practitioner][=].resource = Practitioner-NovakovaJana-GP
 * entry[practitioner][+].fullUrl = "urn:uuid:7f2542b8-afe3-4a30-8f4f-c2f6fd2c2f85"
 * entry[practitioner][=].resource = Practitioner-NovakovaJana-GYN
@@ -505,16 +509,16 @@ Usage: #example
 * entry[organization][=].resource = Organization-Brno-Hospital
 * entry[organization][+].fullUrl = "urn:uuid:2f823e1c-b1a5-42f8-9ba4-7df32768b2a7"
 * entry[organization][=].resource = Organization-Brno-Maternity
-* entry[+].fullUrl = "urn:uuid:loc-brno-hospital"
-* entry[=].resource = Location-Brno-Hospital
-* entry[+].fullUrl = "urn:uuid:loc-brno-maternity-ward"
-* entry[=].resource = Location-Brno-MaternityWard
-* entry[+].fullUrl = "urn:uuid:loc-brno-maternity-room-3"
-* entry[=].resource = Location-Brno-Maternity-Room3
-* entry[+].fullUrl = "urn:uuid:loc-brno-maternity-room-3-bed-01"
-* entry[=].resource = Location-Brno-Maternity-Room3-Bed01
-* entry[+].fullUrl = "urn:uuid:relatedperson-novak-petr-husband"
-* entry[=].resource = RelatedPerson-Novak-Petr-Husband
+* entry[location][+].fullUrl = "urn:uuid:6c2932f4-fe42-4aea-87b3-182ca2e3670e"
+* entry[location][=].resource = Location-Brno-Hospital
+* entry[location][+].fullUrl = "urn:uuid:0f4953dc-59db-4ada-b9b9-3d80ffc5c657"
+* entry[location][=].resource = Location-Brno-MaternityWard
+* entry[location][+].fullUrl = "urn:uuid:dffe5c17-dd39-40d7-9278-9cce85e2daa1"
+* entry[location][=].resource = Location-Brno-Maternity-Room3
+* entry[location][+].fullUrl = "urn:uuid:c2a20e75-20b6-48cc-b908-1be68597de1b"
+* entry[location][=].resource = Location-Brno-Maternity-Room3-Bed01
+* entry[relatedPerson][+].fullUrl = "urn:uuid:8f283107-54fe-4be4-801b-a535cd1e9e37"
+* entry[relatedPerson][=].resource = RelatedPerson-Novak-Petr-Husband
 
 
 

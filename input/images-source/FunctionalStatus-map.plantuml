@@ -13,9 +13,7 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "FunctionalStatus" <<LogicalModel>> [[StructureDefinition-FunctionalStatusCz.html]]
-note top #PaleTurquoise [[ConceptMap-hospitalStay2FHIR-cz-hdr.html]]
-Concept Map
-endnote
+
 class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
 "FunctionalStatus" <|. "composition-cz-hdr"
 class "ClinicalImpression" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/ClinicalImpression]]
