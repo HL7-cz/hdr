@@ -210,12 +210,6 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionPayers].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Payer: 111 (VZP), insurance number: 9355181234.</p></div>"""
 * section[sectionPayers].entry[+] = Reference(urn:uuid:8f9c2f14-1f69-4f2b-b4a8-8b7ca4db9f31)
 
-* section[sectionAllergies].title = "Alergie, intolerance a varování"
-* section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
-* section[sectionAllergies].text.status = #additional
-* section[sectionAllergies].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Alergie na penicilin, reakce: kožní vyrážka a otok rtů.</p></div>"""
-* section[sectionAllergies].entry[allergyIntolerance][0] = Reference(urn:uuid:b63654b0-7876-4074-986b-24dd2fed4f1b)
-
 * section[sectionPharmacotherapy].title = "Pharmacotherapy"
 * section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration.brief"
 * section[sectionPharmacotherapy].text.status = #additional

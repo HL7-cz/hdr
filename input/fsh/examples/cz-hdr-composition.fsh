@@ -289,26 +289,6 @@ Usage: #example
   </div>"""
 * section[sectionPatientHx].section[sectionFamilyHistory].text.status = #additional
 
-//Add section for social history
-* section[sectionPatientHx].section[sectionSocialHistory].title = "Sociální anamnéza"
-* section[sectionPatientHx].section[sectionSocialHistory].code.coding[0].system = "http://loinc.org"
-* section[sectionPatientHx].section[sectionSocialHistory].code.coding[0].code = #29762-2 // Corrected code assignment
-* section[sectionPatientHx].section[sectionSocialHistory].code.coding[0].display = "Social history note"
-* section[sectionPatientHx].section[sectionSocialHistory].text.div = """
-  <div xmlns="http://www.w3.org/1999/xhtml">
-  <p><strong>Společenské uplatnění</strong></p>
-    <p>Pracovní zapojení: Pacient pracuje jako programátor na plný úvazek v IT firmě.</p>
-    <p>Koníčky: Pacient aktivně sportuje (jezdí na kole a běhá) a má zájem o fotografování.</p>
-    <p>Sociální síť: Pacient má širokou sociální síť, pravidelně se setkává s přáteli a rodinou.</p>
-  <p><strong>Vzdělání</strong></p>
-    <p>Dosažený stupeň vzdělání: Pacient má vysokoškolské vzdělání v oboru informatiky.</p>
-  </div>"""
-* section[sectionPatientHx].section[sectionSocialHistory].text.status = #additional
-* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000022)
-* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000027)
-* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c)
-* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001d)
-
 //Add section for imunizations
 * section[sectionPatientHx].section[sectionImmunizations].title = "Očkování"
 * section[sectionPatientHx].section[sectionImmunizations].code.coding[0].system = "http://loinc.org"
@@ -652,8 +632,6 @@ Usage: #example
     <p>Doporučeno vyhnout se fyzické zátěži 4 týdny.</p>
   </div>"""
 * section[sectionDischargeDetails].section[sectionFunctionalStatus].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
-* section[sectionDischargeDetails].section[sectionFunctionalStatus].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000022)
-
 
 // Objective findings at discharge (subsection)
 * section[sectionDischargeDetails].section[sectionPhysicalExamination].text.status = #additional
@@ -794,10 +772,10 @@ Usage: #example
     <p>Dosažený stupeň vzdělání: Pacient má vysokoškolské vzdělání v oboru informatiky.</p>
   </div>"""
 * section[sectionPatientHx].section[sectionSocialHistory].text.status = #additional
-* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(Observation-Participation-in-society)
-* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(Observation-Education)
-* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(ExampleSdohSmokingEnded)
-* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(ExampleSdohAlcoholSporadic)
+* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000022)
+* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000027)
+* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c)
+* section[sectionPatientHx].section[sectionSocialHistory].entry[+] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001d)
 
 //Add section for imunizations
 * section[sectionPatientHx].section[sectionImmunizations].title = "Očkování"

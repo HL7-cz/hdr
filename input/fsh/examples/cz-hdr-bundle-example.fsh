@@ -283,10 +283,10 @@ Usage: #example
 //* entry[observation][=].resource = Observation-UZV-Novak
 * entry[observation][+].fullUrl = "urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b"
 * entry[observation][=].resource = Observation-CRP-Novak
-//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c"
-//* entry[observation][=].resource = ExampleSdohSmoking
-//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001d"
-//* entry[observation][=].resource = ExampleSdohAlcohol
+* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c"
+* entry[observation][=].resource = ExampleSdohSmoking
+* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001d"
+* entry[observation][=].resource = ExampleSdohAlcohol
 * entry[immunization][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001e"
 * entry[immunization][=].resource = Immunization
 * entry[deviceUseStatement][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001f"
@@ -305,8 +305,8 @@ Usage: #example
 * entry[observation][=].resource = Observation-Social-network
 //* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000026"
 //* entry[observation][=].resource = Observation-Education-level
-//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000027"
-//* entry[observation][=].resource = Observation-Education
+* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000027"
+* entry[observation][=].resource = Observation-Education
 * entry[organization][+].fullUrl = "urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
 * entry[organization][=].resource = Organization-1
 // Prezentovatelná forma dokumentu je součástí kompozice, zde by byla vložena duplicitně
@@ -440,9 +440,6 @@ Usage: #example
 
 * entry[coverage][+].fullUrl = "urn:uuid:8f9c2f14-1f69-4f2b-b4a8-8b7ca4db9f31"
 * entry[coverage][=].resource = Coverage-Novakova-Jana
-
-* entry[allergyIntolerance][+].fullUrl = "urn:uuid:b63654b0-7876-4074-986b-24dd2fed4f1b"
-* entry[allergyIntolerance][=].resource = Allergy-Penicillin-Novakova-Jana
 
 * entry[procedure][+].fullUrl = "urn:uuid:9ac1fd24-6d6a-4d55-b6c0-5f8a6f2f5f31"
 * entry[procedure][=].resource = GynNaturalBirthJana-DeliveryMethod
