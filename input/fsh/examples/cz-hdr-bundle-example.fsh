@@ -401,7 +401,7 @@ Usage: #example
 * entry[patient][+].fullUrl = "urn:uuid:48a9d440-4194-42c1-87ad-b5a39020a4d0" // ok
 * entry[patient][=].resource = Patient-Novak-Petr-L1
 * entry[practitionerRole][+].fullUrl = "urn:uuid:69d34ceb-b556-4f75-9e4c-9184fe8a10c5" // ok
-* entry[practitionerRole][=].resource = Practitioner-Author-detail
+* entry[practitionerRole][=].resource = cz-practitionerRole-L1
 * entry[practitioner][+].fullUrl = "urn:uuid:e234a53a-4e0d-4fb8-9403-e0e324a50f64" // ok
 * entry[practitioner][=].resource = Practitioner-Author-L1
 * entry[organization][+].fullUrl = "urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9" // ok útvar
