@@ -568,7 +568,7 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].code = $sct#425044008 "Physical exam section"
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text.status = #additional
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Součástí příjmového vyšetření bylo i UZ vyšetření na přístroji Samsung R7. Doplněno laboratorní vyšetření krevní skupiny: 0 RhD pozitivní.</p></div>"""
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry[+] = Reference(urn:uuid:e967fac7-ed30-44a2-8d7a-3ad35db9fff6)
+//* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry[+] = Reference(urn:uuid:e967fac7-ed30-44a2-8d7a-3ad35db9fff6)
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry[+] = Reference(urn:uuid:f432828d-fa44-4928-afa6-a248b126860b)
 * section[sectionHospitalCourse].title = "Průběh hospitalizace"
 * section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
@@ -714,8 +714,8 @@ Description: "Document bundle for story-based gynecology discharge report withou
 * entry[observation][=].resource = Observation-Story-Apgar5
 * entry[observation][+].fullUrl = "urn:uuid:d9e9d7df-a3fa-430a-9d19-38e8432c8803"
 * entry[observation][=].resource = Observation-Story-Apgar10
-* entry[observation][+].fullUrl = "urn:uuid:e967fac7-ed30-44a2-8d7a-3ad35db9fff6"
-* entry[observation][=].resource = Observation-Story-UZ
+//* entry[observation][+].fullUrl = "urn:uuid:e967fac7-ed30-44a2-8d7a-3ad35db9fff6"
+//* entry[observation][=].resource = Observation-Story-UZ 
 * entry[observation][+].fullUrl = "urn:uuid:f432828d-fa44-4928-afa6-a248b126860b"
 * entry[observation][=].resource = Observation-Story-BloodGroup
 * entry[medication][+].fullUrl = "urn:uuid:6910dd1a-deee-463a-b776-6ee3ca8bf7ed"

@@ -42,6 +42,7 @@ Alias: $specimen-container-device-r5 = http://hl7.org/fhir/5.0/StructureDefiniti
 Alias: $specimen-feature-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature
 Alias: $specimen-feature-type-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature.type
 Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
+Alias: $encounter-legalStatus = http://hl7.eu/fhir/StructureDefinition/encounter-legalStatus|0.1.1-ballot
 
 
 Alias: $ihe-ext-medication-device = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-device

@@ -9,9 +9,9 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 * insert ImposeProfile($Encounter-eu-hdr,0)
 
 * extension contains $note named note 0..*
-* extension[note] ^short = "Enconter note"
+* extension[note] ^short = "Encounter note"
 
-* extension contains EncounterLegalStatus named legalStatus 0..*
+* extension contains $encounter-legalStatus named legalStatus 0..*
 * extension[legalStatus] ^short = "Legal status/situation at admission"
 
 * status
