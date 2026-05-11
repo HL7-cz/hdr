@@ -141,7 +141,7 @@ Title: "HDR - GYNPOR - Indukce porodu / Labor induction"
 Description: "Labor induction by Prostin E2 due to labor stagnation."
 * id = "bac0a2d8-114c-4b1b-a65f-dff718f942b4"
 * status = #completed
-* code = $sct#398307005 "Indukce porodu"
+* code = $sct#398307005
 * subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 * performedPeriod.start = "2026-03-03T12:30:00+01:00"
 * performedPeriod.end = "2026-03-03T16:30:00+01:00"
@@ -337,7 +337,6 @@ Description: "Unverified allergy to Zinnat with vertigo."
 * patient = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #404640003
-* reaction[0].manifestation[0].coding[0].display = "Závrať"
 * reaction[0].description = "Vertigo"
 
 Instance: Allergy-Story-Environmental
