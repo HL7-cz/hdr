@@ -279,8 +279,8 @@ Usage: #example
 * entry[medicationDispense][=].resource = MedicationDispense-Paracetamol
 * entry[medicationDispense][+].fullUrl = "urn:uuid:b0001bf8-976a-4d7d-b192-8c8f0b2d4e3a"
 * entry[medicationDispense][=].resource = MedicationDispense-Ibalgin400
-* entry[observation][+].fullUrl = "urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a"
-* entry[observation][=].resource = Observation-UZV-Novak
+//* entry[observation][+].fullUrl = "urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a"
+//* entry[observation][=].resource = Observation-UZV-Novak
 * entry[observation][+].fullUrl = "urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b"
 * entry[observation][=].resource = Observation-CRP-Novak
 //* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c"
@@ -313,8 +313,8 @@ Usage: #example
 // proto jsou tyto dva řádky zakomentovány
 //* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
 //* entry[documentReference][=].resource = DischargeDocumenPDF
-* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eabb"
-* entry[provenance][=].resource = signature-L3
+//* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eabb"
+//* entry[provenance][=].resource = signature-L3
 * entry[flag][+].fullUrl = "urn:uuid:5a17a710-193e-4490-a627-7202925aa56e"
 * entry[flag][=].resource = Flag-malnutrition-Novak
 * entry[observation][+].fullUrl = "urn:uuid:8d2aea77-f576-4d0f-9508-537359aa44d6"
@@ -496,7 +496,7 @@ Usage: #example
 
 * entry[practitionerRole][+].fullUrl = "urn:uuid:25d8c868-5715-48bb-9d19-bbe294f7a8f6"
 * entry[practitionerRole][=].resource = PractitionerRole-NovakovaJana-GP
-* entry[practitionerRole][+].fullUrl = "urn:uuid:e5ef1313-3f47-4ae2-b5f2-6cedfb74a4f1"
+* entry[practitionerRole][+].fullUrl = "urn:uuid:17a26fdf-d36d-464b-b85b-f6f613bb62b4"
 * entry[practitionerRole][=].resource = PractitionerRole-NovakovaJana-GYN
 
 * entry[organization][+].fullUrl = "urn:uuid:6dbf2b1f-67f6-46c9-b1b7-f412aaadf2ba"

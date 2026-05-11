@@ -589,8 +589,8 @@ Usage: #example
     </ul>
   </div>"""
 * section[sectionSignificantResults].text.status = #additional
-* section[sectionSignificantResults].entry[0] = Reference(urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a) // Corrected Reference to include the resource type
-* section[sectionSignificantResults].entry[1] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b) // Corrected Reference to include the resource type
+//* section[sectionSignificantResults].entry[0] = Reference(urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a) // Corrected Reference to include the resource type
+* section[sectionSignificantResults].entry[0] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b) // Corrected Reference to include the resource type
 
 // Sekce Implantáty a zdravotní pomůcky
 * section[sectionMedicalDevices].title = "Zdravotní pomůcky a implantáty"

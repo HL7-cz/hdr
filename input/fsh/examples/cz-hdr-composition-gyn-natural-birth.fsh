@@ -169,6 +169,7 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * extension[presentedForm].valueAttachment = cz-pdfgynnatural-example
 
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:b1e65698-2b43-481d-b8f4-7ff6d8e81ada)
+* extension[information-recipient][+].valueReference = Reference(urn:uuid:7f2542b8-afe3-4a30-8f4f-c2f6fd2c2f85)
 
 * section[sectionHospitalCourse].title = "Průběh hospitalizace"
 * section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
