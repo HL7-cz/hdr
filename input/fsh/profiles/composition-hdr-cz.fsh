@@ -180,7 +180,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
       $loinc#48765-2 )   // CODE
   * entry 1..
   * entry only Reference(CZ_AllergyIntoleranceHdr or DocumentReference or AllergyIntolerance)
-  * insert SectionEntrySliceComRules(Relevant allergies or intolerances (conditions\) for that patient.,
+  * insert SectionEntrySlicePerProfileRules(Relevant allergies or intolerances (conditions\) for that patient.,
     It lists the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available\, or that no allergies are known .)
   // entry slices
   * insert SectionEntrySliceDefRules (allergyIntolerance, 0.. , Allergy entry, Allergy entry, CZ_AllergyIntoleranceHdr)
@@ -236,7 +236,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
      or CZ_ConditionHdr
      or CZ_PatientCore
   )
-  * insert SectionEntrySliceComRules(
+  * insert SectionEntrySlicePerProfileRules(
       Delivery-related entries / Polozky vztahujici se k porodu,
       Structured entries for delivery method\, induction\, birth injury\, newborn and related observations / Strukturovane polozky pro zpusob porodu\, indukci\, porodni poraneni\, novorozence a souvisejici pozorovani.)
   * insert SectionEntrySliceDefRules (deliveryProcedure, 0..*,
@@ -260,9 +260,9 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * insert SectionEntrySliceDefRules (apgarScore, 0..*,
       APGAR score observation / APGAR skore, APGAR score observation / APGAR skore,
       CZ_ObservationApgarScore)
-  * insert SectionEntrySliceDefRules (deliveryObservation, 0..*,
-      Other delivery observations / Ostatni pozorovani k porodu, Other delivery observations / Ostatni pozorovani k porodu,
-      Observation)
+//  * insert SectionEntrySliceDefRules (deliveryObservation, 0..*,
+//      Other delivery observations / Ostatni pozorovani k porodu, Other delivery observations / Ostatni pozorovani k porodu,
+//      Observation)
   * insert SectionEntrySliceDefRules (newborn, 0..*,
       Newborn patient / Novorozenec, Newborn patient / Novorozenec,
       CZ_PatientCore)
@@ -314,7 +314,7 @@ Medicinal products\, the administration of which was started during hospitalisat
 $loinc#87232-5 ) // 	Medication administration.brief
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
   * entry 0..
-  * entry only Reference(CZ_MedicationDispenseHdr or CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_Medication)  //or MedicationDispense or MedicationAdministration)
+  * entry only Reference(CZ_MedicationDispenseHdr or CZ_MedicationStatement or CZ_MedicationRequestHdr or MedicationAdministrationEuHdr)  //or MedicationDispense or MedicationAdministration)
 
 
 * section contains sectionSignificantResults 0..1
@@ -625,7 +625,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge,
     $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital discharge medications Narrative" or 	Discharge medications Narrative
   * entry 1..
-  * entry only Reference  (CZ_MedicationStatement or CZ_MedicationRequestHdr) //(CZ_MedicationRequestHdr or MedicationDispense)
+  * entry only Reference  (CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_MedicationDispenseHdr) //(CZ_MedicationRequestHdr or MedicationDispense)
 
 // -------------------------------------
 // Discharge Instructions Section 0 … 1

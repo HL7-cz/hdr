@@ -10,6 +10,7 @@ Description: "Příklad gynekologické propouštěcí zprávy po spontánním va
 * author[0] = Reference(urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5)
 * subject = Reference(Mracena2)
 * encounter = Reference(CZ-Encounter-HDR-Example)
+* extension[presentedForm].valueAttachment = cz-pdfgynnatural-example
 
 * section[sectionHospitalCourse].title = "Průběh hospitalizace"
 * section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
@@ -17,7 +18,7 @@ Description: "Příklad gynekologické propouštěcí zprávy po spontánním va
 * section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Hospitalizace pro spontánně proběhlý porod v termínu, bez závažných komplikací.</p></div>"""
 
 * section[sectionHospitalCourse].section[sectionDelivery].title = "Porod"
-* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "Delivery note"
+* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "Labor and delivery process Narrative"
 * section[sectionHospitalCourse].section[sectionDelivery].text.status = #additional
 * section[sectionHospitalCourse].section[sectionDelivery].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Porod dne 18.05.2025 v 10:46, spontánní vaginální, novorozenec mužského pohlaví, 3210 g, 49 cm, Apgar 10-10-10.</p></div>"""
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(GynNaturalBirth-DeliveryMethod)
@@ -30,12 +31,12 @@ Description: "Příklad gynekologické propouštěcí zprávy po spontánním va
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(Patient-Novak-Petr)
 
 * section[sectionPatientHx].title = "Anamnéza"
-* section[sectionPatientHx].code = $loinc#35090-0 "Patient history note"
+* section[sectionPatientHx].code = $loinc#35090-0 "Patient history"
 * section[sectionPatientHx].text.status = #additional
 * section[sectionPatientHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gynekologická anamnéza: gravidita/parita 2/2, gestační stáří při porodu 39+6.</p></div>"""
 
 * section[sectionPatientHx].section[sectionPregnancyHx].title = "Těhotenská anamnéza"
-* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies"
+* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies Narrative"
 * section[sectionPatientHx].section[sectionPregnancyHx].text.status = #additional
 * section[sectionPatientHx].section[sectionPregnancyHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gestační stáří 39+6, gravidita 2, parita 2, singleton gravidita.</p></div>"""
 * section[sectionPatientHx].section[sectionPregnancyHx].entry[gestationalAge][+] = Reference(GynNaturalBirth-GestationalAgeAtDelivery)
@@ -162,9 +163,13 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * type = $loinc#34105-7 "Hospital Discharge summary"
 * title = "Gynekologická propouštěcí zpráva - spontánní vaginální porod (Jana Nováková)"
 * date = "2025-05-20T11:30:00+02:00"
-* author[0] = Reference(Practitioner-Novakova-Jana-Author)
-* subject = Reference(Patient-Novakova-Jana)
-* encounter = Reference(HospitalEncounter-Novakova-Jana)
+* author[0] = Reference(urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5)
+* subject = Reference(urn:uuid:6c4f4d2c-5f24-4a91-a75e-1b0e2a1f7731)
+* encounter = Reference(urn:uuid:7d7a6f19-5dfb-45ee-8bcf-0f63d9fe49f2)
+* extension[presentedForm].valueAttachment = cz-pdfgynnatural-example
+
+* extension[information-recipient][+].valueReference = Reference(urn:uuid:b1e65698-2b43-481d-b8f4-7ff6d8e81ada)
+* extension[information-recipient][+].valueReference = Reference(urn:uuid:7f2542b8-afe3-4a30-8f4f-c2f6fd2c2f85)
 
 * section[sectionHospitalCourse].title = "Průběh hospitalizace"
 * section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
@@ -172,7 +177,7 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Hospitalizace pro spontánní porod v termínu, bez závažných komplikací.</p></div>"""
 
 * section[sectionHospitalCourse].section[sectionDelivery].title = "Porod"
-* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "Delivery note"
+* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "Labor and delivery process Narrative"
 * section[sectionHospitalCourse].section[sectionDelivery].text.status = #additional
 * section[sectionHospitalCourse].section[sectionDelivery].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Porod dne 18.05.2025 v 10:46, spontánní vaginální, bez indukce, analgezie EDA (ropivakain + fentanyl), novorozenec mužského pohlaví, 3210 g, 49 cm, Apgar 10-10-10. Mateřské poranění: epiziotomie mediolaterální.</p></div>"""
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(urn:uuid:9ac1fd24-6d6a-4d55-b6c0-5f8a6f2f5f31)
@@ -187,11 +192,11 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(urn:uuid:b7e6c8a1-4a8d-4d9f-8f69-df4f210cb2d7)
 
 * section[sectionPatientHx].title = "Anamnéza"
-* section[sectionPatientHx].code = $loinc#35090-0 "Patient history note"
+* section[sectionPatientHx].code = $loinc#35090-0 "Patient history"
 * section[sectionPatientHx].text.status = #additional
 * section[sectionPatientHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gynekologická anamnéza: prvorodička, gravidita/parita 1/1, gestační stáří při porodu 39+6.</p></div>"""
 * section[sectionPatientHx].section[sectionPregnancyHx].title = "Těhotenská anamnéza"
-* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies"
+* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies Narrative"
 * section[sectionPatientHx].section[sectionPregnancyHx].text.status = #additional
 * section[sectionPatientHx].section[sectionPregnancyHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gestační stáří 39+6, prvorodička, gravidita 1, parita 1, singleton gravidita.</p></div>"""
 * section[sectionPatientHx].section[sectionPregnancyHx].entry[gestationalAge][+] = Reference(urn:uuid:810c3a4f-c29d-4ce4-8ba0-a7cbbf37ef89)
@@ -205,18 +210,10 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionPayers].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Payer: 111 (VZP), insurance number: 9355181234.</p></div>"""
 * section[sectionPayers].entry[+] = Reference(urn:uuid:8f9c2f14-1f69-4f2b-b4a8-8b7ca4db9f31)
 
-* section[sectionAllergies].title = "Alergie, intolerance a varování"
-* section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
-* section[sectionAllergies].text.status = #additional
-* section[sectionAllergies].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Alergie na penicilin, reakce: kožní vyrážka a otok rtů.</p></div>"""
-* section[sectionAllergies].entry[allergyIntolerance][+] = Reference(b63654b0-7876-4074-986b-24dd2fed4f1b)
-
 * section[sectionPharmacotherapy].title = "Pharmacotherapy"
-* section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration brief"
+* section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration.brief"
 * section[sectionPharmacotherapy].text.status = #additional
 * section[sectionPharmacotherapy].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Porodní analgezie: epidurální podání ropivakainu s malou dávkou fentanylu během porodu.</p></div>"""
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:65dff8dd-87a7-41cb-8a5a-d2b900098fb8)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:d9cdb566-b6f7-4c3a-96e1-9748c93a738b)
 * section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:6f97d842-5ce8-4631-b52e-0b79723c7e31)
 * section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:0a98bc34-677a-4867-b903-461ac06939d5)
 
@@ -226,10 +223,10 @@ Usage: #example
 Description: "Ropivakain použitý pro epidurální porodnickou analgezii. / Ropivacaine used for epidural labor analgesia."
 * id = "65dff8dd-87a7-41cb-8a5a-d2b900098fb8"
 * status = #active
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "0299001"
-* code.coding[0].system = "http://www.whocc.no/atc"
-* code.coding[0].code = #N01BB09
+* code.coding[0].system = $dlp_lec_pripravky
+* code.coding[0].code = #0242456
 * code.coding[0].display = "Ropivacaine"
 * code.text = "Ropivakain epiduralni roztok"
 
@@ -239,10 +236,10 @@ Usage: #example
 Description: "Fentanyl použitý jako adjuvans při epidurální porodnické analgezii. / Fentanyl used as adjuvant in epidural labor analgesia."
 * id = "d9cdb566-b6f7-4c3a-96e1-9748c93a738b"
 * status = #active
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "0299002"
-* code.coding[0].system = "http://www.whocc.no/atc"
-* code.coding[0].code = #N01AH01
+* code.coding[0].system = $dlp_lec_pripravky
+* code.coding[0].code = #0024845
 * code.coding[0].display = "Fentanyl"
 * code.text = "Fentanyl pro epiduralni analgezii"
 
@@ -252,7 +249,7 @@ Usage: #example
 Description: "Epidurální podání ropivakainu během porodu. / Epidural administration of ropivacaine during labor."
 * id = "6f97d842-5ce8-4631-b52e-0b79723c7e31"
 * status = #completed
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "0299001"
 * subject = Reference(urn:uuid:6c4f4d2c-5f24-4a91-a75e-1b0e2a1f7731)
 * medicationReference = Reference(urn:uuid:65dff8dd-87a7-41cb-8a5a-d2b900098fb8)
@@ -272,7 +269,7 @@ Usage: #example
 Description: "Epidurální podání fentanylu jako adjuvans během porodnické analgezie. / Epidural fentanyl adjuvant during labor analgesia."
 * id = "0a98bc34-677a-4867-b903-461ac06939d5"
 * status = #completed
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "0299002"
 * subject = Reference(urn:uuid:6c4f4d2c-5f24-4a91-a75e-1b0e2a1f7731)
 * medicationReference = Reference(urn:uuid:d9cdb566-b6f7-4c3a-96e1-9748c93a738b)
@@ -348,6 +345,7 @@ Description: "Příklad observace porodní hmotnosti novorozence v případě Ja
 * id = "3c2dd8f5-58b4-4cc2-a4d7-72ca2f1fbc18"
 * subject = Reference(urn:uuid:b7e6c8a1-4a8d-4d9f-8f69-df4f210cb2d7)
 * valueQuantity = 3210 'g' "g"
+* effectiveDateTime = "2025-05-18T10:46:00+02:00"
 * performer = Reference(urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5)
 
 Instance: GynNaturalBirthJana-BirthLength
@@ -357,6 +355,7 @@ Description: "Příklad observace porodní délky novorozence v případě Jany 
 * id = "cf6608f4-7e10-4c50-9a2a-78511d95b5be"
 * subject = Reference(urn:uuid:b7e6c8a1-4a8d-4d9f-8f69-df4f210cb2d7)
 * valueQuantity = 49 'cm' "cm"
+* effectiveDateTime = "2025-05-18T10:46:00+02:00"
 * performer = Reference(urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5)
 
 Instance: GynNaturalBirthJana-BirthInjury
@@ -377,8 +376,8 @@ InstanceOf: CZ_AllergyIntoleranceHdr
 Usage: #example
 Description: "Alergie pacientky na penicilin s kožní vyrážkou a otokem rtů. / Patient allergy to penicillin with skin rash and lip swelling."
 * id = "b63654b0-7876-4074-986b-24dd2fed4f1b"
-* identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
-* identifier[0].value = "Allergy-Penicillin-Novakova-Jana-001"
+* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+* identifier[=].value = "allergy-2"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Alergie na penicilin - kožní vyrážka, otok rtů.</p></div>"
 * clinicalStatus = $allergyintolerance-clinical#active
@@ -391,10 +390,8 @@ Description: "Alergie pacientky na penicilin s kožní vyrážkou a otokem rtů.
 * patient = Reference(urn:uuid:6c4f4d2c-5f24-4a91-a75e-1b0e2a1f7731)
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #271807003
-* reaction[0].manifestation[0].coding[0].display = "vyrážka"
 * reaction[0].manifestation[1].coding[0].system = $sct
 * reaction[0].manifestation[1].coding[0].code = #267038008
-* reaction[0].manifestation[1].coding[0].display = "Edema (finding)"
 * reaction[0].description = "Kožní vyrážka, otok rtů."
 
 Instance: GynNaturalBirthJana-BirthOutcome
@@ -487,3 +484,13 @@ Description: "Příklad APGAR skóre novorozence Jany Novákové v 10. minutě. 
 * effectiveDateTime = "2025-05-18T10:56:00+02:00"
 * valueInteger = 10
 * performer = Reference(urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5)
+
+Instance: cz-pdfgynnatural-example
+InstanceOf: Attachment
+Usage: #inline
+Description: "Attachment for Natural Birth"
+* contentType = #application/pdf
+* language = #cs
+* data = "JVBERi0xLjQKJebkw7zUHzExIDAgb2JqCjw8L1R5cGUvQ2F0YWxvZy9QYWdlcyAyIDAgUj4+CmVuZG9iagoyIDAgb2JqCjw8L1R5cGUvUGFnZXMvQ291bnQgMS9LaWRzWzMgMCBSXT4+CmVuZG9iagozIDAgb2JqCjw8L1R5cGUvUGFnZS9QYXJlbnQgMiAwIFIvTWVkaWFCb3hbMCAwIDU5NSA4NDJdL0NvbnRlbnRzIDQgMCBSL1Jlc291cmNlcyA1IDAgUj4+CmVuZG9iago0IDAgb2JqCjw8L0xlbmd0aCAzOTM+PnN0cmVhbQpCVAovRjEgMTggVGYKNTAgODAwIFRkCihHcm91cHVkbyBtZWRpY2FsIHpwcmF2YSAtIFByb3BvdXN0ZWNpIHpwcmF2YSkgVGoKMCAtMjAgVGQKKEYyIDEyIFRmCihQYWNpZW50a2E6IEphbmEgTm92YWtvdmEsIG5hci4gMTguMDUuMTk5MykgVGoKMCAtMjAgVGQKKERpYWdub3phOiBPODAuMCAtIFNwb250YW5uaSB2YWdpbmFsbGkgcG9yb2QpIFRqCjAgLTIwIFRkCihQcnViZWNoOiBCZXoga29tcGxpa2FjaSwgcG9kYW5hIEVEQSAoUm9waXZha2FpbiwgRmVudGFueWwpLikgVGoKMCAtMjAgVGQKKE5vdm9yb3plbmVjOiBKYW4gTm92YWssIG5hci4gMTguMDUuMjAyNSwgMzIxMCBnKSBUbwowIC00MCBUZAooRG9wb3J1Y2VuaSkgVGoKMCAtMTUgVGQKKC0gS29udHJvbGEgdSBvYnZvZG5paG8gZ3luZWtvbG9nYSBwbyBzZXN0aW5lZGVsaSkgVGoKMCAtMTUgVGQKKC0gSHpnaWVuaWNreSByZXppbSBhIHBlY2UgcG8gZXBpemlvdG9taWkpIFRqCkVUCmVuZHN0cmVhbQplbmRvYmoKNSAwIG9iago8PC9Gb250PDwvRjEgNiAwIFIvRjIgNyAwIFI+Pj4+CmVuZG9iago2IDAgb2JqCjw8L1R5cGUvRm9udC9TdWJ0eXBlL1R5cGUxL0Jhc2VGb250L0hlbHZldGljYS1Cb2xkPj4KZW5kb2JqCjcgIDAgb2JqCjw8L1R5cGUvRm9udC9TdWJ0eXBlL1R5cGUxL0Jhc2VGb250L0hlbHZldGljYT4+CmVuZG9iagp4cmVmCjAgOAowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMDkgMDAwMDAgbiAKMDAwMDAwMDA1OCAwMDAwMCBuIAowMDAwMDAwMTE1IDA0MDAwIG4gCjAwMDAwMDAyMTkgMDAwMDAgbiAKMDAwMDAwMDY2MiAwMDAwMCBuIAowMDAwMDAwNzE0IDAwMDAwIG4gCjAwMDAwMDA3OTAgMDAwMDAgbiAKdHJhaWxlcgo8PC9TaXplIDgvUm9vdCAxIDAgUj4+CnN0YXJ0eHJlZgo4NjMKJSVFT0YK"
+* title = "Natural Birth - Jana Nováková"
+* creation = "2025-05-20T12:02:00+01:00"

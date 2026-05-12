@@ -234,7 +234,7 @@ RuleSet: PatientHxSubsectionRules
     HDR Pregnancy History Section,
       This section SHALL summarize pregnancy history relevant for continuity of care in the hospital discharge report. For obstetric discharge this section SHALL support documenting key maternal pregnancy parameters used for post-discharge follow-up. / Tato sekce SHALL shrnovat tehotenskou anamnezu relevantni pro kontinuitu pece v propousteci zprave. Pro gynekologickou propousteci zpravu tato sekce SHALL podporovat zaznam klicovych parametru matky pro naslednou peci.
       ,  http://loinc.org#10162-6  )   // CODE
-  * insert SectionEntrySliceComRules(Current pregnancy status and where relevant information about the outcome of earlier pregnancies / Aktualni stav tehotenstvi a podle relevance informace o vysledku drivejsich tehotenstvi,
+  * insert SectionEntrySlicePerProfileRules(Current pregnancy status and where relevant information about the outcome of earlier pregnancies / Aktualni stav tehotenstvi a podle relevance informace o vysledku drivejsich tehotenstvi,
     This section SHALL contain pregnancy status information. It MAY contain additional summarizing information about outcomes of earlier pregnancies and related obstetric parameters such as gravidity parity gestational age at delivery and multiple pregnancy. / Tato sekce SHALL obsahovat informaci o stavu tehotenstvi. MAY obsahovat i doplnujici souhrnne informace o vysledcich drivejsich tehotenstvi a souvisejicich porodnickych parametrech jako gravidita parita gestacni stari pri porodu a vicecetne tehotenstvi.)
   * insert SectionEntrySliceDefRules (pregnancyStatus, 0..*,
     Current pregnancy status / Aktualni stav tehotenstvi, Current pregnancy status / Aktualni stav tehotenstvi,

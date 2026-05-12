@@ -304,7 +304,7 @@ Description: "General practitioner's office"
 //-----------------------------------------------------
 Instance: RegisteringProviderExample-gynecology
 InstanceOf: CZ_OrganizationCore
-Title: "Organization: Registering healthcare provider example"
+Title: "Organization: Registering healthcare provider example gynecology"
 Description: "Example of registering healthcare provider"
 Usage: #example
 * id = "6dbf2b1f-67f6-46c9-b1b7-f412aaadf2ba"
@@ -599,7 +599,7 @@ Description: "Participant UZV HDR"
 
 Instance: signature-L1
 InstanceOf: CZ_Provenance
-Title: "Signature of image order"
+Title: "Signature of hospital discharge report for document"
 Usage: #example
 Description: "Czech national profile on Signature holds an electronic representation of a signature or timestamp and its supporting context in a FHIR accessible form."
 * id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eaab"
@@ -645,7 +645,7 @@ Description: "Maternity department of the fictional Brno hospital."
 * identifier[+].system = $cz-organization-icp
 * identifier[=].value = "62010123"
 * name = "Porodni oddeleni - Mestska nemocnice Brno"
-* partOf = Reference(Organization-Brno-Hospital)
+* partOf = Reference(urn:uuid:d4545f84-0d58-4f6f-a50a-2f2ea2ea4dc4)
 * telecom.system = #phone
 * telecom.value = "+420543111333"
 * telecom.use = #work

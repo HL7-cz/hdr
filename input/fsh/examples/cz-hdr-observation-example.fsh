@@ -190,7 +190,7 @@ Description: "Czech HDR - example of CRP observation for Novák Petr"
 * id = "10f5c49e-086d-4016-8dd1-10000000001b"
 * status = #final
 * category[laboratory] = $observation-category#laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
-* category[studyType] = $loinc#26436-6 "Laboratorní studie" 
+* category[studyType] = $loinc#26436-6 "Laboratory studies (set)" 
 * code = $nclp#07830 "Protein C - kontrola (P; rel. čas [1] *)"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2025-03-01T10:00:00+01:00"

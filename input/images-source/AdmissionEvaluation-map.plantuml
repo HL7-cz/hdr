@@ -12,7 +12,7 @@ legend right
 | <#APPLICATION>  Logical Model |
 | <#TECHNOLOGY>  Profile |
 endlegend
-class "AdmissionEvaluation" <<LogicalModel>> [[StructureDefinition-LmAdmissionEvaluationCz.html]]
+class "AdmissionEvaluation" <<LogicalModel>> [[StructureDefinition-AdmissionEvaluationEhnEn.html]]
 
 class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
 "AdmissionEvaluation" <|. "composition-cz-hdr"

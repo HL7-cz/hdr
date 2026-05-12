@@ -147,7 +147,7 @@ Description: "Czech HDR - example of a Procedure - Repair of inguinal hernia"
 
 Instance: Procedure-Insert-Pacemaker2
 InstanceOf: CZ_ProcedureHdr
-Title: "CZ-Procedure-HDR Example - Pacemaker"
+Title: "CZ-Procedure-HDR Example - Pacemaker 2"
 Usage: #example
 Description: "Czech HDR - example of a Procedure - Pacemaker"
 

@@ -105,7 +105,7 @@ Usage: #example
 //--------------------------------------------
 Instance: Location-Chrudim-Chir1
 InstanceOf: CZ_LocationCore
-Title: "Sample Czech Location 2"
+Title: "Sample Czech Location Chrudim Chir1"
 Description: "Example instance of a location conforming to the CZ_LocationCore profile."
 Usage: #example
 
@@ -126,7 +126,7 @@ Usage: #example
 
 Instance: Location-Chrudim-ChirJIP
 InstanceOf: CZ_LocationCore
-Title: "Sample Czech Location 2"
+Title: "Sample Czech Location Chrudim JIP"
 Description: "Example instance of a location conforming to the CZ_LocationCore profile."
 Usage: #example
 
@@ -155,7 +155,7 @@ Usage: #example
 * status = #active
 * name = "Mestska nemocnice Brno"
 * description = "Hlavni areal Mestske nemocnice Brno"
-* managingOrganization = Reference(Organization-Brno-Hospital)
+* managingOrganization = Reference(urn:uuid:d4545f84-0d58-4f6f-a50a-2f2ea2ea4dc4)
 * telecom[0].system = #phone
 * telecom[0].value = "+420543111222"
 * telecom[0].use = #work
@@ -178,8 +178,8 @@ Usage: #example
 * status = #active
 * name = "Porodni oddeleni"
 * description = "Porodni oddeleni - Mestska nemocnice Brno"
-* managingOrganization = Reference(Organization-Brno-Maternity)
-* partOf = Reference(Location-Brno-Hospital)
+* managingOrganization = Reference(urn:uuid:2f823e1c-b1a5-42f8-9ba4-7df32768b2a7)
+* partOf = Reference(urn:uuid:6c2932f4-fe42-4aea-87b3-182ca2e3670e)
 * partOf.display = "Mestska nemocnice Brno"
 * physicalType = $locationType#wa
 
@@ -192,8 +192,8 @@ Usage: #example
 * status = #active
 * name = "Pokoj 3"
 * description = "Pokoj 3 na porodni oddeleni"
-* managingOrganization = Reference(Organization-Brno-Maternity)
-* partOf = Reference(Location-Brno-MaternityWard)
+* managingOrganization = Reference(urn:uuid:2f823e1c-b1a5-42f8-9ba4-7df32768b2a7)
+* partOf = Reference(urn:uuid:0f4953dc-59db-4ada-b9b9-3d80ffc5c657)
 * partOf.display = "Porodni oddeleni"
 * physicalType = $locationType#ro
 
@@ -206,7 +206,7 @@ Usage: #example
 * status = #active
 * name = "Luzko 01"
 * description = "Luzko 01, pokoj 3, porodni oddeleni"
-* managingOrganization = Reference(Organization-Brno-Maternity)
-* partOf = Reference(Location-Brno-Maternity-Room3)
+* managingOrganization = Reference(urn:uuid:2f823e1c-b1a5-42f8-9ba4-7df32768b2a7)
+* partOf = Reference(urn:uuid:dffe5c17-dd39-40d7-9278-9cce85e2daa1)
 * partOf.display = "Pokoj 3"
 * physicalType = $locationType#bd

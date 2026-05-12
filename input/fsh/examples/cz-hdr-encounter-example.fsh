@@ -106,7 +106,7 @@ Description: "Czech HDR - example of encounter with emergency priority"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * period.start = "2025-03-01T10:15:00+01:00"
 * period.end = "2025-03-10T09:30:00+01:00"
-* serviceProvider = Reference(urn:uuid:4f5f6b0d-f1a6-4ff0-9457-5ddd2117e9d9)
+* serviceProvider = Reference(urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9)
 // Reason for encounter
 * reasonReference = Reference(urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2)
 * hospitalization.admitSource.coding[0].system = $admit-source
@@ -163,10 +163,10 @@ Description: "Czech HDR - example of encounter for Jana Novakova after spontaneo
 * class.code = #IMP
 * class.system = $cz-encounter-typ-kontaktu
 * class.display = "inpatient encounter"
-* subject = Reference(Patient-Novakova-Jana)
+* subject = Reference(urn:uuid:6c4f4d2c-5f24-4a91-a75e-1b0e2a1f7731)
 * period.start = "2025-05-17T06:20:00+02:00"
 * period.end = "2025-05-20T11:30:00+02:00"
-* serviceProvider = Reference(Organization-Brno-Maternity)
+* serviceProvider = Reference(urn:uuid:2f823e1c-b1a5-42f8-9ba4-7df32768b2a7)
 * hospitalization.admitSource.coding[0].system = $admit-source
 * hospitalization.admitSource.coding[0].code = #outp
 * hospitalization.admitSource.coding[0].display = "From outpatient department"
@@ -176,16 +176,16 @@ Description: "Czech HDR - example of encounter for Jana Novakova after spontaneo
 * hospitalization.dischargeDisposition.coding[0].system = $discharge-disposition
 * hospitalization.dischargeDisposition.coding[0].code = #home
 * hospitalization.dischargeDisposition.coding[0].display = "Home"
-* participant[0].individual = Reference(Practitioner-Novakova-Jana-Author)
+* participant[0].individual = Reference(urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5)
 * participant[0].type.coding[0].system = $v3-ParticipationType
 * participant[0].type.coding[0].code = #ADM
 * participant[0].type.coding[0].display = "Admitter"
-* location[0].location = Reference(Location-Brno-MaternityWard)
+* location[0].location = Reference(urn:uuid:0f4953dc-59db-4ada-b9b9-3d80ffc5c657)
 * location[0].period.start = "2025-05-17T06:20:00+02:00"
 * location[0].period.end = "2025-05-18T09:00:00+02:00"
-* location[1].location = Reference(Location-Brno-Maternity-Room3)
+* location[1].location = Reference(urn:uuid:dffe5c17-dd39-40d7-9278-9cce85e2daa1)
 * location[1].period.start = "2025-05-18T09:00:00+02:00"
 * location[1].period.end = "2025-05-20T10:00:00+02:00"
-* location[2].location = Reference(Location-Brno-Maternity-Room3-Bed01)
+* location[2].location = Reference(urn:uuid:c2a20e75-20b6-48cc-b908-1be68597de1b)
 * location[2].period.start = "2025-05-18T09:10:00+02:00"
 * location[2].period.end = "2025-05-19T18:00:00+02:00"

@@ -230,13 +230,14 @@ Description: "Example of a condition Postmenopausal osteoporosis"
 * clinicalStatus.coding[0].code = #active // Corrected code assignment
 * verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * verificationStatus.coding[0].code = #confirmed // Corrected code assignment
-* category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
+//* category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-category"
+//* category[0].coding[0].code = #encounter-diagnosis // Corrected code assignment
 * code.coding[0].system = "http://hl7.org/fhir/sid/icd-10"
 * code.coding[0].code = #M81.0 // Corrected code assignment
 * code.coding[0].display = "Postmenopausal osteoporosis"
 * code.text = "Osteopor\u00f3za bez patologick\u00e9 fraktury"
 * subject = Reference(Mracena2)
+* category[0] = $condition-category#encounter-diagnosis "Encounter Diagnosis"
 * category[1] = $sct#278307001 "On admission"
 * category[2] = $sct#25265005 "Did not receive therapy or drug for"
 
@@ -288,7 +289,7 @@ Description: "Example of a condition Presbycusis"
 Instance: Condition-E890-Novak
 InstanceOf: CZ_ConditionHdr
 Usage: #example
-Title: "CZ-Condition-HDR Example 3"
+Title: "CZ-Condition-HDR Example E890 for patient Novak"
 Description: "Czech HDR - example of a condition (Postoperative Hypothyroidism)"
 * id = "fdf9e92d-ac48-4706-b15b-d2eaca85f45f"
 * clinicalStatus = $condition-clinical#active

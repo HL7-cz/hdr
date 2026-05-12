@@ -141,7 +141,7 @@ Title: "HDR - GYNPOR - Indukce porodu / Labor induction"
 Description: "Labor induction by Prostin E2 due to labor stagnation."
 * id = "bac0a2d8-114c-4b1b-a65f-dff718f942b4"
 * status = #completed
-* code = $sct#398307005 "Indukce porodu"
+* code = $sct#398307005
 * subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 * performedPeriod.start = "2026-03-03T12:30:00+01:00"
 * performedPeriod.end = "2026-03-03T16:30:00+01:00"
@@ -270,6 +270,8 @@ Description: "Newborn birth weight."
 * id = "73f44a2f-9cfd-4b56-b1df-b6898b7a8da3"
 * subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 * valueQuantity = 3200 'g' "g"
+* effectiveDateTime = "2026-03-03T17:14:00+01:00"
+* performer = Reference(urn:uuid:5cbed9dd-df97-46ee-974d-8bf34ef30efd)
 
 Instance: Observation-Story-BirthLength
 InstanceOf: CZ_ObservationBirthLength
@@ -279,6 +281,7 @@ Description: "Newborn birth length."
 * id = "55a402b2-f4af-4904-b01b-0f0953335d85"
 * subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 * valueQuantity = 50 'cm' "cm"
+* effectiveDateTime = "2026-03-03T17:14:00+01:00"
 * performer = Reference(urn:uuid:c02be8d5-83a2-466b-aa82-089088b1abf7)
 
 Instance: Observation-Story-Apgar1
@@ -326,15 +329,14 @@ Usage: #example
 Title: "HDR - GYNPOR - Alergie na Zinnat / Zinnat allergy"
 Description: "Unverified allergy to Zinnat with vertigo."
 * id = "ff3372f1-0189-457f-8368-aa28e36df796"
-* identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
-* identifier[0].value = "Allergy-Story-Zinnat-001"
+* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+* identifier[=].value = "allergy-2"
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = $allergyintolerance-verification#unconfirmed
 * code.text = "Zinnat"
 * patient = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 * reaction[0].manifestation[0].coding[0].system = $sct
 * reaction[0].manifestation[0].coding[0].code = #404640003
-* reaction[0].manifestation[0].coding[0].display = "Závrať"
 * reaction[0].description = "Vertigo"
 
 Instance: Allergy-Story-Environmental
@@ -343,8 +345,8 @@ Usage: #example
 Title: "HDR - GYNPOR - Alergie na trávy, prach a pyl / Environmental allergies"
 Description: "Unverified environmental allergies: grass, dust, pollen."
 * id = "26be4e8d-b6bc-4b61-a4ff-87641d9aa789"
-* identifier[0].system = "urn:oid:1.2.203.24341.1.1.999"
-* identifier[0].value = "Allergy-Story-Environmental-001"
+* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+* identifier[=].value = "allergy-2"
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = $allergyintolerance-verification#unconfirmed
 * code.text = "Travy, prach, pyl"
@@ -357,10 +359,10 @@ Title: "HDR - GYNPOR - Dopegyt 250 mg / Dopegyt 250 mg"
 Description: "Dopegyt 250 mg tablets."
 * id = "6910dd1a-deee-463a-b776-6ee3ca8bf7ed"
 * status = #active
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "DLP-DOPEGYT-001"
-* code.coding[0].system = "http://www.whocc.no/atc"
-* code.coding[0].code = #C02AB01
+* code.coding[0].system = $dlp_lec_pripravky
+* code.coding[0].code = #0001328
 * code.coding[0].display = "Methyldopa"
 * code.text = "Dopegyt 250 mg tablety"
 
@@ -371,10 +373,10 @@ Title: "HDR - GYNPOR - Fraxiparine 0,6 ml / Fraxiparine 0.6 ml"
 Description: "Fraxiparine 0.6 ml."
 * id = "9b5df9b6-b25b-4f28-a74d-419b1c74acb8"
 * status = #active
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "DLP-FRAXIPARINE-001"
-* code.coding[0].system = "http://www.whocc.no/atc"
-* code.coding[0].code = #B01AB06
+* code.coding[0].system = $dlp_lec_pripravky
+* code.coding[0].code = #0213479
 * code.coding[0].display = "Nadroparin"
 * code.text = "Fraxiparine 0.6 ml"
 
@@ -385,10 +387,10 @@ Title: "HDR - GYNPOR - Prostin E2 / Prostin E2"
 Description: "Prostin E2 for labor induction."
 * id = "c45659d8-37e0-4d5d-8992-166900cd3a4a"
 * status = #active
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "DLP-PROSTINE2-001"
-* code.coding[0].system = "http://www.whocc.no/atc"
-* code.coding[0].code = #G02AD02
+* code.coding[0].system = $dlp_lec_pripravky
+* code.coding[0].code = #0002289
 * code.coding[0].display = "Dinoprostone"
 * code.text = "Prostin E2"
 
@@ -399,8 +401,11 @@ Title: "HDR - GYNPOR - Lidocaine EGIS / Lidocaine EGIS"
 Description: "Lidocaine EGIS used during hospitalization."
 * id = "d894281f-1104-42d0-9746-98e43262ecc3"
 * status = #active
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "DLP-LIDOCAINEEGIS-001"
+* code.coding[0].system = $dlp_lec_pripravky
+* code.coding[0].code = #0030767
+* code.coding[0].display = "Lidocaine"
 * code.text = "Lidocaine EGIS"
 
 Instance: Medication-Story-Ofost
@@ -410,9 +415,57 @@ Title: "HDR - GYNPOR - OFOST / OFOST"
 Description: "OFOST used during hospitalization."
 * id = "f7206785-f3f2-46e2-9c20-5c684686aabd"
 * status = #active
-* identifier[0].system = $cz-medication-DLP-cs
+* identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "DLP-OFOST-001"
+* code.coding[0].system = $dlp_lec_pripravky
+* code.coding[0].code = #0221535
+* code.coding[0].display = "OFOST"
 * code.text = "OFOST"
+
+Instance: MedicationAdministration-Story-Ofost
+InstanceOf: CZ_MedicationAdministrationHdr
+Usage: #example
+Title: "HDR - GYNPOR - Podání OFOSTu / OFOST administration"
+Description: "Medication administration record for OFOST during labor induction."
+* id = "e5c8a1b2-9c3d-4e5a-8c9b-1f2d3e4f5a67"
+* identifier[+].system = "https://www.nempriklad.cz/"
+* identifier[=].value = "e5c8a1b2-9c3d-4e5a-8c9b-1f2d3e4f5a67"
+* status = #completed
+* medicationReference = Reference(urn:uuid:f7206785-f3f2-46e2-9c20-5c684686aabd)
+* subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
+* dosage.dose = 260000 'ul' "ul"
+* dosage.route = $sct#47625008 "Intravenous route"
+* effectiveDateTime = "2026-03-04T18:31:00+01:00"
+
+Instance: MedicationAdministration-Story-Lidocaine
+InstanceOf: CZ_MedicationAdministrationHdr
+Usage: #example
+Title: "HDR - GYNPOR - Podání Lidocaine EGISu / Lidocaine EGIS administration"
+Description: "Medication administration record for Lidocaine EGIS during labor."
+* id = "d1a2b3c4-5678-90ab-cdef-1234567890ab"
+* identifier[+].system = "https://www.nempriklad.cz/"
+* identifier[=].value = "d1a2b3c4-5678-90ab-cdef-1234567890ab"
+* status = #completed
+* medicationReference = Reference(urn:uuid:d894281f-1104-42d0-9746-98e43262ecc3)
+* subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
+* dosage.dose = 100 'mg' "mg"
+* dosage.route = $sct#47625008 "Intravenous route"
+* effectiveDateTime = "2026-03-03T14:00:00+01:00"
+
+Instance: MedicationAdministration-Story-ProstinE2
+InstanceOf: CZ_MedicationAdministrationHdr
+Usage: #example
+Title: "HDR - GYNPOR - Podání Prostin E2 / Prostin E2 administration"
+Description: "Medication administration record for Prostin E2 during labor induction."
+* id = "a1b2c3d4-5678-90ab-cdef-1234567890ab"
+* identifier[+].system = "https://www.nempriklad.cz/"
+* identifier[=].value = "a1b2c3d4-5678-90ab-cdef-1234567890ab"
+* status = #completed
+* medicationReference = Reference(urn:uuid:c45659d8-37e0-4d5d-8992-166900cd3a4a)
+* subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
+* dosage.dose = 3 'mg' "mg"
+* dosage.route = $sct#47625008 "Intravenous route"
+* effectiveDateTime = "2026-03-03T12:30:00+01:00"
 
 Instance: MedicationRequest-Story-Dopegyt-Discharge
 InstanceOf: CZ_MedicationRequestHdr
@@ -458,7 +511,7 @@ Description: "Ultrasound device used for obstetric examination."
 * id = "dcf20b83-aacd-45af-99d6-3d277089da35"
 * manufacturer = "Samsung"
 * modelNumber = "R7"
-* type = $sct#706171005 "Ultrasound imaging system"
+* type = $sct#706332007 "Ultrasound imaging system"
 * patient = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 
 Instance: Observation-Story-UZ
@@ -477,14 +530,13 @@ Description: "Obstetric ultrasound finding recorded during admission."
 * performer = Reference(urn:uuid:c02be8d5-83a2-466b-aa82-089088b1abf7)
 
 Instance: Observation-Story-BloodGroup
-InstanceOf: CZ_ObservationResultLaboratory
+InstanceOf: Observation
 Usage: #example
 Title: "HDR - GYNPOR - Krevní skupina / Blood group"
 Description: "Maternal blood group test."
 * id = "f432828d-fa44-4928-afa6-a248b126860b"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#26436-6 "Laboratorní studie"
+* category = $observation-category#laboratory
 * code = $nclp#05162
 * subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 * effectiveDateTime = "2026-03-03T06:10:00+01:00"
@@ -504,25 +556,27 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * author[0] = Reference(urn:uuid:c02be8d5-83a2-466b-aa82-089088b1abf7)
 * subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 * encounter = Reference(urn:uuid:a182bf8a-ce46-4e61-9106-0fd5139c3e78)
+* extension[presentedForm].valueAttachment = cz-pdfdelivery-example
+
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:b1e65698-2b43-481d-b8f4-7ff6d8e81ada)
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:7f2542b8-afe3-4a30-8f4f-c2f6fd2c2f85)
 
 * section[sectionAdmissionEvaluation].title = "Příjmové vyšetření"
-* section[sectionAdmissionEvaluation].code = $loinc#67851-6 "Příjmové vyšetření"
+* section[sectionAdmissionEvaluation].code = $loinc#67851-6 "Admission evaluation note"
 * section[sectionAdmissionEvaluation].text.status = #additional
 * section[sectionAdmissionEvaluation].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Přijata pro zesilující děložní kontrakce.</p><p>Subjektivně: cítí se dobře, pohyby plodu cítí, cefaleu neguje, epigastrickou bolest neguje, vizus v normě, otoky prstů horních i dolních končetin, bez krvácení.</p><p>Objektivně: PPH, hlava naléhá, branka 5 cm, hmatný VB, kontrakce á 5 min.</p><p>KTG: fyziologický záznam, akcelerace přítomny, bez decelerací, oscilace undulatorní.</p><p>UZ břicha (Samsung R7, 02.03.): PPH, postavení II přední, ASP+, PP+, placenta na zadní stěně mimo DS, přídatný lalok i na přední stěně, bez známek patologie plodové vody, normohydramnion. EFW 01.03.2026: 3480 g, proporční růst.</p><p>Závěr: gravidita 40+2 dle UZ, IV/II, GBS pozitivní, GDM na dietě, gestační hypertenze na Dopegytu 1-0-1.</p><p>Doporučení při příjmu: s ohledem na GBS pozitivitu doporučena antibiotická profylaxe, dále příprava k porodu, spontánní vedení porodu, KTG á 3 hod, OP á 30 min, TK á 3 hod.</p></div>"""
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].code = $sct#425044008 "Physical exam section"
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text.status = #additional
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Součástí příjmového vyšetření bylo i UZ vyšetření na přístroji Samsung R7. Doplněno laboratorní vyšetření krevní skupiny: 0 RhD pozitivní.</p></div>"""
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry[+] = Reference(urn:uuid:e967fac7-ed30-44a2-8d7a-3ad35db9fff6)
+//* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry[+] = Reference(urn:uuid:e967fac7-ed30-44a2-8d7a-3ad35db9fff6)
 * section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry[+] = Reference(urn:uuid:f432828d-fa44-4928-afa6-a248b126860b)
 * section[sectionHospitalCourse].title = "Průběh hospitalizace"
-* section[sectionHospitalCourse].code = $loinc#8648-8 "Průběh hospitalizace"
+* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
 * section[sectionHospitalCourse].text.status = #additional
 * section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Hospitalizace od 03.03.2026 05:22 do 04.03.2026 18:41. Přijata pro pravidelné kontrakce á 5 minut. Pro stagnaci porodnického nálezu byla provedena indukce porodu Prostin E2. Poporodní průběh bez komplikací.</p></div>"""
 
 * section[sectionHospitalCourse].section[sectionDelivery].title = "Porod"
-* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "Záznam o porodu"
+* section[sectionHospitalCourse].section[sectionDelivery].code = $loinc#57074-7 "Labor and delivery process Narrative"
 * section[sectionHospitalCourse].section[sectionDelivery].text.status = #additional
 * section[sectionHospitalCourse].section[sectionDelivery].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Porodnický průběh: přijata pro pravidelné kontrakce á 5 minut v gestačním stáří 40+2. Pro stagnaci porodnického nálezu byla zahájena indukce porodu Prostin E2.</p><p>Porod dne 03.03.2026 v 17:13, spontánně záhlavím. Během porodu pupečník 1x kolem krku s kompresí.</p><p>Porodní poranění: ruptura perinea I. stupně, ošetřeno suturou. Odhadovaná krevní ztráta 250 ml.</p><p>Novorozenec: chlapec, živě narozený, porodní hmotnost 3200 g, délka 50 cm, APGAR 10-10-10.</p><p>Souvislosti: GBS pozitivita, gestační hypertenze (Dopegyt), gestační diabetes na dietě.</p></div>"""
 * section[sectionHospitalCourse].section[sectionDelivery].entry[deliveryProcedure][+] = Reference(urn:uuid:f1184d84-9da0-4584-82f2-4efbf3ee74b3)
@@ -538,15 +592,15 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionHospitalCourse].section[sectionDelivery].entry[+] = Reference(urn:uuid:4f82fd24-88b7-4328-bcbe-b4da5bb4999b)
 
 * section[sectionPatientHx].title = "Anamnéza"
-* section[sectionPatientHx].code = $loinc#35090-0 "Anamnestická poznámka"
+* section[sectionPatientHx].code = $loinc#35090-0 "Patient history"
 * section[sectionPatientHx].text.status = #additional
 * section[sectionPatientHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p> Bez trvalé léčby mimo graviditu, nyní GDM dieta (také ve II. graviditě), TEN 0, úrazy 0, operace 0, transfuze 0, epidemiologická anamnéza bez očkování proti RSV. FA: aktuálně dlouhodobě Dopegyt. FF: močení i stolice v pořádku.</p></div>"""
 * section[sectionPatientHx].section[sectionFamilyHistory].title = "Rodinná anamnéza"
-* section[sectionPatientHx].section[sectionFamilyHistory].code = $loinc#10157-6 "Rodinná anamnéza"
+* section[sectionPatientHx].section[sectionFamilyHistory].code = $loinc#10157-6 "History of family member diseases note"
 * section[sectionPatientHx].section[sectionFamilyHistory].text.status = #additional
 * section[sectionPatientHx].section[sectionFamilyHistory].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p> Matka karcinom prsu v 57 letech, hypertenze a onemocnění štítné žlázy; bratři hypertenze; sestra hypotyreóza; prarodiče diabetes mellitus; dědeček leukemie.</p></div>"""
 * section[sectionPatientHx].section[sectionPregnancyHx].title = "Těhotenská anamnéza"
-* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "Těhotenská anamnéza"
+* section[sectionPatientHx].section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies Narrative"
 * section[sectionPatientHx].section[sectionPregnancyHx].text.status = #additional
 * section[sectionPatientHx].section[sectionPregnancyHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Gravidita spontánní. Gravidita/parita IV/II, gestační stáří při porodu 40+2, singleton gravidita. Předchozí porody: 05/2016 spontánní porod záhlavím, chlapec 3800 g, epiziotomie a infekce poranění v šestinedělí; 02/2019 spontánní porod záhlavím 3740 g bez komplikací. Abortus: 01/2022 spontánní abortus completus. UUT: 0. Menarché v 11 letech, cyklus nepravidelný, gynekologické operace ne.</p></div>"""
 * section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(urn:uuid:1d2b2e56-93b0-4c03-bf01-4612d54b14bc)
@@ -555,50 +609,50 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(urn:uuid:b33f71c0-6fb1-45ba-8e8f-e4fb38964d63)
 * section[sectionPatientHx].section[sectionPregnancyHx].entry[+] = Reference(urn:uuid:71eab157-2477-495e-8def-2d9ae6386f88)
 * section[sectionPatientHx].section[sectionSocialHistory].title = "Sociální a pracovní anamnéza"
-* section[sectionPatientHx].section[sectionSocialHistory].code = $loinc#29762-2 "Sociální anamnéza"
+* section[sectionPatientHx].section[sectionSocialHistory].code = $loinc#29762-2 "Social history note"
 * section[sectionPatientHx].section[sectionSocialHistory].text.status = #additional
 * section[sectionPatientHx].section[sectionSocialHistory].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Bydlí s manželem, na mateřské dovolené, povoláním lékařnice.</p></div>"""
 * section[sectionPatientHx].section[sectionInfectiousContacts].title = "Epidemiologická anamnéza"
-* section[sectionPatientHx].section[sectionInfectiousContacts].code = TemporaryHDRSystem#infection-contact "Infekční kontakty"
+* section[sectionPatientHx].section[sectionInfectiousContacts].code = TemporaryHDRSystem#infection-contact "Infectious contacts"
 * section[sectionPatientHx].section[sectionInfectiousContacts].text.status = #additional
 * section[sectionPatientHx].section[sectionInfectiousContacts].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Bez významných rizikových kontaktů, proti RSV neočkována.</p></div>"""
 * section[sectionPatientHx].section[sectionSubstanceUse].title = "Užívání návykových látek"
-* section[sectionPatientHx].section[sectionSubstanceUse].code = TemporaryHDRSystem#substance-use "Užívání návykových látek"
+* section[sectionPatientHx].section[sectionSubstanceUse].code = TemporaryHDRSystem#substance-use "Use of Substances Section"
 * section[sectionPatientHx].section[sectionSubstanceUse].text.status = #additional
 * section[sectionPatientHx].section[sectionSubstanceUse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Nekouří, alkohol nepije, drogy neužívá.</p></div>"""
 
 * section[sectionAllergies].title = "Alergie, intolerance a varování"
-* section[sectionAllergies].code = $loinc#48765-2 "Alergie a nežádoucí reakce"
+* section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #additional
 * section[sectionAllergies].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Alergie neověřeny - trávy, prach, pyl, Zinnat (vertigo).</p></div>"""
 * section[sectionAllergies].entry[allergyIntolerance][+] = Reference(urn:uuid:26be4e8d-b6bc-4b61-a4ff-87641d9aa789)
 * section[sectionAllergies].entry[allergyIntolerance][+] = Reference(urn:uuid:ff3372f1-0189-457f-8368-aa28e36df796)
 
 * section[sectionPharmacotherapy].title = "Pharmacotherapy"
-* section[sectionPharmacotherapy].code = $loinc#87232-5 "Stručný přehled podaných léčiv"
+* section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration.brief"
 * section[sectionPharmacotherapy].text.status = #additional
 * section[sectionPharmacotherapy].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Během hospitalizace podány Dopegyt, Fraxiparine, Lidocaine, OFOST, Prostin E2. Při propuštění doporučen Dopegyt 1-0-1 a LMWH profylaxe do 10.03.2026 včetně.</p></div>"""
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:6910dd1a-deee-463a-b776-6ee3ca8bf7ed)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:9b5df9b6-b25b-4f28-a74d-419b1c74acb8)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:d894281f-1104-42d0-9746-98e43262ecc3)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:f7206785-f3f2-46e2-9c20-5c684686aabd)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:c45659d8-37e0-4d5d-8992-166900cd3a4a)
+* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:3d648416-8bea-4a9a-9b50-6859084e53c4)
+* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:80806e6f-99e7-4945-9d1b-465e98fbd45b)
+* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:d1a2b3c4-5678-90ab-cdef-1234567890ab)
+* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:e5c8a1b2-9c3d-4e5a-8c9b-1f2d3e4f5a67)
+* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:a1b2c3d4-5678-90ab-cdef-1234567890ab)
 
 * section[sectionDischargeMedications].title = "Hospital discharge medications"
-* section[sectionDischargeMedications].code = $loinc#75311-1 "Hospital discharge medications"
+* section[sectionDischargeMedications].code = $loinc#75311-1 "Discharge medications note"
 * section[sectionDischargeMedications].text.status = #additional
 * section[sectionDischargeMedications].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Doporučená medikace při propuštění: Dopegyt 1-0-1 a Fraxiparine 0,6 ml s.c. 1x denně do 10.03.2026 včetně.</p></div>"""
 * section[sectionDischargeMedications].entry[+] = Reference(urn:uuid:3d648416-8bea-4a9a-9b50-6859084e53c4)
 * section[sectionDischargeMedications].entry[+] = Reference(urn:uuid:80806e6f-99e7-4945-9d1b-465e98fbd45b)
 
 * section[sectionPayers].title = "Health insurance and payment information"
-* section[sectionPayers].code = $loinc#48768-6 "Informace o plátci péče"
+* section[sectionPayers].code = $loinc#48768-6 "Payment sources Document"
 * section[sectionPayers].text.status = #additional
 * section[sectionPayers].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Payer: 111 (VZP).</p></div>"""
 * section[sectionPayers].entry[+] = Reference(urn:uuid:35b9ce78-80c3-443f-b21f-a346a87e15ef)
 
 * section[sectionPlanOfCare].title = "Plan of care"
-* section[sectionPlanOfCare].code = $loinc#18776-5 "Léčebný plán"
+* section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care note"
 * section[sectionPlanOfCare].text.status = #additional
 * section[sectionPlanOfCare].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Doporuceno: self-monitoring TK 5x denne, pri hodnotach nad 150/100 mmHg okamzita kontrola. Kontrola u praktickeho lekare do tydne, gynekologicka kontrola po sestinedeli.</p></div>"""
 
@@ -660,8 +714,8 @@ Description: "Document bundle for story-based gynecology discharge report withou
 * entry[observation][=].resource = Observation-Story-Apgar5
 * entry[observation][+].fullUrl = "urn:uuid:d9e9d7df-a3fa-430a-9d19-38e8432c8803"
 * entry[observation][=].resource = Observation-Story-Apgar10
-* entry[observation][+].fullUrl = "urn:uuid:e967fac7-ed30-44a2-8d7a-3ad35db9fff6"
-* entry[observation][=].resource = Observation-Story-UZ
+//* entry[observation][+].fullUrl = "urn:uuid:e967fac7-ed30-44a2-8d7a-3ad35db9fff6"
+//* entry[observation][=].resource = Observation-Story-UZ 
 * entry[observation][+].fullUrl = "urn:uuid:f432828d-fa44-4928-afa6-a248b126860b"
 * entry[observation][=].resource = Observation-Story-BloodGroup
 * entry[medication][+].fullUrl = "urn:uuid:6910dd1a-deee-463a-b776-6ee3ca8bf7ed"
@@ -674,6 +728,12 @@ Description: "Document bundle for story-based gynecology discharge report withou
 * entry[medication][=].resource = Medication-Story-Ofost
 * entry[medication][+].fullUrl = "urn:uuid:c45659d8-37e0-4d5d-8992-166900cd3a4a"
 * entry[medication][=].resource = Medication-Story-ProstinE2
+* entry[medicationAdministration][+].fullUrl = "urn:uuid:e5c8a1b2-9c3d-4e5a-8c9b-1f2d3e4f5a67"
+* entry[medicationAdministration][=].resource = MedicationAdministration-Story-Ofost
+* entry[medicationAdministration][+].fullUrl = "urn:uuid:d1a2b3c4-5678-90ab-cdef-1234567890ab"
+* entry[medicationAdministration][=].resource = MedicationAdministration-Story-Lidocaine
+* entry[medicationAdministration][+].fullUrl = "urn:uuid:a1b2c3d4-5678-90ab-cdef-1234567890ab"
+* entry[medicationAdministration][=].resource = MedicationAdministration-Story-ProstinE2
 * entry[medicationRequest][+].fullUrl = "urn:uuid:3d648416-8bea-4a9a-9b50-6859084e53c4"
 * entry[medicationRequest][=].resource = MedicationRequest-Story-Dopegyt-Discharge
 * entry[medicationRequest][+].fullUrl = "urn:uuid:80806e6f-99e7-4945-9d1b-465e98fbd45b"
@@ -702,5 +762,15 @@ Description: "Document bundle for story-based gynecology discharge report withou
 * entry[organization][=].resource = RegisteringProviderExample-gynecology
 * entry[device][+].fullUrl = "urn:uuid:dcf20b83-aacd-45af-99d6-3d277089da35"
 * entry[device][=].resource = Device-Story-SamsungR7
+
+Instance: cz-pdfdelivery-example
+InstanceOf: Attachment
+Usage: #inline
+Description: "Attachment for Delivery Story"
+* contentType = #application/pdf
+* language = #cs
+* data = "JVBERi0xLjQKJebkw7zUHzExIDAgb2JqCjw8L1R5cGUvQ2F0YWxvZy9QYWdlcyAyIDAgUj4+CmVuZG9iagoyIDAgb2JqCjw8L1R5cGUvUGFnZXMvQ291bnQgMS9LaWRzWzMgMCBSXT4+CmVuZG9iagozIDAgb2JqCjw8L1R5cGUvUGFnZS9QYXJlbnQgMiAwIFIvTWVkaWFCb3hbMCAwIDU5NSA4NDJdL0NvbnRlbnRzIDQgMCBSL1Jlc291cmNlcyA1IDAgUj4+CmVuZG9iago0IDAgb2JqCjw8L0xlbmd0aCA0NDI+PnN0cmVhbQpCVAovRjEgMTggVGYKNTAgODAwIFRkCihHcm91cHVkbyBtZWRpY2FsIHpwcmF2YSAtIEluZHVrb3ZhbnkgcG9yb2QpIFRqCjAgLTIwIFRkCihGMiAxMiBJZgooUGFjaWVudGthOiBKYW5hIE5vdmFrb3ZhLCBuYXIuIDE4LjA1LjE5OTMpIFRqCjAgLTIwIFRkCihEaWFnbm96YTogTzYxLjAgLSBJbmR1a2NlIHBvcm9kdSwgTzEzIC0gR2VzdGFjbmkgaHlwZXJ0ZW56ZSkgVGoKMCAtMjAgVGQKKEluZHVrY2U6IFByb3N0YWdsYW5kaW4gKERpbm9wcm9zdG9uKSwgcG9yb2QgcG9zaXRpdm5pIHNwb250YW5uaS4pIFRqCjAgLTIwIFRkCihOb3Zvcm96ZW5lYzogSmFuIE5vdmFrLCBuYXIuIDIwLjA1LjIwMjUsIDM0NTAgZykgVGoKMCAtNDAgVGQKKERvcG9ydWNlbmkpIFRqCjAgLTE1IFRkCigtIFByYXZpZGVsbmUgbWVyZW5pIGtyZXZuaWhvIHRsYWt1IHYgc2VzdGluZWRlbGkpIFRqCjAgLTE1IFRkCigtIEtvbnRyb2xhIG9ib3ZkbmlobyBneW5la29sb2dhIHphIDYgdHlkbnUpIFRqCkVUCmVuZHN0cmVhbQplbmRvYmoKNSAwIG9iago8PC9Gb250PDwvRjEgNiAwIFIvRjIgNyAwIFI+Pj4+CmVuZG9iago2IDAgb2JqCjw8L1R5cGUvRm9udC9TdWJ0eXBlL1R5cGUxL0Jhc2VGb250L0hlbHZldGljYS1Cb2xkPj4KZW5kb2JqCjcgIDAgb2JqCjw8L1R5cGUvRm9udC9TdWJ0eXBlL1R5cGUxL0Jhc2VGb250L0hlbHZldGljYT4+CmVuZG9iagp4cmVmCjAgOAowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMDkgMDAwMDAgbiAKMDAwMDAwMDA1OCAwMDAwMCBuIAowMDAwMDAwMTE1IDAwMDAwIG4gCjAwMDAwMDAyMTkgMDAwMDAgbiAKMDAwMDAwMDcxMSAwMDAwMCBuIAowMDAwMDAwNzYzIDAwMDAwIG4gCjAwMDAwMDA4MzkgMDAwMDAgbiAKdHJhaWxlcgo8PC9TaXplIDgvUm9vdCAxIDAgUj4+CnN0YXJ0eHJlZgo5MTIKJSVFT0YK"
+* title = "Delivery Story - Nováková"
+* creation = "2025-05-20T12:02:00+01:00"
 
 
