@@ -1,10 +1,10 @@
 Profile: CZ_AllergyIntoleranceHdr
-Parent: cz-allergyIntolerance
+Parent: CZ_AllergyIntolerance
 Id: cz-allergyIntolerance-hdr
 Title: "Allergy Intolerance (HDR CZ)"
 Description: """This profile constrains the AllergyIntolerance resource for the purpose of this project."""
 * ^purpose = "This profile constrains the AllergyIntolerance resource for the purpose of project."
 
-* insert ImposeProfile($AllergyIntolerance-eu, 0)
+//* insert ImposeProfile($AllergyIntolerance-eu, 0)
 
 * code 1..1
