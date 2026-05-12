@@ -391,7 +391,7 @@ Usage: #example
 * category[0].coding[0].system = $loinc
 * category[0].coding[0].code = #18842-5
 * category[0].coding[0].display = "Discharge summary"
-* title = "Propouštěcí zpráva"
+* title = "Propouštěcí zpráva L1"
 * date = "2025-03-10T14:30:00+01:00"
 * author[+] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * author[+] = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
@@ -485,7 +485,7 @@ Usage: #example
 * category[0].coding[0].system = $loinc
 * category[0].coding[0].code = #18842-5
 * category[0].coding[0].display = "Discharge summary"
-* title = "Propouštěcí zpráva"
+* title = "Propouštěcí zpráva pacienta Novák Petr"
 * date = "2025-03-10T14:30:00+01:00"
 * author[+] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * author[+] = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)

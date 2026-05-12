@@ -289,7 +289,7 @@ Description: "Example of a condition Presbycusis"
 Instance: Condition-E890-Novak
 InstanceOf: CZ_ConditionHdr
 Usage: #example
-Title: "CZ-Condition-HDR Example 3"
+Title: "CZ-Condition-HDR Example E890 for patient Novak"
 Description: "Czech HDR - example of a condition (Postoperative Hypothyroidism)"
 * id = "fdf9e92d-ac48-4706-b15b-d2eaca85f45f"
 * clinicalStatus = $condition-clinical#active

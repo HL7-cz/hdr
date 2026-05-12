@@ -142,7 +142,7 @@ Description: "Patient, contact information and practitioner"
 Instance: Allergy-Strawberry-Novak
 InstanceOf: CZ_AllergyIntoleranceHdr
 Usage: #example
-Title: "AllergyIntolerance - Strawberry"
+Title: "AllergyIntolerance - Strawberry for patient Novak"
 Description: "Patient experiences itching and tongue swelling in response to strawberries."
 * id = "6cf80cb1-9766-470f-ac36-b1d3d8950f1b"
 * identifier[+].system = "http://example.org/hospital/allergy-intolerances"

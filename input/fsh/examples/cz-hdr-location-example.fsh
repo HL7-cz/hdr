@@ -105,7 +105,7 @@ Usage: #example
 //--------------------------------------------
 Instance: Location-Chrudim-Chir1
 InstanceOf: CZ_LocationCore
-Title: "Sample Czech Location 2"
+Title: "Sample Czech Location Chrudim Chir1"
 Description: "Example instance of a location conforming to the CZ_LocationCore profile."
 Usage: #example
 
@@ -126,7 +126,7 @@ Usage: #example
 
 Instance: Location-Chrudim-ChirJIP
 InstanceOf: CZ_LocationCore
-Title: "Sample Czech Location 2"
+Title: "Sample Czech Location Chrudim JIP"
 Description: "Example instance of a location conforming to the CZ_LocationCore profile."
 Usage: #example
 

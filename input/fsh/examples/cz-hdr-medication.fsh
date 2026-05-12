@@ -41,7 +41,7 @@ Description: "Euthyrox v tabletách"
 Instance: MedicationDispense-Euthyrox
 InstanceOf: MedicationDispense
 Usage: #example
-Title: "Dispense – Euthyrox"
+Title: "Dispense – Euthyrox for patient Novak"
 Description: "Výdej léčivého přípravku Euthyrox pacientovi Novákovi"
 * status = #completed
 * medicationReference = Reference(Medication-Euthyrox)

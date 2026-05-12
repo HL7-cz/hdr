@@ -304,7 +304,7 @@ Description: "General practitioner's office"
 //-----------------------------------------------------
 Instance: RegisteringProviderExample-gynecology
 InstanceOf: CZ_OrganizationCore
-Title: "Organization: Registering healthcare provider example"
+Title: "Organization: Registering healthcare provider example gynecology"
 Description: "Example of registering healthcare provider"
 Usage: #example
 * id = "6dbf2b1f-67f6-46c9-b1b7-f412aaadf2ba"
