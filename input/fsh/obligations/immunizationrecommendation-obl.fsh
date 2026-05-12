@@ -2,7 +2,7 @@
 
 Profile: CZ_ImmunizationRecommendationObligationsHdr
 Parent: CZ_ImmunizationRecommendationHdr
-Id: cz-immunizationrecommendation-obl-hdr
+Id: cz-immunizationRecommendation-obl-hdr
 Title:   "Immunization Recommendation Obligations (HDR CZ)"
 Description: "This profile defines the obligations for the ImmunizationRecommendation resource used in the HDR CZ project."
 
