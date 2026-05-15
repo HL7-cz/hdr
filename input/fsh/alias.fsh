@@ -63,7 +63,8 @@ Alias: $ObservationTravelEuHdr = http://hl7.eu/fhir/hdr/StructureDefinition/obse
 Alias: $ObservationSdohEuHdr = http://hl7.eu/fhir/hdr/StructureDefinition/observation-sdoh-eu-hdr
 Alias: $ObservationInfectiousContactEuHdr = http://hl7.eu/fhir/hdr/StructureDefinition/observation-infectious-contact-eu-hdr
 Alias: $BundleEuHdr = http://hl7.eu/fhir/hdr/StructureDefinition/bundle-eu-hdr
-
+Alias: $ImmunizationEuHdr = http://hl7.eu/fhir/hdr/StructureDefinition/immunization-eu-hdr
+Alias: $ImmunizationRecommendationEuHdr = http://hl7.eu/fhir/hdr/StructureDefinition/immunizationrecommendation-eu-hdr
 
 //Alias: $bodySite = http://hl7.org/fhir/StructureDefinition/bodySite
 //Alias: $flag-detail = http://hl7.org/fhir/StructureDefinition/flag-detail

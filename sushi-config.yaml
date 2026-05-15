@@ -450,7 +450,7 @@ groups:
       - StructureDefinition/cz-dosage-medicationsummary-obl-hdr
       - StructureDefinition/cz-flag-obl-hdr
       - StructureDefinition/cz-immunization-obl-hdr
-      - StructureDefinition/cz-immunizationrecommendation-obl-hdr
+      - StructureDefinition/cz-immunizationRecommendation-obl-hdr
       - StructureDefinition/cz-medication-hospitalstay-obl-hdr
       - StructureDefinition/cz-medication-medicationsummary-obl-hdr
       - StructureDefinition/cz-medicationadministration-obl-hdr
