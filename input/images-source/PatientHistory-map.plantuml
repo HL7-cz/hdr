@@ -31,7 +31,7 @@ class "familyMemberHistory-cz-hdr" <<Profile>> [[StructureDefinition-cz-familyMe
 class "immunization-cz-hdr" <<Profile>> [[StructureDefinition-cz-immunization-hdr.html]]
 "PatientHistory" <|. "immunization-cz-hdr"
 "familyMemberHistory-eu-hdr" -d[hidden]-> "immunization-cz-hdr"
-class "immunizationRecommendation-cz-hdr" <<Profile>> [[StructureDefinition-cz-immunizationRecommendation-hdr.html]]
+class "immunizationRecommendation-cz-hdr" <<Profile>> [[StructureDefinition-cz-immunizationrecommendation-hdr.html]]
 "PatientHistory" <|. "immunizationRecommendation-cz-hdr"
 "immunization-cz-hdr" -d[hidden]-> "immunizationRecommendation-cz-hdr"
 class "observation-infectious-contact-cz-hdr" <<Profile>> [[StructureDefinition-cz-observation-infectious-contact-hdr.html]]

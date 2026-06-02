@@ -46,7 +46,7 @@ Byli specifikováni aktéři ve těchto rolích:
 7. Pravidla pro profil klinické události ([CZ_EncounterObligationsHdr](StructureDefinition-cz-encounter-obl-hdr.html))
 8. Pravidla pro profil příznak ([CZ_FlagObligationsHdr](StructureDefinition-cz-flag-obl-hdr.html))
 9. Pravidla pro profil očkování ([CZ_ImmunizationObligationsHdr](StructureDefinition-cz-immunization-obl-hdr.html))
-10. Pravidla pro profil doporučená očkování ([CZ_ImmunizationRecommendationObligationsHdr](StructureDefinition-cz-immunizationrecommendation-obl-hdr.html))
+10. Pravidla pro profil doporučená očkování ([CZ_ImmunizationRecommendationObligationsHdr](StructureDefinition-cz-immunizationRecommendation-obl-hdr.html))
 11. Pravidla pro profil medikace v rámci nemocničního pobytu ([CZ_MedicationHospitalStayObligationsHdr](StructureDefinition-cz-medication-hospitalstay-obl-hdr.html))
 12. Pravidla pro profil medikace v rámci soupisu medikace ([CZ_MedicationMedicationSummaryObligationsHdr](StructureDefinition-cz-medication-medicationsummary-obl-hdr.html))
 13. Pravidla pro profil administrace medikace([CZ_MedicationAdministrationObligationsHdr](StructureDefinition-cz-medicationadministration-obl-hdr.html))
