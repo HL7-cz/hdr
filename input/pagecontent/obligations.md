@@ -44,7 +44,7 @@ Actors were specified in these roles:
 7. Obligations for profile Encounter ([CZ_EncounterObligationsHdr](StructureDefinition-cz-encounter-obl-hdr.html))
 8. Obligations for profile Flag ([CZ_FlagObligationsHdr](StructureDefinition-cz-flag-obl-hdr.html))
 9. Obligations for profile Immunization ([CZ_ImmunizationObligationsHdr](StructureDefinition-cz-immunization-obl-hdr.html))
-10. Obligations for profile Immunization Recommendation ([CZ_ImmunizationRecommendationObligationsHdr](StructureDefinition-cz-immunizationrecommendation-obl-hdr.html))
+10. Obligations for profile Immunization Recommendation ([CZ_ImmunizationRecommendationObligationsHdr](StructureDefinition-cz-immunizationRecommendation-obl-hdr.html))
 11. Obligations for profile Medication in Hospital stay ([CZ_MedicationHospitalStayObligationsHdr](StructureDefinition-cz-medication-hospitalstay-obl-hdr.html))
 12. Obligations for profile Medication in Medication summary ([CZ_MedicationMedicationSummaryObligationsHdr](StructureDefinition-cz-medication-medicationsummary-obl-hdr.html))
 13. Obligations for profile Medication administration([CZ_MedicationAdministrationObligationsHdr](StructureDefinition-cz-medicationadministration-obl-hdr.html))
