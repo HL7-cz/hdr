@@ -628,15 +628,15 @@ Description: "Story-based gynecology discharge report after induced vaginal deli
 * section[sectionAllergies].entry[allergyIntolerance][+] = Reference(urn:uuid:26be4e8d-b6bc-4b61-a4ff-87641d9aa789)
 * section[sectionAllergies].entry[allergyIntolerance][+] = Reference(urn:uuid:ff3372f1-0189-457f-8368-aa28e36df796)
 
-* section[sectionPharmacotherapy].title = "Pharmacotherapy"
-* section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration.brief"
-* section[sectionPharmacotherapy].text.status = #additional
-* section[sectionPharmacotherapy].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Během hospitalizace podány Dopegyt, Fraxiparine, Lidocaine, OFOST, Prostin E2. Při propuštění doporučen Dopegyt 1-0-1 a LMWH profylaxe do 10.03.2026 včetně.</p></div>"""
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:3d648416-8bea-4a9a-9b50-6859084e53c4)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:80806e6f-99e7-4945-9d1b-465e98fbd45b)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:d1a2b3c4-5678-90ab-cdef-1234567890ab)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:e5c8a1b2-9c3d-4e5a-8c9b-1f2d3e4f5a67)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:a1b2c3d4-5678-90ab-cdef-1234567890ab)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].title = "Pharmacotherapy"
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration.brief"
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].text.status = #additional
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Během hospitalizace podány Dopegyt, Fraxiparine, Lidocaine, OFOST, Prostin E2. Při propuštění doporučen Dopegyt 1-0-1 a LMWH profylaxe do 10.03.2026 včetně.</p></div>"""
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:3d648416-8bea-4a9a-9b50-6859084e53c4)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:80806e6f-99e7-4945-9d1b-465e98fbd45b)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:d1a2b3c4-5678-90ab-cdef-1234567890ab)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:e5c8a1b2-9c3d-4e5a-8c9b-1f2d3e4f5a67)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:a1b2c3d4-5678-90ab-cdef-1234567890ab)
 
 * section[sectionDischargeMedications].title = "Hospital discharge medications"
 * section[sectionDischargeMedications].code = $loinc#75311-1 "Discharge medications note"

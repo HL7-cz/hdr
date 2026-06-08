@@ -210,12 +210,12 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionPayers].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Payer: 111 (VZP), insurance number: 9355181234.</p></div>"""
 * section[sectionPayers].entry[+] = Reference(urn:uuid:8f9c2f14-1f69-4f2b-b4a8-8b7ca4db9f31)
 
-* section[sectionPharmacotherapy].title = "Pharmacotherapy"
-* section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration.brief"
-* section[sectionPharmacotherapy].text.status = #additional
-* section[sectionPharmacotherapy].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Porodní analgezie: epidurální podání ropivakainu s malou dávkou fentanylu během porodu.</p></div>"""
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:6f97d842-5ce8-4631-b52e-0b79723c7e31)
-* section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:0a98bc34-677a-4867-b903-461ac06939d5)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].title = "Pharmacotherapy"
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].code = $loinc#87232-5 "Medication administration.brief"
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].text.status = #additional
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].text.div = """<div xmlns="http://www.w3.org/1999/xhtml"><p>Porodní analgezie: epidurální podání ropivakainu s malou dávkou fentanylu během porodu.</p></div>"""
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:6f97d842-5ce8-4631-b52e-0b79723c7e31)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:0a98bc34-677a-4867-b903-461ac06939d5)
 
 Instance: Medication-Ropivacaine-Epidural
 InstanceOf: CZ_Medication

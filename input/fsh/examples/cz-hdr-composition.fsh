@@ -55,29 +55,29 @@ Usage: #example
 
 // Diagnostický souhrn:
 // Sekce Diagnostický souhrn
-* section[sectionDiagnosticSummary].title = "Diagnostický souhrn"
-* section[sectionDiagnosticSummary].code.coding[0].system = $loinc
-* section[sectionDiagnosticSummary].code.coding[0].code = #11535-2 // Problem list
-* section[sectionDiagnosticSummary].code.coding[0].display = "Hospital discharge diagnosis note"
-* section[sectionDiagnosticSummary].text.div = """
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].title = "Diagnostický souhrn"
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].code.coding[0].system = $loinc
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].code.coding[0].code = #11535-2 // Problem list
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].code.coding[0].display = "Hospital discharge diagnosis note"
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>K40.9 – Inguinální kýla, nespecifikovaná </p>
     <p>E89.0 – Hypotyreóza po léčbě (v anamnéze) </p>
   </div>
   """
-* section[sectionDiagnosticSummary].text.status = #generated
-* section[sectionDiagnosticSummary].entry[0] = Reference(urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2)
-* section[sectionDiagnosticSummary].entry[1] = Reference(urn:uuid:fdf9e92d-ac48-4706-b15b-d2eaca85f45f)
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].text.status = #generated
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].entry[0] = Reference(urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2)
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].entry[1] = Reference(urn:uuid:fdf9e92d-ac48-4706-b15b-d2eaca85f45f)
 
 // Významné výkony
 // Sekce Významné procedury
-* section[sectionSignificantProcedures].title = "Významné procedury"
-* section[sectionSignificantProcedures].code.coding[0].system = $loinc
-* section[sectionSignificantProcedures].code.coding[0].code = #10185-7
-* section[sectionSignificantProcedures].code.coding[0].display = "Hospital discharge procedure note"
-* section[sectionSignificantProcedures].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Plastika pravostranné tříselné kýly dne 2. 3. 2025.</div>"
-* section[sectionSignificantProcedures].text.status = #generated
-* section[sectionSignificantProcedures].entry[0] = Reference(urn:uuid:ffb1a62f-9050-4e33-af4b-4cdb8203c9e5)
+* section[sectionHospitalCourse].section[sectionSignificantProcedures].title = "Významné procedury"
+* section[sectionHospitalCourse].section[sectionSignificantProcedures].code.coding[0].system = $loinc
+* section[sectionHospitalCourse].section[sectionSignificantProcedures].code.coding[0].code = #10185-7
+* section[sectionHospitalCourse].section[sectionSignificantProcedures].code.coding[0].display = "Hospital discharge procedure note"
+* section[sectionHospitalCourse].section[sectionSignificantProcedures].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Plastika pravostranné tříselné kýly dne 2. 3. 2025.</div>"
+* section[sectionHospitalCourse].section[sectionSignificantProcedures].text.status = #generated
+* section[sectionHospitalCourse].section[sectionSignificantProcedures].entry[0] = Reference(urn:uuid:ffb1a62f-9050-4e33-af4b-4cdb8203c9e5)
 
 //Léčba vybraná není v EU můžeme vypustit? 2.7.4
 // TODO doplnit terapeutickou intervenci
@@ -85,11 +85,11 @@ Usage: #example
 
 //Výsledky vše na jednom místě, očekávané (nemají valsní sekci) a již připravené:
 ///sekce Výsledky vyšetření
-* section[sectionSignificantResults].title = "Výsledky vyšetření"
-* section[sectionSignificantResults].code.coding[0].system = $loinc
-* section[sectionSignificantResults].code.coding[0].code = #30954-2  //Relevant diagnostic tests/laboratory data
-* section[sectionSignificantResults].code.coding[0].display = "Relevant diagnostic tests/laboratory data note"
-* section[sectionSignificantResults].text.div = """
+* section[sectionHospitalCourse].section[sectionSignificantResults].title = "Výsledky vyšetření"
+* section[sectionHospitalCourse].section[sectionSignificantResults].code.coding[0].system = $loinc
+* section[sectionHospitalCourse].section[sectionSignificantResults].code.coding[0].code = #30954-2  //Relevant diagnostic tests/laboratory data
+* section[sectionHospitalCourse].section[sectionSignificantResults].code.coding[0].display = "Relevant diagnostic tests/laboratory data note"
+* section[sectionHospitalCourse].section[sectionSignificantResults].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Významné výsledky vyšetření v průběhu hospitalizace</p>
     <ul>
@@ -97,20 +97,20 @@ Usage: #example
       <li>CRP: 6 mg/L (norma: 0–10 mg/L)</li>
     </ul>
   </div>"""
-* section[sectionSignificantResults].text.status = #additional
+* section[sectionHospitalCourse].section[sectionSignificantResults].text.status = #additional
 // IMG_RESTORE: re-enable radResult entry after upstream package fix
-// * section[sectionSignificantResults].entry[radResult] = Reference(urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a) // Corrected Reference to include the resource type
-* section[sectionSignificantResults].entry[labResult] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b) // Corrected Reference to include the resource type
+// * section[sectionHospitalCourse].section[sectionSignificantResults].entry[radResult] = Reference(urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a) // Corrected Reference to include the resource type
+* section[sectionHospitalCourse].section[sectionSignificantResults].entry[labResult] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b) // Corrected Reference to include the resource type
 
 // Sekce Implantáty a zdravotní pomůcky
-* section[sectionMedicalDevices].title = "Zdravotní pomůcky a implantáty"
-* section[sectionMedicalDevices].code.coding[0].system = $loinc
-* section[sectionMedicalDevices].code.coding[0].code = #57080-4 // Historie implantátů
-* section[sectionMedicalDevices].code.coding[0].display = "Implanted medical device Narrative"
-* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacientovi byl implantován kardiostimulátor Medtronic model W1DR01.</p></div>" // Added required text for cardinality
-* section[sectionMedicalDevices].text.status = #generated
-* section[sectionMedicalDevices].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001f) // Example reference to a medical device
-* section[sectionMedicalDevices].entry[1] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000020) // Example reference to another medical device
+* section[sectionHospitalCourse].section[sectionMedicalDevices].title = "Zdravotní pomůcky a implantáty"
+* section[sectionHospitalCourse].section[sectionMedicalDevices].code.coding[0].system = $loinc
+* section[sectionHospitalCourse].section[sectionMedicalDevices].code.coding[0].code = #57080-4 // Historie implantátů
+* section[sectionHospitalCourse].section[sectionMedicalDevices].code.coding[0].display = "Implanted medical device Narrative"
+* section[sectionHospitalCourse].section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacientovi byl implantován kardiostimulátor Medtronic model W1DR01.</p></div>" // Added required text for cardinality
+* section[sectionHospitalCourse].section[sectionMedicalDevices].text.status = #generated
+* section[sectionHospitalCourse].section[sectionMedicalDevices].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001f) // Example reference to a medical device
+* section[sectionHospitalCourse].section[sectionMedicalDevices].entry[1] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000020) // Example reference to another medical device
 
 //Sekce Průběh hospitalizace - klinické shrnutí
 * section[sectionHospitalCourse].title = "Klinické shrnutí"
@@ -222,11 +222,11 @@ Usage: #example
 
 
 //Sekce Souhrn Medikace
-* section[sectionPharmacotherapy].title = "Medikace"
-* section[sectionPharmacotherapy].code.coding[+].system = $loinc
-* section[sectionPharmacotherapy].code.coding[=].code = #87232-5
-* section[sectionPharmacotherapy].code.coding[=].display = "Medication administration.brief"
-* section[sectionPharmacotherapy].text.div = """
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].title = "Medikace"
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].code.coding[+].system = $loinc
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].code.coding[=].code = #87232-5
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].code.coding[=].display = "Medication administration.brief"
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Medikace při propuštění</p>
     <ul>
@@ -236,13 +236,13 @@ Usage: #example
     </ul>
   </div>
   """
-* section[sectionPharmacotherapy].text.status = #additional
-* section[sectionPharmacotherapy].entry[0] = Reference(urn:uuid:47472c99-09bf-4007-bfaa-16c9665ae090)
-* section[sectionPharmacotherapy].entry[1] = Reference(urn:uuid:f34114fc-138f-4bd8-8e1a-804d14ec9986)
-* section[sectionPharmacotherapy].entry[2] = Reference(urn:uuid:bf08b62b-0abd-4e88-9092-ce0228382e51)
-* section[sectionPharmacotherapy].entry[3] = Reference(urn:uuid:133cea11-09c6-4147-80af-6c8f0b2d4e3a)
-* section[sectionPharmacotherapy].entry[4] = Reference(urn:uuid:65c49e6d-0951-4e83-8e2c-7c8f0b2d4e3a)
-* section[sectionPharmacotherapy].entry[5] = Reference(urn:uuid:b0001bf8-976a-4d7d-b192-8c8f0b2d4e3a)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].text.status = #additional
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[0] = Reference(urn:uuid:47472c99-09bf-4007-bfaa-16c9665ae090)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[1] = Reference(urn:uuid:f34114fc-138f-4bd8-8e1a-804d14ec9986)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[2] = Reference(urn:uuid:bf08b62b-0abd-4e88-9092-ce0228382e51)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[3] = Reference(urn:uuid:133cea11-09c6-4147-80af-6c8f0b2d4e3a)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[4] = Reference(urn:uuid:65c49e6d-0951-4e83-8e2c-7c8f0b2d4e3a)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[5] = Reference(urn:uuid:b0001bf8-976a-4d7d-b192-8c8f0b2d4e3a)
 //Rozdělit co bylo v průběhu hospitalizace a co bylo při propuštění
 
 
@@ -526,29 +526,29 @@ Usage: #example
 
 // Diagnostický souhrn:
 // Sekce Diagnostický souhrn
-* section[sectionDiagnosticSummary].title = "Diagnostický souhrn"
-* section[sectionDiagnosticSummary].code.coding[0].system = $loinc
-* section[sectionDiagnosticSummary].code.coding[0].code = #11535-2 // Problem list
-* section[sectionDiagnosticSummary].code.coding[0].display = "Hospital discharge diagnosis note"
-* section[sectionDiagnosticSummary].text.div = """
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].title = "Diagnostický souhrn"
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].code.coding[0].system = $loinc
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].code.coding[0].code = #11535-2 // Problem list
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].code.coding[0].display = "Hospital discharge diagnosis note"
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>K40.9 – Inguinální kýla, nespecifikovaná </p>
     <p>E89.0 – Hypotyreóza po léčbě (v anamnéze) </p>
   </div>
   """
-* section[sectionDiagnosticSummary].text.status = #generated
-* section[sectionDiagnosticSummary].entry[0] = Reference(urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2)
-* section[sectionDiagnosticSummary].entry[1] = Reference(urn:uuid:fdf9e92d-ac48-4706-b15b-d2eaca85f45f)
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].text.status = #generated
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].entry[0] = Reference(urn:uuid:35717696-8a99-4f99-a938-ec0ec88a65a2)
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary].entry[1] = Reference(urn:uuid:fdf9e92d-ac48-4706-b15b-d2eaca85f45f)
 
 // Významné výkony
 // Sekce Významné procedury
-* section[sectionSignificantProcedures].title = "Významné procedury"
-* section[sectionSignificantProcedures].code.coding[0].system = $loinc
-* section[sectionSignificantProcedures].code.coding[0].code = #10185-7
-* section[sectionSignificantProcedures].code.coding[0].display = "Hospital discharge procedure note"
-* section[sectionSignificantProcedures].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Plastika pravostranné tříselné kýly dne 2. 3. 2025.</div>"
-* section[sectionSignificantProcedures].text.status = #generated
-* section[sectionSignificantProcedures].entry[0] = Reference(urn:uuid:ffb1a62f-9050-4e33-af4b-4cdb8203c9e5)
+* section[sectionHospitalCourse].section[sectionSignificantProcedures].title = "Významné procedury"
+* section[sectionHospitalCourse].section[sectionSignificantProcedures].code.coding[0].system = $loinc
+* section[sectionHospitalCourse].section[sectionSignificantProcedures].code.coding[0].code = #10185-7
+* section[sectionHospitalCourse].section[sectionSignificantProcedures].code.coding[0].display = "Hospital discharge procedure note"
+* section[sectionHospitalCourse].section[sectionSignificantProcedures].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Plastika pravostranné tříselné kýly dne 2. 3. 2025.</div>"
+* section[sectionHospitalCourse].section[sectionSignificantProcedures].text.status = #generated
+* section[sectionHospitalCourse].section[sectionSignificantProcedures].entry[0] = Reference(urn:uuid:ffb1a62f-9050-4e33-af4b-4cdb8203c9e5)
 
 //Léčba vybraná není v EU můžeme vypustit? 2.7.4
 // TODO doplnit terapeutickou intervenci
@@ -556,11 +556,11 @@ Usage: #example
 
 //Výsledky vše na jednom místě, očekávané (nemají valsní sekci) a již připravené:
 ///sekce Výsledky vyšetření
-* section[sectionSignificantResults].title = "Výsledky vyšetření"
-* section[sectionSignificantResults].code.coding[0].system = $loinc
-* section[sectionSignificantResults].code.coding[0].code = #30954-2  //Relevant diagnostic tests/laboratory data
-* section[sectionSignificantResults].code.coding[0].display = "Relevant diagnostic tests/laboratory data note"
-* section[sectionSignificantResults].text.div = """
+* section[sectionHospitalCourse].section[sectionSignificantResults].title = "Výsledky vyšetření"
+* section[sectionHospitalCourse].section[sectionSignificantResults].code.coding[0].system = $loinc
+* section[sectionHospitalCourse].section[sectionSignificantResults].code.coding[0].code = #30954-2  //Relevant diagnostic tests/laboratory data
+* section[sectionHospitalCourse].section[sectionSignificantResults].code.coding[0].display = "Relevant diagnostic tests/laboratory data note"
+* section[sectionHospitalCourse].section[sectionSignificantResults].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Významné výsledky vyšetření v průběhu hospitalizace</p>
     <ul>
@@ -568,19 +568,19 @@ Usage: #example
       <li>CRP: 6 mg/L (norma: 0–10 mg/L)</li>
     </ul>
   </div>"""
-* section[sectionSignificantResults].text.status = #additional
-//* section[sectionSignificantResults].entry[0] = Reference(urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a) // Corrected Reference to include the resource type
-* section[sectionSignificantResults].entry[0] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b) // Corrected Reference to include the resource type
+* section[sectionHospitalCourse].section[sectionSignificantResults].text.status = #additional
+//* section[sectionHospitalCourse].section[sectionSignificantResults].entry[0] = Reference(urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a) // Corrected Reference to include the resource type
+* section[sectionHospitalCourse].section[sectionSignificantResults].entry[0] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b) // Corrected Reference to include the resource type
 
 // Sekce Implantáty a zdravotní pomůcky
-* section[sectionMedicalDevices].title = "Zdravotní pomůcky a implantáty"
-* section[sectionMedicalDevices].code.coding[0].system = $loinc
-* section[sectionMedicalDevices].code.coding[0].code = #57080-4 // Historie implantátů
-* section[sectionMedicalDevices].code.coding[0].display = "Implanted medical device Narrative"
-* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacientovi byl implantován kardiostimulátor Medtronic model W1DR01.</p></div>" // Added required text for cardinality
-* section[sectionMedicalDevices].text.status = #generated
-* section[sectionMedicalDevices].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001f) // Example reference to a medical device
-* section[sectionMedicalDevices].entry[1] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000020) // Example reference to another medical device
+* section[sectionHospitalCourse].section[sectionMedicalDevices].title = "Zdravotní pomůcky a implantáty"
+* section[sectionHospitalCourse].section[sectionMedicalDevices].code.coding[0].system = $loinc
+* section[sectionHospitalCourse].section[sectionMedicalDevices].code.coding[0].code = #57080-4 // Historie implantátů
+* section[sectionHospitalCourse].section[sectionMedicalDevices].code.coding[0].display = "Implanted medical device Narrative"
+* section[sectionHospitalCourse].section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pacientovi byl implantován kardiostimulátor Medtronic model W1DR01.</p></div>" // Added required text for cardinality
+* section[sectionHospitalCourse].section[sectionMedicalDevices].text.status = #generated
+* section[sectionHospitalCourse].section[sectionMedicalDevices].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001f) // Example reference to a medical device
+* section[sectionHospitalCourse].section[sectionMedicalDevices].entry[1] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000020) // Example reference to another medical device
 
 //Sekce Průběh hospitalizace - klinické shrnutí
 * section[sectionHospitalCourse].title = "Klinické shrnutí"
@@ -688,11 +688,11 @@ Usage: #example
 * section[sectionDischargeDetails].section[sectionVitalSigns].entry[0] = Reference(urn:uuid:8d2aea77-f576-4d0f-9508-537359aa44d6)
 
 //Sekce Souhrn Medikace
-* section[sectionPharmacotherapy].title = "Medikace"
-* section[sectionPharmacotherapy].code.coding[+].system = $loinc
-* section[sectionPharmacotherapy].code.coding[=].code = #87232-5
-* section[sectionPharmacotherapy].code.coding[=].display = "Medication administration.brief"
-* section[sectionPharmacotherapy].text.div = """
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].title = "Medikace"
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].code.coding[+].system = $loinc
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].code.coding[=].code = #87232-5
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].code.coding[=].display = "Medication administration.brief"
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Medikace při propuštění</p>
     <ul>
@@ -702,13 +702,13 @@ Usage: #example
     </ul>
   </div>
   """
-* section[sectionPharmacotherapy].text.status = #additional
-* section[sectionPharmacotherapy].entry[0] = Reference(urn:uuid:47472c99-09bf-4007-bfaa-16c9665ae090)
-* section[sectionPharmacotherapy].entry[1] = Reference(urn:uuid:f34114fc-138f-4bd8-8e1a-804d14ec9986)
-* section[sectionPharmacotherapy].entry[2] = Reference(urn:uuid:bf08b62b-0abd-4e88-9092-ce0228382e51)
-* section[sectionPharmacotherapy].entry[3] = Reference(urn:uuid:133cea11-09c6-4147-80af-6c8f0b2d4e3a)
-* section[sectionPharmacotherapy].entry[4] = Reference(urn:uuid:65c49e6d-0951-4e83-8e2c-7c8f0b2d4e3a)
-* section[sectionPharmacotherapy].entry[5] = Reference(urn:uuid:b0001bf8-976a-4d7d-b192-8c8f0b2d4e3a)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].text.status = #additional
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[0] = Reference(urn:uuid:47472c99-09bf-4007-bfaa-16c9665ae090)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[1] = Reference(urn:uuid:f34114fc-138f-4bd8-8e1a-804d14ec9986)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[2] = Reference(urn:uuid:bf08b62b-0abd-4e88-9092-ce0228382e51)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[3] = Reference(urn:uuid:133cea11-09c6-4147-80af-6c8f0b2d4e3a)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[4] = Reference(urn:uuid:65c49e6d-0951-4e83-8e2c-7c8f0b2d4e3a)
+* section[sectionHospitalCourse].section[sectionPharmacotherapy].entry[5] = Reference(urn:uuid:b0001bf8-976a-4d7d-b192-8c8f0b2d4e3a)
 //Rozdělit co bylo v průběhu hospitalizace a co bylo při propuštění
 
 

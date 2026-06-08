@@ -267,8 +267,8 @@ Description: "This profile defines how to represent Composition resource in HL7 
       Newborn patient / Novorozenec, Newborn patient / Novorozenec,
       CZ_PatientCore)
 
-* section contains sectionDiagnosticSummary 0..1
-* section[sectionDiagnosticSummary]
+* section[sectionHospitalCourse].section contains sectionDiagnosticSummary 0..1
+* section[sectionHospitalCourse].section[sectionDiagnosticSummary]
   * insert SectionComRules (
     Problem specification in narrative form,
     All problems/diagnoses that affect care during the inpatient case or are important to be recorded to ensure continuity of care. The diagnostic summary differentiates\, in accordance with the international recommendation\, between problems treated during hospital stay and other (untreated\) problems. Treated problems are problems that were the subject of diagnostics\, therapy\, nursing\, or (continuous\) monitoring during the hospitalisation. Furthermore problems could be divided into three categories: problems present on admission (POA\)\, conditions acquired during hospital stay (HAC\) and problems that cannot be classified as being of any of the two (N/A\). The diagnostic summary contains all conditions as they were recognised at the end of hospitalisation\, after all examinations. This section contains concise\, well specified\, codeable\, summary of problems. Problems are ordered by importance (main problems first\) during hospital stay. Description of the problem might be completed with additional details in the medical history section and/or in the Synthesis section.	,
@@ -278,8 +278,8 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * entry only Reference( CZ_ConditionHdr ) // check if this is too restrictive
 
 
-* section contains sectionSignificantProcedures 0..1
-* section[sectionSignificantProcedures]
+* section[sectionHospitalCourse].section contains sectionSignificantProcedures 0..1
+* section[sectionHospitalCourse].section[sectionSignificantProcedures]
   * insert SectionComRules (
     Significant procedures,
     Significant surgical and non-surgical procedures performed during hospitalisation which are significant for continuity of care\, e.g. surgeries and other \"instrumental\"interventions (endoscopic\, intravascular\)\, chemotherapy\, radiotherapy\, purification methods (dialysis\, hemoperfusion\)\, circulation support methods (counterpulsation\, etc.\)\, administration of blood derivatives or others.\r\nThis section does not include purely diagnostic procedures (MRI\, CT\, etc.\). If no significant performance has been performed\, this fact must be explicitly stated using the IPS Absent and Unknown Data. ,
@@ -289,8 +289,8 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * entry only Reference(CZ_ProcedureHdr)
   * section ..0
 
-* section contains sectionMedicalDevices 0..1
-* section[sectionMedicalDevices]
+* section[sectionHospitalCourse].section contains sectionMedicalDevices 0..1
+* section[sectionHospitalCourse].section[sectionMedicalDevices]
   * insert SectionComRules (
     Medical devices and implants,
     Implants and used medical devices that affected or may affect the provision of health services (diagnosis and treatment\). Also medical devices explanted\, or its use was stopped during hospitalisation. If the section is blank\, the reason must be explicitly stated using the IPS Absent and Unknown Data coding system. ,
@@ -305,8 +305,8 @@ Description: "This profile defines how to represent Composition resource in HL7 
 
 
 
-* section contains sectionPharmacotherapy 0..1
-* section[sectionPharmacotherapy]
+* section[sectionHospitalCourse].section contains sectionPharmacotherapy 0..1
+* section[sectionHospitalCourse].section[sectionPharmacotherapy]
   * insert SectionComRules (
     Pharmacotherapy,
     Selected drug treatment during hospitalisation. Medicinal products that were administered during hospitalisation and whose administration has already been discontinued before discharge. Only products which are important for continuity of care (antibiotics other than completely routine\, corticosteroids in high doses\, etc.\) will be listed. Products which administration will continue after discharge will be also recorder in the Medication summary section.
@@ -317,8 +317,8 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * entry only Reference(CZ_MedicationDispenseHdr or CZ_MedicationStatement or CZ_MedicationRequestHdr or MedicationAdministrationEuHdr)  //or MedicationDispense or MedicationAdministration)
 
 
-* section contains sectionSignificantResults 0..1
-* section[sectionSignificantResults]
+* section[sectionHospitalCourse].section contains sectionSignificantResults 0..1
+* section[sectionHospitalCourse].section[sectionSignificantResults]
   * insert SectionComRules (
     Significant Observation Results,
     Results of significant functional\, diagnostic\, and imaging examinations to ensure continuity of care\, performed during hospitalisation. Results of examinations ordered but not yet delivered should be presented separately from results already delivered.,
@@ -337,8 +337,8 @@ $loinc#87232-5 ) // 	Medication administration.brief
   // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)
 
 
-* section contains sectionSynthesis 0..1
-* section[sectionSynthesis]
+* section[sectionHospitalCourse].section contains sectionSynthesis 0..1
+* section[sectionHospitalCourse].section[sectionSynthesis]
   * insert SectionComRules (
     Synthesis,
     This section provides clinical synthesis (e.g. description of reasons and course of hospital stay\) clustered by managed conditions. Clinical synthesis may include clinical reasoning (differential diagnostics\, explanation of clinical context\) in clinically complex conditions.,

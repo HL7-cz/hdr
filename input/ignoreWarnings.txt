@@ -5,6 +5,8 @@
 
 # duplicated anchor ids
 The html source has duplicate anchor Ids: 1
+%The html source has duplicate anchor Ids: 3f85726c-ad2f-441b-89ce-100000000000,hc3f85726c-ad2f-441b-89ce-100000000000%
+%The html source has duplicate anchor Ids: Procedure.performed[x].extension,Procedure.performed[x].extension:data-absent-reason,Procedure.performed[x].id,key_Procedure.performed[x].extension:data-absent-reason%
 
 # DICOM valuesets do not resolve - that is expected.
 %Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part%
@@ -24,6 +26,8 @@ The link '??' for "KeyObjectSelectionDocumentTitle%
 
 # Duplicated anchor ids
 The html source has duplicate anchor Ids: 1
+%The html source has duplicate anchor Ids: 3f85726c-ad2f-441b-89ce-100000000000,hc3f85726c-ad2f-441b-89ce-100000000000%
+%The html source has duplicate anchor Ids: Procedure.performed[x].extension,Procedure.performed[x].extension:data-absent-reason,Procedure.performed[x].id,key_Procedure.performed[x].extension:data-absent-reason%
 
 # A definition for CodeSystem 'url' could not be found
 A definition for CodeSystem 'http://snomed.info/sct'%

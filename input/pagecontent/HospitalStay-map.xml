@@ -90,11 +90,6 @@
         </li>
 
         <li>
-          <strong>C&#237;lov&#225; ConceptMap:</strong>
-          <a href="ConceptMap-hospitalStay2FHIR-cz-hdr.html">hospitalStay2FHIR-cz-hdr</a>
-        </li>
-
-        <li>
           <strong>Hlavn&#237; c&#237;lov&#253; profil:</strong>
           <a href="StructureDefinition-cz-composition-hdr.html">cz-composition-hdr</a>
         </li>
