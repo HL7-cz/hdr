@@ -5,7 +5,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <blockquote class="stu-note">
             <b>Medication Lists</b>
-            <p>The usage of several resources for expressing medication is related to the different purposes and meaning of each resource. While more clear boundaries and relationships between resources may be useful, the editors have decided to maintain a comprehensive set of options open. Reviewers are invited to provide ther feedback about the usage of the Medicaition related resources (e.g. MedicationStatement,  MedicationRequest,...) in the medication lists used by the HDR</p>
+            <p>The usage of several resources for expressing medication is related to the different purposes and meaning of each resource. While more clear boundaries and relationships between resources may be useful, the editors have decided to maintain a comprehensive set of options open. Reviewers are invited to provide their feedback about the usage of the Medication related resources (e.g. MedicationStatement, MedicationRequest, ...) in the medication lists used by the HDR</p>
         </blockquote>
 
     </div>
@@ -15,7 +15,7 @@
     <a></a>
 
     <p>In order to support the different maturity levels foreseen for the <b>European EHR eXchange format</b> (structured, text-only, unstructured), this version of the guide does not impose the mandatory presence of entries in the HDR sections.</p>
-    <p>HHowever, the presence of entries in the HDR sections is generally recommended to ensure a more structured and interoperable document.</p>
+    <p>However, the presence of entries in the HDR sections is generally recommended to ensure a more structured and interoperable document.</p>
     <p>This recommendation is expressed in this guide through <b>specific obligations</b> which guide implementers toward achieving a higher level of data quality and interoperability.</p>
 
 

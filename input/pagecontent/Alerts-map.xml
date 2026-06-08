@@ -1,18 +1,327 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
 
-    <h3 id="overview">Hospital Discharge Report Model Map</h3>
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Alerts -&gt; FHIR profily (CZ HDR)</title>
 
-    <a> </a>
+    <style type="text/css">
+
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Prob&#237;haj&#237;c&#237; slad&#283;n&#237;:</strong>
+          Logick&#233; modely Xt-EHR jsou pr&#367;b&#283;&#382;n&#283; revidov&#225;ny a d&#225;le zp&#345;es&#328;ov&#225;ny.
+        </div>
+      </div>
+    </div>
+
+    <h3>AlertsCz -&gt; cz-allergyIntolerance-hdr</h3>
 
     <p>Hereafter a browseable diagram showing how the Alerts model is realized by the HL7 FHIR Profiles of this guide</p>
 
     <h4 id="model">Model Overview</h4>
-<a> </a>
-<p>{% include Alerts-map.svg %}</p>
 
-    
+    <p>{% include Alerts-map.svg %}</p>
 
-    
+    <div class="table-wrap">
+
+      <strong>Kontext mapov&#225;n&#237;</strong>
+
+      <ul>
+        <li>
+          <strong>Zdrojov&#253; logick&#253; model:</strong>
+          <a href="StructureDefinition-AlertsCz.html">AlertsCz</a>
+        </li>
+
+        <li>
+          <strong>C&#237;lov&#225; ConceptMap:</strong>
+          <a href="ConceptMap-alerts2FHIR-cz-hdr.html">alerts2FHIR-cz-hdr</a>
+        </li>
+
+        <li>
+          <strong>Hlavn&#237; c&#237;lov&#253; profil:</strong>
+          <a href="StructureDefinition-cz-allergyIntolerance-hdr.html">cz-allergyIntolerance-hdr</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="table-wrap">
+
+      <table summary="Mapov&#225;n&#237; Alerts na CZ HDR profily">
+
+        <caption>Alerts -&gt; FHIR profily (CZ HDR)</caption>
+
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">Alerts (Logick&#253; model)</th>
+            <th class="relhead">Vztah</th>
+            <th colspan="4" class="tgt-head">FHIR c&#237;l</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Prvek</th>
+            <th class="src-sub">Popis</th>
+            <th class="relsub">Vztah</th>
+            <th class="tgt-sub">Zdroj/Profil</th>
+            <th class="tgt-sub">Prvek</th>
+            <th class="tgt-sub">Popis</th>
+            <th class="tgt-sub">Pozn&#225;mky</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>AlertsCz.allergy</td>
+            <td>A.2.2.1 - Allergy and Intolerance</td>
+            <td>equivalent</td>
+            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AlertsCz.allergy.description</td>
+            <td>A.2.2.1.1 - Allergy description</td>
+            <td>equivalent</td>
+            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance.text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AlertsCz.allergy.agent</td>
+            <td>A.2.2.1.2 - Agent or Allergen</td>
+            <td>equivalent</td>
+            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance.code</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AlertsCz.allergy.typeOfPropensity</td>
+            <td>A.2.2.1.3 - Type of propensity</td>
+            <td>equivalent</td>
+            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance.type</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AlertsCz.allergy.manifestation</td>
+            <td>A.2.2.1.4 - Allergy manifestation</td>
+            <td>related-to</td>
+            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance.reaction.manifestation</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AlertsCz.allergy.criticality</td>
+            <td>A.2.2.1.5 - Criticality</td>
+            <td>equivalent</td>
+            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance.criticality</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AlertsCz.allergy.onsetDate</td>
+            <td>A.2.2.1.6 - Onset date</td>
+            <td>equivalent</td>
+            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance.onset[x]</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AlertsCz.allergy.endDate</td>
+            <td>A.2.2.1.7 - End date</td>
+            <td>equivalent</td>
+            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance.extension:abatement.valueDateTime</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AlertsCz.allergy.status</td>
+            <td>A.2.2.1.8 - Status</td>
+            <td>equivalent</td>
+            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance.clinicalStatus</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AlertsCz.allergy.certainty</td>
+            <td>A.2.2.1.9 - Certainty</td>
+            <td>equivalent</td>
+            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance.verificationStatus</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AlertsCz.allergy.lastOccurrence</td>
+            <td>A.2.2.1.10 - Last Occurence</td>
+            <td>equivalent</td>
+            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance.lastOccurrence</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AlertsCz.allergy</td>
+            <td>A.2.2.1 - Allergy and Intolerance</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionAllergies</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AlertsCz.medicalAlerts</td>
+            <td>A.2.2.2 - Medical alerts (relevant for the respective hospital stay)</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionAlert</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AlertsCz.medicalAlerts.description</td>
+            <td>A.2.2.2.1 - Healthcare alert description</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionAlert.text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AlertsCz.medicalAlerts.description</td>
+            <td>A.2.2.2.1 - Healthcare alert description</td>
+            <td>related-to</td>
+            <td>Flag (cz-flag-hdr)</td>
+            <td>Flag.text</td>
+            <td></td>
+            <td>TO BE checked</td>
+          </tr>
+          <tr>
+            <td>AlertsCz.medicalAlerts.description</td>
+            <td>A.2.2.2.1 - Healthcare alert description</td>
+            <td>related-to</td>
+            <td>Flag (cz-flag-hdr)</td>
+            <td>Flag.text</td>
+            <td></td>
+            <td>TO BE checked</td>
+          </tr>
+          <tr>
+            <td>AlertsCz.medicalAlerts.code</td>
+            <td>A.2.2.2.3 - Healthcare alert code(s)</td>
+            <td>related-to</td>
+            <td>Flag (cz-flag-hdr)</td>
+            <td>Flag.code</td>
+            <td></td>
+            <td>TO BE checked (cardinality)</td>
+          </tr>
+          <tr>
+            <td>AlertsCz.medicalAlerts.specialistPhysician</td>
+            <td>A.2.2.2.4 - Healthcare alert specialist physician</td>
+            <td>related-to</td>
+            <td>Flag (cz-flag-hdr)</td>
+            <td>Flag.author</td>
+            <td></td>
+            <td>TO BE checked</td>
+          </tr>
+          <tr>
+            <td>AlertsCz.medicalAlerts.comment</td>
+            <td>A.2.2.2.5 - Healthcare alert comment</td>
+            <td>related-to</td>
+            <td>Flag (cz-flag-hdr)</td>
+            <td>Flag.text</td>
+            <td></td>
+            <td>TO BE checked</td>
+          </tr>
+          <tr>
+            <td>AlertsCz.medicalAlerts.priority</td>
+            <td>A.2.2.2.6 - Healthcare alert priority</td>
+            <td>related-to</td>
+            <td>Flag (cz-flag-hdr)</td>
+            <td>Flag.extension:flagPriorityExt</td>
+            <td></td>
+            <td>TO BE checked</td>
+          </tr>
+          <tr>
+            <td>AlertsCz.medicalAlerts.period</td>
+            <td>A.2.2.2.7 - Healthcare alert period</td>
+            <td>related-to</td>
+            <td>Flag (cz-flag-hdr)</td>
+            <td>Flag.period</td>
+            <td></td>
+            <td>TO BE checked</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </body>
 
 </div>
