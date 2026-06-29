@@ -1,18 +1,777 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
 
-    <h3 id="overview">Hospital Discharge Report Model Map</h3>
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Hospital Stay -&gt; FHIR profily (CZ HDR)</title>
 
-    <a> </a>
+    <style type="text/css">
+
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Prob&#237;haj&#237;c&#237; slad&#283;n&#237;:</strong>
+          Logick&#233; modely Xt-EHR jsou pr&#367;b&#283;&#382;n&#283; revidov&#225;ny a d&#225;le zp&#345;es&#328;ov&#225;ny.
+        </div>
+      </div>
+    </div>
+
+    <h3>HospitalStayCz -&gt; cz-composition-hdr</h3>
 
     <p>Hereafter a browseable diagram showing how the HospitalStay model is realized by the HL7 FHIR Profiles of this guide</p>
 
     <h4 id="model">Model Overview</h4>
-<a> </a>
-<p>{% include HospitalStay-map.svg %}</p>
 
-    
+    <p>{% include HospitalStay-map.svg %}</p>
 
-    
+    <div class="table-wrap">
+
+      <strong>Kontext mapov&#225;n&#237;</strong>
+
+      <ul>
+        <li>
+          <strong>Zdrojov&#253; logick&#253; model:</strong>
+          <a href="StructureDefinition-HospitalStayCz.html">HospitalStayCz</a>
+        </li>
+
+        <li>
+          <strong>C&#237;lov&#225; ConceptMap:</strong>
+          <a href="ConceptMap-hospitalStay2FHIR-cz-hdr.html">hospitalStay2FHIR-cz-hdr</a>
+        </li>
+
+        <li>
+          <strong>Hlavn&#237; c&#237;lov&#253; profil:</strong>
+          <a href="StructureDefinition-cz-composition-hdr.html">cz-composition-hdr</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="table-wrap">
+
+      <table summary="Mapov&#225;n&#237; Hospital Stay na CZ HDR profily">
+
+        <caption>Hospital Stay -&gt; FHIR profily (CZ HDR)</caption>
+
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">Hospital Stay (Logick&#253; model)</th>
+            <th class="relhead">Vztah</th>
+            <th colspan="4" class="tgt-head">FHIR c&#237;l</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Prvek</th>
+            <th class="src-sub">Popis</th>
+            <th class="relsub">Vztah</th>
+            <th class="tgt-sub">Zdroj/Profil</th>
+            <th class="tgt-sub">Prvek</th>
+            <th class="tgt-sub">Popis</th>
+            <th class="tgt-sub">Pozn&#225;mky</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>HospitalStayCz.diagnosticSummary</td>
+            <td>A.2.6.1 - Diagnostic summary</td>
+            <td>equivalent</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionDiagnosticSummary</td>
+            <td></td>
+            <td>Details in the Composition.section:sectionDiagnosticSummary.entry of type Condition. See dedicated group</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantProcedures</td>
+            <td>A.2.6.2 - Significant procedures</td>
+            <td>equivalent</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionSignificantProcedures</td>
+            <td></td>
+            <td>Details in the Composition.section:sectionSignificantProcedures.entry of type Procedure. See dedicated group</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.medicalDevices</td>
+            <td>A.2.6.3 - Medical devices and implants</td>
+            <td>equivalent</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionMedicalDevices</td>
+            <td></td>
+            <td>Details in the Composition.section:sectionMedicalDevices.entry of type DeviceUseStatement. See dedicated groups</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy</td>
+            <td>A.2.6.5 - Pharmacotherapy</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionPharmacotherapy</td>
+            <td></td>
+            <td>Details in the Composition.section:sectionPharmacotherapy.entry. See dedicated groups</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantResults</td>
+            <td>A.2.6.6 - Significant Observation Results</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionSignificantResults</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantResults.details</td>
+            <td>A.2.6.6.4 - Observation details</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionSignificantResults.text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.synthesis</td>
+            <td>A.2.6.7 - Synthesis</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionSynthesis</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.synthesis.description</td>
+            <td>A.2.6.7.1 - Problem synthesis</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionSynthesis.text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.synthesis.reasoning</td>
+            <td>A.2.6.7.2 - Clinical reasoning</td>
+            <td>related-to</td>
+            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition.section:sectionSynthesis.text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.diagnosticSummary.problemDescription</td>
+            <td>A.2.6.1.1 - Problem description</td>
+            <td>related-to</td>
+            <td>Condition (cz-condition-hdr)</td>
+            <td>Condition.text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.diagnosticSummary.problemDetails</td>
+            <td>A.2.6.1.2 - Problem details</td>
+            <td>related-to</td>
+            <td>Condition (cz-condition-hdr)</td>
+            <td>Condition</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.diagnosticSummary.onsetDate</td>
+            <td>A.2.6.1.3 - Onset date</td>
+            <td>equivalent</td>
+            <td>Condition (cz-condition-hdr)</td>
+            <td>Condition.onSetDateTime</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.diagnosticSummary.endDate</td>
+            <td>A.2.6.1.4 - End date</td>
+            <td>equivalent</td>
+            <td>Condition (cz-condition-hdr)</td>
+            <td>Condition.abatementDateTime</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.diagnosticSummary.category</td>
+            <td>A.2.6.1.5 - Category</td>
+            <td>equivalent</td>
+            <td>Condition (cz-condition-hdr)</td>
+            <td>Condition.category:poa</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.diagnosticSummary.treatmentClass</td>
+            <td>A.2.6.1.6 - Treatment class</td>
+            <td>equivalent</td>
+            <td>Condition (cz-condition-hdr)</td>
+            <td>Condition.category:treated</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.diagnosticSummary.clinicalStatus</td>
+            <td>A.2.6.1.7 - Clinical status</td>
+            <td>equivalent</td>
+            <td>Condition (cz-condition-hdr)</td>
+            <td>Condition.clinicalStatus</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.diagnosticSummary.resolution</td>
+            <td>A.2.6.1.8 - Resolution circumstances</td>
+            <td>related-to</td>
+            <td>Condition (cz-condition-hdr)</td>
+            <td>Condition.text</td>
+            <td></td>
+            <td>The resolution circumstances may be described as resource or composiiton.section text ; or indirectly determined by the resource (e.g. Procedure) that has been perfomed in reason of this Condition no more active</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.diagnosticSummary.severity</td>
+            <td>A.2.6.1.9 - Severity</td>
+            <td>equivalent</td>
+            <td>Condition (cz-condition-hdr)</td>
+            <td>Condition.severity</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.diagnosticSummary.stage</td>
+            <td>A.2.6.1.10 - Stage</td>
+            <td>equivalent</td>
+            <td>Condition (cz-condition-hdr)</td>
+            <td>Condition.stage</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.medicalDevices.description</td>
+            <td>A.2.6.3.1 - Device and implant description</td>
+            <td>related-to</td>
+            <td>Device (cz-medical-device)</td>
+            <td>Device.text</td>
+            <td></td>
+            <td>if referring to the description of the device</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.medicalDevices.identifier</td>
+            <td>A.2.6.3.2 - Device ID</td>
+            <td>related-to</td>
+            <td>Device (cz-medical-device)</td>
+            <td>Device.identifier</td>
+            <td></td>
+            <td>if generic identifier</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.medicalDevices.identifier</td>
+            <td>A.2.6.3.2 - Device ID</td>
+            <td>related-to</td>
+            <td>Device (cz-medical-device)</td>
+            <td>Device.udiCarrier</td>
+            <td></td>
+            <td>if it is the udiCarrier</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.medicalDevices.description</td>
+            <td>A.2.6.3.1 - Device and implant description</td>
+            <td>related-to</td>
+            <td>DeviceUseStatement (cz-deviceUseStatement-hdr)</td>
+            <td>DeviceUseStatement.text</td>
+            <td></td>
+            <td>if referring to the description of the usage of the device</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.medicalDevices.implantDate</td>
+            <td>A.2.6.3.3 - Implant date</td>
+            <td>related-to</td>
+            <td>DeviceUseStatement (cz-deviceUseStatement-hdr)</td>
+            <td>DeviceUseStatement.timing[x]</td>
+            <td></td>
+            <td>If the usage period is highlighted</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.medicalDevices.endDate</td>
+            <td>A.2.6.3.4 - End date</td>
+            <td>related-to</td>
+            <td>DeviceUseStatement (cz-deviceUseStatement-hdr)</td>
+            <td>DeviceUseStatement.timingPeriod.end</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.medicalDevices.reason</td>
+            <td>A.2.6.3.5 - Reason</td>
+            <td>related-to</td>
+            <td>DeviceUseStatement (cz-deviceUseStatement-hdr)</td>
+            <td>DeviceUseStatement.reasonCode</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.medicalDevices.reason</td>
+            <td>A.2.6.3.5 - Reason</td>
+            <td>related-to</td>
+            <td>DeviceUseStatement (cz-deviceUseStatement-hdr)</td>
+            <td>DeviceUseStatement.reasonReference</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.productCode</td>
+            <td>A.2.6.5.2 - Code</td>
+            <td>equivalent</td>
+            <td>Medication (cz-Medication)</td>
+            <td>Medication.code</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.intendedUse</td>
+            <td>A.2.6.5.3 - Intended use</td>
+            <td>equivalent</td>
+            <td>Composition (cz-Medication)</td>
+            <td>Composition.section:sectionPharmacotherapy</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.productName</td>
+            <td>A.2.6.5.4 - Brand name</td>
+            <td>equivalent</td>
+            <td>Medication (cz-Medication)</td>
+            <td>Medication.extension:productName</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.activeIngredient</td>
+            <td>A.2.6.5.5 - Active ingredient list</td>
+            <td>equivalent</td>
+            <td>Medication (cz-Medication)</td>
+            <td>Medication.ingredient.item[x]</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.strength</td>
+            <td>A.2.6.5.6 - Strength</td>
+            <td>equivalent</td>
+            <td>Medication (cz-Medication)</td>
+            <td>Medication.ingredient.strength</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.doseForm</td>
+            <td>A.2.6.5.7 - Pharmaceutical dose form</td>
+            <td>equivalent</td>
+            <td>Medication (cz-Medication)</td>
+            <td>Medication.form</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.reason</td>
+            <td>A.2.6.5.1 - Medication reason</td>
+            <td>equivalent</td>
+            <td>MedicationDispense (cz-medicationDispense-hdr)</td>
+            <td>MedicationDispense.reasonCode</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.reason</td>
+            <td>A.2.6.5.1 - Medication reason</td>
+            <td>equivalent</td>
+            <td>MedicationDispense (cz-medicationDispense-hdr)</td>
+            <td>MedicationDispense.reasonReference</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.productCode</td>
+            <td>A.2.6.5.2 - Code</td>
+            <td>equivalent</td>
+            <td>MedicationDispense (cz-medicationDispense-hdr)</td>
+            <td>MedicationDispense.medicationCodeableConcept</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.reason</td>
+            <td>A.2.6.5.1 - Medication reason</td>
+            <td>equivalent</td>
+            <td>MedicationRequest (cz-medicationRequest-hdr)</td>
+            <td>MedicationRequest.reasonCode</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.reason</td>
+            <td>A.2.6.5.1 - Medication reason</td>
+            <td>equivalent</td>
+            <td>MedicationRequest (cz-medicationRequest-hdr)</td>
+            <td>MedicationRequest.reasonReference</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.productCode</td>
+            <td>A.2.6.5.2 - Code</td>
+            <td>equivalent</td>
+            <td>MedicationRequest (cz-medicationRequest-hdr)</td>
+            <td>MedicationRequest.medicationCodeableConcept</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantProcedures.procedureCode</td>
+            <td>A.2.6.2.1 - Procedure code</td>
+            <td>related-to</td>
+            <td>Procedure (cz-procedure-hdr)</td>
+            <td>Procedure.code</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantProcedures.description</td>
+            <td>A.2.6.2.2 - Procedure description</td>
+            <td>related-to</td>
+            <td>Procedure (cz-procedure-hdr)</td>
+            <td>Procedure.text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantProcedures.bodySite</td>
+            <td>A.2.6.2.3 - Body site</td>
+            <td>related-to</td>
+            <td>Procedure (cz-procedure-hdr)</td>
+            <td>Procedure.bodySite</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantProcedures.bodySite</td>
+            <td>A.2.6.2.3 - Body site</td>
+            <td>related-to</td>
+            <td>Procedure (cz-procedure-hdr)</td>
+            <td>Procedure.extension:bodySite</td>
+            <td></td>
+            <td>if details about the body structure have to be provided</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantProcedures.date</td>
+            <td>A.2.6.2.4 - Procedure date</td>
+            <td>related-to</td>
+            <td>Procedure (cz-procedure-hdr)</td>
+            <td>Procedure.perfomedDateTime</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantProcedures.reason</td>
+            <td>A.2.6.2.5 - Procedure reason</td>
+            <td>equivalent</td>
+            <td>Procedure (cz-procedure-hdr)</td>
+            <td>Procedure.reasonCode</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantProcedures.reason</td>
+            <td>A.2.6.2.5 - Procedure reason</td>
+            <td>equivalent</td>
+            <td>Procedure (cz-procedure-hdr)</td>
+            <td>Procedure.reasonReference</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantProcedures.outcome</td>
+            <td>A.2.6.2.6 - Outcome</td>
+            <td>equivalent</td>
+            <td>Procedure (cz-procedure-hdr)</td>
+            <td>Procedure.outcome</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantProcedures.complication</td>
+            <td>A.2.6.2.7 - Complication</td>
+            <td>related-to</td>
+            <td>Procedure (cz-procedure-hdr)</td>
+            <td>Procedure.complication</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantProcedures.complication</td>
+            <td>A.2.6.2.7 - Complication</td>
+            <td>related-to</td>
+            <td>Procedure (cz-procedure-hdr)</td>
+            <td>Procedure.complicationDetail</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantProcedures.focalDevice</td>
+            <td>A.2.6.2.8 - Focal device</td>
+            <td>equivalent</td>
+            <td>Procedure (cz-procedure-hdr)</td>
+            <td>Procedure.focalDevice</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.medicalDevices.implantDate</td>
+            <td>A.2.6.3.3 - Implant date</td>
+            <td>related-to</td>
+            <td>Procedure (cz-procedure-hdr)</td>
+            <td>Procedure.perfomed[x]</td>
+            <td></td>
+            <td>if the implantation procedure is described</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantResults.date</td>
+            <td>A.2.6.6.1 - Date</td>
+            <td>equivalent</td>
+            <td>Observation (Observation)</td>
+            <td>Observation.effective[x]</td>
+            <td></td>
+            <td>Similar Mapping for other Observation profiles</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantResults.status</td>
+            <td>A.2.6.6.2 - Observation status</td>
+            <td>equivalent</td>
+            <td>Observation (Observation)</td>
+            <td>Observation.status</td>
+            <td></td>
+            <td>Similar Mapping for other Observation profiles</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantResults.description</td>
+            <td>A.2.6.6.3 - Result description</td>
+            <td>related-to</td>
+            <td>Observation (Observation)</td>
+            <td>Observation.text</td>
+            <td></td>
+            <td>Similar Mapping for other Observation profiles</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantResults.details</td>
+            <td>A.2.6.6.4 - Observation details</td>
+            <td>related-to</td>
+            <td>Observation (Observation)</td>
+            <td>Observation</td>
+            <td></td>
+            <td>Similar Mapping for other Observation profiles</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantResults.result</td>
+            <td>A.2.6.6.5 - Observation result</td>
+            <td>equivalent</td>
+            <td>Observation (Observation)</td>
+            <td>Observation.value[x]</td>
+            <td></td>
+            <td>Similar Mapping for other Observation profiles</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantResults.result</td>
+            <td>A.2.6.6.5 - Observation result</td>
+            <td>equivalent</td>
+            <td>Observation (Observation)</td>
+            <td>Observation.component.value[x]</td>
+            <td></td>
+            <td>Similar Mapping for other Observation profiles</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.significantResults.reporter</td>
+            <td>A.2.6.6.7 - Reporter</td>
+            <td>equivalent</td>
+            <td>Observation (Observation)</td>
+            <td>Observation.performer</td>
+            <td></td>
+            <td>Similar Mapping for other Observation profiles</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.dosageRegimen</td>
+            <td>A.2.6.5.8 - Dosage Regimen</td>
+            <td>equivalent</td>
+            <td>Dosage (Dosage)</td>
+            <td>Dosage</td>
+            <td></td>
+            <td>MedicationDispense.dosageInstruction or MedicationRequest.dosageInstruction or MedicationStatement.dosage</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.route</td>
+            <td>A.2.6.5.9 - Route of administration</td>
+            <td>equivalent</td>
+            <td>Dosage (Dosage)</td>
+            <td>Dosage.route</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.period</td>
+            <td>A.2.6.5.10 - Period of treatment</td>
+            <td>related-to</td>
+            <td>Dosage (Dosage)</td>
+            <td>Dosage.timing.repeat.duration</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.reason</td>
+            <td>A.2.6.5.1 - Medication reason</td>
+            <td>equivalent</td>
+            <td>MedicationAdministration (MedicationAdministration)</td>
+            <td>MedicationAdministration.reasonCode</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.reason</td>
+            <td>A.2.6.5.1 - Medication reason</td>
+            <td>equivalent</td>
+            <td>MedicationAdministration (MedicationAdministration)</td>
+            <td>MedicationAdministration.reasonReference</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.productCode</td>
+            <td>A.2.6.5.2 - Code</td>
+            <td>equivalent</td>
+            <td>MedicationAdministration (MedicationAdministration)</td>
+            <td>MedicationAdministration.medicationCodeableConcept</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.dosageRegimen</td>
+            <td>A.2.6.5.8 - Dosage Regimen</td>
+            <td>related-to</td>
+            <td>MedicationAdministration (MedicationAdministration)</td>
+            <td>MedicationAdministration</td>
+            <td></td>
+            <td>several elements used</td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.route</td>
+            <td>A.2.6.5.9 - Route of administration</td>
+            <td>equivalent</td>
+            <td>MedicationAdministration (MedicationAdministration)</td>
+            <td>MedicationAdministration.dosage.route</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.period</td>
+            <td>A.2.6.5.10 - Period of treatment</td>
+            <td>equivalent</td>
+            <td>MedicationAdministration (MedicationAdministration)</td>
+            <td>MedicationAdministration.occurencePeriod</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.reason</td>
+            <td>A.2.6.5.1 - Medication reason</td>
+            <td>equivalent</td>
+            <td>MedicationStatement (cz-MedicationStatement)</td>
+            <td>MedicationStatement.reasonReference</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.reason</td>
+            <td>A.2.6.5.1 - Medication reason</td>
+            <td>equivalent</td>
+            <td>MedicationStatement (cz-MedicationStatement)</td>
+            <td>MedicationStatement.reasonCode</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.productCode</td>
+            <td>A.2.6.5.2 - Code</td>
+            <td>equivalent</td>
+            <td>MedicationStatement (cz-MedicationStatement)</td>
+            <td>MedicationStatement.medicationCodeableConcept</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>HospitalStayCz.pharmacotherapy.period</td>
+            <td>A.2.6.5.10 - Period of treatment</td>
+            <td>equivalent</td>
+            <td>MedicationStatement (cz-MedicationStatement)</td>
+            <td>MedicationStatement.effectivePeriod</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </body>
 
 </div>

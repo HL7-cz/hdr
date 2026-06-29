@@ -1,18 +1,446 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
 
-    <h3 id="overview">Hospital Discharge Report Model Map</h3>
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>InPatientEncounter -&gt; FHIR profily (CZ HDR)</title>
 
-    <a> </a>
+    <style type="text/css">
+
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Prob&#237;haj&#237;c&#237; slad&#283;n&#237;:</strong>
+          Logick&#233; modely Xt-EHR jsou pr&#367;b&#283;&#382;n&#283; revidov&#225;ny a d&#225;le zp&#345;es&#328;ov&#225;ny.
+        </div>
+      </div>
+    </div>
+
+    <h3>InPatientEncounterCz -&gt; cz-organization-core</h3>
 
     <p>Hereafter a browseable diagram showing how the InPatientEncounter model is realized by the HL7 FHIR Profiles of this guide</p>
 
     <h4 id="model">Model Overview</h4>
-<a> </a>
-<p>{% include InPatientEncounter-map.svg %}</p>
 
-    
+    <p>{% include InPatientEncounter-map.svg %}</p>
 
-    
+    <div class="table-wrap">
+
+      <strong>Kontext mapov&#225;n&#237;</strong>
+
+      <ul>
+        <li>
+          <strong>Zdrojov&#253; logick&#253; model:</strong>
+          <a href="StructureDefinition-InPatientEncounterCz.html">InPatientEncounterCz</a>
+        </li>
+
+        <li>
+          <strong>C&#237;lov&#225; ConceptMap:</strong>
+          <a href="ConceptMap-encounter2FHIR-cz-hdr.html">encounter2FHIR-cz-hdr</a>
+        </li>
+
+        <li>
+          <strong>Hlavn&#237; c&#237;lov&#253; profil:</strong>
+          <a href="StructureDefinition-cz-organization-core.html">cz-organization-core</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="table-wrap">
+
+      <table summary="Mapov&#225;n&#237; InPatientEncounter na CZ HDR profily">
+
+        <caption>InPatientEncounter -&gt; FHIR profily (CZ HDR)</caption>
+
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">InPatientEncounter (Logick&#253; model)</th>
+            <th class="relhead">Vztah</th>
+            <th colspan="4" class="tgt-head">FHIR c&#237;l</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Prvek</th>
+            <th class="src-sub">Popis</th>
+            <th class="relsub">Vztah</th>
+            <th class="tgt-sub">Zdroj/Profil</th>
+            <th class="tgt-sub">Prvek</th>
+            <th class="tgt-sub">Popis</th>
+            <th class="tgt-sub">Pozn&#225;mky</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>InPatientEncounterCz.admission.admitter.organizationID</td>
+            <td>A.2.3.3.5 - Admitting organisation ID</td>
+            <td>equivalent</td>
+            <td>Organization (cz-organization-core)</td>
+            <td>Organization.identifier</td>
+            <td></td>
+            <td>Encounter.participant.individual.ofType(PractitionerRole).organization and where participant.type is &apos;ADM&apos;</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.referringHP.organizationID</td>
+            <td>A.2.3.3.10 - Referring organisation ID</td>
+            <td>related-to</td>
+            <td>Organization (cz-organization-core)</td>
+            <td>Organization.identifier</td>
+            <td></td>
+            <td>Encounter.participant.individual.ofType(PractitionerRole).organization and where participant.type is &apos;REF&apos;</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.location.organization.identifier</td>
+            <td>A.2.3.6.2 - Organisation Part ID</td>
+            <td>equivalent</td>
+            <td>Organization (cz-organization-core)</td>
+            <td>Organization.identifier</td>
+            <td></td>
+            <td>Encounter.location.location.managingOrganization</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.location.organization.name</td>
+            <td>A.2.3.6.3 - Organisation Part Name</td>
+            <td>related-to</td>
+            <td>Organization (cz-organization-core)</td>
+            <td>Organization.name</td>
+            <td></td>
+            <td>Encounter.location.location.managingOrganization</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.location.organization.details</td>
+            <td>A.2.3.6.4 - Organisation Part Details</td>
+            <td>related-to</td>
+            <td>Organization (cz-organization-core)</td>
+            <td>Organization</td>
+            <td></td>
+            <td>Encounter.location.location.managingOrganization; to be checked</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.admitter.identifier</td>
+            <td>A.2.3.3.3 - Admitting professional ID</td>
+            <td>equivalent</td>
+            <td>Practitioner (cz-practitioner-core)</td>
+            <td>Practitioner.identifier</td>
+            <td></td>
+            <td>Encounter.participant.individual.ofType(Practitioner) and where participant.type is &apos;ADM&apos;</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.admitter.name</td>
+            <td>A.2.3.3.4 - Admitting professional name</td>
+            <td>equivalent</td>
+            <td>Practitioner (cz-practitioner-core)</td>
+            <td>Practitioner.name</td>
+            <td></td>
+            <td>Encounter.participant.individual.ofType(Practitioner) or
+Encounter.participant.individual.ofType(PractitionerRole).practitioner</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.referringHP.identifier</td>
+            <td>A.2.3.3.8 - Referring professional ID</td>
+            <td>equivalent</td>
+            <td>Practitioner (cz-practitioner-core)</td>
+            <td>Practitioner.identifier</td>
+            <td></td>
+            <td>Encounter.participant.individual.ofType(Practitioner) and where participant.type is &apos;REF&apos;</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.referringHP.name</td>
+            <td>A.2.3.3.9 - Referring professional name</td>
+            <td>equivalent</td>
+            <td>Practitioner (cz-practitioner-core)</td>
+            <td>Practitioner.name</td>
+            <td></td>
+            <td>Encounter.participant.individual.ofType(Practitioner) or
+Encounter.participant.individual.ofType(PractitionerRole).practitioner</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.admitter.identifier</td>
+            <td>A.2.3.3.3 - Admitting professional ID</td>
+            <td>equivalent</td>
+            <td>PractitionerRole (cz-practitionerrole-core)</td>
+            <td>PractitionerRole.identifier</td>
+            <td></td>
+            <td>and where participant.type is &apos;ADM&apos;</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.referringHP.identifier</td>
+            <td>A.2.3.3.8 - Referring professional ID</td>
+            <td>equivalent</td>
+            <td>PractitionerRole (cz-practitionerrole-core)</td>
+            <td>PractitionerRole.identifier</td>
+            <td></td>
+            <td>and where participant.type is &apos;REF&apos;</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.type</td>
+            <td>A.2.3.1 - Encounter type</td>
+            <td>equivalent</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.class</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.note</td>
+            <td>A.2.3.2 - Encounter note</td>
+            <td>equivalent</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.extension:note</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission</td>
+            <td>A.2.3.3 - Admission</td>
+            <td>equivalent</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.urgency</td>
+            <td>A.2.3.3.1 - Admission urgency</td>
+            <td>related-to</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.priority</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.date</td>
+            <td>A.2.3.3.2 - Admission date</td>
+            <td>equivalent</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.period.start</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.admitter</td>
+            <td>Admitting professional</td>
+            <td>equivalent</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.participant.individual</td>
+            <td></td>
+            <td>where participant.type is &apos;ADM&apos;</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.admitter.organization</td>
+            <td>A.2.3.3.6 - Admitting organisation</td>
+            <td>equivalent</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.serviceProvider</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.admitter.organization</td>
+            <td>A.2.3.3.6 - Admitting organisation</td>
+            <td>equivalent</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.participant.individual.organization</td>
+            <td></td>
+            <td>where participant.type is &apos;ADM&apos;  and Encounter.participant.individual.ofType(PractitionerRole)</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.source</td>
+            <td>A.2.3.3.7 - Admit Source</td>
+            <td>equivalent</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.hospitalization.admitSource</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.referringHP</td>
+            <td>Referring professional</td>
+            <td>equivalent</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.participant.individual</td>
+            <td></td>
+            <td>where participant.type is &apos;REF&apos;</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admission.referringHP.organization</td>
+            <td>A.2.3.3.11 - Referring organisation</td>
+            <td>equivalent</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.participant.individual.organization</td>
+            <td></td>
+            <td>where participant.type is &apos;REF&apos;  and Encounter.participant.individual.ofType(PractitionerRole)</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admissionReason</td>
+            <td>A.2.3.4 - Admission reason</td>
+            <td>equivalent</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.reasonCode</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admissionReason</td>
+            <td>A.2.3.4 - Admission reason</td>
+            <td>equivalent</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.reasonReference</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admissionReason.code</td>
+            <td>A.2.3.4.1 - Admission reason</td>
+            <td>related-to</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.reasonCode</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admissionReason.comment</td>
+            <td>A.2.3.4.2 - Admission reason comment</td>
+            <td>related-to</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.reasonCode.text</td>
+            <td></td>
+            <td>to be checked</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.admissionReason.legalStatus</td>
+            <td>A.2.3.4.3 - Admission legal status</td>
+            <td>equivalent</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.extension:legalStatus</td>
+            <td></td>
+            <td>to be checked</td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.discharge</td>
+            <td>A.2.3.5 - Discharge</td>
+            <td>related-to</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.discharge.date</td>
+            <td>A.2.3.5.1 - Discharge date</td>
+            <td>related-to</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.period.end</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.discharge.destinationType</td>
+            <td>A.2.3.5.2 - Discharge destination type</td>
+            <td>related-to</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.hospitalization.dischargeDisposition</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.discharge.destinationLocation</td>
+            <td>A.2.3.5.3 - Destination location</td>
+            <td>related-to</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.hospitalization.destination</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.location</td>
+            <td>A.2.3.6 - Location - All locations/departments where the patient stayed (was boarded) within the hospital.</td>
+            <td>equivalent</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.location</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.location.period</td>
+            <td>A.2.3.6.1 - Period</td>
+            <td>related-to</td>
+            <td>Encounter (cz-encounter-hdr)</td>
+            <td>Encounter.location.period</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>InPatientEncounterCz.location.organization</td>
+            <td>Organization</td>
+            <td>equivalent</td>
+            <td>Location (cz-location-core)</td>
+            <td>Location.managingOrganization</td>
+            <td></td>
+            <td>Encounter.location.location</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </body>
 
 </div>
