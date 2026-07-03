@@ -550,7 +550,8 @@ Title: "HDR - GYNPOR - Gynekologická propouštěcí zpráva po porodu / Gynecol
 Description: "Story-based gynecology discharge report after induced vaginal delivery."
 * id = "4c26810a-e3ca-4723-9708-0c8ceac5a737"
 * status = #final
-* type = $loinc#34105-7 "Hospital Discharge summary"
+* type = $loinc#18842-5 "Hospital Discharge summary"
+* category[document-category] = $loinc#11503-0
 * title = "Gynekologická propouštěcí zpráva - indukovaný vaginální porod"
 * date = "2026-03-04T18:31:00+01:00"
 * author[0] = Reference(urn:uuid:c02be8d5-83a2-466b-aa82-089088b1abf7)

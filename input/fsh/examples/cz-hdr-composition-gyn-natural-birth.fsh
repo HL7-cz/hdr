@@ -4,7 +4,8 @@ Usage: #example
 Description: "Příklad gynekologické propouštěcí zprávy po spontánním vaginálním porodu. / Example gynecology hospital discharge composition with spontaneous vaginal delivery."
 * id = "6e9f3ec7-0a3c-4ee4-a2f2-a9c6ad91d001"
 * status = #final
-* type = $loinc#34105-7 "Hospital Discharge summary"
+* type = $loinc#18842-5 "Hospital Discharge summary"
+* category[document-category] = $loinc#11503-0
 * title = "Gynekologická propouštěcí zpráva - spontánní vaginální porod"
 * date = "2025-05-18T12:30:00+02:00"
 * author[0] = Reference(urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5)
@@ -160,7 +161,8 @@ Usage: #example
 Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovou po spontánním vaginálním porodu. / Example gynecology hospital discharge composition for Jana Novakova with spontaneous vaginal delivery."
 * id = "5e848ec9-b5bf-4c90-9d7e-6b0894208bfe"
 * status = #final
-* type = $loinc#34105-7 "Hospital Discharge summary"
+* type = $loinc#18842-5 "Hospital Discharge summary"
+* category[document-category] = $loinc#11503-0
 * title = "Gynekologická propouštěcí zpráva - spontánní vaginální porod (Jana Nováková)"
 * date = "2025-05-20T11:30:00+02:00"
 * author[0] = Reference(urn:uuid:1ec5e355-648f-42b9-a316-3f056fbd04b5)

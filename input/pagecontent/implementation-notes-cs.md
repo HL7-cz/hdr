@@ -138,7 +138,7 @@ Každý profil využívá závazné nebo doporučené číselníky:
 - **extensible** – primárně z ValueSetu, případně rozšíření,  
 - **preferred** – doporučený ValueSet, ale nevyžadovaný.  
 
-> Příklady: `Composition.type` – LOINC `34105-7`, `Condition.code` – ICD-10/SNOMED CT, `Observation.unit` – UCUM.
+> Příklady: `Composition.type` – LOINC `18842-5`, `Condition.code` – ICD-10/SNOMED CT, `Observation.unit` – UCUM.
 
 ---
 

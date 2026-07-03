@@ -16,7 +16,7 @@ Alias: $allergy-reaction-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/allergy-re
 Alias: $v3-ActClassExposure = http://terminology.hl7.org/ValueSet/v3-ActClassExposure
 Alias: $hl7MedicationAdminStatus = http://hl7.org/fhir/ValueSet/medication-admin-status
 Alias: $dlp_lecprip = https://ncez.mzcr.cz/fhir/ValueSet/dlp-lecive-pripravky-vs
-
+Alias: $DocumentCategory = https://ncez.mzcr.cz/terminology/ValueSet/document-category
 
 
 Alias: $v3-ActClassHDR = http://hl7.eu/fhir/hdr/ValueSet/hdr-encounterClass-eu-hdr

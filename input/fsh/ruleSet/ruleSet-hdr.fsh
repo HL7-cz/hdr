@@ -319,3 +319,9 @@ RuleSet: PatientHxSubsectionRules
   * entry 0..
   * entry only Reference(CZ_DeviceUseStatementHdr or CZ_ProcedureHdr ) // DeviceUseStatementEuHdr also ?
   * section ..0
+
+RuleSet: SliceElement( type, path )
+* ^slicing.discriminator.type = {type}
+* ^slicing.discriminator.path = "{path}"
+* ^slicing.rules = #open
+* ^slicing.ordered = false

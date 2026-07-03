@@ -139,7 +139,7 @@ Each profile uses mandatory or recommended code systems:
 - **extensible** – primarily from the ValueSet, may extend when justified,  
 - **preferred** – recommended ValueSet, not mandatory.  
 
-> Examples: `Composition.type` – LOINC `34105-7`, `Condition.code` – ICD-10/SNOMED CT, `Observation.unit` – UCUM.
+> Examples: `Composition.type` – LOINC `18842-5`, `Condition.code` – ICD-10/SNOMED CT, `Observation.unit` – UCUM.
 
 ---
 

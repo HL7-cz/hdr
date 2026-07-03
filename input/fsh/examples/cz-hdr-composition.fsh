@@ -7,11 +7,9 @@ Usage: #example
 * id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eaaf"
 * status = #final
 * type.coding[0].system = $loinc
-* type.coding[0].code = #34105-7
+* type.coding[0].code = #18842-5
 * type.coding[0].display = "Hospital Discharge summary"
-* category[0].coding[0].system = $loinc
-* category[0].coding[0].code = #18842-5
-* category[0].coding[0].display = "Discharge summary"
+* category[document-category] = $loinc#11503-0
 * title = "Propouštěcí zpráva"
 * date = "2025-03-10T14:30:00+01:00"
 * author[+] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
@@ -386,11 +384,9 @@ Usage: #example
 * extension[compositionVersionR5].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version"
 * extension[compositionVersionR5].valueString = "1.0.0"
 * type.coding[0].system = $loinc
-* type.coding[0].code = #34105-7
+* type.coding[0].code = #18842-5
 * type.coding[0].display = "Hospital Discharge summary"
-* category[0].coding[0].system = $loinc
-* category[0].coding[0].code = #18842-5
-* category[0].coding[0].display = "Discharge summary"
+* category[document-category] = $loinc#11503-0
 * title = "Propouštěcí zpráva L1"
 * date = "2025-03-10T14:30:00+01:00"
 * author[+] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
@@ -439,11 +435,9 @@ Usage: #example
 * text.status = #empty
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Composition for Hospital Discharge Report</div>"
 * type.coding[0].system = $loinc
-* type.coding[0].code = #34105-7
+* type.coding[0].code = #18842-5
 * type.coding[0].display = "Hospital Discharge summary"
-* category[0].coding[0].system = $loinc
-* category[0].coding[0].code = #18842-5
-* category[0].coding[0].display = "Discharge summary"
+* category[document-category] = $loinc#11503-0
 * title = "Propouštěcí zpráva z nemocnice"
 * date = "2025-03-10T14:30:00+01:00"
 * author[0] = Reference(urn:uuid:69d34ceb-b556-4f75-9e4c-9184fe8a10c5) //ok
@@ -480,11 +474,9 @@ Usage: #example
 * id = "701f51d5-78bf-428e-a6b5-349c2614ce07"
 * status = #final
 * type.coding[0].system = $loinc
-* type.coding[0].code = #34105-7
+* type.coding[0].code = #18842-5
 * type.coding[0].display = "Hospital Discharge summary"
-* category[0].coding[0].system = $loinc
-* category[0].coding[0].code = #18842-5
-* category[0].coding[0].display = "Discharge summary"
+* category[document-category] = $loinc#11503-0
 * title = "Propouštěcí zpráva pacienta Novák Petr"
 * date = "2025-03-10T14:30:00+01:00"
 * author[+] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)

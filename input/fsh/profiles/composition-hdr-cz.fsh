@@ -79,7 +79,15 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * type only $CodeableConcept-uv-ips
 * type ^short = "Kind of composition (\"Hospital Discharge Report\")"
 * type ^definition = "Specifies that this composition refer to a Hospital Discharge Report"
-* type = $loinc#34105-7 "Hospital Discharge summary"
+* type = $loinc#18842-5 "Hospital Discharge summary"
+* category 1..*
+  * insert SliceElement( #value, $this )
+* category contains
+  document-category 1..1 
+* category[document-category] from $DocumentCategory (required)
+  * ^short = "Document Category"
+  * ^definition = "A categorization for the type of document."
+  * coding = $loinc#11503-0
 * subject only Reference(CZ_PatientCore)
 * subject 1..1
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the hdr the subject is always the patient."
