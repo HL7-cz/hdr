@@ -226,7 +226,7 @@
             <td>A.2.7.1 - Objective findings</td>
             <td>related-to</td>
             <td>Composition (cz-composition-hdr)</td>
-            <td>Composition.section:sectionDischargeDetails.section:sectionPhysicalExamination</td>
+            <td>Composition.section:sectionDischargeDetails.section:sectionPhysicalFindings</td>
             <td></td>
             <td></td>
           </tr>

@@ -145,7 +145,7 @@
             <td>A.2.7.1.5 - Physical examination</td>
             <td>related-to</td>
             <td>Composition (cz-composition-hdr)</td>
-            <td>Composition.section:sectionPhysicalExamination</td>
+            <td>Composition.section:sectionPhysicalFindings</td>
             <td></td>
             <td></td>
           </tr>
@@ -154,7 +154,7 @@
             <td>A.2.7.1.5.1 - Observation Note</td>
             <td>related-to</td>
             <td>Composition (cz-composition-hdr)</td>
-            <td>Composition.section:sectionPhysicalExamination.text</td>
+            <td>Composition.section:sectionPhysicalFindings.text</td>
             <td></td>
             <td></td>
           </tr>

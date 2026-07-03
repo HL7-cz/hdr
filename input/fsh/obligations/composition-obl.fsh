@@ -87,8 +87,8 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionAdmissionEvaluation].section[sectionVitalSigns] insert OblCreator(#SHALL:able-to-populate,L2)
 * section[sectionAdmissionEvaluation].section[sectionVitalSigns].text insert OblCreator(#SHALL:able-to-populate,L2)
 
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination] insert OblCreator(#SHALL:able-to-populate,L2)
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text insert OblCreator(#SHALL:able-to-populate,L2)
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings] insert OblCreator(#SHALL:able-to-populate,L2)
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings].text insert OblCreator(#SHALL:able-to-populate,L2)
 
 
 // --- Stav při propuštění (Discharge Details) ---
@@ -101,8 +101,8 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionDischargeDetails].section[sectionVitalSigns] insert OblCreator(#SHALL:able-to-populate,L2)
 * section[sectionDischargeDetails].section[sectionVitalSigns].text insert OblCreator(#SHALL:able-to-populate,L2)
 
-* section[sectionDischargeDetails].section[sectionPhysicalExamination] insert OblCreator(#SHALL:able-to-populate,L2)
-* section[sectionDischargeDetails].section[sectionPhysicalExamination].text insert OblCreator(#SHALL:able-to-populate,L2)
+* section[sectionDischargeDetails].section[sectionPhysicalFindings] insert OblCreator(#SHALL:able-to-populate,L2)
+* section[sectionDischargeDetails].section[sectionPhysicalFindings].text insert OblCreator(#SHALL:able-to-populate,L2)
 
 
 * section[sectionAllergies] insert OblCreator(#SHALL:able-to-populate,L2)
@@ -112,7 +112,7 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionAdmissionEvaluation] insert OblCreator(#SHALL:able-to-populate,L2)
 * section[sectionAdmissionEvaluation].text insert OblCreator(#SHALL:able-to-populate,L2)
 * section[sectionVitalSigns] insert OblCreator(#SHALL:able-to-populate,L2)
-* section[sectionPhysicalExamination] insert OblCreator(#SHALL:able-to-populate,L2)
+* section[sectionPhysicalFindings] insert OblCreator(#SHALL:able-to-populate,L2)
 * section[sectionFunctionalStatus] insert OblCreator(#SHALL:able-to-populate,L2)
 * section[sectionDischargeDetails] insert OblCreator(#SHALL:able-to-populate,L2)    //A.2.7.1 - Objective findings
 * section[sectionPatientHx].section[sectionFamilyHistory] insert OblCreator(#SHALL:able-to-populate,L2)
@@ -182,8 +182,8 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionAdmissionEvaluation].text insert OblConsumer(#SHALL:display,L2)
 * section[sectionVitalSigns] insert OblConsumer(#SHALL:display,L2)
 * section[sectionVitalSigns].text insert OblConsumer(#SHALL:display,L2)
-* section[sectionPhysicalExamination] insert OblConsumer(#SHALL:display,L2)
-* section[sectionPhysicalExamination].text insert OblConsumer(#SHALL:display,L2)
+* section[sectionPhysicalFindings] insert OblConsumer(#SHALL:display,L2)
+* section[sectionPhysicalFindings].text insert OblConsumer(#SHALL:display,L2)
 * section[sectionFunctionalStatus] insert OblConsumer(#SHALL:display,L2)
 * section[sectionFunctionalStatus].text insert OblConsumer(#SHALL:display,L2)
 * section[sectionDischargeDetails] insert OblConsumer(#SHALL:display,L2)    //A.2.7.1 - Objective findings
@@ -251,8 +251,8 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionAdmissionEvaluation].section[sectionVitalSigns] insert OblConsumer(#SHALL:display,L2)
 * section[sectionAdmissionEvaluation].section[sectionVitalSigns].text insert OblConsumer(#SHALL:display,L2)
 
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination] insert OblConsumer(#SHALL:display,L2)
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text insert OblConsumer(#SHALL:display,L2)
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings] insert OblConsumer(#SHALL:display,L2)
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings].text insert OblConsumer(#SHALL:display,L2)
 
 
 // --- Discharge Details ---
@@ -265,8 +265,8 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionDischargeDetails].section[sectionVitalSigns] insert OblConsumer(#SHALL:display,L2)
 * section[sectionDischargeDetails].section[sectionVitalSigns].text insert OblConsumer(#SHALL:display,L2)
 
-* section[sectionDischargeDetails].section[sectionPhysicalExamination] insert OblConsumer(#SHALL:display,L2)
-* section[sectionDischargeDetails].section[sectionPhysicalExamination].text insert OblConsumer(#SHALL:display,L2)
+* section[sectionDischargeDetails].section[sectionPhysicalFindings] insert OblConsumer(#SHALL:display,L2)
+* section[sectionDischargeDetails].section[sectionPhysicalFindings].text insert OblConsumer(#SHALL:display,L2)
 
 //L3 Creator Obligations L3 ============>
 
@@ -314,9 +314,9 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionAdmissionEvaluation].section[sectionVitalSigns].text insert OblCreator(#SHALL:able-to-populate,L3)
 * section[sectionAdmissionEvaluation].section[sectionVitalSigns].entry insert OblCreator(#SHALL:able-to-populate,L3)
 
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination] insert OblCreator(#SHALL:able-to-populate,L3)
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text insert OblCreator(#SHALL:able-to-populate,L3)
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry insert OblCreator(#SHALL:able-to-populate,L3)
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings] insert OblCreator(#SHALL:able-to-populate,L3)
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings].text insert OblCreator(#SHALL:able-to-populate,L3)
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings].entry insert OblCreator(#SHALL:able-to-populate,L3)
 
 
 //======================================================================
@@ -335,9 +335,9 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionDischargeDetails].section[sectionVitalSigns].text insert OblCreator(#SHALL:able-to-populate,L3)
 * section[sectionDischargeDetails].section[sectionVitalSigns].entry insert OblCreator(#SHALL:able-to-populate,L3)
 
-* section[sectionDischargeDetails].section[sectionPhysicalExamination] insert OblCreator(#SHALL:able-to-populate,L3)
-* section[sectionDischargeDetails].section[sectionPhysicalExamination].text insert OblCreator(#SHALL:able-to-populate,L3)
-* section[sectionDischargeDetails].section[sectionPhysicalExamination].entry insert OblCreator(#SHALL:able-to-populate,L3)
+* section[sectionDischargeDetails].section[sectionPhysicalFindings] insert OblCreator(#SHALL:able-to-populate,L3)
+* section[sectionDischargeDetails].section[sectionPhysicalFindings].text insert OblCreator(#SHALL:able-to-populate,L3)
+* section[sectionDischargeDetails].section[sectionPhysicalFindings].entry insert OblCreator(#SHALL:able-to-populate,L3)
 
 
 //======================================================================
@@ -502,9 +502,9 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionAdmissionEvaluation].section[sectionVitalSigns].text insert OblConsumer(#SHALL:display,L3)
 * section[sectionAdmissionEvaluation].section[sectionVitalSigns].entry insert OblConsumer(#SHALL:display,L3)
 
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination] insert OblConsumer(#SHALL:display,L3)
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text insert OblConsumer(#SHALL:display,L3)
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].entry insert OblConsumer(#SHALL:display,L3)
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings] insert OblConsumer(#SHALL:display,L3)
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings].text insert OblConsumer(#SHALL:display,L3)
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings].entry insert OblConsumer(#SHALL:display,L3)
 
 
 //======================================================================
@@ -523,9 +523,9 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[sectionDischargeDetails].section[sectionVitalSigns].text insert OblConsumer(#SHALL:display,L3)
 * section[sectionDischargeDetails].section[sectionVitalSigns].entry insert OblConsumer(#SHALL:display,L3)
 
-* section[sectionDischargeDetails].section[sectionPhysicalExamination] insert OblConsumer(#SHALL:display,L3)
-* section[sectionDischargeDetails].section[sectionPhysicalExamination].text insert OblConsumer(#SHALL:display,L3)
-* section[sectionDischargeDetails].section[sectionPhysicalExamination].entry insert OblConsumer(#SHALL:display,L3)
+* section[sectionDischargeDetails].section[sectionPhysicalFindings] insert OblConsumer(#SHALL:display,L3)
+* section[sectionDischargeDetails].section[sectionPhysicalFindings].text insert OblConsumer(#SHALL:display,L3)
+* section[sectionDischargeDetails].section[sectionPhysicalFindings].entry insert OblConsumer(#SHALL:display,L3)
 
 
 //======================================================================

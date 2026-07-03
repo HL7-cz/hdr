@@ -142,17 +142,11 @@ Description: "This profile defines how to represent Composition resource in HL7 
     Physical findings,
       Physical findings,
       $loinc#29545-1)   // "Physical findings Narrative"
+  * entry 0..
+  * entry only Reference( DocumentReference or Observation)
+    * ^short = "Optional entry used to represent physical examination findings"
+    * ^definition = "It describes findings from physical examination of the patient. Profiles to express structured physical examination findings will be specified by future versions of this guide."
 
-// -------------------------------------
-// Physical examination  Section 0 … 1
-// -------------------------------------
-
-* section contains sectionPhysicalExamination ..1
-* section[sectionPhysicalExamination]
-  * insert SectionComRules (
-    Physical examination,
-      Physical examination is the process of evaluating objective anatomical findings.,
-      $loinc#55286-9)   // "Physical exam by body areas"
 
 
 * section contains sectionVitalSigns 0..1
@@ -377,7 +371,6 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // Discharge Details Section 1 … 1 R
 // -------------------------------------
 * section contains sectionDischargeDetails 0..1
-//TODO přidat obligation L3
 * section[sectionDischargeDetails]
   * insert SectionComRules (
       Discharge details,

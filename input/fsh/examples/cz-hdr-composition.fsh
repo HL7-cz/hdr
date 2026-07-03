@@ -626,8 +626,9 @@ Usage: #example
 * section[sectionDischargeDetails].section[sectionFunctionalStatus].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 
 // Objective findings at discharge (subsection)
-* section[sectionDischargeDetails].section[sectionPhysicalExamination].text.status = #additional
-* section[sectionDischargeDetails].section[sectionPhysicalExamination].text.div = """
+* section[sectionDischargeDetails].section[sectionPhysicalFindings].title = "Objektivní nález při propuštění"
+* section[sectionDischargeDetails].section[sectionPhysicalFindings].text.status = #additional
+* section[sectionDischargeDetails].section[sectionPhysicalFindings].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Objektivní nález při propuštění:</p>
     <ul>
@@ -640,7 +641,7 @@ Usage: #example
     </ul>
     <p>Celkově dobrý stav, bez komplikací po výkonu.</p>
   </div>"""
-* section[sectionDischargeDetails].section[sectionPhysicalExamination].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
+* section[sectionDischargeDetails].section[sectionPhysicalFindings].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
   //TODO přidat nějaká strukturovaná data z vyšetření
 
 * section[sectionDischargeDetails].section[sectionAnthropometry].title = "Antropometrická data"
@@ -848,7 +849,8 @@ Usage: #example
 
 
 // --- Admission Evaluation – Objective findings at admission ---
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text.div = """
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings].title = "Physical findings at admission"
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Objektivní nález při přijetí:</p>
     <ul>
@@ -864,8 +866,8 @@ Usage: #example
       <li>CRP: 6 mg/L (norma: 0–10 mg/L)</li>
     </ul>
   </div>"""
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text.status = #additional
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings].text.status = #additional
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 
 * section[sectionAdmissionEvaluation].section[sectionAnthropometry].title = "Antropometrická data"
 
