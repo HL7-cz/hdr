@@ -1,0 +1,77 @@
+@startuml
+' Enable mixing of different element types
+allowmixing
+
+skinparam handwritten false
+skinparam packageStyle rect
+skinparam defaultFontName Arial
+
+title Composition Structure (HDR CZ) - Section Library
+
+package "Composition (HDR CZ)" <<Resource>> {
+    
+    class "Document Header" as Header {
+        subject: Patient (CZ core)
+        encounter: Encounter (1..1)
+        type: 18842-5 (Discharge Report)
+        category: 11503-0 (Medical Records)
+        status: CompositionStatus (1..1)
+    }
+
+    package "First Level (Section Library)" as Level1 {
+        
+        ' 1ST ROW: Main and fixed sections
+        rectangle "Hospital Course\n(Mandatory)" as HospCourse #ADD8E6
+        rectangle "Discharge Medication" as DischMed
+        rectangle "Discharge Instructions" as DischInst
+        
+        ' Forcing layout to push next sections to the second row
+        HospCourse -[hidden]down-> PatHist
+        
+        ' 2ND ROW: Other standard sections
+        rectangle "Patient History" as PatHist
+        rectangle "Other Optional Sections" as OtherSections
+        
+        ' Forcing layout to push containers below the second row
+        PatHist -[hidden]down-> AdmEval
+        OtherSections -[hidden]down-> DischDet
+        
+        ' 3RD ROW: Czech containers (internal elements ordered vertically)
+        node "Admission Evaluation\n(Container)" as AdmEval #FFA500 {
+            artifact "Physical Examination" as AdmPhys
+            artifact "Vital Signs" as AdmVit
+            artifact "Anthropometry" as AdmAnt
+        }
+        
+        node "Discharge Details\n(Container)" as DischDet #FFA500 {
+            artifact "Physical Findings" as DischFindings
+            artifact "Vital Signs" as DischVit
+            artifact "Anthropometry" as DischAnt
+        }
+    }
+}
+
+' Definition of logical relations and nesting (vertical alignment)
+Header -[hidden]down-> Level1
+
+HospCourse -[hidden]right-> DischMed
+DischMed -[hidden]right-> DischInst
+PatHist -[hidden]right-> OtherSections
+AdmEval -[hidden]right-> DischDet
+
+AdmEval -[dashed]down-> AdmPhys
+AdmPhys -[dashed]down-> AdmVit
+AdmVit -[dashed]down-> AdmAnt
+
+DischDet -[dashed]down-> DischFindings
+DischFindings -[dashed]down-> DischVit
+DischVit -[dashed]down-> DischAnt
+
+' Legend
+legend right
+  <#ADD8E6>| Mandatory Section (Hospital Course) |
+  <#FFA500>| Czech Nested Containers |
+  | --- Dashed line indicates nested sub-sections |
+endlegend
+
+@enduml

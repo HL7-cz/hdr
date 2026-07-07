@@ -1,0 +1,77 @@
+@startuml
+' Povolení kombinace různých typů prvků
+allowmixing
+
+skinparam handwritten false
+skinparam packageStyle rect
+skinparam defaultFontName Arial
+
+title Struktura Composition (HDR CZ) - Knihovna sekcí
+
+package "Composition (HDR CZ)" <<Resource>> {
+    
+    class "Hlavička dokumentu" as Header {
+        subject: Patient (CZ core)
+        encounter: Encounter (1..1)
+        type: 18842-5 (Propouštěcí zpráva)
+        category: 11503-0 (Lékařské záznamy)
+        status: CompositionStatus (1..1)
+    }
+
+    package "První úroveň (Knihovna sekcí)" as Level1 {
+        
+        ' 1. ŘADA: Hlavní a fixní sekce
+        rectangle "Hospital Course\n(Povinná)" as HospCourse #ADD8E6
+        rectangle "Discharge Medication" as DischMed
+        rectangle "Discharge Instructions" as DischInst
+        
+        ' Vynucení zalomení na další řadu
+        HospCourse -[hidden]down-> PatHist
+        
+        ' 2. ŘADA: Další standardní sekce
+        rectangle "Patient History" as PatHist
+        rectangle "Další volitelné sekce" as OtherSections
+        
+        ' Vynucení zalomení pod druhou řadu pro kontejnery
+        PatHist -[hidden]down-> AdmEval
+        OtherSections -[hidden]down-> DischDet
+        
+        ' 3. ŘADA: České kontejnery (vnitřní prvky řazeny svisle dolů)
+        node "Admission Evaluation\n(Kontejner)" as AdmEval #FFA500 {
+            artifact "Physical Examination" as AdmPhys
+            artifact "Vital Signs" as AdmVit
+            artifact "Anthropometry" as AdmAnt
+        }
+        
+        node "Discharge Details\n(Kontejner)" as DischDet #FFA500 {
+            artifact "Physical Findings" as DischFindings
+            artifact "Vital Signs" as DischVit
+            artifact "Anthropometry" as DischAnt
+        }
+    }
+}
+
+' Definice logických vazeb a zanoření (svislé uspořádání)
+Header -[hidden]down-> Level1
+
+HospCourse -[hidden]right-> DischMed
+DischMed -[hidden]right-> DischInst
+PatHist -[hidden]right-> OtherSections
+AdmEval -[hidden]right-> DischDet
+
+AdmEval -[dashed]down-> AdmPhys
+AdmPhys -[dashed]down-> AdmVit
+AdmVit -[dashed]down-> AdmAnt
+
+DischDet -[dashed]down-> DischFindings
+DischFindings -[dashed]down-> DischVit
+DischVit -[dashed]down-> DischAnt
+
+' Legenda
+legend right
+  <#ADD8E6>| Povinná sekce (Hospital Course) |
+  <#FFA500>| České zanořené kontejnery |
+  | --- Přerušovaná čára značí zanořené sub-sekce |
+endlegend
+
+@enduml
