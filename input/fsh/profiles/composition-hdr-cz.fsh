@@ -76,7 +76,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
-* type only $CodeableConcept-uv-ips
+* type from $MedicalDocumentType (preferred)
 * type ^short = "Kind of composition (\"Hospital Discharge Report\")"
 * type ^definition = "Specifies that this composition refer to a Hospital Discharge Report"
 * type = $loinc#18842-5 "Hospital Discharge summary"
