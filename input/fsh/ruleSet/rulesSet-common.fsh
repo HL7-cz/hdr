@@ -42,7 +42,7 @@ RuleSet: SectionSliceComRules (short, def)
 * section ^slicing.discriminator[0].type = #value
 * section ^slicing.discriminator[0].path = "code"
 * section ^slicing.ordered = false
-* section ^slicing.rules = #open
+* section ^slicing.rules = #closed
 * section ^short = "{short}"
 * section ^definition = "{def}"
 

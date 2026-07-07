@@ -79,7 +79,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * type from $MedicalDocumentType (preferred)
 * type ^short = "Kind of composition (\"Hospital Discharge Report\")"
 * type ^definition = "Specifies that this composition refer to a Hospital Discharge Report"
-* type = $loinc#18842-5 "Hospital Discharge summary"
+* type = $loinc#34105-7 "Hospital Discharge summary"
 * category 1..*
   * insert SliceElement( #value, $this )
 * category contains

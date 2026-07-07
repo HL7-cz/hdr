@@ -1,26 +1,27 @@
 #### Composition (HDR CZ)
 
-To address the Hospital Discharge Report Structure Challenge, we have opted for a flexible approach rather than imposing a single rigid format.
+The structure of the composition for the Hospital Discharge Report (HDR CZ) defines a standardized national framework for the exchange of clinical information within the Czech healthcare environment. While this profile is built upon the European "section library" concept, which is inherently flat and flexible, it implements a unified hierarchy utilizing Closed Slicing for its sections to achieve robust national interoperability.
 
-The "flat structure" documented in this guide should be understood as a "section library" that can be reused in both flat and nested structures. This approach allows implementers to organize the report according to local or institutional needs while maintaining a standardized content model.
+The objective of this approach is to establish a predictable format that enables recipients to perform safe automated data processing and ensures clear navigation within the document. While a generic "Discharge Report" model may remain open to accommodate various outpatient and inpatient care types, this national specification fixes the structure for hospital stays to prevent incompatible document variations across different healthcare providers and system vendors.
 
-##### In practice:
+##### Key structural principles:
 
-**Required Sections** 
+**Standardized Section Selection** 
 
-Only a few core sections are mandatory (e.g., Hospital Course).
+Only sections explicitly defined in this profile are permitted, ensuring that any system in the Czech Republic can correctly interpret the report.
 
-**Open Section Slices** 
+**Clinical Context through Sub-sections**
 
-Section slices are open, meaning implementers have the freedom to include additional "first-level" sections as needed.
+In contrast to the flat European list, we emphasize the logical nesting of data. Specifically, the sections for admission and discharge evaluation act as mandatory containers that group vital signs, anthropometry, and physical examinations.
 
-**Clinical Containers (Nesting)** 
+**The Role of Nesting** 
 
-Unlike the fully flat European model, the Czech profile explicitly groups objective findings during admission and discharge into dedicated sub-sections. This ensures that vital signs, anthropometry, and physical examinations are always interpreted within the correct temporal and clinical context of the stay.
+Organizing data into sub-sections ensures that objective findings are strictly linked to specific clinical stages of the stay. This prevents the confusion of measurements taken at the beginning of the hospitalization with those describing the patient's status upon discharge.
 
-**Sub-section Flexibility:** 
+**Encounter Binding**
 
-With the exception of these predefined nested cases, sub-sections are generally allowed, giving healthcare providers the ability to create a structure that best fits their clinical workflow.By offering this level of flexibility, the implementation guide supports diverse healthcare environments while promoting consistency in content and interoperability.
+Every composition is strictly linked to a specific hospitalization case (encounter 1..1) and requires standardized document categorization (code 11503-0) to maintain metadata consistency within the national health information exchange.
+
 
 #### Diagram of Structure
 
@@ -30,12 +31,13 @@ When implementing the structure shown below, please pay attention to the followi
 
 Defines core metadata (patient, encounter, document type "Discharge Report", status).
 
-**First Level / Section Library (První úroveň / Knihovna sekcí)**
+**Unified Sections (Closed Slicing)**
 
-- Blue section (Hospital Course): The only strictly mandatory section on the first level.
+In contrast to the flexible European "section library," the Czech profile utilizes Closed Slicing. Only sections explicitly defined in this profile are permitted, ensuring a predictable format for all data recipients.
 
-- White sections: Optional standard sections (Discharge Medication, Patient History, etc.) or custom specific sections.
-
-- Orange containers (Discharge Details and Admission Evaluation): Specific Czech containers that mandatorily group nested sub-sections (connected by dashed lines) to preserve clinical context.
+- Mandatory Section (Blue): The Hospital Course section is strictly required (1..1).
+- Clinical Containers (Orange): The admission and discharge evaluation sections act as mandatory wrappers for nested sub-sections (vital signs, etc.) to preserve temporal clinical context.
+- Optional Standard Sections (White): Key clinical blocks like Patient History or Discharge Medication.
+- Other Permitted Sections (Grey): The profile includes a wide variety of other optional sections (e.g., Allergies, Alerts, Payers, Significant Results, or Delivery). While these are optional, only sections present in the official HDR CZ specification may be used. Custom sections outside of this fixed list are prohibited to maintain a predictable document format.
 
 {% include composition.svg %}

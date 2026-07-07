@@ -1,77 +1,55 @@
 @startuml
-' Povolení kombinace různých typů prvků
 allowmixing
 
-skinparam handwritten false
 skinparam packageStyle rect
 skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam Nodesep 10
+skinparam Ranksep 20
 
-title Struktura Composition (HDR CZ) - Knihovna sekcí
+title HDR CZ - Kompletní unifikovaná struktura (Closed Slicing)
 
-package "Composition (HDR CZ)" <<Resource>> {
+package "Základ: Discharge Report (Base)" as Base #E0E0E0 {
+}
+
+package "Composition (HDR CZ)" as HDR <<Resource>> {
     
-    class "Hlavička dokumentu" as Header {
-        subject: Patient (CZ core)
-        encounter: Encounter (1..1)
+    class "Hlavička (Metadata)" as Header {
         type: 18842-5 (Propouštěcí zpráva)
         category: 11503-0 (Lékařské záznamy)
-        status: CompositionStatus (1..1)
+        encounter: Encounter (1..1)
+        status: final
     }
 
-    package "První úroveň (Knihovna sekcí)" as Level1 {
+    package "Unifikované sekce (Fixní seznam)" as Sections {
+        ' Povinná
+        rectangle "Hospital Course (Povinná 1..1)" as HospCourse #ADD8E6
         
-        ' 1. ŘADA: Hlavní a fixní sekce
-        rectangle "Hospital Course\n(Povinná)" as HospCourse #ADD8E6
-        rectangle "Discharge Medication" as DischMed
-        rectangle "Discharge Instructions" as DischInst
+        ' Klíčové volitelné kontejnery
+        node "Admission Evaluation (Kontejner)" as AdmEval #FFA500
+        node "Discharge Details (Kontejner)" as DischDet #FFA500
         
-        ' Vynucení zalomení na další řadu
-        HospCourse -[hidden]down-> PatHist
-        
-        ' 2. ŘADA: Další standardní sekce
+        ' Výběr běžných volitelných sekcí
         rectangle "Patient History" as PatHist
-        rectangle "Další volitelné sekce" as OtherSections
+        rectangle "Discharge Medication" as DischMed
+        rectangle "Diagnostic Summary" as DiagSum
         
-        ' Vynucení zalomení pod druhou řadu pro kontejnery
-        PatHist -[hidden]down-> AdmEval
-        OtherSections -[hidden]down-> DischDet
-        
-        ' 3. ŘADA: České kontejnery (vnitřní prvky řazeny svisle dolů)
-        node "Admission Evaluation\n(Kontejner)" as AdmEval #FFA500 {
-            artifact "Physical Examination" as AdmPhys
-            artifact "Vital Signs" as AdmVit
-            artifact "Anthropometry" as AdmAnt
-        }
-        
-        node "Discharge Details\n(Kontejner)" as DischDet #FFA500 {
-            artifact "Physical Findings" as DischFindings
-            artifact "Vital Signs" as DischVit
-            artifact "Anthropometry" as DischAnt
-        }
+        ' Blok pro ostatní povolené sekce dle IG
+        rectangle "Ostatní standardní sekce\n(Alergie, Plán péče, Alerty,\nPříjemci plateb atd.)" as Other #D3D3D3
     }
 }
 
-' Definice logických vazeb a zanoření (svislé uspořádání)
-Header -[hidden]down-> Level1
+' Vazby
+Base -[dashed]down-> HDR : "Dědění (Closed)"
+Header -[hidden]down-> Sections
 
-HospCourse -[hidden]right-> DischMed
-DischMed -[hidden]right-> DischInst
-PatHist -[hidden]right-> OtherSections
-AdmEval -[hidden]right-> DischDet
+AdmEval -[hidden]down-> DischDet
+DischDet -[hidden]down-> PatHist
 
-AdmEval -[dashed]down-> AdmPhys
-AdmPhys -[dashed]down-> AdmVit
-AdmVit -[dashed]down-> AdmAnt
-
-DischDet -[dashed]down-> DischFindings
-DischFindings -[dashed]down-> DischVit
-DischVit -[dashed]down-> DischAnt
-
-' Legenda
 legend right
-  <#ADD8E6>| Povinná sekce (Hospital Course) |
-  <#FFA500>| České zanořené kontejnery |
-  | --- Přerušovaná čára značí zanořené sub-sekce |
+  <#ADD8E6>| Povinná sekce |
+  <#FFA500>| Národní kontejnery (se sub-sekcemi) |
+  <#D3D3D3>| Ostatní povolené volitelné sekce |
+  | Slicing je v rámci profilu **UZAVŘEN**. |
 endlegend
-
 @enduml

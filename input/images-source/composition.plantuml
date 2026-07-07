@@ -1,77 +1,55 @@
 @startuml
-' Enable mixing of different element types
 allowmixing
 
-skinparam handwritten false
 skinparam packageStyle rect
 skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam Nodesep 10
+skinparam Ranksep 20
 
-title Composition Structure (HDR CZ) - Section Library
+title HDR CZ - Unified Composition Structure (Closed Slicing)
 
-package "Composition (HDR CZ)" <<Resource>> {
+package "Base: Discharge Report" as Base #E0E0E0 {
+}
+
+package "Composition (HDR CZ)" as HDR <<Resource>> {
     
-    class "Document Header" as Header {
-        subject: Patient (CZ core)
-        encounter: Encounter (1..1)
+    class "Document Header (Metadata)" as Header {
         type: 18842-5 (Discharge Report)
         category: 11503-0 (Medical Records)
-        status: CompositionStatus (1..1)
+        encounter: Encounter (1..1)
+        status: final
     }
 
-    package "First Level (Section Library)" as Level1 {
+    package "Unified Sections (Fixed List)" as Sections {
+        ' Mandatory top-level section
+        rectangle "Hospital Course (Mandatory 1..1)" as HospCourse #ADD8E6
         
-        ' 1ST ROW: Main and fixed sections
-        rectangle "Hospital Course\n(Mandatory)" as HospCourse #ADD8E6
-        rectangle "Discharge Medication" as DischMed
-        rectangle "Discharge Instructions" as DischInst
+        ' Key national containers with mandatory nesting
+        node "Admission Evaluation (Container)" as AdmEval #FFA500
+        node "Discharge Details (Container)" as DischDet #FFA500
         
-        ' Forcing layout to push next sections to the second row
-        HospCourse -[hidden]down-> PatHist
-        
-        ' 2ND ROW: Other standard sections
+        ' Selection of common optional sections
         rectangle "Patient History" as PatHist
-        rectangle "Other Optional Sections" as OtherSections
+        rectangle "Problem List" as ProbList
+        rectangle "Discharge Medication" as DischMed
+        rectangle "Allergies and Intolerances" as Allergy
         
-        ' Forcing layout to push containers below the second row
-        PatHist -[hidden]down-> AdmEval
-        OtherSections -[hidden]down-> DischDet
-        
-        ' 3RD ROW: Czech containers (internal elements ordered vertically)
-        node "Admission Evaluation\n(Container)" as AdmEval #FFA500 {
-            artifact "Physical Examination" as AdmPhys
-            artifact "Vital Signs" as AdmVit
-            artifact "Anthropometry" as AdmAnt
-        }
-        
-        node "Discharge Details\n(Container)" as DischDet #FFA500 {
-            artifact "Physical Findings" as DischFindings
-            artifact "Vital Signs" as DischVit
-            artifact "Anthropometry" as DischAnt
-        }
+        ' Representation of other allowed sections in the closed list
+        rectangle "Other Permitted Sections\n(Plan of Care, Payers, Alerts,\nSynthesis, Significant Results etc.)" as Other #D3D3D3
     }
 }
 
-' Definition of logical relations and nesting (vertical alignment)
-Header -[hidden]down-> Level1
+Base -[dashed]down-> HDR : "Inheritance (Closed)"
+Header -[hidden]down-> Sections
 
-HospCourse -[hidden]right-> DischMed
-DischMed -[hidden]right-> DischInst
-PatHist -[hidden]right-> OtherSections
-AdmEval -[hidden]right-> DischDet
+AdmEval -[hidden]down-> DischDet
+DischDet -[hidden]down-> PatHist
 
-AdmEval -[dashed]down-> AdmPhys
-AdmPhys -[dashed]down-> AdmVit
-AdmVit -[dashed]down-> AdmAnt
-
-DischDet -[dashed]down-> DischFindings
-DischFindings -[dashed]down-> DischVit
-DischVit -[dashed]down-> DischAnt
-
-' Legend
 legend right
-  <#ADD8E6>| Mandatory Section (Hospital Course) |
-  <#FFA500>| Czech Nested Containers |
-  | --- Dashed line indicates nested sub-sections |
+  <#ADD8E6>| Mandatory Section (1..1) |
+  <#FFA500>| National Containers (with nested sub-sections) |
+  <#D3D3D3>| Other standardized optional sections |
+  | Section Slicing is **CLOSED** within this profile. |
 endlegend
-
 @enduml

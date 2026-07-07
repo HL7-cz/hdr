@@ -1,26 +1,27 @@
 #### Composition (HDR CZ)
 
-Abychom vyřešili výzvy spojené s variabilitou struktury propouštěcí zprávy (tzv. Hospital Discharge Report Structure Challenge), zvolili jsme flexibilní přístup namísto vynucování jednoho rigidního formátu.
+Struktura kompozice propouštěcí zprávy (HDR CZ) definuje standardizovaný národní rámec pro předávání klinických informací v rámci českého zdravotnictví. I když tento profil vychází z evropského konceptu „knihovny sekcí“, který je v základu plochý a flexibilní, pro potřeby národní interoperability zavádí unifikovanou hierarchii s využitím uzavřeného listu povolených sekcí (Closed Slicing).
 
-„Plochá struktura“ popsaná v této příručce by měla být chápána jako „knihovna sekcí“, kterou lze opakovaně používat v plochých i zanořených strukturách. Tento přístup umožňuje implementátorům organizovat zprávu podle místních nebo institucionálních potřeb při zachování standardizovaného datového modelu.
+Tento přístup směřuje k vytvoření předvídatelného formátu, který je nezbytný pro bezpečné automatizované zpracování na straně příjemců a snadnou orientaci lékařů v dokumentu. Zatímco obecný model (Discharge Report) může sloužit jako otevřený základ pro různé typy péče, národní specifikace HDR CZ fixuje strukturu tak, aby se předešlo vzniku nekompatibilních variant mezi jednotlivými dodavateli informačních systémů.
 
-##### V praxi to znamená:
+##### Klíčové principy struktury:
 
-**Povinné sekce** 
+**Standardizovaný výběr sekcí**
 
-Pouze několik základních sekcí je striktně vyžadováno (např. Průběh hospitalizace).
+Jsou povoleny pouze sekce explicitně definované v tomto profilu, což zaručuje, že každý systém v ČR bude schopen zprávu korektně interpretovat.
 
-**Otevřené řezy (Slices)**
+**Klinický kontext skrze sub-sekce**
 
-Definice řezů sekcí je otevřená, což dává implementátorům svobodu doplňovat další vlastní sekce na první úroveň dokumentu.
+Na rozdíl od plochého evropského seznamu je zde kladen důraz na logické zanořování dat. Sekce pro hodnocení při příjmu a propuštění fungují jako povinné kontejnery, které sdružují vitální funkce, antropometrii a somatická vyšetření.
 
-**Klinické kontejnery (Zanoření)** 
+**Význam zanoření** 
 
-Na rozdíl od zcela plochého evropského seznamu jsou v českém profilu objektivní nálezy při příjmu a propuštění povinně seskupeny do logických sub-sekcí.Tím je zajištěno, že vitální funkce, antropometrie a somatická vyšetření jsou vždy interpretovány v příslušném časovém a klinickém kontextu hospitalizace.
+Organizace dat do sub-sekcí zajišťuje, že naměřené hodnoty jsou vždy pevně svázány s konkrétním časovým bodem hospitalizace. Tím se předchází riziku záměny nálezů zjištěných při přijetí pacienta s těmi, které popisují stav při propuštění.
 
-**Flexibilita sub-sekcí** 
+**Vazba na hospitalizační případ** 
 
-S výjimkou těchto definovaných případů je zanořování dalších sub-sekcí obecně povoleno, což umožňuje poskytovatelům péče vytvořit strukturu, která nejlépe odpovídá jejich klinickému kontextu.Tento model podporuje různorodá zdravotnická prostředí a zároveň prosazuje obsahovou konzistenci a technickou interoperabilitu.
+Každá kompozice je striktně vázána na konkrétní hospitalizaci (encounter 1..1)
+a vyžaduje standardizovanou kategorizaci dokumentu (kód 11503-0) pro zajištění konzistence metadat v rámci národní výměny dokumentů.
 
 #### Diagram struktury (HDR CZ)
 
@@ -30,12 +31,13 @@ Při implementaci struktury zobrazené níže věnujte pozornost následujícím
 
 Definuje základní metadata (pacient, setkání, typ dokumentu "Propouštěcí zpráva", status).
 
-**První úroveň (Knihovna sekcí)**
+**Unifikované sekce(Closed Slicing)**
 
-- Modrá sekce (Hospital Course): Jediná striktně povinná sekce na první úrovni.
+Na rozdíl od otevřeného evropského modelu využívá český profil uzavřený slicing. To znamená, že v dokumentu lze použít pouze sekce definované v této specifikaci, což zaručuje stabilitu a předvídatelnost pro příjemce zpráv.
 
-- Bílé sekce: Volitelné standardní sekce (Discharge Medication, Patient History atd.) nebo vlastní specifické sekce.
-
-- Oranžové kontejnery (Discharge Details a Admission Evaluation): Specifické české kontejnery, které v sobě povinně sdružují zanořené sub-sekce (spojené přerušovanou čárou) pro zachování klinického kontextu.
+- Povinná sekce (Modrá): Sekce Průběh hospitalizace (Hospital Course) je jediným prvkem s kardinalitou 1..1
+- Klinické sekce(Oranžové): Sekce pro příjem a propuštění fungují jako povinné obaly pro logické zanoření sub-sekcí (antropometrie, vitální funkce), což fixuje klinický kontext v čase.
+- Volitelné standardní sekce (Bílé): Zahrnují běžně používané bloky jako Anamnéza (Patient History) nebo Medikace při propuštění (Discharge Medication).
+- Ostatní povolené sekce (Šedé): I když nejsou v diagramu detailně rozkresleny, profil povoluje i další specifické sekce (např. Alergie, Alerty, Příjemci plateb, Výsledky vyšetření či Porod), pokud jsou v souladu s technickým předpisem. Jakákoliv sekce mimo tento definovaný standard je v instanci HDR CZ nepřípustná.
 
 {% include composition-cs.svg %}
