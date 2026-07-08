@@ -42,7 +42,7 @@ RuleSet: sectionCareTeamRules
 RuleSet: EvaluationSubSectionRules
 * section
   * title 1..
-  * text 1..
+  * text 0..
   * text only Narrative
   * section ..0
 * insert SectionSliceComRules (Objective findings, Findings made by healthcare practitioner)
@@ -79,14 +79,12 @@ RuleSet: EvaluationSubSectionRules
   /* * entry only Reference(BloodPressureXpandh or HeartRateXpandh or RespiratoryRateXpandh or BodyTemperatureXpandh or OxygenSaturationXpandh )
  */
 
-// ==> TO BE REVIEWED
-* section contains sectionPhysicalExamination 0..1  // ToDo: add structure
-* section[sectionPhysicalExamination]
-  * title = "Somatické vyšetření­"
-  * code = $sct#425044008 "Physical exam section"
-  * text 1..    // now only textual section, should we use questionnair resource for structuring per body part? Maybe as on option?
-  * entry 0..   // now only textual section, should we use questionnair response or Observation for structuring per body part?
-  * entry only Reference(ClinicalImpression or Observation or DocumentReference or QuestionnaireResponse)
+* section contains sectionPhysicalFindings 0..1 
+* section[sectionPhysicalFindings]
+  * code = $loinc#29545-1
+  * text 0..1    
+  * entry 0..   
+  * entry only Reference(Observation or DocumentReference)
     * ^short = "Optional entry used to represent physical examination findings"
     * ^definition = "It describes findings from physical examination of the patient. Profiles to express structured physical examination findings will be specified by future versions of this guide."
 
@@ -319,3 +317,9 @@ RuleSet: PatientHxSubsectionRules
   * entry 0..
   * entry only Reference(CZ_DeviceUseStatementHdr or CZ_ProcedureHdr ) // DeviceUseStatementEuHdr also ?
   * section ..0
+
+RuleSet: SliceElement( type, path )
+* ^slicing.discriminator.type = {type}
+* ^slicing.discriminator.path = "{path}"
+* ^slicing.rules = #open
+* ^slicing.ordered = false
