@@ -9,9 +9,7 @@ Usage: #example
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
 * type.coding[0].display = "Hospital Discharge summary"
-* category[0].coding[0].system = $loinc
-* category[0].coding[0].code = #18842-5
-* category[0].coding[0].display = "Discharge summary"
+* category[document-category] = $loinc#11503-0
 * title = "Propouštěcí zpráva"
 * date = "2025-03-10T14:30:00+01:00"
 * author[+] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
@@ -334,17 +332,17 @@ Usage: #example
 * section[sectionAdmissionEvaluation].code.coding[0].display = "Admission evaluation note"
 * section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient byl přijat na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Při příjmu byl pacient v dobrém stavu, vitální funkce stabilní. Při fyzikálním vyšetření bylo zjištěno bolestivé zduření v oblasti pravého tříselného kanálu, bez známek zánětu nebo infekce. Laboratorní vyšetření ukázalo normální hodnoty krevního obrazu a biochemie, včetně TSH v normálním rozmezí. Pacient byl stabilní, bez známek dehydratace nebo hypovolemie. Byla zahájena předoperační příprava včetně interního vyšetření a laboratorních testů. Pacient byl informován o nutnosti chirurgického zákroku a souhlasil s ním. </div>" // Added required text for cardinality
 * section[sectionAdmissionEvaluation].text.status = #additional
-* section[sectionAdmissionEvaluation].section[0].title = "Vital sings"
-* section[sectionAdmissionEvaluation].section[=].code = $loinc#8716-3 "Vital signs note"
-* section[sectionAdmissionEvaluation].section[=].text.status = #generated
-* section[sectionAdmissionEvaluation].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vital signs</div>"
-* section[sectionAdmissionEvaluation].section[=].entry[0] = Reference(urn:uuid:6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b)
-* section[sectionAdmissionEvaluation].section[=].entry[1] = Reference(urn:uuid:5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c)
-* section[sectionAdmissionEvaluation].section[=].entry[2] = Reference(urn:uuid:7cf304de-5ae3-4621-8531-9c8f0b2d4e3a)
-* section[sectionAdmissionEvaluation].section[=].entry[3] = Reference(urn:uuid:5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d)
-* section[sectionAdmissionEvaluation].section[=].entry[4] = Reference(urn:uuid:4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a)
-* section[sectionAdmissionEvaluation].section[=].entry[5] = Reference(urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a) // Corrected Reference to include the resource type
-* section[sectionAdmissionEvaluation].section[=].entry[6] = Reference(urn:uuid:f0b20060-c4a8-4a74-b12a-6c8f0b2d4e3a) // Corrected Reference to include the resource type
+* section[sectionAdmissionEvaluation].section[sectionVitalSigns].title = "Vital sings"
+* section[sectionAdmissionEvaluation].section[sectionVitalSigns].code = $loinc#8716-3 "Vital signs note"
+* section[sectionAdmissionEvaluation].section[sectionVitalSigns].text.status = #generated
+* section[sectionAdmissionEvaluation].section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vital signs</div>"
+* section[sectionAdmissionEvaluation].section[sectionVitalSigns].entry[0] = Reference(urn:uuid:6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b)
+* section[sectionAdmissionEvaluation].section[sectionVitalSigns].entry[1] = Reference(urn:uuid:5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c)
+* section[sectionAdmissionEvaluation].section[sectionVitalSigns].entry[2] = Reference(urn:uuid:7cf304de-5ae3-4621-8531-9c8f0b2d4e3a)
+* section[sectionAdmissionEvaluation].section[sectionVitalSigns].entry[3] = Reference(urn:uuid:5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d)
+* section[sectionAdmissionEvaluation].section[sectionVitalSigns].entry[4] = Reference(urn:uuid:4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a)
+* section[sectionAdmissionEvaluation].section[sectionVitalSigns].entry[5] = Reference(urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a) // Corrected Reference to include the resource type
+* section[sectionAdmissionEvaluation].section[sectionVitalSigns].entry[6] = Reference(urn:uuid:f0b20060-c4a8-4a74-b12a-6c8f0b2d4e3a) // Corrected Reference to include the resource type
 
 // * section[sectionAttachments].title = "Přílohy"
 // * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
@@ -388,9 +386,7 @@ Usage: #example
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
 * type.coding[0].display = "Hospital Discharge summary"
-* category[0].coding[0].system = $loinc
-* category[0].coding[0].code = #18842-5
-* category[0].coding[0].display = "Discharge summary"
+* category[document-category] = $loinc#11503-0
 * title = "Propouštěcí zpráva L1"
 * date = "2025-03-10T14:30:00+01:00"
 * author[+] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
@@ -441,9 +437,7 @@ Usage: #example
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
 * type.coding[0].display = "Hospital Discharge summary"
-* category[0].coding[0].system = $loinc
-* category[0].coding[0].code = #18842-5
-* category[0].coding[0].display = "Discharge summary"
+* category[document-category] = $loinc#11503-0
 * title = "Propouštěcí zpráva z nemocnice"
 * date = "2025-03-10T14:30:00+01:00"
 * author[0] = Reference(urn:uuid:69d34ceb-b556-4f75-9e4c-9184fe8a10c5) //ok
@@ -482,9 +476,7 @@ Usage: #example
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
 * type.coding[0].display = "Hospital Discharge summary"
-* category[0].coding[0].system = $loinc
-* category[0].coding[0].code = #18842-5
-* category[0].coding[0].display = "Discharge summary"
+* category[document-category] = $loinc#11503-0
 * title = "Propouštěcí zpráva pacienta Novák Petr"
 * date = "2025-03-10T14:30:00+01:00"
 * author[+] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
@@ -634,8 +626,9 @@ Usage: #example
 * section[sectionDischargeDetails].section[sectionFunctionalStatus].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 
 // Objective findings at discharge (subsection)
-* section[sectionDischargeDetails].section[sectionPhysicalExamination].text.status = #additional
-* section[sectionDischargeDetails].section[sectionPhysicalExamination].text.div = """
+* section[sectionDischargeDetails].section[sectionPhysicalFindings].title = "Objektivní nález při propuštění"
+* section[sectionDischargeDetails].section[sectionPhysicalFindings].text.status = #additional
+* section[sectionDischargeDetails].section[sectionPhysicalFindings].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Objektivní nález při propuštění:</p>
     <ul>
@@ -648,7 +641,7 @@ Usage: #example
     </ul>
     <p>Celkově dobrý stav, bez komplikací po výkonu.</p>
   </div>"""
-* section[sectionDischargeDetails].section[sectionPhysicalExamination].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
+* section[sectionDischargeDetails].section[sectionPhysicalFindings].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
   //TODO přidat nějaká strukturovaná data z vyšetření
 
 * section[sectionDischargeDetails].section[sectionAnthropometry].title = "Antropometrická data"
@@ -856,7 +849,8 @@ Usage: #example
 
 
 // --- Admission Evaluation – Objective findings at admission ---
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text.div = """
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings].title = "Physical findings at admission"
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>Objektivní nález při přijetí:</p>
     <ul>
@@ -872,8 +866,8 @@ Usage: #example
       <li>CRP: 6 mg/L (norma: 0–10 mg/L)</li>
     </ul>
   </div>"""
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].text.status = #additional
-* section[sectionAdmissionEvaluation].section[sectionPhysicalExamination].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings].text.status = #additional
+* section[sectionAdmissionEvaluation].section[sectionPhysicalFindings].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 
 * section[sectionAdmissionEvaluation].section[sectionAnthropometry].title = "Antropometrická data"
 

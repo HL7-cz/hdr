@@ -76,10 +76,18 @@ Description: "This profile defines how to represent Composition resource in HL7 
 
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
-* type only $CodeableConcept-uv-ips
+* type from $MedicalDocumentType (preferred)
 * type ^short = "Kind of composition (\"Hospital Discharge Report\")"
 * type ^definition = "Specifies that this composition refer to a Hospital Discharge Report"
 * type = $loinc#34105-7 "Hospital Discharge summary"
+* category 1..*
+  * insert SliceElement( #value, $this )
+* category contains
+  document-category 1..1 
+* category[document-category] from $DocumentCategory (required)
+  * ^short = "Document Category"
+  * ^definition = "A categorization for the type of document."
+  * coding = $loinc#11503-0
 * subject only Reference(CZ_PatientCore)
 * subject 1..1
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the hdr the subject is always the patient."
@@ -134,17 +142,11 @@ Description: "This profile defines how to represent Composition resource in HL7 
     Physical findings,
       Physical findings,
       $loinc#29545-1)   // "Physical findings Narrative"
+  * entry 0..
+  * entry only Reference( DocumentReference or Observation)
+    * ^short = "Optional entry used to represent physical examination findings"
+    * ^definition = "It describes findings from physical examination of the patient. Profiles to express structured physical examination findings will be specified by future versions of this guide."
 
-// -------------------------------------
-// Physical examination  Section 0 … 1
-// -------------------------------------
-
-* section contains sectionPhysicalExamination ..1
-* section[sectionPhysicalExamination]
-  * insert SectionComRules (
-    Physical examination,
-      Physical examination is the process of evaluating objective anatomical findings.,
-      $loinc#55286-9)   // "Physical exam by body areas"
 
 
 * section contains sectionVitalSigns 0..1
@@ -369,7 +371,6 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // Discharge Details Section 1 … 1 R
 // -------------------------------------
 * section contains sectionDischargeDetails 0..1
-//TODO přidat obligation L3
 * section[sectionDischargeDetails]
   * insert SectionComRules (
       Discharge details,

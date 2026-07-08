@@ -1,0 +1,55 @@
+@startuml
+allowmixing
+
+skinparam packageStyle rect
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam Nodesep 10
+skinparam Ranksep 20
+
+title HDR CZ - Unified Composition Structure (Closed Slicing)
+
+package "Base: Discharge Report" as Base #E0E0E0 {
+}
+
+package "Composition (HDR CZ)" as HDR <<Resource>> {
+    
+    class "Document Header (Metadata)" as Header {
+        type: 18842-5 (Discharge Report)
+        category: 11503-0 (Medical Records)
+        encounter: Encounter (1..1)
+        status: final
+    }
+
+    package "Unified Sections (Fixed List)" as Sections {
+        ' Mandatory top-level section
+        rectangle "Hospital Course (Mandatory 1..1)" as HospCourse #ADD8E6
+        
+        ' Key national containers with mandatory nesting
+        node "Admission Evaluation (Container)" as AdmEval #FFA500
+        node "Discharge Details (Container)" as DischDet #FFA500
+        
+        ' Selection of common optional sections
+        rectangle "Patient History" as PatHist
+        rectangle "Problem List" as ProbList
+        rectangle "Discharge Medication" as DischMed
+        rectangle "Allergies and Intolerances" as Allergy
+        
+        ' Representation of other allowed sections in the closed list
+        rectangle "Other Permitted Sections\n(Plan of Care, Payers, Alerts,\nSynthesis, Significant Results etc.)" as Other #D3D3D3
+    }
+}
+
+Base -[dashed]down-> HDR : "Inheritance (Closed)"
+Header -[hidden]down-> Sections
+
+AdmEval -[hidden]down-> DischDet
+DischDet -[hidden]down-> PatHist
+
+legend right
+  <#ADD8E6>| Mandatory Section (1..1) |
+  <#FFA500>| National Containers (with nested sub-sections) |
+  <#D3D3D3>| Other standardized optional sections |
+  | Section Slicing is **CLOSED** within this profile. |
+endlegend
+@enduml

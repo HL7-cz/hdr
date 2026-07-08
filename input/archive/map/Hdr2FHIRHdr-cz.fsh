@@ -103,7 +103,7 @@ Usage: #definition
 // A.2.6.1 Objective findings at discharge → DischargeDetails/PhysicalExamination (subsection)
 * group[=].element[+].code = #HospitalDischargeReportCz.body.dischargeDetails.objectiveFindings
 * group[=].element[=].display = "A.2.7.1 - Objective findings"
-* group[=].element[=].target.code = #Composition.section:sectionDischargeDetails.section:sectionPhysicalExamination
+* group[=].element[=].target.code = #Composition.section:sectionDischargeDetails.section:sectionPhysicalFindings
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 

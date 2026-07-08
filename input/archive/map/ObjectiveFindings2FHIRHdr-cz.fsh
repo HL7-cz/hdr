@@ -21,12 +21,12 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #LMCzObjectiveFindingsCz.physicalExamination
 * group[=].element[=].display = "A.2.7.1.5 - Physical examination"
-* group[=].element[=].target.code = #Composition.section:sectionPhysicalExamination
+* group[=].element[=].target.code = #Composition.section:sectionPhysicalFindings
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #LMCzObjectiveFindingsCz.physicalExamination.description
 * group[=].element[=].display = "A.2.7.1.5.1 - Observation Note"
-* group[=].element[=].target.code = #Composition.section:sectionPhysicalExamination.text
+* group[=].element[=].target.code = #Composition.section:sectionPhysicalFindings.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMCzObjectiveFindingsCz"

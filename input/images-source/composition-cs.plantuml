@@ -1,0 +1,55 @@
+@startuml
+allowmixing
+
+skinparam packageStyle rect
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam Nodesep 10
+skinparam Ranksep 20
+
+title HDR CZ - Kompletní unifikovaná struktura (Closed Slicing)
+
+package "Základ: Discharge Report (Base)" as Base #E0E0E0 {
+}
+
+package "Composition (HDR CZ)" as HDR <<Resource>> {
+    
+    class "Hlavička (Metadata)" as Header {
+        type: 18842-5 (Propouštěcí zpráva)
+        category: 11503-0 (Lékařské záznamy)
+        encounter: Encounter (1..1)
+        status: final
+    }
+
+    package "Unifikované sekce (Fixní seznam)" as Sections {
+        ' Povinná
+        rectangle "Hospital Course (Povinná 1..1)" as HospCourse #ADD8E6
+        
+        ' Klíčové volitelné kontejnery
+        node "Admission Evaluation (Kontejner)" as AdmEval #FFA500
+        node "Discharge Details (Kontejner)" as DischDet #FFA500
+        
+        ' Výběr běžných volitelných sekcí
+        rectangle "Patient History" as PatHist
+        rectangle "Discharge Medication" as DischMed
+        rectangle "Diagnostic Summary" as DiagSum
+        
+        ' Blok pro ostatní povolené sekce dle IG
+        rectangle "Ostatní standardní sekce\n(Alergie, Plán péče, Alerty,\nPříjemci plateb atd.)" as Other #D3D3D3
+    }
+}
+
+' Vazby
+Base -[dashed]down-> HDR : "Dědění (Closed)"
+Header -[hidden]down-> Sections
+
+AdmEval -[hidden]down-> DischDet
+DischDet -[hidden]down-> PatHist
+
+legend right
+  <#ADD8E6>| Povinná sekce |
+  <#FFA500>| Národní kontejnery (se sub-sekcemi) |
+  <#D3D3D3>| Ostatní povolené volitelné sekce |
+  | Slicing je v rámci profilu **UZAVŘEN**. |
+endlegend
+@enduml

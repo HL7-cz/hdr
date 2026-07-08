@@ -5,7 +5,7 @@ Description: "DocumentReference with Base64 PDF content directly inserted"
 Usage: #example
 * id = "66678621-df93-47ca-a36c-2a39a92472e7"
 * status = #current
-* type = $loinc#18842-5 "Discharge summary"
+* type = $loinc#34105-7 "Discharge summary"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * date = "2022-10-07T08:15:00+02:00"
 * author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
@@ -22,7 +22,7 @@ Description: "DocumentReference for discharge summary, base64 encoded HTML"
 Usage: #example
 * id = "d9ad8a22-a12b-48db-938c-4066a3a0617a"
 * status = #current
-* type = $loinc#18842-5 "Discharge summary"
+* type = $loinc#34105-7 "Discharge summary"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * date = "2022-10-07T08:15:00+02:00"
 * author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
