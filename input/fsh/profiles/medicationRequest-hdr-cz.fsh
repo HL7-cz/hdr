@@ -9,7 +9,7 @@ Description: "This profile constrains the MedicationRequest resource for the pur
 * insert SetFmmandStatusRule (2, trial-use)
 
 // MedicationRequest R4
-* medicationReference only Reference(CZ_Medication)
+* medicationReference only Reference(CZ_MedicationCore)
 * reasonCode ^short = "Reason or indication for this prescription"
 * reasonReference ^short = "Condition or observation that supports this prescription"
 

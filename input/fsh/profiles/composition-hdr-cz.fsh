@@ -1,7 +1,7 @@
 // //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Profile: CZ_CompositionHdr_L1
 // Parent: Composition
-// Id: cz-composition-hdr-l1
+// Id: composition-cz-hdr-l1
 // //Id: composition-cz-hdr
 // Title: "Composition (HDR CZ)"
 // Description: "This profile defines how to represent Composition resource in HL7 FHIR for the scope of this guide."
@@ -35,15 +35,15 @@
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile: CZ_CompositionHdr
-Parent: Composition
-Id: cz-composition-hdr
+Parent: CZ_CompositionCore
+Id: composition-cz-hdr
 //Id: composition-cz-hdr
 Title: "Composition (HDR CZ)"
 Description: "This profile defines how to represent Composition resource in HL7 FHIR for the scope of this guide."
 //-------------------------------------------------------------------------------------------
 
 // this statement says that this profile conforms with the eu lab one
-* insert ImposeProfile($Composition-eu-hdr,0)
+// * insert ImposeProfile($Composition-eu-hdr,0)
 
 * . ^short = "Hospital Discharge Report composition"
 * . ^definition = "Hospital Discharge Report composition. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
@@ -83,7 +83,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * category 1..*
   * insert SliceElement( #value, $this )
 * category contains
-  document-category 1..1 
+  document-category 1..1
 * category[document-category] from $DocumentCategory (required)
   * ^short = "Document Category"
   * ^definition = "A categorization for the type of document."
@@ -316,7 +316,7 @@ Medicinal products\, the administration of which was started during hospitalisat
 $loinc#87232-5 ) // 	Medication administration.brief
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
   * entry 0..
-  * entry only Reference(CZ_MedicationDispenseHdr or CZ_MedicationStatement or CZ_MedicationRequestHdr or MedicationAdministrationEuHdr)  //or MedicationDispense or MedicationAdministration)
+  * entry only Reference(CZ_MedicationDispenseHdr or CZ_MedicationStatementCore or CZ_MedicationRequestHdr or MedicationAdministrationEuHdr)  //or MedicationDispense or MedicationAdministration)
 
 
 * section contains sectionSignificantResults 0..1
@@ -626,7 +626,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge,
     $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital discharge medications Narrative" or 	Discharge medications Narrative
   * entry 1..
-  * entry only Reference  (CZ_MedicationStatement or CZ_MedicationRequestHdr or CZ_MedicationDispenseHdr) //(CZ_MedicationRequestHdr or MedicationDispense)
+  * entry only Reference  (CZ_MedicationStatementCore or CZ_MedicationRequestHdr or CZ_MedicationDispenseHdr) //(CZ_MedicationRequestHdr or MedicationDispense)
 
 // -------------------------------------
 // Discharge Instructions Section 0 … 1

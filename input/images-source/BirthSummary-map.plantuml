@@ -15,7 +15,7 @@ endlegend
 
 class "BirthSummary" <<LogicalModel>> [[StructureDefinition-LMBirthSummaryEnCz.html]]
 
-class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-composition-cz-hdr.html]]
 "BirthSummary" <|. "composition-cz-hdr"
 
 class "procedure-method-of-delivery-cz-hdr" <<Profile>> [[StructureDefinition-cz-procedure-method-of-delivery.html]]

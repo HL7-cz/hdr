@@ -14,6 +14,6 @@ legend right
 endlegend
 class "AdmissionEvaluation" <<LogicalModel>> [[StructureDefinition-AdmissionEvaluationEhnEn.html]]
 
-class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-composition-cz-hdr.html]]
 "AdmissionEvaluation" <|. "composition-cz-hdr"
 @enduml

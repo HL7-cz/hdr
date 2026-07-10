@@ -8,7 +8,7 @@ Usage: #definition
 * experimental = true
 * description = """eHN HDR Advance Directives Model to this guide mapping"""
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/AdvanceDirectivesCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/composition-cz-hdr"
 * group[=].element[+].code = #AdvanceDirectivesCz.livingWill
 * group[=].element[=].display = "A.2.1.1 - Living will"
 * group[=].element[=].target.code = #Composition.section:sectionAdvanceDirectives.text

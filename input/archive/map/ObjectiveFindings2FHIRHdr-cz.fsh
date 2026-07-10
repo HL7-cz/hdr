@@ -8,7 +8,7 @@ Usage: #definition
 * experimental = true
 * description = """eHN HDR Objective Findings Model to this guide Map"""
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMCzObjectiveFindingsCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/composition-cz-hdr"
 * group[=].element[+].code = #LMCzObjectiveFindingsCz.anthropometricObservations
 * group[=].element[=].display = "A.2.7.1.3 - Anthropometric observations"
 * group[=].element[=].target.code = #Composition.section

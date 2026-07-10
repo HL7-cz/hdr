@@ -8,7 +8,7 @@ Usage: #definition
 * experimental = true
 * description = """eHN HDR Alerts Model to this guide mapping"""
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/AlertsCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-allergyIntolerance-hdr"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/allergyIntolerance-cz-hdr"
 
 * group[=].element[+].code = #AlertsCz.allergy
 * group[=].element[=].display = "A.2.2.1 - Allergy and Intolerance"
@@ -78,7 +78,7 @@ Usage: #definition
 
 
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/AlertsCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/composition-cz-hdr"
 * group[=].element[+].code = #AlertsCz.allergy
 * group[=].element[=].display = "A.2.2.1 - Allergy and Intolerance"
 * group[=].element[=].target.code = #Composition.section:sectionAllergies

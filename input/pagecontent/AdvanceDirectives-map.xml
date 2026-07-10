@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    <h3>AdvanceDirectivesCz -&gt; cz-composition-hdr</h3>
+    <h3>AdvanceDirectivesCz -&gt; composition-cz-hdr</h3>
 
     <p>Hereafter a browseable diagram showing how the AdvanceDirectives model is realized by the HL7 FHIR Profiles of this guide</p>
 
@@ -91,7 +91,7 @@
 
         <li>
           <strong>Hlavn&#237; c&#237;lov&#253; profil:</strong>
-          <a href="StructureDefinition-cz-composition-hdr.html">cz-composition-hdr</a>
+          <a href="StructureDefinition-composition-cz-hdr.html">composition-cz-hdr</a>
         </li>
 
       </ul>
@@ -126,7 +126,7 @@
             <td>AdvanceDirectivesCz.livingWill</td>
             <td>A.2.1.1 - Living will</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionAdvanceDirectives.text</td>
             <td></td>
             <td></td>
@@ -135,7 +135,7 @@
             <td>AdvanceDirectivesCz.livingWill</td>
             <td>A.2.1.1 - Living will</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionAdvanceDirectives.entry</td>
             <td></td>
             <td>Composition.section:sectionAdvanceDirectives.entry.ofType(Consent)</td>
@@ -144,7 +144,7 @@
             <td>AdvanceDirectivesCz.livingWill.document</td>
             <td>A.2.1.1.5 - Living will document</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionAdvanceDirectives.entry</td>
             <td></td>
             <td>Composition.section:sectionAdvanceDirectives.entry.ofType(DocumentReference)</td>

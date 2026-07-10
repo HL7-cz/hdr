@@ -5,6 +5,8 @@ InstanceOf: CZ_CompositionHdr
 Description: "Example Composition for Hospital Discharge Report for patient Novák Petr"
 Usage: #example
 * id = "cdae7735-f7ee-4bc7-9cf3-3dc806a4eaaf"
+* identifier.system = "https://example.hospital.org/sid/compositions"
+* identifier.value = "this.is.composition.identifier"
 * status = #final
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
@@ -44,9 +46,9 @@ Usage: #example
 * section[sectionAlert].title = "Varování"
 * section[sectionAlert].code.coding[0].system = $loinc
 
-* section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1 
+* section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1
 * section[sectionAlert].code.coding[0].display = "Alert"
-* section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>" 
+* section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>"
 
 * section[sectionAlert].text.status = #generated
 * section[sectionAlert].entry[0] = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e)
@@ -346,7 +348,7 @@ Usage: #example
 
 // * section[sectionAttachments].title = "Přílohy"
 // * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
-// * section[sectionAttachments].code.coding[0].code = #77599-9   
+// * section[sectionAttachments].code.coding[0].code = #77599-9
 // * section[sectionAttachments].code.coding[0].display = "Additional documentation"
 // * section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
 // * section[sectionAttachments].entry[1] = Reference(urn:uuid:d9ad8a22-a12b-48db-938c-4066a3a0617a)
@@ -379,6 +381,8 @@ InstanceOf: CZ_CompositionHdr
 Description: "Example Composition for Hospital Discharge Report for patient Novák Petr"
 Usage: #example
 * id = "6891fd68-dc3c-4c91-a8d3-cb5ec990c03b"
+* identifier.system = "https://example.hospital.org/sid/compositions"
+* identifier.value = "this.is.composition.identifier1"
 * status = #final //ok
 //* language  = #cs
 * extension[compositionVersionR5].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version"
@@ -419,7 +423,7 @@ Usage: #example
 // //TODO popsat že to je něco jiného než presented form
 // * section[sectionAttachments].title = "Přílohy"
 // * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
-// * section[sectionAttachments].code.coding[0].code = #77599-9   
+// * section[sectionAttachments].code.coding[0].code = #77599-9
 // * section[sectionAttachments].code.coding[0].display = "Additional documentation"
 // * section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
 // * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Přílohy</div>" // Added required text for cardinality
@@ -431,6 +435,8 @@ InstanceOf: CZ_CompositionHdr
 Description: "Sample composition of a discharge report for patient Novák Petr for the purposes of an L1 document. This is the minimum possible list of data for compiling an L1 document for a hospital discharge report."
 Usage: #example
 * id = "6891fd68-dc3c-4c91-a8d3-cb5ec990c035"
+* identifier.system = "https://example.hospital.org/sid/compositions"
+* identifier.value = "this.is.composition.identifier2"
 * status = #final
 * text.status = #empty
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Composition for Hospital Discharge Report</div>"
@@ -446,7 +452,7 @@ Usage: #example
 * extension[presentedForm].valueAttachment = cz-pdfhdr-example
 * confidentiality = #N
 * custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1) // Example Organization as custodian
-* attester[0].mode = #professional 
+* attester[0].mode = #professional
 * attester[=].party = Reference(urn:uuid:69d34ceb-b556-4f75-9e4c-9184fe8a10c5)
 * attester[+].mode = #legal
 * attester[=].party = Reference(urn:uuid:69d34ceb-b556-4f75-9e4c-9184fe8a10c5) // Attester is the same as one of the authors
@@ -472,6 +478,8 @@ InstanceOf: CZ_CompositionHdr
 Description: "Example Composition for Hospital Discharge Report for patient Novák Petr"
 Usage: #example
 * id = "701f51d5-78bf-428e-a6b5-349c2614ce07"
+* identifier.system = "https://example.hospital.org/sid/compositions"
+* identifier.value = "this.composition.identifier"
 * status = #final
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
@@ -510,9 +518,9 @@ Usage: #example
 // Sekce Varování
 * section[sectionAlert].title = "Varování"
 * section[sectionAlert].code.coding[0].system = $loinc
-* section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1 
+* section[sectionAlert].code.coding[0].code = #104605-1 // Alerts LOINC=104605-1
 * section[sectionAlert].code.coding[0].display = "Alert"
-* section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>" 
+* section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient trpí mírnou podvýživou – doporučená nutriční terapie</div>"
 * section[sectionAlert].text.status = #generated
 * section[sectionAlert].entry[0] = Reference(urn:uuid:5a17a710-193e-4490-a627-7202925aa56e)
 
@@ -908,7 +916,7 @@ Usage: #example
 
 // * section[sectionAttachments].title = "Přílohy"
 // * section[sectionAttachments].code.coding[0].system = "http://loinc.org"
-// * section[sectionAttachments].code.coding[0].code = #77599-9   
+// * section[sectionAttachments].code.coding[0].code = #77599-9
 // * section[sectionAttachments].code.coding[0].display = "Additional documentation"
 // * section[sectionAttachments].entry[0] = Reference(urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7)
 // * section[sectionAttachments].entry[1] = Reference(DischargeDocumentHTML)

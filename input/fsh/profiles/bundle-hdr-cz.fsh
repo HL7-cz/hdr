@@ -74,14 +74,14 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[condition].resource only CZ_ConditionHdr
 * entry[device].resource only CZ_MedicalDevice
 * entry[deviceUseStatement].resource only DeviceUseStatementEuHdr
-* entry[diagnosticReport].resource only $DiagnosticReport-uv-ips
+* entry[diagnosticReport].resource only CZ_DiagnosticReportCore  //$DiagnosticReport-uv-ips
 * entry[encounter].resource only CZ_EncounterHdr
-* entry[imagingStudy].resource only $ImagingStudy-uv-ips
-* entry[immunization].resource only $Immunization-uv-ips
+* entry[imagingStudy].resource only CZ_StudyImaging  // $ImagingStudy-uv-ips
+* entry[immunization].resource only CZ_ImmunizationCore  //$Immunization-uv-ips
 * entry[media].resource only Media // $Media-observation-uv-ips
-* entry[medication].resource only CZ_Medication
+* entry[medication].resource only CZ_MedicationCore
 * entry[medicationRequest].resource only CZ_MedicationRequestHdr
-* entry[medicationStatement].resource only $MedicationStatement-uv-ips
+* entry[medicationStatement].resource only CZ_MedicationStatementCore  // $MedicationStatement-uv-ips
 * entry[medicationAdministration].resource only CZ_MedicationAdministrationHdr
 * entry[medicationDispense].resource only MedicationDispense
 * entry[practitioner].resource only CZ_PractitionerCore
@@ -91,7 +91,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 // HON TODO FIXME
 //* entry[observation].resource only Reference(Observation or CZ_ObservationInfectiousContactHdr or CZ_ObservationSdohHdr or CZ_ObservationTravelHdr)
 * entry[observation].resource only Observation // $Observation-results-uv-ips
-* entry[specimen].resource only $Specimen-uv-ips
+* entry[specimen].resource only CZ_Specimen // $Specimen-uv-ips
 * entry[flag].resource only CZ_FlagHdr
 * entry[familyMemberHistory].resource only FamilyMemberHistory
 * entry[documentReference].resource only DocumentReference
@@ -110,7 +110,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
   * data ^short = "Signature content"
 
 Invariant: bdl-hdr-1
-Description: "An IPS document must have no additional Composition (including Composition subclass) resources besides the first."
+Description: "An hdr document must have no additional Composition (including Composition subclass) resources besides the first."
 Severity: #error
 Expression: "entry.tail().where(resource is Composition).empty()"
 

@@ -20,7 +20,7 @@ Usage: #definition
 
 // A.2 – Body → Composition
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/HospitalDischargeReportCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/composition-cz-hdr"
 
 // A.2 body konteiner
 * group[=].element[+].code = #HospitalDischargeReportCz.body

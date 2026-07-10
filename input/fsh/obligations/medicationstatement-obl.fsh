@@ -1,7 +1,7 @@
 // TODO: Profile for medicationStatement obligation
 
 Profile: CZ_MedicationStatementObligationsHdr
-Parent: CZ_MedicationStatement
+Parent: CZ_MedicationStatementCore
 Id: cz-medicationstatement-obl-hdr
 Title: "MedicationStatement: Obligations (HDR CZ)"
 Description: "Profile for MedicationStatement with obligations (HDR CZ)."

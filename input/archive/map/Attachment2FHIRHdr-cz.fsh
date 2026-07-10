@@ -9,7 +9,7 @@ Usage: #definition
 
 
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/AttachmentsCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/composition-cz-hdr"
 * group[=].element[+].code = #AttachmentsCz
 * group[=].element[=].display = "A.4 - Attachments"
 * group[=].element[=].target.code = #Composition.section:sectionAttachments.entry

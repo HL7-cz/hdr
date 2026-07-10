@@ -25,7 +25,7 @@ class "practitionerRole-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/
 class "bundle-cz-hdr" <<Profile>> [[StructureDefinition-cz-bundle-hdr.html]]
 "Header" <|. "bundle-cz-hdr"
 "practitionerRole-cz-core" -d[hidden]-> "bundle-cz-hdr"
-class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-composition-cz-hdr.html]]
 "Header" <|. "composition-cz-hdr"
 "bundle-cz-hdr" -d[hidden]-> "composition-cz-hdr"
 class "Coverage-cz" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]

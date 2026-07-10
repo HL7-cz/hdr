@@ -14,7 +14,7 @@ legend right
 endlegend
 class "HospitalStay" <<LogicalModel>> [[StructureDefinition-HospitalStayCz.html]]
 
-class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-composition-cz-hdr.html]]
 "HospitalStay" <|. "composition-cz-hdr"
 class "condition-cz-hdr" <<Profile>> [[StructureDefinition-cz-condition-hdr.html]]
 "HospitalStay" <|. "condition-cz-hdr"

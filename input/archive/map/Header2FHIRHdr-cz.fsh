@@ -323,7 +323,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "If it is when this particular version of  this report has been assembled into a Bundle."
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/Header"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/composition-cz-hdr"
 * group[=].element[+].code = #Header.subject
 * group[=].element[=].display = "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"
 * group[=].element[=].target.code = #Composition.subject

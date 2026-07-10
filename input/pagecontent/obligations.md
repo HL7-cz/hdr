@@ -5,7 +5,7 @@
 </blockquote>
 </div>
 
-### Overview 
+### Overview
 
 Obligations are a mean offered by HL7 FHIR to specify functional capabilities that defined actors MAY, SHOULD or SHALL to the data elements specified by the profiles.
 
@@ -29,13 +29,13 @@ Actors were specified in these roles:
 | the [Level 2 Creator](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-creator-L2.html)   | This is a L2 actor that creates a report. This report can be sent to a consumer or to a repository for storing and sharing report. |
 | the [Level 2 Consumer](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-consumer-L2.html) | This L2 actor represents the system that uses the received or retrieved report.                                                                 |
 | the [Level 3 Creator](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-creator-L3.html)   | This is a L3 actor that creates a report. This report can be sent to a consumer or to a repository for storing and sharing report. |
-| the [Level 3 Consumer](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-consumer-L3.html) | This L3 actor represents the system that uses the received or retrieved report.                                                                 |                                                
+| the [Level 3 Consumer](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-consumer-L3.html) | This L3 actor represents the system that uses the received or retrieved report.                                                                 |
 
 <p>{% include hdr-Actors.svg %}</p>
 
 ### Obligations List
 
-1. Obligations for profile AllergyIntolerance ([CZ_AllergyIntoleranceObligationsHdr](StructureDefinition-cz-allergyintolerance-obl-hdr.html))
+1. Obligations for profile AllergyIntolerance ([CZ_AllergyIntoleranceObligationsHdr](StructureDefinition-cz-allergyIntolerance-obl-hdr.html))
 2. Obligations for profile Attachments ([CZ_AttachmentsObligationsHdr](StructureDefinition-cz-attachment-obl-hdr.html))
 3. Obligations for profile Composition ([CZ_CompositionObligationsHdr](StructureDefinition-cz-composition-obl-hdr.html))
 4. Obligations for profile Consent ([CZ_ConsentObligationsHdr](StructureDefinition-cz-consent-obl-hdr.html))

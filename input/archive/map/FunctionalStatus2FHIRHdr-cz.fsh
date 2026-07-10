@@ -8,7 +8,7 @@ Usage: #definition
 * experimental = true
 * description = """eHN HDR Functional Status Model to this guide Map"""
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/FunctionalStatusCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/composition-cz-hdr"
 * group[=].element[+].code = #FunctionalStatusCz.description
 * group[=].element[=].display = "A.2.7.2.1 - Description"
 * group[=].element[=].target.code = #Composition.section:sectionFunctionalStatus.text

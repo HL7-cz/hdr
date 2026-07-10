@@ -15,7 +15,7 @@ Description: """This profile constrains the Immunization resource for the purpos
 // check preadoption of R5 element
 * extension contains ImmunizationAdministeredProduct named administeredProduct 0..1
 * extension[administeredProduct].extension[concept]
-* extension[administeredProduct].extension[reference].valueReference only Reference ( CZ_Medication )
+* extension[administeredProduct].extension[reference].valueReference only Reference ( CZ_MedicationCore )
 
 * patient only Reference(CZ_PatientCore)
 * occurrence[x] only dateTime

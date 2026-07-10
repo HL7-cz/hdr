@@ -1,7 +1,7 @@
 // TODO: Profile for medication obligation
 
 Profile: CZ_MedicationMedicationSummaryObligationsHdr
-Parent: CZ_Medication
+Parent: CZ_MedicationCore
 Id: cz-medication-medicationsummary-obl-hdr
 Title: "Medication Obligations: (HDR CZ) - medication summary"
 Description: "Profile for Medication Obligations in the Czech Republic Health Data Repository (HDR CZ). - medication summary."
@@ -9,9 +9,9 @@ Description: "Profile for Medication Obligations in the Czech Republic Health Da
 * insert SetFmmandStatusRule ( 0, informative)
 
 // MedicationSummary.productCode (A.2.9.2.3 - Code)	is equivalent to	Medication.code	Preferred mapping
-// MedicationSummary.productName (A.2.9.2.4 - Brand name)	is equal to	Medication.extension:productName	
+// MedicationSummary.productName (A.2.9.2.4 - Brand name)	is equal to	Medication.extension:productName
 // MedicationSummary.activeIngredient (A.2.9.2.5 - Active ingredient list)	is equal to	Medication.ingredient.item[x]	Medication.ingredient.isActive = true
-// MedicationSummary.strength (A.2.9.2.6 - Strength)	is equivalent to	Medication.ingredient.strength	
+// MedicationSummary.strength (A.2.9.2.6 - Strength)	is equivalent to	Medication.ingredient.strength
 // MedicationSummary.doseForm (A.2.9.2.7 - Pharmaceutical dose form)	is equal to	Medication.form
 
 // Creator Obligations L2 ============>

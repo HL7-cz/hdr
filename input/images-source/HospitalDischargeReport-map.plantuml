@@ -16,7 +16,7 @@ class "HospitalDischargeReport" <<LogicalModel>> [[StructureDefinition-HospitalD
 
 class "bundle-cz-hdr" <<Profile>> [[StructureDefinition-cz-bundle-hdr.html]]
 "HospitalDischargeReport" <|. "bundle-cz-hdr"
-class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-composition-cz-hdr.html]]
 "HospitalDischargeReport" <|. "composition-cz-hdr"
 "bundle-cz-hdr" -d[hidden]-> "composition-cz-hdr"
 @enduml
