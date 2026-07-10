@@ -14,9 +14,9 @@ legend right
 endlegend
 class "Alerts" <<LogicalModel>> [[StructureDefinition-AlertsCz.html]]
 
-class "allergyIntolerance-cz-hdr" <<Profile>> [[StructureDefinition-cz-allergyIntolerance-hdr.html]]
+class "allergyIntolerance-cz-hdr" <<Profile>> [[StructureDefinition-allergyIntolerance-cz-hdr.html]]
 "Alerts" <|. "allergyIntolerance-cz-hdr"
-class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-composition-cz-hdr.html]]
 "Alerts" <|. "composition-cz-hdr"
 "allergyIntolerance-cz-hdr" -d[hidden]-> "composition-cz-hdr"
 class "flag-cz-hdr" <<Profile>> [[StructureDefinition-cz-flag-hdr.html]]

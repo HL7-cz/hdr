@@ -14,7 +14,7 @@ legend right
 endlegend
 class "FunctionalStatus" <<LogicalModel>> [[StructureDefinition-FunctionalStatusCz.html]]
 
-class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-composition-cz-hdr.html]]
 "FunctionalStatus" <|. "composition-cz-hdr"
 class "ClinicalImpression" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/ClinicalImpression]]
 "FunctionalStatus" <|. "ClinicalImpression"

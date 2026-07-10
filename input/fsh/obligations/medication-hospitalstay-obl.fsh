@@ -1,5 +1,5 @@
 Profile: CZ_MedicationHospitalStayObligationsHdr
-Parent: CZ_Medication
+Parent: CZ_MedicationCore
 Id: cz-medication-hospitalstay-obl-hdr
 Title: "Medication Obligations: (HDR CZ) - hospital stay"
 Description: "Profile for Medication Obligations in the Czech Republic Health Data Repository (HDR CZ). - hospital stay."
@@ -10,7 +10,7 @@ Description: "Profile for Medication Obligations in the Czech Republic Health Da
 // HospitalStay.pharmacotherapy.productCode (A.2.7.5.2 - Code)	is equivalent to	Medication.code
 // HospitalStay.pharmacotherapy.intendedUse (A.2.7.5.3 - Intended use)	is equivalent to	Composition.section:sectionPharmacotherapy
 // HospitalStay.pharmacotherapy.productName (A.2.7.5.4 - Brand name)	is equivalent to	Medication.extension:productName
-// HospitalStay.pharmacotherapy.activeIngredient (A.2.7.5.5 - Active ingredient list)	is equivalent to	Medication.ingredient.itemCodeableConcept	
+// HospitalStay.pharmacotherapy.activeIngredient (A.2.7.5.5 - Active ingredient list)	is equivalent to	Medication.ingredient.itemCodeableConcept
 // HospitalStay.pharmacotherapy.strength (A.2.7.5.6 - Strength)	is equivalent to	Medication.ingredient.strength
 // HospitalStay.pharmacotherapy.doseForm (A.2.7.5.7 - Pharmaceutical dose form)	is equivalent to	Medication.form
 

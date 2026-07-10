@@ -8,7 +8,7 @@ Usage: #definition
 * experimental = true
 * description = """eHN HDR Hospital Stay  Model to this guide Map"""
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/HospitalStayCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/composition-cz-hdr"
 * group[=].element[+].code = #HospitalStayCz.diagnosticSummary
 * group[=].element[=].display = "A.2.6.1 - Diagnostic summary"
 * group[=].element[=].target.code = #Composition.section:sectionDiagnosticSummary

@@ -1,5 +1,5 @@
 Instance: Medication-Euthyrox
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #example
 Title: "Dispense – Euthyrox"
 Description: "Euthyrox v tabletách"
@@ -39,7 +39,7 @@ Description: "Euthyrox v tabletách"
 * identifier[0].value = "0243131"
 
 Instance: MedicationDispense-Euthyrox
-InstanceOf: MedicationDispense
+InstanceOf: CZ_MedicationDispenseCore
 Usage: #example
 Title: "Dispense – Euthyrox for patient Novak"
 Description: "Výdej léčivého přípravku Euthyrox pacientovi Novákovi"
@@ -53,7 +53,7 @@ Description: "Výdej léčivého přípravku Euthyrox pacientovi Novákovi"
 * whenHandedOver = "2024-03-05"
 
 Instance: Medication-Paracetamol
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #example
 Title: "Medication – Paracetamol"
 Description: "Lek Paracetamol v tabletách"
@@ -94,7 +94,7 @@ Description: "Lek Paracetamol v tabletách"
 * identifier[0].value = "0243131"
 
 Instance: MedicationDispense-Paracetamol
-InstanceOf: MedicationDispense
+InstanceOf: CZ_MedicationDispenseCore
 Usage: #example
 Title: "Dispense – Paracetamol"
 Description: "Výdej léčivého přípravku Paracetamol pacientovi Novákovi"
@@ -108,7 +108,7 @@ Description: "Výdej léčivého přípravku Paracetamol pacientovi Novákovi"
 * whenHandedOver = "2024-03-06"
 
 Instance: Medication-Ibalgin400
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #example
 Title: "Medication – Ibalgin 400"
 Description: "Lek Ibalgin 400 v tabletách"
@@ -149,7 +149,7 @@ Description: "Lek Ibalgin 400 v tabletách"
 * identifier[0].value = "0207893"
 
 Instance: MedicationDispense-Ibalgin400
-InstanceOf: MedicationDispense
+InstanceOf: CZ_MedicationDispenseCore
 Usage: #example
 Title: "Dispense – Ibalgin 400"
 Description: "Výdej léčivého přípravku Ibalgin 400 mg pacientovi Novákovi"
@@ -163,7 +163,7 @@ Description: "Výdej léčivého přípravku Ibalgin 400 mg pacientovi Novákovi
 * whenHandedOver = "2024-03-07"
 
 Instance: Medication-CovidVaccineComirnaty
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #example
 Title: "Medication – Covid vaccine"
 Description: "Lek Covid vakcína"

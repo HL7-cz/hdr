@@ -14,7 +14,7 @@ legend right
 endlegend
 class "AdvanceDirectives" <<LogicalModel>> [[StructureDefinition-AdvanceDirectivesCz.html]]
 
-class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-composition-cz-hdr.html]]
 "AdvanceDirectives" <|. "composition-cz-hdr"
 class "consent-cz-hdr" <<Profile>> [[StructureDefinition-cz-consent-hdr.html]]
 "AdvanceDirectives" <|. "consent-cz-hdr"

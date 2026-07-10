@@ -21,7 +21,7 @@ Alias: $practitionerRole-eu = http://hl7.eu/fhir/base/StructureDefinition/practi
 
 
 // --- EU Lab Profiles
-Alias: $Composition-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab
+//Alias: $Composition-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab
 Alias: $Observation-resultslab-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab
 
 // --- Value Sets

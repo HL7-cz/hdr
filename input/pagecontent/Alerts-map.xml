@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    <h3>AlertsCz -&gt; cz-allergyIntolerance-hdr</h3>
+    <h3>AlertsCz -&gt; allergyIntolerance-cz-hdr</h3>
 
     <p>Hereafter a browseable diagram showing how the Alerts model is realized by the HL7 FHIR Profiles of this guide</p>
 
@@ -91,7 +91,7 @@
 
         <li>
           <strong>Hlavn&#237; c&#237;lov&#253; profil:</strong>
-          <a href="StructureDefinition-cz-allergyIntolerance-hdr.html">cz-allergyIntolerance-hdr</a>
+          <a href="StructureDefinition-allergyIntolerance-cz-hdr.html">allergyIntolerance-cz-hdr</a>
         </li>
 
       </ul>
@@ -126,7 +126,7 @@
             <td>AlertsCz.allergy</td>
             <td>A.2.2.1 - Allergy and Intolerance</td>
             <td>equivalent</td>
-            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance (allergyIntolerance-cz-hdr)</td>
             <td>AllergyIntolerance</td>
             <td></td>
             <td></td>
@@ -135,7 +135,7 @@
             <td>AlertsCz.allergy.description</td>
             <td>A.2.2.1.1 - Allergy description</td>
             <td>equivalent</td>
-            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance (allergyIntolerance-cz-hdr)</td>
             <td>AllergyIntolerance.text</td>
             <td></td>
             <td></td>
@@ -144,7 +144,7 @@
             <td>AlertsCz.allergy.agent</td>
             <td>A.2.2.1.2 - Agent or Allergen</td>
             <td>equivalent</td>
-            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance (allergyIntolerance-cz-hdr)</td>
             <td>AllergyIntolerance.code</td>
             <td></td>
             <td></td>
@@ -153,7 +153,7 @@
             <td>AlertsCz.allergy.typeOfPropensity</td>
             <td>A.2.2.1.3 - Type of propensity</td>
             <td>equivalent</td>
-            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance (allergyIntolerance-cz-hdr)</td>
             <td>AllergyIntolerance.type</td>
             <td></td>
             <td></td>
@@ -162,7 +162,7 @@
             <td>AlertsCz.allergy.manifestation</td>
             <td>A.2.2.1.4 - Allergy manifestation</td>
             <td>related-to</td>
-            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance (allergyIntolerance-cz-hdr)</td>
             <td>AllergyIntolerance.reaction.manifestation</td>
             <td></td>
             <td></td>
@@ -171,7 +171,7 @@
             <td>AlertsCz.allergy.criticality</td>
             <td>A.2.2.1.5 - Criticality</td>
             <td>equivalent</td>
-            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance (allergyIntolerance-cz-hdr)</td>
             <td>AllergyIntolerance.criticality</td>
             <td></td>
             <td></td>
@@ -180,7 +180,7 @@
             <td>AlertsCz.allergy.onsetDate</td>
             <td>A.2.2.1.6 - Onset date</td>
             <td>equivalent</td>
-            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance (allergyIntolerance-cz-hdr)</td>
             <td>AllergyIntolerance.onset[x]</td>
             <td></td>
             <td></td>
@@ -189,7 +189,7 @@
             <td>AlertsCz.allergy.endDate</td>
             <td>A.2.2.1.7 - End date</td>
             <td>equivalent</td>
-            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance (allergyIntolerance-cz-hdr)</td>
             <td>AllergyIntolerance.extension:abatement.valueDateTime</td>
             <td></td>
             <td></td>
@@ -198,7 +198,7 @@
             <td>AlertsCz.allergy.status</td>
             <td>A.2.2.1.8 - Status</td>
             <td>equivalent</td>
-            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance (allergyIntolerance-cz-hdr)</td>
             <td>AllergyIntolerance.clinicalStatus</td>
             <td></td>
             <td></td>
@@ -207,7 +207,7 @@
             <td>AlertsCz.allergy.certainty</td>
             <td>A.2.2.1.9 - Certainty</td>
             <td>equivalent</td>
-            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance (allergyIntolerance-cz-hdr)</td>
             <td>AllergyIntolerance.verificationStatus</td>
             <td></td>
             <td></td>
@@ -216,7 +216,7 @@
             <td>AlertsCz.allergy.lastOccurrence</td>
             <td>A.2.2.1.10 - Last Occurence</td>
             <td>equivalent</td>
-            <td>AllergyIntolerance (cz-allergyIntolerance-hdr)</td>
+            <td>AllergyIntolerance (allergyIntolerance-cz-hdr)</td>
             <td>AllergyIntolerance.lastOccurrence</td>
             <td></td>
             <td></td>
@@ -225,7 +225,7 @@
             <td>AlertsCz.allergy</td>
             <td>A.2.2.1 - Allergy and Intolerance</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionAllergies</td>
             <td></td>
             <td></td>
@@ -234,7 +234,7 @@
             <td>AlertsCz.medicalAlerts</td>
             <td>A.2.2.2 - Medical alerts (relevant for the respective hospital stay)</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionAlert</td>
             <td></td>
             <td></td>
@@ -243,7 +243,7 @@
             <td>AlertsCz.medicalAlerts.description</td>
             <td>A.2.2.2.1 - Healthcare alert description</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionAlert.text</td>
             <td></td>
             <td></td>

@@ -15,7 +15,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PatientHistoryCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/composition-cz-hdr"
 * group[=].element[+].code = #PatientHistoryCz.medicalHistory
 * group[=].element[=].display = "A.2.5.1 - Medical history"
 * group[=].element[=].target.code = #Composition.section

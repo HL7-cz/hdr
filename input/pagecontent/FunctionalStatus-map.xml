@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    <h3>FunctionalStatusCz -&gt; cz-composition-hdr</h3>
+    <h3>FunctionalStatusCz -&gt; composition-cz-hdr</h3>
 
     <p>Hereafter a browseable diagram showing how the FunctionalStatus model is realized by the HL7 FHIR Profiles of this guide</p>
 
@@ -91,7 +91,7 @@
 
         <li>
           <strong>Hlavn&#237; c&#237;lov&#253; profil:</strong>
-          <a href="StructureDefinition-cz-composition-hdr.html">cz-composition-hdr</a>
+          <a href="StructureDefinition-composition-cz-hdr.html">composition-cz-hdr</a>
         </li>
 
       </ul>
@@ -126,7 +126,7 @@
             <td>FunctionalStatusCz.description</td>
             <td>A.2.7.2.1 - Description</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionFunctionalStatus.text</td>
             <td></td>
             <td></td>

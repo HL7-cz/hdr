@@ -1,24 +1,24 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  CZ_MedicationRequestHdr
-Parent:   MedicationRequest
-Id:       cz-medicationRequest-hdr
-Title:    "MedicationRequest (HDR CZ)"
-Description: "This profile constrains the MedicationRequest resource for the purpose of this guide, adapted from the MPD work."
+Parent:   MedicationRequestEuCore
+Id:       medicationRequest-cz-core
+Title:    "MedicationRequest (CZ Core)"
+Description: "This profile constrains the MedicationRequest resource for the purpose of this guide and is derived from HL7 EU MedicationRequestCore profile."
 //-------------------------------------------------------------------------------------------
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmandStatusRule (2, trial-use)
 
 // MedicationRequest R4
-* medicationReference only Reference(CZ_Medication)
+* medicationReference only Reference(CZ_MedicationCore)
 * reasonCode ^short = "Reason or indication for this prescription"
 * reasonReference ^short = "Condition or observation that supports this prescription"
 
 // MedicationRequest R4 R5 common
-* identifier 
+* identifier
   * ^short = "Prescription/prescribed item ID"
   * ^comment = "It is the prescription ID if the presciption includes only one prescribed item"
 * status ^short = "Current state of the order"
-//* intent = $medicationrequest-intent#order 
+//* intent = $medicationrequest-intent#order
 * subject only Reference( CZ_PatientCore )
 * authoredOn 1..
 * requester 1..

@@ -8,12 +8,12 @@ Description: "This profile constrains the MedicationDispense resource for the pu
 
 * insert SetFmmandStatusRule (1, draft)
 
-* medication[x] only CodeableConcept or Reference(CZ_Medication)
+* medication[x] only CodeableConcept or Reference(CZ_MedicationCore)
 
 // * medicationReference only Reference(MedicationEuHdr)
 
 
-* identifier 
+* identifier
   * ^short = "Dispensation/dispensed item ID"
   * ^comment = "It is the dispensation ID if the presciption includes only one prescribed item"
 * status ^short = "Current state of the dispensation"

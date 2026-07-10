@@ -14,7 +14,7 @@ legend right
 endlegend
 class "PatientHistory" <<LogicalModel>> [[StructureDefinition-PatientHistoryCz.html]]
 
-class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-composition-cz-hdr.html]]
 "PatientHistory" <|. "composition-cz-hdr"
 class "condition-cz-hdr" <<Profile>> [[StructureDefinition-cz-condition-hdr.html]]
 "PatientHistory" <|. "condition-cz-hdr"

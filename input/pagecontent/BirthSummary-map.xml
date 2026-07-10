@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    <h3>LMBirthSummaryEnCz -&gt; cz-composition-hdr</h3>
+    <h3>LMBirthSummaryEnCz -&gt; composition-cz-hdr</h3>
 
     <p>Hereafter a browseable diagram showing how the BirthSummary model is realized by the HL7 FHIR Profiles of this guide</p>
 
@@ -91,7 +91,7 @@
 
         <li>
           <strong>Hlavn&#237; c&#237;lov&#253; profil:</strong>
-          <a href="StructureDefinition-cz-composition-hdr.html">cz-composition-hdr</a>
+          <a href="StructureDefinition-composition-cz-hdr.html">composition-cz-hdr</a>
         </li>
 
       </ul>
@@ -126,7 +126,7 @@
             <td>LMBirthSummaryEnCz</td>
             <td>Delivery section</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionHospitalCourse.section:sectionDelivery</td>
             <td></td>
             <td></td>
@@ -135,7 +135,7 @@
             <td>LMBirthSummaryEnCz.newborn</td>
             <td>Newborn information</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:newborn</td>
             <td></td>
             <td></td>
@@ -144,7 +144,7 @@
             <td>LMBirthSummaryEnCz.mother</td>
             <td>Maternal pregnancy history</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionPatientHx.section:sectionPregnancyHx</td>
             <td></td>
             <td></td>
@@ -153,7 +153,7 @@
             <td>LMBirthSummaryEnCz.mother.gestationalAgeAtDelivery</td>
             <td>Gestational age at delivery</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:gestationalAge</td>
             <td></td>
             <td></td>
@@ -162,7 +162,7 @@
             <td>LMBirthSummaryEnCz.mother.gravidity</td>
             <td>Gravidity</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:gravidity</td>
             <td></td>
             <td></td>
@@ -171,7 +171,7 @@
             <td>LMBirthSummaryEnCz.mother.parity</td>
             <td>Parity</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:parity</td>
             <td></td>
             <td></td>
@@ -180,7 +180,7 @@
             <td>LMBirthSummaryEnCz.mother.multiplePregnancy</td>
             <td>Multiple pregnancy</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:multiplePregnancy</td>
             <td></td>
             <td></td>
@@ -189,7 +189,7 @@
             <td>LMBirthSummaryEnCz.mother.fetusCount</td>
             <td>Number of fetuses</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionPatientHx.section:sectionPregnancyHx.entry:multiplePregnancy</td>
             <td></td>
             <td></td>
@@ -198,7 +198,7 @@
             <td>LMBirthSummaryEnCz.newborn.deliveryMethod</td>
             <td>Delivery method</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:deliveryProcedure</td>
             <td></td>
             <td></td>
@@ -207,7 +207,7 @@
             <td>LMBirthSummaryEnCz.mother.laborInduction</td>
             <td>Induction of labor</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:inductionProcedure</td>
             <td></td>
             <td></td>
@@ -216,7 +216,7 @@
             <td>LMBirthSummaryEnCz.mother.birthInjury.code</td>
             <td>Birth injury code</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthInjury</td>
             <td></td>
             <td></td>
@@ -225,7 +225,7 @@
             <td>LMBirthSummaryEnCz.mother.birthInjury.description</td>
             <td>Birth injury description</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthInjury</td>
             <td></td>
             <td></td>
@@ -234,7 +234,7 @@
             <td>LMBirthSummaryEnCz.newborn.fetalPresentation</td>
             <td>Fetal presentation</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:fetalPresentation</td>
             <td></td>
             <td></td>
@@ -243,7 +243,7 @@
             <td>LMBirthSummaryEnCz.newborn.birthWeight</td>
             <td>Birth weight</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthWeight</td>
             <td></td>
             <td></td>
@@ -252,7 +252,7 @@
             <td>LMBirthSummaryEnCz.newborn.birthLength</td>
             <td>Birth length</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:birthLength</td>
             <td></td>
             <td></td>
@@ -261,7 +261,7 @@
             <td>LMBirthSummaryEnCz.newborn.birthOutcome</td>
             <td>Birth outcome</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:deliveryObservation</td>
             <td></td>
             <td></td>
@@ -270,7 +270,7 @@
             <td>LMBirthSummaryEnCz.newborn.apgarScore.minute1</td>
             <td>Apgar score at 1 minute</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:apgarScore</td>
             <td></td>
             <td></td>
@@ -279,7 +279,7 @@
             <td>LMBirthSummaryEnCz.newborn.apgarScore.minute5</td>
             <td>Apgar score at 5 minutes</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:apgarScore</td>
             <td></td>
             <td></td>
@@ -288,7 +288,7 @@
             <td>LMBirthSummaryEnCz.newborn.apgarScore.minute10</td>
             <td>Apgar score at 10 minutes</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionHospitalCourse.section:sectionDelivery.entry:apgarScore</td>
             <td></td>
             <td></td>

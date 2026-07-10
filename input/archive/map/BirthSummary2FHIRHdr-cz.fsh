@@ -18,7 +18,7 @@ sections and related clinical resources.
 // =====================================================
 
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/LMBirthSummaryEnCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/composition-cz-hdr"
 
 // Delivery section
 

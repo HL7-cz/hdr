@@ -3,6 +3,8 @@ InstanceOf: CZ_CompositionHdr
 Usage: #example
 Description: "Příklad gynekologické propouštěcí zprávy po spontánním vaginálním porodu. / Example gynecology hospital discharge composition with spontaneous vaginal delivery."
 * id = "6e9f3ec7-0a3c-4ee4-a2f2-a9c6ad91d001"
+* identifier.system = "http://example.hospital.org/composition-ids"
+* identifier.value = "composition-number"
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
 * category[document-category] = $loinc#11503-0
@@ -160,6 +162,8 @@ InstanceOf: CZ_CompositionHdr
 Usage: #example
 Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovou po spontánním vaginálním porodu. / Example gynecology hospital discharge composition for Jana Novakova with spontaneous vaginal delivery."
 * id = "5e848ec9-b5bf-4c90-9d7e-6b0894208bfe"
+* identifier.system = "http://example.hospital.org/composition-ids"
+* identifier.value = "composition-number-1"
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
 * category[document-category] = $loinc#11503-0
@@ -220,7 +224,7 @@ Description: "Příklad gynekologické propouštěcí zprávy pro Janu Novákovo
 * section[sectionPharmacotherapy].entry[+] = Reference(urn:uuid:0a98bc34-677a-4867-b903-461ac06939d5)
 
 Instance: Medication-Ropivacaine-Epidural
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #example
 Description: "Ropivakain použitý pro epidurální porodnickou analgezii. / Ropivacaine used for epidural labor analgesia."
 * id = "65dff8dd-87a7-41cb-8a5a-d2b900098fb8"
@@ -233,7 +237,7 @@ Description: "Ropivakain použitý pro epidurální porodnickou analgezii. / Rop
 * code.text = "Ropivakain epiduralni roztok"
 
 Instance: Medication-Fentanyl-Epidural
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #example
 Description: "Fentanyl použitý jako adjuvans při epidurální porodnické analgezii. / Fentanyl used as adjuvant in epidural labor analgesia."
 * id = "d9cdb566-b6f7-4c3a-96e1-9748c93a738b"
@@ -246,7 +250,7 @@ Description: "Fentanyl použitý jako adjuvans při epidurální porodnické ana
 * code.text = "Fentanyl pro epiduralni analgezii"
 
 Instance: MedicationStatement-Ropivacaine-Epidural-Jana
-InstanceOf: CZ_MedicationStatement
+InstanceOf: CZ_MedicationStatementCore
 Usage: #example
 Description: "Epidurální podání ropivakainu během porodu. / Epidural administration of ropivacaine during labor."
 * id = "6f97d842-5ce8-4631-b52e-0b79723c7e31"
@@ -266,7 +270,7 @@ Description: "Epidurální podání ropivakainu během porodu. / Epidural admini
 * category[0].coding[0].display = "Inpatient"
 
 Instance: MedicationStatement-Fentanyl-Epidural-Jana
-InstanceOf: CZ_MedicationStatement
+InstanceOf: CZ_MedicationStatementCore
 Usage: #example
 Description: "Epidurální podání fentanylu jako adjuvans během porodnické analgezie. / Epidural fentanyl adjuvant during labor analgesia."
 * id = "0a98bc34-677a-4867-b903-461ac06939d5"

@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    <h3>LMCzObjectiveFindingsCz -&gt; cz-composition-hdr</h3>
+    <h3>LMCzObjectiveFindingsCz -&gt; composition-cz-hdr</h3>
 
     <p>Hereafter a browseable diagram showing how the ObjectiveFindings model is realized by the HL7 FHIR Profiles of this guide</p>
 
@@ -91,7 +91,7 @@
 
         <li>
           <strong>Hlavn&#237; c&#237;lov&#253; profil:</strong>
-          <a href="StructureDefinition-cz-composition-hdr.html">cz-composition-hdr</a>
+          <a href="StructureDefinition-composition-cz-hdr.html">composition-cz-hdr</a>
         </li>
 
       </ul>
@@ -126,7 +126,7 @@
             <td>LMCzObjectiveFindingsCz.anthropometricObservations</td>
             <td>A.2.7.1.3 - Anthropometric observations</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section</td>
             <td></td>
             <td></td>
@@ -135,7 +135,7 @@
             <td>LMCzObjectiveFindingsCz.vitalSigns</td>
             <td>A.2.7.1.4 - Vital signs</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionVitalSigns</td>
             <td></td>
             <td></td>
@@ -144,7 +144,7 @@
             <td>LMCzObjectiveFindingsCz.physicalExamination</td>
             <td>A.2.7.1.5 - Physical examination</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionPhysicalFindings</td>
             <td></td>
             <td></td>
@@ -153,7 +153,7 @@
             <td>LMCzObjectiveFindingsCz.physicalExamination.description</td>
             <td>A.2.7.1.5.1 - Observation Note</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionPhysicalFindings.text</td>
             <td></td>
             <td></td>

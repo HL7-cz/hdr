@@ -1,7 +1,7 @@
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
-<blockquote class="stu-note"> 
-<b>Informativní pro tuto verzi průvodce</b> 
-<p>Do této verze příručky byly přidány závazná pravidla pouze jako informativní materiál ke shromažďování zpětné vazby o jejich používání.</p> 
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<blockquote class="stu-note">
+<b>Informativní pro tuto verzi průvodce</b>
+<p>Do této verze příručky byly přidány závazná pravidla pouze jako informativní materiál ke shromažďování zpětné vazby o jejich používání.</p>
 </blockquote>
 </div>
 
@@ -37,7 +37,7 @@ Byli specifikováni aktéři ve těchto rolích:
 
 ### Seznam závazných pravidel
 
-1. Pravidla pro profil alergie a intolerance ([CZ_AllergyIntoleranceObligationsHdr](StructureDefinition-cz-allergyintolerance-obl-hdr.html))
+1. Pravidla pro profil alergie a intolerance ([CZ_AllergyIntoleranceObligationsHdr](StructureDefinition-cz-allergyIntolerance-obl-hdr.html))
 2. Pravidla pro profil přílohy ([CZ_AttachmentsObligationsHdr](StructureDefinition-cz-attachment-obl-hdr.html))
 3. Pravidla pro profil kompozice ([CZ_CompositionObligationsHdr](StructureDefinition-cz-composition-obl-hdr.html))
 4. Pravidla pro profil souhlas ([CZ_ConsentObligationsHdr](StructureDefinition-cz-consent-obl-hdr.html))

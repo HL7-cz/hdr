@@ -7,7 +7,7 @@ Description: "This profile represents the constraints applied to the Procedure r
 * insert ImposeProfile($Procedure-eu-hdr, 0)
 
 * extension contains $procedure-targetBodyStructure named bodySite 0..1
-* extension[bodySite].valueReference only Reference(BodyStructureCz)
+* extension[bodySite].valueReference only Reference(BodyStructureCzCore)
 
 * text 1..1  // textual representation of the procedure should be provided according to the EHN data set
 * status

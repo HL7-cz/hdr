@@ -10,7 +10,7 @@ InstanceOf: CZ_BundleHdr
 // Bundle Entries (ordered by profile slices):
 * entry[0].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eaaf"
 * entry[0].resource = DischargeComposition // Corrected Reference to include the resource type
-* entry[0].resource.meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
+* entry[0].resource.meta.profile[0] = "https://hl7.cz/fhir/hdr/StructureDefinition/composition-cz-hdr"
 * entry[1].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000111"
 * entry[1].resource = Mracena2
 * entry[2].fullUrl = "urn:uuid:10f5c49e-086d-4016-8dd1-100000000001"

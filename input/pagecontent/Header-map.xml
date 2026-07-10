@@ -630,7 +630,7 @@
             <td>Header.subject</td>
             <td>A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.subject</td>
             <td></td>
             <td></td>
@@ -639,7 +639,7 @@
             <td>Header.payer</td>
             <td>A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.extension:basedOn:order</td>
             <td></td>
             <td>To be disucssed if the payor data are conveyed with the request or thorugh other means. Check also the extension to be used.</td>
@@ -648,7 +648,7 @@
             <td>Header.payer</td>
             <td>A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionPayers.entry</td>
             <td></td>
             <td>Composition.section:sectionPayers.entry.ofType(Coverage).conformsTo(&apos;https://hl7.cz/fhir/core/StructureDefinition/cz-coverage&apos;)</td>
@@ -657,7 +657,7 @@
             <td>Header.informationRecipient</td>
             <td>A.1.4 - Information recipient - (intended recipient or recipients of the report), if applicable</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.extension:information-recipient</td>
             <td></td>
             <td>Composition.extension:information-recipient.valueReference.resolve().ofType(PracittionerRole)</td>
@@ -666,7 +666,7 @@
             <td>Header.informationRecipient.name</td>
             <td>A.1.4.2 - Recipient name</td>
             <td>equivalent</td>
-            <td>PractitionerRole (cz-composition-hdr)</td>
+            <td>PractitionerRole (composition-cz-hdr)</td>
             <td>PractitionerRole.practitioner.name</td>
             <td></td>
             <td></td>
@@ -675,7 +675,7 @@
             <td>Header.informationRecipient.organizationID</td>
             <td>A.1.4.3 - Recipient organisation ID</td>
             <td>equivalent</td>
-            <td>PractitionerRole (cz-composition-hdr)</td>
+            <td>PractitionerRole (composition-cz-hdr)</td>
             <td>PractitionerRole.practitioner.organization.identifier</td>
             <td></td>
             <td></td>
@@ -684,7 +684,7 @@
             <td>Header.informationRecipient.organization</td>
             <td>A.1.4.4 - Recipient organisation</td>
             <td>related-to</td>
-            <td>PractitionerRole (cz-composition-hdr)</td>
+            <td>PractitionerRole (composition-cz-hdr)</td>
             <td>PractitionerRole.practitioner.organization</td>
             <td></td>
             <td></td>
@@ -693,7 +693,7 @@
             <td>Header.informationRecipient.address</td>
             <td>A.1.4.5 - Address</td>
             <td>related-to</td>
-            <td>PractitionerRole (cz-composition-hdr)</td>
+            <td>PractitionerRole (composition-cz-hdr)</td>
             <td>PractitionerRole.address</td>
             <td></td>
             <td></td>
@@ -702,7 +702,7 @@
             <td>Header.informationRecipient.country</td>
             <td>A.1.4.6 - Country</td>
             <td>related-to</td>
-            <td>PractitionerRole (cz-composition-hdr)</td>
+            <td>PractitionerRole (composition-cz-hdr)</td>
             <td>PractitionerRole.country</td>
             <td></td>
             <td></td>
@@ -711,7 +711,7 @@
             <td>Header.informationRecipient.telecom</td>
             <td>A.1.4.7 - Telecom</td>
             <td>related-to</td>
-            <td>PractitionerRole (cz-composition-hdr)</td>
+            <td>PractitionerRole (composition-cz-hdr)</td>
             <td>PractitionerRole.telecom</td>
             <td></td>
             <td></td>
@@ -720,7 +720,7 @@
             <td>Header.author</td>
             <td>A.1.5 - Author (by whom the Hospital discharge report was/were authored). Multiple authors could be provided.</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.author</td>
             <td></td>
             <td></td>
@@ -729,7 +729,7 @@
             <td>Header.author.dateTime</td>
             <td>A.1.5.5 - Date Time</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.date</td>
             <td></td>
             <td></td>
@@ -738,7 +738,7 @@
             <td>Header.attester</td>
             <td>A.1.6 - Attester (multiple attesters could be provided)</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.attester.party</td>
             <td></td>
             <td>where attester.mode = &apos;professional&apos;</td>
@@ -747,7 +747,7 @@
             <td>Header.attester.dateTime</td>
             <td>A.1.6.5 - Approval date and time</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.attester.time</td>
             <td></td>
             <td></td>
@@ -756,7 +756,7 @@
             <td>Header.legalAuthenticator</td>
             <td>A.1.7 - Legal authenticator (The person taking responsibility for the medical content of the document)</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.attester.party</td>
             <td></td>
             <td>where attester.mode = &apos;legal&apos;</td>
@@ -765,7 +765,7 @@
             <td>Header.legalAuthenticator.dateTime</td>
             <td>A.1.7.5 - Authentication date and time</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.attester.time</td>
             <td></td>
             <td>where attester.mode = &apos;legal&apos;</td>
@@ -774,7 +774,7 @@
             <td>Header.documentMetadata</td>
             <td>A.1.8 - Document metadata</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition</td>
             <td></td>
             <td></td>
@@ -783,7 +783,7 @@
             <td>Header.documentMetadata.type</td>
             <td>A.1.8.2 - Document type</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.type</td>
             <td></td>
             <td></td>
@@ -792,7 +792,7 @@
             <td>Header.documentMetadata.status</td>
             <td>A.1.8.3 - Document status</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.status</td>
             <td></td>
             <td></td>
@@ -801,7 +801,7 @@
             <td>Header.documentMetadata.dateTime</td>
             <td>A.1.8.4 - Report date and time</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.date</td>
             <td></td>
             <td>If it is when this document has been created (indipendently by its version)</td>
@@ -810,7 +810,7 @@
             <td>Header.documentMetadata.title</td>
             <td>A.1.8.5 - Document title</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.title</td>
             <td></td>
             <td></td>
@@ -819,7 +819,7 @@
             <td>Header.documentMetadata.custodian</td>
             <td>A.1.8.6 - Report custodian</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.custodian</td>
             <td></td>
             <td></td>
@@ -828,7 +828,7 @@
             <td>Header.documentMetadata.confidentiality</td>
             <td>A.1.8.7 - Confidentiality</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.confidentiality</td>
             <td></td>
             <td></td>
@@ -837,7 +837,7 @@
             <td>Header.documentMetadata.language</td>
             <td>A.1.8.8 - Language</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.language</td>
             <td></td>
             <td></td>
@@ -846,7 +846,7 @@
             <td>Header.documentMetadata.version</td>
             <td>A.1.8.9 - Version</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.extension:versionNumber.valueString</td>
             <td></td>
             <td>As business version, not as resource version</td>

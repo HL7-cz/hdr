@@ -16,7 +16,7 @@ class "PatientHistoryEhn" <<LogicalModel>> [[StructureDefinition-PatientHistoryC
 
 class "ImmunizationRecommendation-cz-hdr" <<Profile>> [[StructureDefinition-cz-immunizationRecommendation-hdr.html]]
 "PatientHistoryEhn" <|. "ImmunizationRecommendation-cz-hdr"
-class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-composition-cz-hdr.html]]
 "PatientHistoryEhn" <|. "composition-cz-hdr"
 "ImmunizationRecommendation-cz-hdr" -d[hidden]-> "composition-cz-hdr"
 class "condition-cz-hdr" <<Profile>> [[StructureDefinition-cz-condition-hdr.html]]

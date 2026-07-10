@@ -14,7 +14,7 @@ legend right
 endlegend
 class "ObjectiveFindings" <<LogicalModel>> [[StructureDefinition-ObjectiveFindingsCz.html]]
 
-class "composition-cz-hdr" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
+class "composition-cz-hdr" <<Profile>> [[StructureDefinition-composition-cz-hdr.html]]
 "ObjectiveFindings" <|. "composition-cz-hdr"
 class "Observation" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Observation]]
 "ObjectiveFindings" <|. "Observation"

@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    <h3>HospitalStayCz -&gt; cz-composition-hdr</h3>
+    <h3>HospitalStayCz -&gt; composition-cz-hdr</h3>
 
     <p>Hereafter a browseable diagram showing how the HospitalStay model is realized by the HL7 FHIR Profiles of this guide</p>
 
@@ -91,7 +91,7 @@
 
         <li>
           <strong>Hlavn&#237; c&#237;lov&#253; profil:</strong>
-          <a href="StructureDefinition-cz-composition-hdr.html">cz-composition-hdr</a>
+          <a href="StructureDefinition-composition-cz-hdr.html">composition-cz-hdr</a>
         </li>
 
       </ul>
@@ -126,7 +126,7 @@
             <td>HospitalStayCz.diagnosticSummary</td>
             <td>A.2.6.1 - Diagnostic summary</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionDiagnosticSummary</td>
             <td></td>
             <td>Details in the Composition.section:sectionDiagnosticSummary.entry of type Condition. See dedicated group</td>
@@ -135,7 +135,7 @@
             <td>HospitalStayCz.significantProcedures</td>
             <td>A.2.6.2 - Significant procedures</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionSignificantProcedures</td>
             <td></td>
             <td>Details in the Composition.section:sectionSignificantProcedures.entry of type Procedure. See dedicated group</td>
@@ -144,7 +144,7 @@
             <td>HospitalStayCz.medicalDevices</td>
             <td>A.2.6.3 - Medical devices and implants</td>
             <td>equivalent</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionMedicalDevices</td>
             <td></td>
             <td>Details in the Composition.section:sectionMedicalDevices.entry of type DeviceUseStatement. See dedicated groups</td>
@@ -153,7 +153,7 @@
             <td>HospitalStayCz.pharmacotherapy</td>
             <td>A.2.6.5 - Pharmacotherapy</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionPharmacotherapy</td>
             <td></td>
             <td>Details in the Composition.section:sectionPharmacotherapy.entry. See dedicated groups</td>
@@ -162,7 +162,7 @@
             <td>HospitalStayCz.significantResults</td>
             <td>A.2.6.6 - Significant Observation Results</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionSignificantResults</td>
             <td></td>
             <td></td>
@@ -171,7 +171,7 @@
             <td>HospitalStayCz.significantResults.details</td>
             <td>A.2.6.6.4 - Observation details</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionSignificantResults.text</td>
             <td></td>
             <td></td>
@@ -180,7 +180,7 @@
             <td>HospitalStayCz.synthesis</td>
             <td>A.2.6.7 - Synthesis</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionSynthesis</td>
             <td></td>
             <td></td>
@@ -189,7 +189,7 @@
             <td>HospitalStayCz.synthesis.description</td>
             <td>A.2.6.7.1 - Problem synthesis</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionSynthesis.text</td>
             <td></td>
             <td></td>
@@ -198,7 +198,7 @@
             <td>HospitalStayCz.synthesis.reasoning</td>
             <td>A.2.6.7.2 - Clinical reasoning</td>
             <td>related-to</td>
-            <td>Composition (cz-composition-hdr)</td>
+            <td>Composition (composition-cz-hdr)</td>
             <td>Composition.section:sectionSynthesis.text</td>
             <td></td>
             <td></td>

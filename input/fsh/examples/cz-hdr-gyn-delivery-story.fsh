@@ -353,7 +353,7 @@ Description: "Unverified environmental allergies: grass, dust, pollen."
 * patient = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 
 Instance: Medication-Story-Dopegyt
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #example
 Title: "HDR - GYNPOR - Dopegyt 250 mg / Dopegyt 250 mg"
 Description: "Dopegyt 250 mg tablets."
@@ -367,7 +367,7 @@ Description: "Dopegyt 250 mg tablets."
 * code.text = "Dopegyt 250 mg tablety"
 
 Instance: Medication-Story-Fraxiparine
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #example
 Title: "HDR - GYNPOR - Fraxiparine 0,6 ml / Fraxiparine 0.6 ml"
 Description: "Fraxiparine 0.6 ml."
@@ -381,7 +381,7 @@ Description: "Fraxiparine 0.6 ml."
 * code.text = "Fraxiparine 0.6 ml"
 
 Instance: Medication-Story-ProstinE2
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #example
 Title: "HDR - GYNPOR - Prostin E2 / Prostin E2"
 Description: "Prostin E2 for labor induction."
@@ -395,7 +395,7 @@ Description: "Prostin E2 for labor induction."
 * code.text = "Prostin E2"
 
 Instance: Medication-Story-LidocaineEgis
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #example
 Title: "HDR - GYNPOR - Lidocaine EGIS / Lidocaine EGIS"
 Description: "Lidocaine EGIS used during hospitalization."
@@ -409,7 +409,7 @@ Description: "Lidocaine EGIS used during hospitalization."
 * code.text = "Lidocaine EGIS"
 
 Instance: Medication-Story-Ofost
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #example
 Title: "HDR - GYNPOR - OFOST / OFOST"
 Description: "OFOST used during hospitalization."
@@ -549,6 +549,8 @@ Usage: #example
 Title: "HDR - GYNPOR - Gynekologická propouštěcí zpráva po porodu / Gynecology discharge report after delivery"
 Description: "Story-based gynecology discharge report after induced vaginal delivery."
 * id = "4c26810a-e3ca-4723-9708-0c8ceac5a737"
+* identifier.system = "http://example.cz/composition-ids"
+* identifier.value = "composition-number"
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
 * category[document-category] = $loinc#11503-0
@@ -717,7 +719,7 @@ Description: "Document bundle for story-based gynecology discharge report withou
 * entry[observation][+].fullUrl = "urn:uuid:d9e9d7df-a3fa-430a-9d19-38e8432c8803"
 * entry[observation][=].resource = Observation-Story-Apgar10
 //* entry[observation][+].fullUrl = "urn:uuid:e967fac7-ed30-44a2-8d7a-3ad35db9fff6"
-//* entry[observation][=].resource = Observation-Story-UZ 
+//* entry[observation][=].resource = Observation-Story-UZ
 * entry[observation][+].fullUrl = "urn:uuid:f432828d-fa44-4928-afa6-a248b126860b"
 * entry[observation][=].resource = Observation-Story-BloodGroup
 * entry[medication][+].fullUrl = "urn:uuid:6910dd1a-deee-463a-b776-6ee3ca8bf7ed"

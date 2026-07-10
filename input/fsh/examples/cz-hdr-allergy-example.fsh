@@ -64,7 +64,7 @@ Description: "Patient experiences itching and tongue swelling in response to str
 
 // Penicilinová alergie
 Instance: PenicillinAllergy
-InstanceOf: cz-allergyIntolerance-hdr
+InstanceOf: allergyIntolerance-cz-hdr
 Usage: #example
 Title: "AllergyIntolerance - Penicillin"
 Description: "Patient experiences skin rash and lip swelling in response to penicillin."

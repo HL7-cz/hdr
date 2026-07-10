@@ -11,7 +11,7 @@ Description: """This profile represents the constraint applied to the Condition 
 
 // follow the same apporach of lab for collection or add laterality to the bodySite ?
 * extension contains $bodySite-reference named bodySite 0..1
-* extension[bodySite].valueReference only Reference(BodyStructureCz)
+* extension[bodySite].valueReference only Reference(BodyStructureCzCore)
 
 * category only CodeableConceptIPS
 * category
@@ -36,7 +36,7 @@ Description: """This profile represents the constraint applied to the Condition 
 * severity from $condition-severity (preferred)
 
 
-* code 1..1 
+* code 1..1
 * code only $CodeableConcept-uv-ips
 * code from ConditionHdrVS (preferred)
   * ^definition = "The problem code specifies the problem. Depending on the setting, different code systems can be used. The ProblemCodelist provides an overview of the possible code systems."
@@ -75,7 +75,7 @@ Description: """This profile represents the constraint applied to the Condition 
 * stage.assessment ^definition = "Reference to the evidence on which the staging assessment is based."
 * stage.type ^short = "Staging system used."
 
-/* 
+/*
 * stage.assessment only Reference(CancerStageGroupHdrXpandh)
 * stage.summary from CancerStageGradingVS
   * ^short = "Most recent Stage Group"
