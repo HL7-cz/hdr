@@ -10,7 +10,7 @@ GOTO igpublish
 
 :isonline
 ECHO We're online
-SET txoption=
+SET txoption=-tx https://tx.hl7.cz/r4
 
 :igpublish
 

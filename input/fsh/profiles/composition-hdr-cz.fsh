@@ -108,7 +108,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * attester.mode ^short = "The type of attestation"
 * attester.time ^short = "When the composition was attested."
 * attester.party ^short = "Who attested the composition."
-* attester.party only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore
+* attester.party only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore) //or CZ_PatientCore or CZ_RelatedPersonCore
 
 
 

@@ -32,7 +32,7 @@ Description: """This profile constrains the Immunization Recommendation resource
 * ^experimental = false
 * ^purpose = "This profile constrains the Immunization resource for the purpose of this guide."
 
-* insert ImposeProfile($ImmunizationRecommendationEuHdr, 0)
+//* insert ImposeProfile($ImmunizationRecommendationEuHdr, 0) bohuzel nelze
 
 * date ^short = "When recomendation was created"
 * patient only Reference (CZ_PatientCore)

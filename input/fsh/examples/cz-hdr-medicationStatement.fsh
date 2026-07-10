@@ -102,7 +102,7 @@ Description: "Czech HDR - example of Euthyrox"
 //indikace
 * reasonCode.coding[0].system = $MKN10
 * reasonCode.coding[0].code = #E039
-* reasonCode.coding[0].display = "Hypothyroidism, unspecified"
+* reasonCode.coding[0].display = "Hypotyreóza NS"
 * reasonCode.text = "Hypotyreóza"
 //dávkování
 * dosage[0].text = "1 tableta denně"
@@ -152,7 +152,7 @@ Description: "Czech HDR - example of Paracetamol"
 //indikace
 * reasonCode.coding[0].system = $MKN10
 * reasonCode.coding[0].code = #E039
-* reasonCode.coding[0].display = "Hypothyroidism, unspecified"
+* reasonCode.coding[0].display = "Hypotyreóza NS"
 * reasonCode.text = "Hypotyreóza"
 //dávkování
 * dosage[0].text = "Dle potřeby, max 4 tablety denně"
@@ -194,7 +194,7 @@ Description: "Czech HDR - example of Ibalgin 400"
 //indikace
 * reasonCode.coding[0].system = $MKN10
 * reasonCode.coding[0].code = #E039
-* reasonCode.coding[0].display = "Hypothyroidism, unspecified"
+* reasonCode.coding[0].display = "Hypotyreóza NS"
 * reasonCode.text = "Hypotyreóza"
 //dávkování
 * dosage[0].text = "Dle potřeby, při bolesti max 3 tablety denně"

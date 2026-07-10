@@ -154,7 +154,7 @@ Description: "Primary diagnosis for vaginal delivery."
 * id = "1d2b2e56-93b0-4c03-bf01-4612d54b14bc"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* code = $MKN10#O800 "IZ, III.p., CH 3200g, rpt.perinei I, KS 0 pozit., ZK 250ml"
+* code = $MKN10#O800 "Spontánní porod záhlavím"
 * subject = Reference(urn:uuid:c517f75a-1e29-423b-8c59-1b275e65019a)
 
 Instance: Condition-Story-GestHypertension
