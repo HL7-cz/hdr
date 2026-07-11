@@ -60,8 +60,6 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * data ^short = "B64 in-line data"
   * url ^short = "URL of the document"
 
-* extension contains $information-recipient named informationRecipient 0..*
-* extension[informationRecipient]
 * extension[informationRecipient].valueReference only Reference(  CZ_PractitionerCore or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 /* CZ_PractitionerRoleCore or*/
 
