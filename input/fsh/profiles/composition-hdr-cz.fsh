@@ -63,9 +63,9 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * extension contains $composition.version-r5 named compositionVersionR5 0..1
 * extension[compositionVersionR5].valueString ^short = "Business version"
 
-* extension contains $information-recipient named information-recipient 0..*
-* extension[information-recipient]
-* extension[information-recipient].valueReference only Reference(  CZ_PractitionerCore or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+* extension contains $information-recipient named informationRecipient 0..*
+* extension[informationRecipient]
+* extension[informationRecipient].valueReference only Reference(  CZ_PractitionerCore or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 /* CZ_PractitionerRoleCore or*/
 
 /* GC TO DO
