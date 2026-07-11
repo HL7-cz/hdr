@@ -376,7 +376,7 @@ Description: "Fraxiparine 0.6 ml."
 * identifier[0].system = $dlp_lec_pripravky
 * identifier[0].value = "DLP-FRAXIPARINE-001"
 * code.coding[0].system = $dlp_lec_pripravky
-* code.coding[0].code = #0213488
+* code.coding[0].code = #0258284
 * code.coding[0].display = "FRAXIPARINE"
 * code.text = "Fraxiparine 0.6 ml"
 
