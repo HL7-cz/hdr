@@ -9,7 +9,7 @@ Description: "Czech HDR - example of Levothyroxine sodium"
 * statusReason.text = "Continued on discharge"
 * medicationCodeableConcept.coding[0].system = $dlp_lec_pripravky
 * medicationCodeableConcept.coding[0].code = #0243130 // Corrected code assignment
-* medicationCodeableConcept.coding[0].display = "Levothyroxine sodium"
+* medicationCodeableConcept.coding[0].display = "EUTHYROX"
 * medicationCodeableConcept.text = "Euthyrox 100 \u00b5g"
 * subject = Reference(Mracena2)
 * dosage[0].text = "1-0-0 (100 \u00b5g r\u00e1no)"
@@ -24,7 +24,7 @@ Description: "Czech HDR - example of Rivaroxaban"
 * status = #active
 * medicationCodeableConcept.coding[0].system = $dlp_lec_pripravky
 * medicationCodeableConcept.coding[0].code = #0236342 // Corrected code assignment
-* medicationCodeableConcept.coding[0].display = "Rivaroxaban"
+* medicationCodeableConcept.coding[0].display = "RIVAROXABAN ZENTIVA"
 * medicationCodeableConcept.text = "Rivaroxaban 20 mg"
 * subject = Reference(Mracena2)
 * dosage[0].text = "1-0-0 (20 mg denně)"
@@ -39,7 +39,7 @@ Description: "Czech HDR - example of Bisoprolol"
 * status = #active
 * medicationCodeableConcept.coding[0].system = $dlp_lec_pripravky
 * medicationCodeableConcept.coding[0].code = #0032961 // Corrected code assignment
-* medicationCodeableConcept.coding[0].display = "Bisoprolol"
+* medicationCodeableConcept.coding[0].display = "BISOPROLOL RATIOPHARM"
 * medicationCodeableConcept.text = "Bisoprolol 5 mg"
 * subject = Reference(Mracena2)
 * dosage[0].text = "1-0-0 (5 mg denně)"
@@ -54,7 +54,7 @@ Description: "Czech HDR - example of Atorvastatin"
 * status = #active
 * medicationCodeableConcept.coding[0].system = $dlp_lec_pripravky
 * medicationCodeableConcept.coding[0].code = #0185910 // Corrected code assignment
-* medicationCodeableConcept.coding[0].display = "Atorvastatin"
+* medicationCodeableConcept.coding[0].display = "ATORVASTATIN RATIOPHARM GMBH"
 * medicationCodeableConcept.text = "Atorvastatin 20 mg"
 * subject = Reference(Mracena2)
 * dosage[0].text = "0-0-1 (20 mg večer)"
@@ -81,7 +81,7 @@ Description: "Czech HDR - example of Iron Supplement"
 * status = #active
 * medicationCodeableConcept.coding[0].system = $dlp_lec_pripravky
 * medicationCodeableConcept.coding[0].code = #0225688 // Corrected code assignment
-* medicationCodeableConcept.coding[0].display = "Ferrous sulfate"
+* medicationCodeableConcept.coding[0].display = "SORBIFER DURULES"
 * medicationCodeableConcept.text = "Sorbifer Durules (Fe++)"
 * subject = Reference(Mracena2)
 * dosage[0].text = "1-0-0"
