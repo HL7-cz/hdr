@@ -233,7 +233,7 @@ Description: "Ropivakain použitý pro epidurální porodnickou analgezii. / Rop
 * identifier[0].value = "0299001"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0242456
-* code.coding[0].display = "ROPIVACAINE BIOQ"
+* code.coding[0].display = "ROPIVACAINE BIOQ 2MG/ML INF SOL APS 1X250ML+KATETR I"
 * code.text = "Ropivakain epiduralni roztok"
 
 Instance: Medication-Fentanyl-Epidural
@@ -246,7 +246,7 @@ Description: "Fentanyl použitý jako adjuvans při epidurální porodnické ana
 * identifier[0].value = "0299002"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0024845
-* code.coding[0].display = "FENTANYL-RATIOPHARM"
+* code.coding[0].display = "FENTANYL-RATIOPHARM 25MCG/H TDR EMP 3X4,125MG"
 * code.text = "Fentanyl pro epiduralni analgezii"
 
 Instance: MedicationStatement-Ropivacaine-Epidural-Jana

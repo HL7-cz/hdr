@@ -7,7 +7,7 @@ Description: "Euthyrox v tabletách"
 * status = #active
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0243131
-* code.coding[0].display = "EUTHYROX"
+* code.coding[0].display = "EUTHYROX 75MCG TBL NOB 100 II"
 * code.coding[1].system = $cz-medication-DLPATC-cs
 * code.coding[1].code = #H03AA01
 * code.coding[1].display = "LEVOTHYROXINE SODIUM"
@@ -62,7 +62,7 @@ Description: "Lek Paracetamol v tabletách"
 * status = #active
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0253304
-* code.coding[0].display = "PARACETAMOL ZENTIVA K.S."
+* code.coding[0].display = "PARACETAMOL ZENTIVA K.S. 500MG TBL NOB 12"
 * code.coding[1].system = $cz-medication-DLPATC-cs
 * code.coding[1].code = #N02BE01
 * code.coding[1].display = "Paracetamol"
@@ -117,7 +117,7 @@ Description: "Lek Ibalgin 400 v tabletách"
 * status = #active
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0254294
-* code.coding[0].display = "IBALGIN"
+* code.coding[0].display = "IBALGIN 400MG TBL FLM 100"
 * code.coding[1].system = $cz-medication-DLPATC-cs
 * code.coding[1].code = #M01AE01
 * code.coding[1].display = "IBUPROFEN"
@@ -173,7 +173,7 @@ Description: "Lek Covid vakcína"
 
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0271911
-* code.coding[0].display = "COMIRNATY OMICRON XBB.1.5"
+* code.coding[0].display = "COMIRNATY OMICRON XBB.1.5 30MCG/DÁV INJ DIS 10X0,48ML"
 * code.coding[1].system = $cz-medication-DLPATC-cs
 * code.coding[1].code = #J07BN01
 * code.coding[1].display = "COVID-19, RNA VAKCÍNA"

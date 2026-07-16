@@ -363,7 +363,7 @@ Description: "Dopegyt 250 mg tablets."
 * identifier[0].value = "DLP-DOPEGYT-001"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0001328
-* code.coding[0].display = "DOPEGYT"
+* code.coding[0].display = "DOPEGYT 250MG TBL NOB 50"
 * code.text = "Dopegyt 250 mg tablety"
 
 Instance: Medication-Story-Fraxiparine
@@ -377,7 +377,7 @@ Description: "Fraxiparine 0.6 ml."
 * identifier[0].value = "DLP-FRAXIPARINE-001"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0258284
-* code.coding[0].display = "FRAXIPARINE"
+* code.coding[0].display = "FRAXIPARINE 9500IU/ML INJ SOL ISP 2X0,4ML"
 * code.text = "Fraxiparine 0.6 ml"
 
 Instance: Medication-Story-ProstinE2
@@ -391,7 +391,7 @@ Description: "Prostin E2 for labor induction."
 * identifier[0].value = "DLP-PROSTINE2-001"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0002289
-* code.coding[0].display = "PROSTIN E2"
+* code.coding[0].display = "PROSTIN E2 3MG VAG TBL NOB 4"
 * code.text = "Prostin E2"
 
 Instance: Medication-Story-LidocaineEgis
@@ -405,7 +405,7 @@ Description: "Lidocaine EGIS used during hospitalization."
 * identifier[0].value = "DLP-LIDOCAINEEGIS-001"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0030767
-* code.coding[0].display = "LIDOCAINE EGIS"
+* code.coding[0].display = "LIDOCAINE EGIS 20MG/ML INJ SOL 100X2ML"
 * code.text = "Lidocaine EGIS"
 
 Instance: Medication-Story-Ofost
@@ -419,7 +419,7 @@ Description: "OFOST used during hospitalization."
 * identifier[0].value = "DLP-OFOST-001"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0221535
-* code.coding[0].display = "OFOST"
+* code.coding[0].display = "OFOST 5IU/ML INJ/INF SOL 5X1ML"
 * code.text = "OFOST"
 
 Instance: MedicationAdministration-Story-Ofost
