@@ -13,7 +13,7 @@ Description: "Euthyrox v tabletách"
 * code.coding[1].display = "LEVOTHYROXINE SODIUM"
 * code.text = "Euthyrox 75 mcg"
 * form.coding[0].system = $dlp_lec_forma
-* form.coding[0].code = #TBL_FLM
+* form.coding[0].code = #TBL FLM
 * form.coding[0].display = "Potahovaná tableta"
 * form.text = "Tableta"
 * amount.numerator.value = 75
@@ -24,7 +24,7 @@ Description: "Euthyrox v tabletách"
 * amount.denominator.unit = "Tableta"
 * ingredient[0].itemCodeableConcept.coding[0].system = $dlp_lec_latky
 * ingredient[0].itemCodeableConcept.coding[0].code = #828
-* ingredient[0].itemCodeableConcept.coding[0].display = "LEVOTHYROXINUM NATRICUM"
+* ingredient[0].itemCodeableConcept.coding[0].display = "LEVOTHYROXINE SODIUM"
 * ingredient[0].itemCodeableConcept.text = "Levothyroxin"
 * ingredient[0].strength.numerator.value = 75
 * ingredient[0].strength.numerator.unit = "mcg"
@@ -68,7 +68,7 @@ Description: "Lek Paracetamol v tabletách"
 * code.coding[1].display = "Paracetamol"
 * code.text = "PARACETAMOL ZENTIVA K.S. 500 mg"
 * form.coding[0].system = $dlp_lec_forma
-* form.coding[0].code = #TBL_FLM
+* form.coding[0].code = #TBL FLM
 * form.coding[0].display = "Potahovaná tableta"
 * form.text = "Tableta"
 * amount.numerator.value = 500
@@ -79,7 +79,7 @@ Description: "Lek Paracetamol v tabletách"
 * amount.denominator.unit = "Tableta"
 * ingredient[0].itemCodeableConcept.coding[0].system = $dlp_lec_latky
 * ingredient[0].itemCodeableConcept.coding[0].code = #1064
-* ingredient[0].itemCodeableConcept.coding[0].display = "PARACETAMOLUM"
+* ingredient[0].itemCodeableConcept.coding[0].display = "PARACETAMOL"
 * ingredient[0].itemCodeableConcept.text = "PARACETAMOL"
 * ingredient[0].strength.numerator.value = 500
 * ingredient[0].strength.numerator.unit = "mg"
@@ -123,7 +123,7 @@ Description: "Lek Ibalgin 400 v tabletách"
 * code.coding[1].display = "IBUPROFEN"
 * code.text = "Ibalgin 400 mg"
 * form.coding[0].system = $dlp_lec_forma
-* form.coding[0].code = #TBL_FLM
+* form.coding[0].code = #TBL FLM
 * form.coding[0].display = "Potahovaná tableta"
 * form.text = "Tableta"
 * amount.numerator.value = 400
@@ -134,7 +134,7 @@ Description: "Lek Ibalgin 400 v tabletách"
 * amount.denominator.unit = "Tableta"
 * ingredient[0].itemCodeableConcept.coding[0].system = $dlp_lec_latky
 * ingredient[0].itemCodeableConcept.coding[0].code = #1593
-* ingredient[0].itemCodeableConcept.coding[0].display = "IBUPROFENUM"
+* ingredient[0].itemCodeableConcept.coding[0].display = "IBUPROFEN"
 * ingredient[0].itemCodeableConcept.text = "IBUPROFEN"
 * ingredient[0].strength.numerator.value = 400
 * ingredient[0].strength.numerator.unit = "mg"
@@ -176,11 +176,11 @@ Description: "Lek Covid vakcína"
 * code.coding[0].display = "COMIRNATY OMICRON XBB.1.5 30MCG/DÁV INJ DIS 10X0,48ML"
 * code.coding[1].system = $dlp_atc
 * code.coding[1].code = #J07BN01
-* code.coding[1].display = "COVID-19, RNA VAKCÍNA"
+* code.coding[1].display = "covid-19, rna-based vaccine"
 * code.text = "Comirnaty"
 
 * form.coding[0].system = $dlp_lec_forma
-* form.coding[0].code = #INJSOL
+* form.coding[0].code = #INJ SOL
 * form.coding[0].display = "Injekční roztok"
 * form.text = "Injekční roztok"
 
