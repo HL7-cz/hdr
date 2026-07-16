@@ -14,7 +14,7 @@ Description: "Euthyrox v tabletách"
 * code.text = "Euthyrox 75 mcg"
 * form.coding[0].system = $dlp_lec_forma
 * form.coding[0].code = #"TBL FLM"
-* form.coding[0].display = "Potahovaná tableta"
+* form.coding[0].display = "Film-coated tablet"
 * form.text = "Tableta"
 * amount.numerator.value = 75
 * amount.numerator.unit = "mcg"
@@ -69,7 +69,7 @@ Description: "Lek Paracetamol v tabletách"
 * code.text = "PARACETAMOL ZENTIVA K.S. 500 mg"
 * form.coding[0].system = $dlp_lec_forma
 * form.coding[0].code = #"TBL FLM"
-* form.coding[0].display = "Potahovaná tableta"
+* form.coding[0].display = "Film-coated tablet"
 * form.text = "Tableta"
 * amount.numerator.value = 500
 * amount.numerator.unit = "mg"
@@ -124,7 +124,7 @@ Description: "Lek Ibalgin 400 v tabletách"
 * code.text = "Ibalgin 400 mg"
 * form.coding[0].system = $dlp_lec_forma
 * form.coding[0].code = #"TBL FLM"
-* form.coding[0].display = "Potahovaná tableta"
+* form.coding[0].display = "Film-coated tablet"
 * form.text = "Tableta"
 * amount.numerator.value = 400
 * amount.numerator.unit = "mg"
@@ -181,8 +181,8 @@ Description: "Lek Covid vakcína"
 
 * form.coding[0].system = $dlp_lec_forma
 * form.coding[0].code = #"INJ SOL"
-* form.coding[0].display = "Injekční roztok"
-* form.text = "Injekční roztok"
+* form.coding[0].display = "Solution for injection"
+* form.text = "Solution for injection"
 
 * amount.numerator.value = 0.3
 * amount.numerator.unit = "ml"
