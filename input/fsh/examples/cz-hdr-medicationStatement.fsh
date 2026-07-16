@@ -129,8 +129,8 @@ Description: "Czech HDR - example of Euthyrox"
 */
 * medicationReference = Reference(Medication-Euthyrox)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
-* identifier[0].system = $cz-medication-DLP     //tady má být External identifier
-* identifier[0].value = "0243131"       //tady má být External identifier
+* identifier[0].system = "http://hospital.example.org/medication-statements"     //tady má být External identifier
+* identifier[0].value = "47472c99-09bf-4007-bfaa-16c9665ae090"       //tady má být External identifier
 * category[0].coding[0].system = $medication-statement
 * category[0].coding[0].code = #inpatient
 * category[0].coding[0].display = "Inpatient"
@@ -171,8 +171,8 @@ Description: "Czech HDR - example of Paracetamol"
 // reference a další údaje
 * medicationReference = Reference(Medication-Paracetamol)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
-* identifier[0].system = $cz-medication-DLP //tady má být External identifier
-* identifier[0].value = "0243131"   //tady má být External identifier
+* identifier[0].system = "http://hospital.example.org/medication-statements" //tady má být External identifier
+* identifier[0].value = "f34114fc-138f-4bd8-8e1a-804d14ec9986"   //tady má být External identifier
 * category[0].coding[0].system = $medication-statement
 * category[0].coding[0].code = #inpatient
 * category[0].coding[0].display = "Inpatient"
@@ -213,8 +213,8 @@ Description: "Czech HDR - example of Ibalgin 400"
 // reference a další údaje
 * medicationReference = Reference(Medication-Ibalgin400)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
-* identifier[0].system = $dlp_lec_pripravky //tady má být External identifier
-* identifier[0].value = "0207893"   //tady má být External identifier
+* identifier[0].system = "http://hospital.example.org/medication-statements" //tady má být External identifier
+* identifier[0].value = "bf08b62b-0abd-4e88-9092-ce0228382e51"   //tady má být External identifier
 * category[0].coding[0].system = $medication-statement
 * category[0].coding[0].code = #inpatient
 * category[0].coding[0].display = "Inpatient"

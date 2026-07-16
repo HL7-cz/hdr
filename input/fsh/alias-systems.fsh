@@ -45,6 +45,8 @@ Alias: $locationType = http://terminology.hl7.org/CodeSystem/location-physical-t
 Alias: $nclp = https://ncez.mzcr.cz/nclp/CodeSystem/nclppol
 Alias: $dlp_atc = https://sukl.cz/terminology/CodeSystem/dlp-atc
 Alias: $dlp_lec_pripravky = https://sukl.cz/terminology/CodeSystem/dlp-lecivepripravky
+Alias: $dlp_lec_latky = https://sukl.cz/terminology/CodeSystem/dlp-lecivelatky
+Alias: $dlp_lec_forma = https://sukl.cz/terminology/CodeSystem/dlp-formy
 
 
 // --- SID

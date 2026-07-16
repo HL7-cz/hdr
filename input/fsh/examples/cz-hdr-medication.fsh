@@ -8,11 +8,11 @@ Description: "Euthyrox v tabletách"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0243131
 * code.coding[0].display = "EUTHYROX 75MCG TBL NOB 100 II"
-* code.coding[1].system = $cz-medication-DLPATC-cs
+* code.coding[1].system = $dlp_atc
 * code.coding[1].code = #H03AA01
 * code.coding[1].display = "LEVOTHYROXINE SODIUM"
 * code.text = "Euthyrox 75 mcg"
-* form.coding[0].system = $cz-medication-DLPForma-cs
+* form.coding[0].system = $dlp_lec_forma
 * form.coding[0].code = #TBL_FLM
 * form.coding[0].display = "Potahovaná tableta"
 * form.text = "Tableta"
@@ -22,7 +22,7 @@ Description: "Euthyrox v tabletách"
 * amount.numerator.code = #/ug
 * amount.denominator.value = 1
 * amount.denominator.unit = "Tableta"
-* ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
+* ingredient[0].itemCodeableConcept.coding[0].system = $dlp_lec_latky
 * ingredient[0].itemCodeableConcept.coding[0].code = #828
 * ingredient[0].itemCodeableConcept.coding[0].display = "LEVOTHYROXINUM NATRICUM"
 * ingredient[0].itemCodeableConcept.text = "Levothyroxin"
@@ -63,11 +63,11 @@ Description: "Lek Paracetamol v tabletách"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0253304
 * code.coding[0].display = "PARACETAMOL ZENTIVA K.S. 500MG TBL NOB 12"
-* code.coding[1].system = $cz-medication-DLPATC-cs
+* code.coding[1].system = $dlp_atc
 * code.coding[1].code = #N02BE01
 * code.coding[1].display = "Paracetamol"
 * code.text = "PARACETAMOL ZENTIVA K.S. 500 mg"
-* form.coding[0].system = $cz-medication-DLPForma-cs
+* form.coding[0].system = $dlp_lec_forma
 * form.coding[0].code = #TBL_FLM
 * form.coding[0].display = "Potahovaná tableta"
 * form.text = "Tableta"
@@ -77,7 +77,7 @@ Description: "Lek Paracetamol v tabletách"
 * amount.numerator.code = #/mg
 * amount.denominator.value = 1
 * amount.denominator.unit = "Tableta"
-* ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
+* ingredient[0].itemCodeableConcept.coding[0].system = $dlp_lec_latky
 * ingredient[0].itemCodeableConcept.coding[0].code = #1064
 * ingredient[0].itemCodeableConcept.coding[0].display = "PARACETAMOLUM"
 * ingredient[0].itemCodeableConcept.text = "PARACETAMOL"
@@ -118,11 +118,11 @@ Description: "Lek Ibalgin 400 v tabletách"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0254294
 * code.coding[0].display = "IBALGIN 400MG TBL FLM 100"
-* code.coding[1].system = $cz-medication-DLPATC-cs
+* code.coding[1].system = $dlp_atc
 * code.coding[1].code = #M01AE01
 * code.coding[1].display = "IBUPROFEN"
 * code.text = "Ibalgin 400 mg"
-* form.coding[0].system = $cz-medication-DLPForma-cs
+* form.coding[0].system = $dlp_lec_forma
 * form.coding[0].code = #TBL_FLM
 * form.coding[0].display = "Potahovaná tableta"
 * form.text = "Tableta"
@@ -132,7 +132,7 @@ Description: "Lek Ibalgin 400 v tabletách"
 * amount.numerator.code = #/mg
 * amount.denominator.value = 1
 * amount.denominator.unit = "Tableta"
-* ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
+* ingredient[0].itemCodeableConcept.coding[0].system = $dlp_lec_latky
 * ingredient[0].itemCodeableConcept.coding[0].code = #1593
 * ingredient[0].itemCodeableConcept.coding[0].display = "IBUPROFENUM"
 * ingredient[0].itemCodeableConcept.text = "IBUPROFEN"
@@ -174,12 +174,12 @@ Description: "Lek Covid vakcína"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0271911
 * code.coding[0].display = "COMIRNATY OMICRON XBB.1.5 30MCG/DÁV INJ DIS 10X0,48ML"
-* code.coding[1].system = $cz-medication-DLPATC-cs
+* code.coding[1].system = $dlp_atc
 * code.coding[1].code = #J07BN01
 * code.coding[1].display = "COVID-19, RNA VAKCÍNA"
 * code.text = "Comirnaty"
 
-* form.coding[0].system = $cz-medication-DLPForma-cs
+* form.coding[0].system = $dlp_lec_forma
 * form.coding[0].code = #INJSOL
 * form.coding[0].display = "Injekční roztok"
 * form.text = "Injekční roztok"
@@ -191,7 +191,7 @@ Description: "Lek Covid vakcína"
 * amount.denominator.value = 0.3
 * amount.denominator.unit = "ml"
 
-* ingredient[0].itemCodeableConcept.coding[0].system = $cz-medicationDLPLecive-latky-cs
+* ingredient[0].itemCodeableConcept.coding[0].system = $dlp_lec_latky
 * ingredient[0].itemCodeableConcept.coding[0].code = #23463
 * ingredient[0].itemCodeableConcept.coding[0].display = "SARS-COV-2 (OMICRON JN.1) SPIKE PROTEIN"
 * ingredient[0].itemCodeableConcept.text = "SARS-COV-2 (OMICRON JN.1) SPIKE PROTEIN"
@@ -204,7 +204,7 @@ Description: "Lek Covid vakcína"
 * ingredient[0].strength.denominator.system = $ucum
 * ingredient[0].strength.denominator.code = #/ml
 
-* identifier[0].system = $cz-medication-DLP
+* identifier[0].system = "http://hospital.example.org/medications" //tady má být External identifier
 * identifier[0].value = "0246599"
 
 
