@@ -20,19 +20,5 @@ Description: """This profile constrains the Immunization resource for the purpos
 * patient only Reference(CZ_PatientCore)
 * occurrence[x] only dateTime
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  CZ_ImmunizationRecommendationHdr
-Parent:   ImmunizationRecommendation
-Id:       cz-immunizationrecommendation-hdr
-Title:    "Immunization Recommendation (HDR CZ)"
-Description: """This profile constrains the Immunization Recommendation resource for the purpose of this guide."""
-
-//-------------------------------------------------------------------------------------------
-
 * ^experimental = false
 * ^purpose = "This profile constrains the Immunization resource for the purpose of this guide."
-
-//* insert ImposeProfile($ImmunizationRecommendationEuHdr, 0) bohuzel nelze
-
-* date ^short = "When recomendation was created"
-* patient only Reference (CZ_PatientCore)
