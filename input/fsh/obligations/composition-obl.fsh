@@ -26,7 +26,7 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * attester.party insert OblCreator(#SHALL:able-to-populate,L1)
 * custodian insert OblCreator(#SHOULD:able-to-populate,L1)
 //* section[sectionPayers] insert OblCreator(#SHALL:able-to-populate,L1)
-* extension[compositionVersionR5] insert OblCreator(#SHALL:able-to-populate,L1)
+* extension[version] insert OblCreator(#SHALL:able-to-populate,L1)
 // * extension[presentedForm] insert OblCreator(#SHALL:able-to-populate,L1)
 * section[sectionHospitalCourse].text insert OblCreator(#SHALL:able-to-populate,L1)
 
@@ -49,7 +49,7 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * attester.party insert OblConsumer(#SHALL:display,L1)
 * custodian insert OblConsumer(#SHOULD:display,L1)
 //* section[sectionPayers] insert OblConsumer(#SHALL:display,L1)
-* extension[compositionVersionR5] insert OblConsumer(#SHALL:display,L1)
+* extension[version] insert OblConsumer(#SHALL:display,L1)
 * section[sectionHospitalCourse].text insert OblConsumer(#SHALL:display,L1)
 
 //L2 Creator Obligations L2 ============>
@@ -70,7 +70,7 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * attester.party insert OblCreator(#SHALL:able-to-populate,L2)
 * custodian insert OblCreator(#SHOULD:able-to-populate,L2)
 * section[sectionPayers] insert OblCreator(#SHALL:able-to-populate,L2)
-* extension[compositionVersionR5] insert OblCreator(#SHALL:able-to-populate,L2)
+* extension[version] insert OblCreator(#SHALL:able-to-populate,L2)
 // * extension[presentedForm] insert OblCreator(#SHALL:able-to-populate,L2)
 
 //======================================================================
@@ -169,7 +169,7 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * attester.party insert OblConsumer(#SHALL:display,L2)
 * custodian insert OblConsumer(#SHOULD:display,L2)
 * section[sectionPayers] insert OblConsumer(#SHALL:display,L2)
-* extension[compositionVersionR5] insert OblConsumer(#SHALL:display,L2)
+* extension[version] insert OblConsumer(#SHALL:display,L2)
 * extension[presentedForm] insert OblConsumer(#SHALL:display,L2)
 
 * section[sectionAllergies] insert OblConsumer(#SHALL:display,L2)
@@ -278,7 +278,7 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * attester.party insert OblCreator(#SHALL:able-to-populate,L3)
 * custodian insert OblCreator(#SHALL:able-to-populate,L3)
 * section[sectionPayers] insert OblCreator(#SHALL:able-to-populate,L3)
-* extension[compositionVersionR5] insert OblCreator(#SHALL:able-to-populate,L3)
+* extension[version] insert OblCreator(#SHALL:able-to-populate,L3)
 
 
 //======================================================================
@@ -465,7 +465,7 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * attester.party insert OblConsumer(#SHALL:display,L3)
 * custodian insert OblConsumer(#SHALL:display,L3)
 * section[sectionPayers] insert OblConsumer(#SHALL:display,L3)
-* extension[compositionVersionR5] insert OblConsumer(#SHALL:display,L3)
+* extension[version] insert OblConsumer(#SHALL:display,L3)
 * extension[presentedForm] insert OblConsumer(#SHALL:display,L3)
 
 

@@ -60,12 +60,7 @@ Description: "This profile defines how to represent Composition resource in HL7 
   * data ^short = "B64 in-line data"
   * url ^short = "URL of the document"
 
-* extension contains $composition.version-r5 named compositionVersionR5 0..1
-* extension[compositionVersionR5].valueString ^short = "Business version"
-
-* extension contains $information-recipient named information-recipient 0..*
-* extension[information-recipient]
-* extension[information-recipient].valueReference only Reference(  CZ_PractitionerCore or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+* extension[informationRecipient].valueReference only Reference(  CZ_PractitionerCore or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 /* CZ_PractitionerRoleCore or*/
 
 /* GC TO DO
@@ -108,9 +103,6 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * attester.mode ^short = "The type of attestation"
 * attester.time ^short = "When the composition was attested."
 * attester.party ^short = "Who attested the composition."
-* attester.party only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore
-
-
 
 * section 1..
   // add invariant or text or section

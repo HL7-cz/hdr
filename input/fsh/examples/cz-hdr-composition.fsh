@@ -385,8 +385,8 @@ Usage: #example
 * identifier.value = "this.is.composition.identifier1"
 * status = #final //ok
 //* language  = #cs
-* extension[compositionVersionR5].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version"
-* extension[compositionVersionR5].valueString = "1.0.0"
+* extension[version].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version"
+* extension[version].valueString = "1.0.0"
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
 * type.coding[0].display = "Hospital Discharge summary"
@@ -453,8 +453,10 @@ Usage: #example
 * confidentiality = #N
 * custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1) // Example Organization as custodian
 * attester[0].mode = #professional
+* attester[=].time = "2025-03-10T14:30:00+01:00"
 * attester[=].party = Reference(urn:uuid:69d34ceb-b556-4f75-9e4c-9184fe8a10c5)
 * attester[+].mode = #legal
+* attester[=].time = "2025-03-10T14:30:00+01:00"
 * attester[=].party = Reference(urn:uuid:69d34ceb-b556-4f75-9e4c-9184fe8a10c5) // Attester is the same as one of the authors
 * section[sectionHospitalCourse].title = "Klinické shrnutí"
 * section[sectionHospitalCourse].text.status = #additional //Additional text status for generated narrative /HONza

@@ -40,7 +40,7 @@ Usage: #example
 Title: "Hemoglobin"
 Description: "Příklad pro HDR - Hladina hemoglobinu v krvi"
 * status = #final
-* code = $nclp#11338 //"Hemoglobin"
+* code = $nclp#01990 //"Hemoglobin"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
@@ -58,7 +58,7 @@ Usage: #example
 Title: "Hematokrit"
 Description: "Příklad pro HDR - Hematokrit v krvi"
 * status = #final
-* code = $nclp#11339 //"Hematokrit"
+* code = $nclp#02015 //"Hematokrit"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
@@ -79,7 +79,7 @@ Usage: #example
 Title: "Erytrocyty"
 Description: "Příklad pro HDR - Počet erytrocytů v krvi"
 * status = #final
-* code = $nclp#11334 //"Erytrocyty"
+* code = $nclp#02793 //"Erytrocyty"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"
@@ -100,7 +100,7 @@ Usage: #example
 Title: "Leukocyty"
 Description: "Příklad pro HDR - Počet leukocytů v krvi"
 * status = #final
-* code = $nclp#11332 //"Leukocyty"
+* code = $nclp#02970 //"Leukocyty"
 * subject = Reference(Mracena2)
 * encounter = Reference(HospitalEncounter-Novak-Petr)
 * effectiveDateTime = "2025-04-01T09:00:00+01:00"

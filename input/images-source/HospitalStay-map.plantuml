@@ -31,7 +31,7 @@ class "medication-cz-hdr" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core
 class "medicationDispense-eu-hdr" <<Profile>> [[https://build.fhir.org/ig/hl7-eu/hdr/StructureDefinition-medicationDispense-eu-hdr.html]]
 "HospitalStay" <|. "medicationDispense-eu-hdr"
 "medication-cz-hdr" -d[hidden]-> "medicationDispense-eu-hdr"
-class "medicationRequest-cz-hdr" <<Profile>> [[StructureDefinition-cz-medicationRequest-hdr.html]]
+class "medicationRequest-cz-hdr" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/en/StructureDefinition-medicationRequest-cz-core.html]]
 "HospitalStay" <|. "medicationRequest-cz-hdr"
 "medicationDispense-eu-hdr" -d[hidden]-> "medicationRequest-cz-hdr"
 class "procedure-cz-hdr" <<Profile>> [[StructureDefinition-cz-procedure-hdr.html]]
