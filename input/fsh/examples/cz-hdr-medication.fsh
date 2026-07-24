@@ -44,6 +44,7 @@ Usage: #example
 Title: "Dispense – Euthyrox for patient Novak"
 Description: "Výdej léčivého přípravku Euthyrox pacientovi Novákovi"
 * status = #completed
+* extension[recorded].valueDateTime = "2024-03-05T10:00:00Z"
 * medicationReference = Reference(Medication-Euthyrox)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * quantity.value = 30
@@ -99,6 +100,7 @@ Usage: #example
 Title: "Dispense – Paracetamol"
 Description: "Výdej léčivého přípravku Paracetamol pacientovi Novákovi"
 * status = #completed
+* extension[recorded].valueDateTime = "2024-03-06T10:00:00Z"
 * medicationReference = Reference(Medication-Paracetamol)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * quantity.value = 20
@@ -154,6 +156,7 @@ Usage: #example
 Title: "Dispense – Ibalgin 400"
 Description: "Výdej léčivého přípravku Ibalgin 400 mg pacientovi Novákovi"
 * status = #completed
+* extension[recorded].valueDateTime = "2024-03-07T10:00:00Z"
 * medicationReference = Reference(Medication-Ibalgin400)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * quantity.value = 15
